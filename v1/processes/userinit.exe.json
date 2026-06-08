@@ -1,0 +1,224 @@
+{
+  "name": "userinit.exe",
+  "aliases": [
+    "userinit"
+  ],
+  "category": "System",
+  "tags": [
+    "sessions",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "userinit.exe is the Userinit Logon Application, the process that prepares a user's environment at sign-in and then hands off to the desktop. After winlogon.exe authenticates the user, it runs userinit.exe to do the work that makes the session usable: applying group policy, running logon scripts, and reconnecting mapped network drives. With the environment in place, it launches the desktop shell and exits.\n",
+  "about": "userinit.exe is launched by `winlogon.exe` as soon as a user authenticates, and it runs as that user from `C:\\Windows\\System32\\userinit.exe`. Its job is the per-user setup that turns a bare session into a working desktop: applying Group Policy, running any logon scripts, and restoring mapped network drives.\n\nOnce that setup is done, userinit.exe starts the user's shell and exits right away. Because its parent is gone almost immediately, `explorer.exe` and the rest of the session appear as orphans in the process tree, with no living parent. The shell it launches is whatever the `Shell` value names under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon`, normally `explorer.exe`.\n\nThe genuine userinit.exe is a trusted, signed Microsoft system file. It runs for only a second or two at each logon and then exits, so it rarely shows up in a point-in-time process listing.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\userinit.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `winlogon.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "A child other than the configured shell (`explorer.exe`), such as `cmd.exe` or `powershell.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Extra entries in the Winlogon `Userinit` registry value beyond `userinit.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "An instance that persists well past logon (it normally exits within seconds)",
+      "severity": "medium"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logging-on user",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Like other trusted system processes, userinit.exe is sometimes imitated by malware attempting to avoid detection (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Be suspicious of copies running from other locations and of near-miss spellings of the name.\n\nIts name in the registry is a long-standing persistence target (T1547.004). `winlogon.exe` reads the `Userinit` value under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon` to decide what to run at logon, and the value accepts a comma-separated list. Malware appends its own executable so it launches alongside the real userinit.exe at every sign-in. Anything in that value beyond `C:\\Windows\\system32\\userinit.exe` warrants a review.\n\nBecause the real userinit.exe does nothing but set up the session and start the shell, its children are short-lived and predictable. A command shell or script host launched by userinit.exe, rather than the expected `explorer.exe`, points to a logon script or registry entry running attacker code (T1059.003).\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1547.004"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://attack.mitre.org/techniques/T1547/004/",
+    "https://attack.mitre.org/techniques/T1036/005/"
+  ],
+  "sigma": [
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "0a98a10c-685d-4ab0-bddc-b6bdd1d48458",
+      "title": "Uncommon Userinit Child Process",
+      "level": "high",
+      "techniques": [
+        "T1037.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_userinit_uncommon_child_processes.yml",
+      "match": "parent"
+    },
+    {
+      "id": "cbb9e3d1-2386-4e59-912e-62f1484f7a89",
+      "title": "Conhost Spawned By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_uncommon_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "b655a06a-31c0-477a-95c2-3726b83d649d",
+      "title": "Suspicious Userinit Child Process",
+      "level": "medium",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_userinit_child.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1547.004",
+      "name": "Boot or Logon Autostart Execution: Winlogon Helper DLL",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0102",
+          "name": "Wizard Spider"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0375",
+          "name": "Remexi"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\userinit.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\userinit.exe</code>"
+    },
+    {
+      "signal": "Parent other than `winlogon.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a>"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "A child other than the configured shell (`explorer.exe`), such as `cmd.exe` or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A child other than the configured shell (<a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a>), such as <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    },
+    {
+      "signal": "Extra entries in the Winlogon `Userinit` registry value beyond `userinit.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Extra entries in the Winlogon <code>Userinit</code> registry value beyond <code>userinit.exe</code>"
+    },
+    {
+      "signal": "An instance that persists well past logon (it normally exits within seconds)",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "An instance that persists well past logon (it normally exits within seconds)"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logging-on user",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> rather than the logging-on user"
+    }
+  ],
+  "about_html": "<p>userinit.exe is launched by <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a> as soon as a user authenticates, and it runs as that user from <code>C:\\Windows\\System32\\userinit.exe</code>. Its job is the per-user setup that turns a bare session into a working desktop: applying Group Policy, running any logon scripts, and restoring mapped network drives.</p>\n<p>Once that setup is done, userinit.exe starts the user's shell and exits right away. Because its parent is gone almost immediately, <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a> and the rest of the session appear as orphans in the process tree, with no living parent. The shell it launches is whatever the <code>Shell</code> value names under <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon</code>, normally <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a>.</p>\n<p>The genuine userinit.exe is a trusted, signed Microsoft system file. It runs for only a second or two at each logon and then exits, so it rarely shows up in a point-in-time process listing.</p>",
+  "security_notes_html": "<p>Like other trusted system processes, userinit.exe is sometimes imitated by malware attempting to avoid detection (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>). A legitimate copy always resides in <code>C:\\Windows\\System32</code> and carries a valid Microsoft digital signature. Be suspicious of copies running from other locations and of near-miss spellings of the name.</p>\n<p>Its name in the registry is a long-standing persistence target (<a href=\"https://attack.mitre.org/techniques/T1547/004/\" target=\"_blank\" rel=\"noreferrer noopener\">T1547.004</a>). <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a> reads the <code>Userinit</code> value under <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon</code> to decide what to run at logon, and the value accepts a comma-separated list. Malware appends its own executable so it launches alongside the real userinit.exe at every sign-in. Anything in that value beyond <code>C:\\Windows\\system32\\userinit.exe</code> warrants a review.</p>\n<p>Because the real userinit.exe does nothing but set up the session and start the shell, its children are short-lived and predictable. A command shell or script host launched by userinit.exe, rather than the expected <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a>, points to a logon script or registry entry running attacker code (<a href=\"https://attack.mitre.org/techniques/T1059/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1059.003</a>).</p>"
+}

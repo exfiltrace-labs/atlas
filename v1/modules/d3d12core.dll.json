@@ -1,0 +1,11 @@
+{
+  "name": "d3d12core.dll",
+  "loaded_by": [
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": true
+    }
+  ]
+}

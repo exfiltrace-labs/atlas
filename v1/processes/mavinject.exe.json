@@ -1,0 +1,175 @@
+{
+  "name": "mavinject.exe",
+  "aliases": [
+    "mavinject"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "mavinject.exe is the Microsoft Application Virtualization (App-V) injector, a helper that injects a DLL into a running process for App-V. Outside App-V it is rarely seen. Attackers use it as a signed, ready-made way to inject a DLL into another process.\n",
+  "about": "mavinject.exe is part of the App-V client. Its supported job is to load a DLL into a target process as part of virtualizing an application. The capability is general, though: given a process ID and a DLL path, it injects that DLL into that process. The genuine binary lives at `C:\\Windows\\System32\\mavinject.exe`, with a 32-bit copy under `SysWOW64`.\n\nLegitimately, mavinject is invoked by the App-V infrastructure on systems that run virtualized applications. On a machine without App-V it has essentially no reason to run, so its mere presence in the process tree is worth noting.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Running on a host that does not use App-V",
+      "severity": "high"
+    },
+    {
+      "signal": "A command line pairing a process ID with a DLL path (especially `/INJECTRUNNING`)",
+      "severity": "high"
+    },
+    {
+      "signal": "A DLL from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "mavinject.exe is a signed, off-the-shelf DLL injector (T1218.013, T1055.001). With `mavinject <pid> /INJECTRUNNING <dll>` an attacker loads their DLL into a chosen process under a trusted Microsoft binary, achieving process injection without writing their own injector and while bypassing application-control rules that allow the tool. Injecting into a legitimate process also lets the code run under that process's identity.\n\nBecause mavinject only belongs on App-V systems, it is high-signal almost by default. A mavinject command line that names a target PID and a DLL, especially a DLL in a user-writable directory, is a direct indicator of injection.\n",
+  "mitre_attack": [
+    "T1218.013",
+    "T1055.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Mavinject/",
+    "https://attack.mitre.org/techniques/T1218/013/",
+    "https://attack.mitre.org/techniques/T1055/001/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Mavinject/",
+    "commands": [
+      {
+        "command": "MavInject.exe 3110 /INJECTRUNNING {PATH_ABSOLUTE:.dll}",
+        "usecase": "Inject dll file into running process",
+        "mitreID": "T1218.013",
+        "category": "Execute"
+      },
+      {
+        "command": "Mavinject.exe 4172 /INJECTRUNNING {PATH_ABSOLUTE}:file.dll",
+        "usecase": "Inject dll file into running process",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      }
+    ]
+  },
+  "techniques": [
+    {
+      "id": "T1055.001",
+      "name": "Process Injection: Dynamic-link Library Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1218.013",
+      "name": "System Binary Proxy Execution: Mavinject",
+      "curated": true,
+      "lolbas": true,
+      "software": [
+        {
+          "id": "S1239",
+          "name": "TONESHELL"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1564.004",
+      "name": "Hide Artifacts: NTFS File Attributes",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Running on a host that does not use App-V",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running on a host that does not use App-V"
+    },
+    {
+      "signal": "A command line pairing a process ID with a DLL path (especially `/INJECTRUNNING`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A command line pairing a process ID with a DLL path (especially <code>/INJECTRUNNING</code>)"
+    },
+    {
+      "signal": "A DLL from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A DLL from a user-writable path (<code>Temp</code>, <code>AppData</code>, <code>Downloads</code>)"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    }
+  ],
+  "about_html": "<p>mavinject.exe is part of the App-V client. Its supported job is to load a DLL into a target process as part of virtualizing an application. The capability is general, though: given a process ID and a DLL path, it injects that DLL into that process. The genuine binary lives at <code>C:\\Windows\\System32\\mavinject.exe</code>, with a 32-bit copy under <code>SysWOW64</code>.</p>\n<p>Legitimately, mavinject is invoked by the App-V infrastructure on systems that run virtualized applications. On a machine without App-V it has essentially no reason to run, so its mere presence in the process tree is worth noting.</p>",
+  "security_notes_html": "<p>mavinject.exe is a signed, off-the-shelf DLL injector (<a href=\"https://attack.mitre.org/techniques/T1218/013/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218.013</a>, <a href=\"https://attack.mitre.org/techniques/T1055/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055.001</a>). With <code>mavinject &lt;pid&gt; /INJECTRUNNING &lt;dll&gt;</code> an attacker loads their DLL into a chosen process under a trusted Microsoft binary, achieving process injection without writing their own injector and while bypassing application-control rules that allow the tool. Injecting into a legitimate process also lets the code run under that process's identity.</p>\n<p>Because mavinject only belongs on App-V systems, it is high-signal almost by default. A mavinject command line that names a target PID and a DLL, especially a DLL in a user-writable directory, is a direct indicator of injection.</p>"
+}

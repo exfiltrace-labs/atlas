@@ -1,0 +1,342 @@
+{
+  "name": "wininit.exe",
+  "aliases": [
+    "wininit"
+  ],
+  "category": "System",
+  "tags": [
+    "boot",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "wininit.exe is the Windows Start-Up Application, the process that brings session 0 to life during boot. It launches the core system processes that everything else depends on, most importantly services.exe (which runs Windows services) and lsass.exe (which handles security and logons). It then stays running in the background for the life of the machine.\n",
+  "about": "wininit.exe is a core background process that runs early in the Windows startup sequence. After `smss.exe` creates session 0, the session reserved for system services, it launches wininit.exe to continue the initialization of that session. The `smss.exe` copy that starts it exits as soon as its work is done, so a real wininit.exe shows no parent in the process tree.\n\nwininit.exe is responsible for starting several critical background processes that keep Windows running. Most notably, it launches `services.exe` (the Service Control Manager, which starts and manages Windows services), `lsass.exe` (the Local Security Authority process, which handles authentication and security policy), and historically `lsm.exe` (the Local Session Manager). Before Windows 10, `lsm.exe` was its own process started here. As of Windows 10 that role moved into a service DLL (`lsm.dll`) hosted by `svchost.exe`. It also sets up the temp folder and the rest of the session 0 environment. Once its startup duties are complete, it remains running quietly in the background until shutdown.\n\nThe genuine wininit.exe is a trusted, signed Microsoft system file that is essential to normal operation. Only one instance ever runs, as `NT AUTHORITY\\SYSTEM` in session 0 from `C:\\Windows\\System32\\wininit.exe`. It should never be removed or disabled, and terminating it will destabilize or crash the system, since the processes it manages are vital to Windows functioning.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "WinInit.exe.mui",
+    "internal_name": "WinInit",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8116 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "816.60 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 44,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [
+    {
+      "value": "49665/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wininit.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "More than one instance",
+      "severity": "high"
+    },
+    {
+      "signal": "Children other than `services.exe` and `lsass.exe` (`lsm.exe` on Windows 7 and earlier)",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "A living parent process (the `smss.exe` copy that starts it exits immediately)",
+      "severity": "medium"
+    },
+    {
+      "signal": "Start time long after boot",
+      "severity": "medium"
+    },
+    {
+      "signal": "Running in a session other than 0",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Like other trusted system processes, wininit.exe is sometimes imitated by malware attempting to avoid detection (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft signature. Be suspicious of copies in other locations, slight misspellings such as `wininitt.exe` or `wininit32.exe`, and any instance that appears minutes or hours after boot, since the real one starts once, at startup.\n\nwininit.exe also has a fixed position in the process tree. A legitimate instance has no parent, and its only children are `services.exe` and `lsass.exe`. An instance that was started by another running process, or that spawns anything beyond that pair, deserves a closer look, and a child like a command shell points to injected code or a spoofed parent (T1134.004). The relationship is worth checking from the other direction too: a process claiming to be `lsass.exe` whose parent isn't wininit.exe is a classic credential-theft anomaly.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1134.004"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1134/004/"
+  ],
+  "sigma": [
+    {
+      "id": "d522eca2-2973-4391-a3e0-ef0374321dae",
+      "title": "Abused Debug Privilege by Arbitrary Parent Processes",
+      "level": "high",
+      "techniques": [
+        "T1548"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_abusing_debug_privilege.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "1012f107-b8f1-4271-af30-5aed2de89b39",
+      "title": "Terminal Service Process Spawn",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1210"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_termserv_proc_spawn.yml",
+      "match": "image"
+    },
+    {
+      "id": "cbb9e3d1-2386-4e59-912e-62f1484f7a89",
+      "title": "Conhost Spawned By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_uncommon_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "96036718-71cc-4027-a538-d1587e0006a7",
+      "title": "Windows Processes Suspicious Parent Directory",
+      "level": "low",
+      "techniques": [
+        "T1036.003",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_proc_wrong_parent.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1134.004",
+      "name": "Access Token Manipulation: Parent PID Spoofing",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wininit.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\wininit.exe</code>"
+    },
+    {
+      "signal": "More than one instance",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "More than one instance"
+    },
+    {
+      "signal": "Children other than `services.exe` and `lsass.exe` (`lsm.exe` on Windows 7 and earlier)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Children other than <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a> and <a class=\"proc-link\" href=\"/processes/lsass.exe\"><code>lsass.exe</code></a> (<code>lsm.exe</code> on Windows 7 and earlier)"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as any account other than <code>NT AUTHORITY\\SYSTEM</code>"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "A living parent process (the `smss.exe` copy that starts it exits immediately)",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A living parent process (the <a class=\"proc-link\" href=\"/processes/smss.exe\"><code>smss.exe</code></a> copy that starts it exits immediately)"
+    },
+    {
+      "signal": "Start time long after boot",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Start time long after boot"
+    },
+    {
+      "signal": "Running in a session other than 0",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running in a session other than 0"
+    }
+  ],
+  "about_html": "<p>wininit.exe is a core background process that runs early in the Windows startup sequence. After <a class=\"proc-link\" href=\"/processes/smss.exe\"><code>smss.exe</code></a> creates session 0, the session reserved for system services, it launches wininit.exe to continue the initialization of that session. The <a class=\"proc-link\" href=\"/processes/smss.exe\"><code>smss.exe</code></a> copy that starts it exits as soon as its work is done, so a real wininit.exe shows no parent in the process tree.</p>\n<p>wininit.exe is responsible for starting several critical background processes that keep Windows running. Most notably, it launches <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a> (the Service Control Manager, which starts and manages Windows services), <a class=\"proc-link\" href=\"/processes/lsass.exe\"><code>lsass.exe</code></a> (the Local Security Authority process, which handles authentication and security policy), and historically <code>lsm.exe</code> (the Local Session Manager). Before Windows 10, <code>lsm.exe</code> was its own process started here. As of Windows 10 that role moved into a service DLL (<code>lsm.dll</code>) hosted by <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>. It also sets up the temp folder and the rest of the session 0 environment. Once its startup duties are complete, it remains running quietly in the background until shutdown.</p>\n<p>The genuine wininit.exe is a trusted, signed Microsoft system file that is essential to normal operation. Only one instance ever runs, as <code>NT AUTHORITY\\SYSTEM</code> in session 0 from <code>C:\\Windows\\System32\\wininit.exe</code>. It should never be removed or disabled, and terminating it will destabilize or crash the system, since the processes it manages are vital to Windows functioning.</p>",
+  "security_notes_html": "<p>Like other trusted system processes, wininit.exe is sometimes imitated by malware attempting to avoid detection (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>). A legitimate copy always resides in <code>C:\\Windows\\System32</code> and carries a valid Microsoft signature. Be suspicious of copies in other locations, slight misspellings such as <code>wininitt.exe</code> or <code>wininit32.exe</code>, and any instance that appears minutes or hours after boot, since the real one starts once, at startup.</p>\n<p>wininit.exe also has a fixed position in the process tree. A legitimate instance has no parent, and its only children are <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a> and <a class=\"proc-link\" href=\"/processes/lsass.exe\"><code>lsass.exe</code></a>. An instance that was started by another running process, or that spawns anything beyond that pair, deserves a closer look, and a child like a command shell points to injected code or a spoofed parent (<a href=\"https://attack.mitre.org/techniques/T1134/004/\" target=\"_blank\" rel=\"noreferrer noopener\">T1134.004</a>). The relationship is worth checking from the other direction too: a process claiming to be <a class=\"proc-link\" href=\"/processes/lsass.exe\"><code>lsass.exe</code></a> whose parent isn't wininit.exe is a classic credential-theft anomaly.</p>"
+}

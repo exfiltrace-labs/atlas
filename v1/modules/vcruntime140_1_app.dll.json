@@ -1,0 +1,11 @@
+{
+  "name": "vcruntime140_1_app.dll",
+  "loaded_by": [
+    {
+      "name": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "name": "nltest.exe",
+  "aliases": [
+    "nltest"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "nltest.exe is a domain diagnostic tool for querying domain controllers and trust relationships. Administrators use it to troubleshoot secure channels and locate DCs. Attackers use it to map the domain and its trusts, the groundwork for moving deeper into an Active Directory environment.\n",
+  "about": "nltest.exe queries the Netlogon service and Active Directory for domain topology. `/dclist:<domain>` lists the domain controllers in a domain, `/dsgetdc:<domain>` locates a DC and the services it offers, and `/domain_trusts` enumerates the trust relationships between domains and forests. It can also test and reset the secure channel between a member and its domain. The genuine binary lives at `C:\\Windows\\System32\\nltest.exe`.\n\nLegitimately, nltest is run by administrators to diagnose domain join and replication problems. It reads domain configuration, and for secure-channel repair it can reset a machine's own trust password.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\nltest.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/domain_trusts` or `/dclist` run from a workstation outside admin troubleshooting",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run amid other domain recon, such as `net group /domain`",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "nltest is a core Active Directory reconnaissance tool (T1482). `nltest /domain_trusts` reveals how domains and forests trust one another, which tells an attacker where else stolen credentials might work and how to pivot toward higher-value domains. `/dclist` and `/dsgetdc` enumerate domain controllers (T1018), the machines that hold the directory and are the ultimate target for domain credential theft.\n\nRun by an administrator during troubleshooting it is routine. Run from an ordinary user's workstation, under an odd parent, or amid other domain enumeration, it points to an operator charting the environment before moving through it.\n",
+  "mitre_attack": [
+    "T1482",
+    "T1018"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)",
+    "https://attack.mitre.org/techniques/T1482/",
+    "https://attack.mitre.org/techniques/T1018/"
+  ],
+  "sigma": [
+    {
+      "id": "d55b793d-f847-4eea-b59a-5ab09908ac90",
+      "title": "Suspicious Child Process Of Veeam Dabatase",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_veaam_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "6f0947a4-1c5e-4e0d-8ac7-53159b8f23ca",
+      "title": "Potentially Suspicious Child Process Of Regsvr32",
+      "level": "high",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "869b9ca7-9ea2-4a5a-8325-e80e62f75445",
+      "title": "Suspicious Child Process Of SQL Server",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "8202070f-edeb-4d31-a010-a26c72ac5600",
+      "title": "Suspicious Process By Web Server Process",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "5cc90652-4cbd-4241-aa3b-4b462fa5a248",
+      "title": "Potential Recon Activity Via Nltest.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1016",
+        "T1482"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_nltest_recon.yml",
+      "match": "image"
+    },
+    {
+      "id": "67bc0e75-c0a9-4cfc-8754-84a505b63c04",
+      "title": "Potentially Suspicious Child Process Of ClickOnce Application",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dfsvc_suspicious_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7b582f1a-b318-4c6a-bf4e-66fe49bf55a5",
+      "title": "Remote Access Tool - ScreenConnect Potential Suspicious Remote Command Execution",
+      "level": "medium",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_remote_execution_susp.yml",
+      "match": "image"
+    },
+    {
+      "id": "903076ff-f442-475a-b667-4f246bcc203b",
+      "title": "Nltest.EXE Execution",
+      "level": "low",
+      "techniques": [
+        "T1016",
+        "T1018",
+        "T1482"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_nltest_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1018",
+      "name": "Remote System Discovery",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0061",
+          "name": "FIN8"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1082",
+      "name": "System Information Discovery",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1054",
+          "name": "MirrorFace"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1482",
+      "name": "Domain Trust Discovery",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0061",
+          "name": "FIN8"
+        },
+        {
+          "id": "G1054",
+          "name": "MirrorFace"
+        },
+        {
+          "id": "G1053",
+          "name": "Storm-0501"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\nltest.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\nltest.exe</code>"
+    },
+    {
+      "signal": "`/domain_trusts` or `/dclist` run from a workstation outside admin troubleshooting",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/domain_trusts</code> or <code>/dclist</code> run from a workstation outside admin troubleshooting"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Run amid other domain recon, such as `net group /domain`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run amid other domain recon, such as <code>net group /domain</code>"
+    }
+  ],
+  "about_html": "<p>nltest.exe queries the Netlogon service and Active Directory for domain topology. <code>/dclist:&lt;domain&gt;</code> lists the domain controllers in a domain, <code>/dsgetdc:&lt;domain&gt;</code> locates a DC and the services it offers, and <code>/domain_trusts</code> enumerates the trust relationships between domains and forests. It can also test and reset the secure channel between a member and its domain. The genuine binary lives at <code>C:\\Windows\\System32\\nltest.exe</code>.</p>\n<p>Legitimately, nltest is run by administrators to diagnose domain join and replication problems. It reads domain configuration, and for secure-channel repair it can reset a machine's own trust password.</p>",
+  "security_notes_html": "<p>nltest is a core Active Directory reconnaissance tool (<a href=\"https://attack.mitre.org/techniques/T1482/\" target=\"_blank\" rel=\"noreferrer noopener\">T1482</a>). <code>nltest /domain_trusts</code> reveals how domains and forests trust one another, which tells an attacker where else stolen credentials might work and how to pivot toward higher-value domains. <code>/dclist</code> and <code>/dsgetdc</code> enumerate domain controllers (<a href=\"https://attack.mitre.org/techniques/T1018/\" target=\"_blank\" rel=\"noreferrer noopener\">T1018</a>), the machines that hold the directory and are the ultimate target for domain credential theft.</p>\n<p>Run by an administrator during troubleshooting it is routine. Run from an ordinary user's workstation, under an odd parent, or amid other domain enumeration, it points to an operator charting the environment before moving through it.</p>"
+}

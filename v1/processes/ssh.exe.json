@@ -1,0 +1,197 @@
+{
+  "name": "ssh.exe",
+  "aliases": [
+    "ssh"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "ssh.exe is the OpenSSH client built into modern Windows, used to open secure shell connections to other machines. Administrators use it to manage Linux and Windows hosts. Attackers use it for lateral movement, for tunneling traffic, and to run commands through a signed binary.\n",
+  "about": "ssh.exe is the Windows port of the OpenSSH client. It connects to SSH servers to start interactive shells, run single commands (`ssh host command`), copy files, and set up port forwarding and proxy tunnels. It ships with Windows 10 and later as an optional-but-default feature, with the genuine binary at `C:\\Windows\\System32\\OpenSSH\\ssh.exe`.\n\nLegitimately, ssh is used by administrators and developers to reach remote systems. Where it connects, what it runs, and any tunneling it sets up are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\OpenSSH\\ssh.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Port-forwarding or dynamic-proxy flags (`-L`, `-R`, `-D`) setting up tunnels",
+      "severity": "high"
+    },
+    {
+      "signal": "A `ProxyCommand` or local-command option that runs a local program",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Connections to external hosts from a server or service context",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "ssh.exe supports lateral movement and remote execution (T1021.004). With keys or stolen credentials, an operator opens shells on other machines or runs one-off commands, blending with normal administration. Its forwarding options (`-L`, `-R`, `-D`) build tunnels that pivot traffic through compromised hosts and bypass network controls, which is often the more important signal than the login itself.\n\nssh can also run a local program as a side effect: the `ProxyCommand` and local-command options execute a command on the source machine, a form of indirect command execution through a signed binary (T1202). Because ssh is legitimate, the destinations, the forwarding flags, and any local-command options are what separate administration from pivoting and abuse.\n",
+  "mitre_attack": [
+    "T1021.004",
+    "T1202"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Ssh/",
+    "https://attack.mitre.org/techniques/T1021/004/",
+    "https://attack.mitre.org/techniques/T1202/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Ssh/",
+    "commands": [
+      {
+        "command": "ssh localhost \"{CMD}\"",
+        "usecase": "Execute specified command, can be used for defense evasion.",
+        "mitreID": "T1202",
+        "category": "Execute"
+      },
+      {
+        "command": "ssh -o ProxyCommand=\"{CMD}\" .",
+        "usecase": "Performs execution of specified file, can be used as a defensive evasion.",
+        "mitreID": "T1202",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "f7d7ebd5-a016-46e2-9c54-f9932f2d386d",
+      "title": "Potential RDP Tunneling Via SSH",
+      "level": "high",
+      "techniques": [
+        "T1572"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_ssh_rdp_tunneling.yml",
+      "match": "image"
+    },
+    {
+      "id": "327f48c1-a6db-4eb8-875a-f6981f1b0183",
+      "title": "Port Forwarding Activity Via SSH.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1572",
+        "T1021.001",
+        "T1021.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_ssh_port_forward.yml",
+      "match": "image"
+    },
+    {
+      "id": "7d6d30b8-5b91-4b90-a891-46cccaf29598",
+      "title": "Program Executed Using Proxy/Local Command Via SSH.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_ssh_proxy_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1021.004",
+      "name": "Remote Services: SSH",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Lateral Movement",
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "T1202",
+      "name": "Indirect Command Execution",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\OpenSSH\\ssh.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\OpenSSH\\ssh.exe</code>"
+    },
+    {
+      "signal": "Port-forwarding or dynamic-proxy flags (`-L`, `-R`, `-D`) setting up tunnels",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Port-forwarding or dynamic-proxy flags (<code>-L</code>, <code>-R</code>, <code>-D</code>) setting up tunnels"
+    },
+    {
+      "signal": "A `ProxyCommand` or local-command option that runs a local program",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A <code>ProxyCommand</code> or local-command option that runs a local program"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Connections to external hosts from a server or service context",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Connections to external hosts from a server or service context"
+    }
+  ],
+  "about_html": "<p>ssh.exe is the Windows port of the OpenSSH client. It connects to SSH servers to start interactive shells, run single commands (<code>ssh host command</code>), copy files, and set up port forwarding and proxy tunnels. It ships with Windows 10 and later as an optional-but-default feature, with the genuine binary at <code>C:\\Windows\\System32\\OpenSSH\\ssh.exe</code>.</p>\n<p>Legitimately, ssh is used by administrators and developers to reach remote systems. Where it connects, what it runs, and any tunneling it sets up are what give an instance meaning.</p>",
+  "security_notes_html": "<p>ssh.exe supports lateral movement and remote execution (<a href=\"https://attack.mitre.org/techniques/T1021/004/\" target=\"_blank\" rel=\"noreferrer noopener\">T1021.004</a>). With keys or stolen credentials, an operator opens shells on other machines or runs one-off commands, blending with normal administration. Its forwarding options (<code>-L</code>, <code>-R</code>, <code>-D</code>) build tunnels that pivot traffic through compromised hosts and bypass network controls, which is often the more important signal than the login itself.</p>\n<p>ssh can also run a local program as a side effect: the <code>ProxyCommand</code> and local-command options execute a command on the source machine, a form of indirect command execution through a signed binary (<a href=\"https://attack.mitre.org/techniques/T1202/\" target=\"_blank\" rel=\"noreferrer noopener\">T1202</a>). Because ssh is legitimate, the destinations, the forwarding flags, and any local-command options are what separate administration from pivoting and abuse.</p>"
+}

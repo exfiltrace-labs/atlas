@@ -1,0 +1,311 @@
+{
+  "name": "spoolsv.exe",
+  "aliases": [
+    "spoolsv"
+  ],
+  "category": "System",
+  "tags": [
+    "printing",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "spoolsv.exe is the Print Spooler service, the Windows component that manages print jobs, printer queues, and printer drivers. It runs as SYSTEM and is present on nearly every Windows machine, including many with no printer attached. Its habit of loading driver and printer-related DLLs has made it the target of some of the most serious Windows privilege-escalation bugs.\n",
+  "about": "spoolsv.exe hosts the Print Spooler service (`Spooler`). It accepts print jobs from applications, queues them, and feeds them to printers, loading the printer drivers, print processors, and port monitors needed along the way. It is started by `services.exe` at boot, runs as `NT AUTHORITY\\SYSTEM`, and a single instance runs for the life of the system. The genuine binary lives at `C:\\Windows\\System32\\spoolsv.exe`.\n\nThe spooler's work involves loading code. Printer drivers, print processors, and port monitors are all DLLs that get loaded into the SYSTEM-level spoolsv.exe. The service is reachable locally through `winspool.drv` and, by design, remotely through the print system's RPC interfaces, which is what makes a code-loading SYSTEM service exposed to the network worth attention.\n\nOn its own spoolsv.exe does not start other programs. It runs quietly and is present even on printer-less machines, because the service is enabled by default.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "spoolsv.exe.mui",
+    "internal_name": "spoolsv.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "960.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 34,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\spoolsv.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [
+    {
+      "value": "49668/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\spoolsv.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `services.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "spoolsv spawning child processes such as `cmd.exe`, `powershell.exe`, or `rundll32.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Loading a DLL from a user-writable path, the spool directory, or `Temp`",
+      "severity": "high"
+    },
+    {
+      "signal": "New or unusual print processors or port monitors registered in the registry",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections to hosts unrelated to printing",
+      "severity": "medium"
+    },
+    {
+      "signal": "Running as an account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "spoolsv.exe is best known as the target of the PrintNightmare family of vulnerabilities (T1068). The spooler can be coaxed into loading an attacker-supplied printer driver DLL, and because the process runs as SYSTEM, that DLL executes with full privileges, locally for elevation or over the network for remote code execution. The real spooler never loads a DLL from a user-writable path and never spawns a process, so either behaviour is a strong signal.\n\nIt is also a persistence surface through print processors (T1547.012). A print processor or port monitor is just a DLL named in the registry that the spooler loads as SYSTEM every time it starts. An attacker who registers their own gains a stealthy, SYSTEM-level autostart that lives under the spooler's keys rather than the usual Run locations and survives reboots.\n\nBecause the print RPC interfaces are reachable remotely and the service is on by default, disabling the spooler on machines that do not need to print is a common hardening step. Where it must run, the signals above, an unexpected loaded DLL, a child process, or a new print processor, are what separate abuse from normal printing.\n",
+  "mitre_attack": [
+    "T1068",
+    "T1547.012"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/print/introduction-to-spooler-components",
+    "https://attack.mitre.org/techniques/T1068/",
+    "https://attack.mitre.org/techniques/T1547/012/"
+  ],
+  "sigma": [
+    {
+      "id": "d522eca2-2973-4391-a3e0-ef0374321dae",
+      "title": "Abused Debug Privilege by Arbitrary Parent Processes",
+      "level": "high",
+      "techniques": [
+        "T1548"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_abusing_debug_privilege.yml",
+      "match": "parent"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "cbb9e3d1-2386-4e59-912e-62f1484f7a89",
+      "title": "Conhost Spawned By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_uncommon_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "02fb90de-c321-4e63-a6b9-25f4b03dfd14",
+      "title": "Windows Spooler Service Suspicious Binary Load",
+      "level": "informational",
+      "techniques": [
+        "T1574"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/Exploits/CVE-2021-1675/image_load_exploit_cve_2021_1675_spoolsv_dll_load.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1068",
+      "name": "Exploitation for Privilege Escalation",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1547.012",
+      "name": "Boot or Logon Autostart Execution: Print Processors",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\spoolsv.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\spoolsv.exe</code>"
+    },
+    {
+      "signal": "Parent other than `services.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a>"
+    },
+    {
+      "signal": "spoolsv spawning child processes such as `cmd.exe`, `powershell.exe`, or `rundll32.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "spoolsv spawning child processes such as <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/rundll32.exe\"><code>rundll32.exe</code></a>"
+    },
+    {
+      "signal": "Loading a DLL from a user-writable path, the spool directory, or `Temp`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Loading a DLL from a user-writable path, the spool directory, or <code>Temp</code>"
+    },
+    {
+      "signal": "New or unusual print processors or port monitors registered in the registry",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "New or unusual print processors or port monitors registered in the registry"
+    },
+    {
+      "signal": "Outbound network connections to hosts unrelated to printing",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections to hosts unrelated to printing"
+    },
+    {
+      "signal": "Running as an account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running as an account other than <code>NT AUTHORITY\\SYSTEM</code>"
+    }
+  ],
+  "about_html": "<p>spoolsv.exe hosts the Print Spooler service (<code>Spooler</code>). It accepts print jobs from applications, queues them, and feeds them to printers, loading the printer drivers, print processors, and port monitors needed along the way. It is started by <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a> at boot, runs as <code>NT AUTHORITY\\SYSTEM</code>, and a single instance runs for the life of the system. The genuine binary lives at <code>C:\\Windows\\System32\\spoolsv.exe</code>.</p>\n<p>The spooler's work involves loading code. Printer drivers, print processors, and port monitors are all DLLs that get loaded into the SYSTEM-level spoolsv.exe. The service is reachable locally through <code>winspool.drv</code> and, by design, remotely through the print system's RPC interfaces, which is what makes a code-loading SYSTEM service exposed to the network worth attention.</p>\n<p>On its own spoolsv.exe does not start other programs. It runs quietly and is present even on printer-less machines, because the service is enabled by default.</p>",
+  "security_notes_html": "<p>spoolsv.exe is best known as the target of the PrintNightmare family of vulnerabilities (<a href=\"https://attack.mitre.org/techniques/T1068/\" target=\"_blank\" rel=\"noreferrer noopener\">T1068</a>). The spooler can be coaxed into loading an attacker-supplied printer driver DLL, and because the process runs as SYSTEM, that DLL executes with full privileges, locally for elevation or over the network for remote code execution. The real spooler never loads a DLL from a user-writable path and never spawns a process, so either behaviour is a strong signal.</p>\n<p>It is also a persistence surface through print processors (<a href=\"https://attack.mitre.org/techniques/T1547/012/\" target=\"_blank\" rel=\"noreferrer noopener\">T1547.012</a>). A print processor or port monitor is just a DLL named in the registry that the spooler loads as SYSTEM every time it starts. An attacker who registers their own gains a stealthy, SYSTEM-level autostart that lives under the spooler's keys rather than the usual Run locations and survives reboots.</p>\n<p>Because the print RPC interfaces are reachable remotely and the service is on by default, disabling the spooler on machines that do not need to print is a common hardening step. Where it must run, the signals above, an unexpected loaded DLL, a child process, or a new print processor, are what separate abuse from normal printing.</p>"
+}

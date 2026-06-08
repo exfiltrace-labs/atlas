@@ -1,0 +1,11 @@
+{
+  "name": "taskschd.dll",
+  "loaded_by": [
+    {
+      "name": "wmiprvse.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

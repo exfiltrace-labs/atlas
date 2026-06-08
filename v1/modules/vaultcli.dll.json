@@ -1,0 +1,23 @@
+{
+  "name": "vaultcli.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

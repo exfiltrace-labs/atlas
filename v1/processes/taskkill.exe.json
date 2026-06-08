@@ -1,0 +1,195 @@
+{
+  "name": "taskkill.exe",
+  "aliases": [
+    "taskkill"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "taskkill.exe is the command-line tool for ending running processes, by name or process ID, on the local machine or a remote one. Administrators use it to close hung or unwanted programs. Attackers use it to shut down antivirus, EDR, and other defenses, and to kill the applications and databases that would otherwise block file encryption.\n",
+  "about": "taskkill.exe terminates processes. It selects them by image name with `/im` (for example `/im notepad.exe`) or by process ID with `/pid`, `/f` forces termination, and `/t` ends the whole process tree including children. With `/s <host>` and credentials it can kill processes on a remote machine. The genuine binary lives at `C:\\Windows\\System32\\taskkill.exe`.\n\nLegitimately, taskkill is run by administrators, scripts, and installers to close or restart programs. The process it targets, and whether the kill is forced or sweeping, are what give an instance meaning. Ending a single hung app is routine. Killing security software, or a long list of processes at once, is not.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\taskkill.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/im` or `/pid` targeting an antivirus, EDR, or other security process",
+      "severity": "high"
+    },
+    {
+      "signal": "A sequence killing many processes (security tools, databases, backup agents)",
+      "severity": "high"
+    },
+    {
+      "signal": "`/f /t` force-killing trees of security or business-critical processes",
+      "severity": "high"
+    },
+    {
+      "signal": "A remote target, `/s <host>`",
+      "severity": "medium"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "taskkill.exe is a straightforward way to blind defenses (T1685). `taskkill /f /im <security tool>.exe` terminates antivirus, EDR, or logging agents so monitoring goes dark before the next stage. A taskkill aimed at known security-product process names, especially several in quick succession, is high-signal. It only works where the target is not a protected process, which is exactly why many EDRs now run as protected (PPL) to resist being killed this way.\n\nIt is also part of ransomware preparation (T1489). Before encrypting, an operator kills the processes and database or backup agents that hold files open or could interfere, so the encryptor can reach every file. A burst of taskkill against database engines (`sqlservr.exe`, Oracle), backup agents, and Office applications just before mass file changes is a recognizable pre-encryption pattern. Because taskkill is a normal admin tool, the targeted process names, the breadth of the kill, and the parent are what separate maintenance from sabotage.\n",
+  "mitre_attack": [
+    "T1685",
+    "T1489"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill",
+    "https://attack.mitre.org/techniques/T1685/",
+    "https://attack.mitre.org/techniques/T1489/"
+  ],
+  "sigma": [
+    {
+      "id": "f3d39c45-de1a-4486-a687-ab126124f744",
+      "title": "Sdiagnhost Calling Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1036",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sdiagnhost_susp_child.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "86085955-ea48-42a2-9dd3-85d4c36b167d",
+      "title": "Process Terminated Via Taskkill",
+      "level": "low",
+      "techniques": [
+        "T1489"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_taskkill_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1489",
+      "name": "Service Stop",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0102",
+          "name": "Wizard Spider"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    },
+    {
+      "id": "T1685",
+      "name": "Disable or Modify Tools",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\taskkill.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\taskkill.exe</code>"
+    },
+    {
+      "signal": "`/im` or `/pid` targeting an antivirus, EDR, or other security process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/im</code> or <code>/pid</code> targeting an antivirus, EDR, or other security process"
+    },
+    {
+      "signal": "A sequence killing many processes (security tools, databases, backup agents)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A sequence killing many processes (security tools, databases, backup agents)"
+    },
+    {
+      "signal": "`/f /t` force-killing trees of security or business-critical processes",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/f /t</code> force-killing trees of security or business-critical processes"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "A remote target, `/s <host>`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A remote target, <code>/s &lt;host&gt;</code>"
+    }
+  ],
+  "about_html": "<p>taskkill.exe terminates processes. It selects them by image name with <code>/im</code> (for example <code>/im notepad.exe</code>) or by process ID with <code>/pid</code>, <code>/f</code> forces termination, and <code>/t</code> ends the whole process tree including children. With <code>/s &lt;host&gt;</code> and credentials it can kill processes on a remote machine. The genuine binary lives at <code>C:\\Windows\\System32\\taskkill.exe</code>.</p>\n<p>Legitimately, taskkill is run by administrators, scripts, and installers to close or restart programs. The process it targets, and whether the kill is forced or sweeping, are what give an instance meaning. Ending a single hung app is routine. Killing security software, or a long list of processes at once, is not.</p>",
+  "security_notes_html": "<p>taskkill.exe is a straightforward way to blind defenses (<a href=\"https://attack.mitre.org/techniques/T1685/\" target=\"_blank\" rel=\"noreferrer noopener\">T1685</a>). <code>taskkill /f /im &lt;security tool&gt;.exe</code> terminates antivirus, EDR, or logging agents so monitoring goes dark before the next stage. A taskkill aimed at known security-product process names, especially several in quick succession, is high-signal. It only works where the target is not a protected process, which is exactly why many EDRs now run as protected (PPL) to resist being killed this way.</p>\n<p>It is also part of ransomware preparation (<a href=\"https://attack.mitre.org/techniques/T1489/\" target=\"_blank\" rel=\"noreferrer noopener\">T1489</a>). Before encrypting, an operator kills the processes and database or backup agents that hold files open or could interfere, so the encryptor can reach every file. A burst of taskkill against database engines (<code>sqlservr.exe</code>, Oracle), backup agents, and Office applications just before mass file changes is a recognizable pre-encryption pattern. Because taskkill is a normal admin tool, the targeted process names, the breadth of the kill, and the parent are what separate maintenance from sabotage.</p>"
+}

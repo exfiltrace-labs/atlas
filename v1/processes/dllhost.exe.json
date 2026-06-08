@@ -1,0 +1,488 @@
+{
+  "name": "dllhost.exe",
+  "aliases": [
+    "dllhost"
+  ],
+  "category": "System",
+  "tags": [
+    "com",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "dllhost.exe is the COM Surrogate, a Windows host process that runs COM components out of process, isolated from the program that called them. Windows uses it constantly for work like generating file thumbnails and running shell extensions, so several instances at once are normal. Because it is a trusted, ever-present host, it is also a frequent target for masquerading and code injection.\n",
+  "about": "dllhost.exe exists so a COM object can run in its own process instead of inside the application that uses it. When a COM server is configured to run in a surrogate, for stability or isolation, Windows starts a dllhost.exe and loads the component's DLL into it. The classic example is thumbnail generation: Explorer hands the risky job of parsing an unknown file to a COM Surrogate, so a malformed file crashes dllhost.exe instead of the desktop. The genuine binary lives at `C:\\Windows\\System32\\dllhost.exe`, with a 32-bit copy under `SysWOW64`.\n\nA legitimate dllhost.exe almost always carries a `/Processid:{GUID}` argument naming the COM class it is hosting, and it is started by the COM infrastructure, so its parent is normally an `svchost.exe` running the DCOM Launch service. Many short-lived instances are normal as thumbnails render and shell actions run.\n\nInstances come and go with the COM work that spawns them. What a given dllhost.exe is hosting is identified by the CLSID on its command line, which maps to a registered COM server under the registry's `CLSID` key.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "dllhost.exe",
+    "internal_name": "dllhost.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "81.50 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 13,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\dllhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "Session 1",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\dllhost.exe` or its `SysWOW64` copy",
+      "severity": "high"
+    },
+    {
+      "signal": "Running with no `/Processid:{GUID}` argument",
+      "severity": "high"
+    },
+    {
+      "signal": "A `/Processid` CLSID that resolves to a DLL in a user-writable path",
+      "severity": "high"
+    },
+    {
+      "signal": "dllhost spawning child processes such as `cmd.exe` or `powershell.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections from dllhost",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `svchost.exe` (DCOM Launch)",
+      "severity": "medium"
+    },
+    {
+      "signal": "Running as an unexpected account",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Because dllhost.exe is always present and unremarkable, it is a common cover for malware. Some samples simply run under the name from the wrong directory (T1036.005), so a dllhost outside `System32` is an immediate flag. More often, attackers inject into a genuine dllhost to blend in as a COM surrogate (T1055). A dllhost.exe with no `/Processid` argument, one reaching the network, or one spawning a shell is behaving unlike the real host, which only ever loads and runs a registered COM class.\n\nIts defining abuse is COM hijacking (T1546.015). An attacker repoints a CLSID's registry entry, typically under `HKCU`, at their own DLL, so the next time that COM object is invoked, dllhost loads the malicious DLL under a trusted, signed process. This gives both execution and persistence, and it survives without any obvious autostart entry. A `/Processid` CLSID whose registered server is a DLL outside `System32`, especially one defined per-user, points to a hijack.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1055",
+    "T1546.015"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows/win32/com/dll-surrogates",
+    "https://attack.mitre.org/techniques/T1055/",
+    "https://attack.mitre.org/techniques/T1546/015/"
+  ],
+  "sigma": [
+    {
+      "id": "4b60e6f2-bf39-47b4-b4ea-398e33cfe253",
+      "title": "CMSTP UAC Bypass via COM Object Access",
+      "level": "high",
+      "techniques": [
+        "T1548.002",
+        "T1218.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp_com_object_access.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e7888eb1-13b0-4616-bd99-4bc0c2b054b9",
+      "title": "Dllhost.EXE Execution Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dllhost_no_cli_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "f11f2808-adb4-46c0-802a-8660db50fa99",
+      "title": "ImagingDevices Unusual Parent/Child Processes",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_imagingdevices_unusual_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "0934ac71-a331-4e98-a034-d49c491fbbcb",
+      "title": "PaperCut MF/NG Potential Exploitation",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/TA/PaperCut-Print-Management-Exploitation/proc_creation_win_papercut_print_management_exploitation_pc_app.yml",
+      "match": "image"
+    },
+    {
+      "id": "f35c5d71-b489-4e22-a115-f003df287317",
+      "title": "Potential CobaltStrike Process Patterns",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_cobaltstrike_process_patterns.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f6d1dd2f-b8ce-40ca-bc23-062efb686b34",
+      "title": "Script Event Consumer Spawning Process",
+      "level": "high",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_scrcons_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+      "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "4cbef972-f347-4170-b62a-8253f6168e6d",
+      "title": "UAC Bypass Using IDiagnostic Profile",
+      "level": "high",
+      "techniques": [
+        "T1548.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_idiagnostic_profile.yml",
+      "match": "parent"
+    },
+    {
+      "id": "49f2f17b-b4c8-4172-a68b-d5bf95d05130",
+      "title": "UAC Bypass via ICMLuaUtil",
+      "level": "high",
+      "techniques": [
+        "T1548.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_icmluautil.yml",
+      "match": "parent"
+    },
+    {
+      "id": "9be34ad0-b6a7-4fbd-91cf-fc7ec1047f5f",
+      "title": "UNC2452 Process Creation Patterns",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2020/TA/SolarWinds-Supply-Chain/proc_creation_win_apt_unc2452_cmds.yml",
+      "match": "image"
+    },
+    {
+      "id": "63d1ccc0-2a43-4f4b-9289-361b308991ff",
+      "title": "Wab/Wabmig Unusual Parent Or Child Processes",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wab_unusual_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "12b8e9f5-96b2-41e1-9a42-8c6779a5c184",
+      "title": "Potentially Suspicious Execution Of PDQDeployRunner",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pdqdeploy_runner_susp_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "7b582f1a-b318-4c6a-bf4e-66fe49bf55a5",
+      "title": "Remote Access Tool - ScreenConnect Potential Suspicious Remote Command Execution",
+      "level": "medium",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_remote_execution_susp.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.004",
+      "name": "Masquerading: Masquerade Task or Service",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1130",
+          "name": "Raspberry Robin"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0059",
+          "name": "Magic Hound"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.001",
+      "name": "Process Injection: Dynamic-link Library Injection",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0081",
+          "name": "Tropic Trooper"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0456",
+          "name": "Aria-body"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1546.012",
+      "name": "Event Triggered Execution: Image File Execution Options Injection",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0559",
+          "name": "SUNBURST"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "T1546.015",
+      "name": "Event Triggered Execution: Component Object Model Hijacking",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\dllhost.exe` or its `SysWOW64` copy",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\dllhost.exe</code> or its <code>SysWOW64</code> copy"
+    },
+    {
+      "signal": "Running with no `/Processid:{GUID}` argument",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running with no <code>/Processid:{GUID}</code> argument"
+    },
+    {
+      "signal": "A `/Processid` CLSID that resolves to a DLL in a user-writable path",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A <code>/Processid</code> CLSID that resolves to a DLL in a user-writable path"
+    },
+    {
+      "signal": "dllhost spawning child processes such as `cmd.exe` or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "dllhost spawning child processes such as <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    },
+    {
+      "signal": "Outbound network connections from dllhost",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from dllhost"
+    },
+    {
+      "signal": "Parent other than `svchost.exe` (DCOM Launch)",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a> (DCOM Launch)"
+    },
+    {
+      "signal": "Running as an unexpected account",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running as an unexpected account"
+    }
+  ],
+  "about_html": "<p>dllhost.exe exists so a COM object can run in its own process instead of inside the application that uses it. When a COM server is configured to run in a surrogate, for stability or isolation, Windows starts a dllhost.exe and loads the component's DLL into it. The classic example is thumbnail generation: Explorer hands the risky job of parsing an unknown file to a COM Surrogate, so a malformed file crashes dllhost.exe instead of the desktop. The genuine binary lives at <code>C:\\Windows\\System32\\dllhost.exe</code>, with a 32-bit copy under <code>SysWOW64</code>.</p>\n<p>A legitimate dllhost.exe almost always carries a <code>/Processid:{GUID}</code> argument naming the COM class it is hosting, and it is started by the COM infrastructure, so its parent is normally an <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a> running the DCOM Launch service. Many short-lived instances are normal as thumbnails render and shell actions run.</p>\n<p>Instances come and go with the COM work that spawns them. What a given dllhost.exe is hosting is identified by the CLSID on its command line, which maps to a registered COM server under the registry's <code>CLSID</code> key.</p>",
+  "security_notes_html": "<p>Because dllhost.exe is always present and unremarkable, it is a common cover for malware. Some samples simply run under the name from the wrong directory (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), so a dllhost outside <code>System32</code> is an immediate flag. More often, attackers inject into a genuine dllhost to blend in as a COM surrogate (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>). A dllhost.exe with no <code>/Processid</code> argument, one reaching the network, or one spawning a shell is behaving unlike the real host, which only ever loads and runs a registered COM class.</p>\n<p>Its defining abuse is COM hijacking (<a href=\"https://attack.mitre.org/techniques/T1546/015/\" target=\"_blank\" rel=\"noreferrer noopener\">T1546.015</a>). An attacker repoints a CLSID's registry entry, typically under <code>HKCU</code>, at their own DLL, so the next time that COM object is invoked, dllhost loads the malicious DLL under a trusted, signed process. This gives both execution and persistence, and it survives without any obvious autostart entry. A <code>/Processid</code> CLSID whose registered server is a DLL outside <code>System32</code>, especially one defined per-user, points to a hijack.</p>"
+}

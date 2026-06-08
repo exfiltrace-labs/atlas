@@ -1,0 +1,310 @@
+{
+  "name": "mmc.exe",
+  "aliases": [
+    "mmc"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "mmc.exe is the Microsoft Management Console, the host that runs the administrative snap-ins behind tools like Services, Event Viewer, and Device Manager. Administrators use it constantly. Attackers abuse it both as a signed proxy for execution and as a remote-execution path through its COM interface.\n",
+  "about": "mmc.exe loads management snap-ins, the modular consoles saved as `.msc` files, that administer parts of Windows. Opening Services, Event Viewer, or a custom `.msc` runs through mmc.exe. It also exposes a COM automation object, `MMC20.Application`, that can be driven locally or, over DCOM, remotely. The genuine binary lives at `C:\\Windows\\System32\\mmc.exe`.\n\nLegitimately, mmc is launched by administrators opening management consoles, so the process is ordinary on managed systems. The snap-in or `.msc` it loads, its parent, and whether it was driven through COM are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\mmc.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "A `.msc` loaded from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high"
+    },
+    {
+      "signal": "mmc spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high"
+    },
+    {
+      "signal": "mmc started as a DCOM object (`MMC20.Application`) by a remote request",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "mmc.exe is a system-binary proxy (T1218.014). A crafted `.msc` can run a command or load a snap-in that executes attacker code under a trusted, signed Microsoft process, bypassing application-control rules that allow mmc. A `.msc` from a temp or download folder, or mmc spawning a shell, points to this.\n\nmmc is also a lateral-movement path through DCOM. The `MMC20.Application` COM object can be instantiated on a remote machine and told to run a command, so the payload executes as a child of mmc.exe on the target rather than as a child of whatever reached in over the network. An mmc that spawns a shell with no interactive console open, especially one created via DCOM, is the case to investigate.\n",
+  "mitre_attack": [
+    "T1218.014"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Mmc/",
+    "https://attack.mitre.org/techniques/T1218/014/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Mmc/",
+    "commands": [
+      {
+        "command": "mmc.exe -Embedding {PATH_ABSOLUTE:.msc}",
+        "usecase": "Configure a snap-in to load a COM custom class (CLSID) that has been added to the registry",
+        "mitreID": "T1218.014",
+        "category": "Execute"
+      },
+      {
+        "command": "mmc.exe gpedit.msc",
+        "usecase": "Modify HKCU\\Environment key in Registry with COR profiler values then launch MMC to load the payload DLL.",
+        "mitreID": "T1218.014",
+        "category": "UAC Bypass"
+      },
+      {
+        "command": "mmc.exe -Embedding {PATH_ABSOLUTE:.msc}",
+        "usecase": "Download file from Internet",
+        "mitreID": "T1218.014",
+        "category": "Download"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "10c14723-61c7-4c75-92ca-9af245723ad2",
+      "title": "HackTool - Potential Impacket Lateral Movement Activity",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_impacket_lateral_movement.yml",
+      "match": "parent"
+    },
+    {
+      "id": "9cfe4b27-1e56-48b4-b7a8-d46851c91a44",
+      "title": "MMC Executing Files with Reversed Extensions Using RTLO Abuse",
+      "level": "high",
+      "techniques": [
+        "T1204.002",
+        "T1218.014",
+        "T1036.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_rlo_abuse_pattern.yml",
+      "match": "image"
+    },
+    {
+      "id": "05a2ab7e-ce11-4b63-86db-ab32e763e11d",
+      "title": "MMC Spawning Windows Shell",
+      "level": "high",
+      "techniques": [
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_susp_child_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f1f3bf22-deb2-418d-8cce-e1a45e46a5bd",
+      "title": "MMC20 Lateral Movement",
+      "level": "high",
+      "techniques": [
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_mmc20_lateral_movement.yml",
+      "match": "image"
+    },
+    {
+      "id": "be344333-921d-4c4d-8bb8-e584cf584780",
+      "title": "Potentially Suspicious Event Viewer Child Process",
+      "level": "high",
+      "techniques": [
+        "T1548.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_eventvwr_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "cbec226f-63d9-4eca-9f52-dfb6652f24df",
+      "title": "Suspicious Process Parents",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_parents.yml",
+      "match": "image"
+    },
+    {
+      "id": "a9c73e8b-3b2d-4c45-8ef2-5f9a9c9998ad",
+      "title": "MMC Loading Script Engines DLLs",
+      "level": "medium",
+      "techniques": [
+        "T1059.005",
+        "T1218.014"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_win_mmc_loads_script_engine_dll.yml",
+      "match": "image"
+    },
+    {
+      "id": "ad1f4bb9-8dfb-4765-adb6-2a7cfb6c0f94",
+      "title": "Suspicious WSMAN Provider Image Loads",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_wsman_provider_image_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "e52cb31c-10ed-4aea-bcb7-593c9f4a315b",
+      "title": "UAC Bypass via Windows Firewall Snap-In Hijack",
+      "level": "medium",
+      "techniques": [
+        "T1548"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_hijacking_firwall_snap_in.yml",
+      "match": "parent"
+    },
+    {
+      "id": "dcff7e85-d01f-4eb5-badd-84e2e6be8294",
+      "title": "Windows Default Domain GPO Modification via GPME",
+      "level": "medium",
+      "techniques": [
+        "T1484.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_default_domain_gpo_modification_via_gpme.yml",
+      "match": "image"
+    },
+    {
+      "id": "3d7679bd-0c00-440c-97b0-3f204273e6c7",
+      "title": "New Process Created Via Taskmgr.EXE",
+      "level": "low",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_taskmgr_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "bafd07c6-3ea5-454a-b4be-058fbb073de7",
+      "title": "Potential Executable Run Itself As Sacrificial Process",
+      "level": "low",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_parent_execute_itself.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1218.014",
+      "name": "System Binary Proxy Execution: MMC",
+      "curated": true,
+      "lolbas": true,
+      "groups": [
+        {
+          "id": "G1051",
+          "name": "Medusa Group"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1574",
+      "name": "Hijack Execution Flow",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1111",
+          "name": "DarkGate"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\mmc.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\mmc.exe</code>"
+    },
+    {
+      "signal": "A `.msc` loaded from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A <code>.msc</code> loaded from a user-writable path (<code>Temp</code>, <code>AppData</code>, <code>Downloads</code>)"
+    },
+    {
+      "signal": "mmc spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "mmc spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or other LOLBINs"
+    },
+    {
+      "signal": "mmc started as a DCOM object (`MMC20.Application`) by a remote request",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "mmc started as a DCOM object (<code>MMC20.Application</code>) by a remote request"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    }
+  ],
+  "about_html": "<p>mmc.exe loads management snap-ins, the modular consoles saved as <code>.msc</code> files, that administer parts of Windows. Opening Services, Event Viewer, or a custom <code>.msc</code> runs through mmc.exe. It also exposes a COM automation object, <code>MMC20.Application</code>, that can be driven locally or, over DCOM, remotely. The genuine binary lives at <code>C:\\Windows\\System32\\mmc.exe</code>.</p>\n<p>Legitimately, mmc is launched by administrators opening management consoles, so the process is ordinary on managed systems. The snap-in or <code>.msc</code> it loads, its parent, and whether it was driven through COM are what give an instance meaning.</p>",
+  "security_notes_html": "<p>mmc.exe is a system-binary proxy (<a href=\"https://attack.mitre.org/techniques/T1218/014/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218.014</a>). A crafted <code>.msc</code> can run a command or load a snap-in that executes attacker code under a trusted, signed Microsoft process, bypassing application-control rules that allow mmc. A <code>.msc</code> from a temp or download folder, or mmc spawning a shell, points to this.</p>\n<p>mmc is also a lateral-movement path through DCOM. The <code>MMC20.Application</code> COM object can be instantiated on a remote machine and told to run a command, so the payload executes as a child of mmc.exe on the target rather than as a child of whatever reached in over the network. An mmc that spawns a shell with no interactive console open, especially one created via DCOM, is the case to investigate.</p>"
+}

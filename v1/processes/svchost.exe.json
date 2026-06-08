@@ -1,0 +1,1576 @@
+{
+  "name": "svchost.exe",
+  "aliases": [
+    "svchost"
+  ],
+  "category": "System",
+  "tags": [
+    "services",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "Service Host (svchost.exe) is the generic host process for Windows services implemented as DLLs rather than standalone executables. A typical system runs many svchost instances simultaneously, each hosting one or more service groups. It is one of the most common processes on any Windows machine.\n",
+  "about": "Windows services can be implemented either as standalone executables or as service DLLs. Service DLLs do not run on their own. The **Service Control Manager** (`services.exe`) launches an instance of `svchost.exe` with a `-k <group>` argument that names a service group. svchost then loads the DLL of every service registered to that group. \n\nThe groups are defined in the registry under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost`. Common ones include `netsvcs`, `DcomLaunch`, `RPCSS`, and `LocalServiceNoNetwork`. Adding `-s <service>` narrows an instance to one service from that group, for example `svchost.exe -k netsvcs -p -s Schedule`.\n\nSince **Windows 10 1703**, systems with more than 3.5 GB of RAM split most service groups and give each service its own svchost instance. This is why modern machines commonly show 70 or more concurrent instances. The `-p` flag opts the instance into stricter mitigation policies such as signed-DLL-only loading.\n\nMost instances start close to boot. Services also start on demand or at logon, so new svchost instances long after boot are normal. Windows 10 introduced per-user services for features such as notifications and clipboard. Those instances run under the signed-in user's account at `Medium` integrity rather than a service account.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "svchost.exe.mui",
+    "internal_name": "svchost.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "86.20 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 1,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": 3,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "runtimebroker.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "rare",
+      "pct": 16.7
+    }
+  ],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [
+    {
+      "value": "53/udp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "listening_ports": [
+    {
+      "value": "7680/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "5040/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "135/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "49666/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "49667/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windowsperformancerecordercontrol.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "mmdevapi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "sysntfy.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "pcpksp.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "autopilot.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "wlidsvc.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "samlib.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "npsm.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "msxml6.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "npsmdesktopprovider.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "audioses.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "tbs.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "gpsvc.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "rmclient.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "capauthz.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "dsrole.dll",
+      "weight": "rare",
+      "pct": 14.3
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\lsass",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "Interactive user",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "Medium",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 89.8
+    },
+    {
+      "value": "Session 1",
+      "weight": "rare",
+      "pct": 10.2
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "68",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "66",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "69",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 78.3
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "uncommon",
+      "pct": 45.3
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "uncommon",
+      "pct": 32.5
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "uncommon",
+      "pct": 28.1
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "rare",
+      "pct": 17.7
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "rare",
+      "pct": 12.3
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "rare",
+      "pct": 11.8
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "rare",
+      "pct": 10.3
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "rare",
+      "pct": 9.4
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "rare",
+      "pct": 8.9
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "rare",
+      "pct": 8.9
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "rare",
+      "pct": 7.4
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "svchost.exe",
+      "weight": "uncommon",
+      "pct": 38.5
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "uncommon",
+      "pct": 26.9
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "rare",
+      "pct": 23.1
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 19.2
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "rare",
+      "pct": 11.5
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 11.5
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 11.5
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "rare",
+      "pct": 11.5
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "rare",
+      "pct": 3.8
+    },
+    {
+      "value": "vmtoolsd.exe",
+      "weight": "rare",
+      "pct": 3.8
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Running without a `-k <service group>` argument",
+      "severity": "high"
+    },
+    {
+      "signal": "A `-k` group name that does not exist under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost`",
+      "severity": "high"
+    },
+    {
+      "signal": "Look-alike spelling (svch0st.exe, scvhost.exe, svchosts.exe)",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound connections to destinations outside Microsoft infrastructure shortly after start",
+      "severity": "medium"
+    },
+    {
+      "signal": "Hosting a service DLL that is unsigned while launched with `-p`",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\svchost.exe -k netsvcs -p -s wlidsvc",
+      "pct": 33.3
+    },
+    {
+      "command": "C:\\WINDOWS\\system32\\svchost.exe -k GPSvcGroup",
+      "pct": 33.3
+    },
+    {
+      "command": "C:\\WINDOWS\\system32\\svchost.exe -k LocalService -p -s NPSMSvc",
+      "pct": 33.3
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "de43bd45cc98c143357416c7519eccfd",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "b1c5636ec08026fd0f8ccbff49ed7e59",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "d87367d5078c476b109dc3312b62781513330055",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "44fd6f9347ceed5798a25c47167f335ef085ae4648a81f775dd4bdc6240d8189",
+      "pct": 100
+    }
+  ],
+  "security_notes": "svchost.exe is a top masquerading target. Malware frequently names itself `svchost.exe` or a look-alike such as `svch0st.exe` and runs from a directory other than `System32`. Watch for a svchost process running from anywhere except `C:\\Windows\\System32` or `C:\\Windows\\SysWOW64`. Watch for a parent other than `services.exe`. Watch for an instance running without the `-k` service-group argument.\n\nAttackers also commonly persist inside legitimate svchost instances. One method registers a malicious service DLL (T1543.003). Another hijacks an existing service's `ServiceDll` registry value. Path and parent checks will pass in both cases because the process image is the genuine signed binary. In these scenarios, analysts should examine the loaded modules instead. An unsigned or unexpected DLL inside a legitimate svchost process points to this kind of abuse.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1543.003",
+    "T1055"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows/application-management/svchost-service-refactoring",
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1543/003/",
+    "https://redcanary.com/blog/threat-detection/process-masquerading/",
+    "https://www.sans.org/posters/hunt-evil/"
+  ],
+  "sigma": [
+    {
+      "id": "9aa01d62-7667-4d3b-acb8-8cb5103e2014",
+      "title": "APT27 - Emissary Panda Activity",
+      "level": "critical",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2018/TA/APT27/proc_creation_win_apt_apt27_emissary_panda.yml",
+      "match": "image"
+    },
+    {
+      "id": "88516f06-ebe0-47ad-858e-ae9fd060ddea",
+      "title": "COLDSTEEL RAT Cleanup Command Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/COLDSTEEL/proc_creation_win_malware_coldsteel_cleanup.yml",
+      "match": "parent"
+    },
+    {
+      "id": "9f9cd389-cea0-4142-bf1a-a3fd424abedd",
+      "title": "COLDSTEEL RAT Service Persistence Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/COLDSTEEL/proc_creation_win_malware_coldsteel_service_persistence.yml",
+      "match": "image"
+    },
+    {
+      "id": "e507feb7-5f73-4ef6-a970-91bb6f6d744f",
+      "title": "Elise Backdoor Activity",
+      "level": "critical",
+      "techniques": [
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2018/Malware/Elise-Backdoor/proc_creation_win_malware_elise.yml",
+      "match": "image"
+    },
+    {
+      "id": "bbb2dedd-a0e3-46ab-ba6c-6c82ae7a9aa7",
+      "title": "HAFNIUM Exchange Exploitation Activity",
+      "level": "critical",
+      "techniques": [
+        "T1546",
+        "T1053"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/TA/HAFNIUM/proc_creation_win_apt_hafnium.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e6eb5a96-9e6f-4a18-9cdd-642cfda21c8e",
+      "title": "Potential Dridex Activity",
+      "level": "critical",
+      "techniques": [
+        "T1055",
+        "T1135",
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2019/Malware/Dridex/proc_creation_win_malware_dridex.yml",
+      "match": "image"
+    },
+    {
+      "id": "33a2d1dd-f3b0-40bd-8baf-7974468927cc",
+      "title": "APT PRIVATELOG Image Load Pattern",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/TA/PRIVATELOG/image_load_usp_svchost_clfsw32.yml",
+      "match": "image"
+    },
+    {
+      "id": "534f2ef7-e8a2-4433-816d-c91bccde289b",
+      "title": "Explorer NOUACCHECK Flag",
+      "level": "high",
+      "techniques": [
+        "T1548.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_explorer_nouaccheck.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f11f2808-adb4-46c0-802a-8660db50fa99",
+      "title": "ImagingDevices Unusual Parent/Child Processes",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_imagingdevices_unusual_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f1f3bf22-deb2-418d-8cce-e1a45e46a5bd",
+      "title": "MMC20 Lateral Movement",
+      "level": "high",
+      "techniques": [
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_mmc20_lateral_movement.yml",
+      "match": "parent"
+    },
+    {
+      "id": "1d7a57da-02e0-4f7f-92b1-c7b486ccfed5",
+      "title": "Potential COLDSTEEL Persistence Service DLL Load",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/COLDSTEEL/image_load_malware_coldsteel_persistence_service_dll.yml",
+      "match": "image"
+    },
+    {
+      "id": "a7cd7306-df8b-4398-b711-6f3e4935cf16",
+      "title": "Potential CVE-2022-26809 Exploitation Attempt",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1569.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Exploits/CVE-2022-26809/proc_creation_win_exploit_cve_2022_26809_rpcss_child_process_anomaly.yml",
+      "match": "parent"
+    },
+    {
+      "id": "6d5b8176-d87d-4402-8af4-53aee9db7b5d",
+      "title": "Potential Exploitation Attempt Of Undocumented WindowsServer RCE",
+      "level": "high",
+      "techniques": [
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Exploits/Windows-Server-Unknown-Exploit/proc_creation_win_exploit_other_win_server_undocumented_rce.yml",
+      "match": "image"
+    },
+    {
+      "id": "ed5d72a6-f8f4-479d-ba79-02f6a80d7471",
+      "title": "Potential LethalHTA Technique Execution",
+      "level": "high",
+      "techniques": [
+        "T1218.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_lethalhta_technique.yml",
+      "match": "parent"
+    },
+    {
+      "id": "b66474aa-bd92-4333-a16c-298155b120df",
+      "title": "Potential Persistence Via Powershell Search Order Hijacking - Task",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_powershell_persistence.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f6d1dd2f-b8ce-40ca-bc23-062efb686b34",
+      "title": "Script Event Consumer Spawning Process",
+      "level": "high",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_scrcons_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "16c37b52-b141-42a5-a3ea-bbe098444397",
+      "title": "Suspect Svchost Activity",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_execution_with_no_cli_flags.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "title": "Suspicious Outlook Child Process",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "be58d2e2-06c8-4f58-b666-b99f6dc3b6cd",
+      "title": "Suspicious Process Masquerading As SvcHost.EXE",
+      "level": "high",
+      "techniques": [
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_masqueraded_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "883faa95-175a-4e22-8181-e5761aeb373c",
+      "title": "Suspicious Service Binary Directory",
+      "level": "high",
+      "techniques": [
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_service_dir.yml",
+      "match": "parent"
+    },
+    {
+      "id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+      "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "982e9f2d-1a85-4d5b-aea4-31f5e97c6555",
+      "title": "Suspicious WebDav Client Execution Via Rundll32.EXE",
+      "level": "high",
+      "techniques": [
+        "T1048.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_webdav_client_susp_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "f17211f1-1f24-4d0c-829f-31e28dc93cdd",
+      "title": "Uncommon Svchost Command Line Parameter",
+      "level": "high",
+      "techniques": [
+        "T1036.005",
+        "T1055",
+        "T1055.012"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_uncommon_command_line_flags.yml",
+      "match": "image"
+    },
+    {
+      "id": "63d1ccc0-2a43-4f4b-9289-361b308991ff",
+      "title": "Wab/Wabmig Unusual Parent Or Child Processes",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wab_unusual_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "cbb9e3d1-2386-4e59-912e-62f1484f7a89",
+      "title": "Conhost Spawned By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_uncommon_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "0e277796-5f23-4e49-a490-483131d4f6e1",
+      "title": "Dbghelp/Dbgcore DLL Loaded By Uncommon/Suspicious Process",
+      "level": "medium",
+      "techniques": [
+        "T1003.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_dbghelp_dbgcore_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "9bdaf1e9-fdef-443b-8081-4341b74a7e28",
+      "title": "Suspicious New Instance Of An Office COM Object",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_office_svchost_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "ad1f4bb9-8dfb-4765-adb6-2a7cfb6c0f94",
+      "title": "Suspicious WSMAN Provider Image Loads",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_wsman_provider_image_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "01d2e2a1-5f09-44f7-9fc1-24faa7479b6d",
+      "title": "Uncommon Svchost Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_uncommon_parent_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "2dbd9d3d-9e27-42a8-b8df-f13825c6c3d5",
+      "title": "WebDav Client Execution Via Rundll32.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1048.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_webdav_client_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "ec1d5e28-8f3b-4188-a6f8-6e8df81dc28e",
+      "title": "WMI Persistence - Script Event Consumer",
+      "level": "medium",
+      "techniques": [
+        "T1546.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmi_persistence_script_event_consumer.yml",
+      "match": "parent"
+    },
+    {
+      "id": "96036718-71cc-4027-a538-d1587e0006a7",
+      "title": "Windows Processes Suspicious Parent Directory",
+      "level": "low",
+      "techniques": [
+        "T1036.003",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_proc_wrong_parent.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1012",
+      "name": "Query Registry",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0412",
+          "name": "ZxShell"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1036.004",
+      "name": "Masquerading: Masquerade Task or Service",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0126",
+          "name": "Higaisa"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1033",
+          "name": "DCSrv"
+        },
+        {
+          "id": "S0554",
+          "name": "Egregor"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0008",
+          "name": "Carbanak"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0081",
+          "name": "Elise"
+        },
+        {
+          "id": "S1017",
+          "name": "OutSteel"
+        },
+        {
+          "id": "S1032",
+          "name": "PyDCrypt"
+        },
+        {
+          "id": "S0583",
+          "name": "Pysa"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1043",
+          "name": "BlackByte"
+        },
+        {
+          "id": "G1047",
+          "name": "Velvet Ant"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0469",
+          "name": "ABK"
+        },
+        {
+          "id": "S0473",
+          "name": "Avenger"
+        },
+        {
+          "id": "S0470",
+          "name": "BBK"
+        },
+        {
+          "id": "S1181",
+          "name": "BlackByte 2.0 Ransomware"
+        },
+        {
+          "id": "S0660",
+          "name": "Clambling"
+        },
+        {
+          "id": "S0198",
+          "name": "NETWIRE"
+        },
+        {
+          "id": "S0664",
+          "name": "Pandora"
+        },
+        {
+          "id": "S0436",
+          "name": "TSCookie"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.001",
+      "name": "Process Injection: Dynamic-link Library Injection",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0081",
+          "name": "Tropic Trooper"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0089",
+          "name": "BlackEnergy"
+        },
+        {
+          "id": "S1242",
+          "name": "Qilin"
+        },
+        {
+          "id": "S0596",
+          "name": "ShadowPad"
+        },
+        {
+          "id": "S0273",
+          "name": "Socksbot"
+        },
+        {
+          "id": "S0412",
+          "name": "ZxShell"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.004",
+      "name": "Process Injection: Asynchronous Procedure Call",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0061",
+          "name": "FIN8"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        },
+        {
+          "id": "S0517",
+          "name": "Pillowmint"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.012",
+      "name": "Process Injection: Process Hollowing",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0040",
+          "name": "Patchwork"
+        },
+        {
+          "id": "G0027",
+          "name": "Threat Group-3390"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0534",
+          "name": "Bazar"
+        },
+        {
+          "id": "S0662",
+          "name": "RCSession"
+        },
+        {
+          "id": "S0266",
+          "name": "TrickBot"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1070.006",
+      "name": "Indicator Removal: Timestomp",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0164",
+          "name": "TDTESS"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1112",
+      "name": "Modify Registry",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0356",
+          "name": "KONNI"
+        },
+        {
+          "id": "S1099",
+          "name": "Samurai"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "T1543.003",
+      "name": "Create or Modify System Process: Windows Service",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1099",
+          "name": "Samurai"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1547.001",
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0081",
+          "name": "Elise"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1569.002",
+      "name": "System Services: Service Execution",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0376",
+          "name": "HOPLIGHT"
+        },
+        {
+          "id": "S0203",
+          "name": "Hydraq"
+        },
+        {
+          "id": "S0141",
+          "name": "Winnti for Windows"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Running without a `-k <service group>` argument",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running without a <code>-k &lt;service group&gt;</code> argument"
+    },
+    {
+      "signal": "A `-k` group name that does not exist under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A <code>-k</code> group name that does not exist under <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost</code>"
+    },
+    {
+      "signal": "Look-alike spelling (svch0st.exe, scvhost.exe, svchosts.exe)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Look-alike spelling (svch0st.exe, scvhost.exe, svchosts.exe)"
+    },
+    {
+      "signal": "Outbound connections to destinations outside Microsoft infrastructure shortly after start",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound connections to destinations outside Microsoft infrastructure shortly after start"
+    },
+    {
+      "signal": "Hosting a service DLL that is unsigned while launched with `-p`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Hosting a service DLL that is unsigned while launched with <code>-p</code>"
+    }
+  ],
+  "about_html": "<p>Windows services can be implemented either as standalone executables or as service DLLs. Service DLLs do not run on their own. The <strong>Service Control Manager</strong> (<a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a>) launches an instance of <code>svchost.exe</code> with a <code>-k &lt;group&gt;</code> argument that names a service group. svchost then loads the DLL of every service registered to that group. </p>\n<p>The groups are defined in the registry under <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost</code>. Common ones include <code>netsvcs</code>, <code>DcomLaunch</code>, <code>RPCSS</code>, and <code>LocalServiceNoNetwork</code>. Adding <code>-s &lt;service&gt;</code> narrows an instance to one service from that group, for example <code>svchost.exe -k netsvcs -p -s Schedule</code>.</p>\n<p>Since <strong>Windows 10 1703</strong>, systems with more than 3.5 GB of RAM split most service groups and give each service its own svchost instance. This is why modern machines commonly show 70 or more concurrent instances. The <code>-p</code> flag opts the instance into stricter mitigation policies such as signed-DLL-only loading.</p>\n<p>Most instances start close to boot. Services also start on demand or at logon, so new svchost instances long after boot are normal. Windows 10 introduced per-user services for features such as notifications and clipboard. Those instances run under the signed-in user's account at <code>Medium</code> integrity rather than a service account.</p>",
+  "security_notes_html": "<p>svchost.exe is a top masquerading target. Malware frequently names itself <code>svchost.exe</code> or a look-alike such as <code>svch0st.exe</code> and runs from a directory other than <code>System32</code>. Watch for a svchost process running from anywhere except <code>C:\\Windows\\System32</code> or <code>C:\\Windows\\SysWOW64</code>. Watch for a parent other than <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a>. Watch for an instance running without the <code>-k</code> service-group argument.</p>\n<p>Attackers also commonly persist inside legitimate svchost instances. One method registers a malicious service DLL (<a href=\"https://attack.mitre.org/techniques/T1543/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1543.003</a>). Another hijacks an existing service's <code>ServiceDll</code> registry value. Path and parent checks will pass in both cases because the process image is the genuine signed binary. In these scenarios, analysts should examine the loaded modules instead. An unsigned or unexpected DLL inside a legitimate svchost process points to this kind of abuse.</p>"
+}

@@ -1,0 +1,159 @@
+{
+  "name": "icacls.exe",
+  "aliases": [
+    "icacls"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "icacls.exe displays and changes the permissions (DACLs) on files and folders. Administrators use it to set access control. Attackers use it to grant themselves access to files they should not reach, to lock owners out, and to weaken the protections on sensitive locations.\n",
+  "about": "icacls.exe reads and writes the discretionary access control lists that decide who can read, write, or execute a file or directory. It can grant and deny rights to users (`/grant`, `/deny`), reset inherited permissions (`/reset`), change owner (`/setowner`), and set integrity levels. It requires rights over the target and lives at `C:\\Windows\\System32\\icacls.exe`.\n\nLegitimately, icacls is run by administrators and installers to configure access on files and folders. The target and the permission change are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\icacls.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Granting broad rights (`Everyone:F`, `Users:F`) to system or sensitive paths",
+      "severity": "high"
+    },
+    {
+      "signal": "Resetting or removing ACLs on security tools, logs, or backups",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run alongside file-hiding, log-clearing, or shadow-deletion commands",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "icacls.exe is used to manipulate file permissions for attacker ends (T1222.001). Granting full control to a broad principal opens files and folders an account should not reach, resetting or removing ACLs strips protections from security tools, logs, or backups so they can be tampered with, and changing ownership can lock the legitimate owner out. These moves often accompany ransomware and anti-forensics, ensuring the operator can read, modify, or destroy targeted data.\n\nBecause icacls is a normal administrative tool, the target path and the permission change are what matter. Broad grants to system locations, or ACL resets on defensive files, are very different from an installer setting permissions on its own directory.\n",
+  "mitre_attack": [
+    "T1222.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls",
+    "https://attack.mitre.org/techniques/T1222/001/"
+  ],
+  "sigma": [
+    {
+      "id": "37ae075c-271b-459b-8d7b-55ad5f993dd8",
+      "title": "File or Folder Permissions Modifications",
+      "level": "medium",
+      "techniques": [
+        "T1222.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_file_permission_modifications.yml",
+      "match": "image"
+    },
+    {
+      "id": "4ae81040-fc1c-4249-bfa3-938d260214d9",
+      "title": "Use Icacls to Hide File to Everyone",
+      "level": "medium",
+      "techniques": [
+        "T1564.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_icacls_deny.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1222.001",
+      "name": "File and Directory Permissions Modification: Windows Permissions",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1180",
+          "name": "BlackByte Ransomware"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\icacls.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\icacls.exe</code>"
+    },
+    {
+      "signal": "Granting broad rights (`Everyone:F`, `Users:F`) to system or sensitive paths",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Granting broad rights (<code>Everyone:F</code>, <code>Users:F</code>) to system or sensitive paths"
+    },
+    {
+      "signal": "Resetting or removing ACLs on security tools, logs, or backups",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Resetting or removing ACLs on security tools, logs, or backups"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Run alongside file-hiding, log-clearing, or shadow-deletion commands",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run alongside file-hiding, log-clearing, or shadow-deletion commands"
+    }
+  ],
+  "about_html": "<p>icacls.exe reads and writes the discretionary access control lists that decide who can read, write, or execute a file or directory. It can grant and deny rights to users (<code>/grant</code>, <code>/deny</code>), reset inherited permissions (<code>/reset</code>), change owner (<code>/setowner</code>), and set integrity levels. It requires rights over the target and lives at <code>C:\\Windows\\System32\\icacls.exe</code>.</p>\n<p>Legitimately, icacls is run by administrators and installers to configure access on files and folders. The target and the permission change are what give an instance meaning.</p>",
+  "security_notes_html": "<p>icacls.exe is used to manipulate file permissions for attacker ends (<a href=\"https://attack.mitre.org/techniques/T1222/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1222.001</a>). Granting full control to a broad principal opens files and folders an account should not reach, resetting or removing ACLs strips protections from security tools, logs, or backups so they can be tampered with, and changing ownership can lock the legitimate owner out. These moves often accompany ransomware and anti-forensics, ensuring the operator can read, modify, or destroy targeted data.</p>\n<p>Because icacls is a normal administrative tool, the target path and the permission change are what matter. Broad grants to system locations, or ACL resets on defensive files, are very different from an installer setting permissions on its own directory.</p>"
+}

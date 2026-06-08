@@ -1,0 +1,11 @@
+Self-hosted fonts (latin subset, variable weight):
+
+- Inter (inter-latin.woff2)
+  Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
+  Licensed under the SIL Open Font License, Version 1.1
+  https://openfontlicense.org
+
+- Cascadia Mono (cascadia-mono-latin.woff2)
+  Copyright 2019 Microsoft Corporation (https://github.com/microsoft/cascadia-code)
+  Licensed under the SIL Open Font License, Version 1.1
+  https://openfontlicense.org

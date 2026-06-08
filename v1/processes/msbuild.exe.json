@@ -1,0 +1,371 @@
+{
+  "name": "msbuild.exe",
+  "aliases": [
+    "msbuild"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "msbuild.exe is the Microsoft Build Engine, the tool that compiles and builds .NET projects from XML project files. Developers and build servers use it constantly. Attackers use it as a proxy: because it compiles and runs the code inside a project file, a signed Microsoft binary will execute arbitrary C# straight from a crafted file.\n",
+  "about": "msbuild.exe builds applications by reading an XML project file (`.csproj`, `.proj`, and similar) that describes properties, items, tasks, and targets, then carrying out those tasks. Tasks are units of .NET code, and a project file can define an inline task whose C# source is embedded in the XML and compiled and run as part of the build. It ships with the .NET Framework, so the genuine binary lives under `C:\\Windows\\Microsoft.NET\\Framework` and `Framework64` (and with Visual Studio Build Tools under `Program Files`), not in `System32`.\n\nLegitimately, msbuild is run by developers and CI systems against real project files. The project file it is pointed at, and where that file came from, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Running on a machine with no development or build role",
+      "severity": "high"
+    },
+    {
+      "signal": "A project file in a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high"
+    },
+    {
+      "signal": "A project file containing an inline `<Task>`/`UsingTask` with embedded source",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections or child processes from msbuild",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "msbuild.exe is a trusted-developer-utility proxy (T1127.001). Because a project file can carry an inline task whose C# is compiled and executed during the build, an attacker ships a `.csproj` or `.xml` that contains the payload as source and runs `msbuild evil.csproj`. The signed Microsoft build engine then compiles and runs the code in memory, which sidesteps application-control rules that allow MSBuild and never produces a separate untrusted executable on disk.\n\nBecause both the binary and the act of building are legitimate, context is what separates the two: msbuild running where nobody develops software, a project file pulled from a temp or download folder, or an inline task block in that file. A developer build looks nothing like msbuild launched by an Office document.\n",
+  "mitre_attack": [
+    "T1127.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild",
+    "https://lolbas-project.github.io/lolbas/Binaries/Msbuild/",
+    "https://attack.mitre.org/techniques/T1127/001/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Msbuild/",
+    "commands": [
+      {
+        "command": "msbuild.exe {PATH:.xml}",
+        "usecase": "Compile and run code",
+        "mitreID": "T1127.001",
+        "category": "AWL Bypass"
+      },
+      {
+        "command": "msbuild.exe {PATH:.csproj}",
+        "usecase": "Compile and run code",
+        "mitreID": "T1127.001",
+        "category": "Execute"
+      },
+      {
+        "command": "msbuild.exe /logger:TargetLogger,{PATH_ABSOLUTE:.dll};MyParameters,Foo",
+        "usecase": "Execute DLL",
+        "mitreID": "T1127.001",
+        "category": "Execute"
+      },
+      {
+        "command": "msbuild.exe {PATH:.proj}",
+        "usecase": "Execute project file that contains XslTransformation tag parameters",
+        "mitreID": "T1127.001",
+        "category": "Execute"
+      },
+      {
+        "command": "msbuild.exe @{PATH:.rsp}",
+        "usecase": "Bypass command-line based detections",
+        "mitreID": "T1036",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "52cad028-0ff0-4854-8f67-d25dfcbc78b4",
+      "title": "HTML Help HH.EXE Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1059.001",
+        "T1059.003",
+        "T1059.005",
+        "T1059.007",
+        "T1218",
+        "T1218.001",
+        "T1218.010",
+        "T1218.011",
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_html_help_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "f6d1dd2f-b8ce-40ca-bc23-062efb686b34",
+      "title": "Script Event Consumer Spawning Process",
+      "level": "high",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_scrcons_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "title": "Suspicious Outlook Child Process",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "0e277796-5f23-4e49-a490-483131d4f6e1",
+      "title": "Dbghelp/Dbgcore DLL Loaded By Uncommon/Suspicious Process",
+      "level": "medium",
+      "techniques": [
+        "T1003.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_dbghelp_dbgcore_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "148431ce-4b70-403d-8525-fcc2993f29ea",
+      "title": "Potential DLL Injection Or Execution Using Tracker.exe",
+      "level": "medium",
+      "techniques": [
+        "T1055.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_tracker.yml",
+      "match": "parent"
+    },
+    {
+      "id": "33be4333-2c6b-44f4-ae28-102cdbde0a31",
+      "title": "Suspicious Msbuild Execution By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msbuild_susp_parent_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1027",
+      "name": "Obfuscated Files or Information",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0562",
+          "name": "SUNSPOT"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1036",
+      "name": "Masquerading",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1018",
+          "name": "TA2541"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.012",
+      "name": "Process Injection: Process Hollowing",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S9016",
+          "name": "Caminho"
+        },
+        {
+          "id": "S1018",
+          "name": "Saint Bot"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1057",
+      "name": "Process Discovery",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0562",
+          "name": "SUNSPOT"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1127.001",
+      "name": "Trusted Developer Utilities Proxy Execution: MSBuild",
+      "curated": true,
+      "lolbas": true,
+      "software": [
+        {
+          "id": "S0363",
+          "name": "Empire"
+        },
+        {
+          "id": "S0013",
+          "name": "PlugX"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Running on a machine with no development or build role",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running on a machine with no development or build role"
+    },
+    {
+      "signal": "A project file in a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A project file in a user-writable path (<code>Temp</code>, <code>AppData</code>, <code>Downloads</code>)"
+    },
+    {
+      "signal": "A project file containing an inline `<Task>`/`UsingTask` with embedded source",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A project file containing an inline <code>&lt;Task&gt;</code>/<code>UsingTask</code> with embedded source"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Outbound network connections or child processes from msbuild",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Outbound network connections or child processes from msbuild"
+    }
+  ],
+  "about_html": "<p>msbuild.exe builds applications by reading an XML project file (<code>.csproj</code>, <code>.proj</code>, and similar) that describes properties, items, tasks, and targets, then carrying out those tasks. Tasks are units of .NET code, and a project file can define an inline task whose C# source is embedded in the XML and compiled and run as part of the build. It ships with the .NET Framework, so the genuine binary lives under <code>C:\\Windows\\Microsoft.NET\\Framework</code> and <code>Framework64</code> (and with Visual Studio Build Tools under <code>Program Files</code>), not in <code>System32</code>.</p>\n<p>Legitimately, msbuild is run by developers and CI systems against real project files. The project file it is pointed at, and where that file came from, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>msbuild.exe is a trusted-developer-utility proxy (<a href=\"https://attack.mitre.org/techniques/T1127/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1127.001</a>). Because a project file can carry an inline task whose C# is compiled and executed during the build, an attacker ships a <code>.csproj</code> or <code>.xml</code> that contains the payload as source and runs <code>msbuild evil.csproj</code>. The signed Microsoft build engine then compiles and runs the code in memory, which sidesteps application-control rules that allow MSBuild and never produces a separate untrusted executable on disk.</p>\n<p>Because both the binary and the act of building are legitimate, context is what separates the two: msbuild running where nobody develops software, a project file pulled from a temp or download folder, or an inline task block in that file. A developer build looks nothing like msbuild launched by an Office document.</p>"
+}

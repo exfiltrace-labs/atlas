@@ -1,0 +1,222 @@
+{
+  "name": "fontdrvhost.exe",
+  "aliases": [
+    "fontdrvhost"
+  ],
+  "category": "System",
+  "tags": [
+    "graphics",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "fontdrvhost.exe is the Usermode Font Driver Host, the sandboxed process that parses and renders fonts. Windows moved font handling out of the kernel into this restricted process because font files have long been a rich source of exploits. One instance runs per session, and like the desktop compositor it is a routine part of the graphical stack.\n",
+  "about": "fontdrvhost.exe is the User Mode Font Driver host (UMFD). Parsing fonts is complex and historically dangerous: for years a malformed font was a reliable way to attack the Windows kernel, because font rendering lived in the kernel-mode `win32k` component. Windows 10 moved that work into fontdrvhost.exe, a tightly restricted user-mode process, so a font-parsing bug is contained instead of handing an attacker the kernel. The genuine binary lives at `C:\\Windows\\System32\\fontdrvhost.exe`.\n\nLike `dwm.exe`, one fontdrvhost.exe runs per session, started by that session's `winlogon.exe`, and each runs under a dedicated per-session virtual account named `Font Driver Host\\UMFD-0`, `UMFD-1`, and so on. One for session 0 and one for the console session, plus more for remote sessions, is normal. The process runs with very limited privileges by design.\n\nfontdrvhost.exe only services font requests. It does not start other programs or reach the network, and it stays running for the life of its session.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "fontdrvhost.exe",
+    "internal_name": "fontdrvhost.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "812.60 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 16,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\fontdrvhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "Session 1",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\fontdrvhost.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as a user account or `NT AUTHORITY\\SYSTEM` rather than a `Font Driver Host\\UMFD-*` virtual account",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `winlogon.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "fontdrvhost spawning child processes",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections from fontdrvhost",
+      "severity": "high"
+    },
+    {
+      "signal": "Running at an unexpectedly high integrity level",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "fontdrvhost.exe is rarely abused directly. Like the compositor, its worth to an analyst is as a baseline: a fixed identity with a known parent, a dedicated UMFD account, low privilege, and no network or child processes, so any deviation stands out. The simplest abuse is impersonation (T1036.005), where malware borrows the obscure but trusted name from the wrong path or runs under the wrong account.\n\nThe process exists because fonts are an exploitation surface, and it is the mitigation rather than the target. Font parsing is still attacked, but a successful exploit now lands inside this sandbox instead of the kernel. To turn that into real access an attacker has to escape the restricted process and elevate (T1068), so a fontdrvhost.exe that runs outside its UMFD account, gains privileges, or spawns anything is a sign the containment has failed.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1068"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1068/"
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1068",
+      "name": "Exploitation for Privilege Escalation",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\fontdrvhost.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\fontdrvhost.exe</code>"
+    },
+    {
+      "signal": "Running as a user account or `NT AUTHORITY\\SYSTEM` rather than a `Font Driver Host\\UMFD-*` virtual account",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as a user account or <code>NT AUTHORITY\\SYSTEM</code> rather than a <code>Font Driver Host\\UMFD-*</code> virtual account"
+    },
+    {
+      "signal": "Parent other than `winlogon.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a>"
+    },
+    {
+      "signal": "fontdrvhost spawning child processes",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "fontdrvhost spawning child processes"
+    },
+    {
+      "signal": "Outbound network connections from fontdrvhost",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from fontdrvhost"
+    },
+    {
+      "signal": "Running at an unexpectedly high integrity level",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running at an unexpectedly high integrity level"
+    }
+  ],
+  "about_html": "<p>fontdrvhost.exe is the User Mode Font Driver host (UMFD). Parsing fonts is complex and historically dangerous: for years a malformed font was a reliable way to attack the Windows kernel, because font rendering lived in the kernel-mode <code>win32k</code> component. Windows 10 moved that work into fontdrvhost.exe, a tightly restricted user-mode process, so a font-parsing bug is contained instead of handing an attacker the kernel. The genuine binary lives at <code>C:\\Windows\\System32\\fontdrvhost.exe</code>.</p>\n<p>Like <a class=\"proc-link\" href=\"/processes/dwm.exe\"><code>dwm.exe</code></a>, one fontdrvhost.exe runs per session, started by that session's <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a>, and each runs under a dedicated per-session virtual account named <code>Font Driver Host\\UMFD-0</code>, <code>UMFD-1</code>, and so on. One for session 0 and one for the console session, plus more for remote sessions, is normal. The process runs with very limited privileges by design.</p>\n<p>fontdrvhost.exe only services font requests. It does not start other programs or reach the network, and it stays running for the life of its session.</p>",
+  "security_notes_html": "<p>fontdrvhost.exe is rarely abused directly. Like the compositor, its worth to an analyst is as a baseline: a fixed identity with a known parent, a dedicated UMFD account, low privilege, and no network or child processes, so any deviation stands out. The simplest abuse is impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), where malware borrows the obscure but trusted name from the wrong path or runs under the wrong account.</p>\n<p>The process exists because fonts are an exploitation surface, and it is the mitigation rather than the target. Font parsing is still attacked, but a successful exploit now lands inside this sandbox instead of the kernel. To turn that into real access an attacker has to escape the restricted process and elevate (<a href=\"https://attack.mitre.org/techniques/T1068/\" target=\"_blank\" rel=\"noreferrer noopener\">T1068</a>), so a fontdrvhost.exe that runs outside its UMFD account, gains privileges, or spawns anything is a sign the containment has failed.</p>"
+}

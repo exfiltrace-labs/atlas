@@ -1,0 +1,596 @@
+{
+  "name": "wmiprvse.exe",
+  "aliases": [
+    "wmiprvse"
+  ],
+  "category": "System",
+  "tags": [
+    "wmi",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "WmiPrvSE.exe is the WMI Provider Host, the process that runs WMI provider code out of process on behalf of the WMI service. Almost any management query or action that uses Windows Management Instrumentation flows through it, so it runs routinely. It matters for triage because programs launched through WMI, including remote attacker commands, appear as its children.\n",
+  "about": "WmiPrvSE.exe (WMI Provider Host) hosts the providers, the DLLs that actually answer WMI queries and carry out WMI actions, in a separate process from the WMI service (`Winmgmt`, which lives inside `svchost.exe`). Isolating providers this way keeps a faulty or slow one from taking down the shared service. The genuine binary lives at `C:\\Windows\\System32\\wbem\\WmiPrvSE.exe` (note the `wbem` subfolder). It is started by the DCOM and WMI infrastructure, so its parent is normally an `svchost.exe`, and it runs under `NETWORK SERVICE`, `LOCAL SERVICE`, or `SYSTEM` depending on the provider it is hosting.\n\nSeveral instances can run at once, grouped by the account a provider needs. They start when WMI activity begins and stop after a period of inactivity. WmiPrvSE carries out the work of providers itself, so on its own it has no reason to start other programs.\n\nOne behaviour is central to reading it. When something uses WMI to create a process, locally with `wmic process call create` or remotely over the network, the new process is launched by WmiPrvSE.exe rather than by the program that issued the request. A process created through WMI therefore appears as a child of WmiPrvSE.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "Wmiprvse.exe",
+    "internal_name": "Wmiprvse.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "496.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 47,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "schedprov.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\wkssvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "\\srvsvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "shellhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vm3dservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ctfmon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vmtoolsd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msdtc.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shellexperiencehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vgauthservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "audiodg.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wbem\\WmiPrvSE.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "WmiPrvSE spawning `cmd.exe`, `powershell.exe`, or a script host",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `svchost.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections from WmiPrvSE",
+      "severity": "medium"
+    },
+    {
+      "signal": "A child process that then persists, downloads, or connects out",
+      "severity": "medium"
+    },
+    {
+      "signal": "Running under an account that does not match any registered provider",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Because WMI-created processes are parented by WmiPrvSE.exe, a WmiPrvSE spawning `cmd.exe` or `powershell.exe` is a classic sign of WMI-based execution and lateral movement (T1047). Remote tooling such as `wmic /node:`, `Invoke-WmiMethod`, and Impacket's wmiexec all land the same way: the payload runs as a child of WmiPrvSE on the target, not as a child of whatever reached in over the network. The parent-child link is the detection, and the spawned command line carries the intent.\n\nWmiPrvSE is also where stealthy WMI persistence surfaces (T1546.003). An attacker registers a permanent event consumer, a `CommandLineEventConsumer` for example, bound to a trigger like system uptime or logon, and when it fires the consumer's command runs under the WMI host. The subscription lives in the WMI repository rather than in any autostart location, so it survives reboots and evades the usual persistence checks. Watch for WmiPrvSE launching a program that no administrative or scheduled WMI activity accounts for.\n\nAs an always-present service process, WmiPrvSE is also injected into so malicious code can run under a trusted, signed host (T1055). There, watch for unusual loaded modules or network activity from a WmiPrvSE that is not spawning anything.\n",
+  "mitre_attack": [
+    "T1047",
+    "T1546.003",
+    "T1055"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows/win32/wmisdk/provider-hosting-and-security",
+    "https://attack.mitre.org/techniques/T1047/",
+    "https://attack.mitre.org/techniques/T1546/003/"
+  ],
+  "sigma": [
+    {
+      "id": "10c14723-61c7-4c75-92ca-9af245723ad2",
+      "title": "HackTool - Potential Impacket Lateral Movement Activity",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_impacket_lateral_movement.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f11f2808-adb4-46c0-802a-8660db50fa99",
+      "title": "ImagingDevices Unusual Parent/Child Processes",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_imagingdevices_unusual_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "1dd05363-104e-4b4a-b963-196a534b03a1",
+      "title": "Potential Suspicious Mofcomp Execution",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mofcomp_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "c80e66d8-1780-48a9-b412-46663fd21ac0",
+      "title": "Suspicious Autorun Registry Modified via WMI",
+      "level": "high",
+      "techniques": [
+        "T1547.001",
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_autorun_registry_modified_via_wmic.yml",
+      "match": "parent"
+    },
+    {
+      "id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+      "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "8a582fe2-0882-4b89-a82a-da6b2dc32937",
+      "title": "Suspicious WmiPrvSE Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmiprvse_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "63d1ccc0-2a43-4f4b-9289-361b308991ff",
+      "title": "Wab/Wabmig Unusual Parent Or Child Processes",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wab_unusual_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "3a6586ad-127a-4d3b-a677-1e6eacdf8fde",
+      "title": "Windows Shell/Scripting Processes Spawning Suspicious Programs",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.001",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml",
+      "match": "parent"
+    },
+    {
+      "id": "05936ce2-ee05-4dae-9d03-9a391cf2d2c6",
+      "title": "WMI Persistence - Command Line Event Consumer",
+      "level": "high",
+      "techniques": [
+        "T1546.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_wmi_persistence_commandline_event_consumer.yml",
+      "match": "image"
+    },
+    {
+      "id": "7707a579-e0d8-4886-a853-ce47e4575aaa",
+      "title": "Wmiprvse Wbemcomn DLL Hijack",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1021.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_wmiprvse_wbemcomn_dll_hijack.yml",
+      "match": "image"
+    },
+    {
+      "id": "692f0bec-83ba-4d04-af7e-e884a96059b6",
+      "title": "Potential WMI Lateral Movement WmiPrvSE Spawned PowerShell",
+      "level": "medium",
+      "techniques": [
+        "T1047",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmiprvse_spawns_powershell.yml",
+      "match": "parent"
+    },
+    {
+      "id": "d21374ff-f574-44a7-9998-4a8c8bf33d7d",
+      "title": "WmiPrvSE Spawned A Process",
+      "level": "medium",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmiprvse_spawning_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1017",
+          "name": "Volt Typhoon"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1047",
+      "name": "Windows Management Instrumentation",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1546.003",
+      "name": "Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wbem\\WmiPrvSE.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\wbem\\WmiPrvSE.exe</code>"
+    },
+    {
+      "signal": "WmiPrvSE spawning `cmd.exe`, `powershell.exe`, or a script host",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "WmiPrvSE spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or a script host"
+    },
+    {
+      "signal": "Parent other than `svchost.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>"
+    },
+    {
+      "signal": "Outbound network connections from WmiPrvSE",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from WmiPrvSE"
+    },
+    {
+      "signal": "A child process that then persists, downloads, or connects out",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A child process that then persists, downloads, or connects out"
+    },
+    {
+      "signal": "Running under an account that does not match any registered provider",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running under an account that does not match any registered provider"
+    }
+  ],
+  "about_html": "<p>WmiPrvSE.exe (WMI Provider Host) hosts the providers, the DLLs that actually answer WMI queries and carry out WMI actions, in a separate process from the WMI service (<code>Winmgmt</code>, which lives inside <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>). Isolating providers this way keeps a faulty or slow one from taking down the shared service. The genuine binary lives at <code>C:\\Windows\\System32\\wbem\\WmiPrvSE.exe</code> (note the <code>wbem</code> subfolder). It is started by the DCOM and WMI infrastructure, so its parent is normally an <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>, and it runs under <code>NETWORK SERVICE</code>, <code>LOCAL SERVICE</code>, or <code>SYSTEM</code> depending on the provider it is hosting.</p>\n<p>Several instances can run at once, grouped by the account a provider needs. They start when WMI activity begins and stop after a period of inactivity. WmiPrvSE carries out the work of providers itself, so on its own it has no reason to start other programs.</p>\n<p>One behaviour is central to reading it. When something uses WMI to create a process, locally with <code>wmic process call create</code> or remotely over the network, the new process is launched by WmiPrvSE.exe rather than by the program that issued the request. A process created through WMI therefore appears as a child of WmiPrvSE.</p>",
+  "security_notes_html": "<p>Because WMI-created processes are parented by WmiPrvSE.exe, a WmiPrvSE spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a> is a classic sign of WMI-based execution and lateral movement (<a href=\"https://attack.mitre.org/techniques/T1047/\" target=\"_blank\" rel=\"noreferrer noopener\">T1047</a>). Remote tooling such as <code>wmic /node:</code>, <code>Invoke-WmiMethod</code>, and Impacket's wmiexec all land the same way: the payload runs as a child of WmiPrvSE on the target, not as a child of whatever reached in over the network. The parent-child link is the detection, and the spawned command line carries the intent.</p>\n<p>WmiPrvSE is also where stealthy WMI persistence surfaces (<a href=\"https://attack.mitre.org/techniques/T1546/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1546.003</a>). An attacker registers a permanent event consumer, a <code>CommandLineEventConsumer</code> for example, bound to a trigger like system uptime or logon, and when it fires the consumer's command runs under the WMI host. The subscription lives in the WMI repository rather than in any autostart location, so it survives reboots and evades the usual persistence checks. Watch for WmiPrvSE launching a program that no administrative or scheduled WMI activity accounts for.</p>\n<p>As an always-present service process, WmiPrvSE is also injected into so malicious code can run under a trusted, signed host (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>). There, watch for unusual loaded modules or network activity from a WmiPrvSE that is not spawning anything.</p>"
+}

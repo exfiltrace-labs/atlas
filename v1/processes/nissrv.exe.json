@@ -1,0 +1,141 @@
+{
+  "name": "nissrv.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows Publisher"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "NisSrv.exe",
+    "internal_name": "NisSrv.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "4.18.26040.7 (8d846dd50fd7adca65beb1b013a5fda76a9ec807)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "4379.60 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "bf1b0e852f06f6d0b6c6475e53ae7908aa7e2950",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 22,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26040.7-0\\NisSrv.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "418dc89a-9808-4b87-b1d7-e5ae0cb6effc",
+      "title": "Potential Mpclient.DLL Sideloading",
+      "level": "high",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_windows_defender.yml",
+      "match": "image"
+    },
+    {
+      "id": "7002aa10-b8d4-47ae-b5ba-51ab07e228b9",
+      "title": "Potential Mpclient.DLL Sideloading Via Defender Binaries",
+      "level": "high",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mpcmdrun_dll_sideload_defender.yml",
+      "match": "image"
+    }
+  ]
+}

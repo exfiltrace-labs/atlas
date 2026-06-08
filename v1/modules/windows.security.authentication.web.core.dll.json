@@ -1,0 +1,17 @@
+{
+  "name": "windows.security.authentication.web.core.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

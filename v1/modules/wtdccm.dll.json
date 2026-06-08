@@ -1,0 +1,11 @@
+{
+  "name": "wtdccm.dll",
+  "loaded_by": [
+    {
+      "name": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    }
+  ]
+}

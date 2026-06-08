@@ -1,0 +1,11 @@
+{
+  "name": "aadwamextension.dll",
+  "loaded_by": [
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

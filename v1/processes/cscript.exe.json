@@ -1,0 +1,1043 @@
+{
+  "name": "cscript.exe",
+  "aliases": [
+    "cscript"
+  ],
+  "category": "Utility",
+  "tags": [
+    "scripting",
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "cscript.exe is the Windows Script Host in its console form, the program that runs VBScript and JScript files (.vbs, .js, .wsf) from the command line. It writes script output to a terminal instead of dialog boxes, which makes it the host of choice for administrative automation and batch-driven scripts, and a quiet way for attackers to run script non-interactively.\n",
+  "about": "cscript.exe is one of the two front-ends to the Windows Script Host (WSH), the built-in engine that runs scripts written in VBScript and JScript. cscript.exe is the console host: it sends `WScript.Echo` output to standard out, takes input from the command line, and is the natural choice when a script runs inside a batch file, a scheduled task, or another program. Its windowed twin, `wscript.exe`, shows the same output in pop-up dialogs. The genuine binary lives at `C:\\Windows\\System32\\cscript.exe`, with a 32-bit copy under `SysWOW64`.\n\nThe scripting language is chosen by the file extension or the `/e:` switch, and the host hands scripts the same COM objects as `wscript.exe`, `WScript.Shell`, `WScript.Network`, `Scripting.FileSystemObject`, and others, which let them run programs, edit the registry, and reach the file system. The difference between the two hosts is only where output goes, not what a script can do.\n\nLegitimately, cscript.exe is started by the Task Scheduler, by logon or Group Policy scripts, by software installers, or by an administrator running a script by hand. It is more common than `wscript.exe` in server and automation contexts. Its parent and the script named on its command line are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\cscript.exe` or its `SysWOW64` copy",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, `mshta.exe`, or another LOLBIN",
+      "severity": "high"
+    },
+    {
+      "signal": "Running a script from a user-writable path (`Temp`, `AppData`, `Downloads`) or a mounted ISO or ZIP",
+      "severity": "high"
+    },
+    {
+      "signal": "cscript spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections from cscript",
+      "severity": "high"
+    },
+    {
+      "signal": "A script file with an encoded body (`.vbe`, `.jse`) or an obfuscated command line",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "cscript.exe runs attacker script just as readily as it runs admin script (T1059.005, T1059.007). Because it is signed and built in, a malicious `.vbs` or `.js` executes with the user's privileges and passes path and signature checks, leaving the script it runs and its parent as what to examine. Attackers favor the console host when execution is meant to be silent and non-interactive, driven from a batch file or another process rather than a double-click.\n\nAs with `wscript.exe`, the script is often only a stager. COM objects like `MSXML2.XMLHTTP` and `WScript.Shell.Run` let a short script pull down and launch the next payload (T1105), so cscript reaching the network or spawning `powershell.exe` or `cmd.exe` is the behavior to run down.\n",
+  "mitre_attack": [
+    "T1059.005",
+    "T1059.007",
+    "T1105"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cscript",
+    "https://lolbas-project.github.io/lolbas/Binaries/Cscript/",
+    "https://attack.mitre.org/techniques/T1059/005/",
+    "https://attack.mitre.org/techniques/T1059/007/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Cscript/",
+    "commands": [
+      {
+        "command": "cscript //e:vbscript {PATH_ABSOLUTE}:script.vbs",
+        "usecase": "Can be used to evade defensive countermeasures or to hide as a persistence mechanism",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "339ed3d6-5490-46d0-96a7-8abe33078f58",
+      "title": "Qakbot Rundll32 Exports Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Qakbot/proc_creation_win_malware_qakbot_rundll32_exports.yml",
+      "match": "parent"
+    },
+    {
+      "id": "bfd34392-c591-4009-b938-9fd985a28b85",
+      "title": "Qakbot Rundll32 Fake DLL Extension Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Qakbot/proc_creation_win_malware_qakbot_rundll32_fake_dll_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "2fdefcb3-dbda-401e-ae23-f0db027628bc",
+      "title": "Sticky Key Like Backdoor Execution",
+      "level": "critical",
+      "techniques": [
+        "T1546.008"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_sticky_key_like_backdoor_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "b730a276-6b63-41b8-bcf8-55930c8fc6ee",
+      "title": "Csc.EXE Execution Form Potentially Suspicious Parent",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.007",
+        "T1218.005",
+        "T1027.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_csc_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "99b7460d-c9f1-40d7-a316-1f36f61d52ee",
+      "title": "Cscript/Wscript Uncommon Script Extension Execution",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.007"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wscript_cscript_uncommon_extension_exec.yml",
+      "match": "image"
+    },
+    {
+      "id": "ec3a3c2f-9bb0-4a9b-8f4b-5ec386544343",
+      "title": "CVE-2023-38331 Exploitation Attempt - Suspicious WinRAR Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Exploits/CVE-2023-38831/proc_creation_win_exploit_cve_2023_38831_winrar_child_proc.yml",
+      "match": "image"
+    },
+    {
+      "id": "4508a70e-97ef-4300-b62b-ff27992990ea",
+      "title": "DotNet CLR DLL Loaded By Scripting Applications",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_susp_script_dotnet_clr_dll_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "52cad028-0ff0-4854-8f67-d25dfcbc78b4",
+      "title": "HTML Help HH.EXE Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1059.001",
+        "T1059.003",
+        "T1059.005",
+        "T1059.007",
+        "T1218",
+        "T1218.001",
+        "T1218.010",
+        "T1218.011",
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_html_help_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "05a2ab7e-ce11-4b63-86db-ab32e763e11d",
+      "title": "MMC Spawning Windows Shell",
+      "level": "high",
+      "techniques": [
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "84b1706c-932a-44c4-ae28-892b28a25b94",
+      "title": "OneNote.EXE Execution of Malicious Embedded Scripts",
+      "level": "high",
+      "techniques": [
+        "T1218.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_embedded_script_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "0934ac71-a331-4e98-a034-d49c491fbbcb",
+      "title": "PaperCut MF/NG Potential Exploitation",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/TA/PaperCut-Print-Management-Exploitation/proc_creation_win_papercut_print_management_exploitation_pc_app.yml",
+      "match": "image"
+    },
+    {
+      "id": "1bf0ba65-9a39-42a2-9271-31d31bf2f0bf",
+      "title": "Pikabot Fake DLL Extension Execution Via Rundll32.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Pikabot/proc_creation_win_malware_pikabot_rundll32_uncommon_extension.yml",
+      "match": "parent"
+    },
+    {
+      "id": "966e4016-627f-44f7-8341-f394905c361f",
+      "title": "Potential APT10 Cloud Hopper Activity",
+      "level": "high",
+      "techniques": [
+        "T1059.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2017/TA/APT10/proc_creation_win_apt_apt10_cloud_hopper.yml",
+      "match": "image"
+    },
+    {
+      "id": "584bca0f-3608-4402-80fd-4075ff6072e3",
+      "title": "Potential CommandLine Obfuscation Using Unicode Characters From Suspicious Image",
+      "level": "high",
+      "techniques": [
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_cli_obfuscation_unicode_img.yml",
+      "match": "image"
+    },
+    {
+      "id": "53207cc2-0745-4c19-bc72-80be1cc16b3f",
+      "title": "Potential CVE-2023-21554 QueueJumper Exploitation",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Exploits/CVE-2022-21554/proc_creation_win_exploit_cve_2023_21554_queuejumper.yml",
+      "match": "image"
+    },
+    {
+      "id": "0ba1da6d-b6ce-4366-828c-18826c9de23e",
+      "title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+      "level": "high",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_binary_highly_relevant.yml",
+      "match": "image"
+    },
+    {
+      "id": "0fdc7c7f-c690-4217-9ae3-31f5156eed72",
+      "title": "Potential Exploitation of CrushFTP RCE Vulnerability (CVE-2025-54309)",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1059.003",
+        "T1068",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-54309/proc_creation_win_exploit_cve_2025_54309.yml",
+      "match": "image"
+    },
+    {
+      "id": "c363385c-f75d-4753-a108-c1a8e28bdbda",
+      "title": "Potential Manage-bde.wsf Abuse To Proxy Execution",
+      "level": "high",
+      "techniques": [
+        "T1216"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_manage_bde.yml",
+      "match": "parent"
+    },
+    {
+      "id": "cf879ffb-793a-4753-9a14-bc8f37cc90df",
+      "title": "Potential Qakbot Rundll32 Execution",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Qakbot/proc_creation_win_malware_qakbot_rundll32_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "9fc3072c-dc8f-4bf7-b231-18950000fadd",
+      "title": "Potential Recon Activity Using DriverQuery.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_driverquery_recon.yml",
+      "match": "parent"
+    },
+    {
+      "id": "63f3605b-979f-48c2-b7cc-7f90523fed88",
+      "title": "Potential Suspicious Child Process Of 3CXDesktopApp",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/TA/3CX-Supply-Chain/proc_creation_win_malware_3cx_compromise_susp_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "1dd05363-104e-4b4a-b963-196a534b03a1",
+      "title": "Potential Suspicious Mofcomp Execution",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mofcomp_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "6f0947a4-1c5e-4e0d-8ac7-53159b8f23ca",
+      "title": "Potentially Suspicious Child Process Of Regsvr32",
+      "level": "high",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dfa03a09-8b92-4d83-8e74-f72839b1c407",
+      "title": "Potentially Suspicious Child Processes Spawned by ConHost",
+      "level": "high",
+      "techniques": [
+        "T1202",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_susp_winshell_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "69bd9b97-2be2-41b6-9816-fb08757a4d1a",
+      "title": "Potentially Suspicious Execution From Parent Process In Public Folder",
+      "level": "high",
+      "techniques": [
+        "T1564",
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_execution_from_public_folder_as_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "f6d1dd2f-b8ce-40ca-bc23-062efb686b34",
+      "title": "Script Event Consumer Spawning Process",
+      "level": "high",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_scrcons_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "1228c958-e64e-4e71-92ad-7d429f4138ba",
+      "title": "Script Interpreter Execution From Suspicious Folder",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_script_exec_from_env_folder.yml",
+      "match": "image"
+    },
+    {
+      "id": "f3d39c45-de1a-4486-a687-ab126124f744",
+      "title": "Sdiagnhost Calling Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1036",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sdiagnhost_susp_child.yml",
+      "match": "image"
+    },
+    {
+      "id": "8e95e73e-ba02-4a87-b4d7-0929b8053038",
+      "title": "Suspicious ArcSOC.exe Child Process",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_arcsoc_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "9f38c1db-e2ae-40bf-81d0-5b68f73fb512",
+      "title": "Suspicious BitLocker Access Agent Update Utility Execution",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_baaupdate_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "811f459f-9231-45d4-959a-0266c6311987",
+      "title": "Suspicious Child Process Of BgInfo.EXE",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1218",
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bginfo_suspicious_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea2b7ea-792b-405f-95a1-b903ea06458f",
+      "title": "Suspicious Child Process Of Manage Engine ServiceDesk",
+      "level": "high",
+      "techniques": [
+        "T1102"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "bb0e87ce-c89f-4857-84fa-095e4483e9cb",
+      "title": "Suspicious Child Process of Notepad++ Updater - GUP.Exe",
+      "level": "high",
+      "techniques": [
+        "T1195.002",
+        "T1557"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_gup_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "396f6630-f3ac-44e3-bfc8-1b161bc00c4e",
+      "title": "Suspicious Child Process Of Wermgr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055",
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "27ba3207-dd30-4812-abbf-5d20c57d474e",
+      "title": "Suspicious Chromium Browser Instance Executed With Custom Extension",
+      "level": "high",
+      "techniques": [
+        "T1176.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_susp_load_extension.yml",
+      "match": "parent"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7a74da6b-ea76-47db-92cc-874ad90df734",
+      "title": "Suspicious MSDT Parent Process",
+      "level": "high",
+      "techniques": [
+        "T1036",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "03cc0c25-389f-4bf8-b48d-11878079f1ca",
+      "title": "Suspicious MSHTA Child Process",
+      "level": "high",
+      "techniques": [
+        "T1218.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e32f92d1-523e-49c3-9374-bdb13b46a3ba",
+      "title": "Suspicious Mshta.EXE Execution Patterns",
+      "level": "high",
+      "techniques": [
+        "T1106"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_susp_pattern.yml",
+      "match": "parent"
+    },
+    {
+      "id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "title": "Suspicious Outlook Child Process",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "8202070f-edeb-4d31-a010-a26c72ac5600",
+      "title": "Suspicious Process By Web Server Process",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml",
+      "match": "image"
+    },
+    {
+      "id": "0d34ed8b-1c12-4ff2-828c-16fc860b766d",
+      "title": "Suspicious Processes Spawned by Java.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "f9999590-1f94-4a34-a91e-951e47bedefd",
+      "title": "Suspicious Provlaunch.EXE Child Process",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_provlaunch_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "07aa184a-870d-413d-893a-157f317f6f58",
+      "title": "Suspicious Reconnaissance Activity Via GatherNetworkInfo.VBS",
+      "level": "high",
+      "techniques": [
+        "T1615",
+        "T1059.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_gather_network_info_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "58f4ea09-0fc2-4520-ba18-b85c540b0eaf",
+      "title": "Suspicious Serv-U Process Pattern",
+      "level": "high",
+      "techniques": [
+        "T1555"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_servu_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "8823e85d-31d8-473e-b7f4-92da070f0fc6",
+      "title": "Suspicious ShellExec_RunDLL Call Via Ordinal",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_susp_shellexec_ordinal_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "90fb5e62-ca1f-4e22-b42e-cc521874c938",
+      "title": "Suspicious Shells Spawn by Java Utility Keytool",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "2617e7ed-adb7-40ba-b0f3-8f9945fe6c09",
+      "title": "Suspicious SYSTEM User Process Creation",
+      "level": "high",
+      "techniques": [
+        "T1134",
+        "T1003",
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_user_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "8a582fe2-0882-4b89-a82a-da6b2dc32937",
+      "title": "Suspicious WmiPrvSE Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmiprvse_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "5687f942-867b-4578-ade7-1e341c46e99a",
+      "title": "VMToolsd Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vmware_vmtoolsd_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "3a6586ad-127a-4d3b-a677-1e6eacdf8fde",
+      "title": "Windows Shell/Scripting Processes Spawning Suspicious Programs",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.001",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml",
+      "match": "parent"
+    },
+    {
+      "id": "271de298-cc0e-4842-acd8-079a0a99ea65",
+      "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-55182/proc_creation_win_exploit_cve_2025_55182_susp_nodejs_server_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "b6676963-0353-4f88-90f5-36c20d443c6a",
+      "title": "Cscript/Wscript Potentially Suspicious Child Process",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wscript_cscript_susp_child_processes.yml",
+      "match": "parent"
+    },
+    {
+      "id": "0e277796-5f23-4e49-a490-483131d4f6e1",
+      "title": "Dbghelp/Dbgcore DLL Loaded By Uncommon/Suspicious Process",
+      "level": "medium",
+      "techniques": [
+        "T1003.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_dbghelp_dbgcore_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "a20def93-0709-4eae-9bd2-31206e21e6b2",
+      "title": "DriverQuery.EXE Execution",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_driverquery_usage.yml",
+      "match": "parent"
+    },
+    {
+      "id": "d4ca7c59-e9e4-42d8-bf57-91a776efcb87",
+      "title": "LOLBIN Execution From Abnormal Drive",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_lolbin_exec_from_non_c_drive.yml",
+      "match": "image"
+    },
+    {
+      "id": "95724fc1-a258-4674-97db-a30351981c5a",
+      "title": "Manual Execution of Script Inside of a Compressed File",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_script_exec_from_compressed_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea72823-df4d-4567-950c-0b579eaf0846",
+      "title": "Potential Dropper Script Execution Via WScript/CScript/MSHTA",
+      "level": "medium",
+      "techniques": [
+        "T1059.005",
+        "T1059.007"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wscript_cscript_mshta_dropper.yml",
+      "match": "image"
+    },
+    {
+      "id": "7f5d1c9a-3e83-48df-95a7-2b98aae6c13c",
+      "title": "Potential Provlaunch.EXE Binary Proxy Execution Abuse",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_provlaunch_potential_abuse.yml",
+      "match": "image"
+    },
+    {
+      "id": "575dce0c-8139-4e30-9295-1ee75969f7fe",
+      "title": "Potential Reconnaissance Activity Via GatherNetworkInfo.VBS",
+      "level": "medium",
+      "techniques": [
+        "T1615",
+        "T1059.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_gather_network_info.yml",
+      "match": "image"
+    },
+    {
+      "id": "28c8f68b-098d-45af-8d43-8089f3e35403",
+      "title": "Potential Register_App.Vbs LOLScript Abuse",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolscript_register_app.yml",
+      "match": "image"
+    },
+    {
+      "id": "67bc0e75-c0a9-4cfc-8754-84a505b63c04",
+      "title": "Potentially Suspicious Child Process Of ClickOnce Application",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dfsvc_suspicious_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "9f546b25-5f12-4c8d-8532-5893dcb1e4b8",
+      "title": "Potentially Suspicious Child Process Of DiskShadow.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_diskshadow_child_process_susp.yml",
+      "match": "image"
+    },
+    {
+      "id": "ca5583e9-8f80-46ac-ab91-7f314d13b984",
+      "title": "Potentially Suspicious Child Process of KeyScrambler.exe",
+      "level": "medium",
+      "techniques": [
+        "T1203",
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_keyscrambler_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "5a3164f2-b373-4152-93cf-090b13c12d27",
+      "title": "Potentially Suspicious Child Process Of VsCode",
+      "level": "medium",
+      "techniques": [
+        "T1218",
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vscode_child_processes_anomalies.yml",
+      "match": "image"
+    },
+    {
+      "id": "146aace8-9bd6-42ba-be7a-0070d8027b76",
+      "title": "Potentially Suspicious Child Process Of WinRAR.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrar_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "12b8e9f5-96b2-41e1-9a42-8c6779a5c184",
+      "title": "Potentially Suspicious Execution Of PDQDeployRunner",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pdqdeploy_runner_susp_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4b6d2a7-d8a4-4f19-acbd-943c16d90647",
+      "title": "Potentially Suspicious PowerShell Child Processes",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "1412aa78-a24c-4abd-83df-767dfb2c5bbe",
+      "title": "Potentially Suspicious WebDAV LNK Execution",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1204"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webdav_lnk_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "f91ed517-a6ba-471d-9910-b3b4a398c0f3",
+      "title": "Potentially Suspicious Windows App Activity",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_appx_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "9df0dd3a-1a5c-47e3-a2bc-30ed177646a0",
+      "title": "Remote Code Execute via Winrm.vbs",
+      "level": "medium",
+      "techniques": [
+        "T1216"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrm_execution_via_scripting_api_winrm_vbs.yml",
+      "match": "image"
+    },
+    {
+      "id": "ab37a6ec-6068-432b-a64e-2c7bf95b1d22",
+      "title": "Scripting/CommandLine Process Spawned Regsvr32",
+      "level": "medium",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "5b304bcb-ac33-49d0-87af-fa1b3ca94333",
+      "title": "Suspicious Child Process of SAP NetWeaver",
+      "level": "medium",
+      "techniques": [
+        "T1190",
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-31324/proc_creation_win_sap_netweaver_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "459628e3-1b00-4e9b-9e5b-7da8961aea35",
+      "title": "Suspicious CrushFTP Child Process",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1059.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-31161/proc_creation_win_crushftp_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "f26eb764-fd89-464b-85e2-dc4a8e6e77b8",
+      "title": "Suspicious Electron Application Child Processes",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_electron_app_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "95eadcb2-92e4-4ed1-9031-92547773a6db",
+      "title": "Suspicious PowerShell Invocation From Script Engines",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_script_engine_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "8de89e52-f6e1-4b5b-afd1-41ecfa300d48",
+      "title": "Suspicious WindowsTerminal Child Processes",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_windows_terminal_susp_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "1e33157c-53b1-41ad-bbcc-780b80b58288",
+      "title": "WSF/JSE/JS/VBA/VBE File Execution Via Cscript/Wscript",
+      "level": "medium",
+      "techniques": [
+        "T1059.005",
+        "T1059.007"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_wscript_cscript_script_exec.yml",
+      "match": "image"
+    },
+    {
+      "id": "2267fe65-0681-42ad-9a6d-46553d3f3480",
+      "title": "WSL Child Process Anomaly",
+      "level": "medium",
+      "techniques": [
+        "T1218",
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wsl_child_processes_anomalies.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1059.005",
+      "name": "Command and Scripting Interpreter: Visual Basic",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1059.007",
+      "name": "Command and Scripting Interpreter: JavaScript",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1543.003",
+      "name": "Create or Modify System Process: Windows Service",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1037",
+          "name": "STARWHALE"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1564.004",
+      "name": "Hide Artifacts: NTFS File Attributes",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\cscript.exe` or its `SysWOW64` copy",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\cscript.exe</code> or its <code>SysWOW64</code> copy"
+    },
+    {
+      "signal": "Parent is an Office application, `mshta.exe`, or another LOLBIN",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, <a class=\"proc-link\" href=\"/processes/mshta.exe\"><code>mshta.exe</code></a>, or another LOLBIN"
+    },
+    {
+      "signal": "Running a script from a user-writable path (`Temp`, `AppData`, `Downloads`) or a mounted ISO or ZIP",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running a script from a user-writable path (<code>Temp</code>, <code>AppData</code>, <code>Downloads</code>) or a mounted ISO or ZIP"
+    },
+    {
+      "signal": "cscript spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "cscript spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or other LOLBINs"
+    },
+    {
+      "signal": "Outbound network connections from cscript",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from cscript"
+    },
+    {
+      "signal": "A script file with an encoded body (`.vbe`, `.jse`) or an obfuscated command line",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A script file with an encoded body (<code>.vbe</code>, <code>.jse</code>) or an obfuscated command line"
+    }
+  ],
+  "about_html": "<p>cscript.exe is one of the two front-ends to the Windows Script Host (WSH), the built-in engine that runs scripts written in VBScript and JScript. cscript.exe is the console host: it sends <code>WScript.Echo</code> output to standard out, takes input from the command line, and is the natural choice when a script runs inside a batch file, a scheduled task, or another program. Its windowed twin, <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a>, shows the same output in pop-up dialogs. The genuine binary lives at <code>C:\\Windows\\System32\\cscript.exe</code>, with a 32-bit copy under <code>SysWOW64</code>.</p>\n<p>The scripting language is chosen by the file extension or the <code>/e:</code> switch, and the host hands scripts the same COM objects as <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a>, <code>WScript.Shell</code>, <code>WScript.Network</code>, <code>Scripting.FileSystemObject</code>, and others, which let them run programs, edit the registry, and reach the file system. The difference between the two hosts is only where output goes, not what a script can do.</p>\n<p>Legitimately, cscript.exe is started by the Task Scheduler, by logon or Group Policy scripts, by software installers, or by an administrator running a script by hand. It is more common than <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a> in server and automation contexts. Its parent and the script named on its command line are what give an instance meaning.</p>",
+  "security_notes_html": "<p>cscript.exe runs attacker script just as readily as it runs admin script (<a href=\"https://attack.mitre.org/techniques/T1059/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1059.005</a>, <a href=\"https://attack.mitre.org/techniques/T1059/007/\" target=\"_blank\" rel=\"noreferrer noopener\">T1059.007</a>). Because it is signed and built in, a malicious <code>.vbs</code> or <code>.js</code> executes with the user's privileges and passes path and signature checks, leaving the script it runs and its parent as what to examine. Attackers favor the console host when execution is meant to be silent and non-interactive, driven from a batch file or another process rather than a double-click.</p>\n<p>As with <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a>, the script is often only a stager. COM objects like <code>MSXML2.XMLHTTP</code> and <code>WScript.Shell.Run</code> let a short script pull down and launch the next payload (<a href=\"https://attack.mitre.org/techniques/T1105/\" target=\"_blank\" rel=\"noreferrer noopener\">T1105</a>), so cscript reaching the network or spawning <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a> or <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> is the behavior to run down.</p>"
+}

@@ -1,0 +1,573 @@
+{
+  "name": "onedrive.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Code Signing PCA 2024",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha384RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "OneDrive.exe",
+    "internal_name": "Client Application",
+    "product": "Microsoft OneDrive",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "26.088.0510.0004",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "4638.90 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "84b71332947747a3826d84017dfd36960e99b370",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 23,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "50f852e6-af22-4c78-9ede-42ef36aa3453",
+      "title": "Potential Azure Browser SSO Abuse",
+      "level": "low",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_azure_microsoft_account_token_provider_dll_load.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1008",
+      "name": "Fallback Channels",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1172",
+          "name": "OilBooster"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1027",
+      "name": "Obfuscated Files or Information",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0393",
+          "name": "PowerStallion"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1036.004",
+      "name": "Masquerading: Masquerade Task or Service",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1031",
+          "name": "PingPull"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0129",
+          "name": "Mustang Panda"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1063",
+          "name": "Brute Ratel C4"
+        },
+        {
+          "id": "S0455",
+          "name": "Metamorfo"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1041",
+      "name": "Exfiltration Over C2 Channel",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1170",
+          "name": "ODAgent"
+        },
+        {
+          "id": "S1172",
+          "name": "OilBooster"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Exfiltration",
+          "order": 13
+        }
+      ]
+    },
+    {
+      "id": "T1048",
+      "name": "Exfiltration Over Alternative Protocol",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0677",
+          "name": "AADInternals"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Exfiltration",
+          "order": 13
+        }
+      ]
+    },
+    {
+      "id": "T1059.001",
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0393",
+          "name": "PowerStallion"
+        },
+        {
+          "id": "S0270",
+          "name": "RogueRobin"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1102",
+      "name": "Web Service",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1011",
+          "name": "EXOTIC LILY"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1039",
+          "name": "Bumblebee"
+        },
+        {
+          "id": "S1147",
+          "name": "Nightdoor"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1102.002",
+      "name": "Web Service: Bidirectional Communication",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1001",
+          "name": "HEXANE"
+        },
+        {
+          "id": "G1005",
+          "name": "POLONIUM"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0054",
+          "name": "CloudDuke"
+        },
+        {
+          "id": "S1023",
+          "name": "CreepyDrive"
+        },
+        {
+          "id": "S1170",
+          "name": "ODAgent"
+        },
+        {
+          "id": "S1172",
+          "name": "OilBooster"
+        },
+        {
+          "id": "S0393",
+          "name": "PowerStallion"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0054",
+          "name": "CloudDuke"
+        },
+        {
+          "id": "S1172",
+          "name": "OilBooster"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1119",
+      "name": "Automated Collection",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0125",
+          "name": "HAFNIUM"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Collection",
+          "order": 11
+        }
+      ]
+    },
+    {
+      "id": "T1204.001",
+      "name": "User Execution: Malicious Link",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1039",
+          "name": "Bumblebee"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1530",
+      "name": "Data from Cloud Storage",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0125",
+          "name": "HAFNIUM"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0677",
+          "name": "AADInternals"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Collection",
+          "order": 11
+        }
+      ]
+    },
+    {
+      "id": "T1550.001",
+      "name": "Use Alternate Authentication Material: Application Access Token",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1023",
+          "name": "CreepyDrive"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Lateral Movement",
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "T1566.002",
+      "name": "Phishing: Spearphishing Link",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1054",
+          "name": "MirrorFace"
+        }
+      ],
+      "software": [
+        {
+          "id": "S9026",
+          "name": "ROAMINGHOUSE"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Initial Access",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "T1567.002",
+      "name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0114",
+          "name": "Chimera"
+        },
+        {
+          "id": "G1001",
+          "name": "HEXANE"
+        },
+        {
+          "id": "G1005",
+          "name": "POLONIUM"
+        },
+        {
+          "id": "G0010",
+          "name": "Turla"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1023",
+          "name": "CreepyDrive"
+        },
+        {
+          "id": "S1170",
+          "name": "ODAgent"
+        },
+        {
+          "id": "S1172",
+          "name": "OilBooster"
+        },
+        {
+          "id": "S1102",
+          "name": "Pcexter"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Exfiltration",
+          "order": 13
+        }
+      ]
+    },
+    {
+      "id": "T1574.001",
+      "name": "Hijack Execution Flow: DLL",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0538",
+          "name": "Crutch"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1583.006",
+      "name": "Acquire Infrastructure: Web Services",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1005",
+          "name": "POLONIUM"
+        },
+        {
+          "id": "G1018",
+          "name": "TA2541"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Resource Development",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "T1608.001",
+      "name": "Stage Capabilities: Upload Malware",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1011",
+          "name": "EXOTIC LILY"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Resource Development",
+          "order": 1
+        }
+      ]
+    }
+  ]
+}

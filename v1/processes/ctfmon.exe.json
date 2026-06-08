@@ -1,0 +1,283 @@
+{
+  "name": "ctfmon.exe",
+  "aliases": [
+    "ctfmon"
+  ],
+  "category": "System",
+  "tags": [
+    "shell",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "ctfmon.exe is the process behind Windows text input services, handling things like alternative input methods, language switching, handwriting, and speech for the desktop. It runs quietly per user whenever someone is signed in, and is a routine part of the interactive session.\n",
+  "about": "ctfmon.exe runs the Text Services Framework, which coordinates input method editors (IMEs), keyboard layouts, and alternative text input for applications. One instance runs per interactive user, started as part of bringing up the session, and runs as that user. The genuine binary lives at `C:\\Windows\\System32\\ctfmon.exe`.\n\nLegitimately, ctfmon.exe is present on every signed-in desktop, doing its work in the background. It supports input rather than launching programs, so it does not normally start other processes or reach the network.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "CTFMON.EXE.MUI",
+    "internal_name": "CTFMON",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "68.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 12,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\ctfmon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\ctfmon.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logged-on user",
+      "severity": "high"
+    },
+    {
+      "signal": "ctfmon spawning child processes or making outbound connections",
+      "severity": "high"
+    },
+    {
+      "signal": "More instances than interactive users",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "ctfmon.exe is mostly a baseline process: its value is a steady identity, the logged-on user's account, a Microsoft signature, no children, and no network, so deviations are easy to see. The realistic abuse is impersonation (T1036.005), where malware borrows the obscure but familiar name from the wrong path or runs under the wrong account.\n\nAs a persistent per-user process it could also be an injection target (T1055). A ctfmon.exe that loads unusual modules, opens network connections, or spawns anything is acting outside its normal role.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1055"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1055/"
+  ],
+  "sigma": [
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.003",
+      "name": "Process Injection: Thread Execution Hijacking",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1145",
+          "name": "Pikabot"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1547.001",
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0152",
+          "name": "EvilGrab"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\ctfmon.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\ctfmon.exe</code>"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logged-on user",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> rather than the logged-on user"
+    },
+    {
+      "signal": "ctfmon spawning child processes or making outbound connections",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "ctfmon spawning child processes or making outbound connections"
+    },
+    {
+      "signal": "More instances than interactive users",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "More instances than interactive users"
+    }
+  ],
+  "about_html": "<p>ctfmon.exe runs the Text Services Framework, which coordinates input method editors (IMEs), keyboard layouts, and alternative text input for applications. One instance runs per interactive user, started as part of bringing up the session, and runs as that user. The genuine binary lives at <code>C:\\Windows\\System32\\ctfmon.exe</code>.</p>\n<p>Legitimately, ctfmon.exe is present on every signed-in desktop, doing its work in the background. It supports input rather than launching programs, so it does not normally start other processes or reach the network.</p>",
+  "security_notes_html": "<p>ctfmon.exe is mostly a baseline process: its value is a steady identity, the logged-on user's account, a Microsoft signature, no children, and no network, so deviations are easy to see. The realistic abuse is impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), where malware borrows the obscure but familiar name from the wrong path or runs under the wrong account.</p>\n<p>As a persistent per-user process it could also be an injection target (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>). A ctfmon.exe that loads unusual modules, opens network connections, or spawns anything is acting outside its normal role.</p>"
+}

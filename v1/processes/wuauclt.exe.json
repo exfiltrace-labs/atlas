@@ -1,0 +1,232 @@
+{
+  "name": "wuauclt.exe",
+  "aliases": [
+    "wuauclt"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "wuauclt.exe is the legacy Windows Update client used to trigger and control update checks from the command line. It is mostly superseded on modern Windows. Attackers abused a specific option that makes it load and run a DLL, executing code through a signed Microsoft binary.\n",
+  "about": "wuauclt.exe (Windows Update AutoUpdate Client) historically drove update detection and installation. On Windows 10 and 11 most of its job has moved to the Update Orchestrator and `usoclient.exe`, so it is rarely seen doing real work. The genuine binary lives at `C:\\Windows\\System32\\wuauclt.exe`. Its security relevance is a parameter that loads an external DLL through an update-deployment provider interface.\n\nLegitimately, wuauclt is invoked by the update infrastructure, infrequently on current systems. A command line that points it at a DLL is what gives a malicious instance away.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wuauclt.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "A command line referencing `UpdateDeploymentProvider` and a DLL path",
+      "severity": "high"
+    },
+    {
+      "signal": "A DLL loaded from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "wuauclt spawning child processes or making outbound connections",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "wuauclt.exe is a system-binary proxy (T1218). With the `/UpdateDeploymentProvider <dll> /RunHandlerComServer` form, wuauclt loads the named DLL and calls into it, so an attacker has the signed Windows Update client execute their DLL, bypassing application-control rules that trust Microsoft binaries. A wuauclt command line naming a DLL, especially one in a user-writable directory, is close to a confirmed abuse, because legitimate update activity does not look like that.\n\nSince wuauclt does little on modern Windows, its appearance with an unusual command line or parent is itself worth attention.\n",
+  "mitre_attack": [
+    "T1218"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Wuauclt/",
+    "https://attack.mitre.org/techniques/T1218/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Wuauclt/",
+    "commands": [
+      {
+        "command": "wuauclt.exe /UpdateDeploymentProvider {PATH_ABSOLUTE:.dll} /RunHandlerComServer",
+        "usecase": "Execute dll via attach/detach methods",
+        "mitreID": "T1218",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "af77cf95-c469-471c-b6a0-946c685c4798",
+      "title": "Proxy Execution Via Wuauclt.EXE",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wuauclt_dll_loading.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "52d097e2-063e-4c9c-8fbb-855c8948d135",
+      "title": "Suspicious Windows Update Agent Empty Cmdline",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wuauclt_no_cli_flags_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1050",
+          "name": "PcShare"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1043",
+          "name": "BlackByte"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1074",
+          "name": "ANDROMEDA"
+        },
+        {
+          "id": "S9025",
+          "name": "NOOPLDR"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1218",
+      "name": "System Binary Proxy Execution",
+      "curated": true,
+      "lolbas": true,
+      "groups": [
+        {
+          "id": "G0032",
+          "name": "Lazarus Group"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wuauclt.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\wuauclt.exe</code>"
+    },
+    {
+      "signal": "A command line referencing `UpdateDeploymentProvider` and a DLL path",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A command line referencing <code>UpdateDeploymentProvider</code> and a DLL path"
+    },
+    {
+      "signal": "A DLL loaded from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A DLL loaded from a user-writable path (<code>Temp</code>, <code>AppData</code>, <code>Downloads</code>)"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    },
+    {
+      "signal": "wuauclt spawning child processes or making outbound connections",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "wuauclt spawning child processes or making outbound connections"
+    }
+  ],
+  "about_html": "<p>wuauclt.exe (Windows Update AutoUpdate Client) historically drove update detection and installation. On Windows 10 and 11 most of its job has moved to the Update Orchestrator and <code>usoclient.exe</code>, so it is rarely seen doing real work. The genuine binary lives at <code>C:\\Windows\\System32\\wuauclt.exe</code>. Its security relevance is a parameter that loads an external DLL through an update-deployment provider interface.</p>\n<p>Legitimately, wuauclt is invoked by the update infrastructure, infrequently on current systems. A command line that points it at a DLL is what gives a malicious instance away.</p>",
+  "security_notes_html": "<p>wuauclt.exe is a system-binary proxy (<a href=\"https://attack.mitre.org/techniques/T1218/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218</a>). With the <code>/UpdateDeploymentProvider &lt;dll&gt; /RunHandlerComServer</code> form, wuauclt loads the named DLL and calls into it, so an attacker has the signed Windows Update client execute their DLL, bypassing application-control rules that trust Microsoft binaries. A wuauclt command line naming a DLL, especially one in a user-writable directory, is close to a confirmed abuse, because legitimate update activity does not look like that.</p>\n<p>Since wuauclt does little on modern Windows, its appearance with an unusual command line or parent is itself worth attention.</p>"
+}

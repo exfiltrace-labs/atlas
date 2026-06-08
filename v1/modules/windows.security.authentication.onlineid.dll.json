@@ -1,0 +1,11 @@
+{
+  "name": "windows.security.authentication.onlineid.dll",
+  "loaded_by": [
+    {
+      "name": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

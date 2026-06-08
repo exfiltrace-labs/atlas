@@ -1,0 +1,228 @@
+{
+  "name": "fsutil.exe",
+  "aliases": [
+    "fsutil"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "fsutil.exe is a file system utility for low-level NTFS and volume tasks. Administrators use it for disk and file system maintenance. Attackers use it for anti-forensics, most notably deleting the USN change journal that records file activity, and to wipe or manipulate files.\n",
+  "about": "fsutil.exe performs file system operations that ordinary tools do not expose: querying and setting volume and NTFS properties, managing hardlinks and reparse points, working with sparse files, and managing the USN change journal that NTFS keeps of file changes. It requires administrative rights and lives at `C:\\Windows\\System32\\fsutil.exe`.\n\nLegitimately, fsutil is run by administrators for disk diagnostics and configuration, which is infrequent. The sub-command it runs is what gives an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\fsutil.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`usn deletejournal` (destroying the NTFS change journal)",
+      "severity": "high"
+    },
+    {
+      "signal": "`file setZeroData` or similar used to overwrite file contents",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run alongside event-log clearing or shadow-copy deletion",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "fsutil.exe is an anti-forensics tool (T1070.004). `fsutil usn deletejournal /d C:` deletes the USN change journal, the NTFS record of which files were created, modified, and deleted, removing a timeline investigators rely on. Run next to event-log clearing and shadow-copy deletion, it is part of a deliberate effort to erase the trail.\n\nIts low-level file operations also support data destruction (T1485): verbs that zero or overwrite file data can be used to wipe specific files beyond recovery. Because fsutil is a legitimate maintenance tool, the sub-command, the target, and the parent are what separate disk administration from evidence destruction.\n",
+  "mitre_attack": [
+    "T1070.004",
+    "T1485"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Fsutil/",
+    "https://attack.mitre.org/techniques/T1070/004/",
+    "https://attack.mitre.org/techniques/T1485/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Fsutil/",
+    "commands": [
+      {
+        "command": "fsutil.exe file setZeroData offset=0 length=9999999999 {PATH_ABSOLUTE}",
+        "usecase": "Can be used to forensically erase a file",
+        "mitreID": "T1485",
+        "category": "Tamper"
+      },
+      {
+        "command": "fsutil.exe usn deletejournal /d c:",
+        "usecase": "Can be used to hide file creation activity",
+        "mitreID": "T1485",
+        "category": "Tamper"
+      },
+      {
+        "command": "fsutil.exe trace decode",
+        "usecase": "Spawn a pre-planted executable from fsutil.exe.",
+        "mitreID": "T1218",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "add64136-62e5-48ea-807e-88638d02df1e",
+      "title": "Fsutil Suspicious Invocation",
+      "level": "high",
+      "techniques": [
+        "T1070",
+        "T1485"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_fsutil_usage.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "4ebc877f-4612-45cb-b3a5-8e3834db36c9",
+      "title": "Webshell Hacking Activity Patterns",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_hacking.yml",
+      "match": "image"
+    },
+    {
+      "id": "63de06b9-a385-40b5-8b32-73f2b9ef84b6",
+      "title": "Fsutil Drive Enumeration",
+      "level": "low",
+      "techniques": [
+        "T1120"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_fsutil_drive_enumeration.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1070.004",
+      "name": "Indicator Removal: File Deletion",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1218",
+      "name": "System Binary Proxy Execution",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1485",
+      "name": "Data Destruction",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\fsutil.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\fsutil.exe</code>"
+    },
+    {
+      "signal": "`usn deletejournal` (destroying the NTFS change journal)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>usn deletejournal</code> (destroying the NTFS change journal)"
+    },
+    {
+      "signal": "`file setZeroData` or similar used to overwrite file contents",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>file setZeroData</code> or similar used to overwrite file contents"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or an unfamiliar process"
+    },
+    {
+      "signal": "Run alongside event-log clearing or shadow-copy deletion",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run alongside event-log clearing or shadow-copy deletion"
+    }
+  ],
+  "about_html": "<p>fsutil.exe performs file system operations that ordinary tools do not expose: querying and setting volume and NTFS properties, managing hardlinks and reparse points, working with sparse files, and managing the USN change journal that NTFS keeps of file changes. It requires administrative rights and lives at <code>C:\\Windows\\System32\\fsutil.exe</code>.</p>\n<p>Legitimately, fsutil is run by administrators for disk diagnostics and configuration, which is infrequent. The sub-command it runs is what gives an instance meaning.</p>",
+  "security_notes_html": "<p>fsutil.exe is an anti-forensics tool (<a href=\"https://attack.mitre.org/techniques/T1070/004/\" target=\"_blank\" rel=\"noreferrer noopener\">T1070.004</a>). <code>fsutil usn deletejournal /d C:</code> deletes the USN change journal, the NTFS record of which files were created, modified, and deleted, removing a timeline investigators rely on. Run next to event-log clearing and shadow-copy deletion, it is part of a deliberate effort to erase the trail.</p>\n<p>Its low-level file operations also support data destruction (<a href=\"https://attack.mitre.org/techniques/T1485/\" target=\"_blank\" rel=\"noreferrer noopener\">T1485</a>): verbs that zero or overwrite file data can be used to wipe specific files beyond recovery. Because fsutil is a legitimate maintenance tool, the sub-command, the target, and the parent are what separate disk administration from evidence destruction.</p>"
+}

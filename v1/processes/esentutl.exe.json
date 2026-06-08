@@ -1,0 +1,274 @@
+{
+  "name": "esentutl.exe",
+  "aliases": [
+    "esentutl"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "esentutl.exe is the Extensible Storage Engine maintenance utility, a tool for managing the ESE databases that Windows uses for Active Directory, Windows Search, certificates, and more. Administrators use it to defragment, repair, and recover those databases. Attackers use it for something else: copying locked files like the Active Directory database, and pulling files from remote locations, through a trusted signed binary.\n",
+  "about": "esentutl.exe maintains databases built on the Extensible Storage Engine (ESE, also called Jet Blue), the embedded database format behind the Active Directory store (`ntds.dit`), the Windows Search index, the certificate database, and others. Its legitimate verbs handle database health: `/d` defragment, `/p` repair, `/r` recovery, `/g` integrity check, and `/m` dump. The genuine binary lives at `C:\\Windows\\System32\\esentutl.exe`.\n\nIt also has a raw file-copy capability, `/y`, that can read a file even while another process holds it open, optionally going through a Volume Shadow Copy with `/vss`. That is genuinely useful for copying a live database during maintenance, but it is the same capability an attacker uses to grab files Windows normally keeps locked.\n\nLegitimately, esentutl is run by administrators and by directory or backup tooling, infrequently and in a maintenance context. On an ordinary workstation it is uncommon. The verb and the files on its command line describe what an instance is doing.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\esentutl.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/y` with `/vss` copying a locked system file",
+      "severity": "high"
+    },
+    {
+      "signal": "A source or destination referencing `ntds.dit`, `SAM`, `SYSTEM`, or `SECURITY`",
+      "severity": "high"
+    },
+    {
+      "signal": "A remote or WebDAV path (`\\\\...`) on the command line",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, an Office application, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run on a host with no database or maintenance role",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "esentutl.exe copies locked credential stores (T1003.003, T1003.002). The `/y /vss` combination copies a file that is locked while Windows runs: `esentutl /y /vss C:\\Windows\\NTDS\\ntds.dit /d C:\\temp\\ntds.dit` on a domain controller lifts the entire Active Directory database (T1003.003), and the same trick copies the `SAM` and `SYSTEM` hives for local account hashes (T1003.002). A `/y` or `/vss` operation touching `ntds.dit` or the hive files is close to a confirmed credential-theft attempt.\n\nThe same copy verb also reads from remote and WebDAV paths, so esentutl can pull a payload off the internet under a trusted name (T1105). A remote or `\\\\...` source is out of place for a database tool.\n\nIn every case the binary is the genuine signed esentutl and the operation is a legitimate copy, so path and signature checks pass and even Microsoft-trusting application control allows it. The verb, the files, and the parent are what separate maintenance from theft.\n",
+  "mitre_attack": [
+    "T1003.003",
+    "T1003.002",
+    "T1105"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546(v=ws.11)",
+    "https://lolbas-project.github.io/lolbas/OtherMSBinaries/Esentutl/",
+    "https://attack.mitre.org/techniques/T1003/003/",
+    "https://attack.mitre.org/techniques/T1105/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Esentutl/",
+    "commands": [
+      {
+        "command": "esentutl.exe /y {PATH_ABSOLUTE:.source.vbs} /d {PATH_ABSOLUTE:.dest.vbs} /o",
+        "usecase": "Copies files from A to B",
+        "mitreID": "T1105",
+        "category": "Copy"
+      },
+      {
+        "command": "esentutl.exe /y {PATH_ABSOLUTE:.exe} /d {PATH_ABSOLUTE}:file.exe /o",
+        "usecase": "Copy file and hide it in an alternate data stream as a defensive counter measure",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "esentutl.exe /y {PATH_ABSOLUTE}:file.exe /d {PATH_ABSOLUTE:.exe} /o",
+        "usecase": "Extract hidden file within alternate data streams",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "esentutl.exe /y {PATH_SMB:.exe} /d {PATH_ABSOLUTE}:file.exe /o",
+        "usecase": "Copy file and hide it in an alternate data stream as a defensive counter measure",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "esentutl.exe /y {PATH_SMB:.source.exe} /d {PATH_SMB:.dest.exe} /o",
+        "usecase": "Use to copy files from one unc path to another",
+        "mitreID": "T1564.004",
+        "category": "Download"
+      },
+      {
+        "command": "esentutl.exe /y /vss c:\\windows\\ntds\\ntds.dit /d {PATH_ABSOLUTE:.dit}",
+        "usecase": "Copy/extract a locked file such as the AD Database",
+        "mitreID": "T1003.003",
+        "category": "Copy"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "e7be6119-fc37-43f0-ad4f-1f3f99be2f9f",
+      "title": "Copying Sensitive Files with Credential Data",
+      "level": "high",
+      "techniques": [
+        "T1003.002",
+        "T1003.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_esentutl_sensitive_file_copy.yml",
+      "match": "image"
+    },
+    {
+      "id": "6a69f62d-ce75-4b57-8dce-6351eb55b362",
+      "title": "Esentutl Steals Browser Information",
+      "level": "medium",
+      "techniques": [
+        "T1005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_esentutl_webcache.yml",
+      "match": "image"
+    },
+    {
+      "id": "47147b5b-9e17-4d76-b8d2-7bac24c5ce1b",
+      "title": "Potential Browser Data Stealing",
+      "level": "medium",
+      "techniques": [
+        "T1555.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_copy_browser_data.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1003.002",
+      "name": "OS Credential Dumping: Security Account Manager",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "T1003.003",
+      "name": "OS Credential Dumping: NTDS",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "T1005",
+      "name": "Data from Local System",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0650",
+          "name": "QakBot"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Collection",
+          "order": 11
+        }
+      ]
+    },
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1564.004",
+      "name": "Hide Artifacts: NTFS File Attributes",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\esentutl.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\esentutl.exe</code>"
+    },
+    {
+      "signal": "`/y` with `/vss` copying a locked system file",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/y</code> with <code>/vss</code> copying a locked system file"
+    },
+    {
+      "signal": "A source or destination referencing `ntds.dit`, `SAM`, `SYSTEM`, or `SECURITY`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A source or destination referencing <code>ntds.dit</code>, <code>SAM</code>, <code>SYSTEM</code>, or <code>SECURITY</code>"
+    },
+    {
+      "signal": "A remote or WebDAV path (`\\\\...`) on the command line",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A remote or WebDAV path (<code>\\\\...</code>) on the command line"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, an Office application, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, an Office application, or an unfamiliar process"
+    },
+    {
+      "signal": "Run on a host with no database or maintenance role",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run on a host with no database or maintenance role"
+    }
+  ],
+  "about_html": "<p>esentutl.exe maintains databases built on the Extensible Storage Engine (ESE, also called Jet Blue), the embedded database format behind the Active Directory store (<code>ntds.dit</code>), the Windows Search index, the certificate database, and others. Its legitimate verbs handle database health: <code>/d</code> defragment, <code>/p</code> repair, <code>/r</code> recovery, <code>/g</code> integrity check, and <code>/m</code> dump. The genuine binary lives at <code>C:\\Windows\\System32\\esentutl.exe</code>.</p>\n<p>It also has a raw file-copy capability, <code>/y</code>, that can read a file even while another process holds it open, optionally going through a Volume Shadow Copy with <code>/vss</code>. That is genuinely useful for copying a live database during maintenance, but it is the same capability an attacker uses to grab files Windows normally keeps locked.</p>\n<p>Legitimately, esentutl is run by administrators and by directory or backup tooling, infrequently and in a maintenance context. On an ordinary workstation it is uncommon. The verb and the files on its command line describe what an instance is doing.</p>",
+  "security_notes_html": "<p>esentutl.exe copies locked credential stores (<a href=\"https://attack.mitre.org/techniques/T1003/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1003.003</a>, <a href=\"https://attack.mitre.org/techniques/T1003/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1003.002</a>). The <code>/y /vss</code> combination copies a file that is locked while Windows runs: <code>esentutl /y /vss C:\\Windows\\NTDS\\ntds.dit /d C:\\temp\\ntds.dit</code> on a domain controller lifts the entire Active Directory database (<a href=\"https://attack.mitre.org/techniques/T1003/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1003.003</a>), and the same trick copies the <code>SAM</code> and <code>SYSTEM</code> hives for local account hashes (<a href=\"https://attack.mitre.org/techniques/T1003/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1003.002</a>). A <code>/y</code> or <code>/vss</code> operation touching <code>ntds.dit</code> or the hive files is close to a confirmed credential-theft attempt.</p>\n<p>The same copy verb also reads from remote and WebDAV paths, so esentutl can pull a payload off the internet under a trusted name (<a href=\"https://attack.mitre.org/techniques/T1105/\" target=\"_blank\" rel=\"noreferrer noopener\">T1105</a>). A remote or <code>\\\\...</code> source is out of place for a database tool.</p>\n<p>In every case the binary is the genuine signed esentutl and the operation is a legitimate copy, so path and signature checks pass and even Microsoft-trusting application control allows it. The verb, the files, and the parent are what separate maintenance from theft.</p>"
+}

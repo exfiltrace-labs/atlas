@@ -1,0 +1,23 @@
+{
+  "name": "srvcli.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "windows.staterepositorybroker.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    }
+  ]
+}

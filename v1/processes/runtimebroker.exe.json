@@ -1,0 +1,643 @@
+{
+  "name": "runtimebroker.exe",
+  "aliases": [
+    "runtimebroker"
+  ],
+  "category": "System",
+  "tags": [
+    "apps",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "RuntimeBroker.exe is the Runtime Broker, the process that manages permissions for Microsoft Store apps. When a Store app wants access to something sensitive like location, camera, microphone, or files, Runtime Broker checks that the app actually has that permission before handing it over. Instances appear when Store apps start and exit when they're no longer needed.\n",
+  "about": "RuntimeBroker.exe arrived in Windows 8 together with Store apps. Those apps run inside a sandbox (an AppContainer) with very limited rights, so they can't reach sensitive resources on their own. Runtime Broker runs outside the sandbox at normal user privilege and acts as the middleman: when an app asks for the camera, the user's contacts, or a file outside its container, the broker confirms the app declared that capability and the user allowed it, then provides the access. The sensitive work stays out of the sandboxed app's hands.\n\nInstances are started on demand by `svchost.exe` (the DcomLaunch service host) whenever a Store app launches, so its parent is always that `svchost.exe`. It runs as the logged-in user from `C:\\Windows\\System32\\RuntimeBroker.exe`, and several instances at once are normal, since modern Windows gives each app its own broker. They come and go with the apps they serve, which also means Runtime Broker is a normal sight on any Windows 10 or 11 machine and its absence is normal too when no Store apps are running.\n\nThe genuine RuntimeBroker.exe is a trusted, signed Microsoft system file. It mostly sits idle, waking briefly when an app starts or requests something.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "RuntimeBroker.exe",
+    "internal_name": "RuntimeBroker.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "126.60 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 2,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": 2,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "umpdc.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "dmcmnutils.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "twinui.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.globalization.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.staterepository.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "dsreg.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "gamemode.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "tiledatarepository.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "mscms.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "staterepository.core.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "userdeviceregistration.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.management.workplace.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "5",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "3",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\RuntimeBroker.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `svchost.exe` (the DcomLaunch instance)",
+      "severity": "high"
+    },
+    {
+      "signal": "Any child processes",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` instead of the logged-in user",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [
+    {
+      "command": "C:\\Windows\\System32\\RuntimeBroker.exe -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "7dcd0bbafd08fdaafcbeaf655a392ad5",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "dd3379331f906897d3533db83f199654",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "57c2a80f7e4e4b3472c61ed133fc34f0795f77996509b7a212fbe67f01019e7d",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "2bdb420a1d6076532127ab3f57953c7c2d3ffeee",
+      "pct": 100
+    }
+  ],
+  "security_notes": "RuntimeBroker.exe is one of those names that's present on every Windows 10 and 11 machine, usually several times over, so one more instance draws no attention. That makes it a popular disguise (T1036.005). The real file lives only in `C:\\Windows\\System32` and is signed by Microsoft, so a copy running from a user profile, a temp folder, or anywhere else is suspect.\n\nIts ubiquity also makes it a favorite hiding spot for attack frameworks. C2 tools commonly inject into a running Runtime Broker or spawn a sacrificial copy to host their payload (T1055), precisely because the name blends in. The giveaway is behavior: the real broker spawns no children and rarely touches the network, so an instance opening outbound connections or starting a shell is worth pulling apart.\n\nThe parent relationship is a quick check. Windows only ever starts Runtime Broker through the DcomLaunch `svchost.exe`, so an instance whose parent is an Office app, a browser, or anything else was not started by Windows (T1134.004).\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1055",
+    "T1134.004"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://learn.microsoft.com/en-us/windows/win32/secauthz/appcontainer-isolation",
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1055/"
+  ],
+  "sigma": [
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "d06be4b9-8045-428b-a567-740a26d9db25",
+      "title": "Verclsid.exe Runs COM Object",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_verclsid_runs_com.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1134.004",
+      "name": "Access Token Manipulation: Parent PID Spoofing",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\RuntimeBroker.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\RuntimeBroker.exe</code>"
+    },
+    {
+      "signal": "Parent other than `svchost.exe` (the DcomLaunch instance)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a> (the DcomLaunch instance)"
+    },
+    {
+      "signal": "Any child processes",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Any child processes"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` instead of the logged-in user",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> instead of the logged-in user"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "Outbound network connections",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections"
+    }
+  ],
+  "about_html": "<p>RuntimeBroker.exe arrived in Windows 8 together with Store apps. Those apps run inside a sandbox (an AppContainer) with very limited rights, so they can't reach sensitive resources on their own. Runtime Broker runs outside the sandbox at normal user privilege and acts as the middleman: when an app asks for the camera, the user's contacts, or a file outside its container, the broker confirms the app declared that capability and the user allowed it, then provides the access. The sensitive work stays out of the sandboxed app's hands.</p>\n<p>Instances are started on demand by <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a> (the DcomLaunch service host) whenever a Store app launches, so its parent is always that <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>. It runs as the logged-in user from <code>C:\\Windows\\System32\\RuntimeBroker.exe</code>, and several instances at once are normal, since modern Windows gives each app its own broker. They come and go with the apps they serve, which also means Runtime Broker is a normal sight on any Windows 10 or 11 machine and its absence is normal too when no Store apps are running.</p>\n<p>The genuine RuntimeBroker.exe is a trusted, signed Microsoft system file. It mostly sits idle, waking briefly when an app starts or requests something.</p>",
+  "security_notes_html": "<p>RuntimeBroker.exe is one of those names that's present on every Windows 10 and 11 machine, usually several times over, so one more instance draws no attention. That makes it a popular disguise (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>). The real file lives only in <code>C:\\Windows\\System32</code> and is signed by Microsoft, so a copy running from a user profile, a temp folder, or anywhere else is suspect.</p>\n<p>Its ubiquity also makes it a favorite hiding spot for attack frameworks. C2 tools commonly inject into a running Runtime Broker or spawn a sacrificial copy to host their payload (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>), precisely because the name blends in. The giveaway is behavior: the real broker spawns no children and rarely touches the network, so an instance opening outbound connections or starting a shell is worth pulling apart.</p>\n<p>The parent relationship is a quick check. Windows only ever starts Runtime Broker through the DcomLaunch <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>, so an instance whose parent is an Office app, a browser, or anything else was not started by Windows (<a href=\"https://attack.mitre.org/techniques/T1134/004/\" target=\"_blank\" rel=\"noreferrer noopener\">T1134.004</a>).</p>"
+}

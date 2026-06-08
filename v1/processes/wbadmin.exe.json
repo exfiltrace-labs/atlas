@@ -1,0 +1,238 @@
+{
+  "name": "wbadmin.exe",
+  "aliases": [
+    "wbadmin"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "wbadmin.exe is the Windows Backup command-line tool, used to create and recover backups of volumes, files, and system state. Administrators use it for backup and restore. Attackers use it to delete those backups before ransomware encrypts, and to recover the Active Directory database out of a system-state backup.\n",
+  "about": "wbadmin.exe drives Windows Server Backup (and the backup engine on client editions). It can back up and restore volumes, individual files, and the system state (which on a domain controller includes the Active Directory database), and it manages the backup catalog that tracks them. It requires administrative rights and lives at `C:\\Windows\\System32\\wbadmin.exe`.\n\nLegitimately, wbadmin is run by administrators and scheduled backup jobs. The operation it performs, backing up, restoring, or deleting, is what gives an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wbadmin.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`delete catalog` or `delete systemstatebackup` (destroying backups)",
+      "severity": "high"
+    },
+    {
+      "signal": "`start recovery` of system state or `ntds.dit` outside a planned restore",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run alongside `vssadmin`, `bcdedit`, or `wmic shadowcopy delete`",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "wbadmin.exe is a recovery-inhibition tool for ransomware (T1490). `wbadmin delete catalog -quiet` and `wbadmin delete systemstatebackup` destroy the backups a victim would use to restore, and they often appear next to shadow-copy deletion (`vssadmin`) and boot-recovery tampering (`bcdedit`) in the moments before encryption.\n\nOn a domain controller it is also a credential-access route (T1003.003). Because the system-state backup contains `ntds.dit`, an attacker can use `wbadmin start recovery` to restore the directory database from a backup and then read the domain password hashes out of it. A delete-backup command from a script host, or a system-state recovery with no planned restore, is what separates abuse from administration.\n",
+  "mitre_attack": [
+    "T1490",
+    "T1003.003"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Wbadmin/",
+    "https://attack.mitre.org/techniques/T1490/",
+    "https://attack.mitre.org/techniques/T1003/003/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Wbadmin/",
+    "commands": [
+      {
+        "command": "wbadmin start backup -backupTarget:{PATH_ABSOLUTE:folder} -include:C:\\Windows\\NTDS\\NTDS.dit,C:\\Windows\\System32\\config\\SYSTEM -quiet",
+        "usecase": "Snapshoting of Active Directory NTDS.dit database",
+        "mitreID": "T1003.003",
+        "category": "Dump"
+      },
+      {
+        "command": "wbadmin start recovery -version:<VERSIONIDENTIFIER> -recoverytarget:{PATH_ABSOLUTE:folder} -itemtype:file -items:C:\\Windows\\NTDS\\NTDS.dit,C:\\Windows\\System32\\config\\SYSTEM -notRestoreAcl -quiet",
+        "usecase": "Dumping of Active Directory NTDS.dit database",
+        "mitreID": "T1003.003",
+        "category": "Dump"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "639c9081-f482-47d3-a0bd-ddee3d4ecd76",
+      "title": "All Backups Deleted Via Wbadmin.EXE",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wbadmin_delete_all_backups.yml",
+      "match": "image"
+    },
+    {
+      "id": "8b93a509-1cb8-42e1-97aa-ee24224cdc15",
+      "title": "Sensitive File Dump Via Wbadmin.EXE",
+      "level": "high",
+      "techniques": [
+        "T1003.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wbadmin_dump_sensitive_files.yml",
+      "match": "image"
+    },
+    {
+      "id": "84972c80-251c-4c3a-9079-4f00aad93938",
+      "title": "Sensitive File Recovery From Backup Via Wbadmin.EXE",
+      "level": "high",
+      "techniques": [
+        "T1003.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wbadmin_restore_sensitive_files.yml",
+      "match": "image"
+    },
+    {
+      "id": "c947b146-0abc-4c87-9c64-b17e9d7274a2",
+      "title": "Shadow Copies Deletion Using Operating Systems Utilities",
+      "level": "high",
+      "techniques": [
+        "T1070",
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shadow_copies_deletion.yml",
+      "match": "image"
+    },
+    {
+      "id": "6fe4aa1e-0531-4510-8be2-782154b73b48",
+      "title": "File Recovery From Backup Via Wbadmin.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wbadmin_restore_file.yml",
+      "match": "image"
+    },
+    {
+      "id": "89f75308-5b1b-4390-b2d8-d6b2340efaf8",
+      "title": "Windows Backup Deleted Via Wbadmin.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wbadmin_delete_backups.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1003.003",
+      "name": "OS Credential Dumping: NTDS",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "T1490",
+      "name": "Inhibit System Recovery",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0034",
+          "name": "Sandworm Team"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1058",
+          "name": "Prestige"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\wbadmin.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\wbadmin.exe</code>"
+    },
+    {
+      "signal": "`delete catalog` or `delete systemstatebackup` (destroying backups)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>delete catalog</code> or <code>delete systemstatebackup</code> (destroying backups)"
+    },
+    {
+      "signal": "`start recovery` of system state or `ntds.dit` outside a planned restore",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>start recovery</code> of system state or <code>ntds.dit</code> outside a planned restore"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or an unfamiliar process"
+    },
+    {
+      "signal": "Run alongside `vssadmin`, `bcdedit`, or `wmic shadowcopy delete`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Run alongside <code>vssadmin</code>, <code>bcdedit</code>, or <code>wmic shadowcopy delete</code>"
+    }
+  ],
+  "about_html": "<p>wbadmin.exe drives Windows Server Backup (and the backup engine on client editions). It can back up and restore volumes, individual files, and the system state (which on a domain controller includes the Active Directory database), and it manages the backup catalog that tracks them. It requires administrative rights and lives at <code>C:\\Windows\\System32\\wbadmin.exe</code>.</p>\n<p>Legitimately, wbadmin is run by administrators and scheduled backup jobs. The operation it performs, backing up, restoring, or deleting, is what gives an instance meaning.</p>",
+  "security_notes_html": "<p>wbadmin.exe is a recovery-inhibition tool for ransomware (<a href=\"https://attack.mitre.org/techniques/T1490/\" target=\"_blank\" rel=\"noreferrer noopener\">T1490</a>). <code>wbadmin delete catalog -quiet</code> and <code>wbadmin delete systemstatebackup</code> destroy the backups a victim would use to restore, and they often appear next to shadow-copy deletion (<code>vssadmin</code>) and boot-recovery tampering (<code>bcdedit</code>) in the moments before encryption.</p>\n<p>On a domain controller it is also a credential-access route (<a href=\"https://attack.mitre.org/techniques/T1003/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1003.003</a>). Because the system-state backup contains <code>ntds.dit</code>, an attacker can use <code>wbadmin start recovery</code> to restore the directory database from a backup and then read the domain password hashes out of it. A delete-backup command from a script host, or a system-state recovery with no planned restore, is what separates abuse from administration.</p>"
+}

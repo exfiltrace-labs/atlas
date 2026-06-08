@@ -1,0 +1,196 @@
+{
+  "name": "logonui.exe",
+  "aliases": [
+    "logonui"
+  ],
+  "category": "System",
+  "tags": [
+    "sessions",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "LogonUI.exe is the process that draws the Windows sign-in and lock screens. When Windows needs credentials, winlogon.exe starts LogonUI.exe to show the prompt and collect the password, PIN, smartcard, or biometric, then hand it back for validation. It is the visible face of logon, and it loads the credential provider plugins that render each sign-in method.\n",
+  "about": "LogonUI.exe presents the credential interface during interactive logon and at the lock screen. It does not authenticate anyone itself: `winlogon.exe` owns the secure logon sequence and starts LogonUI.exe to gather credentials, which then go to `lsass.exe` for validation. The genuine binary lives at `C:\\Windows\\System32\\LogonUI.exe`, runs as `NT AUTHORITY\\SYSTEM`, and is started by the session's `winlogon.exe`.\n\nThe actual sign-in tiles, password, PIN, picture password, smartcard, Windows Hello, and any third-party method, are drawn by credential providers: COM DLLs registered in the registry and loaded into LogonUI.exe. When winlogon asks for credentials, LogonUI queries each registered provider for its tiles and shows them. This is the supported way to add smartcard or MFA logon, so a non-Microsoft credential provider can be entirely legitimate.\n\nLogonUI.exe appears whenever a credential prompt is on screen, at the sign-in screen and when the workstation is locked, and exits once the user is authenticated and the desktop is up. It comes and goes with the lock state and does not start other programs.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\LogonUI.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `winlogon.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as an account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high"
+    },
+    {
+      "signal": "LogonUI spawning child processes",
+      "severity": "high"
+    },
+    {
+      "signal": "A credential provider DLL loaded from a user-writable path or signed by an unknown publisher",
+      "severity": "high"
+    },
+    {
+      "signal": "New or modified credential-provider entries in the registry",
+      "severity": "medium"
+    },
+    {
+      "signal": "Outbound network connections from LogonUI",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Like the other logon-screen processes, LogonUI.exe is mostly a baseline: a fixed identity with `winlogon.exe` as parent, SYSTEM as its account, and no child processes, so a deviation is easy to spot. The basic abuse is impersonation (T1036.005) from the wrong path or under the wrong account.\n\nIts real risk is the credential provider model (T1556). Because LogonUI loads registered credential provider DLLs to draw the sign-in fields, an attacker who installs a rogue provider can capture credentials as the user types them at the logon or lock screen, running inside a SYSTEM process at the most sensitive moment. A credential provider DLL outside `System32`, from an unknown publisher, or freshly added to the registry deserves scrutiny.\n\nThe sign-in screen is also reachable before anyone logs in, which is what makes the accessibility-tool hijack so durable: swapping `sethc.exe` or `utilman.exe` for `cmd.exe` yields a SYSTEM shell at the lock screen. That shell appears as a child of `winlogon.exe` rather than LogonUI, but LogonUI is the screen in play when it happens.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1556"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows/win32/secauthn/credential-providers-in-windows",
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1556/"
+  ],
+  "sigma": [
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1556",
+      "name": "Modify Authentication Process",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\LogonUI.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\LogonUI.exe</code>"
+    },
+    {
+      "signal": "Parent other than `winlogon.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a>"
+    },
+    {
+      "signal": "Running as an account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as an account other than <code>NT AUTHORITY\\SYSTEM</code>"
+    },
+    {
+      "signal": "LogonUI spawning child processes",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "LogonUI spawning child processes"
+    },
+    {
+      "signal": "A credential provider DLL loaded from a user-writable path or signed by an unknown publisher",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A credential provider DLL loaded from a user-writable path or signed by an unknown publisher"
+    },
+    {
+      "signal": "New or modified credential-provider entries in the registry",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "New or modified credential-provider entries in the registry"
+    },
+    {
+      "signal": "Outbound network connections from LogonUI",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from LogonUI"
+    }
+  ],
+  "about_html": "<p>LogonUI.exe presents the credential interface during interactive logon and at the lock screen. It does not authenticate anyone itself: <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a> owns the secure logon sequence and starts LogonUI.exe to gather credentials, which then go to <a class=\"proc-link\" href=\"/processes/lsass.exe\"><code>lsass.exe</code></a> for validation. The genuine binary lives at <code>C:\\Windows\\System32\\LogonUI.exe</code>, runs as <code>NT AUTHORITY\\SYSTEM</code>, and is started by the session's <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a>.</p>\n<p>The actual sign-in tiles, password, PIN, picture password, smartcard, Windows Hello, and any third-party method, are drawn by credential providers: COM DLLs registered in the registry and loaded into LogonUI.exe. When winlogon asks for credentials, LogonUI queries each registered provider for its tiles and shows them. This is the supported way to add smartcard or MFA logon, so a non-Microsoft credential provider can be entirely legitimate.</p>\n<p>LogonUI.exe appears whenever a credential prompt is on screen, at the sign-in screen and when the workstation is locked, and exits once the user is authenticated and the desktop is up. It comes and goes with the lock state and does not start other programs.</p>",
+  "security_notes_html": "<p>Like the other logon-screen processes, LogonUI.exe is mostly a baseline: a fixed identity with <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a> as parent, SYSTEM as its account, and no child processes, so a deviation is easy to spot. The basic abuse is impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>) from the wrong path or under the wrong account.</p>\n<p>Its real risk is the credential provider model (<a href=\"https://attack.mitre.org/techniques/T1556/\" target=\"_blank\" rel=\"noreferrer noopener\">T1556</a>). Because LogonUI loads registered credential provider DLLs to draw the sign-in fields, an attacker who installs a rogue provider can capture credentials as the user types them at the logon or lock screen, running inside a SYSTEM process at the most sensitive moment. A credential provider DLL outside <code>System32</code>, from an unknown publisher, or freshly added to the registry deserves scrutiny.</p>\n<p>The sign-in screen is also reachable before anyone logs in, which is what makes the accessibility-tool hijack so durable: swapping <code>sethc.exe</code> or <code>utilman.exe</code> for <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> yields a SYSTEM shell at the lock screen. That shell appears as a child of <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a> rather than LogonUI, but LogonUI is the screen in play when it happens.</p>"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "mdmregistration.dll",
+  "loaded_by": [
+    {
+      "name": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

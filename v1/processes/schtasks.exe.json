@@ -1,0 +1,749 @@
+{
+  "name": "schtasks.exe",
+  "aliases": [
+    "schtasks"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "schtasks.exe is the command-line interface to the Windows Task Scheduler. It creates, runs, queries, changes, and deletes scheduled tasks, programs set to run on a trigger like a time, a logon, or system boot. Administrators use it for routine automation. Attackers use it as one of the most reliable ways to gain persistence and to run code on remote machines.\n",
+  "about": "schtasks.exe manages scheduled tasks through the Task Scheduler service. A task pairs a trigger (a time, a schedule, logon, boot, idle, or an event) with an action (a program or script) and an account to run as. The main verbs are `/create`, `/run`, `/query`, `/change`, and `/delete`, and with `/s <host>` plus credentials it manages tasks on a remote machine. The genuine binary lives at `C:\\Windows\\System32\\schtasks.exe`. The tasks it creates are carried out later by the Task Scheduler, often through `taskhostw.exe` for DLL-based tasks.\n\nLegitimately, schtasks is run by administrators, installers, and management tooling to set up maintenance and automation. The task it creates, the program that task runs, the account it runs as, and the trigger that fires it, all on the command line, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\schtasks.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/create` with `/tr` pointing to a script host, a LOLBIN, or a binary in a user-writable path",
+      "severity": "high"
+    },
+    {
+      "signal": "`/ru SYSTEM` or another privileged account on a created task",
+      "severity": "high"
+    },
+    {
+      "signal": "A remote target, `/s <host>` with credentials",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "A task created in an unusual or hidden task folder",
+      "severity": "medium"
+    },
+    {
+      "signal": "`/create` followed immediately by `/run`",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "schtasks.exe is one of the most common persistence mechanisms on Windows (T1053.005). A task bound to logon or boot, or set on a recurring schedule, re-runs the attacker's program every time the trigger fires and survives reboots, and `/ru SYSTEM` makes that program run with full privileges. A created task whose action is a script host, a LOLBIN, or a binary in a user-writable directory points to abuse rather than routine automation.\n\nPointed at a remote host, schtasks is also lateral movement (T1053.005). `schtasks /create /s <target> /u <user> /p <pass> /tr ...` followed by `/run` creates and triggers a task on another machine with supplied credentials, a well-worn remote-execution method. Remote task creation followed by an immediate run is the pattern.\n\nAttackers also hide tasks, for example by stripping a task's security descriptor so it disappears from the Task Scheduler UI, and tuck them in obscure folders. Because schtasks is a normal administrative tool, the action, the account, the trigger, the parent, and any remote target are what separate automation from abuse. Where a created task runs DLL-based work, it surfaces at execution time under `taskhostw.exe`.\n",
+  "mitre_attack": [
+    "T1053.005"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks",
+    "https://lolbas-project.github.io/lolbas/OtherMSBinaries/Schtasks/",
+    "https://attack.mitre.org/techniques/T1053/005/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Schtasks/",
+    "commands": [
+      {
+        "command": "schtasks /create /sc minute /mo 1 /tn \"Reverse shell\" /tr \"{CMD}\"",
+        "usecase": "Create a recurring task to keep reverse shell session(s) alive",
+        "mitreID": "T1053.005",
+        "category": "Execute"
+      },
+      {
+        "command": "schtasks /create /s targetmachine /tn \"MyTask\" /tr \"{CMD}\" /sc daily",
+        "usecase": "Create a remote task to run daily relative to the the time of creation",
+        "mitreID": "T1053.005",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "220457c1-1c9f-4c2e-afe6-9598926222c1",
+      "title": "Delete All Scheduled Tasks",
+      "level": "high",
+      "techniques": [
+        "T1489"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_delete_all.yml",
+      "match": "image"
+    },
+    {
+      "id": "dbc1f800-0fe0-4bc0-9c66-292c2abe3f78",
+      "title": "Delete Important Scheduled Task",
+      "level": "high",
+      "techniques": [
+        "T1489"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_delete.yml",
+      "match": "image"
+    },
+    {
+      "id": "9ac94dc8-9042-493c-ba45-3b5e7c86b980",
+      "title": "Disable Important Scheduled Task",
+      "level": "high",
+      "techniques": [
+        "T1489"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_disable.yml",
+      "match": "image"
+    },
+    {
+      "id": "961e0abb-1b1e-4c84-a453-aafe56ad0d34",
+      "title": "Execution via stordiag.exe",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_stordiag_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "07db928c-8632-488e-ac7d-3db847489175",
+      "title": "Forest Blizzard APT - Process Creation Activity",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2024/TA/Forest-Blizzard/proc_creation_win_apt_forest_blizzard_activity.yml",
+      "match": "image"
+    },
+    {
+      "id": "56c217c3-2de2-479b-990f-5c109ba8458f",
+      "title": "HackTool - Default PowerSploit/Empire Scheduled Task Creation",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_powersploit_empire_default_schtasks.yml",
+      "match": "image"
+    },
+    {
+      "id": "52cad028-0ff0-4854-8f67-d25dfcbc78b4",
+      "title": "HTML Help HH.EXE Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1059.001",
+        "T1059.003",
+        "T1059.005",
+        "T1059.007",
+        "T1218",
+        "T1218.001",
+        "T1218.010",
+        "T1218.011",
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_html_help_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "64a871dd-83f6-4e5f-80fc-5a7ca3a8a819",
+      "title": "Kapeka Backdoor Persistence Activity",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2024/Malware/kapeka/proc_creation_win_malware_kapeka_backdoor_persistence.yml",
+      "match": "image"
+    },
+    {
+      "id": "931b6802-d6a6-4267-9ffa-526f57f22aaf",
+      "title": "Potential BearLPE Exploitation",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2019/Exploits/BearLPE-Exploit/proc_creation_win_exploit_other_bearlpe.yml",
+      "match": "image"
+    },
+    {
+      "id": "53207cc2-0745-4c19-bc72-80be1cc16b3f",
+      "title": "Potential CVE-2023-21554 QueueJumper Exploitation",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Exploits/CVE-2022-21554/proc_creation_win_exploit_cve_2023_21554_queuejumper.yml",
+      "match": "image"
+    },
+    {
+      "id": "744a188b-0415-4792-896f-11ddb0588dbc",
+      "title": "Potential Process Injection Via Msra.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msra_process_injection.yml",
+      "match": "image"
+    },
+    {
+      "id": "2daa93a0-a5fb-41c5-8cd8-3c11294bfd1f",
+      "title": "Potential SSH Tunnel Persistence Install Using A Scheduled Task",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_openssh_tunnelling.yml",
+      "match": "image"
+    },
+    {
+      "id": "6f0947a4-1c5e-4e0d-8ac7-53159b8f23ca",
+      "title": "Potentially Suspicious Child Process Of Regsvr32",
+      "level": "high",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "f91e51c9-f344-4b32-969b-0b6f6b8537d4",
+      "title": "Renamed Schtasks Execution",
+      "level": "high",
+      "techniques": [
+        "T1036.003",
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_schtasks_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "9f8573c9-22b4-40e3-89c1-72bc2b8d49ab",
+      "title": "Scheduled Task Creation Masquerading as System Processes",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1036.004",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_system_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "c4eeeeae-89f4-43a7-8b48-8d1bdfa66c78",
+      "title": "Scheduled Task Executing Encoded Payload from Registry",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_reg_loader_encoded.yml",
+      "match": "image"
+    },
+    {
+      "id": "89ca78fd-b37c-4310-b3d3-81a023f83936",
+      "title": "Schtasks Creation Or Modification With SYSTEM Privileges",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_system.yml",
+      "match": "image"
+    },
+    {
+      "id": "8a8379b8-780b-4dbf-b1e9-31c8d112fefb",
+      "title": "Schtasks From Suspicious Folders",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_folder_combos.yml",
+      "match": "image"
+    },
+    {
+      "id": "f6d1dd2f-b8ce-40ca-bc23-062efb686b34",
+      "title": "Script Event Consumer Spawning Process",
+      "level": "high",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_scrcons_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "9f38c1db-e2ae-40bf-81d0-5b68f73fb512",
+      "title": "Suspicious BitLocker Access Agent Update Utility Execution",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_baaupdate_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea2b7ea-792b-405f-95a1-b903ea06458f",
+      "title": "Suspicious Child Process Of Manage Engine ServiceDesk",
+      "level": "high",
+      "techniques": [
+        "T1102"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "f2c64357-b1d2-41b7-849f-34d2682c0fad",
+      "title": "Suspicious Command Patterns In Scheduled Task Creation",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_susp_pattern.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "1c0e41cd-21bb-4433-9acc-4a2cd6367b9b",
+      "title": "Suspicious Modification Of Scheduled Tasks",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_change.yml",
+      "match": "image"
+    },
+    {
+      "id": "7a74da6b-ea76-47db-92cc-874ad90df734",
+      "title": "Suspicious MSDT Parent Process",
+      "level": "high",
+      "techniques": [
+        "T1036",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "title": "Suspicious Outlook Child Process",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "0d34ed8b-1c12-4ff2-828c-16fc860b766d",
+      "title": "Suspicious Processes Spawned by Java.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "5cc2cda8-f261-4d88-a2de-e9e193c86716",
+      "title": "Suspicious Processes Spawned by WinRM",
+      "level": "high",
+      "techniques": [
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrm_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "39019a4e-317f-4ce3-ae63-309a8c6b53c5",
+      "title": "Suspicious Scheduled Task Creation Involving Temp Folder",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_creation_temp_folder.yml",
+      "match": "image"
+    },
+    {
+      "id": "c5c00f49-b3f9-45a6-997e-cfdecc6e1967",
+      "title": "Suspicious Schtasks Execution AppData Folder",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_appdata_local_system.yml",
+      "match": "image"
+    },
+    {
+      "id": "24c8392b-aa3c-46b7-a545-43f71657fe98",
+      "title": "Suspicious Schtasks Schedule Types",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_schedule_type.yml",
+      "match": "image"
+    },
+    {
+      "id": "58f4ea09-0fc2-4520-ba18-b85c540b0eaf",
+      "title": "Suspicious Serv-U Process Pattern",
+      "level": "high",
+      "techniques": [
+        "T1555"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_servu_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "8823e85d-31d8-473e-b7f4-92da070f0fc6",
+      "title": "Suspicious ShellExec_RunDLL Call Via Ordinal",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_susp_shellexec_ordinal_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "90fb5e62-ca1f-4e22-b42e-cc521874c938",
+      "title": "Suspicious Shells Spawn by Java Utility Keytool",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "970823b7-273b-460a-8afc-3a6811998529",
+      "title": "Uncommon One Time Only Scheduled Task At 00:00",
+      "level": "high",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_one_time_only_midnight_task.yml",
+      "match": "image"
+    },
+    {
+      "id": "bed2a484-9348-4143-8a8a-b801c979301c",
+      "title": "Webshell Detection With Command Line Keywords",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "3a6586ad-127a-4d3b-a677-1e6eacdf8fde",
+      "title": "Windows Shell/Scripting Processes Spawning Suspicious Programs",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.001",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml",
+      "match": "image"
+    },
+    {
+      "id": "958d81aa-8566-4cea-a565-59ccd4df27b0",
+      "title": "Defrag Deactivation",
+      "level": "medium",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2018/TA/Slingshot/proc_creation_win_apt_slingshot.yml",
+      "match": "image"
+    },
+    {
+      "id": "fe9e8ba9-4419-41e6-a574-bd9f7b3af961",
+      "title": "Potential KamiKakaBot Activity - Shutdown Schedule Task Creation",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2024/Malware/KamiKakaBot/proc_creation_win_malware_kamikakabot_schtasks_persistence.yml",
+      "match": "image"
+    },
+    {
+      "id": "f548a603-c9f2-4c89-b511-b089f7e94549",
+      "title": "Potential Persistence Via Microsoft Compatibility Appraiser",
+      "level": "medium",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_persistence_windows_telemetry.yml",
+      "match": "image"
+    },
+    {
+      "id": "67bc0e75-c0a9-4cfc-8754-84a505b63c04",
+      "title": "Potentially Suspicious Child Process Of ClickOnce Application",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dfsvc_suspicious_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4b6d2a7-d8a4-4f19-acbd-943c16d90647",
+      "title": "Potentially Suspicious PowerShell Child Processes",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "81325ce1-be01-4250-944f-b4789644556f",
+      "title": "Schedule Task Creation From Env Variable Or Potentially Suspicious Path Via Schtasks.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_env_folder.yml",
+      "match": "image"
+    },
+    {
+      "id": "9494479d-d994-40bf-a8b1-eea890237021",
+      "title": "Scheduled Task Creation From Potential Suspicious Parent Location",
+      "level": "medium",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_schtasks_creation_from_susp_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "1d174d38-8fda-4081-a9b6-56d9763c0cd8",
+      "title": "Scheduled Task Creation with Curl and PowerShell Execution Combo",
+      "level": "medium",
+      "techniques": [
+        "T1053.005",
+        "T1218",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_curl_and_powershell_combo.yml",
+      "match": "image"
+    },
+    {
+      "id": "86588b36-c6d3-465f-9cee-8f9093e07798",
+      "title": "Scheduled Task Executing Payload from Registry",
+      "level": "medium",
+      "techniques": [
+        "T1053.005",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_reg_loader.yml",
+      "match": "image"
+    },
+    {
+      "id": "dd2a821e-3b07-4d3b-a9ac-929fe4c6ca0c",
+      "title": "Suspicious Scheduled Task Creation via Masqueraded XML File",
+      "level": "medium",
+      "techniques": [
+        "T1036.005",
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_schedule_via_masqueraded_xml_file.yml",
+      "match": "image"
+    },
+    {
+      "id": "ff2fff64-4cd6-4a2b-ba7d-e28a30bbe66b",
+      "title": "Suspicious Scheduled Task Name As GUID",
+      "level": "medium",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_guid_task_name.yml",
+      "match": "image"
+    },
+    {
+      "id": "7a02e22e-b885-4404-b38b-1ddc7e65258a",
+      "title": "Suspicious Schtasks Schedule Type With High Privileges",
+      "level": "medium",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_schedule_type_system.yml",
+      "match": "image"
+    },
+    {
+      "id": "92626ddd-662c-49e3-ac59-f6535f12d189",
+      "title": "Scheduled Task Creation Via Schtasks.EXE",
+      "level": "low",
+      "techniques": [
+        "T1053.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_creation.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1053.005",
+      "name": "Scheduled Task/Job: Scheduled Task",
+      "curated": true,
+      "lolbas": true,
+      "groups": [
+        {
+          "id": "G0019",
+          "name": "Naikon"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        },
+        {
+          "id": "S0223",
+          "name": "POWERSTATS"
+        },
+        {
+          "id": "S1228",
+          "name": "PUBLOAD"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\schtasks.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\schtasks.exe</code>"
+    },
+    {
+      "signal": "`/create` with `/tr` pointing to a script host, a LOLBIN, or a binary in a user-writable path",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/create</code> with <code>/tr</code> pointing to a script host, a LOLBIN, or a binary in a user-writable path"
+    },
+    {
+      "signal": "`/ru SYSTEM` or another privileged account on a created task",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/ru SYSTEM</code> or another privileged account on a created task"
+    },
+    {
+      "signal": "A remote target, `/s <host>` with credentials",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A remote target, <code>/s &lt;host&gt;</code> with credentials"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "A task created in an unusual or hidden task folder",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A task created in an unusual or hidden task folder"
+    },
+    {
+      "signal": "`/create` followed immediately by `/run`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "<code>/create</code> followed immediately by <code>/run</code>"
+    }
+  ],
+  "about_html": "<p>schtasks.exe manages scheduled tasks through the Task Scheduler service. A task pairs a trigger (a time, a schedule, logon, boot, idle, or an event) with an action (a program or script) and an account to run as. The main verbs are <code>/create</code>, <code>/run</code>, <code>/query</code>, <code>/change</code>, and <code>/delete</code>, and with <code>/s &lt;host&gt;</code> plus credentials it manages tasks on a remote machine. The genuine binary lives at <code>C:\\Windows\\System32\\schtasks.exe</code>. The tasks it creates are carried out later by the Task Scheduler, often through <a class=\"proc-link\" href=\"/processes/taskhostw.exe\"><code>taskhostw.exe</code></a> for DLL-based tasks.</p>\n<p>Legitimately, schtasks is run by administrators, installers, and management tooling to set up maintenance and automation. The task it creates, the program that task runs, the account it runs as, and the trigger that fires it, all on the command line, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>schtasks.exe is one of the most common persistence mechanisms on Windows (<a href=\"https://attack.mitre.org/techniques/T1053/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1053.005</a>). A task bound to logon or boot, or set on a recurring schedule, re-runs the attacker's program every time the trigger fires and survives reboots, and <code>/ru SYSTEM</code> makes that program run with full privileges. A created task whose action is a script host, a LOLBIN, or a binary in a user-writable directory points to abuse rather than routine automation.</p>\n<p>Pointed at a remote host, schtasks is also lateral movement (<a href=\"https://attack.mitre.org/techniques/T1053/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1053.005</a>). <code>schtasks /create /s &lt;target&gt; /u &lt;user&gt; /p &lt;pass&gt; /tr ...</code> followed by <code>/run</code> creates and triggers a task on another machine with supplied credentials, a well-worn remote-execution method. Remote task creation followed by an immediate run is the pattern.</p>\n<p>Attackers also hide tasks, for example by stripping a task's security descriptor so it disappears from the Task Scheduler UI, and tuck them in obscure folders. Because schtasks is a normal administrative tool, the action, the account, the trigger, the parent, and any remote target are what separate automation from abuse. Where a created task runs DLL-based work, it surfaces at execution time under <a class=\"proc-link\" href=\"/processes/taskhostw.exe\"><code>taskhostw.exe</code></a>.</p>"
+}

@@ -1,0 +1,448 @@
+{
+  "name": "msmpeng.exe",
+  "aliases": [
+    "msmpeng"
+  ],
+  "category": "System",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "MsMpEng.exe is the core engine of Microsoft Defender Antivirus, the service that performs real-time scanning, behavior monitoring, and threat remediation. It is present and busy on most Windows machines. For an analyst it is both a thing to recognize as normal and a process attackers try to disable or impersonate.\n",
+  "about": "MsMpEng.exe (Microsoft Malware Protection Engine) is the heart of Microsoft Defender Antivirus. It scans files and processes in real time, watches for malicious behavior, and quarantines or removes threats. It runs as a SYSTEM service, and on current Windows it is a protected process (PPL), which keeps other software, even administrators, from reading its memory or injecting into it. Because Defender updates into versioned platform folders, the genuine binary lives under `C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\<version>\\MsMpEng.exe`.\n\nLegitimately, MsMpEng runs continuously whenever Defender is the active antivirus, and high CPU during scans is normal. A second copy, a wrong path, or a loss of its protected status is what stands out.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows Publisher"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "MsMpEng.exe",
+    "internal_name": "MsMpEng.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "4.18.26040.7 (8d846dd50fd7adca65beb1b013a5fda76a9ec807)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "283.90 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "bf1b0e852f06f6d0b6c6475e53ae7908aa7e2950",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 21,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26040.7-0\\MsMpEng.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSecurityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSystemEnvironmentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeRestorePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAssignPrimaryTokenPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLoadDriverPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseQuotaPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTakeOwnershipPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeShutdownPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeBackupPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "vmtoolsd.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path outside the Windows Defender Platform location",
+      "severity": "high"
+    },
+    {
+      "signal": "A process named MsMpEng.exe running without the protected-process (PPL) attribute",
+      "severity": "high"
+    },
+    {
+      "signal": "More than one instance, or one running as a non-SYSTEM account",
+      "severity": "high"
+    },
+    {
+      "signal": "MsMpEng absent or stopped on a machine where Defender is the configured antivirus",
+      "severity": "medium"
+    },
+    {
+      "signal": "Child processes spawned by MsMpEng",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "MsMpEng.exe is mostly something to recognize as normal, but it matters in two ways. Its trusted name invites impersonation (T1036.005): a process called MsMpEng.exe outside the Defender platform folder, or one lacking the protected-process status the real engine always has, is suspect.\n\nIt is also a target for being switched off (T1685). Attackers disable Defender's real-time protection, stop the service, or add exclusions so the engine stops inspecting their activity, and on hardware that supports it the PPL protection is what makes the engine itself hard to kill or tamper with directly. MsMpEng disappearing, or its protection settings changing, on a machine that is supposed to run Defender means the primary defense has been neutralized.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1685"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1685/",
+    "https://attack.mitre.org/techniques/T1036/005/"
+  ],
+  "sigma": [
+    {
+      "id": "5de632bc-7fbd-4c8a-944a-fce55c59eae5",
+      "title": "REvil Kaseya Incident Malware Patterns",
+      "level": "critical",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/TA/Kaseya-Supply-Chain/proc_creation_win_apt_revil_kaseya.yml",
+      "match": "image"
+    },
+    {
+      "id": "aeab5ec5-be14-471a-80e8-e344418305c2",
+      "title": "Potential PlugX Activity",
+      "level": "high",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2017/Malware/PlugX/proc_creation_win_malware_plugx_susp_exe_locations.yml",
+      "match": "image"
+    },
+    {
+      "id": "f17211f1-1f24-4d0c-829f-31e28dc93cdd",
+      "title": "Uncommon Svchost Command Line Parameter",
+      "level": "high",
+      "techniques": [
+        "T1036.005",
+        "T1055",
+        "T1055.012"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_uncommon_command_line_flags.yml",
+      "match": "parent"
+    },
+    {
+      "id": "01d2e2a1-5f09-44f7-9fc1-24faa7479b6d",
+      "title": "Uncommon Svchost Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_uncommon_parent_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "facd1549-e416-48e0-b8c4-41d7215eedc8",
+      "title": "Amsi.DLL Load By Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_amsi_uncommon_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "96036718-71cc-4027-a538-d1587e0006a7",
+      "title": "Windows Processes Suspicious Parent Directory",
+      "level": "low",
+      "techniques": [
+        "T1036.003",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_proc_wrong_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "671bb7e3-a020-4824-a00e-2ee5b55f385e",
+      "title": "WMI Module Loaded By Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_wmi_module_load_by_uncommon_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1574.001",
+      "name": "Hijack Execution Flow: DLL",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1226",
+          "name": "BOOKWORM"
+        },
+        {
+          "id": "S0660",
+          "name": "Clambling"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1685",
+      "name": "Disable or Modify Tools",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path outside the Windows Defender Platform location",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path outside the Windows Defender Platform location"
+    },
+    {
+      "signal": "A process named MsMpEng.exe running without the protected-process (PPL) attribute",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A process named MsMpEng.exe running without the protected-process (PPL) attribute"
+    },
+    {
+      "signal": "More than one instance, or one running as a non-SYSTEM account",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "More than one instance, or one running as a non-SYSTEM account"
+    },
+    {
+      "signal": "MsMpEng absent or stopped on a machine where Defender is the configured antivirus",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "MsMpEng absent or stopped on a machine where Defender is the configured antivirus"
+    },
+    {
+      "signal": "Child processes spawned by MsMpEng",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Child processes spawned by MsMpEng"
+    }
+  ],
+  "about_html": "<p>MsMpEng.exe (Microsoft Malware Protection Engine) is the heart of Microsoft Defender Antivirus. It scans files and processes in real time, watches for malicious behavior, and quarantines or removes threats. It runs as a SYSTEM service, and on current Windows it is a protected process (PPL), which keeps other software, even administrators, from reading its memory or injecting into it. Because Defender updates into versioned platform folders, the genuine binary lives under <code>C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\&lt;version&gt;\\MsMpEng.exe</code>.</p>\n<p>Legitimately, MsMpEng runs continuously whenever Defender is the active antivirus, and high CPU during scans is normal. A second copy, a wrong path, or a loss of its protected status is what stands out.</p>",
+  "security_notes_html": "<p>MsMpEng.exe is mostly something to recognize as normal, but it matters in two ways. Its trusted name invites impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>): a process called MsMpEng.exe outside the Defender platform folder, or one lacking the protected-process status the real engine always has, is suspect.</p>\n<p>It is also a target for being switched off (<a href=\"https://attack.mitre.org/techniques/T1685/\" target=\"_blank\" rel=\"noreferrer noopener\">T1685</a>). Attackers disable Defender's real-time protection, stop the service, or add exclusions so the engine stops inspecting their activity, and on hardware that supports it the PPL protection is what makes the engine itself hard to kill or tamper with directly. MsMpEng disappearing, or its protection settings changing, on a machine that is supposed to run Defender means the primary defense has been neutralized.</p>"
+}

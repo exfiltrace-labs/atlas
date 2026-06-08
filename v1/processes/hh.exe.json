@@ -1,0 +1,300 @@
+{
+  "name": "hh.exe",
+  "aliases": [
+    "hh"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "hh.exe is the Microsoft HTML Help executable, the program that opens compiled help (.chm) files. Users rarely invoke it directly. Attackers abuse it because a CHM is a bundle of HTML that can carry script, so hh runs attacker code through a signed Microsoft binary.\n",
+  "about": "hh.exe opens and displays compiled HTML Help (`.chm`) files, the bundled help format made of HTML, images, and a table of contents. Because CHM content is HTML, it can include scripting (and shortcut objects that run commands), which executes when the help file is opened. The genuine binary lives at `C:\\Windows\\System32\\hh.exe` (with a copy in the Windows directory).\n\nLegitimately, hh.exe opens application help. The `.chm` it opens and where that file came from are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\hh.exe` or `C:\\Windows\\System32\\hh.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Opening a `.chm` from `Temp`, `AppData`, `Downloads`, or an email attachment",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or a mail client",
+      "severity": "high"
+    },
+    {
+      "signal": "hh.exe spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections from hh.exe",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "hh.exe is a system-binary proxy through compiled help files (T1218.001). An attacker builds a malicious `.chm` whose embedded HTML runs script or a shortcut command, delivers it (often as an email attachment), and when the victim opens it hh.exe executes the payload under a trusted, signed Microsoft process, bypassing application-control rules that allow hh. The recognizable evidence is hh.exe opening a `.chm` from a download or temp path, or hh.exe spawning a shell.\n\nBecause opening legitimate help is normal, the source of the `.chm`, the parent, and any child process are what separate a help lookup from code execution.\n",
+  "mitre_attack": [
+    "T1218.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Hh/",
+    "https://attack.mitre.org/techniques/T1218/001/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Hh/",
+    "commands": [
+      {
+        "command": "HH.exe {REMOTEURL:.bat}",
+        "usecase": "Download files from url",
+        "mitreID": "T1105",
+        "category": "Download"
+      },
+      {
+        "command": "HH.exe {PATH_ABSOLUTE:.exe}",
+        "usecase": "Execute process with HH.exe",
+        "mitreID": "T1218.001",
+        "category": "Execute"
+      },
+      {
+        "command": "HH.exe {REMOTEURL:.chm}",
+        "usecase": "Execute commands with HH.exe",
+        "mitreID": "T1218.001",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "52cad028-0ff0-4854-8f67-d25dfcbc78b4",
+      "title": "HTML Help HH.EXE Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1059.001",
+        "T1059.003",
+        "T1059.005",
+        "T1059.007",
+        "T1218",
+        "T1218.001",
+        "T1218.010",
+        "T1218.011",
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_html_help_susp_child_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f57c58b3-ee69-4ef5-9041-455bf39aaa89",
+      "title": "Remote CHM File Download/Execution Via HH.EXE",
+      "level": "high",
+      "techniques": [
+        "T1218.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_chm_remote_download_or_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "e8a95b5e-c891-46e2-b33a-93937d3abc31",
+      "title": "Suspicious HH.EXE Execution",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1059.001",
+        "T1059.003",
+        "T1059.005",
+        "T1059.007",
+        "T1218",
+        "T1218.001",
+        "T1218.010",
+        "T1218.011",
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_susp_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "title": "Suspicious Outlook Child Process",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "0d34ed8b-1c12-4ff2-828c-16fc860b766d",
+      "title": "Suspicious Processes Spawned by Java.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "90fb5e62-ca1f-4e22-b42e-cc521874c938",
+      "title": "Suspicious Shells Spawn by Java Utility Keytool",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "2617e7ed-adb7-40ba-b0f3-8f9945fe6c09",
+      "title": "Suspicious SYSTEM User Process Creation",
+      "level": "high",
+      "techniques": [
+        "T1134",
+        "T1003",
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_user_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4b6d2a7-d8a4-4f19-acbd-943c16d90647",
+      "title": "Potentially Suspicious PowerShell Child Processes",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "68c8acb4-1b60-4890-8e82-3ddf7a6dba84",
+      "title": "HH.EXE Execution",
+      "level": "low",
+      "techniques": [
+        "T1218.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_chm_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1218.001",
+      "name": "System Binary Proxy Execution: Compiled HTML File",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\hh.exe` or `C:\\Windows\\System32\\hh.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\hh.exe</code> or <code>C:\\Windows\\System32\\hh.exe</code>"
+    },
+    {
+      "signal": "Opening a `.chm` from `Temp`, `AppData`, `Downloads`, or an email attachment",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Opening a <code>.chm</code> from <code>Temp</code>, <code>AppData</code>, <code>Downloads</code>, or an email attachment"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or a mail client",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or a mail client"
+    },
+    {
+      "signal": "hh.exe spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "hh.exe spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or other LOLBINs"
+    },
+    {
+      "signal": "Outbound network connections from hh.exe",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from hh.exe"
+    }
+  ],
+  "about_html": "<p>hh.exe opens and displays compiled HTML Help (<code>.chm</code>) files, the bundled help format made of HTML, images, and a table of contents. Because CHM content is HTML, it can include scripting (and shortcut objects that run commands), which executes when the help file is opened. The genuine binary lives at <code>C:\\Windows\\System32\\hh.exe</code> (with a copy in the Windows directory).</p>\n<p>Legitimately, hh.exe opens application help. The <code>.chm</code> it opens and where that file came from are what give an instance meaning.</p>",
+  "security_notes_html": "<p>hh.exe is a system-binary proxy through compiled help files (<a href=\"https://attack.mitre.org/techniques/T1218/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218.001</a>). An attacker builds a malicious <code>.chm</code> whose embedded HTML runs script or a shortcut command, delivers it (often as an email attachment), and when the victim opens it hh.exe executes the payload under a trusted, signed Microsoft process, bypassing application-control rules that allow hh. The recognizable evidence is hh.exe opening a <code>.chm</code> from a download or temp path, or hh.exe spawning a shell.</p>\n<p>Because opening legitimate help is normal, the source of the <code>.chm</code>, the parent, and any child process are what separate a help lookup from code execution.</p>"
+}

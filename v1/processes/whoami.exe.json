@@ -1,0 +1,350 @@
+{
+  "name": "whoami.exe",
+  "aliases": [
+    "whoami"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "whoami.exe is the command-line tool that reports who the current user is, the account name, its security identifier, the groups it belongs to, and the privileges it holds. Administrators use it to confirm context. Attackers run it as one of the first things after gaining access, to learn whose account and what level of access they have landed with.\n",
+  "about": "whoami.exe prints information from the current process's access token. With no arguments it shows the domain and user name. `/groups` lists the groups in the token, `/priv` lists the privileges and whether each is enabled, and `/all` dumps everything, user, SID, groups, and privileges, at once. The genuine binary lives at `C:\\Windows\\System32\\whoami.exe`.\n\nLegitimately, whoami appears in logon scripts and interactive admin sessions to confirm which account or privilege level a shell is running under. It only reads token information and changes nothing.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\whoami.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`whoami /priv` or `/all` run moments after a process starts",
+      "severity": "medium"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or a service process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run as the opening move in a burst of discovery commands",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "whoami is a staple of the first moments after access (T1033). An attacker who lands in a shell runs it to see whose account they hold and, with `/priv`, whether that token already carries powerful privileges like `SeDebugPrivilege` or `SeImpersonatePrivilege` that open a path to escalation. `/groups` and `/all` reveal the group memberships that map out what the account can reach (T1069.001).\n\nThe command is harmless by itself. What matters is the company it keeps: a whoami launched by a web server or an Office process, or as the first of several discovery commands in quick succession, reads as hands-on-keyboard reconnaissance rather than administration.\n",
+  "mitre_attack": [
+    "T1033",
+    "T1069.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/whoami",
+    "https://attack.mitre.org/techniques/T1033/",
+    "https://attack.mitre.org/techniques/T1069/001/"
+  ],
+  "sigma": [
+    {
+      "id": "e6eb5a96-9e6f-4a18-9cdd-642cfda21c8e",
+      "title": "Potential Dridex Activity",
+      "level": "critical",
+      "techniques": [
+        "T1055",
+        "T1135",
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2019/Malware/Dridex/proc_creation_win_malware_dridex.yml",
+      "match": "image"
+    },
+    {
+      "id": "f1086bf7-a0c4-4a37-9102-01e573caf4a0",
+      "title": "Renamed Whoami Execution",
+      "level": "critical",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_whoami.yml",
+      "match": "image"
+    },
+    {
+      "id": "d55b793d-f847-4eea-b59a-5ab09908ac90",
+      "title": "Suspicious Child Process Of Veeam Dabatase",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_veaam_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "744a188b-0415-4792-896f-11ddb0588dbc",
+      "title": "Potential Process Injection Via Msra.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msra_process_injection.yml",
+      "match": "image"
+    },
+    {
+      "id": "97a80ec7-0e2f-4d05-9ef4-65760e634f6b",
+      "title": "Security Privileges Enumeration Via Whoami.EXE",
+      "level": "high",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_priv_discovery.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea2b7ea-792b-405f-95a1-b903ea06458f",
+      "title": "Suspicious Child Process Of Manage Engine ServiceDesk",
+      "level": "high",
+      "techniques": [
+        "T1102"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "396f6630-f3ac-44e3-bfc8-1b161bc00c4e",
+      "title": "Suspicious Child Process Of Wermgr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055",
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "0d34ed8b-1c12-4ff2-828c-16fc860b766d",
+      "title": "Suspicious Processes Spawned by Java.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "5cc2cda8-f261-4d88-a2de-e9e193c86716",
+      "title": "Suspicious Processes Spawned by WinRM",
+      "level": "high",
+      "techniques": [
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrm_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "90fb5e62-ca1f-4e22-b42e-cc521874c938",
+      "title": "Suspicious Shells Spawn by Java Utility Keytool",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "bed2a484-9348-4143-8a8a-b801c979301c",
+      "title": "Webshell Detection With Command Line Keywords",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "79ce34ca-af29-4d0e-b832-fc1b377020db",
+      "title": "Whoami.EXE Execution From Privileged Process",
+      "level": "high",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_execution_from_high_priv_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "271de298-cc0e-4842-acd8-079a0a99ea65",
+      "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-55182/proc_creation_win_exploit_cve_2025_55182_susp_nodejs_server_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "c248c896-e412-4279-8c15-1c558067b6fa",
+      "title": "Enumerate All Information With Whoami.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_all_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "bd8b828d-0dca-48e1-8a63-8a58ecf2644f",
+      "title": "Group Membership Reconnaissance Via Whoami.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_groups_discovery.yml",
+      "match": "image"
+    },
+    {
+      "id": "f26eb764-fd89-464b-85e2-dc4a8e6e77b8",
+      "title": "Suspicious Electron Application Child Processes",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_electron_app_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "8de1cbe8-d6f5-496d-8237-5f44a721c7a0",
+      "title": "Whoami.EXE Execution Anomaly",
+      "level": "medium",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_parent_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "c30fb093-1109-4dc8-88a8-b30d11c95a5d",
+      "title": "Whoami.EXE Execution With Output Option",
+      "level": "medium",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_output.yml",
+      "match": "image"
+    },
+    {
+      "id": "502b42de-4306-40b4-9596-6f590c81f073",
+      "title": "Local Accounts Discovery",
+      "level": "low",
+      "techniques": [
+        "T1033",
+        "T1087.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_local_system_owner_account_discovery.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1033",
+      "name": "System Owner/User Discovery",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1046",
+          "name": "Storm-1811"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1069.001",
+      "name": "Permission Groups Discovery: Local Groups",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\whoami.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\whoami.exe</code>"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or a service process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or a service process"
+    },
+    {
+      "signal": "`whoami /priv` or `/all` run moments after a process starts",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "<code>whoami /priv</code> or <code>/all</code> run moments after a process starts"
+    },
+    {
+      "signal": "Run as the opening move in a burst of discovery commands",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run as the opening move in a burst of discovery commands"
+    }
+  ],
+  "about_html": "<p>whoami.exe prints information from the current process's access token. With no arguments it shows the domain and user name. <code>/groups</code> lists the groups in the token, <code>/priv</code> lists the privileges and whether each is enabled, and <code>/all</code> dumps everything, user, SID, groups, and privileges, at once. The genuine binary lives at <code>C:\\Windows\\System32\\whoami.exe</code>.</p>\n<p>Legitimately, whoami appears in logon scripts and interactive admin sessions to confirm which account or privilege level a shell is running under. It only reads token information and changes nothing.</p>",
+  "security_notes_html": "<p>whoami is a staple of the first moments after access (<a href=\"https://attack.mitre.org/techniques/T1033/\" target=\"_blank\" rel=\"noreferrer noopener\">T1033</a>). An attacker who lands in a shell runs it to see whose account they hold and, with <code>/priv</code>, whether that token already carries powerful privileges like <code>SeDebugPrivilege</code> or <code>SeImpersonatePrivilege</code> that open a path to escalation. <code>/groups</code> and <code>/all</code> reveal the group memberships that map out what the account can reach (<a href=\"https://attack.mitre.org/techniques/T1069/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1069.001</a>).</p>\n<p>The command is harmless by itself. What matters is the company it keeps: a whoami launched by a web server or an Office process, or as the first of several discovery commands in quick succession, reads as hands-on-keyboard reconnaissance rather than administration.</p>"
+}

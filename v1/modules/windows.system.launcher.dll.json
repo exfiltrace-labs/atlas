@@ -1,0 +1,29 @@
+{
+  "name": "windows.system.launcher.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

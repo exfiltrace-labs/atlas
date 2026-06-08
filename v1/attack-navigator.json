@@ -1,0 +1,614 @@
+{
+  "name": "Atlas dataset coverage",
+  "versions": {
+    "attack": "19",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Techniques referenced across the Atlas process dataset. A reference map of which techniques the curated notes cite, not measured detection coverage.",
+  "techniques": [
+    {
+      "techniqueID": "T1003",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1003.001",
+      "enabled": true,
+      "score": 4,
+      "comment": "Referenced by: lsaiso.exe, lsass.exe, taskmgr.exe, werfault.exe"
+    },
+    {
+      "techniqueID": "T1003.002",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: esentutl.exe, reg.exe"
+    },
+    {
+      "techniqueID": "T1003.003",
+      "enabled": true,
+      "score": 5,
+      "comment": "Referenced by: diskshadow.exe, esentutl.exe, ntdsutil.exe, vssadmin.exe, wbadmin.exe"
+    },
+    {
+      "techniqueID": "T1012",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: reg.exe"
+    },
+    {
+      "techniqueID": "T1014",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: system"
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: systeminfo.exe"
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: nltest.exe"
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1021.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: mstsc.exe"
+    },
+    {
+      "techniqueID": "T1021.002",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: net.exe, net1.exe"
+    },
+    {
+      "techniqueID": "T1021.004",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: ssh.exe"
+    },
+    {
+      "techniqueID": "T1021.006",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: winrs.exe, wsmprovhost.exe"
+    },
+    {
+      "techniqueID": "T1027",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: certutil.exe",
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1027.010",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: cmd.exe, powershell.exe"
+    },
+    {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: quser.exe, whoami.exe"
+    },
+    {
+      "techniqueID": "T1036",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1036.005",
+      "enabled": true,
+      "score": 31,
+      "comment": "Referenced by: audiodg.exe, conhost.exe, csrss.exe, ctfmon.exe, dashost.exe, dllhost.exe, dwm.exe, explorer.exe, fontdrvhost.exe, logonui.exe, lsaiso.exe, lsass.exe, msmpeng.exe, runtimebroker.exe, searchhost.exe, searchindexer.exe, services.exe, shellexperiencehost.exe, sihost.exe, smartscreen.exe, smss.exe, startmenuexperiencehost.exe, svchost.exe, system, taskhostw.exe, taskmgr.exe, textinputhost.exe, userinit.exe, werfault.exe, wininit.exe, winlogon.exe"
+    },
+    {
+      "techniqueID": "T1047",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: wmic.exe, wmiprvse.exe"
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1053.005",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: schtasks.exe, taskhostw.exe"
+    },
+    {
+      "techniqueID": "T1055",
+      "enabled": true,
+      "score": 19,
+      "comment": "Referenced by: audiodg.exe, csrss.exe, ctfmon.exe, dashost.exe, dllhost.exe, dwm.exe, explorer.exe, lsass.exe, rundll32.exe, runtimebroker.exe, searchhost.exe, searchindexer.exe, shellexperiencehost.exe, sihost.exe, startmenuexperiencehost.exe, svchost.exe, textinputhost.exe, werfault.exe, wmiprvse.exe",
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1055.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: mavinject.exe"
+    },
+    {
+      "techniqueID": "T1057",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: tasklist.exe"
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: powershell.exe, wsmprovhost.exe"
+    },
+    {
+      "techniqueID": "T1059.003",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: cmd.exe"
+    },
+    {
+      "techniqueID": "T1059.005",
+      "enabled": true,
+      "score": 5,
+      "comment": "Referenced by: cscript.exe, excel.exe, mshta.exe, winword.exe, wscript.exe"
+    },
+    {
+      "techniqueID": "T1059.007",
+      "enabled": true,
+      "score": 5,
+      "comment": "Referenced by: cscript.exe, mshta.exe, regsvr32.exe, rundll32.exe, wscript.exe"
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "score": 3,
+      "comment": "Referenced by: dwm.exe, fontdrvhost.exe, spoolsv.exe"
+    },
+    {
+      "techniqueID": "T1069",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1069.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: whoami.exe"
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: net.exe, net1.exe"
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1070.004",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: fsutil.exe, smss.exe"
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: systeminfo.exe"
+    },
+    {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1087.002",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: net.exe, net1.exe"
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "score": 13,
+      "comment": "Referenced by: bitsadmin.exe, certutil.exe, cscript.exe, esentutl.exe, expand.exe, extrac32.exe, findstr.exe, mpcmdrun.exe, mshta.exe, msiexec.exe, powershell.exe, regsvr32.exe, wscript.exe"
+    },
+    {
+      "techniqueID": "T1112",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: reg.exe"
+    },
+    {
+      "techniqueID": "T1127",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1127.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: msbuild.exe"
+    },
+    {
+      "techniqueID": "T1134",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1134.004",
+      "enabled": true,
+      "score": 5,
+      "comment": "Referenced by: csrss.exe, runtimebroker.exe, smss.exe, system, wininit.exe"
+    },
+    {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: net.exe"
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1136.001",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: net.exe, net1.exe"
+    },
+    {
+      "techniqueID": "T1137",
+      "enabled": true,
+      "score": 3,
+      "comment": "Referenced by: excel.exe, outlook.exe, winword.exe"
+    },
+    {
+      "techniqueID": "T1140",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: certutil.exe"
+    },
+    {
+      "techniqueID": "T1197",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: bitsadmin.exe"
+    },
+    {
+      "techniqueID": "T1202",
+      "enabled": true,
+      "score": 3,
+      "comment": "Referenced by: forfiles.exe, msdt.exe, ssh.exe"
+    },
+    {
+      "techniqueID": "T1203",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: msdt.exe"
+    },
+    {
+      "techniqueID": "T1204",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1204.002",
+      "enabled": true,
+      "score": 4,
+      "comment": "Referenced by: excel.exe, explorer.exe, outlook.exe, winword.exe"
+    },
+    {
+      "techniqueID": "T1218",
+      "enabled": true,
+      "score": 3,
+      "comment": "Referenced by: msdt.exe, ngen.exe, wuauclt.exe",
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1218.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: hh.exe"
+    },
+    {
+      "techniqueID": "T1218.002",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: control.exe"
+    },
+    {
+      "techniqueID": "T1218.003",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: cmstp.exe"
+    },
+    {
+      "techniqueID": "T1218.004",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: installutil.exe"
+    },
+    {
+      "techniqueID": "T1218.005",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: mshta.exe"
+    },
+    {
+      "techniqueID": "T1218.007",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: msiexec.exe"
+    },
+    {
+      "techniqueID": "T1218.008",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: odbcconf.exe"
+    },
+    {
+      "techniqueID": "T1218.009",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: regasm.exe, regsvcs.exe"
+    },
+    {
+      "techniqueID": "T1218.010",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: regsvr32.exe"
+    },
+    {
+      "techniqueID": "T1218.011",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: rundll32.exe"
+    },
+    {
+      "techniqueID": "T1218.013",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: mavinject.exe"
+    },
+    {
+      "techniqueID": "T1218.014",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: mmc.exe"
+    },
+    {
+      "techniqueID": "T1220",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: wmic.exe"
+    },
+    {
+      "techniqueID": "T1222",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1222.001",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: icacls.exe, takeown.exe"
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: nltest.exe"
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: cipher.exe, fsutil.exe"
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: sc.exe, taskkill.exe"
+    },
+    {
+      "techniqueID": "T1490",
+      "enabled": true,
+      "score": 5,
+      "comment": "Referenced by: bcdedit.exe, diskshadow.exe, vssadmin.exe, wbadmin.exe, wmic.exe"
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1518.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: tasklist.exe"
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "score": 4,
+      "comment": "Referenced by: sc.exe, services.exe, svchost.exe, system"
+    },
+    {
+      "techniqueID": "T1546",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1546.003",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: wmiprvse.exe"
+    },
+    {
+      "techniqueID": "T1546.008",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: winlogon.exe"
+    },
+    {
+      "techniqueID": "T1546.015",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: dllhost.exe"
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: smss.exe",
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1547.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: reg.exe"
+    },
+    {
+      "techniqueID": "T1547.004",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: userinit.exe, winlogon.exe"
+    },
+    {
+      "techniqueID": "T1547.012",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: spoolsv.exe"
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: findstr.exe"
+    },
+    {
+      "techniqueID": "T1556",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: logonui.exe"
+    },
+    {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1560.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: makecab.exe"
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: attrib.exe"
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1566.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: outlook.exe"
+    },
+    {
+      "techniqueID": "T1569",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1569.002",
+      "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: sc.exe, services.exe"
+    },
+    {
+      "techniqueID": "T1620",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: powershell.exe"
+    },
+    {
+      "techniqueID": "T1685",
+      "enabled": true,
+      "score": 6,
+      "comment": "Referenced by: lsaiso.exe, mpcmdrun.exe, msmpeng.exe, powershell.exe, smartscreen.exe, taskkill.exe",
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1685.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: wevtutil.exe"
+    },
+    {
+      "techniqueID": "T1685.005",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: wevtutil.exe"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#dbeafe",
+      "#1a56b0"
+    ],
+    "minValue": 0,
+    "maxValue": 31
+  },
+  "legendItems": [],
+  "showTacticRowBackground": false,
+  "sorting": 0,
+  "hideDisabled": false
+}

@@ -1,0 +1,144 @@
+{
+  "name": "winrs.exe",
+  "aliases": [
+    "winrs"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "winrs.exe is the Windows Remote Shell client, which runs commands on a remote machine over WinRM. Administrators use it for remote management from the command line. Attackers use it for lateral movement, running commands on other hosts with stolen credentials.\n",
+  "about": "winrs.exe is the command-line front end to Windows Remote Management. With `winrs /r:<host> <command>` it executes a command on a remote computer over WinRM, optionally with supplied credentials. The command runs on the target, where it is hosted by `wsmprovhost.exe`. The genuine binary lives at `C:\\Windows\\System32\\winrs.exe`.\n\nLegitimately, winrs is used by administrators to run commands across servers without an interactive session. The target host, the command, and the credentials used are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\winrs.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/r:<host>` running commands on machines an account does not normally manage",
+      "severity": "high"
+    },
+    {
+      "signal": "Launching shells or LOLBINs on the remote host",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Used to fan out the same command across many hosts",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "winrs.exe is a lateral-movement tool over WinRM (T1021.006). With stolen credentials, `winrs /r:target cmd /c ...` runs commands on another machine, where they surface under `wsmprovhost.exe` on the target rather than as children of winrs on the source. It is the command-line counterpart to PowerShell Remoting and a quiet way to execute across the network.\n\nBecause winrs is a legitimate remote-management tool, the destinations, the commands, and the account are what matter. winrs reaching hosts an account has no reason to manage, launching shells remotely, or fanning a command across many machines points to an operator moving laterally rather than routine administration.\n",
+  "mitre_attack": [
+    "T1021.006"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/winrs",
+    "https://attack.mitre.org/techniques/T1021/006/"
+  ],
+  "sigma": [
+    {
+      "id": "bcfece3d-56fe-4545-9931-3b8e92927db1",
+      "title": "Winrs Local Command Execution",
+      "level": "high",
+      "techniques": [
+        "T1021.006",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrs_local_command_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1021.006",
+      "name": "Remote Services: Windows Remote Management",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Lateral Movement",
+          "order": 10
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\winrs.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\winrs.exe</code>"
+    },
+    {
+      "signal": "`/r:<host>` running commands on machines an account does not normally manage",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/r:&lt;host&gt;</code> running commands on machines an account does not normally manage"
+    },
+    {
+      "signal": "Launching shells or LOLBINs on the remote host",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Launching shells or LOLBINs on the remote host"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Used to fan out the same command across many hosts",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Used to fan out the same command across many hosts"
+    }
+  ],
+  "about_html": "<p>winrs.exe is the command-line front end to Windows Remote Management. With <code>winrs /r:&lt;host&gt; &lt;command&gt;</code> it executes a command on a remote computer over WinRM, optionally with supplied credentials. The command runs on the target, where it is hosted by <a class=\"proc-link\" href=\"/processes/wsmprovhost.exe\"><code>wsmprovhost.exe</code></a>. The genuine binary lives at <code>C:\\Windows\\System32\\winrs.exe</code>.</p>\n<p>Legitimately, winrs is used by administrators to run commands across servers without an interactive session. The target host, the command, and the credentials used are what give an instance meaning.</p>",
+  "security_notes_html": "<p>winrs.exe is a lateral-movement tool over WinRM (<a href=\"https://attack.mitre.org/techniques/T1021/006/\" target=\"_blank\" rel=\"noreferrer noopener\">T1021.006</a>). With stolen credentials, <code>winrs /r:target cmd /c ...</code> runs commands on another machine, where they surface under <a class=\"proc-link\" href=\"/processes/wsmprovhost.exe\"><code>wsmprovhost.exe</code></a> on the target rather than as children of winrs on the source. It is the command-line counterpart to PowerShell Remoting and a quiet way to execute across the network.</p>\n<p>Because winrs is a legitimate remote-management tool, the destinations, the commands, and the account are what matter. winrs reaching hosts an account has no reason to manage, launching shells remotely, or fanning a command across many machines points to an operator moving laterally rather than routine administration.</p>"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "execmodelproxy.dll",
+  "loaded_by": [
+    {
+      "name": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

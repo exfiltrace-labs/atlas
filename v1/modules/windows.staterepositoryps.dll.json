@@ -1,0 +1,17 @@
+{
+  "name": "windows.staterepositoryps.dll",
+  "loaded_by": [
+    {
+      "name": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

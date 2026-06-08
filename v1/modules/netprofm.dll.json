@@ -1,0 +1,17 @@
+{
+  "name": "netprofm.dll",
+  "loaded_by": [
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": true
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    }
+  ]
+}

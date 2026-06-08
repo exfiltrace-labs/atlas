@@ -1,0 +1,157 @@
+{
+  "name": "smartscreen.exe",
+  "aliases": [
+    "smartscreen"
+  ],
+  "category": "System",
+  "tags": [
+    "security",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "smartscreen.exe runs Windows Defender SmartScreen, the reputation check that warns before running downloaded files and visiting risky sites. It appears when the shell needs a reputation decision. It is a defensive process, so an attacker disabling or killing it is the security-relevant event.\n",
+  "about": "smartscreen.exe evaluates the reputation of downloaded applications and content using Microsoft's SmartScreen service, producing the \"Windows protected your PC\" prompts for unrecognized programs. It is invoked by the shell when a reputation decision is needed, runs as the user, and lives at `C:\\Windows\\System32\\smartscreen.exe`.\n\nLegitimately, smartscreen appears around downloads and first-run of new programs and is otherwise idle. It performs checks rather than launching programs, so it does not normally spawn other processes.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\smartscreen.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "smartscreen spawning child processes",
+      "severity": "high"
+    },
+    {
+      "signal": "SmartScreen disabled by policy or registry on a machine where it should be on",
+      "severity": "medium"
+    },
+    {
+      "signal": "Connections to hosts unrelated to Microsoft's reputation service",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "smartscreen.exe is a defensive component, so its main relevance is being switched off (T1685). Attackers disable SmartScreen through policy or registry so that downloaded malware runs without a reputation warning, the same playbook as disabling other protections. SmartScreen turning off, or the process being absent where it should run, means a safety check has been removed.\n\nIts trusted name also invites impersonation (T1036.005): a smartscreen.exe outside `System32`, unsigned, or spawning processes is not the real reputation checker.\n",
+  "mitre_attack": [
+    "T1685",
+    "T1036.005"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1685/",
+    "https://attack.mitre.org/techniques/T1036/005/"
+  ],
+  "sigma": [
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1685",
+      "name": "Disable or Modify Tools",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\smartscreen.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\smartscreen.exe</code>"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "smartscreen spawning child processes",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "smartscreen spawning child processes"
+    },
+    {
+      "signal": "SmartScreen disabled by policy or registry on a machine where it should be on",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "SmartScreen disabled by policy or registry on a machine where it should be on"
+    },
+    {
+      "signal": "Connections to hosts unrelated to Microsoft's reputation service",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Connections to hosts unrelated to Microsoft's reputation service"
+    }
+  ],
+  "about_html": "<p>smartscreen.exe evaluates the reputation of downloaded applications and content using Microsoft's SmartScreen service, producing the \"Windows protected your PC\" prompts for unrecognized programs. It is invoked by the shell when a reputation decision is needed, runs as the user, and lives at <code>C:\\Windows\\System32\\smartscreen.exe</code>.</p>\n<p>Legitimately, smartscreen appears around downloads and first-run of new programs and is otherwise idle. It performs checks rather than launching programs, so it does not normally spawn other processes.</p>",
+  "security_notes_html": "<p>smartscreen.exe is a defensive component, so its main relevance is being switched off (<a href=\"https://attack.mitre.org/techniques/T1685/\" target=\"_blank\" rel=\"noreferrer noopener\">T1685</a>). Attackers disable SmartScreen through policy or registry so that downloaded malware runs without a reputation warning, the same playbook as disabling other protections. SmartScreen turning off, or the process being absent where it should run, means a safety check has been removed.</p>\n<p>Its trusted name also invites impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>): a smartscreen.exe outside <code>System32</code>, unsigned, or spawning processes is not the real reputation checker.</p>"
+}

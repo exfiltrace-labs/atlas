@@ -1,0 +1,194 @@
+{
+  "name": "attrib.exe",
+  "aliases": [
+    "attrib"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "attrib.exe displays and changes file attributes such as hidden, system, and read-only. Administrators and scripts use it for routine file housekeeping. Attackers use it to hide their files from users and casual inspection by setting the hidden and system attributes.\n",
+  "about": "attrib.exe reads and sets the basic file system attributes on files and folders: hidden (`+h`), system (`+s`), read-only (`+r`), and archive. The hidden and system attributes together keep a file out of normal directory listings and out of Explorer by default. The genuine binary lives at `C:\\Windows\\System32\\attrib.exe`.\n\nLegitimately, attrib is used in scripts and by administrators to set or clear attributes during file management. The attributes it sets and on what target are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\attrib.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`+h +s` applied to dropped files in `Temp`, `AppData`, or a user profile",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Hiding files on removable media (a worm-spreading pattern)",
+      "severity": "medium"
+    },
+    {
+      "signal": "Run alongside other staging or anti-forensics commands",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "attrib.exe is used to conceal files (T1564.001). Setting the hidden and system attributes (`attrib +h +s payload.exe`) keeps a dropped file out of default directory views, a simple but common way to keep tooling and staged data out of sight. The same trick on removable media hides the real files while a lure is shown, a long-standing worm behavior.\n\nBecause attrib is an ordinary file utility, the target and context are what matter. Hiding freshly written files in a user-writable directory, or doing so as part of a sequence with download and execution commands, is what separates concealment from routine housekeeping.\n",
+  "mitre_attack": [
+    "T1564.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1564/001/"
+  ],
+  "sigma": [
+    {
+      "id": "efec536f-72e8-4656-8960-5e85d091345b",
+      "title": "Set Suspicious Files as System Files Using Attrib.EXE",
+      "level": "high",
+      "techniques": [
+        "T1564.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_attrib_system_susp_paths.yml",
+      "match": "image"
+    },
+    {
+      "id": "37ae075c-271b-459b-8d7b-55ad5f993dd8",
+      "title": "File or Folder Permissions Modifications",
+      "level": "medium",
+      "techniques": [
+        "T1222.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_file_permission_modifications.yml",
+      "match": "image"
+    },
+    {
+      "id": "0a99eb3e-1617-41bd-b095-13dc767f3def",
+      "title": "HackTool - Jlaive In-Memory Assembly Execution",
+      "level": "medium",
+      "techniques": [
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_jlaive_batch_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "4281cb20-2994-4580-aa63-c8b86d019934",
+      "title": "Hiding Files with Attrib.exe",
+      "level": "medium",
+      "techniques": [
+        "T1564.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_attrib_hiding_files.yml",
+      "match": "image"
+    },
+    {
+      "id": "bb19e94c-59ae-4c15-8c12-c563d23fe52b",
+      "title": "Set Files as System Files Using Attrib.EXE",
+      "level": "low",
+      "techniques": [
+        "T1564.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_attrib_system.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1564.001",
+      "name": "Hide Artifacts: Hidden Files and Directories",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1016",
+          "name": "FIN13"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1111",
+          "name": "DarkGate"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\attrib.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\attrib.exe</code>"
+    },
+    {
+      "signal": "`+h +s` applied to dropped files in `Temp`, `AppData`, or a user profile",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>+h +s</code> applied to dropped files in <code>Temp</code>, <code>AppData</code>, or a user profile"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Hiding files on removable media (a worm-spreading pattern)",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Hiding files on removable media (a worm-spreading pattern)"
+    },
+    {
+      "signal": "Run alongside other staging or anti-forensics commands",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run alongside other staging or anti-forensics commands"
+    }
+  ],
+  "about_html": "<p>attrib.exe reads and sets the basic file system attributes on files and folders: hidden (<code>+h</code>), system (<code>+s</code>), read-only (<code>+r</code>), and archive. The hidden and system attributes together keep a file out of normal directory listings and out of Explorer by default. The genuine binary lives at <code>C:\\Windows\\System32\\attrib.exe</code>.</p>\n<p>Legitimately, attrib is used in scripts and by administrators to set or clear attributes during file management. The attributes it sets and on what target are what give an instance meaning.</p>",
+  "security_notes_html": "<p>attrib.exe is used to conceal files (<a href=\"https://attack.mitre.org/techniques/T1564/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1564.001</a>). Setting the hidden and system attributes (<code>attrib +h +s payload.exe</code>) keeps a dropped file out of default directory views, a simple but common way to keep tooling and staged data out of sight. The same trick on removable media hides the real files while a lure is shown, a long-standing worm behavior.</p>\n<p>Because attrib is an ordinary file utility, the target and context are what matter. Hiding freshly written files in a user-writable directory, or doing so as part of a sequence with download and execution commands, is what separates concealment from routine housekeeping.</p>"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "bcp47langs.dll",
+  "loaded_by": [
+    {
+      "name": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

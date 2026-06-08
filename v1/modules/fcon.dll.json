@@ -1,0 +1,11 @@
+{
+  "name": "fcon.dll",
+  "loaded_by": [
+    {
+      "name": "taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

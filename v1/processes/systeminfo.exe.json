@@ -1,0 +1,262 @@
+{
+  "name": "systeminfo.exe",
+  "aliases": [
+    "systeminfo"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "systeminfo.exe reports detailed configuration about a computer and its operating system: the OS version and build, installed hotfixes, hardware, domain membership, and network adapters. Administrators use it for inventory. Attackers use it to fingerprint a host, including which patches are missing.\n",
+  "about": "systeminfo.exe gathers system configuration into a single report: the OS name, version, and build, the install date and uptime, the hardware and memory, the domain and logon server, network card details, and the list of installed hotfixes by KB number. With `/s <host>` and credentials it can pull the same report from a remote machine. The genuine binary lives at `C:\\Windows\\System32\\systeminfo.exe`.\n\nLegitimately, systeminfo is run by administrators and asset-inventory tooling to record what a machine is and how it is configured. It only reads configuration.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\systeminfo.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Run shortly after access, especially with output captured to a file",
+      "severity": "medium"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or a service process",
+      "severity": "high"
+    },
+    {
+      "signal": "A remote target, `/s <host>`",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "systeminfo gives an attacker a fast profile of a host (T1082). The OS build and the hotfix list are the most useful parts: comparing installed KBs against known vulnerabilities points straight at missing patches that may allow privilege escalation. The domain, logon server, and network adapter details also sketch the environment around the host (T1016).\n\nOne run during legitimate inventory is normal. systeminfo run by an unexpected parent, or as part of an opening recon sequence with whoami and net, is what separates attacker fingerprinting from administration.\n",
+  "mitre_attack": [
+    "T1082",
+    "T1016"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/systeminfo",
+    "https://attack.mitre.org/techniques/T1082/",
+    "https://attack.mitre.org/techniques/T1016/"
+  ],
+  "sigma": [
+    {
+      "id": "961e0abb-1b1e-4c84-a453-aafe56ad0d34",
+      "title": "Execution via stordiag.exe",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_stordiag_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "846b866e-2a57-46ee-8e16-85fa92759be7",
+      "title": "Exploited CVE-2020-10189 Zoho ManageEngine",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1059.001",
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2020/Exploits/CVE-2020-10189/proc_creation_win_exploit_cve_2020_10189.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea2b7ea-792b-405f-95a1-b903ea06458f",
+      "title": "Suspicious Child Process Of Manage Engine ServiceDesk",
+      "level": "high",
+      "techniques": [
+        "T1102"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "869b9ca7-9ea2-4a5a-8325-e80e62f75445",
+      "title": "Suspicious Child Process Of SQL Server",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "396f6630-f3ac-44e3-bfc8-1b161bc00c4e",
+      "title": "Suspicious Child Process Of Wermgr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055",
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "0d34ed8b-1c12-4ff2-828c-16fc860b766d",
+      "title": "Suspicious Processes Spawned by Java.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "90fb5e62-ca1f-4e22-b42e-cc521874c938",
+      "title": "Suspicious Shells Spawn by Java Utility Keytool",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "bed2a484-9348-4143-8a8a-b801c979301c",
+      "title": "Webshell Detection With Command Line Keywords",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "271de298-cc0e-4842-acd8-079a0a99ea65",
+      "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-55182/proc_creation_win_exploit_cve_2025_55182_susp_nodejs_server_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "0ef56343-059e-4cb6-adc1-4c3c967c5e46",
+      "title": "Suspicious Execution of Systeminfo",
+      "level": "low",
+      "techniques": [
+        "T1082"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_systeminfo_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1016",
+      "name": "System Network Configuration Discovery",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1082",
+      "name": "System Information Discovery",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1141",
+          "name": "LunarWeb"
+        },
+        {
+          "id": "S1064",
+          "name": "SVCReady"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\systeminfo.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\systeminfo.exe</code>"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or a service process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or a service process"
+    },
+    {
+      "signal": "Run shortly after access, especially with output captured to a file",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run shortly after access, especially with output captured to a file"
+    },
+    {
+      "signal": "A remote target, `/s <host>`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A remote target, <code>/s &lt;host&gt;</code>"
+    }
+  ],
+  "about_html": "<p>systeminfo.exe gathers system configuration into a single report: the OS name, version, and build, the install date and uptime, the hardware and memory, the domain and logon server, network card details, and the list of installed hotfixes by KB number. With <code>/s &lt;host&gt;</code> and credentials it can pull the same report from a remote machine. The genuine binary lives at <code>C:\\Windows\\System32\\systeminfo.exe</code>.</p>\n<p>Legitimately, systeminfo is run by administrators and asset-inventory tooling to record what a machine is and how it is configured. It only reads configuration.</p>",
+  "security_notes_html": "<p>systeminfo gives an attacker a fast profile of a host (<a href=\"https://attack.mitre.org/techniques/T1082/\" target=\"_blank\" rel=\"noreferrer noopener\">T1082</a>). The OS build and the hotfix list are the most useful parts: comparing installed KBs against known vulnerabilities points straight at missing patches that may allow privilege escalation. The domain, logon server, and network adapter details also sketch the environment around the host (<a href=\"https://attack.mitre.org/techniques/T1016/\" target=\"_blank\" rel=\"noreferrer noopener\">T1016</a>).</p>\n<p>One run during legitimate inventory is normal. systeminfo run by an unexpected parent, or as part of an opening recon sequence with whoami and net, is what separates attacker fingerprinting from administration.</p>"
+}

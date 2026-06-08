@@ -1,0 +1,177 @@
+{
+  "name": "mstsc.exe",
+  "aliases": [
+    "mstsc"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "mstsc.exe is the Remote Desktop Connection client, the program that opens an RDP session to another computer. Administrators and users use it to reach remote machines. Attackers use it to move laterally with stolen credentials, and it leaves useful traces of where an operator went.\n",
+  "about": "mstsc.exe connects to a remote computer over the Remote Desktop Protocol (RDP). It takes a target with `/v:<host>`, can open a saved `.rdp` connection file, and supports options for gateways, restricted-admin mode, and session shadowing. The genuine binary lives at `C:\\Windows\\System32\\mstsc.exe`. It records connection history per user, which is a useful artifact when reconstructing movement.\n\nLegitimately, mstsc is run by administrators and remote workers to reach servers and desktops. Where it connects, under whose account, and from what parent are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\mstsc.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Connections to many internal hosts in a short time (RDP spread)",
+      "severity": "high"
+    },
+    {
+      "signal": "Launched by a script host or a non-interactive process",
+      "severity": "high"
+    },
+    {
+      "signal": "Connections originating from a server or a service account that should not initiate RDP",
+      "severity": "medium"
+    },
+    {
+      "signal": "A `.rdp` file from a user-writable or emailed location",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "mstsc.exe is the everyday tool for RDP lateral movement (T1021.001). After stealing credentials, an attacker uses Remote Desktop to log in to other machines interactively, blending with normal administration. The patterns that stand out are RDP fanning out to many hosts quickly, RDP initiated from a server or service context that has no reason to, and connections driven by a script rather than a person.\n\nmstsc is also an artifact source. Its per-user connection history and the corresponding logon events on the targets help reconstruct an operator's path through the network. Because the tool itself is legitimate, the destinations, the account, and the origin are what distinguish administration from intrusion.\n",
+  "mitre_attack": [
+    "T1021.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mstsc",
+    "https://attack.mitre.org/techniques/T1021/001/"
+  ],
+  "sigma": [
+    {
+      "id": "ff3b6b39-e765-42f9-bb2c-ea6761e0e0f6",
+      "title": "Mstsc.EXE Execution From Uncommon Parent",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_run_local_rpd_file_susp_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "6e22722b-dfb1-4508-a911-49ac840b40f8",
+      "title": "Suspicious Mstsc.EXE Execution With Local RDP File",
+      "level": "high",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_run_local_rdp_file_susp_location.yml",
+      "match": "image"
+    },
+    {
+      "id": "954f0af7-62dd-418f-b3df-a84bc2c7a774",
+      "title": "New Remote Desktop Connection Initiated Via Mstsc.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1021.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_remote_connection.yml",
+      "match": "image"
+    },
+    {
+      "id": "5fdce3ac-e7f9-4ecd-a3aa-a4d78ebbf0af",
+      "title": "Mstsc.EXE Execution With Local RDP File",
+      "level": "low",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_run_local_rdp_file.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1021.001",
+      "name": "Remote Services: Remote Desktop Protocol",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1051",
+          "name": "Medusa Group"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Lateral Movement",
+          "order": 10
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\mstsc.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\mstsc.exe</code>"
+    },
+    {
+      "signal": "Connections to many internal hosts in a short time (RDP spread)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Connections to many internal hosts in a short time (RDP spread)"
+    },
+    {
+      "signal": "Launched by a script host or a non-interactive process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Launched by a script host or a non-interactive process"
+    },
+    {
+      "signal": "Connections originating from a server or a service account that should not initiate RDP",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Connections originating from a server or a service account that should not initiate RDP"
+    },
+    {
+      "signal": "A `.rdp` file from a user-writable or emailed location",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A <code>.rdp</code> file from a user-writable or emailed location"
+    }
+  ],
+  "about_html": "<p>mstsc.exe connects to a remote computer over the Remote Desktop Protocol (RDP). It takes a target with <code>/v:&lt;host&gt;</code>, can open a saved <code>.rdp</code> connection file, and supports options for gateways, restricted-admin mode, and session shadowing. The genuine binary lives at <code>C:\\Windows\\System32\\mstsc.exe</code>. It records connection history per user, which is a useful artifact when reconstructing movement.</p>\n<p>Legitimately, mstsc is run by administrators and remote workers to reach servers and desktops. Where it connects, under whose account, and from what parent are what give an instance meaning.</p>",
+  "security_notes_html": "<p>mstsc.exe is the everyday tool for RDP lateral movement (<a href=\"https://attack.mitre.org/techniques/T1021/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1021.001</a>). After stealing credentials, an attacker uses Remote Desktop to log in to other machines interactively, blending with normal administration. The patterns that stand out are RDP fanning out to many hosts quickly, RDP initiated from a server or service context that has no reason to, and connections driven by a script rather than a person.</p>\n<p>mstsc is also an artifact source. Its per-user connection history and the corresponding logon events on the targets help reconstruct an operator's path through the network. Because the tool itself is legitimate, the destinations, the account, and the origin are what distinguish administration from intrusion.</p>"
+}

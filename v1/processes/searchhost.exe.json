@@ -1,0 +1,269 @@
+{
+  "name": "searchhost.exe",
+  "aliases": [
+    "searchhost"
+  ],
+  "category": "System",
+  "tags": [
+    "search",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "SearchHost.exe renders the Windows search interface, the box and flyout on the taskbar that searches apps, files, and the web. It is the Windows 11 successor to the older SearchUI.exe and SearchApp.exe. It runs per user as part of the desktop.\n",
+  "about": "SearchHost.exe is a packaged (UWP) system app that presents the taskbar search experience and its results, distinct from `SearchIndexer.exe`, which builds the file index it can draw on. It runs as the logged-on user, launched as part of the session, from a Windows `SystemApps` package folder rather than `System32`, and is signed by Microsoft.\n\nLegitimately, SearchHost is present on Windows 11 desktops and suspended when idle. Because the search UI integrates web results, some network activity to Microsoft's search endpoints is normal, which sets it apart from the other shell hosts.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "SearchHost.exe",
+    "internal_name": "SearchHost.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation.  All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "2126.8901.20.0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "41.50 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 25,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "windows.applicationmodel.datatransfer.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "execmodelproxy.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "activationclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.security.authentication.web.core.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.security.authentication.onlineid.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vaultcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rtmediaframe.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "pcshellcommonproxystub.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mswb7.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.shell.servicehostbuilder.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\MsFteWds",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path outside the Windows `SystemApps` package location",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logged-on user",
+      "severity": "high"
+    },
+    {
+      "signal": "Spawning command shells or other programs",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound connections to hosts unrelated to Microsoft search",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "SearchHost.exe is a baseline process. Its identity is fixed, the logged-on user's account, a packaged Microsoft signature, and no child processes, so deviations stand out. Unlike the purely local shell hosts it does talk to Microsoft's search service, so the meaningful network signal is connections to unrelated hosts, not network activity as such. The realistic abuse is impersonation (T1036.005), where malware uses the name from a path outside the genuine packaged location.\n\nAs a persistent per-user process it could also be injected into (T1055). A SearchHost that spawns programs or reaches hosts outside the search service is acting outside its role.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1055"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1055/"
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path outside the Windows `SystemApps` package location",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path outside the Windows <code>SystemApps</code> package location"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logged-on user",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> rather than the logged-on user"
+    },
+    {
+      "signal": "Spawning command shells or other programs",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Spawning command shells or other programs"
+    },
+    {
+      "signal": "Outbound connections to hosts unrelated to Microsoft search",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound connections to hosts unrelated to Microsoft search"
+    }
+  ],
+  "about_html": "<p>SearchHost.exe is a packaged (UWP) system app that presents the taskbar search experience and its results, distinct from <a class=\"proc-link\" href=\"/processes/searchindexer.exe\"><code>SearchIndexer.exe</code></a>, which builds the file index it can draw on. It runs as the logged-on user, launched as part of the session, from a Windows <code>SystemApps</code> package folder rather than <code>System32</code>, and is signed by Microsoft.</p>\n<p>Legitimately, SearchHost is present on Windows 11 desktops and suspended when idle. Because the search UI integrates web results, some network activity to Microsoft's search endpoints is normal, which sets it apart from the other shell hosts.</p>",
+  "security_notes_html": "<p>SearchHost.exe is a baseline process. Its identity is fixed, the logged-on user's account, a packaged Microsoft signature, and no child processes, so deviations stand out. Unlike the purely local shell hosts it does talk to Microsoft's search service, so the meaningful network signal is connections to unrelated hosts, not network activity as such. The realistic abuse is impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), where malware uses the name from a path outside the genuine packaged location.</p>\n<p>As a persistent per-user process it could also be injected into (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>). A SearchHost that spawns programs or reaches hosts outside the search service is acting outside its role.</p>"
+}

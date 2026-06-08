@@ -1,0 +1,265 @@
+{
+  "name": "sihost.exe",
+  "aliases": [
+    "sihost"
+  ],
+  "category": "System",
+  "tags": [
+    "shell",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "sihost.exe is the Shell Infrastructure Host, a per-user process that runs visual and interactive parts of the Windows shell. It handles elements like the Start menu layout, taskbar transparency, the action center, context menus, and the desktop background slideshow. It works alongside Explorer and runs whenever a user is signed in.\n",
+  "about": "sihost.exe (Shell Infrastructure Host) provides shell services for the interactive desktop, the graphical plumbing the modern Windows shell needs beyond what `explorer.exe` itself handles. Start menu rendering, taskbar and window transparency, the action center, and the desktop background slideshow are among the features it supports. The genuine binary lives at `C:\\Windows\\System32\\sihost.exe` and is signed by Microsoft.\n\nOne sihost.exe runs per interactive user session, under the logged-on user's account, and it starts as part of bringing up that user's shell. It is launched by the service infrastructure, so its parent is normally an `svchost.exe`. It stays running for the life of the session.\n\nsihost.exe runs quietly in the background of every signed-in desktop. It supports the shell rather than launching applications, so it does not normally start other programs, and brief CPU spikes as the interface updates are ordinary.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "sihost.exe",
+    "internal_name": "sihost.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "136.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 32,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\sihost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "windows.security.integrity.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\sihost.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` or a service account rather than the logged-on user",
+      "severity": "high"
+    },
+    {
+      "signal": "sihost spawning child processes such as `cmd.exe` or `powershell.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `svchost.exe`",
+      "severity": "medium"
+    },
+    {
+      "signal": "Outbound network connections to external hosts",
+      "severity": "medium"
+    },
+    {
+      "signal": "More instances than interactive users",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "sihost.exe is rarely abused directly, so its value is as a baseline. It has a steady identity, the logged-on user's account, an `svchost.exe` parent, a Microsoft signature, and no child processes, which makes a deviation easy to spot. The straightforward abuse is impersonation (T1036.005): a plausible, slightly obscure name that malware borrows by running from the wrong path, under the wrong account, or without a valid signature. A sihost.exe that spawns a shell or reaches an external host is out of character.\n\nAs a persistent per-user process tied to the desktop, sihost is also a candidate for code injection (T1055), letting an attacker run in the user's context and blend into ordinary shell activity. Unusual loaded modules or network connections from an otherwise idle sihost.exe are what would point to it.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1055"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1055/"
+  ],
+  "sigma": [
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\sihost.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\sihost.exe</code>"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` or a service account rather than the logged-on user",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> or a service account rather than the logged-on user"
+    },
+    {
+      "signal": "sihost spawning child processes such as `cmd.exe` or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "sihost spawning child processes such as <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    },
+    {
+      "signal": "Parent other than `svchost.exe`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>"
+    },
+    {
+      "signal": "Outbound network connections to external hosts",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections to external hosts"
+    },
+    {
+      "signal": "More instances than interactive users",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "More instances than interactive users"
+    }
+  ],
+  "about_html": "<p>sihost.exe (Shell Infrastructure Host) provides shell services for the interactive desktop, the graphical plumbing the modern Windows shell needs beyond what <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a> itself handles. Start menu rendering, taskbar and window transparency, the action center, and the desktop background slideshow are among the features it supports. The genuine binary lives at <code>C:\\Windows\\System32\\sihost.exe</code> and is signed by Microsoft.</p>\n<p>One sihost.exe runs per interactive user session, under the logged-on user's account, and it starts as part of bringing up that user's shell. It is launched by the service infrastructure, so its parent is normally an <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>. It stays running for the life of the session.</p>\n<p>sihost.exe runs quietly in the background of every signed-in desktop. It supports the shell rather than launching applications, so it does not normally start other programs, and brief CPU spikes as the interface updates are ordinary.</p>",
+  "security_notes_html": "<p>sihost.exe is rarely abused directly, so its value is as a baseline. It has a steady identity, the logged-on user's account, an <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a> parent, a Microsoft signature, and no child processes, which makes a deviation easy to spot. The straightforward abuse is impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>): a plausible, slightly obscure name that malware borrows by running from the wrong path, under the wrong account, or without a valid signature. A sihost.exe that spawns a shell or reaches an external host is out of character.</p>\n<p>As a persistent per-user process tied to the desktop, sihost is also a candidate for code injection (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>), letting an attacker run in the user's context and blend into ordinary shell activity. Unusual loaded modules or network connections from an otherwise idle sihost.exe are what would point to it.</p>"
+}

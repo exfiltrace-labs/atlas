@@ -1,0 +1,332 @@
+{
+  "name": "findstr.exe",
+  "aliases": [
+    "findstr"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "findstr.exe searches files for text using patterns and regular expressions, the Windows equivalent of grep. Administrators and scripts use it constantly. Attackers use it to hunt for passwords in files and, through a lesser-known quirk, to copy or read files from remote shares.\n",
+  "about": "findstr.exe searches the contents of files for literal strings or regular expressions and prints the matching lines. It is a normal part of batch scripting and troubleshooting. It also has a quirk attackers exploit: it can read a target file across a UNC path, which lets it pull content from a remote share. The genuine binary lives at `C:\\Windows\\System32\\findstr.exe`.\n\nLegitimately, findstr appears throughout scripts and interactive troubleshooting. What it is searching for, and where, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\findstr.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Searching files or registry exports for `password`, `passwd`, or credential keywords",
+      "severity": "medium"
+    },
+    {
+      "signal": "Reading a file across a remote UNC path (`\\\\host\\share\\...`)",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "medium"
+    },
+    {
+      "signal": "Recursive searches across user profiles or config directories for secrets",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "findstr.exe is a quick way to harvest credentials left in files (T1552.001). A search for terms like `password` across configuration files, scripts, and saved exports turns up plaintext secrets that applications and admins leave behind, a fast win during post-exploitation reconnaissance.\n\nIts UNC-reading quirk also makes it a minor ingress tool (T1105): because findstr can read a file from a remote share, it can be used to pull content from another host through a signed binary. Because findstr is an everyday search tool, the search terms, the targets, and any remote paths are what separate ordinary scripting from credential hunting.\n",
+  "mitre_attack": [
+    "T1552.001",
+    "T1105"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Findstr/",
+    "https://attack.mitre.org/techniques/T1552/001/",
+    "https://attack.mitre.org/techniques/T1105/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Findstr/",
+    "commands": [
+      {
+        "command": "findstr /V /L W3AllLov3LolBas {PATH_ABSOLUTE:.exe} > {PATH_ABSOLUTE}:file.exe",
+        "usecase": "Add a file to an alternate data stream to hide from defensive counter measures",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "findstr /V /L W3AllLov3LolBas {PATH_SMB:.exe} > {PATH_ABSOLUTE}:file.exe",
+        "usecase": "Add a file to an alternate data stream from a webdav server to hide from defensive counter measures",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "findstr /S /I cpassword \\\\sysvol\\policies\\*.xml",
+        "usecase": "Find credentials stored in cpassword attrbute",
+        "mitreID": "T1552.001",
+        "category": "Credentials"
+      },
+      {
+        "command": "findstr /V /L W3AllLov3LolBas {PATH_SMB:.exe} > {PATH_ABSOLUTE:.exe}",
+        "usecase": "Download/Copy file from webdav server",
+        "mitreID": "T1105",
+        "category": "Download"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "91a2c315-9ee6-4052-a853-6f6a8238f90d",
+      "title": "Findstr GPP Passwords",
+      "level": "high",
+      "techniques": [
+        "T1552.006"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_gpp_passwords.yml",
+      "match": "image"
+    },
+    {
+      "id": "fe63010f-8823-4864-a96b-a7b4a0f7b929",
+      "title": "LSASS Process Reconnaissance Via Findstr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1552.006"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_lsass.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "37db85d1-b089-490a-a59a-c7b6f984f480",
+      "title": "Sysmon Discovery Via Default Driver Altitude Using Findstr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1518.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_sysmon_discovery_via_default_altitude.yml",
+      "match": "image"
+    },
+    {
+      "id": "bed2a484-9348-4143-8a8a-b801c979301c",
+      "title": "Webshell Detection With Command Line Keywords",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "f576a613-2392-4067-9d1a-9345fb58d8d1",
+      "title": "Automated Collection Command Prompt",
+      "level": "medium",
+      "techniques": [
+        "T1119",
+        "T1552.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_automated_collection.yml",
+      "match": "image"
+    },
+    {
+      "id": "33339be3-148b-4e16-af56-ad16ec6c7e7b",
+      "title": "Findstr Launching .lnk File",
+      "level": "medium",
+      "techniques": [
+        "T1036",
+        "T1202",
+        "T1027.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_lnk.yml",
+      "match": "image"
+    },
+    {
+      "id": "47e4bab7-c626-47dc-967b-255608c9a920",
+      "title": "Permission Misconfiguration Reconnaissance Via Findstr.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1552.006"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_recon_everyone.yml",
+      "match": "image"
+    },
+    {
+      "id": "1a0f6f16-2099-4753-9a02-43b6ac7a1fa5",
+      "title": "Potential Password Reconnaissance Via Findstr.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1552.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_findstr_password_recon.yml",
+      "match": "image"
+    },
+    {
+      "id": "213d6a77-3d55-4ce8-ba74-fcfef741974e",
+      "title": "Private Keys Reconnaissance Via CommandLine Tools",
+      "level": "medium",
+      "techniques": [
+        "T1552.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_private_keys_recon.yml",
+      "match": "image"
+    },
+    {
+      "id": "587254ee-a24b-4335-b3cd-065c0f1f4baa",
+      "title": "Remote File Download Via Findstr.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1218",
+        "T1564.004",
+        "T1552.001",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_download.yml",
+      "match": "image"
+    },
+    {
+      "id": "4fe074b4-b833-4081-8f24-7dcfeca72b42",
+      "title": "Security Tools Keyword Lookup Via Findstr.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1518.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_security_keyword_lookup.yml",
+      "match": "image"
+    },
+    {
+      "id": "04936b66-3915-43ad-a8e5-809eadfd1141",
+      "title": "Insensitive Subfolder Search Via Findstr.EXE",
+      "level": "low",
+      "techniques": [
+        "T1218",
+        "T1564.004",
+        "T1552.001",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_subfolder_search.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1552.001",
+      "name": "Unsecured Credentials: Credentials In Files",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "T1564.004",
+      "name": "Hide Artifacts: NTFS File Attributes",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\findstr.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\findstr.exe</code>"
+    },
+    {
+      "signal": "Reading a file across a remote UNC path (`\\\\host\\share\\...`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Reading a file across a remote UNC path (<code>\\\\host\\share\\...</code>)"
+    },
+    {
+      "signal": "Searching files or registry exports for `password`, `passwd`, or credential keywords",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Searching files or registry exports for <code>password</code>, <code>passwd</code>, or credential keywords"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Recursive searches across user profiles or config directories for secrets",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Recursive searches across user profiles or config directories for secrets"
+    }
+  ],
+  "about_html": "<p>findstr.exe searches the contents of files for literal strings or regular expressions and prints the matching lines. It is a normal part of batch scripting and troubleshooting. It also has a quirk attackers exploit: it can read a target file across a UNC path, which lets it pull content from a remote share. The genuine binary lives at <code>C:\\Windows\\System32\\findstr.exe</code>.</p>\n<p>Legitimately, findstr appears throughout scripts and interactive troubleshooting. What it is searching for, and where, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>findstr.exe is a quick way to harvest credentials left in files (<a href=\"https://attack.mitre.org/techniques/T1552/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1552.001</a>). A search for terms like <code>password</code> across configuration files, scripts, and saved exports turns up plaintext secrets that applications and admins leave behind, a fast win during post-exploitation reconnaissance.</p>\n<p>Its UNC-reading quirk also makes it a minor ingress tool (<a href=\"https://attack.mitre.org/techniques/T1105/\" target=\"_blank\" rel=\"noreferrer noopener\">T1105</a>): because findstr can read a file from a remote share, it can be used to pull content from another host through a signed binary. Because findstr is an everyday search tool, the search terms, the targets, and any remote paths are what separate ordinary scripting from credential hunting.</p>"
+}

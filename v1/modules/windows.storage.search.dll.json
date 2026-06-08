@@ -1,0 +1,11 @@
+{
+  "name": "windows.storage.search.dll",
+  "loaded_by": [
+    {
+      "name": "widgets.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

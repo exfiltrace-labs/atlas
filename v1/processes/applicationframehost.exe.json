@@ -1,0 +1,530 @@
+{
+  "name": "applicationframehost.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "ApplicationFrameHost.exe",
+    "internal_name": "Application Frame Host",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "94.30 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 3,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\ApplicationFrameHost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "umpdc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vm3dum64_10.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "twinapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "applicationframe.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.ui.winmd",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dcomp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.foundation.winmd",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.graphics.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uiautomationcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uianimation.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vm3dum64_loader.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "d2d1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "starttiledata.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dwmapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "d3d11.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "textshaping.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rtmediaframe.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "photometadatahandler.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "resourcepolicyclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcp47mrm.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rometadata.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\ApplicationFrameHost.exe -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha256",
+      "value": "e44b9dd65c04b67254d80295b928a5800ee6690046302899075710c352d7e81b",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "1bfb8081e59a3a3d1207e1548bd2860457259cd2",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "4a07e32a8922b97e86241fcd512102a2",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "28580eceb0562a8a7fbd08dc4f37b368",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

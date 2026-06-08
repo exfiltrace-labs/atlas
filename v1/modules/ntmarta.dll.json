@@ -1,0 +1,17 @@
+{
+  "name": "ntmarta.dll",
+  "loaded_by": [
+    {
+      "name": "runtimebroker.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    }
+  ]
+}

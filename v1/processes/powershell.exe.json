@@ -1,0 +1,2638 @@
+{
+  "name": "powershell.exe",
+  "aliases": [
+    "powershell"
+  ],
+  "category": "Shell",
+  "tags": [
+    "scripting",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "powershell.exe is Windows PowerShell, Microsoft's command-line shell and scripting language for administration and automation. Built on .NET, it runs commands called cmdlets and full scripts that manage almost every part of the system: files, the registry, services, processes, the event log, and remote machines. It ships with Windows and is a mainstay of both legitimate administration and attacker tooling.\n",
+  "about": "Windows PowerShell is built on the .NET Framework and works by loading and running cmdlets, small .NET classes, alongside scripts written in the PowerShell language. The genuine binary lives at `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`, with a 32-bit copy under `SysWOW64`. The `v1.0` in that path is historical and has never changed: the in-box version on modern Windows is actually PowerShell 5.1. It is separate from PowerShell 7, whose binary is named `pwsh.exe` and installs under `Program Files`.\n\nIt can run interactively as a console or non-interactively from another program, taking a script file with `-File`, a literal command with `-Command`, or a base64-packed command with `-EncodedCommand`. Like any console program it is hosted by `conhost.exe`. Crucially, powershell.exe is only the default host. The PowerShell engine itself lives in `System.Management.Automation.dll`, and any .NET program can load that DLL to run PowerShell code without ever starting powershell.exe.\n\nIts parent is whatever started it: an interactive `explorer.exe` session, a logon or Group Policy script, the Task Scheduler, a software installer, or a management agent. A wide range of parents is therefore normal in administered environments, which is part of why the process is hard to baseline on behavior alone.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "PowerShell.EXE.MUI",
+    "internal_name": "POWERSHELL",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8457 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "444.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 24,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [
+    {
+      "value": "8080/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "wbemsvc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wbemprox.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wmidcom.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "microsoft.management.infrastructure.native.unmanaged.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "miutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "microsoft.management.infrastructure.native.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "lsass.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vm3dservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "audiodg.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vmtoolsd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mpdefendercoreservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ctfmon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shellhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shellexperiencehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vgauthservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "system",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "csrss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msdtc.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe` or its `SysWOW64` copy",
+      "severity": "high"
+    },
+    {
+      "signal": "A long base64 blob passed to `-EncodedCommand` / `-enc`",
+      "severity": "high"
+    },
+    {
+      "signal": "Download-cradle code in the command line (`Net.WebClient`, `Invoke-WebRequest`, `DownloadString`, `iwr`, `iex`)",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, `wscript.exe`, `cscript.exe`, or `mshta.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Hidden non-interactive launch flags together (`-WindowStyle Hidden`, `-NonInteractive`, `-NoProfile`, `-ExecutionPolicy Bypass`)",
+      "severity": "medium"
+    },
+    {
+      "signal": "Outbound connections to hosts outside the environment shortly after launch",
+      "severity": "medium"
+    },
+    {
+      "signal": "A `powershell.exe` child spawning `cmd.exe`, `rundll32.exe`, or other LOLBINs",
+      "severity": "medium"
+    },
+    {
+      "signal": "Explicitly loading the legacy engine with `-Version 2`",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "powershell.exe is the premier living-off-the-land tool on Windows (T1059.001). The signed in-box binary gives attackers a trusted way to run code entirely in memory (T1620), pull payloads down with a download cradle (T1105), and hide intent behind base64 or otherwise obfuscated commands (T1027.010). Because the binary itself is legitimate, path and signature checks pass. The evidence is in the command line, the parent, and the network and file activity that follow.\n\nPowerShell 5.1 added a deep logging surface: script block logging (event ID 4104), module logging, transcription, and live inspection of script content through AMSI. Attackers work to blind it (T1685) by patching AMSI in memory, disabling or clearing these logs, or downgrading to PowerShell 2.0, which predates all of them. Heavy use of `-Version 2` is a tell.\n\nAbsence is not safety. Because the engine is just a DLL, attackers run PowerShell through their own .NET host, so-called unmanaged or fileless PowerShell, and powershell.exe never appears in the process tree. A quiet powershell.exe does not mean PowerShell was not used.\n",
+  "mitre_attack": [
+    "T1059.001",
+    "T1027.010",
+    "T1105",
+    "T1620",
+    "T1685"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/powershell/scripting/overview",
+    "https://learn.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal",
+    "https://attack.mitre.org/techniques/T1059/001/",
+    "https://attack.mitre.org/techniques/T1620/"
+  ],
+  "sigma": [
+    {
+      "id": "91048c0d-5b81-4b85-a099-c9ee4fb87979",
+      "title": "Mint Sandstorm - AsperaFaspex Suspicious Process Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/TA/Mint-Sandstorm/proc_creation_win_apt_mint_sandstorm_aspera_faspex_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "58d8341a-5849-44cd-8ac8-8b020413a31b",
+      "title": "Mint Sandstorm - ManageEngine Suspicious Process Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/TA/Mint-Sandstorm/proc_creation_win_apt_mint_sandstorm_manage_engine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "af8bbce4-f751-46b4-8d91-82a33a736f61",
+      "title": "Potential CVE-2021-41379 Exploitation Attempt",
+      "level": "critical",
+      "techniques": [
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/Exploits/CVE-2021-41379/proc_creation_win_exploit_cve_2021_41379.yml",
+      "match": "image"
+    },
+    {
+      "id": "339ed3d6-5490-46d0-96a7-8abe33078f58",
+      "title": "Qakbot Rundll32 Exports Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Qakbot/proc_creation_win_malware_qakbot_rundll32_exports.yml",
+      "match": "parent"
+    },
+    {
+      "id": "bfd34392-c591-4009-b938-9fd985a28b85",
+      "title": "Qakbot Rundll32 Fake DLL Extension Execution",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Qakbot/proc_creation_win_malware_qakbot_rundll32_fake_dll_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "2fdefcb3-dbda-401e-ae23-f0db027628bc",
+      "title": "Sticky Key Like Backdoor Execution",
+      "level": "critical",
+      "techniques": [
+        "T1546.008"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_sticky_key_like_backdoor_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "d55b793d-f847-4eea-b59a-5ab09908ac90",
+      "title": "Suspicious Child Process Of Veeam Dabatase",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_veaam_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c86500e9-a645-4680-98d7-f882c70c1ea3",
+      "title": "AADInternals PowerShell Cmdlets Execution - ProccessCreation",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_aadinternals_cmdlets_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "d522eca2-2973-4391-a3e0-ef0374321dae",
+      "title": "Abused Debug Privilege by Arbitrary Parent Processes",
+      "level": "high",
+      "techniques": [
+        "T1548"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_abusing_debug_privilege.yml",
+      "match": "image"
+    },
+    {
+      "id": "f6c27ecc-d890-4452-80e6-2e274a10e097",
+      "title": "Axios NPM Compromise Indicators - Windows",
+      "level": "high",
+      "techniques": [
+        "T1195.002",
+        "T1059.003",
+        "T1059.005",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2026/Malware/Axios-NPM-Compromise/proc_creation_win_axios_npm_compromise_indicators.yml",
+      "match": "image"
+    },
+    {
+      "id": "0a74c5a9-1b71-4475-9af2-7829d320d5c2",
+      "title": "ChromeLoader Malware Execution",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1059.001",
+        "T1176"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Malware/ChromeLoader/proc_creation_win_malware_chrome_loader_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "b730a276-6b63-41b8-bcf8-55930c8fc6ee",
+      "title": "Csc.EXE Execution Form Potentially Suspicious Parent",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.007",
+        "T1218.005",
+        "T1027.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_csc_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "ec3a3c2f-9bb0-4a9b-8f4b-5ec386544343",
+      "title": "CVE-2023-38331 Exploitation Attempt - Suspicious WinRAR Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Exploits/CVE-2023-38831/proc_creation_win_exploit_cve_2023_38831_winrar_child_proc.yml",
+      "match": "image"
+    },
+    {
+      "id": "a7ee1722-c3c5-aeff-3212-c777e4733217",
+      "title": "Disable Windows Defender AV Security Monitoring",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_disable_defender_av_security_monitoring.yml",
+      "match": "image"
+    },
+    {
+      "id": "312d0384-401c-4b8b-abdf-685ffba9a332",
+      "title": "Email Exifiltration Via Powershell",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_email_exfil.yml",
+      "match": "image"
+    },
+    {
+      "id": "1f32d820-1d5c-43fe-8fe2-feef0c952eb7",
+      "title": "Emotet Loader Execution Via .LNK File",
+      "level": "high",
+      "techniques": [
+        "T1059.006"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Malware/Emotet/proc_creation_win_malware_emotet_loader_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "25676e10-2121-446e-80a4-71ff8506af47",
+      "title": "Exchange PowerShell Snap-Ins Usage",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1114"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_snapins_hafnium.yml",
+      "match": "image"
+    },
+    {
+      "id": "fb9d3ff7-7348-46ab-af8c-b55f5fbf39b4",
+      "title": "Execution of Powershell Script in Public Folder",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_public_folder.yml",
+      "match": "image"
+    },
+    {
+      "id": "43259cc4-1b80-4931-bd98-baea01afc196",
+      "title": "Exploitation Activity of CVE-2025-59287 - WSUS Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-59287/proc_creation_win_exploit_cve_2025_59287.yml",
+      "match": "image"
+    },
+    {
+      "id": "846b866e-2a57-46ee-8e16-85fa92759be7",
+      "title": "Exploited CVE-2020-10189 Zoho ManageEngine",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1059.001",
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2020/Exploits/CVE-2020-10189/proc_creation_win_exploit_cve_2020_10189.yml",
+      "match": "image"
+    },
+    {
+      "id": "97805087-93ab-4203-b5cb-287cda6aecaa",
+      "title": "FakeUpdates/SocGholish Activity",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Malware/SocGholish/proc_creation_win_malware_socgholish_fakeupdates_activity.yml",
+      "match": "image"
+    },
+    {
+      "id": "c3d76afc-93df-461e-8e67-9b2bad3f2ac4",
+      "title": "File Explorer Folder Opened Using Explorer Folder Shortcut Via Shell",
+      "level": "high",
+      "techniques": [
+        "T1135"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_explorer_folder_shortcut_via_shell_binary.yml",
+      "match": "parent"
+    },
+    {
+      "id": "6f8b3439-a203-45dc-a88b-abf57ea15ccf",
+      "title": "HackTool - CrackMapExec PowerShell Obfuscation",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1027.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_powershell_obfuscation.yml",
+      "match": "image"
+    },
+    {
+      "id": "56c217c3-2de2-479b-990f-5c109ba8458f",
+      "title": "HackTool - Default PowerSploit/Empire Scheduled Task Creation",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_powersploit_empire_default_schtasks.yml",
+      "match": "parent"
+    },
+    {
+      "id": "52cad028-0ff0-4854-8f67-d25dfcbc78b4",
+      "title": "HTML Help HH.EXE Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1059.001",
+        "T1059.003",
+        "T1059.005",
+        "T1059.007",
+        "T1218",
+        "T1218.001",
+        "T1218.010",
+        "T1218.011",
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_html_help_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "6225c53a-a96e-4235-b28f-8d7997cd96eb",
+      "title": "Hypervisor-protected Code Integrity (HVCI) Related Registry Tampering Via CommandLine",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hvci_registry_tampering.yml",
+      "match": "image"
+    },
+    {
+      "id": "f5d19838-41b5-476c-98d8-ba8af4929ee2",
+      "title": "LOL-Binary Copied From System Directory",
+      "level": "high",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_copy_system_dir_lolbin.yml",
+      "match": "image"
+    },
+    {
+      "id": "f26c6093-6f14-4b12-800f-0fcb46f5ffd0",
+      "title": "Malicious Base64 Encoded PowerShell Keywords in Command Lines",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_base64_hidden_flag.yml",
+      "match": "image"
+    },
+    {
+      "id": "05a2ab7e-ce11-4b63-86db-ab32e763e11d",
+      "title": "MMC Spawning Windows Shell",
+      "level": "high",
+      "techniques": [
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "c86133ad-4725-4bd0-8170-210788e0a7ba",
+      "title": "Net WebClient Casing Anomalies",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_webclient_casing.yml",
+      "match": "image"
+    },
+    {
+      "id": "7b6a7418-3afc-11f0-aff4-000d3abf478c",
+      "title": "Obfuscated PowerShell MSI Install via WindowsInstaller COM",
+      "level": "high",
+      "techniques": [
+        "T1027.010",
+        "T1218.007",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_comobject_msi.yml",
+      "match": "image"
+    },
+    {
+      "id": "44e24481-6202-4c62-9127-5a0ae8e3fe3d",
+      "title": "Obfuscated PowerShell OneLiner Execution",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_download_cradle_obfuscated.yml",
+      "match": "image"
+    },
+    {
+      "id": "84b1706c-932a-44c4-ae28-892b28a25b94",
+      "title": "OneNote.EXE Execution of Malicious Embedded Scripts",
+      "level": "high",
+      "techniques": [
+        "T1218.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_embedded_script_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "0934ac71-a331-4e98-a034-d49c491fbbcb",
+      "title": "PaperCut MF/NG Potential Exploitation",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/TA/PaperCut-Print-Management-Exploitation/proc_creation_win_papercut_print_management_exploitation_pc_app.yml",
+      "match": "image"
+    },
+    {
+      "id": "1bf0ba65-9a39-42a2-9271-31d31bf2f0bf",
+      "title": "Pikabot Fake DLL Extension Execution Via Rundll32.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Pikabot/proc_creation_win_malware_pikabot_rundll32_uncommon_extension.yml",
+      "match": "parent"
+    },
+    {
+      "id": "584bca0f-3608-4402-80fd-4075ff6072e3",
+      "title": "Potential CommandLine Obfuscation Using Unicode Characters From Suspicious Image",
+      "level": "high",
+      "techniques": [
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_cli_obfuscation_unicode_img.yml",
+      "match": "image"
+    },
+    {
+      "id": "3eb91f0a-0060-424a-a676-59f5fdd75610",
+      "title": "Potential CVE-2021-44228 Exploitation Attempt - VMware Horizon",
+      "level": "high",
+      "techniques": [
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/Exploits/CVE-2021-44228/proc_creation_win_exploit_cve_2021_44228_vmware_horizon_log4j.yml",
+      "match": "image"
+    },
+    {
+      "id": "9a4ccd1a-3526-4d99-b980-9f9c5d3a6ee3",
+      "title": "Potential CVE-2022-29072 Exploitation Attempt",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Exploits/CVE-2022-29072/proc_creation_win_exploit_cve_2022_29072_7zip.yml",
+      "match": "image"
+    },
+    {
+      "id": "53207cc2-0745-4c19-bc72-80be1cc16b3f",
+      "title": "Potential CVE-2023-21554 QueueJumper Exploitation",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Exploits/CVE-2022-21554/proc_creation_win_exploit_cve_2023_21554_queuejumper.yml",
+      "match": "image"
+    },
+    {
+      "id": "50dbc08b-60ce-40f1-a6b6-346497e34c88",
+      "title": "Potential CVE-2023-36874 Exploitation - Fake Wermgr Execution",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Exploits/CVE-2023-36874/proc_creation_win_exploit_cve_2023_36874_fake_wermgr.yml",
+      "match": "image"
+    },
+    {
+      "id": "7d1aaf3d-4304-425c-b7c3-162055e0b3ab",
+      "title": "Potential Data Exfiltration Activity Via CommandLine Tools",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_data_exfiltration_via_cli.yml",
+      "match": "image"
+    },
+    {
+      "id": "0ba1da6d-b6ce-4366-828c-18826c9de23e",
+      "title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+      "level": "high",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_binary_highly_relevant.yml",
+      "match": "image"
+    },
+    {
+      "id": "0fdc7c7f-c690-4217-9ae3-31f5156eed72",
+      "title": "Potential Exploitation of CrushFTP RCE Vulnerability (CVE-2025-54309)",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1059.003",
+        "T1068",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-54309/proc_creation_win_exploit_cve_2025_54309.yml",
+      "match": "image"
+    },
+    {
+      "id": "c408acfe-2870-41df-8d2f-9f4daa4555ed",
+      "title": "Potential Exploitation of CVE-2024-37085 - Suspicious Creation Of ESX Admins Group",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2024/Exploits/CVE-2024-37085/proc_creation_win_exploit_cve_2024_37085_esxi_admins_group_creation.yml",
+      "match": "image"
+    },
+    {
+      "id": "6c76b3d0-afe4-4870-9443-ffe6773c5fef",
+      "title": "Potential Exploitation of GoAnywhere MFT Vulnerability",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1059.001",
+        "T1133"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-10035/proc_creation_win_exploit_cve_2025_10035.yml",
+      "match": "image"
+    },
+    {
+      "id": "d7bcd677-645d-4691-a8d4-7a5602b780d1",
+      "title": "Potential PowerShell Command Line Obfuscation",
+      "level": "high",
+      "techniques": [
+        "T1027",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_cmdline_special_characters.yml",
+      "match": "image"
+    },
+    {
+      "id": "b6b49cd1-34d6-4ead-b1bf-176e9edba9a4",
+      "title": "Potential PowerShell Obfuscation Via Reversed Commands",
+      "level": "high",
+      "techniques": [
+        "T1027",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_cmdline_reversed_strings.yml",
+      "match": "image"
+    },
+    {
+      "id": "edc2f8ae-2412-4dfd-b9d5-0c57727e70be",
+      "title": "Potential Powershell ReverseShell Connection",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_reverse_shell_connection.yml",
+      "match": "image"
+    },
+    {
+      "id": "cf879ffb-793a-4753-9a14-bc8f37cc90df",
+      "title": "Potential Qakbot Rundll32 Execution",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Qakbot/proc_creation_win_malware_qakbot_rundll32_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "63f3605b-979f-48c2-b7cc-7f90523fed88",
+      "title": "Potential Suspicious Child Process Of 3CXDesktopApp",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/TA/3CX-Supply-Chain/proc_creation_win_malware_3cx_compromise_susp_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "1dd05363-104e-4b4a-b963-196a534b03a1",
+      "title": "Potential Suspicious Mofcomp Execution",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mofcomp_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "6f0947a4-1c5e-4e0d-8ac7-53159b8f23ca",
+      "title": "Potentially Suspicious Child Process Of Regsvr32",
+      "level": "high",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dfa03a09-8b92-4d83-8e74-f72839b1c407",
+      "title": "Potentially Suspicious Child Processes Spawned by ConHost",
+      "level": "high",
+      "techniques": [
+        "T1202",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_susp_winshell_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "69bd9b97-2be2-41b6-9816-fb08757a4d1a",
+      "title": "Potentially Suspicious Execution From Parent Process In Public Folder",
+      "level": "high",
+      "techniques": [
+        "T1564",
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_execution_from_public_folder_as_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "b6e04788-29e1-4557-bb14-77f761848ab8",
+      "title": "Potentially Suspicious File Download From File Sharing Domain Via PowerShell.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_download_susp_file_sharing_domains.yml",
+      "match": "image"
+    },
+    {
+      "id": "6385697e-9f1b-40bd-8817-f4a91f40508e",
+      "title": "PowerShell Base64 Encoded Invoke Keyword",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_base64_invoke.yml",
+      "match": "image"
+    },
+    {
+      "id": "1816994b-42e1-4fb1-afd2-134d88184f71",
+      "title": "PowerShell Base64 Encoded WMI Classes",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_base64_wmi_classes.yml",
+      "match": "image"
+    },
+    {
+      "id": "434c08ba-8406-4d15-8b24-782cb071a691",
+      "title": "PowerShell Execution With Potential Decryption Capabilities",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_decrypt_pattern.yml",
+      "match": "image"
+    },
+    {
+      "id": "bdeb2cff-af74-4094-8426-724dc937f20a",
+      "title": "PowerShell Script Change Permission Via Set-Acl",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_set_acl.yml",
+      "match": "image"
+    },
+    {
+      "id": "0944e002-e3f6-4eb5-bf69-3a3067b53d73",
+      "title": "PowerShell Set-Acl On Windows Folder",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_set_acl_susp_location.yml",
+      "match": "image"
+    },
+    {
+      "id": "9bd04a79-dabe-4f1f-a5ff-92430265c96b",
+      "title": "Privilege Escalation via Named Pipe Impersonation",
+      "level": "high",
+      "techniques": [
+        "T1021"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_priv_escalation_via_named_pipe.yml",
+      "match": "image"
+    },
+    {
+      "id": "2ad78473-6978-40f5-b8f1-89c7e1c27a1a",
+      "title": "RedSun - Conhost.exe Spawned by TieringEngineService.exe",
+      "level": "high",
+      "techniques": [
+        "T1134.002",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2026/Exploits/RedSun/proc_creation_win_redsun_conhost_via_tiering_engine.yml",
+      "match": "image"
+    },
+    {
+      "id": "45a594aa-1fbd-4972-a809-ff5a99dd81b8",
+      "title": "Run PowerShell Script from ADS",
+      "level": "high",
+      "techniques": [
+        "T1564.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_run_script_from_ads.yml",
+      "match": "image"
+    },
+    {
+      "id": "c83bf4b5-cdf0-437c-90fa-43d734f7c476",
+      "title": "Run PowerShell Script from Redirected Input Stream",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_run_script_from_input_stream.yml",
+      "match": "image"
+    },
+    {
+      "id": "f6d1dd2f-b8ce-40ca-bc23-062efb686b34",
+      "title": "Script Event Consumer Spawning Process",
+      "level": "high",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_scrcons_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "1228c958-e64e-4e71-92ad-7d429f4138ba",
+      "title": "Script Interpreter Execution From Suspicious Folder",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_script_exec_from_env_folder.yml",
+      "match": "image"
+    },
+    {
+      "id": "f3d39c45-de1a-4486-a687-ab126124f744",
+      "title": "Sdiagnhost Calling Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1036",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sdiagnhost_susp_child.yml",
+      "match": "image"
+    },
+    {
+      "id": "1a4bd6af-99ac-4466-b5b2-7b72b4a05462",
+      "title": "Security Event Logging Disabled via MiniNt Registry Key - Process",
+      "level": "high",
+      "techniques": [
+        "T1685.001",
+        "T1112"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_event_logging_disable_via_key_minint.yml",
+      "match": "image"
+    },
+    {
+      "id": "d5eb7432-fda4-4bba-a37f-ffa74d9ed639",
+      "title": "Serpent Backdoor Payload Execution Via Scheduled Task",
+      "level": "high",
+      "techniques": [
+        "T1053.005",
+        "T1059.006"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Malware/Serpent-Backdoor/proc_creation_win_malware_serpent_backdoor_payload_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "c947b146-0abc-4c87-9c64-b17e9d7274a2",
+      "title": "Shadow Copies Deletion Using Operating Systems Utilities",
+      "level": "high",
+      "techniques": [
+        "T1070",
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shadow_copies_deletion.yml",
+      "match": "image"
+    },
+    {
+      "id": "8e95e73e-ba02-4a87-b4d7-0929b8053038",
+      "title": "Suspicious ArcSOC.exe Child Process",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_arcsoc_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "9f38c1db-e2ae-40bf-81d0-5b68f73fb512",
+      "title": "Suspicious BitLocker Access Agent Update Utility Execution",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_baaupdate_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "811f459f-9231-45d4-959a-0266c6311987",
+      "title": "Suspicious Child Process Of BgInfo.EXE",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1218",
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bginfo_suspicious_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea2b7ea-792b-405f-95a1-b903ea06458f",
+      "title": "Suspicious Child Process Of Manage Engine ServiceDesk",
+      "level": "high",
+      "techniques": [
+        "T1102"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "bb0e87ce-c89f-4857-84fa-095e4483e9cb",
+      "title": "Suspicious Child Process of Notepad++ Updater - GUP.Exe",
+      "level": "high",
+      "techniques": [
+        "T1195.002",
+        "T1557"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_gup_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "869b9ca7-9ea2-4a5a-8325-e80e62f75445",
+      "title": "Suspicious Child Process Of SQL Server",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "396f6630-f3ac-44e3-bfc8-1b161bc00c4e",
+      "title": "Suspicious Child Process Of Wermgr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055",
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "27ba3207-dd30-4812-abbf-5d20c57d474e",
+      "title": "Suspicious Chromium Browser Instance Executed With Custom Extension",
+      "level": "high",
+      "techniques": [
+        "T1176.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_susp_load_extension.yml",
+      "match": "parent"
+    },
+    {
+      "id": "ca2092a1-c273-4878-9b4b-0d60115bf5ea",
+      "title": "Suspicious Encoded PowerShell Command Line",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_base64_encoded_cmd.yml",
+      "match": "image"
+    },
+    {
+      "id": "cc36992a-4671-4f21-a91d-6c2b72a2edf5",
+      "title": "Suspicious Eventlog Clearing or Configuration Change Activity",
+      "level": "high",
+      "techniques": [
+        "T1685.005",
+        "T1685.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_eventlog_clear.yml",
+      "match": "image"
+    },
+    {
+      "id": "043c4b8b-3a54-4780-9682-081cb6b8185c",
+      "title": "Suspicious IIS Module Registration",
+      "level": "high",
+      "techniques": [
+        "T1505.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_iis_susp_module_registration.yml",
+      "match": "image"
+    },
+    {
+      "id": "5e3cc4d8-3e68-43db-8656-eaaeefdec9cc",
+      "title": "Suspicious Invoke-WebRequest Execution",
+      "level": "high",
+      "techniques": [
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_invoke_webrequest_download.yml",
+      "match": "image"
+    },
+    {
+      "id": "caa9a802-8bd8-4b9e-a5cd-4d6221670219",
+      "title": "Suspicious Kerberos Ticket Request via CLI",
+      "level": "high",
+      "techniques": [
+        "T1558.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_kerberos_kerberos_ticket_request_via_cli.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7a74da6b-ea76-47db-92cc-874ad90df734",
+      "title": "Suspicious MSDT Parent Process",
+      "level": "high",
+      "techniques": [
+        "T1036",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "03cc0c25-389f-4bf8-b48d-11878079f1ca",
+      "title": "Suspicious MSHTA Child Process",
+      "level": "high",
+      "techniques": [
+        "T1218.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e32f92d1-523e-49c3-9374-bdb13b46a3ba",
+      "title": "Suspicious Mshta.EXE Execution Patterns",
+      "level": "high",
+      "techniques": [
+        "T1106"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_susp_pattern.yml",
+      "match": "parent"
+    },
+    {
+      "id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "title": "Suspicious Outlook Child Process",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "b9d9cc83-380b-4ba3-8d8f-60c0e7e2930c",
+      "title": "Suspicious PowerShell Encoded Command Patterns",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_base64_encoded_cmd_patterns.yml",
+      "match": "image"
+    },
+    {
+      "id": "09576804-7a05-458e-a817-eb718ca91f54",
+      "title": "Suspicious PowerShell IEX Execution Patterns",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_iex_patterns.yml",
+      "match": "image"
+    },
+    {
+      "id": "36210e0d-5b19-485d-a087-c096088885f0",
+      "title": "Suspicious PowerShell Parameter Substring",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_susp_parameter_variation.yml",
+      "match": "image"
+    },
+    {
+      "id": "754ed792-634f-40ae-b3bc-e0448d33f695",
+      "title": "Suspicious PowerShell Parent Process",
+      "level": "high",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_susp_parent_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "8202070f-edeb-4d31-a010-a26c72ac5600",
+      "title": "Suspicious Process By Web Server Process",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml",
+      "match": "image"
+    },
+    {
+      "id": "5cc2cda8-f261-4d88-a2de-e9e193c86716",
+      "title": "Suspicious Processes Spawned by WinRM",
+      "level": "high",
+      "techniques": [
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrm_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "f9999590-1f94-4a34-a91e-951e47bedefd",
+      "title": "Suspicious Provlaunch.EXE Child Process",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_provlaunch_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "58f4ea09-0fc2-4520-ba18-b85c540b0eaf",
+      "title": "Suspicious Serv-U Process Pattern",
+      "level": "high",
+      "techniques": [
+        "T1555"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_servu_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "8823e85d-31d8-473e-b7f4-92da070f0fc6",
+      "title": "Suspicious ShellExec_RunDLL Call Via Ordinal",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_susp_shellexec_ordinal_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "90fb5e62-ca1f-4e22-b42e-cc521874c938",
+      "title": "Suspicious Shells Spawn by Java Utility Keytool",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c443012c-7928-43bf-ac20-7eda5efe61ad",
+      "title": "Suspicious Uninstall of Windows Defender Feature via PowerShell",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_uninstall_defender_feature.yml",
+      "match": "image"
+    },
+    {
+      "id": "a9e416a8-e613-4f8b-88b8-a7d1d1af2f61",
+      "title": "Suspicious Use of CSharp Interactive Console",
+      "level": "high",
+      "techniques": [
+        "T1127"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_csi_use_of_csharp_console.yml",
+      "match": "parent"
+    },
+    {
+      "id": "4bc90587-e6ca-4b41-be0b-ed4d04e4ed0c",
+      "title": "Suspicious Velociraptor Child Process",
+      "level": "high",
+      "techniques": [
+        "T1219"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_velociraptor_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "ce72ef99-22f1-43d4-8695-419dcb5d9330",
+      "title": "Suspicious Windows Service Tampering",
+      "level": "high",
+      "techniques": [
+        "T1489",
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_service_tamper.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "7c06ab9b-b1d2-4ba9-b06e-09491ded20d9",
+      "title": "System Restore Registry Modification via CommandLine",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_reg_system_restore_modification.yml",
+      "match": "image"
+    },
+    {
+      "id": "8f3ab69a-aa22-4943-aa58-e0a52fdf6818",
+      "title": "User Shell Folders Registry Modification via CommandLine",
+      "level": "high",
+      "techniques": [
+        "T1547.001",
+        "T1112"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_user_shell_folders_registry_modification.yml",
+      "match": "image"
+    },
+    {
+      "id": "5687f942-867b-4578-ade7-1e341c46e99a",
+      "title": "VMToolsd Suspicious Child Process",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vmware_vmtoolsd_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "22154f0e-5132-4a54-aa78-cc62f6def531",
+      "title": "Vulnerable Driver Blocklist Registry Tampering Via CommandLine",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vulnerable_driver_blocklist_registry_tampering.yml",
+      "match": "image"
+    },
+    {
+      "id": "bed2a484-9348-4143-8a8a-b801c979301c",
+      "title": "Webshell Detection With Command Line Keywords",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7dbbcac2-57a0-45ac-b306-ff30a8bd2981",
+      "title": "Windows AMSI Related Registry Tampering Via CommandLine",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_amsi_registry_tampering.yml",
+      "match": "image"
+    },
+    {
+      "id": "c17d47b7-dcd6-4109-87eb-d1817bd4cbc9",
+      "title": "Windows Credential Guard Registry Tampering Via CommandLine",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_credential_guard_registry_tampering.yml",
+      "match": "image"
+    },
+    {
+      "id": "b9e8c7d6-a5f4-4e3d-8b1a-9f0c8d7e6a5b",
+      "title": "Windows Defender Context Menu Removed",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_defender_remove_context_menu.yml",
+      "match": "image"
+    },
+    {
+      "id": "d7b81144-b866-48a4-9bcc-275dc69d870e",
+      "title": "Windows EventLog Autologger Session Registry Modification Via CommandLine",
+      "level": "high",
+      "techniques": [
+        "T1685.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_autologger_session_registry_modification.yml",
+      "match": "image"
+    },
+    {
+      "id": "3a6586ad-127a-4d3b-a677-1e6eacdf8fde",
+      "title": "Windows Shell/Scripting Processes Spawning Suspicious Programs",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.001",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml",
+      "match": "parent"
+    },
+    {
+      "id": "271de298-cc0e-4842-acd8-079a0a99ea65",
+      "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-55182/proc_creation_win_exploit_cve_2025_55182_susp_nodejs_server_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "b36d01a3-ddaf-4804-be18-18a6247adfcd",
+      "title": "Add Windows Capability Via PowerShell Cmdlet",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_add_windows_capability.yml",
+      "match": "image"
+    },
+    {
+      "id": "1e53dd56-8d83-4eb4-a43e-b790a05510aa",
+      "title": "Always Install Elevated MSI Spawned Cmd And Powershell",
+      "level": "medium",
+      "techniques": [
+        "T1548.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_elavated_msi_spawned_shell.yml",
+      "match": "image"
+    },
+    {
+      "id": "87e3c4e8-a6a8-4ad9-bb4f-46e7ff99a180",
+      "title": "Change PowerShell Policies to an Insecure Level",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_set_policies_to_unsecure_level.yml",
+      "match": "image"
+    },
+    {
+      "id": "435e10e4-992a-4281-96f3-38b11106adde",
+      "title": "Computer Discovery And Export Via Get-ADComputer Cmdlet",
+      "level": "medium",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_computer_discovery_get_adcomputer.yml",
+      "match": "image"
+    },
+    {
+      "id": "74403157-20f5-415d-89a7-c505779585cf",
+      "title": "ConvertTo-SecureString Cmdlet Usage Via CommandLine",
+      "level": "medium",
+      "techniques": [
+        "T1027",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_cmdline_convertto_securestring.yml",
+      "match": "image"
+    },
+    {
+      "id": "855bc8b5-2ae8-402e-a9ed-b889e6df1900",
+      "title": "Copy From Or To Admin Share Or Sysvol Folder",
+      "level": "medium",
+      "techniques": [
+        "T1039",
+        "T1048",
+        "T1021.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_copy_lateral_movement.yml",
+      "match": "image"
+    },
+    {
+      "id": "b6676963-0353-4f88-90f5-36c20d443c6a",
+      "title": "Cscript/Wscript Potentially Suspicious Child Process",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wscript_cscript_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "1ddaa9a4-eb0b-4398-a9fe-7b018f9e23db",
+      "title": "CVE-2023-22518 Exploitation Attempt - Suspicious Confluence Child Process (Windows)",
+      "level": "medium",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Exploits/CVE-2023-22518/proc_creation_win_exploit_cve_2023_22518_confluence_tomcat_child_proc.yml",
+      "match": "image"
+    },
+    {
+      "id": "61065c72-5d7d-44ef-bf41-6a36684b545f",
+      "title": "Elevated System Shell Spawned",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_elevated_system_shell.yml",
+      "match": "image"
+    },
+    {
+      "id": "178e615d-e666-498b-9630-9ed363038101",
+      "title": "Elevated System Shell Spawned From Uncommon Parent Location",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_elevated_system_shell_uncommon_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "59e938ff-0d6d-4dc3-b13f-36cc28734d4e",
+      "title": "Execute Code with Pester.bat",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1216"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_pester_1.yml",
+      "match": "image"
+    },
+    {
+      "id": "18988e1b-9087-4f8a-82fe-0414dce49878",
+      "title": "Execute Code with Pester.bat as Parent",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1216"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_pester.yml",
+      "match": "parent"
+    },
+    {
+      "id": "0649be4a-aeb0-45b0-b89e-7f1668f6d9c0",
+      "title": "IIS WebServer Log Deletion via CommandLine Utilities",
+      "level": "medium",
+      "techniques": [
+        "T1070"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_iis_logs_deletion.yml",
+      "match": "image"
+    },
+    {
+      "id": "ad856965-f44d-42a8-945e-bbf7bd03d05a",
+      "title": "Invocation Of Crypto-Classes From The \"Cryptography\" PowerShell Namespace",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1027.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_crypto_namespace.yml",
+      "match": "image"
+    },
+    {
+      "id": "8c0eca51-0f88-4db2-9183-fdfb10c703f9",
+      "title": "LSA PPL Protection Setting Modification via CommandLine",
+      "level": "medium",
+      "techniques": [
+        "T1689"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lsa_ppl_protection_setting_modification_via_cli.yml",
+      "match": "image"
+    },
+    {
+      "id": "95724fc1-a258-4674-97db-a30351981c5a",
+      "title": "Manual Execution of Script Inside of a Compressed File",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_script_exec_from_compressed_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "0ea8db81-2ff6-4525-9448-33bbe7effc13",
+      "title": "New DMSA Service Account Created in Specific OUs",
+      "level": "medium",
+      "techniques": [
+        "T1078.002",
+        "T1098"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_create_new_dmsasvc_account.yml",
+      "match": "image"
+    },
+    {
+      "id": "1b3b01c7-84e9-4072-86e5-fc285a41ff23",
+      "title": "Nslookup PowerShell Download Cradle - ProcessCreation",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_nslookup_poweshell_download.yml",
+      "match": "parent"
+    },
+    {
+      "id": "70bc5215-526f-4477-963c-a47a5c9ebd12",
+      "title": "Potential Active Directory Enumeration Using AD Module - ProcCreation",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_active_directory_module_dll_import.yml",
+      "match": "image"
+    },
+    {
+      "id": "5660d8db-6e25-411f-b92f-094420168a5d",
+      "title": "Potential CVE-2022-22954 Exploitation Attempt - VMware Workspace ONE Access Remote Code Execution",
+      "level": "medium",
+      "techniques": [
+        "T1059.006",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Exploits/CVE-2022-22954/proc_creation_win_exploit_cve_2022_22954_vmware_workspace_one_rce.yml",
+      "match": "image"
+    },
+    {
+      "id": "b3512211-c67e-4707-bedc-66efc7848863",
+      "title": "Potential PowerShell Downgrade Attack",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_downgrade_attack.yml",
+      "match": "image"
+    },
+    {
+      "id": "7f5d1c9a-3e83-48df-95a7-2b98aae6c13c",
+      "title": "Potential Provlaunch.EXE Binary Proxy Execution Abuse",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_provlaunch_potential_abuse.yml",
+      "match": "image"
+    },
+    {
+      "id": "1e0e1a81-e79b-44bc-935b-ddb9c8006b3d",
+      "title": "Potential Script Proxy Execution Via CL_Mutexverifiers.ps1",
+      "level": "medium",
+      "techniques": [
+        "T1216"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_cl_mutexverifiers.yml",
+      "match": "image"
+    },
+    {
+      "id": "692f0bec-83ba-4d04-af7e-e884a96059b6",
+      "title": "Potential WMI Lateral Movement WmiPrvSE Spawned PowerShell",
+      "level": "medium",
+      "techniques": [
+        "T1047",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmiprvse_spawns_powershell.yml",
+      "match": "image"
+    },
+    {
+      "id": "67bc0e75-c0a9-4cfc-8754-84a505b63c04",
+      "title": "Potentially Suspicious Child Process Of ClickOnce Application",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dfsvc_suspicious_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "9f546b25-5f12-4c8d-8532-5893dcb1e4b8",
+      "title": "Potentially Suspicious Child Process Of DiskShadow.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_diskshadow_child_process_susp.yml",
+      "match": "image"
+    },
+    {
+      "id": "ca5583e9-8f80-46ac-ab91-7f314d13b984",
+      "title": "Potentially Suspicious Child Process of KeyScrambler.exe",
+      "level": "medium",
+      "techniques": [
+        "T1203",
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_keyscrambler_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "5a3164f2-b373-4152-93cf-090b13c12d27",
+      "title": "Potentially Suspicious Child Process Of VsCode",
+      "level": "medium",
+      "techniques": [
+        "T1218",
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vscode_child_processes_anomalies.yml",
+      "match": "image"
+    },
+    {
+      "id": "146aace8-9bd6-42ba-be7a-0070d8027b76",
+      "title": "Potentially Suspicious Child Process Of WinRAR.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrar_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "c0b2768a-dd06-4671-8339-b16ca8d1f27f",
+      "title": "Potentially Suspicious NTFS Symlink Behavior Modification",
+      "level": "medium",
+      "techniques": [
+        "T1059",
+        "T1222.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_fsutil_symlinkevaluation.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4b6d2a7-d8a4-4f19-acbd-943c16d90647",
+      "title": "Potentially Suspicious PowerShell Child Processes",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_susp_child_processes.yml",
+      "match": "parent"
+    },
+    {
+      "id": "a6a39bdb-935c-4f0a-ab77-35f4bbf44d33",
+      "title": "Potentially Suspicious Powershell Script Execution From Temp Folder",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_script_exec_from_temp_folder.yml",
+      "match": "image"
+    },
+    {
+      "id": "1412aa78-a24c-4abd-83df-767dfb2c5bbe",
+      "title": "Potentially Suspicious WebDAV LNK Execution",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1204"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webdav_lnk_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "f91ed517-a6ba-471d-9910-b3b4a398c0f3",
+      "title": "Potentially Suspicious Windows App Activity",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_appx_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "092bc4b9-3d1d-43b4-a6b4-8c8acd83522f",
+      "title": "PowerShell Core DLL Loaded By Non PowerShell Process",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_system_management_automation_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "3b6ab547-8ec2-4991-b9d2-2b06702a48d7",
+      "title": "PowerShell Download Pattern",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_download_patterns.yml",
+      "match": "image"
+    },
+    {
+      "id": "222720a7-047f-4054-baa5-bab9be757db0",
+      "title": "PowerShell MSI Install via WindowsInstaller COM From Remote Location",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1218",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_comobject_msi_remote.yml",
+      "match": "image"
+    },
+    {
+      "id": "213d6a77-3d55-4ce8-ba74-fcfef741974e",
+      "title": "Private Keys Reconnaissance Via CommandLine Tools",
+      "level": "medium",
+      "techniques": [
+        "T1552.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_private_keys_recon.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b8f6d3a-9c5e-4f2a-a7d8-6b9c3e5f2a8d",
+      "title": "RDP Enable or Disable via Win32_TerminalServiceSetting WMI Class",
+      "level": "medium",
+      "techniques": [
+        "T1021.001",
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rdp_enable_or_disable_via_win32_terminalservicesetting_wmi_class.yml",
+      "match": "image"
+    },
+    {
+      "id": "dd3ee8cc-f751-41c9-ba53-5a32ed47e563",
+      "title": "Registry Modification of MS-settings Protocol Handler",
+      "level": "medium",
+      "techniques": [
+        "T1548.002",
+        "T1546.001",
+        "T1112"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_registry_modification_of_ms_setting_protocol_handler.yml",
+      "match": "image"
+    },
+    {
+      "id": "aa3168fb-d594-4f93-a92d-7a9ba675b766",
+      "title": "Remote Access Tool - Action1 Arbitrary Code Execution and Remote Sessions",
+      "level": "medium",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_remote_access_tools_action1_code_exec_and_remote_sessions.yml",
+      "match": "parent"
+    },
+    {
+      "id": "74a2b202-73e0-4693-9a3a-9d36146d0775",
+      "title": "Remote Access Tool - MeshAgent Command Execution via MeshCentral",
+      "level": "medium",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_meshagent_exec.yml",
+      "match": "image"
+    },
+    {
+      "id": "7b582f1a-b318-4c6a-bf4e-66fe49bf55a5",
+      "title": "Remote Access Tool - ScreenConnect Potential Suspicious Remote Command Execution",
+      "level": "medium",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_remote_execution_susp.yml",
+      "match": "image"
+    },
+    {
+      "id": "ab37a6ec-6068-432b-a64e-2c7bf95b1d22",
+      "title": "Scripting/CommandLine Process Spawned Regsvr32",
+      "level": "medium",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "62b20d44-1546-4e61-afce-8e175eb9473c",
+      "title": "Service StartupType Change Via PowerShell Set-Service",
+      "level": "medium",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_set_service_disabled.yml",
+      "match": "image"
+    },
+    {
+      "id": "b17ea6f7-6e90-447e-a799-e6c0a493d6ce",
+      "title": "Shadow Copies Creation Using Operating Systems Utilities",
+      "level": "medium",
+      "techniques": [
+        "T1003",
+        "T1003.002",
+        "T1003.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shadow_copies_creation.yml",
+      "match": "image"
+    },
+    {
+      "id": "dff1e1cc-d3fd-47c8-bfc2-aeb878a754c0",
+      "title": "Shell Process Spawned by Java.EXE",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process_2.yml",
+      "match": "image"
+    },
+    {
+      "id": "5b304bcb-ac33-49d0-87af-fa1b3ca94333",
+      "title": "Suspicious Child Process of SAP NetWeaver",
+      "level": "medium",
+      "techniques": [
+        "T1190",
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-31324/proc_creation_win_sap_netweaver_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "fff9d2b7-e11c-4a69-93d3-40ef66189767",
+      "title": "Suspicious Copy From or To System Directory",
+      "level": "medium",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_copy_system_dir.yml",
+      "match": "image"
+    },
+    {
+      "id": "459628e3-1b00-4e9b-9e5b-7da8961aea35",
+      "title": "Suspicious CrushFTP Child Process",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1059.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-31161/proc_creation_win_crushftp_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "f26eb764-fd89-464b-85e2-dc4a8e6e77b8",
+      "title": "Suspicious Electron Application Child Processes",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_electron_app_children.yml",
+      "match": "image"
+    },
+    {
+      "id": "fb843269-508c-4b76-8b8d-88679db22ce7",
+      "title": "Suspicious Execution of Powershell with Base64",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_encode.yml",
+      "match": "image"
+    },
+    {
+      "id": "1edff897-9146-48d2-9066-52e8d8f80a2f",
+      "title": "Suspicious Invoke-WebRequest Execution With DirectIP",
+      "level": "medium",
+      "techniques": [
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_invoke_webrequest_direct_ip.yml",
+      "match": "image"
+    },
+    {
+      "id": "4a2a2c3e-209f-4d01-b513-4155a540b469",
+      "title": "Suspicious MsiExec Embedding Parent",
+      "level": "medium",
+      "techniques": [
+        "T1218.007"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msiexec_embedding.yml",
+      "match": "image"
+    },
+    {
+      "id": "95eadcb2-92e4-4ed1-9031-92547773a6db",
+      "title": "Suspicious PowerShell Invocation From Script Engines",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_script_engine_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "ad1f4bb9-8dfb-4765-adb6-2a7cfb6c0f94",
+      "title": "Suspicious WSMAN Provider Image Loads",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_wsman_provider_image_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "bb780e0c-16cf-4383-8383-1e5471db6cf9",
+      "title": "Suspicious XOR Encoded PowerShell Command",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1140",
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_xor_commandline.yml",
+      "match": "image"
+    },
+    {
+      "id": "37651c2a-42cd-4a69-ae0d-22a4349aa04a",
+      "title": "Unsigned AppX Installation Attempt Using Add-AppxPackage",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_install_unsigned_appx_packages.yml",
+      "match": "image"
+    },
+    {
+      "id": "1114e048-b69c-4f41-bc20-657245ae6e3f",
+      "title": "User Discovery And Export Via Get-ADUser Cmdlet",
+      "level": "medium",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_user_discovery_get_aduser.yml",
+      "match": "image"
+    },
+    {
+      "id": "f4a623c2-4ef5-4c33-b811-0642f702c9f1",
+      "title": "Visual Studio Code Tunnel Shell Execution",
+      "level": "medium",
+      "techniques": [
+        "T1071.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vscode_tunnel_remote_shell_.yml",
+      "match": "image"
+    },
+    {
+      "id": "8de1cbe8-d6f5-496d-8237-5f44a721c7a0",
+      "title": "Whoami.EXE Execution Anomaly",
+      "level": "medium",
+      "techniques": [
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_parent_anomaly.yml",
+      "match": "parent"
+    },
+    {
+      "id": "12f6b752-042d-483e-bf9c-915a6d06ad75",
+      "title": "Windows Firewall Disabled via PowerShell",
+      "level": "medium",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_disable_firewall.yml",
+      "match": "image"
+    },
+    {
+      "id": "2267fe65-0681-42ad-9a6d-46553d3f3480",
+      "title": "WSL Child Process Anomaly",
+      "level": "medium",
+      "techniques": [
+        "T1218",
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wsl_child_processes_anomalies.yml",
+      "match": "image"
+    },
+    {
+      "id": "4ad74d01-f48c-42d0-b88c-b31efa4d2262",
+      "title": "Import New Module Via PowerShell CommandLine",
+      "level": "low",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_import_module.yml",
+      "match": "image"
+    },
+    {
+      "id": "51483085-0cba-46a8-837e-4416496d6971",
+      "title": "New Windows Firewall Rule Added Via New-NetFirewallRule Cmdlet",
+      "level": "low",
+      "techniques": [
+        "T1686.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_new_netfirewallrule_allow.yml",
+      "match": "image"
+    },
+    {
+      "id": "f4bbd493-b796-416e-bbf2-121235348529",
+      "title": "Non Interactive PowerShell Process Spawned",
+      "level": "low",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_non_interactive_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "cdf05894-89e7-4ead-b2b0-0a5f97a90f2f",
+      "title": "Potential Encoded PowerShell Patterns In CommandLine",
+      "level": "low",
+      "techniques": [
+        "T1027",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_encoding_patterns.yml",
+      "match": "image"
+    },
+    {
+      "id": "bafd07c6-3ea5-454a-b4be-058fbb073de7",
+      "title": "Potential Executable Run Itself As Sacrificial Process",
+      "level": "low",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_parent_execute_itself.yml",
+      "match": "image"
+    },
+    {
+      "id": "9eb271b9-24ae-4cd4-9465-19cfc1047f3e",
+      "title": "Potential Proxy Execution Via Explorer.EXE From Shell Process",
+      "level": "low",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_explorer_child_of_shell_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "c49c5062-0966-4170-9efd-9968c913a6cf",
+      "title": "Stop Windows Service Via PowerShell Stop-Service",
+      "level": "low",
+      "techniques": [
+        "T1489"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_stop_service.yml",
+      "match": "image"
+    },
+    {
+      "id": "0022869c-49f7-4ff2-ba03-85ac42ddac58",
+      "title": "System Information Discovery via Registry Queries",
+      "level": "low",
+      "techniques": [
+        "T1082"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_discovery_via_reg_queries.yml",
+      "match": "image"
+    },
+    {
+      "id": "d0d28567-4b9a-45e2-8bbc-fb1b66a1f7f6",
+      "title": "Unusually Long PowerShell CommandLine",
+      "level": "low",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_abnormal_commandline_size.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1027.010",
+      "name": "Obfuscated Files or Information: Command Obfuscation",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1047",
+      "name": "Windows Management Instrumentation",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0367",
+          "name": "Emotet"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1059.001",
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0080",
+          "name": "Cobalt Group"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        },
+        {
+          "id": "S9032",
+          "name": "MuddyViper"
+        },
+        {
+          "id": "S1012",
+          "name": "PowerLess"
+        },
+        {
+          "id": "S0270",
+          "name": "RogueRobin"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1078.001",
+      "name": "Valid Accounts: Default Accounts",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0059",
+          "name": "Magic Hound"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        },
+        {
+          "name": "Initial Access",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1106",
+      "name": "Native API",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0154",
+          "name": "Cobalt Strike"
+        },
+        {
+          "id": "S1085",
+          "name": "Sardonic"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1112",
+      "name": "Modify Registry",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0441",
+          "name": "PowerShower"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "T1564.003",
+      "name": "Hide Artifacts: Hidden Window",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1022",
+          "name": "ToddyCat"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0250",
+          "name": "Koadic"
+        },
+        {
+          "id": "S0441",
+          "name": "PowerShower"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1620",
+      "name": "Reflective Code Loading",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1685",
+      "name": "Disable or Modify Tools",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe` or its `SysWOW64` copy",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe</code> or its <code>SysWOW64</code> copy"
+    },
+    {
+      "signal": "A long base64 blob passed to `-EncodedCommand` / `-enc`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A long base64 blob passed to <code>-EncodedCommand</code> / <code>-enc</code>"
+    },
+    {
+      "signal": "Download-cradle code in the command line (`Net.WebClient`, `Invoke-WebRequest`, `DownloadString`, `iwr`, `iex`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Download-cradle code in the command line (<code>Net.WebClient</code>, <code>Invoke-WebRequest</code>, <code>DownloadString</code>, <code>iwr</code>, <code>iex</code>)"
+    },
+    {
+      "signal": "Parent is an Office application, `wscript.exe`, `cscript.exe`, or `mshta.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a>, <a class=\"proc-link\" href=\"/processes/cscript.exe\"><code>cscript.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/mshta.exe\"><code>mshta.exe</code></a>"
+    },
+    {
+      "signal": "Hidden non-interactive launch flags together (`-WindowStyle Hidden`, `-NonInteractive`, `-NoProfile`, `-ExecutionPolicy Bypass`)",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Hidden non-interactive launch flags together (<code>-WindowStyle Hidden</code>, <code>-NonInteractive</code>, <code>-NoProfile</code>, <code>-ExecutionPolicy Bypass</code>)"
+    },
+    {
+      "signal": "Outbound connections to hosts outside the environment shortly after launch",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound connections to hosts outside the environment shortly after launch"
+    },
+    {
+      "signal": "A `powershell.exe` child spawning `cmd.exe`, `rundll32.exe`, or other LOLBINs",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A <code>powershell.exe</code> child spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/rundll32.exe\"><code>rundll32.exe</code></a>, or other LOLBINs"
+    },
+    {
+      "signal": "Explicitly loading the legacy engine with `-Version 2`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Explicitly loading the legacy engine with <code>-Version 2</code>"
+    }
+  ],
+  "about_html": "<p>Windows PowerShell is built on the .NET Framework and works by loading and running cmdlets, small .NET classes, alongside scripts written in the PowerShell language. The genuine binary lives at <code>C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe</code>, with a 32-bit copy under <code>SysWOW64</code>. The <code>v1.0</code> in that path is historical and has never changed: the in-box version on modern Windows is actually PowerShell 5.1. It is separate from PowerShell 7, whose binary is named <code>pwsh.exe</code> and installs under <code>Program Files</code>.</p>\n<p>It can run interactively as a console or non-interactively from another program, taking a script file with <code>-File</code>, a literal command with <code>-Command</code>, or a base64-packed command with <code>-EncodedCommand</code>. Like any console program it is hosted by <a class=\"proc-link\" href=\"/processes/conhost.exe\"><code>conhost.exe</code></a>. Crucially, powershell.exe is only the default host. The PowerShell engine itself lives in <code>System.Management.Automation.dll</code>, and any .NET program can load that DLL to run PowerShell code without ever starting powershell.exe.</p>\n<p>Its parent is whatever started it: an interactive <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a> session, a logon or Group Policy script, the Task Scheduler, a software installer, or a management agent. A wide range of parents is therefore normal in administered environments, which is part of why the process is hard to baseline on behavior alone.</p>",
+  "security_notes_html": "<p>powershell.exe is the premier living-off-the-land tool on Windows (<a href=\"https://attack.mitre.org/techniques/T1059/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1059.001</a>). The signed in-box binary gives attackers a trusted way to run code entirely in memory (<a href=\"https://attack.mitre.org/techniques/T1620/\" target=\"_blank\" rel=\"noreferrer noopener\">T1620</a>), pull payloads down with a download cradle (<a href=\"https://attack.mitre.org/techniques/T1105/\" target=\"_blank\" rel=\"noreferrer noopener\">T1105</a>), and hide intent behind base64 or otherwise obfuscated commands (<a href=\"https://attack.mitre.org/techniques/T1027/010/\" target=\"_blank\" rel=\"noreferrer noopener\">T1027.010</a>). Because the binary itself is legitimate, path and signature checks pass. The evidence is in the command line, the parent, and the network and file activity that follow.</p>\n<p>PowerShell 5.1 added a deep logging surface: script block logging (event ID 4104), module logging, transcription, and live inspection of script content through AMSI. Attackers work to blind it (<a href=\"https://attack.mitre.org/techniques/T1685/\" target=\"_blank\" rel=\"noreferrer noopener\">T1685</a>) by patching AMSI in memory, disabling or clearing these logs, or downgrading to PowerShell 2.0, which predates all of them. Heavy use of <code>-Version 2</code> is a tell.</p>\n<p>Absence is not safety. Because the engine is just a DLL, attackers run PowerShell through their own .NET host, so-called unmanaged or fileless PowerShell, and powershell.exe never appears in the process tree. A quiet powershell.exe does not mean PowerShell was not used.</p>"
+}

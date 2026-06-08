@@ -1,0 +1,11 @@
+{
+  "name": "mfplat.dll",
+  "loaded_by": [
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    }
+  ]
+}

@@ -1,0 +1,698 @@
+{
+  "name": "net.exe",
+  "aliases": [
+    "net"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "net.exe is the Windows net command, a built-in tool for managing users, groups, shares, sessions, and services from the command line. Administrators use it everywhere for routine networking and account tasks. Attackers lean on it just as heavily, for reconnaissance to map accounts and groups, and for lateral movement and account creation.\n",
+  "about": "net.exe runs the family of `net` sub-commands: `net user` and `net group` for accounts, `net localgroup` for local groups, `net share` and `net view` for shares, `net use` to connect to a remote share, `net session`, `net accounts`, and `net start` / `net stop` for services. For many of these, net.exe does not do the work itself: it relaunches a second binary, `net1.exe`, which carries out the operation. A `net1.exe` running as a child of `net.exe` is therefore normal, not a sign of tampering. Both live in `C:\\Windows\\System32`.\n\nnet is run constantly and legitimately by administrators, logon scripts, and management tooling, so the process itself is unremarkable. What separates routine use from abuse is the specific sub-command, its arguments, and the parent. An interactive admin session running `net use` looks nothing like an Office document spawning `net group \"domain admins\" /domain`.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\net.exe` (or `net1.exe`)",
+      "severity": "high"
+    },
+    {
+      "signal": "Domain recon such as `net group \"domain admins\" /domain`, `net user /domain`, or `net accounts /domain`",
+      "severity": "medium"
+    },
+    {
+      "signal": "`net user /add` or `net localgroup administrators <user> /add`",
+      "severity": "high"
+    },
+    {
+      "signal": "`net use \\\\host\\C$` connecting to remote admin shares with credentials",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "A rapid sequence of `net` discovery commands in close succession",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "net.exe is the go-to reconnaissance tool right after access (T1087.002, T1069.002, T1135). `net user /domain` and `net group \"domain admins\" /domain` enumerate accounts and high-value groups, `net localgroup administrators` lists local admins, and `net view` and `net share` map reachable shares. A burst of these soon after a process starts, particularly under an unusual parent, is classic situational-awareness activity on a freshly accessed host.\n\nIt also drives lateral movement (T1021.002). `net use \\\\target\\C$ /user:domain\\admin` mounts a remote admin share with stolen credentials, the foothold for staging tools or copying data. Connections to hosts a user has no reason to touch deserve a closer look.\n\nFinally, net creates and empowers accounts (T1136.001). `net user /add` makes a new local account and `net localgroup administrators <user> /add` grants it admin, a simple and durable persistence and privilege move. Because every one of these is a legitimate administrative command, the sub-command and the context, not the binary, are what matter. Watch `net1.exe` as well: net.exe forwards most work to it, so calling it directly sidesteps any rule that only inspects net.exe.\n",
+  "mitre_attack": [
+    "T1087.002",
+    "T1069.002",
+    "T1135",
+    "T1021.002",
+    "T1136.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/net-commands-on-operating-systems",
+    "https://attack.mitre.org/techniques/T1087/002/",
+    "https://attack.mitre.org/techniques/T1021/002/",
+    "https://attack.mitre.org/techniques/T1136/001/"
+  ],
+  "sigma": [
+    {
+      "id": "e6eb5a96-9e6f-4a18-9cdd-642cfda21c8e",
+      "title": "Potential Dridex Activity",
+      "level": "critical",
+      "techniques": [
+        "T1055",
+        "T1135",
+        "T1033"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2019/Malware/Dridex/proc_creation_win_malware_dridex.yml",
+      "match": "image"
+    },
+    {
+      "id": "0e9e6c63-1350-48c4-9fa1-7ccb235edc68",
+      "title": "Rorschach Ransomware Execution Activity",
+      "level": "critical",
+      "techniques": [
+        "T1059.003",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Rorschach/proc_creation_win_malware_rorschach_ransomware_activity.yml",
+      "match": "image"
+    },
+    {
+      "id": "d55b793d-f847-4eea-b59a-5ab09908ac90",
+      "title": "Suspicious Child Process Of Veeam Dabatase",
+      "level": "critical",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_veaam_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "bf906d7b-7070-4642-8383-e404cf26eba5",
+      "title": "DarkGate - User Created Via Net.EXE",
+      "level": "high",
+      "techniques": [
+        "T1136.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/DarkGate/proc_creation_win_malware_darkgate_net_user_creation.yml",
+      "match": "image"
+    },
+    {
+      "id": "846b866e-2a57-46ee-8e16-85fa92759be7",
+      "title": "Exploited CVE-2020-10189 Zoho ManageEngine",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1059.001",
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2020/Exploits/CVE-2020-10189/proc_creation_win_exploit_cve_2020_10189.yml",
+      "match": "image"
+    },
+    {
+      "id": "b9f0e6f5-09b4-4358-bae4-08408705bd5c",
+      "title": "New User Created Via Net.EXE With Never Expire Option",
+      "level": "high",
+      "techniques": [
+        "T1136.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_user_add_never_expire.yml",
+      "match": "image"
+    },
+    {
+      "id": "c408acfe-2870-41df-8d2f-9f4daa4555ed",
+      "title": "Potential Exploitation of CVE-2024-37085 - Suspicious Creation Of ESX Admins Group",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2024/Exploits/CVE-2024-37085/proc_creation_win_exploit_cve_2024_37085_esxi_admins_group_creation.yml",
+      "match": "image"
+    },
+    {
+      "id": "744a188b-0415-4792-896f-11ddb0588dbc",
+      "title": "Potential Process Injection Via Msra.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msra_process_injection.yml",
+      "match": "image"
+    },
+    {
+      "id": "c37510b8-2107-4b78-aa32-72f251e7a844",
+      "title": "Potential Ryuk Ransomware Activity",
+      "level": "high",
+      "techniques": [
+        "T1547.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2019/Malware/Ryuk/proc_creation_win_malware_ryuk.yml",
+      "match": "image"
+    },
+    {
+      "id": "6f0947a4-1c5e-4e0d-8ac7-53159b8f23ca",
+      "title": "Potentially Suspicious Child Process Of Regsvr32",
+      "level": "high",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea2b7ea-792b-405f-95a1-b903ea06458f",
+      "title": "Suspicious Child Process Of Manage Engine ServiceDesk",
+      "level": "high",
+      "techniques": [
+        "T1102"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "396f6630-f3ac-44e3-bfc8-1b161bc00c4e",
+      "title": "Suspicious Child Process Of Wermgr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055",
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "5b768e71-86f2-4879-b448-81061cbae951",
+      "title": "Suspicious Manipulation Of Default Accounts Via Net.EXE",
+      "level": "high",
+      "techniques": [
+        "T1560.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_user_default_accounts_manipulation.yml",
+      "match": "image"
+    },
+    {
+      "id": "8202070f-edeb-4d31-a010-a26c72ac5600",
+      "title": "Suspicious Process By Web Server Process",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml",
+      "match": "image"
+    },
+    {
+      "id": "0d34ed8b-1c12-4ff2-828c-16fc860b766d",
+      "title": "Suspicious Processes Spawned by Java.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "ce72ef99-22f1-43d4-8695-419dcb5d9330",
+      "title": "Suspicious Windows Service Tampering",
+      "level": "high",
+      "techniques": [
+        "T1489",
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_service_tamper.yml",
+      "match": "image"
+    },
+    {
+      "id": "bed2a484-9348-4143-8a8a-b801c979301c",
+      "title": "Webshell Detection With Command Line Keywords",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7e6237fe-3ddb-438f-9381-9bf9de5af8d0",
+      "title": "Windows Internet Hosted WebDav Share Mount Via Net.EXE",
+      "level": "high",
+      "techniques": [
+        "T1021.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_use_mount_internet_share.yml",
+      "match": "image"
+    },
+    {
+      "id": "271de298-cc0e-4842-acd8-079a0a99ea65",
+      "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-55182/proc_creation_win_exploit_cve_2025_55182_susp_nodejs_server_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "37ae075c-271b-459b-8d7b-55ad5f993dd8",
+      "title": "File or Folder Permissions Modifications",
+      "level": "medium",
+      "techniques": [
+        "T1222.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_file_permission_modifications.yml",
+      "match": "image"
+    },
+    {
+      "id": "cd219ff3-fa99-45d4-8380-a7d15116c6dc",
+      "title": "New User Created Via Net.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1136.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_user_add.yml",
+      "match": "image"
+    },
+    {
+      "id": "d4498716-1d52-438f-8084-4a603157d131",
+      "title": "Password Provided In Command Line Of Net.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1021.002",
+        "T1078"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_use_password_plaintext.yml",
+      "match": "image"
+    },
+    {
+      "id": "36480ae1-a1cb-4eaa-a0d6-29801d7e9142",
+      "title": "Potential Defense Evasion Via Binary Rename",
+      "level": "medium",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_binary.yml",
+      "match": "image"
+    },
+    {
+      "id": "67bc0e75-c0a9-4cfc-8754-84a505b63c04",
+      "title": "Potentially Suspicious Child Process Of ClickOnce Application",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dfsvc_suspicious_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7b582f1a-b318-4c6a-bf4e-66fe49bf55a5",
+      "title": "Remote Access Tool - ScreenConnect Potential Suspicious Remote Command Execution",
+      "level": "medium",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_remote_execution_susp.yml",
+      "match": "image"
+    },
+    {
+      "id": "2238d337-42fb-4971-9a68-63570f2aede4",
+      "title": "SMB over QUIC Via Net.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1570"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_net_quic.yml",
+      "match": "image"
+    },
+    {
+      "id": "d95de845-b83c-4a9a-8a6a-4fc802ebf6c0",
+      "title": "Suspicious Group And Account Reconnaissance Activity Using Net.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1087.001",
+        "T1087.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_groups_and_accounts_recon.yml",
+      "match": "image"
+    },
+    {
+      "id": "3abd6094-7027-475f-9630-8ab9be7b9725",
+      "title": "Windows Admin Share Mount Via Net.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1021.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_use_mount_admin_share.yml",
+      "match": "image"
+    },
+    {
+      "id": "b243b280-65fe-48df-ba07-6ddea7646427",
+      "title": "Discovery of a System Time",
+      "level": "low",
+      "techniques": [
+        "T1124"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_time_discovery.yml",
+      "match": "image"
+    },
+    {
+      "id": "502b42de-4306-40b4-9596-6f590c81f073",
+      "title": "Local Accounts Discovery",
+      "level": "low",
+      "techniques": [
+        "T1033",
+        "T1087.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_local_system_owner_account_discovery.yml",
+      "match": "image"
+    },
+    {
+      "id": "183e7ea8-ac4b-4c23-9aec-b3dac4e401ac",
+      "title": "Net.EXE Execution",
+      "level": "low",
+      "techniques": [
+        "T1007",
+        "T1049",
+        "T1018",
+        "T1135",
+        "T1201",
+        "T1069.001",
+        "T1069.002",
+        "T1087.001",
+        "T1087.002",
+        "T1021.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_net_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "62510e69-616b-4078-b371-847da438cc03",
+      "title": "Share And Session Enumeration Using Net.EXE",
+      "level": "low",
+      "techniques": [
+        "T1018"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_view_share_and_sessions_enum.yml",
+      "match": "image"
+    },
+    {
+      "id": "2a072a96-a086-49fa-bcb5-15cc5a619093",
+      "title": "Start Windows Service Via Net.EXE",
+      "level": "low",
+      "techniques": [
+        "T1569.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_start_service.yml",
+      "match": "image"
+    },
+    {
+      "id": "88872991-7445-4a22-90b2-a3adadb0e827",
+      "title": "Stop Windows Service Via Net.EXE",
+      "level": "low",
+      "techniques": [
+        "T1489"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_stop_service.yml",
+      "match": "image"
+    },
+    {
+      "id": "1c67a717-32ba-409b-a45d-0fb704a73a81",
+      "title": "System Network Connections Discovery Via Net.EXE",
+      "level": "low",
+      "techniques": [
+        "T1049"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_use_network_connections_discovery.yml",
+      "match": "image"
+    },
+    {
+      "id": "cb7c4a03-2871-43c0-9bbb-18bbdb079896",
+      "title": "Unmount Share Via Net.EXE",
+      "level": "low",
+      "techniques": [
+        "T1070.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_share_unmount.yml",
+      "match": "image"
+    },
+    {
+      "id": "f117933c-980c-4f78-b384-e3d838111165",
+      "title": "Windows Share Mount Via Net.EXE",
+      "level": "low",
+      "techniques": [
+        "T1021.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_use_mount_share.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1021.002",
+      "name": "Remote Services: SMB/Windows Admin Shares",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0009",
+          "name": "Deep Panda"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Lateral Movement",
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "T1069.002",
+      "name": "Permission Groups Discovery: Domain Groups",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        },
+        {
+          "id": "S0516",
+          "name": "SoreFang"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1087.001",
+      "name": "Account Discovery: Local Account",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0649",
+          "name": "SMOKEDHAM"
+        },
+        {
+          "id": "S0516",
+          "name": "SoreFang"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1087.002",
+      "name": "Account Discovery: Domain Account",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0516",
+          "name": "SoreFang"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1135",
+      "name": "Network Share Discovery",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1136.001",
+      "name": "Create Account: Local Account",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "T1201",
+      "name": "Password Policy Discovery",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0049",
+          "name": "OilRig"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1489",
+      "name": "Service Stop",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0102",
+          "name": "Wizard Spider"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1058",
+          "name": "Prestige"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    },
+    {
+      "id": "T1531",
+      "name": "Account Access Removal",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1134",
+          "name": "DEADWOOD"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\net.exe` (or `net1.exe`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\net.exe</code> (or <a class=\"proc-link\" href=\"/processes/net1.exe\"><code>net1.exe</code></a>)"
+    },
+    {
+      "signal": "`net user /add` or `net localgroup administrators <user> /add`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>net user /add</code> or <code>net localgroup administrators &lt;user&gt; /add</code>"
+    },
+    {
+      "signal": "`net use \\\\host\\C$` connecting to remote admin shares with credentials",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>net use \\\\host\\C$</code> connecting to remote admin shares with credentials"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Domain recon such as `net group \"domain admins\" /domain`, `net user /domain`, or `net accounts /domain`",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Domain recon such as <code>net group \"domain admins\" /domain</code>, <code>net user /domain</code>, or <code>net accounts /domain</code>"
+    },
+    {
+      "signal": "A rapid sequence of `net` discovery commands in close succession",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A rapid sequence of <code>net</code> discovery commands in close succession"
+    }
+  ],
+  "about_html": "<p>net.exe runs the family of <code>net</code> sub-commands: <code>net user</code> and <code>net group</code> for accounts, <code>net localgroup</code> for local groups, <code>net share</code> and <code>net view</code> for shares, <code>net use</code> to connect to a remote share, <code>net session</code>, <code>net accounts</code>, and <code>net start</code> / <code>net stop</code> for services. For many of these, net.exe does not do the work itself: it relaunches a second binary, <a class=\"proc-link\" href=\"/processes/net1.exe\"><code>net1.exe</code></a>, which carries out the operation. A <a class=\"proc-link\" href=\"/processes/net1.exe\"><code>net1.exe</code></a> running as a child of <code>net.exe</code> is therefore normal, not a sign of tampering. Both live in <code>C:\\Windows\\System32</code>.</p>\n<p>net is run constantly and legitimately by administrators, logon scripts, and management tooling, so the process itself is unremarkable. What separates routine use from abuse is the specific sub-command, its arguments, and the parent. An interactive admin session running <code>net use</code> looks nothing like an Office document spawning <code>net group \"domain admins\" /domain</code>.</p>",
+  "security_notes_html": "<p>net.exe is the go-to reconnaissance tool right after access (<a href=\"https://attack.mitre.org/techniques/T1087/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1087.002</a>, <a href=\"https://attack.mitre.org/techniques/T1069/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1069.002</a>, <a href=\"https://attack.mitre.org/techniques/T1135/\" target=\"_blank\" rel=\"noreferrer noopener\">T1135</a>). <code>net user /domain</code> and <code>net group \"domain admins\" /domain</code> enumerate accounts and high-value groups, <code>net localgroup administrators</code> lists local admins, and <code>net view</code> and <code>net share</code> map reachable shares. A burst of these soon after a process starts, particularly under an unusual parent, is classic situational-awareness activity on a freshly accessed host.</p>\n<p>It also drives lateral movement (<a href=\"https://attack.mitre.org/techniques/T1021/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1021.002</a>). <code>net use \\\\target\\C$ /user:domain\\admin</code> mounts a remote admin share with stolen credentials, the foothold for staging tools or copying data. Connections to hosts a user has no reason to touch deserve a closer look.</p>\n<p>Finally, net creates and empowers accounts (<a href=\"https://attack.mitre.org/techniques/T1136/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1136.001</a>). <code>net user /add</code> makes a new local account and <code>net localgroup administrators &lt;user&gt; /add</code> grants it admin, a simple and durable persistence and privilege move. Because every one of these is a legitimate administrative command, the sub-command and the context, not the binary, are what matter. Watch <a class=\"proc-link\" href=\"/processes/net1.exe\"><code>net1.exe</code></a> as well: net.exe forwards most work to it, so calling it directly sidesteps any rule that only inspects net.exe.</p>"
+}

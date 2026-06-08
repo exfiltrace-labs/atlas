@@ -1,0 +1,242 @@
+{
+  "name": "makecab.exe",
+  "aliases": [
+    "makecab"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "makecab.exe compresses files into Windows cabinet (.cab) archives. It is used in packaging and servicing. Attackers use it to compress data for exfiltration, shrinking and bundling collected files before sending them out.\n",
+  "about": "makecab.exe packs one or more files into a `.cab` cabinet archive, optionally driven by a directive file for multi-file cabinets. It is the counterpart to `expand.exe`. The genuine binary lives at `C:\\Windows\\System32\\makecab.exe`.\n\nLegitimately, makecab is used by installers, servicing, and log-packaging routines. What it is compressing, and where the archive goes, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\makecab.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Archiving documents or collected data from user directories",
+      "severity": "medium"
+    },
+    {
+      "signal": "An archive written to a staging path that is then sent over the network",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is a script host or an unfamiliar process rather than an installer",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "makecab.exe is used to archive data before exfiltration (T1560.001). Compressing collected files into a `.cab` makes them smaller and bundles them into one object that is easier to move, a common step between staging data and sending it out. A makecab run over documents or gathered files, producing an archive in a staging directory that subsequently leaves the host, fits the collect-archive-exfiltrate pattern.\n\nBecause makecab has legitimate packaging uses, what it compresses and where the archive ends up are what matter. Bundling user data under a script host, then transferring the result, separates exfiltration prep from ordinary packaging.\n",
+  "mitre_attack": [
+    "T1560.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Makecab/",
+    "https://attack.mitre.org/techniques/T1560/001/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Makecab/",
+    "commands": [
+      {
+        "command": "makecab {PATH_ABSOLUTE:.exe} {PATH_ABSOLUTE}:autoruns.cab",
+        "usecase": "Hide data compressed into an alternate data stream",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "makecab {PATH_SMB:.exe} {PATH_ABSOLUTE}:file.cab",
+        "usecase": "Hide data compressed into an alternate data stream",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "makecab {PATH_SMB:.exe} {PATH_ABSOLUTE:.cab}",
+        "usecase": "Download file and compress into a cab file",
+        "mitreID": "T1105",
+        "category": "Download"
+      },
+      {
+        "command": "makecab /F {PATH:.ddf}",
+        "usecase": "Bypass command-line based detections",
+        "mitreID": "T1036",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "bbb2dedd-a0e3-46ab-ba6c-6c82ae7a9aa7",
+      "title": "HAFNIUM Exchange Exploitation Activity",
+      "level": "critical",
+      "techniques": [
+        "T1546",
+        "T1053"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/TA/HAFNIUM/proc_creation_win_apt_hafnium.yml",
+      "match": "image"
+    },
+    {
+      "id": "abe06362-a5b9-4371-8724-ebd00cd48a04",
+      "title": "Potential Exploitation of RCE Vulnerability CVE-2025-33053",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-33053/proc_creation_win_exploit_cve_2025_33053.yml",
+      "match": "image"
+    },
+    {
+      "id": "04fc4b22-91a6-495a-879d-0144fec5ec03",
+      "title": "Potential Exploitation of RCE Vulnerability CVE-2025-33053 - Image Load",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-33053/image_load_win_exploit_cve_2025_33053.yml",
+      "match": "image"
+    },
+    {
+      "id": "c2b478fc-09bf-40b2-8768-ab3ec8d61c9a",
+      "title": "New Self Extracting Package Created Via IExpress.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_iexpress_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036",
+      "name": "Masquerading",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1560.001",
+      "name": "Archive Collected Data: Archive via Utility",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0096",
+          "name": "APT41"
+        },
+        {
+          "id": "G0069",
+          "name": "MuddyWater"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Collection",
+          "order": 11
+        }
+      ]
+    },
+    {
+      "id": "T1564.004",
+      "name": "Hide Artifacts: NTFS File Attributes",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\makecab.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\makecab.exe</code>"
+    },
+    {
+      "signal": "An archive written to a staging path that is then sent over the network",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "An archive written to a staging path that is then sent over the network"
+    },
+    {
+      "signal": "Archiving documents or collected data from user directories",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Archiving documents or collected data from user directories"
+    },
+    {
+      "signal": "Parent is a script host or an unfamiliar process rather than an installer",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Parent is a script host or an unfamiliar process rather than an installer"
+    }
+  ],
+  "about_html": "<p>makecab.exe packs one or more files into a <code>.cab</code> cabinet archive, optionally driven by a directive file for multi-file cabinets. It is the counterpart to <a class=\"proc-link\" href=\"/processes/expand.exe\"><code>expand.exe</code></a>. The genuine binary lives at <code>C:\\Windows\\System32\\makecab.exe</code>.</p>\n<p>Legitimately, makecab is used by installers, servicing, and log-packaging routines. What it is compressing, and where the archive goes, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>makecab.exe is used to archive data before exfiltration (<a href=\"https://attack.mitre.org/techniques/T1560/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1560.001</a>). Compressing collected files into a <code>.cab</code> makes them smaller and bundles them into one object that is easier to move, a common step between staging data and sending it out. A makecab run over documents or gathered files, producing an archive in a staging directory that subsequently leaves the host, fits the collect-archive-exfiltrate pattern.</p>\n<p>Because makecab has legitimate packaging uses, what it compresses and where the archive ends up are what matter. Bundling user data under a script host, then transferring the result, separates exfiltration prep from ordinary packaging.</p>"
+}

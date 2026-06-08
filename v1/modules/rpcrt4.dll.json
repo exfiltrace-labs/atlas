@@ -1,0 +1,47 @@
+{
+  "name": "rpcrt4.dll",
+  "loaded_by": [
+    {
+      "name": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

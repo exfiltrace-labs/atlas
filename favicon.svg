@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="462 372 326 326" width="326" height="326"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><defs>
+  <linearGradient id="arc" gradientUnits="userSpaceOnUse" x1="417" y1="0" x2="836" y2="0">
+    <stop offset="0" stop-color="#3d6bf0"></stop>
+    <stop offset=".28" stop-color="#1d6ff7"></stop>
+    <stop offset=".5" stop-color="#2c86ff"></stop>
+    <stop offset=".68" stop-color="#39b3f4"></stop>
+    <stop offset=".9" stop-color="#72ddf1"></stop>
+    <stop offset="1" stop-color="#86c0cf"></stop>
+  </linearGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="9"></feGaussianBlur></filter>
+</defs><circle cx="625" cy="484" r="26" fill="#39b3f4" opacity="0.45" filter="url(#glow)"></circle><path d="M417 605 Q623 436 836 603" fill="none" stroke="url(#arc)" stroke-linecap="round" stroke-width="24"></path><circle cx="625" cy="484" r="16" fill="#39b3f4"></circle><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

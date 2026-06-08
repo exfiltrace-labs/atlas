@@ -1,0 +1,158 @@
+{
+  "name": "takeown.exe",
+  "aliases": [
+    "takeown"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "takeown.exe changes the owner of a file or folder to the current user (or the Administrators group). Administrators use it to regain access to files they have been locked out of. Attackers use it, usually together with icacls, to seize control of files they should not be able to modify.\n",
+  "about": "takeown.exe reassigns ownership of files and directories. Ownership is the one right an account can always change permissions on, so taking ownership is the first step to rewriting a file's access control. It is typically paired with `icacls.exe`: takeown to seize ownership, then icacls to grant the desired rights. It requires sufficient privilege and lives at `C:\\Windows\\System32\\takeown.exe`.\n\nLegitimately, takeown is used by administrators recovering access to files whose permissions exclude them. The target it seizes is what gives an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\takeown.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Taking ownership of system files, security tools, logs, or backups",
+      "severity": "high"
+    },
+    {
+      "signal": "Immediately followed by an `icacls` grant on the same target",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Recursive (`/r`) ownership changes over broad paths",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "takeown.exe is used to seize control of files (T1222.001). By taking ownership of a target, an attacker gains the ability to rewrite its permissions, which is why takeown and `icacls` so often appear back to back: takeown to claim the file, icacls to grant access. Applied to system binaries, security-tool files, logs, or backups, it is a setup move for tampering, destruction, or replacing a trusted file.\n\nBecause takeown is a legitimate recovery tool, the target and what follows are what matter. Ownership changes on defensive or system files, especially recursively or chained with icacls, point to an attacker clearing the way rather than an admin fixing access.\n",
+  "mitre_attack": [
+    "T1222.001"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1222/001/"
+  ],
+  "sigma": [
+    {
+      "id": "37ae075c-271b-459b-8d7b-55ad5f993dd8",
+      "title": "File or Folder Permissions Modifications",
+      "level": "medium",
+      "techniques": [
+        "T1222.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_file_permission_modifications.yml",
+      "match": "image"
+    },
+    {
+      "id": "554601fb-9b71-4bcc-abf4-21a611be4fde",
+      "title": "Suspicious Recursive Takeown",
+      "level": "medium",
+      "techniques": [
+        "T1222.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_takeown_recursive_own.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1222.001",
+      "name": "File and Directory Permissions Modification: Windows Permissions",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0612",
+          "name": "WastedLocker"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\takeown.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\takeown.exe</code>"
+    },
+    {
+      "signal": "Taking ownership of system files, security tools, logs, or backups",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Taking ownership of system files, security tools, logs, or backups"
+    },
+    {
+      "signal": "Immediately followed by an `icacls` grant on the same target",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Immediately followed by an <code>icacls</code> grant on the same target"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    },
+    {
+      "signal": "Recursive (`/r`) ownership changes over broad paths",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Recursive (<code>/r</code>) ownership changes over broad paths"
+    }
+  ],
+  "about_html": "<p>takeown.exe reassigns ownership of files and directories. Ownership is the one right an account can always change permissions on, so taking ownership is the first step to rewriting a file's access control. It is typically paired with <a class=\"proc-link\" href=\"/processes/icacls.exe\"><code>icacls.exe</code></a>: takeown to seize ownership, then icacls to grant the desired rights. It requires sufficient privilege and lives at <code>C:\\Windows\\System32\\takeown.exe</code>.</p>\n<p>Legitimately, takeown is used by administrators recovering access to files whose permissions exclude them. The target it seizes is what gives an instance meaning.</p>",
+  "security_notes_html": "<p>takeown.exe is used to seize control of files (<a href=\"https://attack.mitre.org/techniques/T1222/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1222.001</a>). By taking ownership of a target, an attacker gains the ability to rewrite its permissions, which is why takeown and <code>icacls</code> so often appear back to back: takeown to claim the file, icacls to grant access. Applied to system binaries, security-tool files, logs, or backups, it is a setup move for tampering, destruction, or replacing a trusted file.</p>\n<p>Because takeown is a legitimate recovery tool, the target and what follows are what matter. Ownership changes on defensive or system files, especially recursively or chained with icacls, point to an attacker clearing the way rather than an admin fixing access.</p>"
+}

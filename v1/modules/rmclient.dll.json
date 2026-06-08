@@ -1,0 +1,17 @@
+{
+  "name": "rmclient.dll",
+  "loaded_by": [
+    {
+      "name": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/fonts/cascadia-mono-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="Atlas"
+      href="./opensearch.xml"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('atlas-theme')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          document.documentElement.dataset.theme = t
+        } catch (e) {}
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-DIpTg2Ne.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CR-B-9i_.css">
+      <title>Atlas</title>
+    <meta name="description" content="A curated reference for Windows internals and process behavior, enriched with threat intelligence for the analysts who triage, hunt, and respond." />
+    <meta property="og:site_name" content="Atlas" />
+    <meta property="og:title" content="Atlas - Know normal, find evil" />
+    <meta property="og:description" content="A curated reference for Windows internals and process behavior, enriched with threat intelligence for the analysts who triage, hunt, and respond." />
+    <meta property="og:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

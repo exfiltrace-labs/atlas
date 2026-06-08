@@ -1,0 +1,11 @@
+{
+  "name": "audioses.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    }
+  ]
+}

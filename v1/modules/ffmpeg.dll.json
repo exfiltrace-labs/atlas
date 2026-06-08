@@ -1,0 +1,11 @@
+{
+  "name": "ffmpeg.dll",
+  "loaded_by": [
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": true
+    }
+  ]
+}

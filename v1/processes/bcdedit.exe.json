@@ -1,0 +1,186 @@
+{
+  "name": "bcdedit.exe",
+  "aliases": [
+    "bcdedit"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "bcdedit.exe is the Boot Configuration Data editor, the tool that views and changes how Windows boots. Administrators use it for boot troubleshooting and multi-boot setups. Ransomware uses it to switch off the recovery options that would let a victim restore the system.\n",
+  "about": "bcdedit.exe reads and modifies the Boot Configuration Data store, the database that tells the Windows boot loader what to start and how. It can add or change boot entries, set safe-boot and recovery options, and toggle features like driver-signature enforcement. It requires administrative rights and lives at `C:\\Windows\\System32\\bcdedit.exe`.\n\nLegitimately, bcdedit is run by administrators during boot repair, OS installs, or driver debugging, which is infrequent on most machines. The setting it changes is what gives an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\bcdedit.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/set {default} recoveryenabled no` (disabling automatic recovery)",
+      "severity": "high"
+    },
+    {
+      "signal": "`/set {default} bootstatuspolicy ignoreallfailures`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, an Office application, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run alongside `vssadmin`, `wbadmin`, or `wmic shadowcopy delete`",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "bcdedit.exe is a fixture of ransomware (T1490). Before or during encryption, operators run `bcdedit /set {default} recoveryenabled no` and `bcdedit /set {default} bootstatuspolicy ignoreallfailures` to stop Windows from booting into the recovery environment that could repair or roll back the machine. These commands almost never appear in normal use, and seeing them, especially next to shadow-copy deletion with `vssadmin` or `wbadmin`, is close to a confirmed recovery-inhibition step.\n\nBecause bcdedit is a legitimate administrative tool, the specific setting and the parent are what matter. A boot-repair session by an administrator looks nothing like a `recoveryenabled no` issued by a script host in the middle of mass file changes.\n",
+  "mitre_attack": [
+    "T1490"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/bcdedit",
+    "https://attack.mitre.org/techniques/T1490/"
+  ],
+  "sigma": [
+    {
+      "id": "0e9e6c63-1350-48c4-9fa1-7ccb235edc68",
+      "title": "Rorschach Ransomware Execution Activity",
+      "level": "critical",
+      "techniques": [
+        "T1059.003",
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Rorschach/proc_creation_win_malware_rorschach_ransomware_activity.yml",
+      "match": "image"
+    },
+    {
+      "id": "1444443e-6757-43e4-9ea4-c8fc705f79a2",
+      "title": "Boot Configuration Tampering Via Bcdedit.EXE",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bcdedit_boot_conf_tamper.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "c9fbe8e9-119d-40a6-9b59-dd58a5d84429",
+      "title": "Potential Ransomware or Unauthorized MBR Tampering Via Bcdedit.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1070",
+        "T1542.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bcdedit_susp_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1490",
+      "name": "Inhibit System Recovery",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\bcdedit.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\bcdedit.exe</code>"
+    },
+    {
+      "signal": "`/set {default} recoveryenabled no` (disabling automatic recovery)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/set {default} recoveryenabled no</code> (disabling automatic recovery)"
+    },
+    {
+      "signal": "`/set {default} bootstatuspolicy ignoreallfailures`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/set {default} bootstatuspolicy ignoreallfailures</code>"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, an Office application, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, an Office application, or an unfamiliar process"
+    },
+    {
+      "signal": "Run alongside `vssadmin`, `wbadmin`, or `wmic shadowcopy delete`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Run alongside <code>vssadmin</code>, <code>wbadmin</code>, or <code>wmic shadowcopy delete</code>"
+    }
+  ],
+  "about_html": "<p>bcdedit.exe reads and modifies the Boot Configuration Data store, the database that tells the Windows boot loader what to start and how. It can add or change boot entries, set safe-boot and recovery options, and toggle features like driver-signature enforcement. It requires administrative rights and lives at <code>C:\\Windows\\System32\\bcdedit.exe</code>.</p>\n<p>Legitimately, bcdedit is run by administrators during boot repair, OS installs, or driver debugging, which is infrequent on most machines. The setting it changes is what gives an instance meaning.</p>",
+  "security_notes_html": "<p>bcdedit.exe is a fixture of ransomware (<a href=\"https://attack.mitre.org/techniques/T1490/\" target=\"_blank\" rel=\"noreferrer noopener\">T1490</a>). Before or during encryption, operators run <code>bcdedit /set {default} recoveryenabled no</code> and <code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code> to stop Windows from booting into the recovery environment that could repair or roll back the machine. These commands almost never appear in normal use, and seeing them, especially next to shadow-copy deletion with <code>vssadmin</code> or <code>wbadmin</code>, is close to a confirmed recovery-inhibition step.</p>\n<p>Because bcdedit is a legitimate administrative tool, the specific setting and the parent are what matter. A boot-repair session by an administrator looks nothing like a <code>recoveryenabled no</code> issued by a script host in the middle of mass file changes.</p>"
+}

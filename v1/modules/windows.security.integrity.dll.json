@@ -1,0 +1,11 @@
+{
+  "name": "windows.security.integrity.dll",
+  "loaded_by": [
+    {
+      "name": "sihost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

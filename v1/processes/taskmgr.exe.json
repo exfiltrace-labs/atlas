@@ -1,0 +1,215 @@
+{
+  "name": "taskmgr.exe",
+  "aliases": [
+    "taskmgr"
+  ],
+  "category": "System",
+  "tags": [
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "taskmgr.exe is Windows Task Manager, the built-in tool for viewing and managing running processes, performance, services, and startup items. Users and administrators open it constantly. Its relevance to security is that it can create a full memory dump of a process, which makes it a quiet way to dump credentials out of lsass.exe.\n",
+  "about": "taskmgr.exe is the interactive process and performance monitor. It lists running processes and their resource use, can end or restart them, and shows services, startup programs, and logged-on users. It runs as the user who launched it, on demand, from `C:\\Windows\\System32\\Taskmgr.exe`. It is normally started by the user through Ctrl+Shift+Esc or the taskbar.\n\nLegitimately, taskmgr is opened interactively to check on the system, so an instance parented to `explorer.exe` and running as the logged-on user is exactly what is expected. How it was started, and what an account does with it, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\Taskmgr.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` with no interactive user",
+      "severity": "high"
+    },
+    {
+      "signal": "Launched by a script host or a service process rather than `explorer.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "A process dump file (such as `lsass.dmp`) written around the time it runs",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "taskmgr.exe is a built-in way to dump process memory (T1003.001). An operator with administrative rights can right-click `lsass.exe` in Task Manager and choose \"Create dump file,\" producing a full memory dump that is then parsed offline to extract credentials, no third-party tool required. A `lsass`-named dump appearing in a temp or profile directory, especially around an interactive taskmgr session, is the pattern to catch.\n\nOtherwise taskmgr is mostly a baseline. Its trusted name makes it an occasional impersonation target (T1036.005), so a taskmgr.exe outside `System32`, running as SYSTEM with no user present, or launched by a script host rather than the shell, is the deviation worth examining.\n",
+  "mitre_attack": [
+    "T1003.001",
+    "T1036.005"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1003/001/",
+    "https://attack.mitre.org/techniques/T1036/005/"
+  ],
+  "sigma": [
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "9fff585c-c33e-4a86-b3cd-39312079a65f",
+      "title": "Taskmgr as LOCAL_SYSTEM",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_taskmgr_localsystem.yml",
+      "match": "image"
+    },
+    {
+      "id": "3d7679bd-0c00-440c-97b0-3f204273e6c7",
+      "title": "New Process Created Via Taskmgr.EXE",
+      "level": "low",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_taskmgr_susp_child_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1003.001",
+      "name": "OS Credential Dumping: LSASS Memory",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S9019",
+          "name": "PureCrypter"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1134.004",
+      "name": "Access Token Manipulation: Parent PID Spoofing",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0356",
+          "name": "KONNI"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\Taskmgr.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\Taskmgr.exe</code>"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` with no interactive user",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> with no interactive user"
+    },
+    {
+      "signal": "Launched by a script host or a service process rather than `explorer.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Launched by a script host or a service process rather than <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a>"
+    },
+    {
+      "signal": "A process dump file (such as `lsass.dmp`) written around the time it runs",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A process dump file (such as <code>lsass.dmp</code>) written around the time it runs"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    }
+  ],
+  "about_html": "<p>taskmgr.exe is the interactive process and performance monitor. It lists running processes and their resource use, can end or restart them, and shows services, startup programs, and logged-on users. It runs as the user who launched it, on demand, from <code>C:\\Windows\\System32\\Taskmgr.exe</code>. It is normally started by the user through Ctrl+Shift+Esc or the taskbar.</p>\n<p>Legitimately, taskmgr is opened interactively to check on the system, so an instance parented to <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a> and running as the logged-on user is exactly what is expected. How it was started, and what an account does with it, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>taskmgr.exe is a built-in way to dump process memory (<a href=\"https://attack.mitre.org/techniques/T1003/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1003.001</a>). An operator with administrative rights can right-click <a class=\"proc-link\" href=\"/processes/lsass.exe\"><code>lsass.exe</code></a> in Task Manager and choose \"Create dump file,\" producing a full memory dump that is then parsed offline to extract credentials, no third-party tool required. A <code>lsass</code>-named dump appearing in a temp or profile directory, especially around an interactive taskmgr session, is the pattern to catch.</p>\n<p>Otherwise taskmgr is mostly a baseline. Its trusted name makes it an occasional impersonation target (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), so a taskmgr.exe outside <code>System32</code>, running as SYSTEM with no user present, or launched by a script host rather than the shell, is the deviation worth examining.</p>"
+}

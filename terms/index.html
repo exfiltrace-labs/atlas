@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/fonts/cascadia-mono-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="Atlas"
+      href="./opensearch.xml"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('atlas-theme')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          document.documentElement.dataset.theme = t
+        } catch (e) {}
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-DIpTg2Ne.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CR-B-9i_.css">
+      <title>Terms - Atlas</title>
+    <meta name="description" content="Terms of use for the Atlas website and dataset." />
+    <link rel="canonical" href="https://atlas.exfiltrace.com/terms" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Terms - Atlas" />
+    <meta property="og:description" content="Terms of use for the Atlas website and dataset." />
+    <meta property="og:url" content="https://atlas.exfiltrace.com/terms" />
+    <meta property="og:site_name" content="Atlas" />
+    <meta property="og:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+  </head>
+  <body>
+    <div id="root"><div class="app"><header class="topnav"><button type="button" class="menu-toggle" aria-label="Menu" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><nav class="nav-left"><a href="/">Home</a><a href="/explore">Explore</a><a href="/docs">Docs</a><a href="/faq">FAQ</a></nav><div class="topnav-search"><div class="navsearch"><form><input type="search" placeholder="Process name, SHA-256, or MD5" aria-label="Search processes" value=""/></form></div></div><div class="nav-right"><button type="button" class="search-toggle" aria-label="Search" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button><button type="button" class="theme-toggle" title="Switch to dark theme" aria-label="Toggle dark mode"></button></div></header><main><div class="page page-prose"><h1>Terms of Use</h1><p>Last updated: June 7, 2026</p><h2>The service</h2><p>Atlas is a free reference for Windows process behavior, operated by<!-- --> <a href="https://exfiltrace.com" target="_blank" rel="noreferrer">Exfiltrace</a>. These terms cover the website at atlas.exfiltrace.com and the JSON data it serves. By using either, you agree to them.</p><h2>License</h2><p>Atlas is open source. The application code and the curated dataset are licensed under the<!-- --> <a href="https://github.com/exfiltrace-labs/atlas/blob/main/LICENSE" target="_blank" rel="noreferrer">Apache License 2.0</a>. You may use, copy, modify, and redistribute both, including commercially, provided you follow the license terms: keep the license text and attribution notices intact.</p><h2>Third-party content</h2><p>Profiles cite their sources. Quoted or derived material from those sources remains under the source&#x27;s own terms:</p><ul><li>Command examples derived from the<!-- --> <a href="https://lolbas-project.github.io" target="_blank" rel="noreferrer">LOLBAS project</a> <!-- -->are covered by its GPL-3.0 license.</li><li>Technique references link to<!-- --> <a href="https://attack.mitre.org" target="_blank" rel="noreferrer">MITRE ATT&amp;CK</a>, a registered trademark of The MITRE Corporation.</li><li>Microsoft product names and documentation belong to Microsoft.</li></ul><p>Atlas is not affiliated with or endorsed by any of these projects or companies.</p><h2>The API</h2><p>The JSON endpoints under <code>/v1</code> are static files, free to use without registration or an API key. They are served best effort, with no uptime guarantee or SLA.</p><h2>Accuracy</h2><p>Atlas is reference material, provided as is, without warranty of any kind. Records are curated by people and can be incomplete or out of date. Verify against your own telemetry and the cited sources before relying on a record.</p><h2>Liability</h2><p>To the maximum extent permitted by law, Exfiltrace and the project contributors are not liable for any damages arising from use of the site or its data. For the licensed code and dataset, the Apache-2.0 disclaimer of warranty and limitation of liability apply.</p><h2>Names and logos</h2><p>The Atlas and Exfiltrace names and logos identify the project and its operator. The Apache-2.0 license does not grant trademark rights to them.</p><h2>Changes</h2><p>These terms may change. The current version is always on this page, and its full history is in the project&#x27;s<!-- --> <a href="https://github.com/exfiltrace-labs/atlas/commits/main" target="_blank" rel="noreferrer">public Git history</a>.</p><h2>Contact</h2><p>Questions or problems:<!-- --> <a href="https://github.com/exfiltrace-labs/atlas/issues" target="_blank" rel="noreferrer">open an issue</a>.</p></div></main><footer class="footer"><span>Atlas by<!-- --> <a href="https://exfiltrace.com" target="_blank" rel="noreferrer">Exfiltrace</a></span><span class="footer-sep">·</span><span>© 2026</span><span class="footer-sep">·</span><a href="/docs">Docs</a><span class="footer-sep">·</span><a href="/privacy">Privacy</a><span class="footer-sep">·</span><a href="/terms">Terms</a></footer></div></div>
+  </body>
+</html>

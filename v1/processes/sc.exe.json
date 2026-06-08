@@ -1,0 +1,461 @@
+{
+  "name": "sc.exe",
+  "aliases": [
+    "sc"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "sc.exe is the Service Control utility, the command-line front end to the Windows Service Control Manager. Administrators use it to create, configure, start, stop, query, and delete services and drivers, locally or on remote machines. The same commands let attackers install services for persistence, run code as SYSTEM, load drivers, and stop defenses.\n",
+  "about": "sc.exe talks to the Service Control Manager, the `services.exe` process, to manage services and device drivers. Common verbs are `sc create`, `sc config`, `sc start`, `sc stop`, `sc query`, `sc qc`, and `sc delete`. It can also target another machine by prefixing a UNC server name, as in `sc \\\\host create ...`, which manages services remotely. The genuine binary lives at `C:\\Windows\\System32\\sc.exe`. Its create syntax is distinctive: a space must follow each `=`, for example `binpath= C:\\path start= auto`.\n\nLegitimately, sc is run by administrators and software installers to set up and control services, usually in a clear maintenance or install context. The service it touches and how it configures that service, both on the command line, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\sc.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`sc create` with `binpath=` pointing to a user-writable or unusual path",
+      "severity": "high"
+    },
+    {
+      "signal": "`sc create` with `type= kernel` (loading a driver)",
+      "severity": "high"
+    },
+    {
+      "signal": "A remote target, such as `sc \\\\host create` or `sc \\\\host start`",
+      "severity": "high"
+    },
+    {
+      "signal": "`sc stop` or `sc config start= disabled` against a security or backup service",
+      "severity": "high"
+    },
+    {
+      "signal": "`binpath=` invoking `cmd.exe` or `powershell.exe` directly",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "sc.exe is a standard way to plant service persistence and escalate (T1543.003). `sc create <name> binpath= \"C:\\...\" start= auto` registers a service the SCM launches as SYSTEM, automatically at boot. The same verb loads drivers: `sc create type= kernel` is the route used to load malicious or vulnerable signed drivers (bring-your-own-vulnerable-driver). A service binary in a user-writable directory, or one that is `cmd.exe` or `powershell.exe`, points to abuse rather than a real install.\n\nPointed at a remote host, sc becomes lateral movement (T1569.002). `sc \\\\target create` followed by `sc \\\\target start` creates and runs a service on another machine using current or supplied credentials, the same mechanism PsExec automates. Remote service creation immediately followed by a start is a recognizable cross-network execution pattern.\n\nsc is also used to shut defenses down (T1489). `sc stop` and `sc config start= disabled` turn off or permanently disable security tools, and in ransomware, database and backup services before encryption. sc aimed at an AV, EDR, or backup service is high-signal. Because every one of these is a legitimate administrative action, the service name, the binpath, the target host, and the parent are what separate administration from abuse.\n",
+  "mitre_attack": [
+    "T1543.003",
+    "T1569.002",
+    "T1489"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sc-create",
+    "https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sc/",
+    "https://attack.mitre.org/techniques/T1543/003/",
+    "https://attack.mitre.org/techniques/T1569/002/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Sc/",
+    "commands": [
+      {
+        "command": "sc create evilservice binPath=\"\\\"c:\\\\ADS\\\\file.txt:cmd.exe\\\" /c echo works > \\\"c:\\ADS\\works.txt\\\"\" DisplayName= \"evilservice\" start= auto\\ & sc start evilservice",
+        "usecase": "Execute binary file hidden inside an alternate data stream",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "sc config {ExistingServiceName} binPath=\"\\\"c:\\\\ADS\\\\file.txt:cmd.exe\\\" /c echo works > \\\"c:\\ADS\\works.txt\\\"\" & sc start {ExistingServiceName}",
+        "usecase": "Execute binary file hidden inside an alternate data stream",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "6c8fbee5-dee8-49bc-851d-c3142d02aa47",
+      "title": "Allow Service Access Using Security Descriptor Tampering Via Sc.EXE",
+      "level": "high",
+      "techniques": [
+        "T1543.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_sdset_allow_service_changes.yml",
+      "match": "image"
+    },
+    {
+      "id": "99cf1e02-00fb-4c0d-8375-563f978dfd37",
+      "title": "Deny Service Access Using Security Descriptor Tampering Via Sc.EXE",
+      "level": "high",
+      "techniques": [
+        "T1543.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_sdset_deny_service_access.yml",
+      "match": "image"
+    },
+    {
+      "id": "a7ee1722-c3c5-aeff-3212-c777e4733217",
+      "title": "Disable Windows Defender AV Security Monitoring",
+      "level": "high",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_disable_defender_av_security_monitoring.yml",
+      "match": "image"
+    },
+    {
+      "id": "d937b75f-a665-4480-88a5-2f20e9f9b22a",
+      "title": "Possible Privilege Escalation via Weak Service Permissions",
+      "level": "high",
+      "techniques": [
+        "T1574.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_change_sevice_image_path_by_non_admin.yml",
+      "match": "image"
+    },
+    {
+      "id": "a537cfc3-4297-4789-92b5-345bfd845ad0",
+      "title": "Service DACL Abuse To Hide Services Via Sc.EXE",
+      "level": "high",
+      "techniques": [
+        "T1574.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_sdset_hide_sevices.yml",
+      "match": "image"
+    },
+    {
+      "id": "17a1be64-8d88-40bf-b5ff-a4f7a50ebcc8",
+      "title": "Suspicious New Service Creation",
+      "level": "high",
+      "techniques": [
+        "T1543.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_service_creation.yml",
+      "match": "image"
+    },
+    {
+      "id": "8202070f-edeb-4d31-a010-a26c72ac5600",
+      "title": "Suspicious Process By Web Server Process",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml",
+      "match": "image"
+    },
+    {
+      "id": "138d3531-8793-4f50-a2cd-f291b2863d78",
+      "title": "Suspicious Service Path Modification",
+      "level": "high",
+      "techniques": [
+        "T1543.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_service_path_modification.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "ce72ef99-22f1-43d4-8695-419dcb5d9330",
+      "title": "Suspicious Windows Service Tampering",
+      "level": "high",
+      "techniques": [
+        "T1489",
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_service_tamper.yml",
+      "match": "image"
+    },
+    {
+      "id": "271de298-cc0e-4842-acd8-079a0a99ea65",
+      "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-55182/proc_creation_win_exploit_cve_2025_55182_susp_nodejs_server_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "0e277796-5f23-4e49-a490-483131d4f6e1",
+      "title": "Dbghelp/Dbgcore DLL Loaded By Uncommon/Suspicious Process",
+      "level": "medium",
+      "techniques": [
+        "T1003.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_dbghelp_dbgcore_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "431a1fdb-4799-4f3b-91c3-a683b003fc49",
+      "title": "New Kernel Driver Via SC.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1543.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_new_kernel_driver.yml",
+      "match": "image"
+    },
+    {
+      "id": "aa2efee7-34dd-446e-8a37-40790a66efd7",
+      "title": "Recon Information for Export with Command Prompt",
+      "level": "medium",
+      "techniques": [
+        "T1119"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_recon.yml",
+      "match": "image"
+    },
+    {
+      "id": "98c5aeef-32d5-492f-b174-64a691896d25",
+      "title": "Service Security Descriptor Tampering Via Sc.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1574.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_sdset_modification.yml",
+      "match": "image"
+    },
+    {
+      "id": "85c312b7-f44d-4a51-a024-d671c40b49fc",
+      "title": "Service StartupType Change Via Sc.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_disable_service.yml",
+      "match": "image"
+    },
+    {
+      "id": "e83e8899-c9b2-483b-b355-5decc942b959",
+      "title": "Interesting Service Enumeration Via Sc.EXE",
+      "level": "low",
+      "techniques": [
+        "T1003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_query_interesting_services.yml",
+      "match": "image"
+    },
+    {
+      "id": "85ff530b-261d-48c6-a441-facaa2e81e48",
+      "title": "New Service Creation Using Sc.EXE",
+      "level": "low",
+      "techniques": [
+        "T1543.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_create_service.yml",
+      "match": "image"
+    },
+    {
+      "id": "57712d7a-679c-4a41-a913-87e7175ae429",
+      "title": "SC.EXE Query Execution",
+      "level": "low",
+      "techniques": [
+        "T1007"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_sc_query.yml",
+      "match": "image"
+    },
+    {
+      "id": "81bcb81b-5b1f-474b-b373-52c871aaa7b1",
+      "title": "Stop Windows Service Via Sc.EXE",
+      "level": "low",
+      "techniques": [
+        "T1489"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_stop_service.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1134.002",
+      "name": "Access Token Manipulation: Create Process with Token",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0689",
+          "name": "WhisperGate"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1489",
+      "name": "Service Stop",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    },
+    {
+      "id": "T1543.003",
+      "name": "Create or Modify System Process: Windows Service",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1044",
+          "name": "FunnyDream"
+        },
+        {
+          "id": "S0481",
+          "name": "Ragnar Locker"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1564.004",
+      "name": "Hide Artifacts: NTFS File Attributes",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1569.002",
+      "name": "System Services: Service Execution",
+      "curated": true,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0481",
+          "name": "Ragnar Locker"
+        },
+        {
+          "id": "S0689",
+          "name": "WhisperGate"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\sc.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\sc.exe</code>"
+    },
+    {
+      "signal": "`sc create` with `binpath=` pointing to a user-writable or unusual path",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>sc create</code> with <code>binpath=</code> pointing to a user-writable or unusual path"
+    },
+    {
+      "signal": "`sc create` with `type= kernel` (loading a driver)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>sc create</code> with <code>type= kernel</code> (loading a driver)"
+    },
+    {
+      "signal": "A remote target, such as `sc \\\\host create` or `sc \\\\host start`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A remote target, such as <code>sc \\\\host create</code> or <code>sc \\\\host start</code>"
+    },
+    {
+      "signal": "`sc stop` or `sc config start= disabled` against a security or backup service",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>sc stop</code> or <code>sc config start= disabled</code> against a security or backup service"
+    },
+    {
+      "signal": "`binpath=` invoking `cmd.exe` or `powershell.exe` directly",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>binpath=</code> invoking <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a> directly"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, or an unfamiliar process"
+    }
+  ],
+  "about_html": "<p>sc.exe talks to the Service Control Manager, the <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a> process, to manage services and device drivers. Common verbs are <code>sc create</code>, <code>sc config</code>, <code>sc start</code>, <code>sc stop</code>, <code>sc query</code>, <code>sc qc</code>, and <code>sc delete</code>. It can also target another machine by prefixing a UNC server name, as in <code>sc \\\\host create ...</code>, which manages services remotely. The genuine binary lives at <code>C:\\Windows\\System32\\sc.exe</code>. Its create syntax is distinctive: a space must follow each <code>=</code>, for example <code>binpath= C:\\path start= auto</code>.</p>\n<p>Legitimately, sc is run by administrators and software installers to set up and control services, usually in a clear maintenance or install context. The service it touches and how it configures that service, both on the command line, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>sc.exe is a standard way to plant service persistence and escalate (<a href=\"https://attack.mitre.org/techniques/T1543/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1543.003</a>). <code>sc create &lt;name&gt; binpath= \"C:\\...\" start= auto</code> registers a service the SCM launches as SYSTEM, automatically at boot. The same verb loads drivers: <code>sc create type= kernel</code> is the route used to load malicious or vulnerable signed drivers (bring-your-own-vulnerable-driver). A service binary in a user-writable directory, or one that is <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, points to abuse rather than a real install.</p>\n<p>Pointed at a remote host, sc becomes lateral movement (<a href=\"https://attack.mitre.org/techniques/T1569/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1569.002</a>). <code>sc \\\\target create</code> followed by <code>sc \\\\target start</code> creates and runs a service on another machine using current or supplied credentials, the same mechanism PsExec automates. Remote service creation immediately followed by a start is a recognizable cross-network execution pattern.</p>\n<p>sc is also used to shut defenses down (<a href=\"https://attack.mitre.org/techniques/T1489/\" target=\"_blank\" rel=\"noreferrer noopener\">T1489</a>). <code>sc stop</code> and <code>sc config start= disabled</code> turn off or permanently disable security tools, and in ransomware, database and backup services before encryption. sc aimed at an AV, EDR, or backup service is high-signal. Because every one of these is a legitimate administrative action, the service name, the binpath, the target host, and the parent are what separate administration from abuse.</p>"
+}

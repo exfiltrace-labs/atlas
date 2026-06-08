@@ -1,0 +1,196 @@
+{
+  "name": "cipher.exe",
+  "aliases": [
+    "cipher"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "cipher.exe manages Encrypting File System (EFS) encryption on NTFS files and folders, and can also overwrite the free space on a drive. Admins use it to encrypt data and to scrub deleted files. Attackers use the wipe feature for anti-forensics and destruction.\n",
+  "about": "cipher.exe displays and changes the EFS encryption state of files and directories. Its other notable mode is `/w`, which overwrites the free space on a volume, the space where deleted files still physically live, so that previously deleted data cannot be recovered. The genuine binary lives at `C:\\Windows\\System32\\cipher.exe`.\n\nLegitimately, cipher is used to manage EFS or to securely clear deleted data before disposing of a drive. The mode it runs in is what gives an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\cipher.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/w` wiping free space outside a planned decommission",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or an unfamiliar process",
+      "severity": "high"
+    },
+    {
+      "signal": "Run alongside log clearing, shadow-copy deletion, or USN journal deletion",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "cipher.exe is used for destruction and anti-forensics (T1485). `cipher /w` overwrites the free space on a volume, which permanently destroys the remnants of deleted files and defeats file-recovery and carving. Run outside a genuine drive-decommission, especially alongside other cleanup like event-log clearing or shadow deletion, it points to an attacker erasing evidence or destroying data.\n\nBecause cipher is a legitimate EFS and disk-hygiene tool, the mode and the context are what matter. A `/w` wipe issued by a script host in the middle of an incident is very different from an administrator clearing a disk before retiring it.\n",
+  "mitre_attack": [
+    "T1485"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Cipher/",
+    "https://attack.mitre.org/techniques/T1485/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Cipher/",
+    "commands": [
+      {
+        "command": "cipher /w:{PATH_ABSOLUTE:folder}",
+        "usecase": "Can be used to forensically erase a file.",
+        "mitreID": "T1485",
+        "category": "Tamper"
+      },
+      {
+        "command": "cipher.exe /e {PATH_ABSOLUTE}",
+        "usecase": "Can be used to impair defences by e.g. encrypting a critical EDR solution file.",
+        "mitreID": "T1562",
+        "category": "Tamper"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b046706-5789-4673-b111-66f25fe99534",
+      "title": "Deleted Data Overwritten Via Cipher.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1485"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cipher_overwrite_deleted_data.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1485",
+      "name": "Data Destruction",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    },
+    {
+      "id": "T1561.001",
+      "name": "Disk Wipe: Disk Content Wipe",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1205",
+          "name": "cipher.exe"
+        },
+        {
+          "id": "S0576",
+          "name": "MegaCortex"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    },
+    {
+      "id": "T1685",
+      "name": "Disable or Modify Tools",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\cipher.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\cipher.exe</code>"
+    },
+    {
+      "signal": "`/w` wiping free space outside a planned decommission",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/w</code> wiping free space outside a planned decommission"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or an unfamiliar process",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or an unfamiliar process"
+    },
+    {
+      "signal": "Run alongside log clearing, shadow-copy deletion, or USN journal deletion",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Run alongside log clearing, shadow-copy deletion, or USN journal deletion"
+    }
+  ],
+  "about_html": "<p>cipher.exe displays and changes the EFS encryption state of files and directories. Its other notable mode is <code>/w</code>, which overwrites the free space on a volume, the space where deleted files still physically live, so that previously deleted data cannot be recovered. The genuine binary lives at <code>C:\\Windows\\System32\\cipher.exe</code>.</p>\n<p>Legitimately, cipher is used to manage EFS or to securely clear deleted data before disposing of a drive. The mode it runs in is what gives an instance meaning.</p>",
+  "security_notes_html": "<p>cipher.exe is used for destruction and anti-forensics (<a href=\"https://attack.mitre.org/techniques/T1485/\" target=\"_blank\" rel=\"noreferrer noopener\">T1485</a>). <code>cipher /w</code> overwrites the free space on a volume, which permanently destroys the remnants of deleted files and defeats file-recovery and carving. Run outside a genuine drive-decommission, especially alongside other cleanup like event-log clearing or shadow deletion, it points to an attacker erasing evidence or destroying data.</p>\n<p>Because cipher is a legitimate EFS and disk-hygiene tool, the mode and the context are what matter. A <code>/w</code> wipe issued by a script host in the middle of an incident is very different from an administrator clearing a disk before retiring it.</p>"
+}

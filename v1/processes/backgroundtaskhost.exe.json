@@ -1,0 +1,426 @@
+{
+  "name": "backgroundtaskhost.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "backgroundTaskHost.exe",
+    "internal_name": "Background Task Host",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "49.30 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 4,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "apphelp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "aad.core.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "threadpoolwinrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wincorlib.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "userdeviceregistration.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.applicationdata.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vaultcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.security.authentication.web.core.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.ui.xaml.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptowinrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "biwinrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "AppContainer",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\BackgroundTaskHost.exe\" -ServerName:BackgroundTaskHost.WebAccountProvider",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "dc601e2593053a84a6989de251407aa7",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "b7d2c17e0038945aa4b72ae7a89e54d29b04ccc0feb62df5c9b7b67de43c2530",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "8bde0ae40012bd639fc60e494cc32356",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "422ae532bc5ee74b13ee0be406a62c706b81f7ec",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "4fc0deee-0057-4998-ab31-d24e46e0aba4",
+      "title": "Potential System DLL Sideloading From Non System Locations",
+      "level": "high",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_from_non_system_location.yml",
+      "match": "image"
+    },
+    {
+      "id": "50f852e6-af22-4c78-9ede-42ef36aa3453",
+      "title": "Potential Azure Browser SSO Abuse",
+      "level": "low",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_azure_microsoft_account_token_provider_dll_load.yml",
+      "match": "image"
+    }
+  ]
+}

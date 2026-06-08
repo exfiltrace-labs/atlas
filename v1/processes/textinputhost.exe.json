@@ -1,0 +1,149 @@
+{
+  "name": "textinputhost.exe",
+  "aliases": [
+    "textinputhost"
+  ],
+  "category": "System",
+  "tags": [
+    "shell",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "TextInputHost.exe renders the modern Windows input surfaces, the touch keyboard, emoji and symbol panel, handwriting, and related input UI. It runs per user as part of the desktop and is a routine background process, especially on touch-capable devices.\n",
+  "about": "TextInputHost.exe is a packaged (UWP) system app that presents the touch keyboard and the other modern text-input panels. It runs as the logged-on user, launched as part of the session, from a Windows `SystemApps` package folder rather than `System32`, and is signed by Microsoft. It works alongside `ctfmon.exe`, which handles the underlying text services.\n\nLegitimately, TextInputHost is present on interactive desktops and suspended when not needed. It draws input UI rather than launching programs, so it does not normally start other processes or reach the network.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path outside the Windows `SystemApps` package location",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logged-on user",
+      "severity": "high"
+    },
+    {
+      "signal": "Spawning command shells or making outbound network connections",
+      "severity": "high"
+    },
+    {
+      "signal": "More instances than interactive users",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "TextInputHost.exe is a baseline process. Its fixed identity, the logged-on user's account, a packaged Microsoft signature, no children, and no network, makes deviations easy to spot. The realistic abuse is impersonation (T1036.005), where malware borrows the name from a path outside the genuine packaged location.\n\nAs a persistent per-user process it could also be injected into (T1055). A TextInputHost that loads unusual modules, reaches the network, or spawns programs is acting outside its UI role.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1055"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1055/"
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path outside the Windows `SystemApps` package location",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path outside the Windows <code>SystemApps</code> package location"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than the logged-on user",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> rather than the logged-on user"
+    },
+    {
+      "signal": "Spawning command shells or making outbound network connections",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Spawning command shells or making outbound network connections"
+    },
+    {
+      "signal": "More instances than interactive users",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "More instances than interactive users"
+    }
+  ],
+  "about_html": "<p>TextInputHost.exe is a packaged (UWP) system app that presents the touch keyboard and the other modern text-input panels. It runs as the logged-on user, launched as part of the session, from a Windows <code>SystemApps</code> package folder rather than <code>System32</code>, and is signed by Microsoft. It works alongside <a class=\"proc-link\" href=\"/processes/ctfmon.exe\"><code>ctfmon.exe</code></a>, which handles the underlying text services.</p>\n<p>Legitimately, TextInputHost is present on interactive desktops and suspended when not needed. It draws input UI rather than launching programs, so it does not normally start other processes or reach the network.</p>",
+  "security_notes_html": "<p>TextInputHost.exe is a baseline process. Its fixed identity, the logged-on user's account, a packaged Microsoft signature, no children, and no network, makes deviations easy to spot. The realistic abuse is impersonation (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), where malware borrows the name from a path outside the genuine packaged location.</p>\n<p>As a persistent per-user process it could also be injected into (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>). A TextInputHost that loads unusual modules, reaches the network, or spawns programs is acting outside its UI role.</p>"
+}

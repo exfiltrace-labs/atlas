@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/fonts/cascadia-mono-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="Atlas"
+      href="./opensearch.xml"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('atlas-theme')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          document.documentElement.dataset.theme = t
+        } catch (e) {}
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-DIpTg2Ne.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CR-B-9i_.css">
+      <title>Atlas - Know normal, find evil</title>
+    <meta name="description" content="Look up how a Windows process normally behaves: expected paths, launch ancestry, and known abuse patterns for security triage." />
+    <link rel="canonical" href="https://atlas.exfiltrace.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Atlas - Know normal, find evil" />
+    <meta property="og:description" content="Look up how a Windows process normally behaves: expected paths, launch ancestry, and known abuse patterns for security triage." />
+    <meta property="og:url" content="https://atlas.exfiltrace.com" />
+    <meta property="og:site_name" content="Atlas" />
+    <meta property="og:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+  </head>
+  <body>
+    <div id="root"><link rel="preload" as="image" href="/brand/atlas-logo-light.svg"/><link rel="preload" as="image" href="/brand/atlas-logo.svg"/><div class="app"><header class="topnav"><button type="button" class="menu-toggle" aria-label="Menu" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><nav class="nav-left"><a href="/" aria-current="page">Home</a><a href="/explore">Explore</a><a href="/docs">Docs</a><a href="/faq">FAQ</a></nav><div class="topnav-search"><div class="navsearch"><form><input type="search" placeholder="Process name, SHA-256, or MD5" aria-label="Search processes" value=""/></form></div></div><div class="nav-right"><button type="button" class="search-toggle" aria-label="Search" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button><button type="button" class="theme-toggle" title="Switch to dark theme" aria-label="Toggle dark mode"></button></div></header><main><div class="hero"><h1 class="hero-logo"><img class="logo-on-light" src="/brand/atlas-logo-light.svg" alt="Atlas" width="544" height="239"/><img class="logo-on-dark" src="/brand/atlas-logo.svg" alt="Atlas" width="544" height="239"/></h1><p class="hero-headline">Know what <span class="accent">normal</span> looks like.</p><p class="hero-tagline">A curated reference for Windows internals and process behavior, enriched with threat intelligence for the analysts who triage, hunt, and respond.</p><div class="hero-search"><form><input autofocus="" type="search" placeholder="Process name, SHA-256, MD5, or drop a file" aria-label="Search processes" value=""/></form><button type="button" class="upload-btn" title="Look up a file by hash" aria-label="Look up a file by hash"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg></button></div><button type="button" class="hero-search-btn">Search</button><p class="hero-hint">Try <a href="/processes/svchost.exe">svchost.exe</a> or<!-- --> <a href="/explore">browse all processes</a></p><input type="file" hidden=""/></div></main><footer class="footer"><span>Atlas by<!-- --> <a href="https://exfiltrace.com" target="_blank" rel="noreferrer">Exfiltrace</a></span><span class="footer-sep">·</span><span>© 2026</span><span class="footer-sep">·</span><a href="/docs">Docs</a><span class="footer-sep">·</span><a href="/privacy">Privacy</a><span class="footer-sep">·</span><a href="/terms">Terms</a></footer></div></div>
+  </body>
+</html>

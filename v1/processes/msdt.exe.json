@@ -1,0 +1,278 @@
+{
+  "name": "msdt.exe",
+  "aliases": [
+    "msdt"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "msdt.exe is the Microsoft Support Diagnostic Tool, which runs the troubleshooting wizards Windows uses to diagnose problems. It is mostly invisible to users. It became infamous as the engine behind the \"Follina\" vulnerability, where a document could make msdt run attacker commands.\n",
+  "about": "msdt.exe runs diagnostic troubleshooting packs, guided wizards that collect information and apply fixes for a category of problem. It is normally launched by Windows or the Get Help app, not by users directly. The genuine binary lives at `C:\\Windows\\System32\\msdt.exe`. It accepts a troubleshooting pack and parameters, and historically could be reached through the `ms-msdt:` URL protocol, the path that made it exploitable from documents.\n\nLegitimately, msdt appears when someone runs a Windows troubleshooter. Its parent and how it was invoked, interactively versus from a document or URL handler, are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Parent is an Office application or another document viewer",
+      "severity": "high"
+    },
+    {
+      "signal": "Invoked through the `ms-msdt:` URL protocol",
+      "severity": "high"
+    },
+    {
+      "signal": "Command line containing `IT_BrowseForFile`, a path, or script-like content",
+      "severity": "high"
+    },
+    {
+      "signal": "msdt spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections from msdt",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "msdt.exe is best known for \"Follina\" (CVE-2022-30190), an exploitation path where a Word document referenced the `ms-msdt:` protocol and passed parameters that caused msdt to execute attacker PowerShell with no macro and no user prompt (T1203). The pattern to recognize is an Office application as msdt's parent, or msdt spawning a shell.\n\nMore generally msdt is a system-binary proxy (T1218): its diagnostic parameters can be abused to run external commands through a signed Microsoft process, a form of indirect command execution (T1202). Because msdt legitimately runs only when someone uses a troubleshooter, a msdt launched by a document, through a URL handler, or spawning a command shell is the case to pull apart.\n",
+  "mitre_attack": [
+    "T1218",
+    "T1203",
+    "T1202"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Msdt/",
+    "https://attack.mitre.org/techniques/T1218/",
+    "https://attack.mitre.org/techniques/T1203/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Msdt/",
+    "commands": [
+      {
+        "command": "msdt.exe -path C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml -af {PATH_ABSOLUTE:.xml} /skip TRUE",
+        "usecase": "Execute code",
+        "mitreID": "T1218",
+        "category": "Execute"
+      },
+      {
+        "command": "msdt.exe -path C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml -af {PATH_ABSOLUTE:.xml} /skip TRUE",
+        "usecase": "Execute code bypass Application whitelisting",
+        "mitreID": "T1218",
+        "category": "AWL Bypass"
+      },
+      {
+        "command": "msdt.exe /id PCWDiagnostic /skip force /param \"IT_LaunchMethod=ContextMenu IT_BrowseForFile=/../../$(calc).exe\"",
+        "usecase": "Execute code bypass Application allowlisting",
+        "mitreID": "T1202",
+        "category": "AWL Bypass"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "ec8c4047-fad9-416a-8c81-0f479353d7f6",
+      "title": "Diagnostic Library Sdiageng.DLL Loaded By Msdt.EXE",
+      "level": "high",
+      "techniques": [
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_sdiageng_load_by_msdt.yml",
+      "match": "image"
+    },
+    {
+      "id": "9c8c7000-3065-44a8-a555-79bcba5d9955",
+      "title": "MSDT Execution Via Answer File",
+      "level": "high",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_answer_file_exec.yml",
+      "match": "image"
+    },
+    {
+      "id": "258fc8ce-8352-443a-9120-8a11e4857fa5",
+      "title": "Potential Arbitrary Command Execution Using Msdt.EXE",
+      "level": "high",
+      "techniques": [
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_arbitrary_command_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "bd1c6866-65fc-44b2-be51-5588fcff82b9",
+      "title": "Renamed Msdt.EXE Execution",
+      "level": "high",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_msdt.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7a74da6b-ea76-47db-92cc-874ad90df734",
+      "title": "Suspicious MSDT Parent Process",
+      "level": "high",
+      "techniques": [
+        "T1036",
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_susp_parent.yml",
+      "match": "image"
+    },
+    {
+      "id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "title": "Suspicious Outlook Child Process",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "dc4576d4-7467-424f-9eee-fd2b02855fe0",
+      "title": "Suspicious Cabinet File Execution Via Msdt.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_susp_cab_options.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1202",
+      "name": "Indirect Command Execution",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1203",
+      "name": "Exploitation for Client Execution",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1218",
+      "name": "System Binary Proxy Execution",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Parent is an Office application or another document viewer",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application or another document viewer"
+    },
+    {
+      "signal": "Invoked through the `ms-msdt:` URL protocol",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Invoked through the <code>ms-msdt:</code> URL protocol"
+    },
+    {
+      "signal": "Command line containing `IT_BrowseForFile`, a path, or script-like content",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Command line containing <code>IT_BrowseForFile</code>, a path, or script-like content"
+    },
+    {
+      "signal": "msdt spawning `cmd.exe`, `powershell.exe`, or other LOLBINs",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "msdt spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or other LOLBINs"
+    },
+    {
+      "signal": "Outbound network connections from msdt",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from msdt"
+    }
+  ],
+  "about_html": "<p>msdt.exe runs diagnostic troubleshooting packs, guided wizards that collect information and apply fixes for a category of problem. It is normally launched by Windows or the Get Help app, not by users directly. The genuine binary lives at <code>C:\\Windows\\System32\\msdt.exe</code>. It accepts a troubleshooting pack and parameters, and historically could be reached through the <code>ms-msdt:</code> URL protocol, the path that made it exploitable from documents.</p>\n<p>Legitimately, msdt appears when someone runs a Windows troubleshooter. Its parent and how it was invoked, interactively versus from a document or URL handler, are what give an instance meaning.</p>",
+  "security_notes_html": "<p>msdt.exe is best known for \"Follina\" (CVE-2022-30190), an exploitation path where a Word document referenced the <code>ms-msdt:</code> protocol and passed parameters that caused msdt to execute attacker PowerShell with no macro and no user prompt (<a href=\"https://attack.mitre.org/techniques/T1203/\" target=\"_blank\" rel=\"noreferrer noopener\">T1203</a>). The pattern to recognize is an Office application as msdt's parent, or msdt spawning a shell.</p>\n<p>More generally msdt is a system-binary proxy (<a href=\"https://attack.mitre.org/techniques/T1218/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218</a>): its diagnostic parameters can be abused to run external commands through a signed Microsoft process, a form of indirect command execution (<a href=\"https://attack.mitre.org/techniques/T1202/\" target=\"_blank\" rel=\"noreferrer noopener\">T1202</a>). Because msdt legitimately runs only when someone uses a troubleshooter, a msdt launched by a document, through a URL handler, or spawning a command shell is the case to pull apart.</p>"
+}

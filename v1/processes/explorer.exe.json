@@ -1,0 +1,1020 @@
+{
+  "name": "explorer.exe",
+  "aliases": [
+    "explorer"
+  ],
+  "category": "System",
+  "tags": [
+    "shell",
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "explorer.exe is Windows Explorer, the graphical shell behind the interactive desktop: the taskbar, the Start menu, the system tray, and the file browser windows. One instance runs per signed-in user and acts as the parent for most of the programs a person launches by clicking.\n",
+  "about": "At its core, explorer.exe gives users access to their files, but it fills two roles. It's the file browser opened through Windows Explorer, and it's the user interface that draws the desktop, the Start menu, the taskbar, the Control Panel, and the system tray. It's also what launches programs through file-extension associations and shortcut files, so double-clicking an icon or opening something from the Start menu runs through explorer.exe.\n\nIt's the default shell named in the registry value `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\Shell`, though Windows can run with a different interface there instead, such as `cmd.exe` or `powershell.exe`. It's started at logon by `userinit.exe`, which then exits, so a normal explorer.exe has no living parent in the process tree, the same orphaned look as the boot processes. It runs as the signed-in user, not SYSTEM, and the legitimate copy lives directly in `C:\\Windows` rather than `System32`. Multiple instances under one user are normal, for example when the folder option \"Launch folder windows in a separate process\" is enabled.\n\nBecause it launches whatever the user clicks, explorer.exe is the parent of a wide and legitimately unpredictable set of processes: browsers, Office apps, installers, command prompts a user opened by hand. That makes its child list the noisiest of any core process, so the useful signal is which child appeared, not that there are children at all. Unlike the boot processes, explorer.exe is not critical: it can be ended and restarted, and Windows will usually relaunch it on its own, which is why \"restart Explorer\" is a common fix for a frozen desktop.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "EXPLORER.EXE.MUI",
+    "internal_name": "explorer",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8117 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "3249.80 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 15,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "windows.staterepositorybroker.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "capauthz.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "calculatorapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\explorer.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than a normal user",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "A persistent visible parent (`userinit.exe` starts it and exits)",
+      "severity": "medium"
+    },
+    {
+      "signal": "An instance running with no interactive user signed in",
+      "severity": "medium"
+    },
+    {
+      "signal": "Spawning command shells or script hosts (`cmd.exe`, `powershell.exe`, `wscript.exe`) right after a document or email is opened",
+      "severity": "medium"
+    },
+    {
+      "signal": "Outbound network connections from explorer.exe itself",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Because nearly every user process descends from it, explorer.exe is a useful name for malware to hide behind (T1036.005). A legitimate copy always resides in `C:\\Windows` (not `System32`) and carries a valid Microsoft digital signature. Be suspicious of a copy running from `System32`, a user profile, or a temp folder, and of near-miss spellings such as `explorer32.exe` or `expIorer.exe`.\n\nexplorer.exe is a favored target for process injection because it's always running, runs as the user, and makes outbound activity from it look ordinary (T1055). Code injected into it inherits the user's context and blends into normal desktop behavior, so unusual loaded modules or network connections coming from explorer.exe are worth examining.\n\nIts place in the process tree also makes it a key pivot for spotting phishing-borne execution. explorer.exe launching a command shell or script host moments after the user opened a document or archive is a classic user-execution chain (T1204.002), since the malicious file rode in through something the user double-clicked.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1055",
+    "T1204.002"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://attack.mitre.org/techniques/T1055/",
+    "https://attack.mitre.org/techniques/T1204/002/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Explorer/",
+    "commands": [
+      {
+        "command": "explorer.exe /root,\"{PATH_ABSOLUTE:.exe}\"",
+        "usecase": "Performs execution of specified file with explorer parent process breaking the process tree, can be used for defense evasion.",
+        "mitreID": "T1202",
+        "category": "Execute"
+      },
+      {
+        "command": "explorer.exe {PATH_ABSOLUTE:.exe}",
+        "usecase": "Performs execution of specified file with explorer parent process breaking the process tree, can be used for defense evasion.",
+        "mitreID": "T1202",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "1f32d820-1d5c-43fe-8fe2-feef0c952eb7",
+      "title": "Emotet Loader Execution Via .LNK File",
+      "level": "high",
+      "techniques": [
+        "T1059.006"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2022/Malware/Emotet/proc_creation_win_malware_emotet_loader_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "534f2ef7-e8a2-4433-816d-c91bccde289b",
+      "title": "Explorer NOUACCHECK Flag",
+      "level": "high",
+      "techniques": [
+        "T1548.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_explorer_nouaccheck.yml",
+      "match": "image"
+    },
+    {
+      "id": "c3d76afc-93df-461e-8e67-9b2bad3f2ac4",
+      "title": "File Explorer Folder Opened Using Explorer Folder Shortcut Via Shell",
+      "level": "high",
+      "techniques": [
+        "T1135"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_explorer_folder_shortcut_via_shell_binary.yml",
+      "match": "image"
+    },
+    {
+      "id": "10c14723-61c7-4c75-92ca-9af245723ad2",
+      "title": "HackTool - Potential Impacket Lateral Movement Activity",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_impacket_lateral_movement.yml",
+      "match": "parent"
+    },
+    {
+      "id": "abe06362-a5b9-4371-8724-ebd00cd48a04",
+      "title": "Potential Exploitation of RCE Vulnerability CVE-2025-33053",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-33053/proc_creation_win_exploit_cve_2025_33053.yml",
+      "match": "image"
+    },
+    {
+      "id": "04fc4b22-91a6-495a-879d-0144fec5ec03",
+      "title": "Potential Exploitation of RCE Vulnerability CVE-2025-33053 - Image Load",
+      "level": "high",
+      "techniques": [
+        "T1218",
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2025/Exploits/CVE-2025-33053/image_load_win_exploit_cve_2025_33053.yml",
+      "match": "image"
+    },
+    {
+      "id": "6f0947a4-1c5e-4e0d-8ac7-53159b8f23ca",
+      "title": "Potentially Suspicious Child Process Of Regsvr32",
+      "level": "high",
+      "techniques": [
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_child_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "f99abdf0-6283-4e71-bd2b-b5c048a94743",
+      "title": "Potentially Suspicious Office Document Executed From Trusted Location",
+      "level": "high",
+      "techniques": [
+        "T1202"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_exec_from_trusted_locations.yml",
+      "match": "parent"
+    },
+    {
+      "id": "caa06de8-fdef-4c91-826a-7f9e163eef4b",
+      "title": "RunDLL32 Spawning Explorer",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_spawn_explorer.yml",
+      "match": "image"
+    },
+    {
+      "id": "d487ed4a-fd24-436d-a0b2-f4e95f7b2635",
+      "title": "Suspicious ClickFix/FileFix Execution Pattern",
+      "level": "high",
+      "techniques": [
+        "T1204.001",
+        "T1204.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "84b14121-9d14-416e-800b-f3b829c5a14d",
+      "title": "Suspicious CustomShellHost Execution",
+      "level": "high",
+      "techniques": [
+        "T1216"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_customshellhost_susp_exec.yml",
+      "match": "image"
+    },
+    {
+      "id": "3ae9974a-eb09-4044-8e70-8980a50c12c8",
+      "title": "Suspicious Explorer Process with Whitespace Padding - ClickFix/FileFix",
+      "level": "high",
+      "techniques": [
+        "T1204.004",
+        "T1027.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_whitespace_padding.yml",
+      "match": "parent"
+    },
+    {
+      "id": "dd8756e7-a3a0-4768-b47e-8f545d1a751c",
+      "title": "Suspicious LNK Command-Line Padding with Whitespace Characters",
+      "level": "high",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_lnk_exec_hidden_cmd.yml",
+      "match": "parent"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "37774c23-25a1-4adb-bb6d-8bb9fd59c0f8",
+      "title": "Suspicious Volume Shadow Copy Vssapi.dll Load",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vssapi_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "0a98a10c-685d-4ab0-bddc-b6bdd1d48458",
+      "title": "Uncommon Userinit Child Process",
+      "level": "high",
+      "techniques": [
+        "T1037.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_userinit_uncommon_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "7aaa5739-12fc-41aa-b98b-23ec27d42bdf",
+      "title": "Ursnif Redirection Of Discovery Commands",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Ursnif/proc_creation_win_malware_ursnif_cmd_redirection.yml",
+      "match": "parent"
+    },
+    {
+      "id": "d65aee4d-2292-4cea-b832-83accd6cfa43",
+      "title": "Arbitrary Binary Execution Using GUP Utility",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_gup_arbitrary_binary_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "cbb9e3d1-2386-4e59-912e-62f1484f7a89",
+      "title": "Conhost Spawned By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_uncommon_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "9ae01559-cf7e-4f8e-8e14-4c290a1b4784",
+      "title": "CredUI.DLL Loaded By Uncommon Process",
+      "level": "medium",
+      "techniques": [
+        "T1056.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_credui_uncommon_process_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "30e92f50-bb5a-4884-98b5-d20aa80f3d7a",
+      "title": "Hidden Powershell in Link File Pattern",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_embed_exe_lnk.yml",
+      "match": "parent"
+    },
+    {
+      "id": "95724fc1-a258-4674-97db-a30351981c5a",
+      "title": "Manual Execution of Script Inside of a Compressed File",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_script_exec_from_compressed_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "67bc0e75-c0a9-4cfc-8754-84a505b63c04",
+      "title": "Potentially Suspicious Child Process Of ClickOnce Application",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dfsvc_suspicious_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "0ea52357-cd59-4340-9981-c46c7e900428",
+      "title": "Potentially Suspicious Rundll32.EXE Execution of UDL File",
+      "level": "medium",
+      "techniques": [
+        "T1218.011",
+        "T1071"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_udl_exec.yml",
+      "match": "parent"
+    },
+    {
+      "id": "48bfd177-7cf2-412b-ad77-baf923489e82",
+      "title": "Potentially Suspicious Volume Shadow Copy Vsstrace.dll Load",
+      "level": "medium",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vsstrace_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "1412aa78-a24c-4abd-83df-767dfb2c5bbe",
+      "title": "Potentially Suspicious WebDAV LNK Execution",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1204"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webdav_lnk_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "1723e720-616d-4ddc-ab02-f7e3685a4713",
+      "title": "Rundll32 Spawned Via Explorer.EXE",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_parent_explorer.yml",
+      "match": "parent"
+    },
+    {
+      "id": "33be4333-2c6b-44f4-ae28-102cdbde0a31",
+      "title": "Suspicious Msbuild Execution By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msbuild_susp_parent_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "b655a06a-31c0-477a-95c2-3726b83d649d",
+      "title": "Suspicious Userinit Child Process",
+      "level": "medium",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_userinit_child.yml",
+      "match": "image"
+    },
+    {
+      "id": "3ef5605c-9eb9-47b0-9a71-b727e6aa5c3b",
+      "title": "Use NTFS Short Name in Image",
+      "level": "medium",
+      "techniques": [
+        "T1564.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_ntfs_short_name_use_image.yml",
+      "match": "parent"
+    },
+    {
+      "id": "facd1549-e416-48e0-b8c4-41d7215eedc8",
+      "title": "Amsi.DLL Load By Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_amsi_uncommon_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "3669afd2-9891-4534-a626-e5cf03810a61",
+      "title": "Load Of RstrtMgr.DLL By An Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1486",
+        "T1685"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_rstrtmgr_uncommon_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "f4bbd493-b796-416e-bbf2-121235348529",
+      "title": "Non Interactive PowerShell Process Spawned",
+      "level": "low",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_non_interactive_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "3b4e950b-a3ea-44d3-877e-432071990709",
+      "title": "Notepad Password Files Discovery",
+      "level": "low",
+      "techniques": [
+        "T1083"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_notepad_local_passwd_discovery.yml",
+      "match": "parent"
+    },
+    {
+      "id": "bafd07c6-3ea5-454a-b4be-058fbb073de7",
+      "title": "Potential Executable Run Itself As Sacrificial Process",
+      "level": "low",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_parent_execute_itself.yml",
+      "match": "image"
+    },
+    {
+      "id": "9eb271b9-24ae-4cd4-9465-19cfc1047f3e",
+      "title": "Potential Proxy Execution Via Explorer.EXE From Shell Process",
+      "level": "low",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_explorer_child_of_shell_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "671bb7e3-a020-4824-a00e-2ee5b55f385e",
+      "title": "WMI Module Loaded By Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1047"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_wmi_module_load_by_uncommon_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0034",
+          "name": "Sandworm Team"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1047",
+      "name": "Windows Management Instrumentation",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0603",
+          "name": "Stuxnet"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0082",
+          "name": "APT38"
+        },
+        {
+          "id": "G0047",
+          "name": "Gamaredon Group"
+        },
+        {
+          "id": "G0094",
+          "name": "Kimsuky"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0093",
+          "name": "Backdoor.Oldrea"
+        },
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        },
+        {
+          "id": "S0084",
+          "name": "Mis-Type"
+        },
+        {
+          "id": "S0436",
+          "name": "TSCookie"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.001",
+      "name": "Process Injection: Dynamic-link Library Injection",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1081",
+          "name": "BADHATCH"
+        },
+        {
+          "id": "S0126",
+          "name": "ComRAT"
+        },
+        {
+          "id": "S0367",
+          "name": "Emotet"
+        },
+        {
+          "id": "S0135",
+          "name": "HIDEDRV"
+        },
+        {
+          "id": "S0581",
+          "name": "IronNetInjector"
+        },
+        {
+          "id": "S0265",
+          "name": "Kazuar"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.002",
+      "name": "Process Injection: Portable Executable Injection",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1063",
+          "name": "Brute Ratel C4"
+        },
+        {
+          "id": "S9037",
+          "name": "RustyWater"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.004",
+      "name": "Process Injection: Asynchronous Procedure Call",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0484",
+          "name": "Carberp"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.011",
+      "name": "Process Injection: Extra Window Memory Injection",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0091",
+          "name": "Epic"
+        },
+        {
+          "id": "S0177",
+          "name": "Power Loader"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1055.012",
+      "name": "Process Injection: Process Hollowing",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0226",
+          "name": "Smoke Loader"
+        },
+        {
+          "id": "S1207",
+          "name": "XLoader"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1057",
+      "name": "Process Discovery",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28"
+        }
+      ],
+      "software": [
+        {
+          "id": "S1210",
+          "name": "Sagerunex"
+        },
+        {
+          "id": "S0491",
+          "name": "StrongPity"
+        },
+        {
+          "id": "S0141",
+          "name": "Winnti for Windows"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1106",
+      "name": "Native API",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1179",
+          "name": "Exbyte"
+        },
+        {
+          "id": "S9037",
+          "name": "RustyWater"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1134",
+      "name": "Access Token Manipulation",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1210",
+          "name": "Sagerunex"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1134.001",
+      "name": "Access Token Manipulation: Token Impersonation/Theft",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0496",
+          "name": "REvil"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1202",
+      "name": "Indirect Command Execution",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1204.002",
+      "name": "User Execution: Malicious File",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1547.004",
+      "name": "Boot or Logon Autostart Execution: Winlogon Helper DLL",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0168",
+          "name": "Gazer"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1574.001",
+      "name": "Hijack Execution Flow: DLL",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0260",
+          "name": "InvisiMole"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\explorer.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\explorer.exe</code>"
+    },
+    {
+      "signal": "Running as `NT AUTHORITY\\SYSTEM` rather than a normal user",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as <code>NT AUTHORITY\\SYSTEM</code> rather than a normal user"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "A persistent visible parent (`userinit.exe` starts it and exits)",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "A persistent visible parent (<a class=\"proc-link\" href=\"/processes/userinit.exe\"><code>userinit.exe</code></a> starts it and exits)"
+    },
+    {
+      "signal": "An instance running with no interactive user signed in",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "An instance running with no interactive user signed in"
+    },
+    {
+      "signal": "Spawning command shells or script hosts (`cmd.exe`, `powershell.exe`, `wscript.exe`) right after a document or email is opened",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Spawning command shells or script hosts (<a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a>) right after a document or email is opened"
+    },
+    {
+      "signal": "Outbound network connections from explorer.exe itself",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound network connections from explorer.exe itself"
+    }
+  ],
+  "about_html": "<p>At its core, explorer.exe gives users access to their files, but it fills two roles. It's the file browser opened through Windows Explorer, and it's the user interface that draws the desktop, the Start menu, the taskbar, the Control Panel, and the system tray. It's also what launches programs through file-extension associations and shortcut files, so double-clicking an icon or opening something from the Start menu runs through explorer.exe.</p>\n<p>It's the default shell named in the registry value <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\Shell</code>, though Windows can run with a different interface there instead, such as <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>. It's started at logon by <a class=\"proc-link\" href=\"/processes/userinit.exe\"><code>userinit.exe</code></a>, which then exits, so a normal explorer.exe has no living parent in the process tree, the same orphaned look as the boot processes. It runs as the signed-in user, not SYSTEM, and the legitimate copy lives directly in <code>C:\\Windows</code> rather than <code>System32</code>. Multiple instances under one user are normal, for example when the folder option \"Launch folder windows in a separate process\" is enabled.</p>\n<p>Because it launches whatever the user clicks, explorer.exe is the parent of a wide and legitimately unpredictable set of processes: browsers, Office apps, installers, command prompts a user opened by hand. That makes its child list the noisiest of any core process, so the useful signal is which child appeared, not that there are children at all. Unlike the boot processes, explorer.exe is not critical: it can be ended and restarted, and Windows will usually relaunch it on its own, which is why \"restart Explorer\" is a common fix for a frozen desktop.</p>",
+  "security_notes_html": "<p>Because nearly every user process descends from it, explorer.exe is a useful name for malware to hide behind (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>). A legitimate copy always resides in <code>C:\\Windows</code> (not <code>System32</code>) and carries a valid Microsoft digital signature. Be suspicious of a copy running from <code>System32</code>, a user profile, or a temp folder, and of near-miss spellings such as <code>explorer32.exe</code> or <code>expIorer.exe</code>.</p>\n<p>explorer.exe is a favored target for process injection because it's always running, runs as the user, and makes outbound activity from it look ordinary (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>). Code injected into it inherits the user's context and blends into normal desktop behavior, so unusual loaded modules or network connections coming from explorer.exe are worth examining.</p>\n<p>Its place in the process tree also makes it a key pivot for spotting phishing-borne execution. explorer.exe launching a command shell or script host moments after the user opened a document or archive is a classic user-execution chain (<a href=\"https://attack.mitre.org/techniques/T1204/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1204.002</a>), since the malicious file rode in through something the user double-clicked.</p>"
+}

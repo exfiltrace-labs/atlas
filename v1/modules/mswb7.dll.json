@@ -1,0 +1,11 @@
+{
+  "name": "mswb7.dll",
+  "loaded_by": [
+    {
+      "name": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

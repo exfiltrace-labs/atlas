@@ -1,0 +1,477 @@
+{
+  "name": "taskhostw.exe",
+  "aliases": [
+    "taskhostw"
+  ],
+  "category": "System",
+  "tags": [
+    "tasks",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "taskhostw.exe is a generic Windows host process whose job is to run tasks that are packaged as DLLs rather than as standalone executables. Since a DLL can't launch on its own, taskhostw.exe acts as the container that loads and runs them, providing a home for various background tasks and scheduled jobs.\n",
+  "about": "A lot of the housekeeping that keeps Windows running, cleanup jobs, maintenance work, sync operations, is implemented as scheduled tasks whose code lives in DLLs rather than executables. taskhostw.exe gives that code a process to run in: the Task Scheduler starts an instance, the instance loads the task's DLL, and then runs a loop listening for the events that trigger its tasks. Triggers include a time schedule, user logon, system startup, idle CPU, a Windows event log entry, or workstation lock and unlock. A default Windows 11 install ships with more than 200 preconfigured tasks, though not all are enabled. It's the Windows 10 successor to `taskhost.exe` from Windows 7 and `taskhostex.exe` from Windows 8.\n\nInstances are started by the Task Scheduler service, which lives inside `svchost.exe`, so the parent is always that `svchost.exe`. They run from `C:\\Windows\\System32\\taskhostw.exe` under whatever account the task was configured with: the logged-in user for per-user tasks, or accounts like `NT AUTHORITY\\SYSTEM`, `LOCAL SERVICE`, and `NETWORK SERVICE` for system tasks. Because each instance sits in its trigger-listening loop for as long as its tasks are registered, several long-lived instances at once are normal, one per account context that has tasks to watch.\n\nThe genuine taskhostw.exe is a trusted, signed Microsoft system file. On a typical machine an instance starts at logon and stays resident, waking to run its tasks as their triggers fire. What it's actually doing at any moment is decided by the task DLLs it has loaded, which is the place to look when an instance behaves unexpectedly.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "taskhostw.exe.mui",
+    "internal_name": "taskhostw.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "114.50 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 7,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fcon.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "Session 0",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\taskhostw.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent other than `svchost.exe` (the Task Scheduler instance)",
+      "severity": "high"
+    },
+    {
+      "signal": "A process named `taskhost.exe` or `taskhostex.exe` on Windows 10 or 11 (those binaries don't ship there)",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as an account no task is configured to use",
+      "severity": "medium"
+    },
+    {
+      "signal": "Spawning command shells or script hosts",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [
+    {
+      "command": "taskhostw.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "a7efdb1c8169d59977df667028798048",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "720a994b6b2aa2649e3cf5a214c96712b4baf44c",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "9e9370331b9d14abba21091fffcd1d1e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "0e2c278c247226de637100ef8c14e622277facb0000ef474b1e9d86f0f31de1f",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "ea8d441df237fb3d3b7a27a95fde186e19c94d58a618f5c29ed5fc13cb155e96",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "2196268e7a2880e3adc74481297d0c4b",
+      "pct": 100
+    }
+  ],
+  "security_notes": "Like other trusted system processes, taskhostw.exe is sometimes imitated by malware attempting to avoid detection (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft signature. Be suspicious of copies running from other locations. The older equivalents `taskhost.exe` (Windows 7) and `taskhostex.exe` (Windows 8) don't exist on Windows 10 or 11, so those names on a modern system indicate a file that didn't ship with the operating system.\n\nAttackers also abuse the legitimate binary through scheduled tasks, a common persistence mechanism (T1053.005). A malicious task packaged as a DLL runs inside a genuine taskhostw.exe, so the process itself passes path and signature checks while the malicious code lives in the loaded DLL. If an instance spawns a shell or makes unexpected network connections, review which scheduled task fired and which DLL that task points to.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1053.005"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://learn.microsoft.com/en-us/windows/win32/taskschd/about-the-task-scheduler",
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1053/005/"
+  ],
+  "sigma": [
+    {
+      "id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+      "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1053.005",
+      "name": "Scheduled Task/Job: Scheduled Task",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1057",
+      "name": "Process Discovery",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S9036",
+          "name": "LP-Notes"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1106",
+      "name": "Native API",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S9036",
+          "name": "LP-Notes"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1134.001",
+      "name": "Access Token Manipulation: Token Impersonation/Theft",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S9036",
+          "name": "LP-Notes"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\taskhostw.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\taskhostw.exe</code>"
+    },
+    {
+      "signal": "Parent other than `svchost.exe` (the Task Scheduler instance)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent other than <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a> (the Task Scheduler instance)"
+    },
+    {
+      "signal": "A process named `taskhost.exe` or `taskhostex.exe` on Windows 10 or 11 (those binaries don't ship there)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A process named <code>taskhost.exe</code> or <code>taskhostex.exe</code> on Windows 10 or 11 (those binaries don't ship there)"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "Running as an account no task is configured to use",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running as an account no task is configured to use"
+    },
+    {
+      "signal": "Spawning command shells or script hosts",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Spawning command shells or script hosts"
+    }
+  ],
+  "about_html": "<p>A lot of the housekeeping that keeps Windows running, cleanup jobs, maintenance work, sync operations, is implemented as scheduled tasks whose code lives in DLLs rather than executables. taskhostw.exe gives that code a process to run in: the Task Scheduler starts an instance, the instance loads the task's DLL, and then runs a loop listening for the events that trigger its tasks. Triggers include a time schedule, user logon, system startup, idle CPU, a Windows event log entry, or workstation lock and unlock. A default Windows 11 install ships with more than 200 preconfigured tasks, though not all are enabled. It's the Windows 10 successor to <code>taskhost.exe</code> from Windows 7 and <code>taskhostex.exe</code> from Windows 8.</p>\n<p>Instances are started by the Task Scheduler service, which lives inside <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>, so the parent is always that <a class=\"proc-link\" href=\"/processes/svchost.exe\"><code>svchost.exe</code></a>. They run from <code>C:\\Windows\\System32\\taskhostw.exe</code> under whatever account the task was configured with: the logged-in user for per-user tasks, or accounts like <code>NT AUTHORITY\\SYSTEM</code>, <code>LOCAL SERVICE</code>, and <code>NETWORK SERVICE</code> for system tasks. Because each instance sits in its trigger-listening loop for as long as its tasks are registered, several long-lived instances at once are normal, one per account context that has tasks to watch.</p>\n<p>The genuine taskhostw.exe is a trusted, signed Microsoft system file. On a typical machine an instance starts at logon and stays resident, waking to run its tasks as their triggers fire. What it's actually doing at any moment is decided by the task DLLs it has loaded, which is the place to look when an instance behaves unexpectedly.</p>",
+  "security_notes_html": "<p>Like other trusted system processes, taskhostw.exe is sometimes imitated by malware attempting to avoid detection (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>). A legitimate copy always resides in <code>C:\\Windows\\System32</code> and carries a valid Microsoft signature. Be suspicious of copies running from other locations. The older equivalents <code>taskhost.exe</code> (Windows 7) and <code>taskhostex.exe</code> (Windows 8) don't exist on Windows 10 or 11, so those names on a modern system indicate a file that didn't ship with the operating system.</p>\n<p>Attackers also abuse the legitimate binary through scheduled tasks, a common persistence mechanism (<a href=\"https://attack.mitre.org/techniques/T1053/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1053.005</a>). A malicious task packaged as a DLL runs inside a genuine taskhostw.exe, so the process itself passes path and signature checks while the malicious code lives in the loaded DLL. If an instance spawns a shell or makes unexpected network connections, review which scheduled task fired and which DLL that task points to.</p>"
+}

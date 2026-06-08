@@ -1,0 +1,11 @@
+{
+  "name": "wmidcom.dll",
+  "loaded_by": [
+    {
+      "name": "powershell.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

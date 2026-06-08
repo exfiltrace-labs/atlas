@@ -1,0 +1,247 @@
+{
+  "name": "regsvcs.exe",
+  "aliases": [
+    "regsvcs"
+  ],
+  "category": "Utility",
+  "tags": [
+    "microsoft",
+    "core-windows",
+    "lolbin"
+  ],
+  "description": "regsvcs.exe is the .NET Services Installation tool, used to register a .NET assembly as a COM+ / Enterprise Services component. Developers use it for serviced components. Attackers use it the same way as regasm, to run a malicious assembly through a signed Microsoft binary and bypass application control.\n",
+  "about": "regsvcs.exe installs a .NET assembly into COM+ Component Services and registers it. As with `regasm.exe`, an assembly can include methods that run during registration, so pointing regsvcs at an assembly executes that code. It ships with the .NET Framework, so the genuine binary lives under `C:\\Windows\\Microsoft.NET\\Framework` and `Framework64`, not `System32`.\n\nLegitimately, regsvcs is run by developers and installers deploying COM+ serviced components, which is uncommon on ordinary machines. The assembly it registers and its origin are what give an instance meaning.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "An assembly loaded from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound network connections or child processes from regsvcs",
+      "severity": "high"
+    },
+    {
+      "signal": "Running on a host with no COM+ or development activity",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "regsvcs.exe is a system-binary proxy (T1218.009), paired with `regasm.exe` under the same ATT&CK sub-technique. Because the registration of a serviced component runs code in the target assembly, an attacker ships an assembly with the payload in that code and has the signed Microsoft tool execute it, bypassing application-control rules that trust Microsoft binaries and keeping the payload in a DLL.\n\nSince COM+ component installation is rare on most hosts, regsvcs running at all is already worth a look, and an assembly from a temp or download folder, or a parent like an Office application, confirms it.\n",
+  "mitre_attack": [
+    "T1218.009"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://lolbas-project.github.io/lolbas/Binaries/Regsvcs/",
+    "https://attack.mitre.org/techniques/T1218/009/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Regsvcs/",
+    "commands": [
+      {
+        "command": "regsvcs.exe {PATH:.dll}",
+        "usecase": "Execute dll file and bypass Application whitelisting",
+        "mitreID": "T1218.009",
+        "category": "Execute"
+      },
+      {
+        "command": "regsvcs.exe {PATH:.dll}",
+        "usecase": "Execute dll file and bypass Application whitelisting",
+        "mitreID": "T1218.009",
+        "category": "AWL Bypass"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "a7c3d773-caef-227e-a7e7-c2f13c622329",
+      "title": "Bad Opsec Defaults Sacrificial Processes With Improper Arguments",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_bad_opsec_sacrificial_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "6812a10b-60ea-420c-832f-dfcc33b646ba",
+      "title": "Potential PowerShell Execution Via DLL",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_powershell_execution_via_dll.yml",
+      "match": "image"
+    },
+    {
+      "id": "438025f9-5856-4663-83f7-52f878a70a50",
+      "title": "Suspicious Microsoft Office Child Process",
+      "level": "high",
+      "techniques": [
+        "T1047",
+        "T1204.002",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "c27515df-97a9-4162-8a60-dc0eeb51b775",
+      "title": "Suspicious Microsoft OneNote Child Process",
+      "level": "high",
+      "techniques": [
+        "T1566",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml",
+      "match": "image"
+    },
+    {
+      "id": "0e277796-5f23-4e49-a490-483131d4f6e1",
+      "title": "Dbghelp/Dbgcore DLL Loaded By Uncommon/Suspicious Process",
+      "level": "medium",
+      "techniques": [
+        "T1003.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_dbghelp_dbgcore_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "cc368ed0-2411-45dc-a222-510ace303cb2",
+      "title": "Potentially Suspicious Execution Of Regasm/Regsvcs From Uncommon Location",
+      "level": "medium",
+      "techniques": [
+        "T1218.009"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regasm_regsvcs_uncommon_location_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "e9f8f8cc-07cc-4e81-b724-f387db9175e4",
+      "title": "Potentially Suspicious Execution Of Regasm/Regsvcs With Uncommon Extension",
+      "level": "medium",
+      "techniques": [
+        "T1218.009"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regasm_regsvcs_uncommon_extension_execution.yml",
+      "match": "image"
+    },
+    {
+      "id": "b5de0c9a-6f19-43e0-af4e-55ad01f550af",
+      "title": "Unsigned DLL Loaded by Windows Utility",
+      "level": "medium",
+      "techniques": [
+        "T1218.011",
+        "T1218.010"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_susp_unsigned_dll.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1018",
+          "name": "TA2541"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1218.009",
+      "name": "System Binary Proxy Execution: Regsvcs/Regasm",
+      "curated": true,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "An assembly loaded from a user-writable path (`Temp`, `AppData`, `Downloads`)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "An assembly loaded from a user-writable path (<code>Temp</code>, <code>AppData</code>, <code>Downloads</code>)"
+    },
+    {
+      "signal": "Parent is an Office application, a script host, `cmd.exe`, or `powershell.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is an Office application, a script host, <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>"
+    },
+    {
+      "signal": "Outbound network connections or child processes from regsvcs",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Outbound network connections or child processes from regsvcs"
+    },
+    {
+      "signal": "Running on a host with no COM+ or development activity",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Running on a host with no COM+ or development activity"
+    }
+  ],
+  "about_html": "<p>regsvcs.exe installs a .NET assembly into COM+ Component Services and registers it. As with <a class=\"proc-link\" href=\"/processes/regasm.exe\"><code>regasm.exe</code></a>, an assembly can include methods that run during registration, so pointing regsvcs at an assembly executes that code. It ships with the .NET Framework, so the genuine binary lives under <code>C:\\Windows\\Microsoft.NET\\Framework</code> and <code>Framework64</code>, not <code>System32</code>.</p>\n<p>Legitimately, regsvcs is run by developers and installers deploying COM+ serviced components, which is uncommon on ordinary machines. The assembly it registers and its origin are what give an instance meaning.</p>",
+  "security_notes_html": "<p>regsvcs.exe is a system-binary proxy (<a href=\"https://attack.mitre.org/techniques/T1218/009/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218.009</a>), paired with <a class=\"proc-link\" href=\"/processes/regasm.exe\"><code>regasm.exe</code></a> under the same ATT&amp;CK sub-technique. Because the registration of a serviced component runs code in the target assembly, an attacker ships an assembly with the payload in that code and has the signed Microsoft tool execute it, bypassing application-control rules that trust Microsoft binaries and keeping the payload in a DLL.</p>\n<p>Since COM+ component installation is rare on most hosts, regsvcs running at all is already worth a look, and an assembly from a temp or download folder, or a parent like an Office application, confirms it.</p>"
+}

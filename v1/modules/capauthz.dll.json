@@ -1,0 +1,17 @@
+{
+  "name": "capauthz.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    }
+  ]
+}

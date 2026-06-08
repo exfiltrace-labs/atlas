@@ -1,0 +1,535 @@
+{
+  "name": "winlogon.exe",
+  "aliases": [
+    "winlogon"
+  ],
+  "category": "System",
+  "tags": [
+    "sessions",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "winlogon.exe is the Windows Logon Application, the process that manages signing in and out of a Windows session. It runs in the background for each interactive user session and coordinates the steps that lead from the login screen to the desktop. Because it handles authentication-related duties, it's one of the more security-sensitive processes in Windows.\n",
+  "about": "Every interactive session gets its own winlogon.exe. It's started by the same short-lived `smss.exe` copy that creates the session, so like `wininit.exe` it normally shows no parent in the process tree. It runs as `NT AUTHORITY\\SYSTEM` from `C:\\Windows\\System32\\winlogon.exe` and is a critical process, so terminating it will crash the system with a stop error (blue screen).\n\nwinlogon.exe oversees the secure sign-in process, including the classic **Secure Attention Sequence**, the Ctrl+Alt+Del prompt that ensures the user is interacting with the genuine Windows logon screen rather than a spoofed one. It starts `LogonUI.exe` to display the sign-in screen and coordinates with `lsass.exe` to verify the entered credentials. After a successful sign-in, it loads the user's `NTUSER.DAT` registry hive into `HKCU` and launches the shell (`userinit.exe`, which in turn starts `explorer.exe`) to bring up the desktop.\n\nBeyond initial logon, it continues to manage the session throughout its lifetime. It handles locking and unlocking the workstation, loading and running the screen saver during idle periods, and coordinating logoff and shutdown at the end of the session. In modern Windows, some duties that historically belonged to winlogon have been distributed to other processes, but it remains the anchor of the interactive logon experience.\n\nIts children on a modern system are a short list: `LogonUI.exe` at the sign-in screen, `userinit.exe` briefly at logon, plus `dwm.exe` (the Desktop Window Manager) and `fontdrvhost.exe`, which it starts for each session. Multiple winlogon.exe instances are normal whenever multiple sessions exist: one for the console, plus one per remote desktop connection.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "WINLOGON.EXE.MUI",
+    "internal_name": "winlogon",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.8117 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "936.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 45,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\winlogon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\winlogon.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high"
+    },
+    {
+      "signal": "Children other than `LogonUI.exe`, `userinit.exe`, `dwm.exe`, or `fontdrvhost.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "A command shell or script host as a child",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "More instances than interactive sessions",
+      "severity": "medium"
+    },
+    {
+      "signal": "Extra entries in the Winlogon registry key's `Userinit` or `Shell` values",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Because of its trusted status and its role in authentication, winlogon.exe is a frequent target for impersonation by malware seeking to blend in or intercept credentials (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Treat copies in other locations, or slight misspellings such as `winlogan.exe` or `winlogon32.exe`, as anomalies.\n\nThe Winlogon registry key is a long-standing persistence target (T1547.004). The `Userinit` and `Shell` values under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon` tell winlogon.exe what to run at logon, and malware appends its own entry to start with every sign-in. Anything in those values beyond `userinit.exe` and `explorer.exe` warrants a review.\n\nA command shell running under winlogon.exe is a well-known backdoor pattern. Replacing accessibility tools like `sethc.exe` (Sticky Keys) or `utilman.exe` with `cmd.exe` produces a SYSTEM shell at the logon screen, no credentials required, and that shell appears in the process tree as a child of winlogon.exe (T1546.008).\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1547.004",
+    "T1546.008"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://learn.microsoft.com/en-us/windows/win32/secauthn/winlogon-and-credential-providers",
+    "https://attack.mitre.org/techniques/T1547/004/",
+    "https://attack.mitre.org/techniques/T1546/008/"
+  ],
+  "sigma": [
+    {
+      "id": "2fdefcb3-dbda-401e-ae23-f0db027628bc",
+      "title": "Sticky Key Like Backdoor Execution",
+      "level": "critical",
+      "techniques": [
+        "T1546.008"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_sticky_key_like_backdoor_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "d522eca2-2973-4391-a3e0-ef0374321dae",
+      "title": "Abused Debug Privilege by Arbitrary Parent Processes",
+      "level": "high",
+      "techniques": [
+        "T1548"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_abusing_debug_privilege.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "1012f107-b8f1-4271-af30-5aed2de89b39",
+      "title": "Terminal Service Process Spawn",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1210"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_termserv_proc_spawn.yml",
+      "match": "image"
+    },
+    {
+      "id": "cbb9e3d1-2386-4e59-912e-62f1484f7a89",
+      "title": "Conhost Spawned By Uncommon Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_uncommon_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "9cfc00b6-bfb7-49ce-9781-ef78503154bb",
+      "title": "Wlrmdr.EXE Uncommon Argument Or Child Process",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wlrmdr_uncommon_child_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "96036718-71cc-4027-a538-d1587e0006a7",
+      "title": "Windows Processes Suspicious Parent Directory",
+      "level": "low",
+      "techniques": [
+        "T1036.003",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_proc_wrong_parent.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1005",
+      "name": "Data from Local System",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1131",
+          "name": "NPPSPY"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Collection",
+          "order": 11
+        }
+      ]
+    },
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1056",
+      "name": "Input Capture",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1131",
+          "name": "NPPSPY"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Collection",
+          "order": 11
+        },
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "T1112",
+      "name": "Modify Registry",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1131",
+          "name": "NPPSPY"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "T1531",
+      "name": "Account Access Removal",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1134",
+          "name": "DEADWOOD"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Impact",
+          "order": 14
+        }
+      ]
+    },
+    {
+      "id": "T1546.008",
+      "name": "Event Triggered Execution: Accessibility Features",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        },
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "T1547.004",
+      "name": "Boot or Logon Autostart Execution: Winlogon Helper DLL",
+      "curated": true,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0081",
+          "name": "Tropic Trooper"
+        },
+        {
+          "id": "G0010",
+          "name": "Turla"
+        },
+        {
+          "id": "G0102",
+          "name": "Wizard Spider"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0534",
+          "name": "Bazar"
+        },
+        {
+          "id": "S0351",
+          "name": "Cannon"
+        },
+        {
+          "id": "S1066",
+          "name": "DarkTortilla"
+        },
+        {
+          "id": "S0200",
+          "name": "Dipsind"
+        },
+        {
+          "id": "S0168",
+          "name": "Gazer"
+        },
+        {
+          "id": "S0387",
+          "name": "KeyBoy"
+        },
+        {
+          "id": "S1202",
+          "name": "LockBit 3.0"
+        },
+        {
+          "id": "S1242",
+          "name": "Qilin"
+        },
+        {
+          "id": "S0375",
+          "name": "Remexi"
+        },
+        {
+          "id": "S0379",
+          "name": "Revenge RAT"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1557",
+      "name": "Adversary-in-the-Middle",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1131",
+          "name": "NPPSPY"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Credential Access",
+          "order": 8
+        },
+        {
+          "name": "Collection",
+          "order": 11
+        }
+      ]
+    },
+    {
+      "id": "T1564.002",
+      "name": "Hide Artifacts: Hidden Users",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0094",
+          "name": "Kimsuky"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\winlogon.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\winlogon.exe</code>"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as any account other than <code>NT AUTHORITY\\SYSTEM</code>"
+    },
+    {
+      "signal": "Children other than `LogonUI.exe`, `userinit.exe`, `dwm.exe`, or `fontdrvhost.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Children other than <a class=\"proc-link\" href=\"/processes/logonui.exe\"><code>LogonUI.exe</code></a>, <a class=\"proc-link\" href=\"/processes/userinit.exe\"><code>userinit.exe</code></a>, <a class=\"proc-link\" href=\"/processes/dwm.exe\"><code>dwm.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/fontdrvhost.exe\"><code>fontdrvhost.exe</code></a>"
+    },
+    {
+      "signal": "A command shell or script host as a child",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A command shell or script host as a child"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "More instances than interactive sessions",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "More instances than interactive sessions"
+    },
+    {
+      "signal": "Extra entries in the Winlogon registry key's `Userinit` or `Shell` values",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Extra entries in the Winlogon registry key's <code>Userinit</code> or <code>Shell</code> values"
+    }
+  ],
+  "about_html": "<p>Every interactive session gets its own winlogon.exe. It's started by the same short-lived <a class=\"proc-link\" href=\"/processes/smss.exe\"><code>smss.exe</code></a> copy that creates the session, so like <a class=\"proc-link\" href=\"/processes/wininit.exe\"><code>wininit.exe</code></a> it normally shows no parent in the process tree. It runs as <code>NT AUTHORITY\\SYSTEM</code> from <code>C:\\Windows\\System32\\winlogon.exe</code> and is a critical process, so terminating it will crash the system with a stop error (blue screen).</p>\n<p>winlogon.exe oversees the secure sign-in process, including the classic <strong>Secure Attention Sequence</strong>, the Ctrl+Alt+Del prompt that ensures the user is interacting with the genuine Windows logon screen rather than a spoofed one. It starts <a class=\"proc-link\" href=\"/processes/logonui.exe\"><code>LogonUI.exe</code></a> to display the sign-in screen and coordinates with <a class=\"proc-link\" href=\"/processes/lsass.exe\"><code>lsass.exe</code></a> to verify the entered credentials. After a successful sign-in, it loads the user's <code>NTUSER.DAT</code> registry hive into <code>HKCU</code> and launches the shell (<a class=\"proc-link\" href=\"/processes/userinit.exe\"><code>userinit.exe</code></a>, which in turn starts <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a>) to bring up the desktop.</p>\n<p>Beyond initial logon, it continues to manage the session throughout its lifetime. It handles locking and unlocking the workstation, loading and running the screen saver during idle periods, and coordinating logoff and shutdown at the end of the session. In modern Windows, some duties that historically belonged to winlogon have been distributed to other processes, but it remains the anchor of the interactive logon experience.</p>\n<p>Its children on a modern system are a short list: <a class=\"proc-link\" href=\"/processes/logonui.exe\"><code>LogonUI.exe</code></a> at the sign-in screen, <a class=\"proc-link\" href=\"/processes/userinit.exe\"><code>userinit.exe</code></a> briefly at logon, plus <a class=\"proc-link\" href=\"/processes/dwm.exe\"><code>dwm.exe</code></a> (the Desktop Window Manager) and <a class=\"proc-link\" href=\"/processes/fontdrvhost.exe\"><code>fontdrvhost.exe</code></a>, which it starts for each session. Multiple winlogon.exe instances are normal whenever multiple sessions exist: one for the console, plus one per remote desktop connection.</p>",
+  "security_notes_html": "<p>Because of its trusted status and its role in authentication, winlogon.exe is a frequent target for impersonation by malware seeking to blend in or intercept credentials (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>). A legitimate copy always resides in <code>C:\\Windows\\System32</code> and carries a valid Microsoft digital signature. Treat copies in other locations, or slight misspellings such as <code>winlogan.exe</code> or <code>winlogon32.exe</code>, as anomalies.</p>\n<p>The Winlogon registry key is a long-standing persistence target (<a href=\"https://attack.mitre.org/techniques/T1547/004/\" target=\"_blank\" rel=\"noreferrer noopener\">T1547.004</a>). The <code>Userinit</code> and <code>Shell</code> values under <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon</code> tell winlogon.exe what to run at logon, and malware appends its own entry to start with every sign-in. Anything in those values beyond <a class=\"proc-link\" href=\"/processes/userinit.exe\"><code>userinit.exe</code></a> and <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a> warrants a review.</p>\n<p>A command shell running under winlogon.exe is a well-known backdoor pattern. Replacing accessibility tools like <code>sethc.exe</code> (Sticky Keys) or <code>utilman.exe</code> with <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> produces a SYSTEM shell at the logon screen, no credentials required, and that shell appears in the process tree as a child of winlogon.exe (<a href=\"https://attack.mitre.org/techniques/T1546/008/\" target=\"_blank\" rel=\"noreferrer noopener\">T1546.008</a>).</p>"
+}

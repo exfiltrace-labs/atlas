@@ -1,0 +1,424 @@
+{
+  "name": "csrss.exe",
+  "aliases": [
+    "csrss"
+  ],
+  "category": "System",
+  "tags": [
+    "sessions",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "csrss.exe is the Client Server Runtime Process, a critical Windows system process that handles user-mode portions of the Win32 subsystem, serving as an essential link between applications and the operating system kernel. It's launched early in the boot sequence, runs once per session, and is fundamental to keeping Windows running.\n",
+  "about": "Every session gets its own csrss.exe, including session 0. It's started by the same short-lived `smss.exe` copy that creates the session, so like `wininit.exe` and `winlogon.exe` it normally shows no parent in the process tree. It runs as `NT AUTHORITY\\SYSTEM` from `C:\\Windows\\System32\\csrss.exe`.\n\nOver the years, many of csrss.exe's original responsibilities have moved into kernel mode, but it still manages several important functions. These have included handling the creation and deletion of threads and processes, managing console windows for command-line applications (a job that moved to `conhost.exe` in Windows 7), supporting the shutdown process, and other behind-the-scenes Win32 functionality like mapping drive letters.\n\nThere's typically one instance per session, so a normal system often shows two: one for session 0 and one for the interactive session, with more appearing for remote desktop connections. They start with the session and run until it ends. A legitimate csrss.exe starts no child processes on a modern system, so a large or unusual number of instances, or any children at all, warrants a closer look.\n\nThe genuine csrss.exe is a trusted, signed Microsoft system file that is vital to normal operation. It should never be removed or disabled, and attempting to terminate it will trigger a system crash (blue screen), since Windows depends on it to function.\n",
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable",
+    "original_name": "CSRSS.Exe.MUI",
+    "internal_name": "CSRSS.Exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "37.70 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "d8fb0cc66a08061b42d46d03546f0d42cbc49b7c",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 100,
+  "host_prevalence": 100,
+  "execution_rank": 11,
+  "community_score": null,
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\csrss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "Session 1",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "calculatorapp.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\csrss.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "Any child processes",
+      "severity": "high"
+    },
+    {
+      "signal": "A living parent process (the `smss.exe` copy that starts it exits immediately)",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high"
+    },
+    {
+      "signal": "More instances than sessions",
+      "severity": "medium"
+    },
+    {
+      "signal": "Start time long after boot without a matching new session",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Because it's a trusted, essential process, csrss.exe is a popular target for impersonation by malware trying to hide in plain sight (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Be highly suspicious of copies found in other locations or slight misspellings such as `csrsss.exe` or `cssrs.exe`.\n\nIts position in the process tree is a quick check. A real csrss.exe has no living parent, since the `smss.exe` copy that started it exits immediately, and it never spawns children. An instance with a visible parent, or with children of any kind, is an anomaly (T1134.004).\n\nBecause it's a `SYSTEM` process that's always running and rarely watched, csrss.exe is also a target for code injection. Implanted code inherits both its privileges and its critical-process status, since killing the host crashes the machine (T1055). Unexpected network connections or odd loaded modules are the signs to look for.\n",
+  "mitre_attack": [
+    "T1036.005",
+    "T1134.004",
+    "T1055"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://attack.mitre.org/techniques/T1036/005/",
+    "https://attack.mitre.org/techniques/T1055/"
+  ],
+  "sigma": [
+    {
+      "id": "d522eca2-2973-4391-a3e0-ef0374321dae",
+      "title": "Abused Debug Privilege by Arbitrary Parent Processes",
+      "level": "high",
+      "techniques": [
+        "T1548"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_abusing_debug_privilege.yml",
+      "match": "parent"
+    },
+    {
+      "id": "cbec226f-63d9-4eca-9f52-dfb6652f24df",
+      "title": "Suspicious Process Parents",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_parents.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "1012f107-b8f1-4271-af30-5aed2de89b39",
+      "title": "Terminal Service Process Spawn",
+      "level": "high",
+      "techniques": [
+        "T1190",
+        "T1210"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_termserv_proc_spawn.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "96036718-71cc-4027-a538-d1587e0006a7",
+      "title": "Windows Processes Suspicious Parent Directory",
+      "level": "low",
+      "techniques": [
+        "T1036.003",
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_proc_wrong_parent.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1134.004",
+      "name": "Access Token Manipulation: Parent PID Spoofing",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\csrss.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\csrss.exe</code>"
+    },
+    {
+      "signal": "Any child processes",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Any child processes"
+    },
+    {
+      "signal": "A living parent process (the `smss.exe` copy that starts it exits immediately)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A living parent process (the <a class=\"proc-link\" href=\"/processes/smss.exe\"><code>smss.exe</code></a> copy that starts it exits immediately)"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as any account other than <code>NT AUTHORITY\\SYSTEM</code>"
+    },
+    {
+      "signal": "Unsigned image or a signer other than Microsoft",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Unsigned image or a signer other than Microsoft"
+    },
+    {
+      "signal": "More instances than sessions",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "More instances than sessions"
+    },
+    {
+      "signal": "Start time long after boot without a matching new session",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Start time long after boot without a matching new session"
+    }
+  ],
+  "about_html": "<p>Every session gets its own csrss.exe, including session 0. It's started by the same short-lived <a class=\"proc-link\" href=\"/processes/smss.exe\"><code>smss.exe</code></a> copy that creates the session, so like <a class=\"proc-link\" href=\"/processes/wininit.exe\"><code>wininit.exe</code></a> and <a class=\"proc-link\" href=\"/processes/winlogon.exe\"><code>winlogon.exe</code></a> it normally shows no parent in the process tree. It runs as <code>NT AUTHORITY\\SYSTEM</code> from <code>C:\\Windows\\System32\\csrss.exe</code>.</p>\n<p>Over the years, many of csrss.exe's original responsibilities have moved into kernel mode, but it still manages several important functions. These have included handling the creation and deletion of threads and processes, managing console windows for command-line applications (a job that moved to <a class=\"proc-link\" href=\"/processes/conhost.exe\"><code>conhost.exe</code></a> in Windows 7), supporting the shutdown process, and other behind-the-scenes Win32 functionality like mapping drive letters.</p>\n<p>There's typically one instance per session, so a normal system often shows two: one for session 0 and one for the interactive session, with more appearing for remote desktop connections. They start with the session and run until it ends. A legitimate csrss.exe starts no child processes on a modern system, so a large or unusual number of instances, or any children at all, warrants a closer look.</p>\n<p>The genuine csrss.exe is a trusted, signed Microsoft system file that is vital to normal operation. It should never be removed or disabled, and attempting to terminate it will trigger a system crash (blue screen), since Windows depends on it to function.</p>",
+  "security_notes_html": "<p>Because it's a trusted, essential process, csrss.exe is a popular target for impersonation by malware trying to hide in plain sight (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>). A legitimate copy always resides in <code>C:\\Windows\\System32</code> and carries a valid Microsoft digital signature. Be highly suspicious of copies found in other locations or slight misspellings such as <code>csrsss.exe</code> or <code>cssrs.exe</code>.</p>\n<p>Its position in the process tree is a quick check. A real csrss.exe has no living parent, since the <a class=\"proc-link\" href=\"/processes/smss.exe\"><code>smss.exe</code></a> copy that started it exits immediately, and it never spawns children. An instance with a visible parent, or with children of any kind, is an anomaly (<a href=\"https://attack.mitre.org/techniques/T1134/004/\" target=\"_blank\" rel=\"noreferrer noopener\">T1134.004</a>).</p>\n<p>Because it's a <code>SYSTEM</code> process that's always running and rarely watched, csrss.exe is also a target for code injection. Implanted code inherits both its privileges and its critical-process status, since killing the host crashes the machine (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>). Unexpected network connections or odd loaded modules are the signs to look for.</p>"
+}

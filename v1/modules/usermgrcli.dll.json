@@ -1,0 +1,17 @@
+{
+  "name": "usermgrcli.dll",
+  "loaded_by": [
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

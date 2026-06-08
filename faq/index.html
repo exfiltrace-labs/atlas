@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/fonts/cascadia-mono-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="Atlas"
+      href="./opensearch.xml"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('atlas-theme')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          document.documentElement.dataset.theme = t
+        } catch (e) {}
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-DIpTg2Ne.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CR-B-9i_.css">
+      <title>FAQ - Atlas</title>
+    <meta name="description" content="What Atlas is, where the data comes from, and how to contribute." />
+    <link rel="canonical" href="https://atlas.exfiltrace.com/faq" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FAQ - Atlas" />
+    <meta property="og:description" content="What Atlas is, where the data comes from, and how to contribute." />
+    <meta property="og:url" content="https://atlas.exfiltrace.com/faq" />
+    <meta property="og:site_name" content="Atlas" />
+    <meta property="og:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://atlas.exfiltrace.com/og/atlas.png" />
+  </head>
+  <body>
+    <div id="root"><div class="app"><header class="topnav"><button type="button" class="menu-toggle" aria-label="Menu" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button><nav class="nav-left"><a href="/">Home</a><a href="/explore">Explore</a><a href="/docs">Docs</a><a href="/faq" aria-current="page">FAQ</a></nav><div class="topnav-search"><div class="navsearch"><form><input type="search" placeholder="Process name, SHA-256, or MD5" aria-label="Search processes" value=""/></form></div></div><div class="nav-right"><button type="button" class="search-toggle" aria-label="Search" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button><button type="button" class="theme-toggle" title="Switch to dark theme" aria-label="Toggle dark mode"></button></div></header><main><div class="page page-prose"><h1>FAQ</h1><h2>What is Atlas?</h2><p>A reference for security analysts answering one question fast: is this Windows process normal, or should I worry? Look up a process and see its expected paths, launch ancestry, and known abuse patterns.</p><h2>Where does the data come from?</h2><p>Records are hand-curated from authoritative sources (Microsoft documentation, MITRE ATT&amp;CK, LOLBAS, vendor research) and cited on every profile. Profiles are also enriched automatically from LOLBAS (abuse commands), MITRE ATT&amp;CK (techniques and the groups and software that use them), and the Sigma project (detection rules). Measured telemetry is on the roadmap.</p><h2>Where do the detections come from?</h2><p>The Detections tab lists open detection rules from the<!-- --> <a href="https://github.com/SigmaHQ/sigma" target="_blank" rel="noreferrer">Sigma project</a> <!-- -->that name the process, under the Detection Rule License. Each rule links back to its source.</p><h2>Does dropping a file upload it?</h2><p>No. The file is hashed locally in your browser (SHA-256 via the Web Crypto API) and only the hash is looked up. The file itself never leaves your machine.</p><h2>What does &quot;not observed&quot; mean?</h2><p>The identifier you searched is valid but has no record. That is information in itself: the binary is either rare or not yet curated, and worth a closer look.</p><h2>What do the prevalence labels mean?</h2><p><code>ubiquitous</code>, <code>common</code>, <code>uncommon</code>, <code>rare</code> <!-- -->and <code>unknown</code> describe how often a process is typically seen running. They are qualitative bands, not precise statistics.</p><h2>Can I add or fix a record?</h2><p>Yes. The dataset is open source, and each process is one small YAML file. See the<!-- --> <a href="/docs">Docs</a> page.</p></div></main><footer class="footer"><span>Atlas by<!-- --> <a href="https://exfiltrace.com" target="_blank" rel="noreferrer">Exfiltrace</a></span><span class="footer-sep">·</span><span>© 2026</span><span class="footer-sep">·</span><a href="/docs">Docs</a><span class="footer-sep">·</span><a href="/privacy">Privacy</a><span class="footer-sep">·</span><a href="/terms">Terms</a></footer></div></div>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+{
+  "name": "ntdsutil.exe",
+  "aliases": [
+    "ntdsutil"
+  ],
+  "category": "Utility",
+  "tags": [
+    "active-directory",
+    "microsoft",
+    "lolbin"
+  ],
+  "description": "ntdsutil.exe is the command-line tool for maintaining the Active Directory database. Domain controller administrators use it for database housekeeping, authoritative restores, and snapshots of the directory store. The same snapshot and Install From Media features let an attacker on a domain controller copy out the entire directory database, which holds every domain account's password hash.\n",
+  "about": "ntdsutil.exe manages the Active Directory Domain Services database, the `ntds.dit` file that stores every object and credential in a domain. Its legitimate jobs are database maintenance: defragmentation, authoritative restore, metadata cleanup of decommissioned domain controllers, snapshot management, and creating Install From Media (IFM) sets used to stand up new domain controllers. It is installed on domain controllers and on servers running AD LDS or the AD DS management tools, not on a default client Windows. The genuine binary lives at `C:\\Windows\\System32\\ntdsutil.exe` and requires an elevated prompt.\n\nLegitimately, ntdsutil is run interactively by domain administrators during planned maintenance on a domain controller. It does not run on its own and does not belong on ordinary workstations. Its interactive sub-commands, or the arguments that drive them from a script, describe what each invocation is doing.\n",
+  "publisher": null,
+  "issuer": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\ntdsutil.exe`",
+      "severity": "high"
+    },
+    {
+      "signal": "`ifm` or `create full` arguments (Install From Media dump of the database)",
+      "severity": "high"
+    },
+    {
+      "signal": "`activate instance ntds` followed by snapshot or IFM operations",
+      "severity": "high"
+    },
+    {
+      "signal": "A `snapshot` created and mounted to reach `ntds.dit`",
+      "severity": "high"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or a remote-execution tool rather than an interactive admin shell",
+      "severity": "high"
+    },
+    {
+      "signal": "Running on a host that is not a domain controller",
+      "severity": "high"
+    },
+    {
+      "signal": "Output written to a staging or user-writable path",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "ntdsutil.exe is a headline tool for stealing domain credentials (T1003.003). On a domain controller, `ntdsutil \"activate instance ntds\" \"ifm\" \"create full C:\\path\" q q` quietly writes a complete copy of `ntds.dit` along with the `SYSTEM` registry hive, which holds the boot key needed to decrypt it. Together those two files yield every domain account's password hash for offline cracking and follow-on attacks like golden tickets. Creating and mounting a `snapshot` reaches the same data by exposing `ntds.dit` on a mounted volume.\n\nThis is post-compromise activity that requires domain controller administrator rights, which makes it high-signal when it appears. ntdsutil running with `ifm`, `create`, or `snapshot` verbs, especially driven non-interactively by a `cmd.exe` or `powershell.exe` parent or a remote-execution tool, or any ntdsutil on a machine that is not a domain controller, warrants immediate investigation. Because both the binary and the operations are legitimate, the verbs and the context are what separate maintenance from theft.\n",
+  "mitre_attack": [
+    "T1003.003"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/use-ntdsutil-manage-ad-files",
+    "https://lolbas-project.github.io/lolbas/OtherMSBinaries/Ntdsutil/",
+    "https://attack.mitre.org/techniques/T1003/003/"
+  ],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/OtherMSBinaries/Ntdsutil/",
+    "commands": [
+      {
+        "command": "ntdsutil.exe \"ac i ntds\" \"ifm\" \"create full c:\\\" q q",
+        "usecase": "Dumping of Active Directory NTDS.dit database",
+        "mitreID": "T1003.003",
+        "category": "Dump"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "8202070f-edeb-4d31-a010-a26c72ac5600",
+      "title": "Suspicious Process By Web Server Process",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1190"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml",
+      "match": "image"
+    },
+    {
+      "id": "4ebc877f-4612-45cb-b3a5-8e3834db36c9",
+      "title": "Webshell Hacking Activity Patterns",
+      "level": "high",
+      "techniques": [
+        "T1505.003",
+        "T1018",
+        "T1033",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_hacking.yml",
+      "match": "image"
+    },
+    {
+      "id": "2afafd61-6aae-4df4-baed-139fa1f4c345",
+      "title": "Invocation of Active Directory Diagnostic Tool (ntdsutil.exe)",
+      "level": "medium",
+      "techniques": [
+        "T1003.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_ntdsutil_usage.yml",
+      "match": "image"
+    },
+    {
+      "id": "a58353df-af43-4753-bad0-cd83ef35eef5",
+      "title": "Suspicious Usage Of Active Directory Diagnostic Tool (ntdsutil.exe)",
+      "level": "medium",
+      "techniques": [
+        "T1003.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_ntdsutil_susp_usage.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1003.003",
+      "name": "OS Credential Dumping: NTDS",
+      "curated": true,
+      "lolbas": true,
+      "groups": [
+        {
+          "id": "G0007",
+          "name": "APT28"
+        },
+        {
+          "id": "G0034",
+          "name": "Sandworm Team"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Credential Access",
+          "order": 8
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path other than `C:\\Windows\\System32\\ntdsutil.exe`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path other than <code>C:\\Windows\\System32\\ntdsutil.exe</code>"
+    },
+    {
+      "signal": "`ifm` or `create full` arguments (Install From Media dump of the database)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>ifm</code> or <code>create full</code> arguments (Install From Media dump of the database)"
+    },
+    {
+      "signal": "`activate instance ntds` followed by snapshot or IFM operations",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "<code>activate instance ntds</code> followed by snapshot or IFM operations"
+    },
+    {
+      "signal": "A `snapshot` created and mounted to reach `ntds.dit`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A <code>snapshot</code> created and mounted to reach <code>ntds.dit</code>"
+    },
+    {
+      "signal": "Parent is `cmd.exe`, `powershell.exe`, or a remote-execution tool rather than an interactive admin shell",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Parent is <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, or a remote-execution tool rather than an interactive admin shell"
+    },
+    {
+      "signal": "Running on a host that is not a domain controller",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running on a host that is not a domain controller"
+    },
+    {
+      "signal": "Output written to a staging or user-writable path",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Output written to a staging or user-writable path"
+    }
+  ],
+  "about_html": "<p>ntdsutil.exe manages the Active Directory Domain Services database, the <code>ntds.dit</code> file that stores every object and credential in a domain. Its legitimate jobs are database maintenance: defragmentation, authoritative restore, metadata cleanup of decommissioned domain controllers, snapshot management, and creating Install From Media (IFM) sets used to stand up new domain controllers. It is installed on domain controllers and on servers running AD LDS or the AD DS management tools, not on a default client Windows. The genuine binary lives at <code>C:\\Windows\\System32\\ntdsutil.exe</code> and requires an elevated prompt.</p>\n<p>Legitimately, ntdsutil is run interactively by domain administrators during planned maintenance on a domain controller. It does not run on its own and does not belong on ordinary workstations. Its interactive sub-commands, or the arguments that drive them from a script, describe what each invocation is doing.</p>",
+  "security_notes_html": "<p>ntdsutil.exe is a headline tool for stealing domain credentials (<a href=\"https://attack.mitre.org/techniques/T1003/003/\" target=\"_blank\" rel=\"noreferrer noopener\">T1003.003</a>). On a domain controller, <code>ntdsutil \"activate instance ntds\" \"ifm\" \"create full C:\\path\" q q</code> quietly writes a complete copy of <code>ntds.dit</code> along with the <code>SYSTEM</code> registry hive, which holds the boot key needed to decrypt it. Together those two files yield every domain account's password hash for offline cracking and follow-on attacks like golden tickets. Creating and mounting a <code>snapshot</code> reaches the same data by exposing <code>ntds.dit</code> on a mounted volume.</p>\n<p>This is post-compromise activity that requires domain controller administrator rights, which makes it high-signal when it appears. ntdsutil running with <code>ifm</code>, <code>create</code>, or <code>snapshot</code> verbs, especially driven non-interactively by a <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a> or <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a> parent or a remote-execution tool, or any ntdsutil on a machine that is not a domain controller, warrants immediate investigation. Because both the binary and the operations are legitimate, the verbs and the context are what separate maintenance from theft.</p>"
+}

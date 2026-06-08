@@ -1,0 +1,1512 @@
+[
+  {
+    "name": "aggregatorhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "applicationframehost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "attrib.exe",
+    "description": "attrib.exe displays and changes file attributes such as hidden, system, and read-only. Administrators and scripts use it for routine file housekeeping. Attackers use it to hide their files from use...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "audiodg.exe",
+    "description": "audiodg.exe is the Windows Audio Device Graph Isolation process, which runs audio processing, including third-party audio effects, in a separate process from the audio service. It is a normal part...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "media",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "backgroundtaskhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "bcdedit.exe",
+    "description": "bcdedit.exe is the Boot Configuration Data editor, the tool that views and changes how Windows boots. Administrators use it for boot troubleshooting and multi-boot setups. Ransomware uses it to swi...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "bitsadmin.exe",
+    "description": "bitsadmin.exe is a command-line tool for creating and managing BITS (Background Intelligent Transfer Service) jobs, which download or upload files in the background through a Windows service. Windo...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "calculatorapp.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "certutil.exe",
+    "description": "certutil.exe is a Windows command-line tool for working with certificates and Certificate Services. Administrators use it to inspect, request, and manage certificates and certificate authorities, a...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "cipher.exe",
+    "description": "cipher.exe manages Encrypting File System (EFS) encryption on NTFS files and folders, and can also overwrite the free space on a drive. Admins use it to encrypt data and to scrub deleted files. Att...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "cmd.exe",
+    "description": "cmd.exe is the Windows Command Processor, the classic command-line interpreter for Windows. It runs typed commands and batch scripts (.bat and .cmd files), provides built-in commands like dir, copy...",
+    "category": "Shell",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "cmstp.exe",
+    "description": "cmstp.exe is the Connection Manager Profile Installer, meant to install network connection profiles from an INF file. It is rarely used today. Attackers abuse it to run commands through a signed Mi...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "conhost.exe",
+    "description": "conhost.exe is the Console Window Host, the process that provides the text window for command-line programs. Character-mode tools like cmd.exe and powershell.exe use conhost for the console they ru...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "console",
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "control.exe",
+    "description": "control.exe is the program that opens Control Panel and Control Panel items. Windows and users invoke it to reach settings. Attackers abuse it to execute malicious Control Panel files (.cpl), which...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "crossdeviceresume.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "cscript.exe",
+    "description": "cscript.exe is the Windows Script Host in its console form, the program that runs VBScript and JScript files (.vbs, .js, .wsf) from the command line. It writes script output to a terminal instead o...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "scripting",
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "csrss.exe",
+    "description": "csrss.exe is the Client Server Runtime Process, a critical Windows system process that handles user-mode portions of the Win32 subsystem, serving as an essential link between applications and the o...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "sessions",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "ctfmon.exe",
+    "description": "ctfmon.exe is the process behind Windows text input services, handling things like alternative input methods, language switching, handwriting, and speech for the desktop. It runs quietly per user w...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "shell",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "dashost.exe",
+    "description": "dasHost.exe is the Device Association Framework host, the process that manages pairing and connecting wired and wireless devices like Bluetooth peripherals and network-discovered devices. It is a n...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "devices",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "diskshadow.exe",
+    "description": "diskshadow.exe is a tool for working with Volume Shadow Copies, able to run a scripted sequence of shadow operations. Administrators and backup software use it to create and mount snapshots. Attack...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "dllhost.exe",
+    "description": "dllhost.exe is the COM Surrogate, a Windows host process that runs COM components out of process, isolated from the program that called them. Windows uses it constantly for work like generating fil...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "com",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "dwm.exe",
+    "description": "dwm.exe is the Desktop Window Manager, the process that composites the Windows desktop. It draws each window to an off-screen buffer and combines them on the GPU to produce effects like transparenc...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "graphics",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "esentutl.exe",
+    "description": "esentutl.exe is the Extensible Storage Engine maintenance utility, a tool for managing the ESE databases that Windows uses for Active Directory, Windows Search, certificates, and more. Administrato...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "excel.exe",
+    "description": "excel.exe is Microsoft Excel, the spreadsheet application in Microsoft Office. Like Word, it is a frequent malware entry point: a weaponized workbook is opened and a macro runs code. Excel is notab...",
+    "category": "Application",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "office",
+      "microsoft",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "expand.exe",
+    "description": "expand.exe extracts files from Windows cabinet (.cab) archives and can copy files. It is used legitimately during setup and servicing. Attackers use it to copy files, including from remote shares,...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "explorer.exe",
+    "description": "explorer.exe is Windows Explorer, the graphical shell behind the interactive desktop: the taskbar, the Start menu, the system tray, and the file browser windows. One instance runs per signed-in use...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "shell",
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "extrac32.exe",
+    "description": "extrac32.exe extracts files from Windows cabinet (.cab) archives and can copy files. Like expand, it has a legitimate servicing role. Attackers use it to copy files, including across remote shares,...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "findstr.exe",
+    "description": "findstr.exe searches files for text using patterns and regular expressions, the Windows equivalent of grep. Administrators and scripts use it constantly. Attackers use it to hunt for passwords in f...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "fontdrvhost.exe",
+    "description": "fontdrvhost.exe is the Usermode Font Driver Host, the sandboxed process that parses and renders fonts. Windows moved font handling out of the kernel into this restricted process because font files...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "graphics",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "forfiles.exe",
+    "description": "forfiles.exe selects files by name, date, or size and runs a command for each one. Administrators use it in maintenance scripts. Attackers use it as an indirect way to launch programs, executing a...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "fsutil.exe",
+    "description": "fsutil.exe is a file system utility for low-level NTFS and volume tasks. Administrators use it for disk and file system maintenance. Attackers use it for anti-forensics, most notably deleting the U...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "hh.exe",
+    "description": "hh.exe is the Microsoft HTML Help executable, the program that opens compiled help (.chm) files. Users rarely invoke it directly. Attackers abuse it because a CHM is a bundle of HTML that can carry...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "icacls.exe",
+    "description": "icacls.exe displays and changes the permissions (DACLs) on files and folders. Administrators use it to set access control. Attackers use it to grant themselves access to files they should not reach...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "installutil.exe",
+    "description": "installutil.exe is the .NET Framework Installer tool, meant to run the installer components inside a .NET assembly. Administrators and installers use it to register services and components. Attacke...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "logonui.exe",
+    "description": "LogonUI.exe is the process that draws the Windows sign-in and lock screens. When Windows needs credentials, winlogon.exe starts LogonUI.exe to show the prompt and collect the password, PIN, smartca...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "sessions",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "lsaiso.exe",
+    "description": "lsaiso.exe is the LSA Isolated process, the protected vault that appears when Windows Credential Guard is enabled. It holds the credential secrets that would otherwise live inside lsass.exe, keepin...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "credentials",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "lsass.exe",
+    "description": "lsass.exe is the Local Security Authority Subsystem Service, the process that handles authentication and security policy on Windows. It verifies users signing in, issues the access tokens that deci...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "credentials",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "makecab.exe",
+    "description": "makecab.exe compresses files into Windows cabinet (.cab) archives. It is used in packaging and servicing. Attackers use it to compress data for exfiltration, shrinking and bundling collected files...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "mavinject.exe",
+    "description": "mavinject.exe is the Microsoft Application Virtualization (App-V) injector, a helper that injects a DLL into a running process for App-V. Outside App-V it is rarely seen. Attackers use it as a sign...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "microsoftedgeupdate.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "mmc.exe",
+    "description": "mmc.exe is the Microsoft Management Console, the host that runs the administrative snap-ins behind tools like Services, Event Viewer, and Device Manager. Administrators use it constantly. Attackers...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "mpcmdrun.exe",
+    "description": "MpCmdRun.exe is the command-line interface to Microsoft Defender Antivirus, used to run scans, manage signatures, and configure protection. Administrators use it to drive Defender from scripts. Att...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "mpdefendercoreservice.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "msbuild.exe",
+    "description": "msbuild.exe is the Microsoft Build Engine, the tool that compiles and builds .NET projects from XML project files. Developers and build servers use it constantly. Attackers use it as a proxy: becau...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "msdt.exe",
+    "description": "msdt.exe is the Microsoft Support Diagnostic Tool, which runs the troubleshooting wizards Windows uses to diagnose problems. It is mostly invisible to users. It became infamous as the engine behind...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "msdtc.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "msedgewebview2.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "mshta.exe",
+    "description": "mshta.exe is the Microsoft HTML Application Host, the program that runs HTA files. An HTA is an HTML page with embedded VBScript or JScript that runs as a standalone desktop application with full l...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "msiexec.exe",
+    "description": "msiexec.exe is the Windows Installer, the engine that installs, repairs, and removes software packaged as MSI files. It runs constantly and legitimately whenever software is installed or updated. A...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "msmpeng.exe",
+    "description": "MsMpEng.exe is the core engine of Microsoft Defender Antivirus, the service that performs real-time scanning, behavior monitoring, and threat remediation. It is present and busy on most Windows mac...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "mstsc.exe",
+    "description": "mstsc.exe is the Remote Desktop Connection client, the program that opens an RDP session to another computer. Administrators and users use it to reach remote machines. Attackers use it to move late...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "net.exe",
+    "description": "net.exe is the Windows net command, a built-in tool for managing users, groups, shares, sessions, and services from the command line. Administrators use it everywhere for routine networking and acc...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "net1.exe",
+    "description": "net1.exe is the worker binary behind the Windows net command. For most net sub-commands, net.exe forwards the actual work to net1.exe, so it normally appears as a child of net.exe and shares its en...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "ngen.exe",
+    "description": "ngen.exe is the .NET Native Image Generator, which precompiles .NET assemblies to native code for faster startup. It runs as part of .NET servicing. Attackers abuse the scheduled tasks and executio...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "nissrv.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "nltest.exe",
+    "description": "nltest.exe is a domain diagnostic tool for querying domain controllers and trust relationships. Administrators use it to troubleshoot secure channels and locate DCs. Attackers use it to map the dom...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "ntdsutil.exe",
+    "description": "ntdsutil.exe is the command-line tool for maintaining the Active Directory database. Domain controller administrators use it for database housekeeping, authoritative restores, and snapshots of the...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "active-directory",
+      "microsoft",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "odbcconf.exe",
+    "description": "odbcconf.exe is the ODBC configuration tool, used to configure ODBC drivers and data sources from the command line. It is rarely seen in normal use. Attackers abuse its ability to register a DLL to...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "onedrive.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "outlook.exe",
+    "description": "outlook.exe is Microsoft Outlook, the email and calendar client in Microsoft Office. It is where phishing lands, so it is often the first process in an intrusion: the user reads a message and opens...",
+    "category": "Application",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "office",
+      "microsoft"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "powershell.exe",
+    "description": "powershell.exe is Windows PowerShell, Microsoft's command-line shell and scripting language for administration and automation. Built on .NET, it runs commands called cmdlets and full scripts that m...",
+    "category": "Shell",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "scripting",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "quser.exe",
+    "description": "quser.exe shows the user sessions on a machine: who is logged on, whether each session is active or disconnected, and how long it has been idle. Administrators use it to see who is using a server....",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "reg.exe",
+    "description": "reg.exe is the Console Registry Tool, the command-line program for reading and writing the Windows registry. It can query, add, delete, export, import, and save registry keys, on the local machine...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "regasm.exe",
+    "description": "regasm.exe is the .NET Assembly Registration tool, used to register a .NET assembly so that COM clients can call it. Developers use it when exposing managed code to COM. Attackers use it to run a m...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "regsvcs.exe",
+    "description": "regsvcs.exe is the .NET Services Installation tool, used to register a .NET assembly as a COM+ / Enterprise Services component. Developers use it for serviced components. Attackers use it the same...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "regsvr32.exe",
+    "description": "regsvr32.exe is the Windows utility for registering and unregistering COM components, the DLLs and ActiveX controls (.ocx) that programs share through the registry. Software installers use it to wi...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "rundll32.exe",
+    "description": "rundll32.exe is a Windows utility that runs functions exported by DLL files. Because a DLL cannot execute on its own, Windows uses rundll32.exe to call a specific function inside one, which is how...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "runtimebroker.exe",
+    "description": "RuntimeBroker.exe is the Runtime Broker, the process that manages permissions for Microsoft Store apps. When a Store app wants access to something sensitive like location, camera, microphone, or fi...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "apps",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "sc.exe",
+    "description": "sc.exe is the Service Control utility, the command-line front end to the Windows Service Control Manager. Administrators use it to create, configure, start, stop, query, and delete services and dri...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "schtasks.exe",
+    "description": "schtasks.exe is the command-line interface to the Windows Task Scheduler. It creates, runs, queries, changes, and deletes scheduled tasks, programs set to run on a trigger like a time, a logon, or...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "searchhost.exe",
+    "description": "SearchHost.exe renders the Windows search interface, the box and flyout on the taskbar that searches apps, files, and the web. It is the Windows 11 successor to the older SearchUI.exe and SearchApp...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "search",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "searchindexer.exe",
+    "description": "SearchIndexer.exe is the Windows Search service, which builds and maintains the index that powers fast file and content search across the Start menu, Explorer, and Outlook. It runs continuously as...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "search",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "securityhealthservice.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "securityhealthsystray.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "services.exe",
+    "description": "services.exe is the Service Control Manager (SCM), a core Windows process responsible for starting, stopping, and managing the system services that run in the background. It's launched during boot...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "services",
+      "boot",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "shellexperiencehost.exe",
+    "description": "ShellExperienceHost.exe renders parts of the modern Windows shell, such as the action center, notifications, and other system UI surfaces drawn with the Universal Windows Platform. It runs per user...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "shell",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "shellhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "sihost.exe",
+    "description": "sihost.exe is the Shell Infrastructure Host, a per-user process that runs visual and interactive parts of the Windows shell. It handles elements like the Start menu layout, taskbar transparency, th...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "shell",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "smartscreen.exe",
+    "description": "smartscreen.exe runs Windows Defender SmartScreen, the reputation check that warns before running downloaded files and visiting risky sites. It appears when the shell needs a reputation decision. I...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "security",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "smss.exe",
+    "description": "smss.exe is the Windows Session Manager, the first user-mode process the kernel starts during boot. It prepares the machine for use, handling setup tasks like creating the page files, setting the s...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "sessions",
+      "boot",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "spoolsv.exe",
+    "description": "spoolsv.exe is the Print Spooler service, the Windows component that manages print jobs, printer queues, and printer drivers. It runs as SYSTEM and is present on nearly every Windows machine, inclu...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "printing",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "ssh.exe",
+    "description": "ssh.exe is the OpenSSH client built into modern Windows, used to open secure shell connections to other machines. Administrators use it to manage Linux and Windows hosts. Attackers use it for later...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "startmenuexperiencehost.exe",
+    "description": "StartMenuExperienceHost.exe is the process that renders the Windows Start menu. Windows split it out from the rest of the shell so the Start menu stays responsive on its own. It runs per user and i...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "shell",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "svchost.exe",
+    "description": "Service Host (svchost.exe) is the generic host process for Windows services implemented as DLLs rather than standalone executables. A typical system runs many svchost instances simultaneously, each...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "services",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "sysmon64.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "system",
+    "description": "System (PID 4) is a special Windows kernel-mode process. It hosts threads running code from the operating system's core (ntoskrnl.exe) and drivers, handling low-level tasks like memory management a...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "kernel",
+      "boot",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "systeminfo.exe",
+    "description": "systeminfo.exe reports detailed configuration about a computer and its operating system: the OS version and build, installed hotfixes, hardware, domain membership, and network adapters. Administrat...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "takeown.exe",
+    "description": "takeown.exe changes the owner of a file or folder to the current user (or the Administrators group). Administrators use it to regain access to files they have been locked out of. Attackers use it,...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "taskhostw.exe",
+    "description": "taskhostw.exe is a generic Windows host process whose job is to run tasks that are packaged as DLLs rather than as standalone executables. Since a DLL can't launch on its own, taskhostw.exe acts as...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "tasks",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "taskkill.exe",
+    "description": "taskkill.exe is the command-line tool for ending running processes, by name or process ID, on the local machine or a remote one. Administrators use it to close hung or unwanted programs. Attackers...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "tasklist.exe",
+    "description": "tasklist.exe lists the processes running on a computer, locally or on a remote machine, with options to show the services and DLLs each one hosts. Administrators use it to inspect what is running....",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "taskmgr.exe",
+    "description": "taskmgr.exe is Windows Task Manager, the built-in tool for viewing and managing running processes, performance, services, and startup items. Users and administrators open it constantly. Its relevan...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "textinputhost.exe",
+    "description": "TextInputHost.exe renders the modern Windows input surfaces, the touch keyboard, emoji and symbol panel, handwriting, and related input UI. It runs per user as part of the desktop and is a routine...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "shell",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "unsecapp.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "userinit.exe",
+    "description": "userinit.exe is the Userinit Logon Application, the process that prepares a user's environment at sign-in and then hands off to the desktop. After winlogon.exe authenticates the user, it runs useri...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "sessions",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "vgauthservice.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "vm3dservice.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "vmtoolsd.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "vssadmin.exe",
+    "description": "vssadmin.exe is the command-line tool for managing Volume Shadow Copies, the point-in-time snapshots Windows uses for backups and System Restore. Administrators and backup software use it to create...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wbadmin.exe",
+    "description": "wbadmin.exe is the Windows Backup command-line tool, used to create and recover backups of volumes, files, and system state. Administrators use it for backup and restore. Attackers use it to delete...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "werfault.exe",
+    "description": "WerFault.exe is the Windows Error Reporting process, the program Windows starts when an application crashes or hangs to collect diagnostic data and offer to report it. It appears briefly and often....",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wevtutil.exe",
+    "description": "wevtutil.exe is the Windows Events command-line utility, a tool for managing the event logs. It can query, export, and configure logs and event publishers, and it can clear a log entirely. Administ...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "whoami.exe",
+    "description": "whoami.exe is the command-line tool that reports who the current user is, the account name, its security identifier, the groups it belongs to, and the privileges it holds. Administrators use it to...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "widgets.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "widgetservice.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "wininit.exe",
+    "description": "wininit.exe is the Windows Start-Up Application, the process that brings session 0 to life during boot. It launches the core system processes that everything else depends on, most importantly servi...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "boot",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "winlogon.exe",
+    "description": "winlogon.exe is the Windows Logon Application, the process that manages signing in and out of a Windows session. It runs in the background for each interactive user session and coordinates the step...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "sessions",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "winrs.exe",
+    "description": "winrs.exe is the Windows Remote Shell client, which runs commands on a remote machine over WinRM. Administrators use it for remote management from the command line. Attackers use it for lateral mov...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "winword.exe",
+    "description": "winword.exe is Microsoft Word, the word processor in Microsoft Office. It is one of the most common ways malware reaches a machine: a weaponized document arrives by email, the user opens it in Word...",
+    "category": "Application",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "office",
+      "microsoft",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wlms.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "wmic.exe",
+    "description": "wmic.exe is the WMI command-line utility, a tool for querying and controlling Windows through Windows Management Instrumentation (WMI). Administrators use it to read system information, manage proc...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wmiprvse.exe",
+    "description": "WmiPrvSE.exe is the WMI Provider Host, the process that runs WMI provider code out of process on behalf of the WMI service. Almost any management query or action that uses Windows Management Instru...",
+    "category": "System",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "wmi",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wscript.exe",
+    "description": "wscript.exe is the Windows Script Host in its windowed form, the program that runs VBScript and JScript files (.vbs, .js, .wsf). It is the default handler for a double-clicked script and shows outp...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "scripting",
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wsmprovhost.exe",
+    "description": "wsmprovhost.exe is the host process for incoming PowerShell Remoting and Windows Remote Management (WinRM) sessions. When someone connects to a machine over PowerShell Remoting, the commands they r...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wuauclt.exe",
+    "description": "wuauclt.exe is the legacy Windows Update client used to trigger and control update checks from the command line. It is mostly superseded on modern Windows. Attackers abused a specific option that m...",
+    "category": "Utility",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "microsoft",
+      "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  }
+]
