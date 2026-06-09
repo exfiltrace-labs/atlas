@@ -6,6 +6,24 @@
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
     }
   ]
 }

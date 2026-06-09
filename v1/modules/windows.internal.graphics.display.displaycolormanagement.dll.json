@@ -1,0 +1,23 @@
+{
+  "name": "windows.internal.graphics.display.displaycolormanagement.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.2,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

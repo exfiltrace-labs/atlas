@@ -1,0 +1,17 @@
+{
+  "name": "actionfxproxystubs.dll",
+  "loaded_by": [
+    {
+      "name": "appactions.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "filecoauth.exe",
+      "weight": "rare",
+      "pct": 16.7,
+      "lolbin": false
+    }
+  ]
+}

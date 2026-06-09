@@ -1,0 +1,11 @@
+{
+  "name": "windowscodecsext.dll",
+  "loaded_by": [
+    {
+      "name": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

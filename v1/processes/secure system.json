@@ -1,0 +1,125 @@
+{
+  "name": "secure system",
+  "aliases": [],
+  "category": "System",
+  "tags": [
+    "kernel",
+    "vbs",
+    "virtualization",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "Secure System represents the secure kernel of virtualization-based security (VBS). It is present only when VBS is enabled, has no on-disk image and no command line, and is parented by System.\n",
+  "about": "Secure System is a minimal process that stands in for the isolated secure environment that virtualization-based security creates. With VBS enabled, Hyper-V runs a second, more-trusted kernel (the secure kernel) in Virtual Trust Level 1, isolated from the normal kernel and drivers in Virtual Trust Level 0. Secure System is how that secure world is represented to the normal world; it owns an address space but runs no user-mode image of its own.\n\nIt is created by the kernel during boot when VBS is on, runs as `NT AUTHORITY\\SYSTEM`, and is parented by `System` (PID 4); the PID is assigned at boot. Its presence is a function of configuration: machines with VBS, HVCI, or Credential Guard enabled show it, and machines without those features do not. Process Explorer lists it with no image path or command line.\n",
+  "publisher": null,
+  "issuer": null,
+  "cert_serial": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "architectures": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "A process named Secure System backed by an executable file on disk (there is no image for it)",
+      "severity": "high"
+    },
+    {
+      "signal": "A process named Secure System with a command line",
+      "severity": "high"
+    },
+    {
+      "signal": "A visible parent other than `System` (PID 4)",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Windows ships no executable for Secure System. The name is a candidate for masquerading (T1036.005), so a process using it that has an on-disk image, a command line, or a parent other than `System` is not the secure kernel. Its presence or absence reflects whether VBS is configured, not whether a host is compromised.\n",
+  "mitre_attack": [
+    "T1036.005"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/tlfs/vsm",
+    "https://attack.mitre.org/techniques/T1036/005/"
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "A process named Secure System backed by an executable file on disk (there is no image for it)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A process named Secure System backed by an executable file on disk (there is no image for it)"
+    },
+    {
+      "signal": "A process named Secure System with a command line",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A process named Secure System with a command line"
+    },
+    {
+      "signal": "A visible parent other than `System` (PID 4)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A visible parent other than <code>System</code> (PID 4)"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as any account other than <code>NT AUTHORITY\\SYSTEM</code>"
+    }
+  ],
+  "about_html": "<p>Secure System is a minimal process that stands in for the isolated secure environment that virtualization-based security creates. With VBS enabled, Hyper-V runs a second, more-trusted kernel (the secure kernel) in Virtual Trust Level 1, isolated from the normal kernel and drivers in Virtual Trust Level 0. Secure System is how that secure world is represented to the normal world; it owns an address space but runs no user-mode image of its own.</p>\n<p>It is created by the kernel during boot when VBS is on, runs as <code>NT AUTHORITY\\SYSTEM</code>, and is parented by <code>System</code> (PID 4); the PID is assigned at boot. Its presence is a function of configuration: machines with VBS, HVCI, or Credential Guard enabled show it, and machines without those features do not. Process Explorer lists it with no image path or command line.</p>",
+  "security_notes_html": "<p>Windows ships no executable for Secure System. The name is a candidate for masquerading (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), so a process using it that has an on-disk image, a command line, or a parent other than <code>System</code> is not the secure kernel. Its presence or absence reflects whether VBS is configured, not whether a host is compromised.</p>"
+}

@@ -1,0 +1,356 @@
+{
+  "name": "cookie_exporter.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "330000047F2F422A735308DEEA00000000047F",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "cookie_exporter.exe",
+    "internal_name": "cookie_exporter_exe",
+    "product": "Microsoft Edge",
+    "copyright": "Copyright Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "140.0.3485.66",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "115.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "ea2f8cbc69a1a01142a1edd8b1256fecbc1d9f2d",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 112,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\cookie_exporter.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msedge.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ondemandconnroutehelper.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cookie_exporter.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msedge_elf.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Low",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "cookie_exporter.exe --cookie-json=1068",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "1fe5baf0ee5946c060f326fdb8f7587d630e9de1",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "5cadbb6746abd862d1ba45a637e438fe",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "f1e63fdc7d755a4efba9e1044d72fe73d184b5b5823eb120645e10345cb9e6c9",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:+GnRppeQBMWRywl4/5vndNI3KKW4+NLluX8++++YYqcQ:/nRpAFWcwl4hvndNIaTNR++++Yzd",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "d7f76b56e56b1d2be311ff03b779a0f5",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "8ee3e3210891da01f3bb65c15a311e207f656a3f31cfefb0ac7b38a130c0ba21",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

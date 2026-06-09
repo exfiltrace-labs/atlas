@@ -1,0 +1,131 @@
+{
+  "name": "wldp.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "uncommon",
+      "pct": 25.4,
+      "lolbin": false
+    },
+    {
+      "name": "cmd.exe",
+      "weight": "common",
+      "pct": 55.6,
+      "lolbin": true
+    },
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 14.8,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 15,
+      "lolbin": true
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 21.1,
+      "lolbin": false
+    },
+    {
+      "name": "ngen.exe",
+      "weight": "rare",
+      "pct": 5.3,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "powershell.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "rundll32.exe",
+      "weight": "common",
+      "pct": 60,
+      "lolbin": true
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "setup.exe",
+      "weight": "rare",
+      "pct": 12.5,
+      "lolbin": false
+    },
+    {
+      "name": "smartscreen.exe",
+      "weight": "uncommon",
+      "pct": 37.5,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 3.5,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 8.5,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 11.9,
+      "lolbin": false
+    }
+  ]
+}

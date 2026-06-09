@@ -1,0 +1,17 @@
+{
+  "name": "wsxpackmanager.dll",
+  "loaded_by": [
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 3.1,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    }
+  ]
+}

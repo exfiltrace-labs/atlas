@@ -1,0 +1,11 @@
+{
+  "name": "napcrypt.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 1.2,
+      "lolbin": false
+    }
+  ]
+}

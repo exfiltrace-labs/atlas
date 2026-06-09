@@ -1,0 +1,11 @@
+{
+  "name": "mpsvc.dll",
+  "loaded_by": [
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 10.5,
+      "lolbin": false
+    }
+  ]
+}

@@ -11,43 +11,176 @@
   ],
   "description": "findstr.exe searches files for text using patterns and regular expressions, the Windows equivalent of grep. Administrators and scripts use it constantly. Attackers use it to hunt for passwords in files and, through a lesser-known quirk, to copy or read files from remote shares.\n",
   "about": "findstr.exe searches the contents of files for literal strings or regular expressions and prints the matching lines. It is a normal part of batch scripting and troubleshooting. It also has a quirk attackers exploit: it can read a target file across a UNC path, which lets it pull content from a remote share. The genuine binary lives at `C:\\Windows\\System32\\findstr.exe`.\n\nLegitimately, findstr appears throughout scripts and interactive troubleshooting. What it is searching for, and where, are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "FINDSTR.EXE.MUI",
+    "internal_name": "findstr",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "64.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 88.7,
+  "host_prevalence": 100,
+  "execution_rank": 50,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 3,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\findstr.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "findstr.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\findstr.exe`",
@@ -70,8 +203,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "findstr  /i \"Image Name:   Secure System\"",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "faf6c2abbd03b51b5852a294eaafc7ce",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "14188b880d4410eaf7168fb629fd6fb59bea3dac",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "46bdb9125c43bd3f63c233a7b0d021b04e867c4d19b72ddbcf6e5f2a392014d3",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "768:DfmKeqtAJuTT2gStwTUI/GNPLDaCDXhok0aqtbY:SKeqNTTtS2TUI/GN6Kik0aqtbY",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "8afca394390d2edbf20d6c1b7d4735e20530b25fa1d4f387bc5bee92bc06efc1",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "88679010b86318285f44e6b29f42e6c9",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "e43de137e75349cacf2760abfc338340",
+      "pct": 100
+    }
+  ],
   "security_notes": "findstr.exe is a quick way to harvest credentials left in files (T1552.001). A search for terms like `password` across configuration files, scripts, and saved exports turns up plaintext secrets that applications and admins leave behind, a fast win during post-exploitation reconnaissance.\n\nIts UNC-reading quirk also makes it a minor ingress tool (T1105): because findstr can read a file from a remote share, it can be used to pull content from another host through a signed binary. Because findstr is an everyday search tool, the search terms, the targets, and any remote paths are what separate ordinary scripting from credential hunting.\n",
   "mitre_attack": [
     "T1552.001",

@@ -3,8 +3,8 @@
   "loaded_by": [
     {
       "name": "wmiprvse.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "rare",
+      "pct": 2.4,
       "lolbin": false
     }
   ]

@@ -1,0 +1,29 @@
+{
+  "name": "clrjit.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "common",
+      "pct": 68.9,
+      "lolbin": false
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "powershell.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

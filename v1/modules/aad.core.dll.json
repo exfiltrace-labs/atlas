@@ -3,8 +3,8 @@
   "loaded_by": [
     {
       "name": "backgroundtaskhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "uncommon",
+      "pct": 35.6,
       "lolbin": false
     }
   ]

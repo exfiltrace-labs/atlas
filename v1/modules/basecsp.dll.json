@@ -1,0 +1,11 @@
+{
+  "name": "basecsp.dll",
+  "loaded_by": [
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

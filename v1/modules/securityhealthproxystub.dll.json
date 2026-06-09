@@ -1,0 +1,23 @@
+{
+  "name": "securityhealthproxystub.dll",
+  "loaded_by": [
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

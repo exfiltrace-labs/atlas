@@ -1,0 +1,11 @@
+{
+  "name": "mpengine.dll",
+  "loaded_by": [
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 15.8,
+      "lolbin": false
+    }
+  ]
+}

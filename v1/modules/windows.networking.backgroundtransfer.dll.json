@@ -1,0 +1,23 @@
+{
+  "name": "windows.networking.backgroundtransfer.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 1.7,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtransferhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    }
+  ]
+}

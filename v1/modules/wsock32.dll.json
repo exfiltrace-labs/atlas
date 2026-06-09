@@ -1,0 +1,17 @@
+{
+  "name": "wsock32.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.3,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.sync.service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

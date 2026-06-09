@@ -1,0 +1,17 @@
+{
+  "name": "system.core.ni.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "uncommon",
+      "pct": 47.6,
+      "lolbin": false
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    }
+  ]
+}

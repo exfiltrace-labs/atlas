@@ -10,43 +10,237 @@
   ],
   "description": "wevtutil.exe is the Windows Events command-line utility, a tool for managing the event logs. It can query, export, and configure logs and event publishers, and it can clear a log entirely. Administrators use it for log management. Attackers use it to wipe the evidence of their activity and to turn logging off.\n",
   "about": "wevtutil.exe administers the Windows event logging system. It can list logs and publishers (`el`, `ep`), show or change a log's configuration (`gl`, `sl`), read events (`qe`), export and archive a log (`epl`, `al`), and clear a log (`cl`). Several operations can also run against a remote machine with the `/r` option. The genuine binary lives at `C:\\Windows\\System32\\wevtutil.exe`.\n\nLegitimately, wevtutil is run by administrators and monitoring tools to read, export, and configure logs as part of diagnostics or log collection. The verb and the target log, both on the command line, are what give an instance meaning. Reading and exporting are routine. Clearing and disabling are not.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "330000045FF3C96C1A7FF7DA1D00000000045F",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "wevtutil.exe.mui",
+    "internal_name": "wevtutil.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1000 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "292.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "71f53a26bb1625e466727183409a30d03d7923df",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 94.8,
+  "host_prevalence": 100,
+  "execution_rank": 27,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 5,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\wevtutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 40
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wevtutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msxml6.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wevtapi.dll",
+      "weight": "common",
+      "pct": 60
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "Interactive user",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "High",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "Session 1",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\wevtutil.exe`",
@@ -73,8 +267,65 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\wevtutil.exe\" install-manifest \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.8_8000.859.21.0_x64__8wekyb3d8bbwe\\EventLog-Instrumentation.man\" /resourceFilePath:\"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.8_8000.859.21.0_x64__8wekyb3d8bbwe\\WindowsAppSdk.<redacted>.Desktop-EventLog-Instrumentation.dll\" /messageFilePath:\"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.8_8000.859.21.0_x64__8wekyb3d8bbwe\\WindowsAppSdk.<redacted>.Desktop-EventLog-Instrumentation.dll\" /unicode:true",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\WINDOWS\\system32\\wevtutil.exe\" sl Microsoft-Windows-Sysmon/Operational /ms:<n>",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\WINDOWS\\system32\\wevtutil.exe\" install-manifest \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.8_8000.859.21.0_x86__8wekyb3d8bbwe\\EventLog-Instrumentation.man\" /resourceFilePath:\"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.8_8000.859.21.0_x86__8wekyb3d8bbwe\\WindowsAppSdk.<redacted>.Desktop-EventLog-Instrumentation.dll\" /messageFilePath:\"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.8_8000.859.21.0_x86__8wekyb3d8bbwe\\WindowsAppSdk.<redacted>.Desktop-EventLog-Instrumentation.dll\" /unicode:true",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\WINDOWS\\system32\\wevtutil.exe\" uninstall-manifest \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.3_3000.934.1904.0_x64__8wekyb3d8bbwe\\EventLog-Instrumentation.man\" /unicode:true",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\WINDOWS\\system32\\wevtutil.exe\" uninstall-manifest \"C:\\Program Files\\WindowsApps\\Microsoft.WindowsAppRuntime.1.8_8000.859.21.0_x86__8wekyb3d8bbwe\\EventLog-Instrumentation.man\" /unicode:true",
+      "pct": 20
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "998a23546f2a1f91d632c6106419ff20ce8d00d5",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "9d0b0164498dee3da72df328e7ae8c0b",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "0ea582d5a4eb48096b40c2f7a102e465daea69c816c8faea481b68d8fd0929d5",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "05fa1d0143f2115003e4fb2e62b798fb",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "af54d4fa49cd679d47064d30bd1b7641",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "8a01f8230d523ccd034bb35bae174d6b8fd736aefc721ad2d06030b5961e2ca7",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:yDbFN2u1f2beTL5cA87laG5qpENv/8UxYNPpJ1ruWKEkGAGHaZKgQWFoI:EtfVHKxJqpENv/8UCJUWjthHaZKtEoI",
+      "pct": 100
+    }
+  ],
   "security_notes": "wevtutil.exe is a standard tool for destroying logs after an intrusion (T1685.005). `wevtutil cl Security`, and the same against `System`, `Application`, or the PowerShell operational log, erases a log outright, and clearing several in a row is a strong indicator of anti-forensics. The act does leave a trace of its own: clearing the Security log writes event ID 1102, and clearing any other log writes event ID 104, so the gap and the clear-event together tell the story.\n\nIt can also switch logging off before anything is recorded (T1685.001). `wevtutil sl <log> /e:false` disables a log, which is quieter than clearing because there is no after-the-fact wipe to notice, future events simply never land. Disabling security-relevant logs, the Security channel, PowerShell operational, or a Sysmon channel, is high-signal. Because wevtutil is a legitimate administrative tool, the verb and the targeted log are what separate log management from evidence tampering.\n",
   "mitre_attack": [
     "T1685.005",

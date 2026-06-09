@@ -1,0 +1,17 @@
+{
+  "name": "wcmapi.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.9,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

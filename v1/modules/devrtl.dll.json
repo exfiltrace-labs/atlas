@@ -1,0 +1,47 @@
+{
+  "name": "devrtl.dll",
+  "loaded_by": [
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "dllhost.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": false
+    },
+    {
+      "name": "drvinst.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 4.8,
+      "lolbin": false
+    },
+    {
+      "name": "wuaucltcore.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

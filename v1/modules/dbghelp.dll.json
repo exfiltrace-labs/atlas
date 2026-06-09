@@ -1,0 +1,95 @@
+{
+  "name": "dbghelp.dll",
+  "loaded_by": [
+    {
+      "name": "chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "chromesetup.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "compattelrunner.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "elevation_service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "identity_helper.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 13.1,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 15,
+      "lolbin": true
+    },
+    {
+      "name": "os_update_handler.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "platform_experience_helper.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 27.3,
+      "lolbin": false
+    },
+    {
+      "name": "setup.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    },
+    {
+      "name": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 2.4,
+      "lolbin": false
+    }
+  ]
+}

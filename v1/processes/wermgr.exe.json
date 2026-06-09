@@ -1,0 +1,428 @@
+{
+  "name": "wermgr.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "WerMgr",
+    "internal_name": "WerMgr",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "293.40 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 45,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\wermgr.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "policymanager.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "diagnosticdatasettings.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wermgr.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wer.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\wermgr.exe\" -upload",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "4368d15ac040363891013d788d3f4fcd91e944f9",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "6144:DRSRFgjV7Zk1GPwEGBUHVJyB60OHyLC7vd:9V7Zk1G9GB+c2HywF",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "1625290ef1dff2082bca7d3995a1acd20ba641b7277db30659ccc8d3094c4b87",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "ab300dede19e5162bae0307bebc2c7fe",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "7a8ea86f4c769db46bd9554ec8277065",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "13e533d800ae2fe6f9bfda46f964d1f2",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "cfa0731b064ebd65725b20c43642f7bdc56be9bc4b84097cc531616ccde0c052",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "cd479ccc-d8f0-4c66-ba7d-e06286f3f887",
+      "title": "Potential CVE-2021-26857 Exploitation Attempt",
+      "level": "high",
+      "techniques": [
+        "T1203"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2021/Exploits/CVE-2021-26857/proc_creation_win_exploit_cve_2021_26857_msexchange.yml",
+      "match": "image"
+    },
+    {
+      "id": "50dbc08b-60ce-40f1-a6b6-346497e34c88",
+      "title": "Potential CVE-2023-36874 Exploitation - Fake Wermgr Execution",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Exploits/CVE-2023-36874/proc_creation_win_exploit_cve_2023_36874_fake_wermgr.yml",
+      "match": "image"
+    },
+    {
+      "id": "0ba1da6d-b6ce-4366-828c-18826c9de23e",
+      "title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+      "level": "high",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_binary_highly_relevant.yml",
+      "match": "image"
+    },
+    {
+      "id": "d8937fe7-42d5-4b4d-8178-e089c908f63f",
+      "title": "Potential Pikabot Hollowing Activity",
+      "level": "high",
+      "techniques": [
+        "T1055.012"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Pikabot/proc_creation_win_malware_pikabot_rundll32_hollowing.yml",
+      "match": "image"
+    },
+    {
+      "id": "396f6630-f3ac-44e3-bfc8-1b161bc00c4e",
+      "title": "Suspicious Child Process Of Wermgr.EXE",
+      "level": "high",
+      "techniques": [
+        "T1055",
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml",
+      "match": "parent"
+    },
+    {
+      "id": "5394fcc7-aeb2-43b5-9a09-cac9fc5edcd5",
+      "title": "Suspicious Execution Location Of Wermgr.EXE",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_exec_location.yml",
+      "match": "image"
+    },
+    {
+      "id": "cbec226f-63d9-4eca-9f52-dfb6652f24df",
+      "title": "Suspicious Process Parents",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_parents.yml",
+      "match": "image"
+    },
+    {
+      "id": "58bf96d9-ff5f-44bd-8dcc-1c4f79bf3a27",
+      "title": "Trickbot Malware Activity",
+      "level": "high",
+      "techniques": [
+        "T1559"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2020/Malware/Trickbot/proc_creation_win_malware_trickbot_wermgr.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0650",
+          "name": "QakBot"
+        },
+        {
+          "id": "S0266",
+          "name": "TrickBot"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ]
+}

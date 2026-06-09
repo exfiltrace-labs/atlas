@@ -1,0 +1,41 @@
+{
+  "name": "avrt.dll",
+  "loaded_by": [
+    {
+      "name": "audiodg.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "dwm.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 1.4,
+      "lolbin": false
+    }
+  ]
+}

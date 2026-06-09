@@ -1,0 +1,29 @@
+{
+  "name": "es.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.7,
+      "lolbin": false
+    },
+    {
+      "name": "vssvc.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

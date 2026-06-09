@@ -1,0 +1,11 @@
+{
+  "name": "mbmediamanager.dll",
+  "loaded_by": [
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 4.2,
+      "lolbin": false
+    }
+  ]
+}

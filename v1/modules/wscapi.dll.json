@@ -1,0 +1,59 @@
+{
+  "name": "wscapi.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 13,
+      "lolbin": true
+    },
+    {
+      "name": "filecoauth.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "microsoft.sharepoint.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 6.6,
+      "lolbin": true
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 10.5,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.sync.service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    }
+  ]
+}

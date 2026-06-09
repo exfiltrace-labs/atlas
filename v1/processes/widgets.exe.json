@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "330000041F1CA0357F3F17771800000000041F",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -23,74 +24,930 @@
   },
   "file_versions": [
     {
-      "value": "526.11701.10.0",
+      "value": "424.1301.2770.0",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "2859.90 KB",
+      "value": "2535.30 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "ed16dce519406590b46e3edb2f4f3538224f31e4",
+      "value": "44e6ef23ce18d8ef2b75e4381e7efc27c67c7eb6",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 43,
+  "execution_rank": 93,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
-      "value": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_526.11701.50.0_x64__cw5n1h2txyewy\\Dashboard\\Widgets.exe",
+      "value": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_424.1301.270.9_x64__cw5n1h2txyewy\\Dashboard\\Widgets.exe",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
-  "expected_grandchildren": [],
-  "network_ports": [],
-  "listening_ports": [],
-  "network_destinations": [],
-  "loaded_modules": [
+  "expected_parents": [
     {
-      "value": "d2d1.dll",
+      "value": "svchost.exe",
       "weight": "ubiquitous",
       "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_ports": [
+    {
+      "value": "443/tcp",
+      "weight": "ubiquitous",
+      "pct": 81.8
+    },
+    {
+      "value": "80/tcp",
+      "weight": "rare",
+      "pct": 18.2
+    }
+  ],
+  "listening_ports": [],
+  "network_destinations": [
+    {
+      "value": "akamaitechnologies.com",
+      "weight": "ubiquitous",
+      "pct": 90.9
+    },
+    {
+      "value": "a-msedge.net",
+      "weight": "rare",
+      "pct": 9.1
+    }
+  ],
+  "loaded_modules": [
+    {
+      "value": "rsaenh.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "vcruntime140_1_app.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ninput.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "certenroll.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "microsoft.windows.widgets.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "icu.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "certca.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ncryptsslp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.ui.accessibility.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
     },
     {
       "value": "windows.storage.search.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.security.winmd",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ondemandconnroutehelper.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "geolocation.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "utcutil.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "schannel.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "mssprxy.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.storage.applicationdata.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winrttracing.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wosc.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "biwinrt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.applicationmodel.background.timebroker.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "shellcommoncommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "embeddedbrowserwebview.dll",
+      "weight": "uncommon",
+      "pct": 28.6
     },
     {
       "value": "onecorecommonproxystub.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.security.authentication.web.core.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "vcruntime140_app.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "bcp47mrm.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "version.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "capauthz.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.system.profile.platformdiagnosticsandusagedatasettings.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.foundation.winmd",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.web.http.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msvcp140_app.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windowsudk.shellcommon.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "webview2loader.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "microsoft.windows.widgets.winmd",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.ui.immersive.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "slc.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.applicationmodel.background.systemeventsbroker.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.ui.winmd",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "vaultcli.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "concrt140_app.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "diagnosticdatasettings.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "locationframeworkps.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "rometadata.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "flightsettings.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "dcomp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.applicationmodel.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msxml6.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cryptowinrt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "dusmapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "mlang.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "threadpoolwinrt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.storage.winmd",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "profext.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "windows.networking.connectivity.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "capabilityaccessmanagerclient.dll",
+      "weight": "uncommon",
+      "pct": 28.6
     },
     {
       "value": "windows.system.launcher.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "systemsettings.datamodel.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wpnapps.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "webio.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "windows.energy.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "microsoftaccountwamextension.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "aadwamextension.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "coml2.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "windows.fileexplorer.common.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "execmodelclient.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "execmodelproxy.dll",
+      "weight": "rare",
+      "pct": 14.3
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\srvsvc",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "\\WidgetsCommandPipe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "\\LOCAL\\mojo.5664.6032.<n>",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "\\LOCAL\\mojo.2064.4820.<n>",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 1",
@@ -114,26 +971,67 @@
   ],
   "process_handles": [
     {
-      "value": "explorer.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "msedgewebview2.exe",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 80
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 40
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_424.1301.270.9_x64__cw5n1h2txyewy\\Dashboard\\Widgets.exe\" -ServerName:Microsoft.Windows.DashboardServer",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "5bc67ba110bd165b5a30ee189121074ee1975f674ead4dd44c68a97a763debef",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "b5f7a80f844d41813ee7563c1950523a0bb5b70f",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "2a272d420d5c19744b390ec9e70f3b91",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "8f628d729255acec9f45c1aece6018b3b0c403cabf73b1501725126771176e43",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "25681cea63b75cf924251881c6c1250e",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "49152:UbJu2OEsAJovXlLEXmvftRBFhisDX/xOM4Ma8MPanCmamZNK:UR/EtRBq+FNK",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "d2aa5ab8f750b584a5fa7b8bcc990e2e",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

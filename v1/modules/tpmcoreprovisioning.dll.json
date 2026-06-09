@@ -1,0 +1,29 @@
+{
+  "name": "tpmcoreprovisioning.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": true
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 4.8,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "contentdeliverymanager.utilities.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 15.3,
+      "lolbin": false
+    },
+    {
+      "name": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 7.8,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    }
+  ]
+}

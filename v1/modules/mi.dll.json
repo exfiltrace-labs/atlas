@@ -3,8 +3,20 @@
   "loaded_by": [
     {
       "name": "powershell.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.4,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 2.4,
       "lolbin": false
     }
   ]

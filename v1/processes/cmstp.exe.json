@@ -11,43 +11,287 @@
   ],
   "description": "cmstp.exe is the Connection Manager Profile Installer, meant to install network connection profiles from an INF file. It is rarely used today. Attackers abuse it to run commands through a signed Microsoft binary and to bypass User Account Control, driven entirely by a crafted INF.\n",
   "about": "cmstp.exe installs or removes Connection Manager service profiles described in an INF file. An INF can specify scriptable actions that run during installation, and that is the mechanism attackers repurpose: a crafted INF tells cmstp to fetch and run a command or scriptlet. The genuine binary lives at `C:\\Windows\\System32\\cmstp.exe`, with a 32-bit copy under `SysWOW64`.\n\nLegitimately, cmstp is used to deploy VPN or dial-up connection profiles, which is uncommon on modern systems. The INF it is given, and where that INF came from, are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000460CF42A912315F6FB3000000000460",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "CMSTP.EXE.MUI",
+    "internal_name": "CMSTP",
+    "product": "Microsoft(R) Connection Manager",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "7.2.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "120.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "d8fb0cc66a08061b42d46d03546f0d42cbc49b7c",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 109,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\cmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "msctf.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rtutils.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "version.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "textshaping.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cmutil.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cmstp.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
-  "instance_counts": [],
-  "token_privileges": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "An INF on the command line from a user-writable path or a remote location",
@@ -66,8 +310,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "cmstp.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "5a7eb8e6af1d06e2672ca836f3370bd0",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "1ce734ee7ccd47592c673cf7521f71a204ec9aaa686c173f18f3a1b8315506e6",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "6069d2ac168e49a4283c57193e1bf158df4040e66ea634afac4339a1ee7ec557",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "7eb906032d62b40f829767590ce74e1e",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "c0aeb9ed4f780b1b3a3a01eac5573ff0629ad3d6",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:RvsrU82qK0j2lRZ/jUkqN+H4KGa6psZXLRVHoWi1dmWGSZsn:RErU85K0y7ZosWandoWi1cSZA",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "b453286d3ca4fe5482ecb5fd4b743e0f",
+      "pct": 100
+    }
+  ],
   "security_notes": "cmstp.exe is a system-binary proxy (T1218.003). A crafted INF makes the signed binary execute an embedded or remote command or scriptlet, so an attacker runs `cmstp /s evil.inf` to have a trusted Microsoft process run their code, bypassing application-control rules. The same INF mechanism is used to bypass User Account Control, because cmstp can run an action auto-elevated without the usual prompt.\n\nConnection-profile installation is rare, so cmstp running at all is notable, and an INF from a temp, download, or remote path, or a parent like an Office application, marks it as abuse rather than network configuration.\n",
   "mitre_attack": [
     "T1218.003"

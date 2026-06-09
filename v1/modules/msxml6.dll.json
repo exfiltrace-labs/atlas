@@ -2,9 +2,99 @@
   "name": "msxml6.dll",
   "loaded_by": [
     {
+      "name": "compattelrunner.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "devicecensus.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    },
+    {
+      "name": "searchfilterhost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "rare",
+      "pct": 12.5,
+      "lolbin": false
+    },
+    {
+      "name": "slui.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "spoolsv.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
       "name": "svchost.exe",
       "weight": "rare",
-      "pct": 14.3,
+      "pct": 3.5,
+      "lolbin": false
+    },
+    {
+      "name": "wevtutil.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 4.8,
+      "lolbin": false
+    },
+    {
+      "name": "wuaucltcore.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
       "lolbin": false
     }
   ]

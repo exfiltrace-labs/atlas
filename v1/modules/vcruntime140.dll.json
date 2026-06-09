@@ -1,0 +1,47 @@
+{
+  "name": "vcruntime140.dll",
+  "loaded_by": [
+    {
+      "name": "filecoauth.exe",
+      "weight": "ubiquitous",
+      "pct": 83.3,
+      "lolbin": false
+    },
+    {
+      "name": "filesyncconfig.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "microsoft.sharepoint.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.sync.service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivelauncher.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

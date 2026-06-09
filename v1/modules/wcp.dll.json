@@ -1,0 +1,11 @@
+{
+  "name": "wcp.dll",
+  "loaded_by": [
+    {
+      "name": "tiworker.exe",
+      "weight": "ubiquitous",
+      "pct": 76.9,
+      "lolbin": false
+    }
+  ]
+}

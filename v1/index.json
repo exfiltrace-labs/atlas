@@ -1,6 +1,56 @@
 [
   {
+    "name": "149.0.7827.103_chrome_installer_uncompressed.exe",
+    "description": null,
+    "category": null,
+    "signed": null,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "aggregatorhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "appactions.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "apphostregistrationverifier.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "appidcertstorecheck.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "appidpolicyconverter.exe",
     "description": null,
     "category": null,
     "signed": true,
@@ -23,9 +73,9 @@
     "name": "attrib.exe",
     "description": "attrib.exe displays and changes file attributes such as hidden, system, and read-only. Administrators and scripts use it for routine file housekeeping. Attackers use it to hide their files from use...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows"
@@ -36,15 +86,25 @@
     "name": "audiodg.exe",
     "description": "audiodg.exe is the Windows Audio Device Graph Isolation process, which runs audio processing, including third-party audio effects, in a separate process from the audio service. It is a normal part...",
     "category": "System",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "media",
       "microsoft",
       "core-windows"
     ],
     "hasDetections": true
+  },
+  {
+    "name": "autochk.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
   },
   {
     "name": "backgroundtaskhost.exe",
@@ -57,12 +117,22 @@
     "hasDetections": true
   },
   {
+    "name": "backgroundtransferhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "bcdedit.exe",
     "description": "bcdedit.exe is the Boot Configuration Data editor, the tool that views and changes how Windows boots. Administrators use it for boot troubleshooting and multi-boot setups. Ransomware uses it to swi...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows"
@@ -70,12 +140,22 @@
     "hasDetections": true
   },
   {
+    "name": "bdeuisrv.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "bitsadmin.exe",
     "description": "bitsadmin.exe is a command-line tool for creating and managing BITS (Background Intelligent Transfer Service) jobs, which download or upload files in the background through a Windows service. Windo...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
@@ -97,9 +177,9 @@
     "name": "certutil.exe",
     "description": "certutil.exe is a Windows command-line tool for working with certificates and Certificate Services. Administrators use it to inspect, request, and manage certificates and certificate authorities, a...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
@@ -108,12 +188,42 @@
     "hasDetections": true
   },
   {
+    "name": "chrmstp.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "chrome.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "chromesetup.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "cipher.exe",
     "description": "cipher.exe manages Encrypting File System (EFS) encryption on NTFS files and folders, and can also overwrite the free space on a drive. Admins use it to encrypt data and to scrub deleted files. Att...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
@@ -125,9 +235,9 @@
     "name": "cmd.exe",
     "description": "cmd.exe is the Windows Command Processor, the classic command-line interpreter for Windows. It runs typed commands and batch scripts (.bat and .cmd files), provides built-in commands like dir, copy...",
     "category": "Shell",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
@@ -139,14 +249,24 @@
     "name": "cmstp.exe",
     "description": "cmstp.exe is the Connection Manager Profile Installer, meant to install network connection profiles from an INF file. It is rarely used today. Attackers abuse it to run commands through a signed Mi...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
       "lolbin"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "compattelrunner.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -165,18 +285,38 @@
     "hasDetections": true
   },
   {
+    "name": "consent.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
     "name": "control.exe",
     "description": "control.exe is the program that opens Control Panel and Control Panel items. Windows and users invoke it to reach settings. Attackers abuse it to execute malicious Control Panel files (.cpl), which...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
       "lolbin"
     ],
     "hasDetections": true
+  },
+  {
+    "name": "cookie_exporter.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
   },
   {
     "name": "crossdeviceresume.exe",
@@ -192,9 +332,9 @@
     "name": "cscript.exe",
     "description": "cscript.exe is the Windows Script Host in its console form, the program that runs VBScript and JScript files (.vbs, .js, .wsf) from the command line. It writes script output to a terminal instead o...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "scripting",
       "microsoft",
@@ -235,15 +375,45 @@
     "name": "dashost.exe",
     "description": "dasHost.exe is the Device Association Framework host, the process that manages pairing and connecting wired and wireless devices like Bluetooth peripherals and network-discovered devices. It is a n...",
     "category": "System",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "devices",
       "microsoft",
       "core-windows"
     ],
     "hasDetections": true
+  },
+  {
+    "name": "defrag.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "devicecensus.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "directxdatabaseupdater.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
   },
   {
     "name": "diskshadow.exe",
@@ -257,6 +427,16 @@
       "core-windows",
       "lolbin"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "dismhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -274,6 +454,26 @@
     "hasDetections": true
   },
   {
+    "name": "dmclient.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "drvinst.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
     "name": "dwm.exe",
     "description": "dwm.exe is the Desktop Window Manager, the process that composites the Windows desktop. It draws each window to an off-screen buffer and combines them on the GPU to produce effects like transparenc...",
     "category": "System",
@@ -285,6 +485,26 @@
       "microsoft",
       "core-windows"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "dxgiadaptercache.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "elevation_service.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -359,12 +579,32 @@
     "hasDetections": true
   },
   {
+    "name": "filecoauth.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "filesyncconfig.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "findstr.exe",
     "description": "findstr.exe searches files for text using patterns and regular expressions, the Windows equivalent of grep. Administrators and scripts use it constantly. Attackers use it to hunt for passwords in f...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
@@ -401,6 +641,16 @@
     "hasDetections": true
   },
   {
+    "name": "fsquirt.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
     "name": "fsutil.exe",
     "description": "fsutil.exe is a file system utility for low-level NTFS and volume tasks. Administrators use it for disk and file system maintenance. Attackers use it for anti-forensics, most notably deleting the U...",
     "category": "Utility",
@@ -413,6 +663,16 @@
       "lolbin"
     ],
     "hasDetections": true
+  },
+  {
+    "name": "genvalobj.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
   },
   {
     "name": "hh.exe",
@@ -442,6 +702,16 @@
     "hasDetections": true
   },
   {
+    "name": "identity_helper.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "installutil.exe",
     "description": "installutil.exe is the .NET Framework Installer tool, meant to run the installer components inside a .NET assembly. Administrators and installers use it to register services and components. Attacke...",
     "category": "Utility",
@@ -456,12 +726,22 @@
     "hasDetections": true
   },
   {
+    "name": "lockapp.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "logonui.exe",
     "description": "LogonUI.exe is the process that draws the Windows sign-in and lock screens. When Windows needs credentials, winlogon.exe starts LogonUI.exe to show the prompt and collect the password, PIN, smartca...",
     "category": "System",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "sessions",
       "microsoft",
@@ -526,6 +806,41 @@
     "hasDetections": false
   },
   {
+    "name": "mdmagent.exe",
+    "description": null,
+    "category": null,
+    "signed": null,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "memory compression",
+    "description": "Memory Compression is a minimal Windows process (introduced in Windows 10 1607) that holds the compressed standby pages of the memory manager. It has no on-disk image and no command line, and is pa...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "kernel",
+      "memory",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "microsoft.sharepoint.exe",
+    "description": null,
+    "category": null,
+    "signed": null,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "microsoftedgeupdate.exe",
     "description": null,
     "category": null,
@@ -550,6 +865,36 @@
     "hasDetections": true
   },
   {
+    "name": "mobsync.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "monotificationux.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "mousocoreworker.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "mpcmdrun.exe",
     "description": "MpCmdRun.exe is the command-line interface to Microsoft Defender Antivirus, used to run scans, manage signatures, and configure protection. Administrators use it to drive Defender from scripts. Att...",
     "category": "Utility",
@@ -564,16 +909,6 @@
     "hasDetections": true
   },
   {
-    "name": "mpdefendercoreservice.exe",
-    "description": null,
-    "category": null,
-    "signed": true,
-    "prevalence_band": "ubiquitous",
-    "provenance": "measured",
-    "tags": [],
-    "hasDetections": false
-  },
-  {
     "name": "msbuild.exe",
     "description": "msbuild.exe is the Microsoft Build Engine, the tool that compiles and builds .NET projects from XML project files. Developers and build servers use it constantly. Attackers use it as a proxy: becau...",
     "category": "Utility",
@@ -585,6 +920,16 @@
       "core-windows",
       "lolbin"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "mscorsvw.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -602,13 +947,15 @@
     "hasDetections": true
   },
   {
-    "name": "msdtc.exe",
+    "name": "msedge.exe",
     "description": null,
     "category": null,
     "signed": true,
     "prevalence_band": "ubiquitous",
     "provenance": "measured",
-    "tags": [],
+    "tags": [
+      "lolbin"
+    ],
     "hasDetections": true
   },
   {
@@ -707,14 +1054,24 @@
     "name": "ngen.exe",
     "description": "ngen.exe is the .NET Native Image Generator, which precompiles .NET assemblies to native code for faster startup. It runs as part of .NET servicing. Attackers abuse the scheduled tasks and executio...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
       "lolbin"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "ngentask.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -769,6 +1126,19 @@
     "hasDetections": true
   },
   {
+    "name": "olk.exe",
+    "description": "olk.exe is the new Outlook for Windows, Microsoft's WebView2-based replacement for the classic outlook.exe mail client. It is a Microsoft Store app that runs Outlook on the web inside an embedded C...",
+    "category": "Application",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "office",
+      "microsoft"
+    ],
+    "hasDetections": true
+  },
+  {
     "name": "onedrive.exe",
     "description": null,
     "category": null,
@@ -777,6 +1147,68 @@
     "provenance": "measured",
     "tags": [],
     "hasDetections": true
+  },
+  {
+    "name": "onedrive.sync.service.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "onedrivelauncher.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "onedrivesetup.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "oobefodsetup.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "openconsole.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "os_update_handler.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
   },
   {
     "name": "outlook.exe",
@@ -792,6 +1224,26 @@
     "hasDetections": true
   },
   {
+    "name": "pickerhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "platform_experience_helper.exe",
+    "description": null,
+    "category": null,
+    "signed": null,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "powershell.exe",
     "description": "powershell.exe is Windows PowerShell, Microsoft's command-line shell and scripting language for administration and automation. Built on .NET, it runs commands called cmdlets and full scripts that m...",
     "category": "Shell",
@@ -804,6 +1256,16 @@
       "core-windows"
     ],
     "hasDetections": true
+  },
+  {
+    "name": "provtool.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
   },
   {
     "name": "quser.exe",
@@ -847,6 +1309,21 @@
     "hasDetections": true
   },
   {
+    "name": "registry",
+    "description": "Registry is a minimal Windows process (introduced in Windows 10 1803) that holds registry hive data in memory on behalf of the kernel's Configuration Manager. It has no on-disk image and no command...",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "kernel",
+      "registry",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
     "name": "regsvcs.exe",
     "description": "regsvcs.exe is the .NET Services Installation tool, used to register a .NET assembly as a COM+ / Enterprise Services component. Developers use it for serviced components. Attackers use it the same...",
     "category": "Utility",
@@ -875,15 +1352,37 @@
     "hasDetections": true
   },
   {
+    "name": "rgnupdt.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "rundll32.exe",
     "description": "rundll32.exe is a Windows utility that runs functions exported by DLL files. Because a DLL cannot execute on its own, Windows uses rundll32.exe to call a specific function inside one, which is how...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "runonce.exe",
+    "description": null,
+    "category": null,
+    "signed": null,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
       "lolbin"
     ],
     "hasDetections": true
@@ -906,9 +1405,9 @@
     "name": "sc.exe",
     "description": "sc.exe is the Service Control utility, the command-line front end to the Windows Service Control Manager. Administrators use it to create, configure, start, stop, query, and delete services and dri...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows",
@@ -928,6 +1427,26 @@
       "core-windows",
       "lolbin"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "sdbinst.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "searchfilterhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -957,6 +1476,42 @@
       "core-windows"
     ],
     "hasDetections": true
+  },
+  {
+    "name": "searchprotocolhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "secure system",
+    "description": "Secure System represents the secure kernel of virtualization-based security (VBS). It is present only when VBS is enabled, has no on-disk image and no command line, and is parented by System.\n",
+    "category": "System",
+    "signed": null,
+    "prevalence_band": "unknown",
+    "provenance": "curated",
+    "tags": [
+      "kernel",
+      "vbs",
+      "virtualization",
+      "microsoft",
+      "core-windows"
+    ],
+    "hasDetections": false
+  },
+  {
+    "name": "securityhealthhost.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
   },
   {
     "name": "securityhealthservice.exe",
@@ -994,6 +1549,16 @@
     "hasDetections": true
   },
   {
+    "name": "setup.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
     "name": "shellexperiencehost.exe",
     "description": "ShellExperienceHost.exe renders parts of the modern Windows shell, such as the action center, notifications, and other system UI surfaces drawn with the Universal Windows Platform. It runs per user...",
     "category": "System",
@@ -1018,6 +1583,16 @@
     "hasDetections": false
   },
   {
+    "name": "shutdown.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
     "name": "sihost.exe",
     "description": "sihost.exe is the Shell Infrastructure Host, a per-user process that runs visual and interactive parts of the Windows shell. It handles elements like the Start menu layout, taskbar transparency, th...",
     "category": "System",
@@ -1032,12 +1607,22 @@
     "hasDetections": true
   },
   {
+    "name": "slui.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
     "name": "smartscreen.exe",
     "description": "smartscreen.exe runs Windows Defender SmartScreen, the reputation check that warns before running downloaded files and visiting risky sites. It appears when the shell needs a reputation decision. I...",
     "category": "System",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "security",
       "microsoft",
@@ -1072,6 +1657,26 @@
       "microsoft",
       "core-windows"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "sppextcomobj.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "sppsvc.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -1198,9 +1803,9 @@
     "name": "tasklist.exe",
     "description": "tasklist.exe lists the processes running on a computer, locally or on a remote machine, with options to show the services and DLLs each one hosts. Administrators use it to inspect what is running....",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows"
@@ -1235,6 +1840,46 @@
     "hasDetections": false
   },
   {
+    "name": "tiworker.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "trustedinstaller.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
+    "name": "ucconfigtask.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "ucpdmgr.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "unsecapp.exe",
     "description": null,
     "category": null,
@@ -1245,12 +1890,32 @@
     "hasDetections": true
   },
   {
+    "name": "updater.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "upfc.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
     "name": "userinit.exe",
     "description": "userinit.exe is the Userinit Logon Application, the process that prepares a user's environment at sign-in and then hands off to the desktop. After winlogon.exe authenticates the user, it runs useri...",
     "category": "System",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "sessions",
       "microsoft",
@@ -1259,7 +1924,7 @@
     "hasDetections": true
   },
   {
-    "name": "vgauthservice.exe",
+    "name": "usoclient.exe",
     "description": null,
     "category": null,
     "signed": true,
@@ -1269,23 +1934,15 @@
     "hasDetections": false
   },
   {
-    "name": "vm3dservice.exe",
+    "name": "verclsid.exe",
     "description": null,
     "category": null,
     "signed": true,
     "prevalence_band": "ubiquitous",
     "provenance": "measured",
-    "tags": [],
-    "hasDetections": false
-  },
-  {
-    "name": "vmtoolsd.exe",
-    "description": null,
-    "category": null,
-    "signed": true,
-    "prevalence_band": "ubiquitous",
-    "provenance": "measured",
-    "tags": [],
+    "tags": [
+      "lolbin"
+    ],
     "hasDetections": true
   },
   {
@@ -1299,6 +1956,16 @@
       "microsoft",
       "core-windows"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "vssvc.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   },
   {
@@ -1329,12 +1996,22 @@
     "hasDetections": true
   },
   {
+    "name": "wermgr.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
+  },
+  {
     "name": "wevtutil.exe",
     "description": "wevtutil.exe is the Windows Events command-line utility, a tool for managing the event logs. It can query, export, and configure logs and event publishers, and it can clear a log entirely. Administ...",
     "category": "Utility",
-    "signed": null,
-    "prevalence_band": "unknown",
-    "provenance": "curated",
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
     "tags": [
       "microsoft",
       "core-windows"
@@ -1373,6 +2050,16 @@
     "provenance": "measured",
     "tags": [],
     "hasDetections": false
+  },
+  {
+    "name": "windowsterminal.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": true
   },
   {
     "name": "wininit.exe",
@@ -1431,6 +2118,28 @@
   },
   {
     "name": "wlms.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
+    "hasDetections": false
+  },
+  {
+    "name": "wlrmdr.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [
+      "lolbin"
+    ],
+    "hasDetections": true
+  },
+  {
+    "name": "wmiadap.exe",
     "description": null,
     "category": null,
     "signed": true,
@@ -1507,6 +2216,16 @@
       "core-windows",
       "lolbin"
     ],
+    "hasDetections": true
+  },
+  {
+    "name": "wuaucltcore.exe",
+    "description": null,
+    "category": null,
+    "signed": true,
+    "prevalence_band": "ubiquitous",
+    "provenance": "measured",
+    "tags": [],
     "hasDetections": true
   }
 ]

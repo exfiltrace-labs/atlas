@@ -1,0 +1,235 @@
+{
+  "name": "149.0.7827.103_chrome_installer_uncompressed.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": null,
+  "issuer": null,
+  "cert_serial": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "architectures": [],
+  "cert_thumbprints": [],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 99,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [],
+  "expected_grandchildren": [
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\149.0.7827.103_chrome_installer_uncompressed.exe\" --verbose-logging --do-not-launch-chrome --channel=stable --installerdata=\"C:\\Windows\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\<guid>.tmp\"",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "865d1a9674197c47ebae84bb5c3fa76e",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "b49e74eff99ab4b0247552d0d4fcadcbef34931bf9cf2665d23bc564a8bd5d51",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "7e4940bd1ad2853183f9cc5e3eefcfa800da30d4",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "5169aee8ef1e358b29c42e4117acb14f",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

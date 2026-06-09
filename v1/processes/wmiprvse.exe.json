@@ -13,6 +13,7 @@
   "about": "WmiPrvSE.exe (WMI Provider Host) hosts the providers, the DLLs that actually answer WMI queries and carry out WMI actions, in a separate process from the WMI service (`Winmgmt`, which lives inside `svchost.exe`). Isolating providers this way keeps a faulty or slow one from taking down the shared service. The genuine binary lives at `C:\\Windows\\System32\\wbem\\WmiPrvSE.exe` (note the `wbem` subfolder). It is started by the DCOM and WMI infrastructure, so its parent is normally an `svchost.exe`, and it runs under `NETWORK SERVICE`, `LOCAL SERVICE`, or `SYSTEM` depending on the provider it is hosting.\n\nSeveral instances can run at once, grouped by the account a provider needs. They start when WMI activity begins and stop after a period of inactivity. WmiPrvSE carries out the work of providers itself, so on its own it has no reason to start other programs.\n\nOne behaviour is central to reading it. When something uses WMI to create a process, locally with `wmic process call create` or remotely over the network, the new process is launched by WmiPrvSE.exe rather than by the program that issued the request. A process created through WMI therefore appears as a child of WmiPrvSE.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -29,7 +30,7 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -41,23 +42,30 @@
       "pct": 100
     }
   ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "cert_thumbprints": [
     {
-      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 97.9,
   "host_prevalence": 100,
-  "execution_rank": 47,
+  "execution_rank": 12,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 17,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
@@ -65,39 +73,823 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "rare",
+      "pct": 17.6
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
   "loaded_modules": [
     {
+      "value": "wbemprox.dll",
+      "weight": "uncommon",
+      "pct": 42.9
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "ncobjapi.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "wmiutils.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "wbemsvc.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 40.5
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "uncommon",
+      "pct": 31
+    },
+    {
+      "value": "netsetupengine.dll",
+      "weight": "uncommon",
+      "pct": 26.2
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 26.2
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 26.2
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 26.2
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 23.8
+    },
+    {
+      "value": "cimwin32.dll",
+      "weight": "rare",
+      "pct": 23.8
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 23.8
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 23.8
+    },
+    {
+      "value": "framedynos.dll",
+      "weight": "rare",
+      "pct": 23.8
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "rare",
+      "pct": 21.4
+    },
+    {
+      "value": "miutils.dll",
+      "weight": "rare",
+      "pct": 21.4
+    },
+    {
+      "value": "wmitomi.dll",
+      "weight": "rare",
+      "pct": 21.4
+    },
+    {
+      "value": "wmiclnt.dll",
+      "weight": "rare",
+      "pct": 19
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 19
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "rare",
+      "pct": 19
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "logoncli.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "samcli.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "wmi.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "schedcli.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "win32_deviceguard.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "dsrole.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 11.9
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "rare",
+      "pct": 11.9
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "rare",
+      "pct": 11.9
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 11.9
+    },
+    {
+      "value": "wkscli.dll",
+      "weight": "rare",
+      "pct": 11.9
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 11.9
+    },
+    {
+      "value": "winbrand.dll",
+      "weight": "rare",
+      "pct": 11.9
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "atl.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "rare",
+      "pct": 9.5
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "wmipcima.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "winscard.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "sppc.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "sppcext.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "sppwmi.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "slc.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "version.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "schannel.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "security.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "drvstore.dll",
+      "weight": "rare",
+      "pct": 7.1
+    },
+    {
+      "value": "tbs.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "msxml6.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "printconfig.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "winspool.drv",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "signdrv.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "netadaptercim.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "msls31.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "tpmcoreprovisioning.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "netsetupapi.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "usp10.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "riched32.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "jscript.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "esscli.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "mfc42u.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "jscript9legacy.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "win32_tpm.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "print.printsupport.source.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "spinf.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "riched20.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "cbsapi.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "profprov.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "devrtl.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "wmiprov.dll",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "regapi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "aepic.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "vdswmi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "perfos.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "resutils.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "aeinv.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "devinv.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "pfclient.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "virtdisk.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "tscfgwmi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "dskquota.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "umpodev.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "clusapi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "wmidcom.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "mi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "fltlib.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
       "value": "schedprov.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "invagent.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "cfgbkend.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 2.4
     },
     {
       "value": "taskschd.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "storagewmi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "msi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "wer.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "umpowmi.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "windows.applicationmodel.dll",
+      "weight": "rare",
+      "pct": 2.4
     }
   ],
   "named_pipes": [
     {
-      "value": "\\wkssvc",
+      "value": "\\srvsvc",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 90
     },
     {
-      "value": "\\srvsvc",
+      "value": "\\lsass",
+      "weight": "common",
+      "pct": 70
+    },
+    {
+      "value": "\\wkssvc",
+      "weight": "uncommon",
+      "pct": 40
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "NETWORK SERVICE",
+      "weight": "common",
+      "pct": 70.6
+    },
+    {
+      "value": "SYSTEM",
+      "weight": "rare",
+      "pct": 17.6
+    },
+    {
+      "value": "LOCAL SERVICE",
+      "weight": "rare",
+      "pct": 11.8
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "user_contexts": [],
-  "integrity_levels": [],
   "sessions": [
     {
       "value": "Session 0",
@@ -108,13 +900,23 @@
   "instance_counts": [
     {
       "value": "1",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "uncommon",
+      "pct": 45.1
+    },
+    {
+      "value": "2",
+      "weight": "uncommon",
+      "pct": 43.4
+    },
+    {
+      "value": "3",
+      "weight": "rare",
+      "pct": 11.5
     }
   ],
   "token_privileges": [
     {
-      "value": "SeCreateGlobalPrivilege",
+      "value": "SeImpersonatePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -124,201 +926,286 @@
       "pct": 100
     },
     {
-      "value": "SeImpersonatePrivilege",
+      "value": "SeCreateGlobalPrivilege",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "common",
+      "pct": 62.1
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "common",
+      "pct": 62.1
     }
   ],
   "process_handles": [
-    {
-      "value": "shellhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "microsoftedgeupdate.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "wlms.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "unsecapp.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "dwm.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "widgetservice.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "sihost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "taskhostw.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "vm3dservice.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "powershell.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "crossdeviceresume.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "ctfmon.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "backgroundtaskhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "dllhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "startmenuexperiencehost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "runtimebroker.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "msedgewebview2.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "vmtoolsd.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "searchhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "winlogon.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "explorer.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "searchindexer.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "onedrive.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "securityhealthsystray.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
     {
       "value": "svchost.exe",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
+      "value": "dwm.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "tasklist.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "cmd.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
       "value": "conhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "common",
+      "pct": 60
     },
     {
-      "value": "msdtc.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "spoolsv.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "shellexperiencehost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "vgauthservice.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "fontdrvhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "aggregatorhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
+      "value": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 60
     },
     {
       "value": "widgets.exe",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "common",
+      "pct": 60
     },
     {
-      "value": "audiodg.exe",
-      "weight": "uncommon",
-      "pct": 33.3
+      "value": "wlms.exe",
+      "weight": "common",
+      "pct": 60
     },
     {
-      "value": "applicationframehost.exe",
-      "weight": "uncommon",
-      "pct": 33.3
+      "value": "ctfmon.exe",
+      "weight": "common",
+      "pct": 60
     },
     {
-      "value": "calculatorapp.exe",
+      "value": "findstr.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "shellhost.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "logonui.exe",
       "weight": "uncommon",
-      "pct": 33.3
+      "pct": 40
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "uncommon",
+      "pct": 40
     },
     {
       "value": "smartscreen.exe",
       "weight": "uncommon",
-      "pct": 33.3
+      "pct": 40
+    },
+    {
+      "value": "provtool.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "defrag.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "onedrive.sync.service.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "ngen.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "appactions.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "ngentask.exe",
+      "weight": "rare",
+      "pct": 20
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -349,8 +1236,53 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+      "pct": 82.4
+    },
+    {
+      "command": "C:\\WINDOWS\\system32\\wbem\\wmiprvse.exe -Embedding",
+      "pct": 17.6
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "70dbdf0f48ebf088f5dc3d8d6fe6b61cb22a29669377482683d233329ce45cab",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "bd64bdabd96b95cabd3741acaccc4d096dac64dc338e045e6b0de4e44051eaee",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "98cb0b1c90d9fd2b3ffac2ba8baecab24479c16d",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "9f546363ea0ed3e182a18c427d995384",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "2d23a7ff78aa2a397f0344dc54674a36",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "d7755be6348484925066e845353fe6a0",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "6144:d8RNDe94W8FKvoRcAnwRHUDliVzzbnUDtu8gtTtXyDePN3piJ:d8Le6W8FKARcANgVXb4+l68N5Q",
+      "pct": 100
+    }
+  ],
   "security_notes": "Because WMI-created processes are parented by WmiPrvSE.exe, a WmiPrvSE spawning `cmd.exe` or `powershell.exe` is a classic sign of WMI-based execution and lateral movement (T1047). Remote tooling such as `wmic /node:`, `Invoke-WmiMethod`, and Impacket's wmiexec all land the same way: the payload runs as a child of WmiPrvSE on the target, not as a child of whatever reached in over the network. The parent-child link is the detection, and the spawned command line carries the intent.\n\nWmiPrvSE is also where stealthy WMI persistence surfaces (T1546.003). An attacker registers a permanent event consumer, a `CommandLineEventConsumer` for example, bound to a trigger like system uptime or logon, and when it fires the consumer's command runs under the WMI host. The subscription lives in the WMI repository rather than in any autostart location, so it survives reboots and evades the usual persistence checks. Watch for WmiPrvSE launching a program that no administrative or scheduled WMI activity accounts for.\n\nAs an always-present service process, WmiPrvSE is also injected into so malicious code can run under a trusted, signed host (T1055). There, watch for unusual loaded modules or network activity from a WmiPrvSE that is not spawning anything.\n",
   "mitre_attack": [
     "T1047",

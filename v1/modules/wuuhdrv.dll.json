@@ -1,0 +1,17 @@
+{
+  "name": "wuuhdrv.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    },
+    {
+      "name": "wuaucltcore.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "certcli.dll",
+  "loaded_by": [
+    {
+      "name": "certutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

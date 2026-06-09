@@ -1,0 +1,11 @@
+{
+  "name": "efsutil.dll",
+  "loaded_by": [
+    {
+      "name": "cipher.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    }
+  ]
+}

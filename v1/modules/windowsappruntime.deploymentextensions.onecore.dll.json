@@ -1,0 +1,11 @@
+{
+  "name": "windowsappruntime.deploymentextensions.onecore.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.6,
+      "lolbin": false
+    }
+  ]
+}

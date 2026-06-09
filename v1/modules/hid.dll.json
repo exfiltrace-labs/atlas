@@ -1,0 +1,11 @@
+{
+  "name": "hid.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    }
+  ]
+}

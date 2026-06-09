@@ -1,0 +1,35 @@
+{
+  "name": "actxprxy.dll",
+  "loaded_by": [
+    {
+      "name": "chrmstp.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "control.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "dllhost.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 13,
+      "lolbin": true
+    },
+    {
+      "name": "mobsync.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

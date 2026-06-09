@@ -1,0 +1,23 @@
+{
+  "name": "notificationcontrollerps.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 8.5,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    }
+  ]
+}

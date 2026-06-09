@@ -1,0 +1,11 @@
+{
+  "name": "musnotifyiconhandler.dll",
+  "loaded_by": [
+    {
+      "name": "monotificationux.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

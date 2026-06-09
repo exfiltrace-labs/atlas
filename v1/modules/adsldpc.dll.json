@@ -1,0 +1,11 @@
+{
+  "name": "adsldpc.dll",
+  "loaded_by": [
+    {
+      "name": "sppextcomobj.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

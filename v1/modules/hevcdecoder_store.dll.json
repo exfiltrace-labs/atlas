@@ -2,9 +2,15 @@
   "name": "hevcdecoder_store.dll",
   "loaded_by": [
     {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 9,
+      "lolbin": true
+    },
+    {
       "name": "msedgewebview2.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "rare",
+      "pct": 16.7,
       "lolbin": true
     }
   ]

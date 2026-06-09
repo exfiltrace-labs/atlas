@@ -1,0 +1,11 @@
+{
+  "name": "myoffice.backgroundtasks.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 1.7,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "name": "trustedinstaller.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "TrustedInstaller.exe.mui",
+    "internal_name": "TrustedInstaller.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.4946 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "241.40 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 44,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\servicing\\TrustedInstaller.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "trustedinstaller.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wdscore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cbsapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "sysntfy.dll",
+      "weight": "rare",
+      "pct": 16.7
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "tiworker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "genvalobj.exe",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\servicing\\TrustedInstaller.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "e63dc350e56c6fa996a44588ba9df3a3fda32586532f6c90b537f9dce85f8ebd",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "1889c5bc1ceef3554b3408f9bdd9b50cf0dac4cc84ae96e4d7b72f3043557875",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "ae4442013f290315e046dbf9e6f9803a",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "f108cf8fbb2c5ca3155fbea0608f0f0a",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:hXbqRNK8YJHZ8LjfQvlsRn8bOFJHaitAqM4MXoiSPQEnNFGSRhdzSAky:hWb+HZ8nfQvlsd8kaqySYkGSRTD",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "5e159ce7599acd6ca7ec3122186d5dbc",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "0aae968a31a7a64f9f8d03aebd77591ee396d3d5",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "883835a7-df45-43e4-bf1d-4268768afda4",
+      "title": "Regedit as Trusted Installer",
+      "level": "high",
+      "techniques": [
+        "T1548"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regedit_trustedinstaller.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1074",
+          "name": "ANDROMEDA"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1134.002",
+      "name": "Access Token Manipulation: Create Process with Token",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0689",
+          "name": "WhisperGate"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ]
+}

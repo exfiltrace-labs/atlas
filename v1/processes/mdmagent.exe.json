@@ -1,0 +1,131 @@
+{
+  "name": "mdmagent.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": null,
+  "issuer": null,
+  "cert_serial": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "architectures": [],
+  "cert_thumbprints": [],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75,
+  "host_prevalence": 100,
+  "execution_rank": 130,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.internal.management.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

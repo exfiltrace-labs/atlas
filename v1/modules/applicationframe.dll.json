@@ -6,6 +6,12 @@
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "name": "system.xml.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 12.8,
+      "lolbin": false
+    }
+  ]
+}

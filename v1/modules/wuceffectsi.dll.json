@@ -1,0 +1,11 @@
+{
+  "name": "wuceffectsi.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.3,
+      "lolbin": true
+    }
+  ]
+}

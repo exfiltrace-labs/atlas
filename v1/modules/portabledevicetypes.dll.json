@@ -1,0 +1,17 @@
+{
+  "name": "portabledevicetypes.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    }
+  ]
+}

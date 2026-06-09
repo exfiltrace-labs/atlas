@@ -1,0 +1,625 @@
+{
+  "name": "provtool.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "provtool",
+    "internal_name": "provtool",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.3470 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "112.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 81.5,
+  "host_prevalence": 100,
+  "execution_rank": 78,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 2,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\provtool.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "resetengine.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "diagnosticlogcsp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "samcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "resourcepolicyclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mscoree.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mobilenetworking.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "provtool.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "provpackageapidll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dmcommandlineutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dismapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dmoleaututils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "provengine.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wimgapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mscoreei.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "provops.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mdmdiagnostics.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fveapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdiplus.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dmiso8601utils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "enterpriseresourcemanager.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "provdatastore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcd.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winsatapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "reagent.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp110_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fltlib.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dmenrollengine.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dmcmnutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "tbs.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "provplatformdesktop.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bootsvc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "omadmapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "tdh.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dui70.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wdscore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dmenterprisediagnostics.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "configmanager2.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "provhandlers.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\ProvTool.exe\" /turn 5 /source LogonIdleTask",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "ad87caa88b92a09cc850fe490fa2da69a80b39b6",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "7909684488bd8a235d655708bb9de7e8a4861696e3df12d89c8287860da40d7a",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "7e4f7e74f10829cb1cdf2bc924d8ff21",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "cf16aacf6aef93fa7e23e88838ba2f1f",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "fb7e5a150a3e07086c0036d42899028eeb83c8be57c34f6f767ac14d32c82e5d",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "731b084799ed4656f06d0f896341dac2",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

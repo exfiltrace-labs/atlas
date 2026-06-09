@@ -1,0 +1,23 @@
+{
+  "name": "microsoft.internal.frameworkudk.system.dll",
+  "loaded_by": [
+    {
+      "name": "appactions.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "crossdeviceresume.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    }
+  ]
+}

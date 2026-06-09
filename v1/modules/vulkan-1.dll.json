@@ -1,0 +1,17 @@
+{
+  "name": "vulkan-1.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": true
+    }
+  ]
+}

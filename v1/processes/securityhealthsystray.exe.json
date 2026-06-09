@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -23,7 +24,7 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8115 (WinBuild.160101.0800)",
+      "value": "10.0.26100.1882 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -31,6 +32,13 @@
   "file_sizes": [
     {
       "value": "264.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -44,14 +52,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 28,
+  "execution_rank": 81,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\SecurityHealthSystray.exe",
@@ -59,17 +67,196 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "atlthunk.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthssoudk.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthproxystub.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthsso.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 1",
@@ -94,14 +281,50 @@
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Windows\\System32\\SecurityHealthSystray.exe\"",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "a6ab197c306c25cff1eebee6027af918",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "7e1747256c74f48d153b7f95a53151ca6988bb210cfec60eb05921f5da94fc0e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "719728d69327df5982ff879c947c463318caf2b5212d2e3a46f4fc8126bd0915",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "81064125bba480cdfe4b334998446be8",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "67b90e1fb3b535162425d5fd8073f7c0e1ed94b3",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "04db94f10266a28b3a7b6fd0d1c75969",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

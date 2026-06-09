@@ -1,0 +1,11 @@
+{
+  "name": "mskeyprotect.dll",
+  "loaded_by": [
+    {
+      "name": "widgetservice.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

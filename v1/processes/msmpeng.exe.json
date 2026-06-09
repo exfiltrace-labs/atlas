@@ -12,6 +12,7 @@
   "about": "MsMpEng.exe (Microsoft Malware Protection Engine) is the heart of Microsoft Defender Antivirus. It scans files and processes in real time, watches for malicious behavior, and quarantines or removes threats. It runs as a SYSTEM service, and on current Windows it is a protected process (PPL), which keeps other software, even administrators, from reading its memory or injecting into it. Because Defender updates into versioned platform folders, the genuine binary lives under `C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\<version>\\MsMpEng.exe`.\n\nLegitimately, MsMpEng runs continuously whenever Defender is the active antivirus, and high CPU during scans is normal. A second copy, a wrong path, or a loss of its protected status is what stands out.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "33000004500DA45D0A6C7A8A57000000000450",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -28,53 +29,637 @@
   },
   "file_versions": [
     {
-      "value": "4.18.26040.7 (8d846dd50fd7adca65beb1b013a5fda76a9ec807)",
+      "value": "4.18.23110.3 (9ebb3643d539a6fc4659898b1df3124d5da4c0a9)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "283.90 KB",
+      "value": "130.50 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "bf1b0e852f06f6d0b6c6475e53ae7908aa7e2950",
+      "value": "51f97d144f979fdc7567baaf367a6c9343498948",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 21,
+  "execution_rank": 74,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
-      "value": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26040.7-0\\MsMpEng.exe",
+      "value": "C:\\Program Files\\Windows Defender\\MsMpEng.exe",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
-  "network_ports": [],
+  "network_ports": [
+    {
+      "value": "443/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "loaded_modules": [
+    {
+      "value": "msvcp110_win.dll",
+      "weight": "uncommon",
+      "pct": 31.6
+    },
+    {
+      "value": "omadmapi.dll",
+      "weight": "uncommon",
+      "pct": 31.6
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "uncommon",
+      "pct": 31.6
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "rare",
+      "pct": 21.1
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "wscisvif.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "mpengine.dll",
+      "weight": "rare",
+      "pct": 15.8
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "mpsvc.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "wscapi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "combase.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "schannel.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "user32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "mpclient.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "tdh.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "fltlib.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "wofutil.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "fwpolicyiomgr.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "mpcommu.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "webio.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "samcli.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "version.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "wkscli.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "mpr.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "mprtp.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "ncryptsslp.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "slc.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "wscproxystub.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "wbemsvc.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "amsi.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "mpoav.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "wbemprox.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "securitycenterbrokerps.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "amsiproxy.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "psapi.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "rare",
+      "pct": 5.3
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\wkssvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -91,7 +676,12 @@
   ],
   "token_privileges": [
     {
-      "value": "SeDebugPrivilege",
+      "value": "SeTakeOwnershipPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeBackupPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -101,12 +691,22 @@
       "pct": 100
     },
     {
-      "value": "SeSystemEnvironmentPrivilege",
+      "value": "SeDebugPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeRestorePrivilege",
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -121,27 +721,7 @@
       "pct": 100
     },
     {
-      "value": "SeLoadDriverPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTcbPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeIncreaseQuotaPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTakeOwnershipPrivilege",
+      "value": "SeSystemEnvironmentPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -151,101 +731,691 @@
       "pct": 100
     },
     {
-      "value": "SeIncreaseBasePriorityPrivilege",
+      "value": "SeRestorePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeBackupPrivilege",
+      "value": "SeLoadDriverPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseQuotaPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "process_handles": [
     {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 98.4
+    },
+    {
       "value": "svchost.exe",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 79
     },
     {
       "value": "nissrv.exe",
-      "weight": "common",
-      "pct": 66.7
-    },
-    {
-      "value": "vmtoolsd.exe",
       "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "powershell.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "runtimebroker.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "taskhostw.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "msedgewebview2.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "wmiprvse.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "conhost.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "searchindexer.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "backgroundtaskhost.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "calculatorapp.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "applicationframehost.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "services.exe",
-      "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "widgetservice.exe",
-      "weight": "uncommon",
-      "pct": 33.3
+      "pct": 40.3
     },
     {
       "value": "explorer.exe",
       "weight": "uncommon",
-      "pct": 33.3
+      "pct": 37.9
+    },
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 35.5
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "uncommon",
+      "pct": 35.5
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "uncommon",
+      "pct": 30.6
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 24.2
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 23.4
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 21.8
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 19.4
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "rare",
+      "pct": 18.5
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "rare",
+      "pct": 16.9
+    },
+    {
+      "value": "system",
+      "weight": "rare",
+      "pct": 11.3
+    },
+    {
+      "value": "sppsvc.exe",
+      "weight": "rare",
+      "pct": 11.3
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "csrss.exe",
+      "weight": "rare",
+      "pct": 10.5
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 9.7
+    },
+    {
+      "value": "ctfmon.exe",
+      "weight": "rare",
+      "pct": 9.7
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "rare",
+      "pct": 9.7
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 9.7
+    },
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 9.7
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "rare",
+      "pct": 8.9
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "rare",
+      "pct": 8.9
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "rare",
+      "pct": 8.1
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 8.1
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "rare",
+      "pct": 8.1
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 8.1
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 8.1
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "rare",
+      "pct": 7.3
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "rare",
+      "pct": 7.3
+    },
+    {
+      "value": "shellhost.exe",
+      "weight": "rare",
+      "pct": 7.3
+    },
+    {
+      "value": "cmd.exe",
+      "weight": "rare",
+      "pct": 7.3
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "rare",
+      "pct": 7.3
+    },
+    {
+      "value": "registry",
+      "weight": "rare",
+      "pct": 6.5
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "rare",
+      "pct": 6.5
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "rare",
+      "pct": 6.5
+    },
+    {
+      "value": "memcompression",
+      "weight": "rare",
+      "pct": 6.5
+    },
+    {
+      "value": "smss.exe",
+      "weight": "rare",
+      "pct": 6.5
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "rare",
+      "pct": 6.5
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "rare",
+      "pct": 6.5
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "audiodg.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "wermgr.exe",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "logonui.exe",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "trustedinstaller.exe",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "mousocoreworker.exe",
+      "weight": "rare",
+      "pct": 4.8
+    },
+    {
+      "value": "searchfilterhost.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "elevation_service.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "filecoauth.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "tiworker.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "ngen.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "windowsterminal.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "dxgiadaptercache.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "ngentask.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "sc.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "userinit.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "rundll32.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "appactions.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "identity_helper.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "dmclient.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "dismhost.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "openconsole.exe",
+      "weight": "rare",
+      "pct": 3.2
+    },
+    {
+      "value": "securityhealthhost.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "tasklist.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "appidpolicyconverter.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "onedrive.sync.service.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "monotificationux.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "rgnupdt.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "oobefodsetup.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "mobsync.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "findstr.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "wlrmdr.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "wevtutil.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "devicecensus.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "usoclient.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "vssvc.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "setup.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "bdeuisrv.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "ucpdmgr.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "wuaucltcore.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "directxdatabaseupdater.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "drvinst.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "onedrivelauncher.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "cmstp.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "wmiadap.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "provtool.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "appidcertstorecheck.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "filesyncconfig.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "defrag.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "bitsadmin.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "firstlogonanim.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "chrmstp.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "runonce.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "sdbinst.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "attrib.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "consent.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "certutil.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "verclsid.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "pickerhost.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "shellexperiencehost.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "control.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "sensetask.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "apphostregistrationverifier.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "slui.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "fsquirt.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "platform_experience_helper.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "os_update_handler.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "genvalobj.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "sppextcomobj.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "cipher.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "cookie_exporter.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "backgroundtransferhost.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "ucconfigtask.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "shutdown.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "dashost.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "cscript.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "bcdedit.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "mdmagent.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "microsoft.sharepoint.exe",
+      "weight": "rare",
+      "pct": 0.8
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -272,8 +1442,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files\\Windows Defender\\MsMpEng.exe\"",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "8e51703b8b91287b0564c7684bc476e2d7888eff",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "ba459bcd97114256c55e229bf13e15cd",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "6eb45e2626f7d47cb0f491a1f2ef7e3e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "792f76cbae9692b7da0bea810d623595491f18b39622a4ea64ce266720a45f2f",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "f189c7b818d0aa5ff3015f856e3c3a13",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:S+QOJiuXVyF3gcsku2oKTesQciC4Y4F1evqfN:uUiuXVupsMx4Y4Fsy1",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "7acd545afee1c8c9210b4bb6aa73d93b35d6aad2e330ec94bbcd2732dc8008c0",
+      "pct": 100
+    }
+  ],
   "security_notes": "MsMpEng.exe is mostly something to recognize as normal, but it matters in two ways. Its trusted name invites impersonation (T1036.005): a process called MsMpEng.exe outside the Defender platform folder, or one lacking the protected-process status the real engine always has, is suspect.\n\nIt is also a target for being switched off (T1685). Attackers disable Defender's real-time protection, stop the service, or add exclusions so the engine stops inspecting their activity, and on hardware that supports it the PPL protection is what makes the engine itself hard to kill or tamper with directly. MsMpEng disappearing, or its protection settings changing, on a machine that is supposed to run Defender means the primary defense has been neutralized.\n",
   "mitre_attack": [
     "T1036.005",

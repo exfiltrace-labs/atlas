@@ -11,43 +11,395 @@
   ],
   "description": "cmd.exe is the Windows Command Processor, the classic command-line interpreter for Windows. It runs typed commands and batch scripts (.bat and .cmd files), provides built-in commands like dir, copy, and set, and chains programs together with operators. It predates PowerShell and is still the default shell behind countless scripts, installers, and automation tasks.\n",
   "about": "cmd.exe is the command shell that has shipped with Windows NT from the start. The genuine binary lives at `C:\\Windows\\System32\\cmd.exe`, with a 32-bit copy under `SysWOW64`. It interprets built-in commands (`dir`, `set`, `copy`, `del`, and the like) directly, runs external programs by name, and executes batch files written in its own simple scripting syntax.\n\nIt can run interactively or take a command non-interactively with `/c` (run the command, then exit) or `/k` (run it, then stay open). Commands can be combined with the `&`, `&&`, and `||` operators and piped with `|`. Like any console program it is hosted by `conhost.exe`.\n\nIts parent is whatever launched it: an interactive `explorer.exe` session, a batch file, the Task Scheduler, a software installer, or another program shelling out to run a command. As with PowerShell, a broad set of parents is normal, so the process is hard to baseline on its own.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "Cmd.Exe.MUI",
+    "internal_name": "cmd",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "336.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 96.4,
+  "host_prevalence": 100,
+  "execution_rank": 20,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
-  "expected_children": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 7,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "explorer.exe",
+      "weight": "common",
+      "pct": 57.1
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "uncommon",
+      "pct": 42.9
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "conhost.exe",
+      "weight": "uncommon",
+      "pct": 31.8
+    },
+    {
+      "value": "tasklist.exe",
+      "weight": "rare",
+      "pct": 13.6
+    },
+    {
+      "value": "findstr.exe",
+      "weight": "rare",
+      "pct": 13.6
+    },
+    {
+      "value": "cscript.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "cipher.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "attrib.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "bcdedit.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "cmstp.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "certutil.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "control.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "dashost.exe",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "bitsadmin.exe",
+      "weight": "rare",
+      "pct": 4.5
+    }
+  ],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
-  "instance_counts": [],
-  "token_privileges": [],
-  "process_handles": [],
-  "os_prevalence": [],
+  "loaded_modules": [
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 77.8
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 77.8
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 77.8
+    },
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 77.8
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 77.8
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 77.8
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 55.6
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 55.6
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 55.6
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "common",
+      "pct": 55.6
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 44.4
+    },
+    {
+      "value": "appidapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "cmdext.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "srpapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "winbrand.dll",
+      "weight": "rare",
+      "pct": 22.2
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "<Anonymous Pipe>",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "common",
+      "pct": 57.1
+    },
+    {
+      "value": "SYSTEM",
+      "weight": "uncommon",
+      "pct": 42.9
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "common",
+      "pct": 57.1
+    },
+    {
+      "value": "System",
+      "weight": "uncommon",
+      "pct": 42.9
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 78.6
+    },
+    {
+      "value": "Session 0",
+      "weight": "rare",
+      "pct": 21.4
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "findstr.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "tasklist.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "certutil.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "control.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "cipher.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "cmstp.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "bitsadmin.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "dashost.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "bcdedit.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "attrib.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "cscript.exe",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\cmd.exe` or its `SysWOW64` copy",
@@ -78,8 +430,61 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\cmd.exe\" /d /c C:\\WINDOWS\\system32\\hpatchmonTask.cmd",
+      "pct": 42.9
+    },
+    {
+      "command": "\"C:\\WINDOWS\\system32\\cmd.exe\"",
+      "pct": 28.6
+    },
+    {
+      "command": "\"C:\\Windows\\System32\\cmd.exe\" /q /c del /q \"C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe\"",
+      "pct": 14.3
+    },
+    {
+      "command": "\"C:\\Windows\\System32\\cmd.exe\" /q /c del /q \"C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\StandaloneUpdater\\OneDriveSetup.exe\"",
+      "pct": 14.3
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "d3716217996279c9a3486657b9414525",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "6144:Tz1ry93tD41hFhhHA3IyPGD3q/fPBXInkVviU0b4hPgmM:9ry936TFh4PGD3q/3GnYaUvgN",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "fc01b4963b10d5d1a4812184b0998e8f",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "b0f049c014592b156eb1fa857e99ceb9",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "a970c9d1c2d4f0866cf383cfd2cee63117136aab",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "0e8dbf6acab71de2ed6173ded5e7ed7187aa9ee2681c445112b894aec75917b6",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "65c9ec61a5b10e7eec76a7a961766b86bb93604ef18c5d1fe8ac53b4e53ef17a",
+      "pct": 100
+    }
+  ],
   "security_notes": "cmd.exe is one of the most common living-off-the-land tools on Windows (T1059.003). The signed binary runs reconnaissance, chains utilities together, and launches other LOLBINs, so path and signature checks pass and what gives it away is the command line and the parent. A cmd.exe spawned by an Office application or an internet-facing service process is a strong sign of macro-borne or exploited-service execution.\n\nAttackers obfuscate command lines to slip past detection (T1027.010), using caret escapes, doubled quotes, and environment-variable substitution so that a string like `c^m^d` or `%COMSPEC%` reaches the interpreter intact while reading as noise to a scanner.\n\nHands-on-keyboard activity often surfaces here first. A `/c` chain of discovery commands (`whoami /all`, `net group`, `ipconfig /all`, `systeminfo`) run in quick succession is a recognizable pattern of an operator getting their bearings on a freshly accessed host.\n",
   "mitre_attack": [
     "T1059.003",

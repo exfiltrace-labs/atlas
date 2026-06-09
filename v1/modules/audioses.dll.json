@@ -2,9 +2,51 @@
   "name": "audioses.dll",
   "loaded_by": [
     {
+      "name": "audiodg.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "devicecensus.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
       "name": "svchost.exe",
       "weight": "rare",
-      "pct": 14.3,
+      "pct": 1.4,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
       "lolbin": false
     }
   ]

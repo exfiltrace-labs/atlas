@@ -1,0 +1,65 @@
+{
+  "name": "virtdisk.dll",
+  "loaded_by": [
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "powershell.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "smartscreen.exe",
+      "weight": "rare",
+      "pct": 12.5,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 7.7,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 2.4,
+      "lolbin": false
+    }
+  ]
+}

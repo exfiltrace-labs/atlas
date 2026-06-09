@@ -1,0 +1,47 @@
+{
+  "name": "bcd.dll",
+  "loaded_by": [
+    {
+      "name": "autochk.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "genvalobj.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "provtool.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.6,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 8.5,
+      "lolbin": false
+    }
+  ]
+}

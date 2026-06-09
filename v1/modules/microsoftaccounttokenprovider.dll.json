@@ -1,0 +1,11 @@
+{
+  "name": "microsoftaccounttokenprovider.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": true
+    }
+  ]
+}

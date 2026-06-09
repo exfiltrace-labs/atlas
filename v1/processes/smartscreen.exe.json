@@ -11,43 +11,540 @@
   ],
   "description": "smartscreen.exe runs Windows Defender SmartScreen, the reputation check that warns before running downloaded files and visiting risky sites. It appears when the shell needs a reputation decision. It is a defensive process, so an attacker disabling or killing it is the security-relevant event.\n",
   "about": "smartscreen.exe evaluates the reputation of downloaded applications and content using Microsoft's SmartScreen service, producing the \"Windows protected your PC\" prompts for unrecognized programs. It is invoked by the shell when a reputation decision is needed, runs as the user, and lives at `C:\\Windows\\System32\\smartscreen.exe`.\n\nLegitimately, smartscreen appears around downloads and first-run of new programs and is otherwise idle. It performs checks rather than launching programs, so it does not normally spawn other processes.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "smartscreen.exe.mui",
+    "internal_name": "smartscreen.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.4202 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "596.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 42,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\smartscreen.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
-  "network_ports": [],
+  "network_ports": [
+    {
+      "value": "443/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
-  "instance_counts": [],
-  "token_privileges": [],
-  "process_handles": [],
-  "os_prevalence": [],
+  "loaded_modules": [
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "smartscreenps.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "smartscreen.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wtdsensor.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.management.workplace.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "virtdisk.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "webio.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "windows.security.authentication.onlineid.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "aepic.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "schannel.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "ncryptsslp.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "servicingcommon.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "sfc.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "wkscli.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "sfc_os.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\wkssvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "common",
+      "pct": 72.7
+    },
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "rare",
+      "pct": 9.1
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\smartscreen.exe`",
@@ -70,8 +567,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\Windows\\System32\\smartscreen.exe -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "742bc077bc117a2d6ce2c7c9e9ea8619",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "c84171df6e7f087ea4e625ccce2ab167",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "032d6d9e18a3cb24b70111593c2d0180",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "045bfd198b5b7559819f3ec3392c533c875bcdeb89055d5e37cab566c8fa4174",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "fd0574b0f474e9acba5300cd3695fbfada3e6ad2",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "09f10bdc064a148354ab157439348080b9a12860e5877dce24229ae71066e54a",
+      "pct": 100
+    }
+  ],
   "security_notes": "smartscreen.exe is a defensive component, so its main relevance is being switched off (T1685). Attackers disable SmartScreen through policy or registry so that downloaded malware runs without a reputation warning, the same playbook as disabling other protections. SmartScreen turning off, or the process being absent where it should run, means a safety check has been removed.\n\nIts trusted name also invites impersonation (T1036.005): a smartscreen.exe outside `System32`, unsigned, or spawning processes is not the real reputation checker.\n",
   "mitre_attack": [
     "T1685",

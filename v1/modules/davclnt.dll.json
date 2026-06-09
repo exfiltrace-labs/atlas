@@ -1,0 +1,11 @@
+{
+  "name": "davclnt.dll",
+  "loaded_by": [
+    {
+      "name": "winlogon.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

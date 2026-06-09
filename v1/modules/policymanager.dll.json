@@ -2,21 +2,219 @@
   "name": "policymanager.dll",
   "loaded_by": [
     {
+      "name": "aggregatorhost.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "apphostregistrationverifier.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
       "name": "backgroundtaskhost.exe",
+      "weight": "common",
+      "pct": 54.2,
+      "lolbin": false
+    },
+    {
+      "name": "compattelrunner.exe",
+      "weight": "ubiquitous",
+      "pct": 91.7,
+      "lolbin": false
+    },
+    {
+      "name": "ctfmon.exe",
+      "weight": "uncommon",
+      "pct": 46.2,
+      "lolbin": false
+    },
+    {
+      "name": "devicecensus.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "directxdatabaseupdater.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "dllhost.exe",
+      "weight": "rare",
+      "pct": 6.7,
+      "lolbin": false
+    },
+    {
+      "name": "dmclient.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 13,
+      "lolbin": true
+    },
+    {
+      "name": "identity_helper.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "uncommon",
+      "pct": 36.4,
+      "lolbin": false
+    },
+    {
+      "name": "mousocoreworker.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": true
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 10.5,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "provtool.exe",
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
     },
     {
       "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 23.4,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
       "weight": "uncommon",
-      "pct": 33.3,
+      "pct": 27.3,
+      "lolbin": false
+    },
+    {
+      "name": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 6.7,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "setup.exe",
+      "weight": "rare",
+      "pct": 12.5,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "smartscreen.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
       "lolbin": false
     },
     {
       "name": "svchost.exe",
       "weight": "rare",
-      "pct": 14.3,
+      "pct": 15.8,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "uncommon",
+      "pct": 28.2,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "uncommon",
+      "pct": 38.5,
+      "lolbin": false
+    },
+    {
+      "name": "ucconfigtask.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "userinit.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "wermgr.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "windowsterminal.exe",
+      "weight": "rare",
+      "pct": 16.7,
+      "lolbin": false
+    },
+    {
+      "name": "winlogon.exe",
+      "weight": "common",
+      "pct": 50,
       "lolbin": false
     }
   ]

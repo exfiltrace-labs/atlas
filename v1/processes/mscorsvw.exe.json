@@ -1,0 +1,1601 @@
+{
+  "name": "mscorsvw.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Code Signing PCA 2024",
+  "cert_serial": "33000000905001BAD6172D07A4000000000090",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha384RSA",
+  "signers": [
+    "Microsoft Dynamic Code Publisher"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "mscorsvw.exe",
+    "internal_name": "mscorsvw.exe",
+    "product": "Microsoft® .NET Framework",
+    "copyright": "© Microsoft Corporation.  All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "4.8.9221.0 built by: NET481REL1LAST_25H2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "136.40 KB",
+      "weight": "common",
+      "pct": 57.1
+    },
+    {
+      "value": "125.40 KB",
+      "weight": "uncommon",
+      "pct": 42.9
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "common",
+      "pct": 57.1
+    },
+    {
+      "value": "x86",
+      "weight": "uncommon",
+      "pct": 42.9
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "369f052c24fcdbcdffddf1daa0a7ed2ae3950047",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 99.8,
+  "host_prevalence": 100,
+  "execution_rank": 2,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 161,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe",
+      "weight": "common",
+      "pct": 67.7
+    },
+    {
+      "value": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe",
+      "weight": "uncommon",
+      "pct": 32.3
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "ngen.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "ngentask.exe",
+      "weight": "rare",
+      "pct": 21.7
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "mscorsvw.exe",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "ucrtbase_clr0400.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "clr.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "mscoree.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "vcruntime140_clr0400.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "mscoreei.dll",
+      "weight": "ubiquitous",
+      "pct": 98.2
+    },
+    {
+      "value": "clrjit.dll",
+      "weight": "common",
+      "pct": 68.9
+    },
+    {
+      "value": "psapi.dll",
+      "weight": "common",
+      "pct": 68.9
+    },
+    {
+      "value": "version.dll",
+      "weight": "common",
+      "pct": 67.7
+    },
+    {
+      "value": "mscorlib.ni.dll",
+      "weight": "common",
+      "pct": 67.7
+    },
+    {
+      "value": "vcruntime140_1_clr0400.dll",
+      "weight": "common",
+      "pct": 66.5
+    },
+    {
+      "value": "system.ni.dll",
+      "weight": "common",
+      "pct": 59.1
+    },
+    {
+      "value": "system.core.ni.dll",
+      "weight": "uncommon",
+      "pct": 47.6
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 41.5
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 39.6
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "uncommon",
+      "pct": 39.6
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 39.6
+    },
+    {
+      "value": "wofutil.dll",
+      "weight": "uncommon",
+      "pct": 32.3
+    },
+    {
+      "value": "wow64con.dll",
+      "weight": "uncommon",
+      "pct": 31.7
+    },
+    {
+      "value": "wow64cpu.dll",
+      "weight": "uncommon",
+      "pct": 31.7
+    },
+    {
+      "value": "wow64win.dll",
+      "weight": "uncommon",
+      "pct": 31.7
+    },
+    {
+      "value": "wow64.dll",
+      "weight": "uncommon",
+      "pct": 31.7
+    },
+    {
+      "value": "wow64base.dll",
+      "weight": "uncommon",
+      "pct": 31.7
+    },
+    {
+      "value": "system.configuration.ni.dll",
+      "weight": "uncommon",
+      "pct": 31.1
+    },
+    {
+      "value": "system.xml.dll",
+      "weight": "rare",
+      "pct": 12.8
+    },
+    {
+      "value": "system.xml.ni.dll",
+      "weight": "rare",
+      "pct": 11.6
+    },
+    {
+      "value": "system.drawing.ni.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "windowsbase.ni.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "system.configuration.dll",
+      "weight": "rare",
+      "pct": 8.5
+    },
+    {
+      "value": "presentationcore.ni.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "system.windows.forms.ni.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "system.security.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "system.runtime.serialization.ni.dll",
+      "weight": "rare",
+      "pct": 6.1
+    },
+    {
+      "value": "accessibility.ni.dll",
+      "weight": "rare",
+      "pct": 6.1
+    },
+    {
+      "value": "system.xaml.dll",
+      "weight": "rare",
+      "pct": 5.5
+    },
+    {
+      "value": "system.numerics.dll",
+      "weight": "rare",
+      "pct": 5.5
+    },
+    {
+      "value": "system.enterpriseservices.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "system.windows.forms.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "system.drawing.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "system.web.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "system.configuration.install.ni.dll",
+      "weight": "rare",
+      "pct": 4.3
+    },
+    {
+      "value": "system.directoryservices.ni.dll",
+      "weight": "rare",
+      "pct": 4.3
+    },
+    {
+      "value": "system.data.dll",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "presentationcore.dll",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "presentationframework.ni.dll",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "system.transactions.dll",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "mmcfxcommon.dll",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "system.printing.dll",
+      "weight": "rare",
+      "pct": 3
+    },
+    {
+      "value": "uiautomationtypes.dll",
+      "weight": "rare",
+      "pct": 3
+    },
+    {
+      "value": "accessibility.dll",
+      "weight": "rare",
+      "pct": 3
+    },
+    {
+      "value": "mmcex.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "uiautomationprovider.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "mscorlib.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "system.net.http.ni.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "microsoft.grouppolicy.interop.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "microsoft.grouppolicy.admtmpleditor.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "system.xaml.ni.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "system.deployment.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "microsoft.grouppolicy.interop.ni.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "system.windows.input.manipulations.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "system.runtime.serialization.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "system.serviceprocess.ni.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "presentationframework.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "windowsbase.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "system.enterpriseservices.wrapper.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "system.data.ni.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "system.servicemodel.internals.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "smdiagnostics.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.data.sqlxml.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.configuration.install.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.runtime.windowsruntime.ui.xaml.ni.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.net.http.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.xml.linq.ni.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "presentationui.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "presentationframework.aero2.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.runtime.windowsruntime.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "presentationframework.aero2.ni.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "napcrypt.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.core.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "mmcex.ni.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.runtime.windowsruntime.ui.xaml.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "custommarshalers.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "microsoft.ink.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "microsoft.managementconsole.ni.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "microsoft.grouppolicy.admtmpleditor.ni.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "reachframework.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "system.xml.linq.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "microsoft.managementconsole.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "mmcfxcommon.ni.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "microsoft.ink.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "custommarshalers.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "microsoft.grouppolicy.reporting.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "miguicontrols.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "microsoft.visualc.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "system.servicemodel.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "system.transactions.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "microsoft.visualbasic.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "system.management.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "system.runtime.remoting.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "napcrypt.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    },
+    {
+      "value": "system.web.services.ni.dll",
+      "weight": "rare",
+      "pct": 0.6
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 24c -InterruptEvent 0 -NGENProcess 23c -Pipe 26c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 28c -InterruptEvent 0 -NGENProcess 2a0 -Pipe 294 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3d0 -InterruptEvent 0 -NGENProcess 3a8 -Pipe 3cc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2d8 -InterruptEvent 0 -NGENProcess 2f0 -Pipe 2dc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2c8 -InterruptEvent 0 -NGENProcess 2ec -Pipe 304 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e8 -InterruptEvent 0 -NGENProcess 31c -Pipe 348 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 338 -InterruptEvent 0 -NGENProcess 1b4 -Pipe 344 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 1b4 -InterruptEvent 0 -NGENProcess 3a8 -Pipe 380 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 404 -InterruptEvent 0 -NGENProcess 41c -Pipe 40c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3b4 -InterruptEvent 0 -NGENProcess 3cc -Pipe 1b4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2d8 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 2c8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 35c -InterruptEvent 0 -NGENProcess 344 -Pipe 31c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2a8 -InterruptEvent 0 -NGENProcess 2d0 -Pipe 2a0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 344 -InterruptEvent 0 -NGENProcess 340 -Pipe 358 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2a8 -InterruptEvent 0 -NGENProcess 280 -Pipe 2c0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2d0 -InterruptEvent 0 -NGENProcess 2cc -Pipe 2e4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 340 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 2e0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3bc -InterruptEvent 0 -NGENProcess 3a4 -Pipe 3a0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2f0 -InterruptEvent 0 -NGENProcess 2e4 -Pipe 2f8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 1e8 -InterruptEvent 0 -NGENProcess 194 -Pipe 1ec -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2fc -InterruptEvent 0 -NGENProcess 2e8 -Pipe 2f0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 244 -Pipe 2ac -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3f4 -InterruptEvent 0 -NGENProcess 3fc -Pipe 3c4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3a4 -InterruptEvent 0 -NGENProcess 3bc -Pipe 3b4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2dc -InterruptEvent 0 -NGENProcess 340 -Pipe 334 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 250 -InterruptEvent 0 -NGENProcess 258 -Pipe 2a0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 35c -InterruptEvent 0 -NGENProcess 300 -Pipe 34c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 35c -InterruptEvent 0 -NGENProcess 378 -Pipe 38c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3cc -InterruptEvent 0 -NGENProcess 3c4 -Pipe 2e8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 23c -InterruptEvent 0 -NGENProcess 2fc -Pipe 29c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2f8 -InterruptEvent 0 -NGENProcess 2b8 -Pipe 2c4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 3a8 -Pipe 3d0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e8 -InterruptEvent 0 -NGENProcess 3b4 -Pipe 338 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2a0 -InterruptEvent 0 -NGENProcess 290 -Pipe 268 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 348 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 328 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3bc -InterruptEvent 0 -NGENProcess 410 -Pipe 404 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 274 -InterruptEvent 0 -NGENProcess 268 -Pipe 270 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b8 -InterruptEvent 0 -NGENProcess 280 -Pipe 23c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3f0 -InterruptEvent 0 -NGENProcess 408 -Pipe 3d4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e0 -InterruptEvent 0 -NGENProcess 2a8 -Pipe 244 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 338 -InterruptEvent 0 -NGENProcess 300 -Pipe 320 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2bc -InterruptEvent 0 -NGENProcess 290 -Pipe 294 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 2b0 -Pipe 27c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 304 -InterruptEvent 0 -NGENProcess 3d4 -Pipe 308 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3b4 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 3b0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 31c -InterruptEvent 0 -NGENProcess 2dc -Pipe 2fc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e8 -InterruptEvent 0 -NGENProcess 2d4 -Pipe 2ec -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 338 -InterruptEvent 0 -NGENProcess 364 -Pipe 390 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 1b4 -Pipe 378 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2f0 -InterruptEvent 0 -NGENProcess 3b0 -Pipe 2c4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 300 -InterruptEvent 0 -NGENProcess 23c -Pipe 36c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3a8 -InterruptEvent 0 -NGENProcess 3f4 -Pipe 3dc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b4 -InterruptEvent 0 -NGENProcess 2c4 -Pipe 2e4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3fc -InterruptEvent 0 -NGENProcess 424 -Pipe 41c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 2fc -Pipe 254 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2c8 -InterruptEvent 0 -NGENProcess 2a8 -Pipe 2bc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 310 -InterruptEvent 0 -NGENProcess 328 -Pipe 32c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 31c -InterruptEvent 0 -NGENProcess 368 -Pipe 370 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 308 -InterruptEvent 0 -NGENProcess 36c -Pipe 3d8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 2c0 -Pipe 250 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 258 -InterruptEvent 0 -NGENProcess 2fc -Pipe 248 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 3bc -Pipe 3c8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 30c -InterruptEvent 0 -NGENProcess 310 -Pipe 31c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3fc -InterruptEvent 0 -NGENProcess 3f0 -Pipe 3f8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 310 -InterruptEvent 0 -NGENProcess 2dc -Pipe 2cc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 23c -InterruptEvent 0 -NGENProcess 204 -Pipe 238 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 404 -Pipe 418 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 284 -InterruptEvent 0 -NGENProcess 290 -Pipe 2d4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2dc -InterruptEvent 0 -NGENProcess 2f8 -Pipe 2d8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b4 -InterruptEvent 0 -NGENProcess 320 -Pipe 304 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 388 -InterruptEvent 0 -NGENProcess 378 -Pipe 374 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 1b4 -InterruptEvent 0 -NGENProcess 3c4 -Pipe 39c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2cc -InterruptEvent 0 -NGENProcess 300 -Pipe 308 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2a0 -InterruptEvent 0 -NGENProcess 2a8 -Pipe 288 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 3cc -InterruptEvent 0 -NGENProcess 3dc -Pipe 3d0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 244 -InterruptEvent 0 -NGENProcess 290 -Pipe 278 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 354 -InterruptEvent 0 -NGENProcess 31c -Pipe 310 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 368 -InterruptEvent 0 -NGENProcess 344 -Pipe 350 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3f4 -InterruptEvent 0 -NGENProcess 3b4 -Pipe 3d8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e0 -InterruptEvent 0 -NGENProcess 31c -Pipe 324 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 31c -InterruptEvent 0 -NGENProcess 368 -Pipe 2dc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b0 -InterruptEvent 0 -NGENProcess 304 -Pipe 2ac -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 2e0 -Pipe 310 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2a8 -InterruptEvent 0 -NGENProcess 2c0 -Pipe 25c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 408 -InterruptEvent 0 -NGENProcess 40c -Pipe 3f0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3a4 -InterruptEvent 0 -NGENProcess 3dc -Pipe 3b8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 380 -Pipe 398 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 204 -InterruptEvent 0 -NGENProcess 1f4 -Pipe 200 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b4 -InterruptEvent 0 -NGENProcess 2d4 -Pipe 2bc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2fc -InterruptEvent 0 -NGENProcess 244 -Pipe 2b0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2c4 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 2ec -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 304 -InterruptEvent 0 -NGENProcess 2fc -Pipe 314 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 3f0 -Pipe 420 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 3b0 -InterruptEvent 0 -NGENProcess 300 -Pipe 2dc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3e4 -InterruptEvent 0 -NGENProcess 3b8 -Pipe 3e0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 33c -InterruptEvent 0 -NGENProcess 32c -Pipe 1e4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e0 -InterruptEvent 0 -NGENProcess 304 -Pipe 2cc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 264 -InterruptEvent 0 -NGENProcess 258 -Pipe 290 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 314 -InterruptEvent 0 -NGENProcess 300 -Pipe 2f4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2c8 -InterruptEvent 0 -NGENProcess 2c4 -Pipe 2d4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 31c -InterruptEvent 0 -NGENProcess 344 -Pipe 36c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3ec -InterruptEvent 0 -NGENProcess 33c -Pipe 348 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3e4 -InterruptEvent 0 -NGENProcess 3a4 -Pipe 3e8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 338 -InterruptEvent 0 -NGENProcess 39c -Pipe 368 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2a0 -InterruptEvent 0 -NGENProcess 264 -Pipe 284 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 408 -InterruptEvent 0 -NGENProcess 404 -Pipe 42c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b4 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 204 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e8 -InterruptEvent 0 -NGENProcess 2fc -Pipe 2d8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3f4 -InterruptEvent 0 -NGENProcess 1e4 -Pipe 3f0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 3cc -InterruptEvent 0 -NGENProcess 304 -Pipe 30c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b4 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 314 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 328 -InterruptEvent 0 -NGENProcess 2dc -Pipe 2b4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 23c -InterruptEvent 0 -NGENProcess 2fc -Pipe 264 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 2d8 -Pipe 2c4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 304 -InterruptEvent 0 -NGENProcess 308 -Pipe 3b0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2f0 -InterruptEvent 0 -NGENProcess 2e4 -Pipe 2e8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 1fc -Pipe 1f4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 388 -InterruptEvent 0 -NGENProcess 1b4 -Pipe 384 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 31c -InterruptEvent 0 -NGENProcess 2dc -Pipe 354 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3b4 -InterruptEvent 0 -NGENProcess 3ac -Pipe 394 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b8 -InterruptEvent 0 -NGENProcess 2c8 -Pipe 2c0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 294 -InterruptEvent 0 -NGENProcess 2a4 -Pipe 298 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 340 -InterruptEvent 0 -NGENProcess 348 -Pipe 330 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 318 -InterruptEvent 0 -NGENProcess 314 -Pipe 324 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 390 -InterruptEvent 0 -NGENProcess 338 -Pipe 300 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 25c -InterruptEvent 0 -NGENProcess 2a0 -Pipe 274 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2b0 -InterruptEvent 0 -NGENProcess 2c8 -Pipe 2b8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2c8 -InterruptEvent 0 -NGENProcess 2ac -Pipe 2f8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2ac -InterruptEvent 0 -NGENProcess 2a0 -Pipe 2e0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 3b0 -InterruptEvent 0 -NGENProcess 23c -Pipe 318 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 304 -InterruptEvent 0 -NGENProcess 320 -Pipe 30c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 354 -InterruptEvent 0 -NGENProcess 29c -Pipe 258 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 308 -InterruptEvent 0 -NGENProcess 314 -Pipe 2fc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 29c -InterruptEvent 0 -NGENProcess 2c4 -Pipe 2f4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e8 -InterruptEvent 0 -NGENProcess 374 -Pipe 37c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e0 -InterruptEvent 0 -NGENProcess 29c -Pipe 2e8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 424 -Pipe 414 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 304 -InterruptEvent 0 -NGENProcess 2e8 -Pipe 1fc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 204 -InterruptEvent 0 -NGENProcess 2c4 -Pipe 2c0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3a8 -InterruptEvent 0 -NGENProcess 364 -Pipe 3c0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 304 -InterruptEvent 0 -NGENProcess 2a8 -Pipe 2b0 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 3dc -InterruptEvent 0 -NGENProcess 3cc -Pipe 344 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2e0 -InterruptEvent 0 -NGENProcess 29c -Pipe 2f8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 338 -InterruptEvent 0 -NGENProcess 364 -Pipe 340 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2ac -InterruptEvent 0 -NGENProcess 2b0 -Pipe 310 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 338 -InterruptEvent 0 -NGENProcess 374 -Pipe 33c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 408 -InterruptEvent 0 -NGENProcess 364 -Pipe 3f4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 1b4 -InterruptEvent 0 -NGENProcess 338 -Pipe 388 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2d4 -InterruptEvent 0 -NGENProcess 2fc -Pipe 2b4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3bc -InterruptEvent 0 -NGENProcess 3d4 -Pipe 3e4 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 364 -InterruptEvent 0 -NGENProcess 408 -Pipe 428 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3a4 -InterruptEvent 0 -NGENProcess 338 -Pipe 3ac -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 2a8 -InterruptEvent 0 -NGENProcess 310 -Pipe 24c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 280 -InterruptEvent 0 -NGENProcess 354 -Pipe 2a8 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2dc -InterruptEvent 0 -NGENProcess 314 -Pipe 29c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 1b4 -InterruptEvent 0 -NGENProcess 344 -Pipe 35c -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 314 -InterruptEvent 0 -NGENProcess 2dc -Pipe 3cc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 300 -InterruptEvent 0 -NGENProcess 320 -Pipe 318 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 31c -InterruptEvent 0 -NGENProcess 338 -Pipe 360 -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 3b4 -InterruptEvent 0 -NGENProcess 3f0 -Pipe 3ec -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    },
+    {
+      "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorsvw.exe -StartupEvent 3b0 -InterruptEvent 0 -NGENProcess 350 -Pipe 3dc -Comment \"NGen Worker Process\"",
+      "pct": 0.6
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "33b0a55aa608ccc1deb40f3b73ec6b67",
+      "pct": 67.7
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:ceCnLoHK2JfpUAkGHtCB0NNgLT7VYU0J07mBx3Wjh/t9wl+GQXOrF1KJH3gnlyRt:E30U2tZNN4T7+BJ07qwhElReO6JkyRjR",
+      "pct": 67.7
+    },
+    {
+      "algo": "sha1",
+      "value": "f0f0b1a8d9604734208e6198cd4e91fa8ccb0796",
+      "pct": 67.7
+    },
+    {
+      "algo": "sha256",
+      "value": "af4a50dc7379f5653eefabcfae68977d2d576141f422c838d9e854ac71c8100a",
+      "pct": 67.7
+    },
+    {
+      "algo": "imphash",
+      "value": "43130dd0620ebb6b36aadeeca4e24f34",
+      "pct": 67.7
+    },
+    {
+      "algo": "authentihash",
+      "value": "01aba25fd8871483b4c79511e41f0694a5c6a0719fd5c2e7b8190c654845fa70",
+      "pct": 67.7
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "663ead59df91de38cc875c49e8bbb53c",
+      "pct": 67.7
+    },
+    {
+      "algo": "md5",
+      "value": "ad0f4ff07f91a4d9f3808fde30f6e2ea",
+      "pct": 32.3
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:6giblZYReeOH80efU/mqiTGOgmdGQjqGwDhXt:sn4lZfPDlgziqZDn",
+      "pct": 32.3
+    },
+    {
+      "algo": "sha1",
+      "value": "56a824076fd4ff4937ae27295db07d0e119c7e9e",
+      "pct": 32.3
+    },
+    {
+      "algo": "sha256",
+      "value": "27e5f07bfb50b8a929d383751fc14c99fdb94c72eee5c9693af9ea7b6defa676",
+      "pct": 32.3
+    },
+    {
+      "algo": "imphash",
+      "value": "21b20a323eb863d30c463aa3d25504fe",
+      "pct": 32.3
+    },
+    {
+      "algo": "authentihash",
+      "value": "7460d99c25aed0026c2299b2c87a4f84ca044490e0a60916579ba5b7e6cf4a35",
+      "pct": 32.3
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "1cce50c3a0a059321a70237df11bbc65",
+      "pct": 32.3
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "092bc4b9-3d1d-43b4-a6b4-8c8acd83522f",
+      "title": "PowerShell Core DLL Loaded By Non PowerShell Process",
+      "level": "medium",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_system_management_automation_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "ad1f4bb9-8dfb-4765-adb6-2a7cfb6c0f94",
+      "title": "Suspicious WSMAN Provider Image Loads",
+      "level": "medium",
+      "techniques": [
+        "T1059.001",
+        "T1021.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_wsman_provider_image_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "bafd07c6-3ea5-454a-b4be-058fbb073de7",
+      "title": "Potential Executable Run Itself As Sacrificial Process",
+      "level": "low",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_parent_execute_itself.yml",
+      "match": "image"
+    }
+  ]
+}

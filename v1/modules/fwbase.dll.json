@@ -1,0 +1,95 @@
+{
+  "name": "fwbase.dll",
+  "loaded_by": [
+    {
+      "name": "apphostregistrationverifier.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 20.3,
+      "lolbin": false
+    },
+    {
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": true
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 10.5,
+      "lolbin": false
+    },
+    {
+      "name": "rundll32.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": true
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "rare",
+      "pct": 9.1,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "setup.exe",
+      "weight": "rare",
+      "pct": 12.5,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 5.6,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "wininit.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "winlogon.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

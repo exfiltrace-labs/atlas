@@ -1,0 +1,495 @@
+{
+  "name": "ucconfigtask.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": null,
+    "internal_name": null,
+    "product": null,
+    "copyright": null
+  },
+  "file_versions": [],
+  "file_sizes": [
+    {
+      "value": "56.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 127,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\UCConfigTask.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [
+    {
+      "value": "443/tcp",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "schannel.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "webio.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "flightsettings.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onesettingsclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "utcutil.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucconfigtask.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "diagnosticdatasettings.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wosc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "updatepolicy.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fcon.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wusys.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uusbrain.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "aepic.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ncryptsslp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "updatepolicycore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dcntel.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.management.workplace.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\UCConfigTask.exe\"",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "ba4296c76b62029e6a2f2ddf0a6bb46d",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "3cf8437a4bba0d93225a07cd0352b601622e87af",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "fa7730d29376480cfa68a4b4c37e6ec019f49b271236a2b75a35b850e02e9f44",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "75af2a195bd7cbdceb4edb2c9db099b8",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "2101694e6ff5c9dd56d5c1060e7c1c86e8e41771a232e473568170ad76b35b25",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "272956c52222683762eeb985ea8e3110",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

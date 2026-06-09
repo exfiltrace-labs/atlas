@@ -6,6 +6,60 @@
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 13,
+      "lolbin": true
+    },
+    {
+      "name": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "pickerhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 27.3,
+      "lolbin": false
+    },
+    {
+      "name": "shellhost.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "windowsterminal.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
     }
   ]
 }

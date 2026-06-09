@@ -1,0 +1,17 @@
+{
+  "name": "wmsgapi.dll",
+  "loaded_by": [
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "services.exe",
+      "weight": "rare",
+      "pct": 22.2,
+      "lolbin": false
+    }
+  ]
+}

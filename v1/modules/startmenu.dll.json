@@ -1,0 +1,35 @@
+{
+  "name": "startmenu.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 22,
+      "lolbin": false
+    },
+    {
+      "name": "identity_helper.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 3.1,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    }
+  ]
+}

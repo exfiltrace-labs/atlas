@@ -1,0 +1,17 @@
+{
+  "name": "print.printsupport.source.dll",
+  "loaded_by": [
+    {
+      "name": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 4.8,
+      "lolbin": false
+    }
+  ]
+}

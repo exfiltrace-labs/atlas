@@ -1,0 +1,29 @@
+{
+  "name": "windows.devices.sensors.dll",
+  "loaded_by": [
+    {
+      "name": "devicecensus.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "uncommon",
+      "pct": 36.4,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    }
+  ]
+}

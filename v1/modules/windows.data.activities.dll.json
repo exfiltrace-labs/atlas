@@ -1,0 +1,11 @@
+{
+  "name": "windows.data.activities.dll",
+  "loaded_by": [
+    {
+      "name": "devicecensus.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

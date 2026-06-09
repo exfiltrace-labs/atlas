@@ -2,9 +2,27 @@
   "name": "msedge.dll",
   "loaded_by": [
     {
-      "name": "msedgewebview2.exe",
+      "name": "cookie_exporter.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "identity_helper.exe",
       "weight": "common",
       "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 76.2,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 63.3,
       "lolbin": true
     }
   ]

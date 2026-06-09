@@ -1,0 +1,11 @@
+{
+  "name": "system.configuration.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 8.5,
+      "lolbin": false
+    }
+  ]
+}

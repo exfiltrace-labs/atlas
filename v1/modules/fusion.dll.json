@@ -1,0 +1,23 @@
+{
+  "name": "fusion.dll",
+  "loaded_by": [
+    {
+      "name": "ngen.exe",
+      "weight": "ubiquitous",
+      "pct": 97.9,
+      "lolbin": true
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

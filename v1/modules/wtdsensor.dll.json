@@ -1,0 +1,35 @@
+{
+  "name": "wtdsensor.dll",
+  "loaded_by": [
+    {
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    },
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": true
+    },
+    {
+      "name": "smartscreen.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    }
+  ]
+}

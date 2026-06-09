@@ -2,9 +2,81 @@
   "name": "wbemsvc.dll",
   "loaded_by": [
     {
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    },
+    {
+      "name": "compattelrunner.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 5.3,
+      "lolbin": false
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "uncommon",
+      "pct": 37.5,
+      "lolbin": false
+    },
+    {
       "name": "powershell.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.7,
+      "lolbin": false
+    },
+    {
+      "name": "sysmon64.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    },
+    {
+      "name": "tasklist.exe",
       "weight": "ubiquitous",
       "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "unsecapp.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "wmiadap.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "uncommon",
+      "pct": 40.5,
       "lolbin": false
     }
   ]

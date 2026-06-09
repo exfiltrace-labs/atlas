@@ -2,15 +2,69 @@
   "name": "msvcp_win.dll",
   "loaded_by": [
     {
+      "name": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "aggregatorhost.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "appactions.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "apphostregistrationverifier.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "appidcertstorecheck.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "appidpolicyconverter.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
       "name": "applicationframehost.exe",
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
     },
     {
+      "name": "audiodg.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
       "name": "backgroundtaskhost.exe",
       "weight": "ubiquitous",
+      "pct": 93.2,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtransferhost.exe",
+      "weight": "ubiquitous",
       "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "bdeuisrv.exe",
+      "weight": "common",
+      "pct": 50,
       "lolbin": false
     },
     {
@@ -20,25 +74,643 @@
       "lolbin": false
     },
     {
-      "name": "msedgewebview2.exe",
+      "name": "certutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "chrome.exe",
+      "weight": "ubiquitous",
+      "pct": 92.5,
+      "lolbin": false
+    },
+    {
+      "name": "chromesetup.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "cipher.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "cmd.exe",
+      "weight": "common",
+      "pct": 55.6,
+      "lolbin": true
+    },
+    {
+      "name": "cmstp.exe",
       "weight": "common",
       "pct": 50,
       "lolbin": true
     },
     {
-      "name": "runtimebroker.exe",
+      "name": "compattelrunner.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 99.4,
+      "lolbin": true
+    },
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "control.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "cookie_exporter.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "crossdeviceresume.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "cscript.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "csrss.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "ctfmon.exe",
+      "weight": "uncommon",
+      "pct": 46.2,
+      "lolbin": false
+    },
+    {
+      "name": "dashost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "defrag.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "devicecensus.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "directxdatabaseupdater.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "dismhost.exe",
+      "weight": "ubiquitous",
+      "pct": 83.3,
+      "lolbin": false
+    },
+    {
+      "name": "dllhost.exe",
+      "weight": "ubiquitous",
+      "pct": 76.7,
+      "lolbin": false
+    },
+    {
+      "name": "dmclient.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "dwm.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "dxgiadaptercache.exe",
       "weight": "common",
       "pct": 66.7,
       "lolbin": false
     },
     {
-      "name": "svchost.exe",
+      "name": "elevation_service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 13,
+      "lolbin": true
+    },
+    {
+      "name": "filecoauth.exe",
+      "weight": "ubiquitous",
+      "pct": 83.3,
+      "lolbin": false
+    },
+    {
+      "name": "filesyncconfig.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "findstr.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "fontdrvhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "fsquirt.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "genvalobj.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "identity_helper.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "uncommon",
+      "pct": 36.4,
+      "lolbin": false
+    },
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "microsoft.sharepoint.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "microsoftedgeupdate.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "mobsync.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "monotificationux.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "mousocoreworker.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "mscorsvw.exe",
+      "weight": "ubiquitous",
+      "pct": 98.2,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 80.3,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 73.3,
+      "lolbin": true
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 10.5,
+      "lolbin": false
+    },
+    {
+      "name": "ngen.exe",
+      "weight": "ubiquitous",
+      "pct": 97.9,
+      "lolbin": true
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "nissrv.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
       "weight": "uncommon",
       "pct": 42.9,
       "lolbin": false
     },
     {
+      "name": "onedrive.sync.service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivelauncher.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "oobefodsetup.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "openconsole.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "os_update_handler.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "pickerhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "platform_experience_helper.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "powershell.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "provtool.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "rgnupdt.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "rundll32.exe",
+      "weight": "common",
+      "pct": 60,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "common",
+      "pct": 53.1,
+      "lolbin": false
+    },
+    {
+      "name": "sdbinst.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "searchfilterhost.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 27.3,
+      "lolbin": false
+    },
+    {
+      "name": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "searchprotocolhost.exe",
+      "weight": "common",
+      "pct": 53.3,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthhost.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "shellexperiencehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "shellhost.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "shutdown.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "slui.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "smartscreen.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "smss.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "spoolsv.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "sppextcomobj.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "sppsvc.exe",
+      "weight": "uncommon",
+      "pct": 45.5,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "uncommon",
+      "pct": 42,
+      "lolbin": false
+    },
+    {
+      "name": "sysmon64.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
       "name": "taskhostw.exe",
+      "weight": "common",
+      "pct": 64.8,
+      "lolbin": false
+    },
+    {
+      "name": "tasklist.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "uncommon",
+      "pct": 30.8,
+      "lolbin": false
+    },
+    {
+      "name": "trustedinstaller.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "ucconfigtask.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "unsecapp.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
+      "name": "userinit.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "usoclient.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "verclsid.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "vssvc.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "wermgr.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "wevtutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "widgetservice.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "windowsterminal.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "wininit.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "winlogon.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "wlrmdr.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": true
+    },
+    {
+      "name": "wmiadap.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "uncommon",
+      "pct": 40.5,
+      "lolbin": false
+    },
+    {
+      "name": "wuaucltcore.exe",
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false

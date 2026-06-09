@@ -1,0 +1,17 @@
+{
+  "name": "appidapi.dll",
+  "loaded_by": [
+    {
+      "name": "cmd.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": true
+    },
+    {
+      "name": "powershell.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

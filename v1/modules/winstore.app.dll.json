@@ -1,0 +1,11 @@
+{
+  "name": "winstore.app.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 5.1,
+      "lolbin": false
+    }
+  ]
+}

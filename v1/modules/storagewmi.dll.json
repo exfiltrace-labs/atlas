@@ -1,0 +1,11 @@
+{
+  "name": "storagewmi.dll",
+  "loaded_by": [
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 2.4,
+      "lolbin": false
+    }
+  ]
+}

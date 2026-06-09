@@ -1,0 +1,2260 @@
+{
+  "name": "msedge.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [
+    "lolbin"
+  ],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "330000047F2F422A735308DEEA00000000047F",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "msedge.exe",
+    "internal_name": "msedge_exe",
+    "product": "Microsoft Edge",
+    "copyright": "Copyright Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "140.0.3485.66",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "4154.50 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "ea2f8cbc69a1a01142a1edd8b1256fecbc1d9f2d",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 99.6,
+  "host_prevalence": 100,
+  "execution_rank": 3,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 99,
+  "expected_paths": [
+    {
+      "value": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 96.9
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 3.1
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 88
+    },
+    {
+      "value": "identity_helper.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "setup.exe",
+      "weight": "rare",
+      "pct": 0.9
+    },
+    {
+      "value": "cookie_exporter.exe",
+      "weight": "rare",
+      "pct": 0.9
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 0.9
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 24.2
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "rare",
+      "pct": 8.1
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "msedge.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "identity_helper.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "setup.exe",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "cookie_exporter.exe",
+      "weight": "rare",
+      "pct": 6.3
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 6.3
+    }
+  ],
+  "network_ports": [
+    {
+      "value": "53/udp",
+      "weight": "common",
+      "pct": 54.1
+    },
+    {
+      "value": "443/tcp",
+      "weight": "uncommon",
+      "pct": 37.2
+    },
+    {
+      "value": "443/udp",
+      "weight": "rare",
+      "pct": 6.8
+    },
+    {
+      "value": "5353/udp",
+      "weight": "rare",
+      "pct": 0.9
+    },
+    {
+      "value": "80/tcp",
+      "weight": "rare",
+      "pct": 0.9
+    }
+  ],
+  "listening_ports": [],
+  "network_destinations": [
+    {
+      "value": "akamaitechnologies.com",
+      "weight": "rare",
+      "pct": 8
+    },
+    {
+      "value": "1e100.net",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "rogers.com",
+      "weight": "rare",
+      "pct": 2.3
+    },
+    {
+      "value": "a-msedge.net",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "cloudfront.net",
+      "weight": "rare",
+      "pct": 0.7
+    },
+    {
+      "value": "mcast.net",
+      "weight": "rare",
+      "pct": 0.5
+    },
+    {
+      "value": "adnexus.net",
+      "weight": "rare",
+      "pct": 0.2
+    }
+  ],
+  "loaded_modules": [
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 81.1
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 81.1
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "msedge_elf.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 80.3
+    },
+    {
+      "value": "msedge.dll",
+      "weight": "ubiquitous",
+      "pct": 76.2
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "ubiquitous",
+      "pct": 75.4
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 34.4
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 34.4
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 34.4
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 34.4
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 34.4
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 29.5
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 28.7
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 25.4
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 17.2
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 17.2
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "rare",
+      "pct": 17.2
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 16.4
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 15.6
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "rare",
+      "pct": 15.6
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 14.8
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 14.8
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "rare",
+      "pct": 14.8
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "rare",
+      "pct": 13.1
+    },
+    {
+      "value": "ffmpeg.dll",
+      "weight": "rare",
+      "pct": 13.1
+    },
+    {
+      "value": "dwrite.dll",
+      "weight": "rare",
+      "pct": 13.1
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "rare",
+      "pct": 9.8
+    },
+    {
+      "value": "version.dll",
+      "weight": "rare",
+      "pct": 9.8
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "rare",
+      "pct": 9.8
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "rare",
+      "pct": 9.8
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "rare",
+      "pct": 9.8
+    },
+    {
+      "value": "hevcdecoder_store.dll",
+      "weight": "rare",
+      "pct": 9
+    },
+    {
+      "value": "mfplat.dll",
+      "weight": "rare",
+      "pct": 9
+    },
+    {
+      "value": "rtworkq.dll",
+      "weight": "rare",
+      "pct": 9
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 8.2
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 8.2
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "rare",
+      "pct": 8.2
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "wscapi.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "d3d11.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "d3d10warp.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "resourcepolicyclient.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "nlansp_c.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "tbs.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "rare",
+      "pct": 5.7
+    },
+    {
+      "value": "mf.dll",
+      "weight": "rare",
+      "pct": 5.7
+    },
+    {
+      "value": "vk_swiftshader.dll",
+      "weight": "rare",
+      "pct": 5.7
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 5.7
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "vaultcli.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "dwmapi.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 4.9
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "windows.internal.ui.shell.windowtabmanager.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "windows.networking.connectivity.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "windows.storage.search.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "systemsettings.datamodel.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "wpnapps.dll",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "oneds.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "libglesv2.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "telclient.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.fileexplorer.common.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "d3dscache.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "d3dcompiler_47.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "capauthz.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.applicationmodel.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "dcomp.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "appresolver.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "slc.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "libegl.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wevtapi.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "tenantrestrictionsplugin.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "kbdus.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "microsoft_shell_integration.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "ncryptprov.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "tpmcoreprovisioning.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "dxilconv.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "pcpksp.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "mscms.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "diagnosticdatasettings.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "assignedaccessruntime.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "msvcp110_win.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.system.profile.platformdiagnosticsandusagedatasettings.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "icu.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "d3d12core.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.system.diagnostics.telemetry.platformtelemetryclient.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "d3d12.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "omadmapi.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "dsreg.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.security.authentication.web.core.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wkscli.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "slwga.dll",
+      "weight": "rare",
+      "pct": 2.5
+    },
+    {
+      "value": "windows.system.userprofile.diagnosticssettings.dll",
+      "weight": "rare",
+      "pct": 2.5
+    },
+    {
+      "value": "aadwamextension.dll",
+      "weight": "rare",
+      "pct": 2.5
+    },
+    {
+      "value": "bitsproxy.dll",
+      "weight": "rare",
+      "pct": 2.5
+    },
+    {
+      "value": "sppc.dll",
+      "weight": "rare",
+      "pct": 2.5
+    },
+    {
+      "value": "directml.dll",
+      "weight": "rare",
+      "pct": 2.5
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "rare",
+      "pct": 2.5
+    },
+    {
+      "value": "inputhost.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "coml2.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "shdocvw.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "dusmapi.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "locationframeworkps.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "shellcommoncommonproxystub.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "clipc.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "windows.system.profile.retailinfo.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "geolocation.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "domain_actions.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "onnxruntime.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "fwpolicyiomgr.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "twinapi.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "oleacc.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "windows.devices.enumeration.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "atlthunk.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "windows.security.authentication.onlineid.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "profext.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "directmanipulation.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "cloudexperiencehostcommon.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "dataexchange.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "capabilityaccessmanagerclient.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "well_known_domains.dll",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "mpclient.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "explorerframe.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "dxcompiler.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "ieframe.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "mssprxy.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "microsoftaccounttokenprovider.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "webio.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "mpoav.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "dxil.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "onramp.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "servicingcommon.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "pcacli.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "ondemandconnroutehelper.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "mlang.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "sfc_os.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "aepic.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "wtdsensor.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "sfc.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "msiso.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "smartscreenps.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "vulkan-1.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "mpr.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "virtdisk.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "thumbcache.dll",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "microsoftaccountwamextension.dll",
+      "weight": "rare",
+      "pct": 0.8
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\crashpad_8360_CZXHHQLDSOJBKMZV",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "\\crashpad_5752_MCGHETTWCUGBYLNE",
+      "weight": "rare",
+      "pct": 18.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.8360.8508.<n>",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "\\crashpad_5484_OVEFKKAXJPIQUBHB",
+      "weight": "rare",
+      "pct": 12.1
+    },
+    {
+      "value": "\\crashpad_11208_HMEYFKFYLLIFXXFP",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "\\LOCAL\\mojo.5484.4372.<n>",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "\\LOCAL\\mojo.11208.10632.<n>",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "\\LOCAL\\mojo.8360.8480.<n>",
+      "weight": "rare",
+      "pct": 3.8
+    },
+    {
+      "value": "\\wkssvc",
+      "weight": "rare",
+      "pct": 3.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.11208.10536.<n>",
+      "weight": "rare",
+      "pct": 1.5
+    },
+    {
+      "value": "\\LOCAL\\mojo.5752.3684.<n>",
+      "weight": "rare",
+      "pct": 1.5
+    },
+    {
+      "value": "\\srvsvc",
+      "weight": "rare",
+      "pct": 1.5
+    },
+    {
+      "value": "\\LOCAL\\mojo.5752.7112.<n>",
+      "weight": "rare",
+      "pct": 1.5
+    },
+    {
+      "value": "\\LOCAL\\mojo.external_task_manager_5752",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.external_task_manager_8360",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.5484.8404.<n>",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.8360.9012.<n>",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.11208.2496.<n>",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.external_task_manager_11208",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.5752.1644.<n>",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "\\LOCAL\\mojo.external_task_manager_5484",
+      "weight": "rare",
+      "pct": 0.8
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Low",
+      "weight": "common",
+      "pct": 54.5
+    },
+    {
+      "value": "Medium",
+      "weight": "uncommon",
+      "pct": 30.3
+    },
+    {
+      "value": "AppContainer",
+      "weight": "rare",
+      "pct": 15.2
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "6",
+      "weight": "common",
+      "pct": 52.8
+    },
+    {
+      "value": "5",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "7",
+      "weight": "rare",
+      "pct": 4.2
+    },
+    {
+      "value": "11",
+      "weight": "rare",
+      "pct": 2.8
+    },
+    {
+      "value": "15",
+      "weight": "rare",
+      "pct": 1.4
+    },
+    {
+      "value": "10",
+      "weight": "rare",
+      "pct": 1.4
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 76.6
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 97.6
+    },
+    {
+      "value": "identity_helper.exe",
+      "weight": "rare",
+      "pct": 11.8
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 10.6
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "shellhost.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "rare",
+      "pct": 3.5
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "cookie_exporter.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "filecoauth.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "appactions.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "setup.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "onedrive.sync.service.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 1.2
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --no-startup-window",
+      "pct": 2
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=PooledProcess2 --lang=en-US --service-sandbox-type=utility --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=8024,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7912 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=40 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=7200,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7484 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=5496,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6072 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=crashpad-handler \"--user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\" /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler \"--database=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Crashpad\" --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --annotation=plat=Win64 --annotation=prod=Edge --annotation=ver=140.0.3485.66 --initial-client-data=0x2fc,0x300,0x304,0x2f8,0x30c,0x7ff98a792200,0x7ff98a79220c,0x7ff98a792218",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=gpu-process --disable-gpu-sandbox --use-gl=disabled --gpu-vendor-id=5140 --gpu-device-id=140 --gpu-sub-system-id=0 --gpu-revision=0 --gpu-driver-version=10.0.26100.5074 --no-pre-read-main-dll --gpu-preferences=<redacted> --ram-no-pressure-read-main-dll --metrics-shmem-handle=5016,i,<n>,<n>,262144 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2488 /prefetch:10",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4616,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5272 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=2332,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2792 /prefetch:13",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=3884,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4948 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --no-startup-window --win-session-start",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=5460,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=828 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5276,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5268 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=3900,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5820 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --instant-process --pdf-upsell-enabled --no-pre-read-main-dll --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=3712,i,<n>,<n>,2097152 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3828 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=24 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=7112,i,<n>,<n>,2097152 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3768 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=edge_collections.mojom.CollectionsDataManager --lang=en-US --service-sandbox-type=collections --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=7724,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7668 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=7 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=4068,i,<n>,<n>,2097152 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4072 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5232,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5480 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5760,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4272 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=5812,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3952 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4292,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4276 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=entity_extraction_service.mojom.Extractor --lang=en-US --service-sandbox-type=entity_extraction --onnx-enabled-for-ee --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=6140,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6228 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=3504,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5368 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=gpu-process --disable-gpu-sandbox --use-gl=disabled --gpu-vendor-id=5140 --gpu-device-id=140 --gpu-sub-system-id=0 --gpu-revision=0 --gpu-driver-version=10.0.26100.5074 --no-pre-read-main-dll --gpu-preferences=<redacted> --skip-read-main-dll --metrics-shmem-handle=828,i,<n>,<n>,262144 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4168 /prefetch:10",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=32 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --ram-no-pressure-read-main-dll --metrics-shmem-handle=6092,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5740 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=39 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=7244,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7312 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4900,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5828 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=6108,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5036 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=gpu-process --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1640,i,<n>,<n>,262144 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2416 /prefetch:2",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=6 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --ram-no-pressure-read-main-dll --metrics-shmem-handle=3704,i,<n>,<n>,2097152 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3744 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5400,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5440 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=gpu-process --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1860,i,<n>,<n>,262144 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2500 /prefetch:2",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=6072,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5884 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=6072,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6140 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --profile-directory=Default",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=11 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=5600,i,<n>,<n>,2097152 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5404 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=PooledProcess2 --lang=en-US --service-sandbox-type=utility --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4268,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3444 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=PooledProcess2 --lang=en-US --service-sandbox-type=utility --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5372,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5888 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=PooledProcess2 --lang=en-US --service-sandbox-type=utility --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=6580,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6540 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5572,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5568 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=5288,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5240 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=1984,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2608 /prefetch:11",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\"",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5404,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5448 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=42 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=7720,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7636 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=1928,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2216 /prefetch:11",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=6132,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5064 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4872,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5280 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=4196,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4004 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5948,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5956 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=gpu-process --disable-gpu-sandbox --use-gl=disabled --gpu-vendor-id=5140 --gpu-device-id=140 --gpu-sub-system-id=0 --gpu-revision=0 --gpu-driver-version=10.0.26100.5074 --no-pre-read-main-dll --gpu-preferences=<redacted> --skip-read-main-dll --metrics-shmem-handle=2428,i,<n>,<n>,262144 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5512 /prefetch:10",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5280,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5296 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=3880,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3956 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=5820,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6088 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=2388,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2492 /prefetch:13",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=edge_search_indexer.mojom.<redacted> --lang=en-US --service-sandbox-type=search_indexer --message-loop-type-ui --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=8380,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7860 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=37 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=7156,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7124 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=2596,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2724 /prefetch:13",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5460,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5236 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=1928,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2184 /prefetch:11",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=3924,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3520 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=4672,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5492 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=5164,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4716 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=2060,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3552 /prefetch:13",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=5888,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5040 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=PooledProcess2 --lang=en-US --service-sandbox-type=utility --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5544,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7684 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5668,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4060 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=44 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=6348,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6356 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=crashpad-handler \"--user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\" /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler \"--database=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Crashpad\" --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --annotation=plat=Win64 --annotation=prod=Edge --annotation=ver=140.0.3485.66 --initial-client-data=0x268,0x26c,0x270,0x264,0x278,0x7ffa62a52200,0x7ffa62a5220c,0x7ffa62a52218",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=6076,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3932 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5396,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4984 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4304,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4912 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5940,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3536 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=820,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5464 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.ProfileImport --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5760,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5784 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=crashpad-handler \"--user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\" /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler \"--database=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Crashpad\" --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --annotation=plat=Win64 --annotation=prod=Edge --annotation=ver=140.0.3485.66 --initial-client-data=0x268,0x26c,0x270,0x264,0x284,0x7ff98a792200,0x7ff98a79220c,0x7ff98a792218",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=38 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=6852,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7052 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5284,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5308 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4876,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4832 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=gpu-process --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1676,i,<n>,<n>,262144 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2144 /prefetch:2",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=1900,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2652 /prefetch:11",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=entity_extraction_service.mojom.Extractor --lang=en-US --service-sandbox-type=entity_extraction --onnx-enabled-for-ee --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5532,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5584 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=3928,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4152 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --instant-process --pdf-upsell-enabled --no-pre-read-main-dll --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=31 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=6060,i,<n>,<n>,2097152 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6024 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=gpu-process --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1720,i,<n>,<n>,262144 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=2152 /prefetch:2",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=6132,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6188 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=quarantine.mojom.Quarantine --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=9176,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=8632 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=chrome.mojom.UtilWin --lang=en-US --service-sandbox-type=none --message-loop-type-ui --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4300,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4872 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=3956,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3880 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=asset_store.mojom.AssetStoreService --lang=en-US --service-sandbox-type=asset_store_service --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=5556,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5560 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=PooledProcess2 --lang=en-US --service-sandbox-type=utility --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=7604,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=7872 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=crashpad-handler \"--user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\" /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler \"--database=C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Crashpad\" --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --annotation=plat=Win64 --annotation=prod=Edge --annotation=ver=140.0.3485.66 --initial-client-data=0x268,0x26c,0x270,0x264,0x284,0x7ffa62a52200,0x7ffa62a5220c,0x7ffa62a52218",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=on_device_model.mojom.OnDeviceModelService --lang=en-US --service-sandbox-type=on_device_model_execution --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4360,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3960 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=renderer --pdf-upsell-enabled --no-pre-read-main-dll --disable-gpu-compositing --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale= --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=25 --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --skip-read-main-dll --metrics-shmem-handle=7256,i,<n>,<n>,2097152 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3780 /prefetch:1",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=3932,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=3860 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=6040,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5068 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=4948,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5784 /prefetch:14",
+      "pct": 1
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=4952,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4372 /prefetch:14",
+      "pct": 1
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "563ba0230c2366b959a0e70a448cf976",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "75d95836f17cc5c8b8c27e08cedffc5eddbc7209",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "ef9d1b42ca58103e9647763f67303519a0701c7b1278af0ad25f7f673c10743b",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "f5623988bef8f4abb97a602d8eed945825129bf30e6d00cbb6517a9005f854bf",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "49152:lvz2q+An48BxP3afQHOvxblirlbPITMkTECfOqWrTjMkJgbDv3ALUNUZZX9mHG2o:56fOS4bQPgg+h9mHGAU",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "9acebdfac77931c2b0dfbbea2d494ba9",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Msedge/",
+    "commands": [
+      {
+        "command": "msedge.exe {REMOTEURL:.exe.txt}",
+        "usecase": "Download file from the internet",
+        "mitreID": "T1105",
+        "category": "Download"
+      },
+      {
+        "command": "msedge.exe --headless --enable-logging --disable-gpu --dump-dom \"{REMOTEURL:.base64.html}\" > {PATH:.b64}",
+        "usecase": "Download file from the internet",
+        "mitreID": "T1105",
+        "category": "Download"
+      },
+      {
+        "command": "msedge.exe --disable-gpu-sandbox --gpu-launcher=\"{CMD} &&\"",
+        "usecase": "Executes a process under a trusted Microsoft signed binary",
+        "mitreID": "T1218.015",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "1c526788-0abe-4713-862f-b520da5e5316",
+      "title": "Chromium Browser Headless Execution To Mockbin Like Site",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_mockbin_abuse.yml",
+      "match": "image"
+    },
+    {
+      "id": "0e8cfe08-02c9-4815-a2f8-0d157b7ed33e",
+      "title": "File Download with Headless Browser",
+      "level": "high",
+      "techniques": [
+        "T1105",
+        "T1564.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_headless_file_download.yml",
+      "match": "image"
+    },
+    {
+      "id": "89e1490f-1a3e-452a-bbb8-b68a5f58072f",
+      "title": "Injected Browser Process Spawning Rundll32 - GuLoader Activity",
+      "level": "high",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/GuLoader/proc_creation_win_malware_guloader_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "ff3b6b39-e765-42f9-bb2c-ea6761e0e0f6",
+      "title": "Mstsc.EXE Execution From Uncommon Parent",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_run_local_rpd_file_susp_parent.yml",
+      "match": "parent"
+    },
+    {
+      "id": "27ba3207-dd30-4812-abbf-5d20c57d474e",
+      "title": "Suspicious Chromium Browser Instance Executed With Custom Extension",
+      "level": "high",
+      "techniques": [
+        "T1176.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_susp_load_extension.yml",
+      "match": "image"
+    },
+    {
+      "id": "b5b29e4e-31fa-4fdf-b058-296e7a1aa0c2",
+      "title": "Suspicious FileFix Execution Pattern",
+      "level": "high",
+      "techniques": [
+        "T1204.004"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_filefix_execution_pattern.yml",
+      "match": "parent"
+    },
+    {
+      "id": "88d6e60c-759d-4ac1-a447-c0f1466c2d21",
+      "title": "Chromium Browser Instance Executed With Custom Extension",
+      "level": "medium",
+      "techniques": [
+        "T1176.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_load_extension.yml",
+      "match": "image"
+    },
+    {
+      "id": "94771a71-ba41-4b6e-a757-b531372eaab6",
+      "title": "File Download From Browser Process Via Inline URL",
+      "level": "medium",
+      "techniques": [
+        "T1105"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_inline_file_download.yml",
+      "match": "image"
+    },
+    {
+      "id": "1193d960-2369-499f-a158-7b50a31df682",
+      "title": "Potential Suspicious Browser Launch From Document Reader Process",
+      "level": "medium",
+      "techniques": [
+        "T1204.002"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_browser_launch_from_document_reader_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "378a05d8-963c-46c9-bcce-13c7657eac99",
+      "title": "Potentially Suspicious Electron Application CommandLine",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_electron_execution_proxy.yml",
+      "match": "image"
+    },
+    {
+      "id": "f26eb764-fd89-464b-85e2-dc4a8e6e77b8",
+      "title": "Suspicious Electron Application Child Processes",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_electron_app_children.yml",
+      "match": "parent"
+    },
+    {
+      "id": "ef9dcfed-690c-4c5d-a9d1-482cd422225c",
+      "title": "Browser Execution In Headless Mode",
+      "level": "low",
+      "techniques": [
+        "T1105",
+        "T1564.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_headless_exec.yml",
+      "match": "image"
+    },
+    {
+      "id": "538c5851-8c03-4724-8ec4-623bc7aadaea",
+      "title": "HTML File Opened From Download Folder",
+      "level": "low",
+      "techniques": [
+        "T1598.002",
+        "T1566.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_open_html_file_from_download_folder.yml",
+      "match": "image"
+    },
+    {
+      "id": "50f852e6-af22-4c78-9ede-42ef36aa3453",
+      "title": "Potential Azure Browser SSO Abuse",
+      "level": "low",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_azure_microsoft_account_token_provider_dll_load.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1218.015",
+      "name": "System Binary Proxy Execution: Electron Applications",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ]
+}

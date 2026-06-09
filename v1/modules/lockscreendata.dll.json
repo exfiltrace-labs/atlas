@@ -1,0 +1,11 @@
+{
+  "name": "lockscreendata.dll",
+  "loaded_by": [
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    }
+  ]
+}

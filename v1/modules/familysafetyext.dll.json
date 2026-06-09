@@ -1,0 +1,23 @@
+{
+  "name": "familysafetyext.dll",
+  "loaded_by": [
+    {
+      "name": "devicecensus.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 7.8,
+      "lolbin": false
+    }
+  ]
+}

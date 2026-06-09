@@ -1,0 +1,270 @@
+{
+  "name": "rgnupdt.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "rgnupdt.exe",
+    "internal_name": "rgnupdt",
+    "product": "Betriebssystem Microsoft® Windows®",
+    "copyright": "© Microsoft Corporation. Alle Rechte vorbehalten."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "146.70 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 88.7,
+  "host_prevalence": 100,
+  "execution_rank": 53,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 3,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\rgnupdt.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rgnupdt.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "SYSTEM",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "High",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "System",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "Session 0",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\rgnupdt.exe\" 1",
+      "pct": 66.7
+    },
+    {
+      "command": "\"C:\\WINDOWS\\system32\\rgnupdt.exe\" 2",
+      "pct": 33.3
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "4aa52519225071cccfff4839df0da94d",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "e6da1b08066d65a51da25558f054c126",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "eef694e4c79935e79cb7b9d3873537b0",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "65b770b93258552b70b7fcd6967d703c5aaed1beecdbe9339ad3e7329d698883",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "f637e3fda203c4736f8893a3d4c675b628c9544405d6298ef225d86d458372ee",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "ead8b9f32d77218fa59f802b5661669359b6f7d5",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

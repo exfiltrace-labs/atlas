@@ -1,0 +1,11 @@
+{
+  "name": "audioeng.dll",
+  "loaded_by": [
+    {
+      "name": "audiodg.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    }
+  ]
+}

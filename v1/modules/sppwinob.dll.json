@@ -1,0 +1,11 @@
+{
+  "name": "sppwinob.dll",
+  "loaded_by": [
+    {
+      "name": "sppsvc.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "controlcenter.dll",
+  "loaded_by": [
+    {
+      "name": "shellhost.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    }
+  ]
+}

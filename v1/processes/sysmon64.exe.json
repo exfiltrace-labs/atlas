@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "330000053F345BB78CEA9144B700000000053F",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -35,6 +36,13 @@
       "pct": 100
     }
   ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "cert_thumbprints": [
     {
       "value": "b84270c6d037916fe012f4727bb0a00c353aca08",
@@ -44,14 +52,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 88.7,
   "host_prevalence": 100,
-  "execution_rank": 36,
+  "execution_rank": 58,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 3,
   "expected_paths": [
     {
       "value": "C:\\Windows\\Sysmon64.exe",
@@ -59,17 +67,272 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "wininit.exe",
+      "weight": "common",
+      "pct": 66.7
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "tdh.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wbemsvc.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "comdlg32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wbemprox.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "mpoav.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "amsi.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "dsparse.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -86,27 +349,7 @@
   ],
   "token_privileges": [
     {
-      "value": "SeTimeZonePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreatePagefilePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeSecurityPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTcbPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateGlobalPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -116,12 +359,62 @@
       "pct": 100
     },
     {
-      "value": "SeCreatePermanentPrivilege",
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
       "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -139,49 +432,81 @@
       "value": "SeSystemProfilePrivilege",
       "weight": "ubiquitous",
       "pct": 100
-    },
-    {
-      "value": "SeIncreaseBasePriorityPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeLockMemoryPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDebugPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDelegateSessionUserImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeAuditPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateSymbolicLinkPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
     }
   ],
-  "process_handles": [],
+  "process_handles": [
+    {
+      "value": "svchost.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 16.7
+    }
+  ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\Sysmon64.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "3831797340475251579e31c4ac3aaa7b",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "aedb242db492daa95d0b44291e6b1716ec740907943677bec3ebbb711efa6549",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "24576:whcpgJ7uLXNKwdZW7/+cqN8sAstg32cvyJR:Wc2CLdKL7/qFLG32RJR",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "5c31cfde3181a762ca91d21902def1b4",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "8484ddf38ede0fe90d69ffa09b03216696267914",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "b1581e884727b450c4dbfa9360f3db7c",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "d8115212a7747010593de813404b02d05b915e4b1d0231502b856b9ace9274e8",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

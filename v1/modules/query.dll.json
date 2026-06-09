@@ -1,0 +1,11 @@
+{
+  "name": "query.dll",
+  "loaded_by": [
+    {
+      "name": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    }
+  ]
+}

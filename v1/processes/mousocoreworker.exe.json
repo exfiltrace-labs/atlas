@@ -1,0 +1,539 @@
+{
+  "name": "mousocoreworker.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "MoUSOCoreWorker.exe",
+    "internal_name": "MoUSO Core Worker Process",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "1450.2508.4042.0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "4889.40 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 94.8,
+  "host_prevalence": 100,
+  "execution_rank": 26,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 5,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\UUS\\amd64\\MoUsoCoreWorker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "monotificationux.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "updatepolicy.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "usodocked.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wusys.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mousocoreworker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "flightsettings.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wupscore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.networking.connectivity.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fcon.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.management.workplace.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "updatepolicycore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "usocoreps.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rmclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "waasmedicps.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windowsudk.shellcommon.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wups.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "usoapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uusbrain.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winsqlite3.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wuapicore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wuapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "pfclient.dll",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "monotificationux.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\uus\\AMD64\\MoUsoCoreWorker.exe\" useprivatenamespaces",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "2166cd55cee372b4d569fd457d1d13ea",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "9bcb05c3685758acf14953850cdc63d522216bdd57c10b579acf7c7f249c7528",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "17707fa8696ef77967a94fcf4f3f172a",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "a2b94235c50219a707dc464defe78014",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "49152:QDDmTFqc9RV54voGdxXb/72cwRVnx4InrcAP+u8Tc1ZCDhUPvZs+G+rjAsaazL2m:d7KDIr/WuG/1wPEb3I5",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "5d6792d2666defa3bc8e0d74c91bee1a74028f2e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "233df329c2e271899101fb9998d2e58a6973bf625a6c5c85b87063073e76f18b",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

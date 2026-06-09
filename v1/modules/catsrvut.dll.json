@@ -1,0 +1,11 @@
+{
+  "name": "catsrvut.dll",
+  "loaded_by": [
+    {
+      "name": "vssvc.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

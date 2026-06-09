@@ -8,9 +8,63 @@
       "lolbin": false
     },
     {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "mousocoreworker.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
       "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 9.4,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
       "weight": "uncommon",
-      "pct": 33.3,
+      "pct": 27.3,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "smartscreen.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 3.1,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 9.9,
+      "lolbin": false
+    },
+    {
+      "name": "ucconfigtask.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
       "lolbin": false
     }
   ]

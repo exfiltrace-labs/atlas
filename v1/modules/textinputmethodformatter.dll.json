@@ -1,0 +1,11 @@
+{
+  "name": "textinputmethodformatter.dll",
+  "loaded_by": [
+    {
+      "name": "ctfmon.exe",
+      "weight": "uncommon",
+      "pct": 46.2,
+      "lolbin": false
+    }
+  ]
+}

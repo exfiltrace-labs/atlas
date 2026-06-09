@@ -1,0 +1,11 @@
+{
+  "name": "mmcex.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 2.4,
+      "lolbin": false
+    }
+  ]
+}

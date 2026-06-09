@@ -1,0 +1,11 @@
+{
+  "name": "appxalluserstore.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    }
+  ]
+}

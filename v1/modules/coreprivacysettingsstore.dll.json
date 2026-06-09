@@ -1,0 +1,95 @@
+{
+  "name": "coreprivacysettingsstore.dll",
+  "loaded_by": [
+    {
+      "name": "aggregatorhost.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 13.6,
+      "lolbin": false
+    },
+    {
+      "name": "compattelrunner.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "devicecensus.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 7.8,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 3.5,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 7,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "uncommon",
+      "pct": 30.8,
+      "lolbin": false
+    },
+    {
+      "name": "ucconfigtask.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "wermgr.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    }
+  ]
+}

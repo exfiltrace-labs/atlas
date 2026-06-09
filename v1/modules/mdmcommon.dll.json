@@ -1,0 +1,23 @@
+{
+  "name": "mdmcommon.dll",
+  "loaded_by": [
+    {
+      "name": "devicecensus.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 5.6,
+      "lolbin": false
+    }
+  ]
+}

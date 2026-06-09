@@ -1,0 +1,415 @@
+{
+  "name": "fsquirt.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "fsquirt.exe.mui",
+    "internal_name": "fsquirt.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "168.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 116,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\fsquirt.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "userinit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bthprops.cpl",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "comdlg32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bluetoothapis.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "fsquirt.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\srvsvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Windows\\System32\\fsquirt.exe\" -Register",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha256",
+      "value": "0673cd2f325a2656c5c2660234d050663bc7aab52e2af3eebced8133f2893beb",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "074fc527899605609296a49636285b226783f328616fadc20966d1d469eb7375",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "614584d404206ff04f3aa198632fa342",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "166005223c9e6c98a6d35264b1843f72",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "f189c94230307fc4da34de27b81f527e",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:RC9J27cAogwGpHjMdt0tyvDn9vs5VHnaPpJSxG5fdlF/JnhIE:wzA9pDMdKchE58IxYfdnFhX",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "88e62afc050564faf6dadb29cf2089d7cfc78c62",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    }
+  ]
+}

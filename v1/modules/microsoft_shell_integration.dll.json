@@ -1,0 +1,11 @@
+{
+  "name": "microsoft_shell_integration.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": true
+    }
+  ]
+}

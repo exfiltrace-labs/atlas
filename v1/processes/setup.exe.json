@@ -1,0 +1,971 @@
+{
+  "name": "setup.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "330000047F2F422A735308DEEA00000000047F",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "setup.exe",
+    "internal_name": "setup_exe",
+    "product": "Microsoft Edge Installer",
+    "copyright": "Copyright Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "140.0.3485.66",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "7450.50 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "ea2f8cbc69a1a01142a1edd8b1256fecbc1d9f2d",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 96.6,
+  "host_prevalence": 100,
+  "execution_rank": 19,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 8,
+  "expected_paths": [
+    {
+      "value": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\Installer\\setup.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "C:\\Windows\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\CR_9E076.tmp\\setup.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "setup.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "icu.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "installservice.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "mpr.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "fwpolicyiomgr.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "rmclient.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "windows.storage.search.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "systemsettings.datamodel.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "slc.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "assignedaccessruntime.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "wosc.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\crashpad_8712_YRKPPXSQZVIMYSIL",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "\\crashpad_416_WOQCDEQFSIVNASHC",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "\\srvsvc",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "\\crashpad_8640_DSTYPRWUIRXVVMMQ",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "\\crashpad_6652_AUYGCAETHNCOKBXU",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "Interactive user",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "Medium",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "Session 0",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "setup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\Installer\\setup.exe\" --configure-user-settings --verbose-logging --system-level --msedge --force-configure-user-settings",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\WINDOWS\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\CR_9E076.tmp\\setup.exe\" --uncompressed-archive=\"C:\\WINDOWS\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\CR_9E076.tmp\\CHROME.7Z\" --verbose-logging --do-not-launch-chrome --channel=stable --installerdata=\"C:\\Windows\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\<guid>.tmp\"",
+      "pct": 12.5
+    },
+    {
+      "command": "C:\\WINDOWS\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\CR_9E076.tmp\\setup.exe --type=crashpad-handler /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler --database=C:\\WINDOWS\\SystemTemp\\Crashpad --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=plat=Win64 --annotation=prod=Chrome --annotation=ver=149.0.7827.103 --attachment=C:\\WINDOWS\\SystemTemp\\chrome_installer.log \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0x2ac,0x2b0,0x2b4,0x288,0x2b8,0x7ff6763e1980,0x7ff6763e198c,0x7ff6763e1998",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\Installer\\setup.exe\" --msedge --system-level --verbose-logging --installerdata=\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\master_preferences\" --create-shortcuts=1 --install-level=0",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\Installer\\setup.exe\" --type=crashpad-handler /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler --database=C:\\WINDOWS\\TEMP\\MsEdgeCrashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\Installer\\setup.exe\" --annotation=plat=Win64 --annotation=prod=Edge --annotation=ver=140.0.3485.66 --initial-client-data=0x240,0x244,0x248,0x220,0x24c,0x7ff716e86558,0x7ff716e86564,0x7ff716e86570",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\WINDOWS\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\CR_9E076.tmp\\setup.exe\" --channel=stable --system-level --verbose-logging --installerdata=\"C:\\Windows\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\<guid>.tmp\" --create-shortcuts=0 --install-level=1",
+      "pct": 12.5
+    },
+    {
+      "command": "C:\\WINDOWS\\SystemTemp\\GoogleUpdater_chrome_Unpacker_BeginUnzipping2024_497846945\\CR_9E076.tmp\\setup.exe --type=crashpad-handler /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler --database=C:\\WINDOWS\\SystemTemp\\Crashpad --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=plat=Win64 --annotation=prod=Chrome --annotation=ver=149.0.7827.103 --attachment=C:\\WINDOWS\\SystemTemp\\chrome_installer.log \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0x2a8,0x2ac,0x2b0,0x284,0x2b4,0x7ff6763e1980,0x7ff6763e198c,0x7ff6763e1998",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\Installer\\setup.exe\" --type=crashpad-handler /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler --database=C:\\WINDOWS\\TEMP\\MsEdgeCrashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\Installer\\setup.exe\" --annotation=plat=Win64 --annotation=prod=Edge --annotation=ver=140.0.3485.66 --initial-client-data=0x244,0x248,0x24c,0x21c,0x250,0x7ff716e86558,0x7ff716e86564,0x7ff716e86570",
+      "pct": 12.5
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "98304:uQCNAyauS+WqVCSnu0anH5+3iXIfLp/H+q:XCNAyaACSuknV/N",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "a7309f78fc8529c30977db9c5be6ad566f9315b75d7057f9e16165af60a653e3",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "feaaa161935b3c215bb6530dc11db019",
+      "pct": 50
+    },
+    {
+      "algo": "imphash",
+      "value": "2f3252358b36899fb4a0441d173660dc",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "b622958aecefc19d03dbdae8f14ccc0d",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "91831fcd3bc712d3ad95482ce70524f5",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "586e5f5a2bd29d67e3f931e6cfa1dbb9550ccfa0a29105b9c4b46bae3e270187",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "8f4456e760da8442c80084840171f5086d7556a3e6812d89b8564c95c6030234",
+      "pct": 50
+    },
+    {
+      "algo": "sha1",
+      "value": "d4a95142f763c6a6e44623830ef2b18d75080fba",
+      "pct": 50
+    },
+    {
+      "algo": "sha1",
+      "value": "6bd4c9f1a6b2b5afbf5c5105961f09fff49d63fb",
+      "pct": 50
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "a7c3d773-caef-227e-a7e7-c2f13c622329",
+      "title": "Bad Opsec Defaults Sacrificial Processes With Improper Arguments",
+      "level": "high",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_bad_opsec_sacrificial_processes.yml",
+      "match": "parent"
+    },
+    {
+      "id": "84b1ecf9-6eff-4004-bafb-bae5c0e251b2",
+      "title": "Potentially Suspicious GoogleUpdate Child Process",
+      "level": "high",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_googleupdate_susp_child_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1001.001",
+      "name": "Data Obfuscation: Junk Data",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0647",
+          "name": "Turian"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Command and Control",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "T1027.009",
+      "name": "Obfuscated Files or Information: Embedded Payloads",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0367",
+          "name": "Emotet"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1036.004",
+      "name": "Masquerading: Masquerade Task or Service",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0128",
+          "name": "ZIRCONIUM"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0493",
+          "name": "GoldenSpy"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1057",
+      "name": "Process Discovery",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0182",
+          "name": "FinFisher"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "T1070.004",
+      "name": "Indicator Removal: File Deletion",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1161",
+          "name": "BPFDoor"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1113",
+      "name": "Screen Capture",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0182",
+          "name": "FinFisher"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Collection",
+          "order": 11
+        }
+      ]
+    },
+    {
+      "id": "T1534",
+      "name": "Internal Spearphishing",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S9030",
+          "name": "SameCoin"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Lateral Movement",
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": "T1547",
+      "name": "Boot or Logon Autostart Execution",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0084",
+          "name": "Mis-Type"
+        },
+        {
+          "id": "S0083",
+          "name": "Misdat"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1547.001",
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G1014",
+          "name": "LuminousMoth"
+        },
+        {
+          "id": "G0128",
+          "name": "ZIRCONIUM"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1547.014",
+      "name": "Boot or Logon Autostart Execution: Active Setup",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0012",
+          "name": "PoisonIvy"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "T1559.001",
+      "name": "Inter-Process Communication: Component Object Model",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0266",
+          "name": "TrickBot"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1574.005",
+      "name": "Hijack Execution Flow: Executable Installer File Permissions Weakness",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0129",
+          "name": "Mustang Panda"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1685.005",
+      "name": "Disable or Modify Tools: Clear Windows Event Logs",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0607",
+          "name": "KillDisk"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Defense Impairment",
+          "order": 7
+        }
+      ]
+    }
+  ]
+}

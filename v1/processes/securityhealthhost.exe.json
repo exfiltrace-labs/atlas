@@ -1,0 +1,406 @@
+{
+  "name": "securityhealthhost.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "33000004A7043EE422C834FAFC0000000004A7",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "SecurityHealthHost.exe",
+    "internal_name": "Windows Security Health Host",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.3624 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "117.40 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "aeb9b61e47d91c42fff213992b7810a3d562fb12",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 41,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\SecurityHealthHost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "dsreg.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "securityhealthagent.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "securityhealthhost.exe",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "securityhealthudk.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.security.authentication.web.core.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "vaultcli.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "aadwamextension.dll",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\\\\?\\C:\\Windows\\System32\\SecurityHealthHost.exe <guid> -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "01a004c4b3376303383fd5c72524e529ce72f4cd584a4ef33fd26e92bee6a5de",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "e8960caf12cf621b3ca78988264c27f1",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "f813ad367d4d772e7656ff215784e880",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "ce9252a32d8bf9919a51f51cf5c75940",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "b97094ffa9ad0755feeb449c77a14ba129cc09d8886550430b423162478e6e42",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "b1fe766555af2e2d24b09e8ded6e8e729f0d5d75",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

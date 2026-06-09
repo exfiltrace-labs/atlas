@@ -1,0 +1,478 @@
+{
+  "name": "chrmstp.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Google LLC",
+  "issuer": "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+  "cert_serial": "0B50CF246B263EFD85A729315158F3FF",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Google LLC"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": null,
+    "internal_name": "setup",
+    "product": "Google Chrome Installer",
+    "copyright": "Copyright 2026 Google LLC. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "149.0.7827.103",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "7483.10 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "607a3edaa64933e94422fc8f0c80388e0590986c",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 30,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Program Files\\Google\\Chrome\\Application\\149.0.7827.103\\Installer\\chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "chrome.exe",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "chrome.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "chrmstp.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "actxprxy.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\crashpad_4148_COCIGTZSQEYWLANN",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "\\crashpad_5032_FGHHBBQOJKXMUELR",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "\\srvsvc",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "chrmstp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files\\Google\\Chrome\\Application\\149.0.7827.103\\Installer\\chrmstp.exe\" --type=crashpad-handler /prefetch:4 --monitor-self-annotation=ptype=crashpad-handler --database=C:\\WINDOWS\\TEMP\\Crashpad --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=plat=Win64 --annotation=prod=Chrome --annotation=ver=149.0.7827.103 --attachment=C:\\Users\\<user>\\AppData\\Local\\Temp\\chrome_installer.log \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0x2a0,0x2a4,0x2a8,0x27c,0x2ac,0x7ff72ff31980,0x7ff72ff3198c,0x7ff72ff31998",
+      "pct": 50
+    },
+    {
+      "command": "\"C:\\Program Files\\Google\\Chrome\\Application\\149.0.7827.103\\Installer\\chrmstp.exe\" --channel=stable --system-level --verbose-logging --installerdata=\"C:\\Program Files\\Google\\Chrome\\Application\\initial_preferences\" --create-shortcuts=1 --install-level=0",
+      "pct": 25
+    },
+    {
+      "command": "\"C:\\Program Files\\Google\\Chrome\\Application\\149.0.7827.103\\Installer\\chrmstp.exe\" --configure-user-settings --verbose-logging --system-level --channel=stable --force-configure-user-settings",
+      "pct": 25
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "24e75fb483aa785c19fb646d130013f40d423d130516e592d99c69b95c17bc2d",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "d4a95142f763c6a6e44623830ef2b18d75080fba",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "8f4456e760da8442c80084840171f5086d7556a3e6812d89b8564c95c6030234",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "49152:N41ynTS4iHjOU6EwJX4qP61lp6mRcHYuf3niPk9v9oHNi9exyvCR4Fo3SI1uc2Zd:bikYtRCfsk+Nu/XLNCvswUmy",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "b622958aecefc19d03dbdae8f14ccc0d",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "2f3252358b36899fb4a0441d173660dc",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

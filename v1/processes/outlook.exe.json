@@ -9,9 +9,10 @@
     "microsoft"
   ],
   "description": "outlook.exe is Microsoft Outlook, the email and calendar client in Microsoft Office. It is where phishing lands, so it is often the first process in an intrusion: the user reads a message and opens a malicious attachment or link. Outlook also offers several quiet persistence mechanisms of its own.\n",
-  "about": "outlook.exe is the Outlook mail client. It sends and receives email and opens attachments and links, which is where user-driven compromise usually begins. Outlook is part of Microsoft Office, installed under `C:\\Program Files\\Microsoft Office` (or the `(x86)` path), signed by Microsoft. It also supports inbox rules, custom forms, an editable home page, and add-ins, all of which can be made to run code.\n\nLegitimately, outlook.exe runs on most office desktops all day, parented by `explorer.exe`. Reading and sending mail is unremarkable. Outlook being upstream of a shell, or new automation configured inside it, is not.\n",
+  "about": "outlook.exe is the Outlook mail client. It sends and receives email and opens attachments and links, which is where user-driven compromise usually begins. Outlook is part of Microsoft Office, installed under `C:\\Program Files\\Microsoft Office` (or the `(x86)` path), signed by Microsoft. It also supports inbox rules, custom forms, an editable home page, and add-ins, all of which can be made to run code. Microsoft's newer WebView2-based client, the new Outlook for Windows (`olk.exe`), is a separate Store app with a different footprint and is profiled on its own page. This entry covers the classic desktop client.\n\nLegitimately, outlook.exe runs on most office desktops all day, parented by `explorer.exe`. Reading and sending mail is unremarkable. Outlook being upstream of a shell, or new automation configured inside it, is not.\n",
   "publisher": null,
   "issuer": null,
+  "cert_serial": null,
   "signed": null,
   "signing_rate": null,
   "signing_algorithm": null,
@@ -19,6 +20,7 @@
   "file_details": null,
   "file_versions": [],
   "file_sizes": [],
+  "architectures": [],
   "cert_thumbprints": [],
   "provenance": "curated",
   "prevalence_band": "unknown",
@@ -313,6 +315,6 @@
       "signalHtml": "Outbound connections to non-mail endpoints after a message is opened"
     }
   ],
-  "about_html": "<p>outlook.exe is the Outlook mail client. It sends and receives email and opens attachments and links, which is where user-driven compromise usually begins. Outlook is part of Microsoft Office, installed under <code>C:\\Program Files\\Microsoft Office</code> (or the <code>(x86)</code> path), signed by Microsoft. It also supports inbox rules, custom forms, an editable home page, and add-ins, all of which can be made to run code.</p>\n<p>Legitimately, outlook.exe runs on most office desktops all day, parented by <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a>. Reading and sending mail is unremarkable. Outlook being upstream of a shell, or new automation configured inside it, is not.</p>",
+  "about_html": "<p>outlook.exe is the Outlook mail client. It sends and receives email and opens attachments and links, which is where user-driven compromise usually begins. Outlook is part of Microsoft Office, installed under <code>C:\\Program Files\\Microsoft Office</code> (or the <code>(x86)</code> path), signed by Microsoft. It also supports inbox rules, custom forms, an editable home page, and add-ins, all of which can be made to run code. Microsoft's newer WebView2-based client, the new Outlook for Windows (<a class=\"proc-link\" href=\"/processes/olk.exe\"><code>olk.exe</code></a>), is a separate Store app with a different footprint and is profiled on its own page. This entry covers the classic desktop client.</p>\n<p>Legitimately, outlook.exe runs on most office desktops all day, parented by <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a>. Reading and sending mail is unremarkable. Outlook being upstream of a shell, or new automation configured inside it, is not.</p>",
   "security_notes_html": "<p>Outlook is the doorway for phishing (<a href=\"https://attack.mitre.org/techniques/T1566/001/\" target=\"_blank\" rel=\"noreferrer noopener\">T1566.001</a>): a spearphishing attachment or link arrives by email, and when the user opens it the attached document or program runs, frequently with Outlook or the document app as the visible parent (<a href=\"https://attack.mitre.org/techniques/T1204/002/\" target=\"_blank\" rel=\"noreferrer noopener\">T1204.002</a>). Outlook spawning, or being upstream of, a shell or script host shortly after a message is read is the chain to recognize.</p>\n<p>Outlook is also a durable persistence surface (<a href=\"https://attack.mitre.org/techniques/T1137/\" target=\"_blank\" rel=\"noreferrer noopener\">T1137</a>). Malicious inbox rules, custom forms, an attacker-set home page, and rogue add-ins can each execute code when Outlook runs or when a triggering message arrives, persistence that lives in the mailbox or profile rather than on disk and can return after reimaging if it syncs from the server. New or unexpected rules, forms, or add-ins tied to Outlook deserve review.</p>"
 }

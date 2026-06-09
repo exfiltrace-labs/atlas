@@ -1,0 +1,11 @@
+{
+  "name": "api-ms-win-service-private-l1-1-1.dll",
+  "loaded_by": [
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 7.7,
+      "lolbin": false
+    }
+  ]
+}

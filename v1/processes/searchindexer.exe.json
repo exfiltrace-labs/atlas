@@ -13,6 +13,7 @@
   "about": "SearchIndexer.exe crawls files, email, and other content and stores a searchable index, so that queries return instantly instead of scanning the disk each time. It is the `WSearch` service, started by `services.exe` and running as `NT AUTHORITY\\SYSTEM` from `C:\\Windows\\System32\\SearchIndexer.exe`. Its normal children are `SearchProtocolHost.exe` and `SearchFilterHost.exe`, the helpers that open and parse content for indexing.\n\nLegitimately, SearchIndexer runs all the time and can use noticeable disk and CPU while catching up on indexing. Its known helper children are expected. Anything else is not.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -29,35 +30,42 @@
   },
   "file_versions": [
     {
-      "value": "7.0.26100.8457 (WinBuild.160101.0800)",
+      "value": "7.0.26100.4946 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "984.00 KB",
+      "value": "992.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 26,
+  "execution_rank": 79,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\SearchIndexer.exe",
@@ -65,17 +73,374 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "searchfilterhost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "wininit.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "loaded_modules": [
+    {
+      "value": "vsstrace.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "icu.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mswb7.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "vssapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "elstrans.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "elslad.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "searchindexercore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "rmclient.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ktmw32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "query.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "bcp47langs.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mssprxy.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kbdus.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "samcli.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "es.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.globalization.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mssrch.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "tquery.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "elscore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "samlib.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\MsFteWds",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -92,11 +457,6 @@
   ],
   "token_privileges": [
     {
-      "value": "SeTcbPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
@@ -105,18 +465,63 @@
       "value": "SeImpersonatePrivilege",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
     }
   ],
   "process_handles": [
     {
       "value": "searchhost.exe",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 91.4
+    },
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 11.4
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 8.6
+    },
+    {
+      "value": "identity_helper.exe",
+      "weight": "rare",
+      "pct": 5.7
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "rare",
+      "pct": 4.3
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.3
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "rare",
+      "pct": 2.9
+    },
+    {
+      "value": "searchfilterhost.exe",
+      "weight": "rare",
+      "pct": 2.9
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.4
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -143,8 +548,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\SearchIndexer.exe /Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "91a0ad5cd6e1337bf2a542dffc393f3e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "1fa06a43c2688e71879d5eec9f745b7f6f1331b20121292e86c1b95e1c8c1be5",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "24576:clx/6LzlS97G1e/w5X2igCN2P67okedZ/7u651VEF+c+P6:2x/6Lc9phMo9d5VVEF+56",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "df456e14cab9f5b2c8ac74d33bf05f41",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "3fd862c86052d082ac06e113ec51d52e0ee8880b",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "cafa0e0571c9d4c3613a1fa9efa8a68f",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "b76439dabb8582c165bfbc9325c9d681e24a3cb21b385875480f02fbb63b116f",
+      "pct": 100
+    }
+  ],
   "security_notes": "SearchIndexer.exe is largely a baseline. As an always-running SYSTEM service it is a candidate for code injection (T1055), where implanted code inherits its privileges and blends into normal indexing activity, so unusual loaded modules, network connections, or unexpected child processes are what would point to abuse.\n\nIts trusted name also makes it an impersonation target (T1036.005): a SearchIndexer.exe outside `System32`, with the wrong parent, or running as the wrong account is the deviation to investigate.\n",
   "mitre_attack": [
     "T1055",
@@ -256,7 +702,7 @@
       "signal": "Children other than `SearchProtocolHost.exe` and `SearchFilterHost.exe`",
       "severity": "high",
       "source": "curated",
-      "signalHtml": "Children other than <code>SearchProtocolHost.exe</code> and <code>SearchFilterHost.exe</code>"
+      "signalHtml": "Children other than <a class=\"proc-link\" href=\"/processes/searchprotocolhost.exe\"><code>SearchProtocolHost.exe</code></a> and <a class=\"proc-link\" href=\"/processes/searchfilterhost.exe\"><code>SearchFilterHost.exe</code></a>"
     },
     {
       "signal": "Outbound network connections from SearchIndexer",
@@ -271,6 +717,6 @@
       "signalHtml": "Running as an account other than <code>NT AUTHORITY\\SYSTEM</code>"
     }
   ],
-  "about_html": "<p>SearchIndexer.exe crawls files, email, and other content and stores a searchable index, so that queries return instantly instead of scanning the disk each time. It is the <code>WSearch</code> service, started by <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a> and running as <code>NT AUTHORITY\\SYSTEM</code> from <code>C:\\Windows\\System32\\SearchIndexer.exe</code>. Its normal children are <code>SearchProtocolHost.exe</code> and <code>SearchFilterHost.exe</code>, the helpers that open and parse content for indexing.</p>\n<p>Legitimately, SearchIndexer runs all the time and can use noticeable disk and CPU while catching up on indexing. Its known helper children are expected. Anything else is not.</p>",
+  "about_html": "<p>SearchIndexer.exe crawls files, email, and other content and stores a searchable index, so that queries return instantly instead of scanning the disk each time. It is the <code>WSearch</code> service, started by <a class=\"proc-link\" href=\"/processes/services.exe\"><code>services.exe</code></a> and running as <code>NT AUTHORITY\\SYSTEM</code> from <code>C:\\Windows\\System32\\SearchIndexer.exe</code>. Its normal children are <a class=\"proc-link\" href=\"/processes/searchprotocolhost.exe\"><code>SearchProtocolHost.exe</code></a> and <a class=\"proc-link\" href=\"/processes/searchfilterhost.exe\"><code>SearchFilterHost.exe</code></a>, the helpers that open and parse content for indexing.</p>\n<p>Legitimately, SearchIndexer runs all the time and can use noticeable disk and CPU while catching up on indexing. Its known helper children are expected. Anything else is not.</p>",
   "security_notes_html": "<p>SearchIndexer.exe is largely a baseline. As an always-running SYSTEM service it is a candidate for code injection (<a href=\"https://attack.mitre.org/techniques/T1055/\" target=\"_blank\" rel=\"noreferrer noopener\">T1055</a>), where implanted code inherits its privileges and blends into normal indexing activity, so unusual loaded modules, network connections, or unexpected child processes are what would point to abuse.</p>\n<p>Its trusted name also makes it an impersonation target (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>): a SearchIndexer.exe outside <code>System32</code>, with the wrong parent, or running as the wrong account is the deviation to investigate.</p>"
 }

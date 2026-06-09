@@ -4,7 +4,13 @@
     {
       "name": "svchost.exe",
       "weight": "rare",
-      "pct": 14.3,
+      "pct": 2.3,
+      "lolbin": false
+    },
+    {
+      "name": "trustedinstaller.exe",
+      "weight": "rare",
+      "pct": 16.7,
       "lolbin": false
     }
   ]

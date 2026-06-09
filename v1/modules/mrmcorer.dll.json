@@ -2,6 +2,12 @@
   "name": "mrmcorer.dll",
   "loaded_by": [
     {
+      "name": "appactions.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
       "name": "applicationframehost.exe",
       "weight": "ubiquitous",
       "pct": 100,
@@ -10,6 +16,12 @@
     {
       "name": "backgroundtaskhost.exe",
       "weight": "ubiquitous",
+      "pct": 76.3,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtransferhost.exe",
+      "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
     },
@@ -17,6 +29,102 @@
       "name": "calculatorapp.exe",
       "weight": "ubiquitous",
       "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 13,
+      "lolbin": true
+    },
+    {
+      "name": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "uncommon",
+      "pct": 36.4,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "pickerhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "rundll32.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 10.9,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 27.3,
+      "lolbin": false
+    },
+    {
+      "name": "shellhost.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.1,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "widgetservice.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "windowsterminal.exe",
+      "weight": "common",
+      "pct": 66.7,
       "lolbin": false
     }
   ]

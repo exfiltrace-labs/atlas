@@ -1,0 +1,17 @@
+{
+  "name": "clusapi.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.6,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 2.4,
+      "lolbin": false
+    }
+  ]
+}

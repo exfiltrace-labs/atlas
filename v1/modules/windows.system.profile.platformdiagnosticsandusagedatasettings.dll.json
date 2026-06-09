@@ -1,0 +1,47 @@
+{
+  "name": "windows.system.profile.platformdiagnosticsandusagedatasettings.dll",
+  "loaded_by": [
+    {
+      "name": "aggregatorhost.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 5.1,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    }
+  ]
+}

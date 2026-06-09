@@ -2,10 +2,46 @@
   "name": "windows.system.diagnostics.telemetry.platformtelemetryclient.dll",
   "loaded_by": [
     {
+      "name": "microsoft.sharepoint.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": true
+    },
+    {
       "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivelauncher.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
       "weight": "common",
       "pct": 50,
-      "lolbin": true
+      "lolbin": false
     }
   ]
 }

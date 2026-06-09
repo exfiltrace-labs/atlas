@@ -10,43 +10,567 @@
   ],
   "description": "tasklist.exe lists the processes running on a computer, locally or on a remote machine, with options to show the services and DLLs each one hosts. Administrators use it to inspect what is running. Attackers use it to survey a host, especially to spot the antivirus and EDR products they need to evade.\n",
   "about": "tasklist.exe enumerates running processes and their PIDs. `/svc` shows the services hosted in each process, `/m` lists the DLL modules a process has loaded, and `/v` adds verbose detail such as the window title and the running user. With `/s <host>` and credentials it queries a remote machine. The genuine binary lives at `C:\\Windows\\System32\\tasklist.exe`.\n\nLegitimately, tasklist is run by administrators and scripts to check what is running and which services map to which process. It only reads process state.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "tasklist.exe.mui",
+    "internal_name": "tasklist.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "120.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 88.7,
+  "host_prevalence": 100,
+  "execution_rank": 59,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 3,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\tasklist.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "amsi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wbemprox.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mpoav.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "framedynos.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "tasklist.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mpr.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wbemsvc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
-  "process_handles": [],
-  "os_prevalence": [],
+  "process_handles": [
+    {
+      "value": "winlogon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "system",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "findstr.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "csrss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ctfmon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "memcompression",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "registry",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shellhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "provtool.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "logonui.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "appactions.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "defrag.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ngen.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "onedrive.sync.service.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ngentask.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\tasklist.exe`",
@@ -69,8 +593,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "tasklist  /FI \"IMAGENAME eq Secure System\" /v /FO list",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha256",
+      "value": "62800679c55682f2f5f38b3df9080d12480bea78b5b8476eace9df014f353b14",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "50c2a73ea64d3cfb70a2ccd15259bb1f",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "6d343302f8c05633d486bc763d60ecb0fa8fb0b5",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "8add46c82b40a6f635f1406cf28daba1",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "127c5183b9ca743f592c77c3a16cc523392b93bb4c76bfebf225db9b3bef50bd",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "1ec449474b2f8125db72ac9b593e4ca6",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:sIAkPEZ/jkQbucGJ5OABZVvDSR5WEUEhNcYrpoV69SEE5i+YHGMY5SJtzL4gjnyi:mpjkQSdJDIEEUEhNcYrpoVFiVmXkEkys",
+      "pct": 100
+    }
+  ],
   "security_notes": "tasklist is used to take stock of a host (T1057). A process list tells an attacker what is installed and running, and the next question is usually which defenses are present: tasklist output checked for antivirus and EDR process names is security-software discovery (T1518.001), informing whether and how to disable them.\n\nAs with the other discovery commands, a single run is unremarkable. tasklist alongside whoami, systeminfo, and net commands in quick succession, or launched by a process with no reason to inventory the host, is the pattern that matters.\n",
   "mitre_attack": [
     "T1057",

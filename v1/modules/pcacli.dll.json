@@ -1,0 +1,41 @@
+{
+  "name": "pcacli.dll",
+  "loaded_by": [
+    {
+      "name": "chromesetup.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.6,
+      "lolbin": false
+    }
+  ]
+}

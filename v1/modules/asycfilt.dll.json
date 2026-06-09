@@ -1,0 +1,11 @@
+{
+  "name": "asycfilt.dll",
+  "loaded_by": [
+    {
+      "name": "updater.exe",
+      "weight": "rare",
+      "pct": 5,
+      "lolbin": false
+    }
+  ]
+}

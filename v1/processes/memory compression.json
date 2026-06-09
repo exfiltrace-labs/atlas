@@ -1,0 +1,123 @@
+{
+  "name": "memory compression",
+  "aliases": [],
+  "category": "System",
+  "tags": [
+    "kernel",
+    "memory",
+    "microsoft",
+    "core-windows"
+  ],
+  "description": "Memory Compression is a minimal Windows process (introduced in Windows 10 1607) that holds the compressed standby pages of the memory manager. It has no on-disk image and no command line, and is parented by System.\n",
+  "about": "Memory Compression is a minimal process: a kernel-created process that owns an address space but runs no user-mode image. When the memory manager would otherwise write standby and modified pages out to disk, it compresses them and keeps them in this process's working set instead, so they can be restored without a page-in from the pagefile. That makes the process's private working set large by design, because it literally is the compressed memory.\n\nIt is created by the kernel, runs as `NT AUTHORITY\\SYSTEM`, and is parented by `System` (PID 4); the PID is assigned at boot. Task Manager folds its usage into the System line and does not show it separately, while Process Explorer lists it. Neither shows an image path or command line, because no executable was mapped to start it.\n",
+  "publisher": null,
+  "issuer": null,
+  "cert_serial": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "architectures": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "A process named Memory Compression backed by an executable file on disk (there is no image for it)",
+      "severity": "high"
+    },
+    {
+      "signal": "A process named Memory Compression with a command line",
+      "severity": "high"
+    },
+    {
+      "signal": "A visible parent other than `System` (PID 4)",
+      "severity": "high"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "Windows ships no executable for Memory Compression. The name is a candidate for masquerading (T1036.005), so a process using it that has an on-disk image, a command line, or a parent other than `System` is not the memory manager's compression process. A large working set on the real process is expected and is not on its own a sign of anything.\n",
+  "mitre_attack": [
+    "T1036.005"
+  ],
+  "technique_matching": "loose",
+  "references": [
+    "https://www.sans.org/posters/hunt-evil/",
+    "https://attack.mitre.org/techniques/T1036/005/"
+  ],
+  "techniques": [
+    {
+      "id": "T1036.005",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "A process named Memory Compression backed by an executable file on disk (there is no image for it)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A process named Memory Compression backed by an executable file on disk (there is no image for it)"
+    },
+    {
+      "signal": "A process named Memory Compression with a command line",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A process named Memory Compression with a command line"
+    },
+    {
+      "signal": "A visible parent other than `System` (PID 4)",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "A visible parent other than <code>System</code> (PID 4)"
+    },
+    {
+      "signal": "Running as any account other than `NT AUTHORITY\\SYSTEM`",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Running as any account other than <code>NT AUTHORITY\\SYSTEM</code>"
+    }
+  ],
+  "about_html": "<p>Memory Compression is a minimal process: a kernel-created process that owns an address space but runs no user-mode image. When the memory manager would otherwise write standby and modified pages out to disk, it compresses them and keeps them in this process's working set instead, so they can be restored without a page-in from the pagefile. That makes the process's private working set large by design, because it literally is the compressed memory.</p>\n<p>It is created by the kernel, runs as <code>NT AUTHORITY\\SYSTEM</code>, and is parented by <code>System</code> (PID 4); the PID is assigned at boot. Task Manager folds its usage into the System line and does not show it separately, while Process Explorer lists it. Neither shows an image path or command line, because no executable was mapped to start it.</p>",
+  "security_notes_html": "<p>Windows ships no executable for Memory Compression. The name is a candidate for masquerading (<a href=\"https://attack.mitre.org/techniques/T1036/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1036.005</a>), so a process using it that has an on-disk image, a command line, or a parent other than <code>System</code> is not the memory manager's compression process. A large working set on the real process is expected and is not on its own a sign of anything.</p>"
+}

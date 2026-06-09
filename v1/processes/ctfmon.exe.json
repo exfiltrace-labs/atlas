@@ -13,6 +13,7 @@
   "about": "ctfmon.exe runs the Text Services Framework, which coordinates input method editors (IMEs), keyboard layouts, and alternative text input for applications. One instance runs per interactive user, started as part of bringing up the session, and runs as that user. The genuine binary lives at `C:\\Windows\\System32\\ctfmon.exe`.\n\nLegitimately, ctfmon.exe is present on every signed-in desktop, doing its work in the background. It supports input rather than launching programs, so it does not normally start other processes or reach the network.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -41,23 +42,30 @@
       "pct": 100
     }
   ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 96,
   "host_prevalence": 100,
-  "execution_rank": 12,
+  "execution_rank": 21,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 6,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\ctfmon.exe",
@@ -65,17 +73,402 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "bcp47langs.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "inputservice.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "mtfserver.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "ctfmon.exe",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "inputlocalemanager.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "msctfmonitor.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "mtf.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "msutb.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "windowmanagementapi.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "textinputmethodformatter.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "inputhost.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "kbdus.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "uncommon",
+      "pct": 46.2
+    },
+    {
+      "value": "icu.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "msspellcheckingfacility.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "devdispitemprovider.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "windows.cloudstore.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "windows.ui.immersive.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "appextension.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "mswb7.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "wordbreakers.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "windows.devices.enumeration.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "cdp.dll",
+      "weight": "rare",
+      "pct": 7.7
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "Interactive user",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "High",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
   "sessions": [
     {
       "value": "Session 1",
@@ -87,7 +480,12 @@
     {
       "value": "1",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 77
+    },
+    {
+      "value": "2",
+      "weight": "rare",
+      "pct": 23
     }
   ],
   "token_privileges": [
@@ -95,33 +493,123 @@
       "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "uncommon",
+      "pct": 38
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "uncommon",
+      "pct": 38
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "uncommon",
+      "pct": 38
     }
   ],
   "process_handles": [
     {
-      "value": "applicationframehost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
+      "value": "explorer.exe",
+      "weight": "common",
+      "pct": 55.6
     },
     {
-      "value": "calculatorapp.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "conhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
+      "value": "msedge.exe",
+      "weight": "uncommon",
+      "pct": 25.9
     },
     {
       "value": "searchhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 14.8
+    },
+    {
+      "value": "windowsterminal.exe",
+      "weight": "rare",
+      "pct": 14.8
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "logonui.exe",
+      "weight": "rare",
+      "pct": 7.4
+    },
+    {
+      "value": "calculatorapp.exe",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "cmstp.exe",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "consent.exe",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "chrome.exe",
+      "weight": "rare",
+      "pct": 3.7
+    },
+    {
+      "value": "pickerhost.exe",
+      "weight": "rare",
+      "pct": 3.7
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -148,8 +636,57 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "/QuitInfo:<hex>;<hex>;",
+      "pct": 66.7
+    },
+    {
+      "command": "/QuitInfo:<n>;<n>;",
+      "pct": 16.7
+    },
+    {
+      "command": "/QuitInfo:<hex>;<n>;",
+      "pct": 16.7
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "55eae522873ba7330c1b49fddf574d85763e2eda",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "f219f0975e70935d0bd4898bc568b146603c1d2e07ece027f5e5b5e4ead203d5",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "a3e50ef69038b3415a4d75820255a301",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "b539389d4be1dd68c8213a539feb41fb",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "73de34d07423a4c3fd3e689288493485",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "768:wT59yLehopHWMrjhFSL0ayMasBAcbxwD4VgnJ3pyj7YGV:wT59AehopHl/SL0VMasB3xgJ3pPG",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "3c7f31f8cd8457323650dbf31d4faf2de6adc6d4ce3c2cfce050f2ec6295d3ab",
+      "pct": 100
+    }
+  ],
   "security_notes": "ctfmon.exe is mostly a baseline process: its value is a steady identity, the logged-on user's account, a Microsoft signature, no children, and no network, so deviations are easy to see. The realistic abuse is impersonation (T1036.005), where malware borrows the obscure but familiar name from the wrong path or runs under the wrong account.\n\nAs a persistent per-user process it could also be an injection target (T1055). A ctfmon.exe that loads unusual modules, opens network connections, or spawns anything is acting outside its normal role.\n",
   "mitre_attack": [
     "T1036.005",

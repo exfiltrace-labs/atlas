@@ -1,0 +1,11 @@
+{
+  "name": "profprov.dll",
+  "loaded_by": [
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 4.8,
+      "lolbin": false
+    }
+  ]
+}

@@ -7,11 +7,12 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "33000004C7E47F1A0394D6DBCC0000000004C7",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
   "signers": [
-    "Microsoft Windows"
+    "Microsoft Windows Publisher"
   ],
   "file_details": {
     "file_type": "PE32+ executable",
@@ -23,35 +24,42 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "value": "10.0.26100.3624 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "142.80 KB",
+      "value": "142.70 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "value": "ad2f5cd0b177db47919dd362bd7a8a1c054d9a7a",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 27,
+  "execution_rank": 80,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\SecurityHealthService.exe",
@@ -59,17 +67,446 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "vbsapi.dll",
+      "weight": "ubiquitous",
+      "pct": 87.5
+    },
+    {
+      "value": "fveapi.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "bcd.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "tpmcoreprovisioning.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "hspapi.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "tbs.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "securityhealthagent.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mpclient.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wbemsvc.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cryptngc.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "smartscreenps.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mobilenetworking.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "securityhealthproxystub.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "securitycenterbrokerps.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "securityhealthudk.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "amsi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wscapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "dsreg.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wbemprox.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wlanapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mpoav.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "webthreatdefsvc.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "securityhealthcore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "version.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -86,12 +523,17 @@
   ],
   "token_privileges": [
     {
-      "value": "SeChangeNotifyPrivilege",
+      "value": "SeSystemEnvironmentPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeDebugPrivilege",
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -101,27 +543,69 @@
       "pct": 100
     },
     {
-      "value": "SeSystemEnvironmentPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeImpersonatePrivilege",
+      "value": "SeDebugPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "process_handles": [],
+  "process_handles": [
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\SecurityHealthService.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha256",
+      "value": "d33874da2e3e7e0cefb6b369dc9ffcb7b77b4b74fffb8e15ee18d4dba23d0e13",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "79dbf0df097dd309f3b8fe62d9612b46",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "1988f760011352d2f56027b96f1bdb8631e5ce304712aebaccb1b9eef3b745e9",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "80b12def4a5c650475aaacc3bac8fada",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "dd37ded7795825f1b70055982d8938ec3cb75f38",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "04ba4bdba20fa3ce99778fd77096b5fa",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

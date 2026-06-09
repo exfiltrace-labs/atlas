@@ -1,0 +1,470 @@
+{
+  "name": "filesyncconfig.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Code Signing PCA 2024",
+  "cert_serial": "33000001013F0B9273A8C53199000000000101",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha384RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "FileSyncConfig.exe",
+    "internal_name": "Client Application",
+    "product": "Microsoft OneDrive",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "26.088.0510.0004",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "866.90 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "7202c36c6cce362143388eb5fccb2c5630a1f3f5",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 81.5,
+  "host_prevalence": 100,
+  "execution_rank": 71,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 2,
+  "expected_paths": [
+    {
+      "value": "C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\25.087.0506.0001\\FileSyncConfig.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\26.088.0510.0004\\FileSyncConfig.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "filesyncevents.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "telemetry.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "filesyncconfig.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "updateringsettings.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "loggingplatform.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vcruntime140_1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "vcruntime140.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "filesynchost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onedrivetelemetrystable.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "filesyncfs.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "filesynctelemetryextensions.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp140.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\25.087.0506.0001\\FileSyncConfig.exe\"",
+      "pct": 50
+    },
+    {
+      "command": "\"C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\26.088.0510.0004\\FileSyncConfig.exe\"",
+      "pct": 50
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "12288:nhNijbAjy4KMXKWYRnZDPKahSK1i1P7KFHWlRoU:ibAjy4NY6ahSK1i1TKp2oU",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "1113ca9113a0e6fd44c09702a1e59e40ac3b8dfb56f5d74e641d89ba2aedaaa7",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "1117f74c132f710f97495788363402d7",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "c3bfa99a4457a326eaf61b6261485d99945ed4cb",
+      "pct": 50
+    },
+    {
+      "algo": "sha1",
+      "value": "fca5c1ffdcf3b700da5e59e8d50d942e53fcf5c9",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "9dfb3a905736381cb88b8aa9951bfad8",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "37ee72db1e175e5f518c644d0e135985",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "00ca02cc03a2fcaab2569313b181e34fa1875de74521d26a5f22f0b036fdd5a2",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "1e304e1a5c5e56fd0b4769df5a9a445981583ad053d25e40cf7c62899ea30ada",
+      "pct": 50
+    },
+    {
+      "algo": "imphash",
+      "value": "c4a599df824a1cd06a00d311c0c86c3b",
+      "pct": 50
+    },
+    {
+      "algo": "imphash",
+      "value": "902b52cca2e145c64ab1e159d4cc7543",
+      "pct": 50
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

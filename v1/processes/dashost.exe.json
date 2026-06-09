@@ -11,43 +11,185 @@
   ],
   "description": "dasHost.exe is the Device Association Framework host, the process that manages pairing and connecting wired and wireless devices like Bluetooth peripherals and network-discovered devices. It is a normal background service host. Its odd-looking name makes it a convenient thing for malware to imitate.\n",
   "about": "dasHost.exe runs the Device Association Framework, which handles discovering, pairing, and connecting devices to the machine. It is started by the Device Association service through `svchost.exe`, runs under a service account (`LOCAL SERVICE` or `NETWORK SERVICE`), and lives at `C:\\Windows\\System32\\dasHost.exe`.\n\nLegitimately, dasHost runs in the background whenever device association is active. It manages devices rather than launching programs, so it does not normally start other processes, and its name is sometimes mistaken for something suspicious precisely because it is unfamiliar.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "dasHost.exe",
+    "internal_name": "dasHost.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "196.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 114,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\dasHost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "wpprecorderum.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dashost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\dasHost.exe`",
@@ -70,8 +212,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "dashost.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "5284141695752333946e16bc275c5c7ffb66ebd4e7e50b357425341d6f8cd774",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "56d7e6fde89bf4c56c9ee3571d33b8a1",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "0bec0db487660d952cd3d3ff4bb0667f65248137ecb7f1ce640f3e25b9fd4952",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "963453b0cbd1ad371de99ffc7be5d55c",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "9046f02778ad57bec5f8c2b06a7dc4ce",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "86a3d7b3f297b8d6e83f3a56a1d060443f6d9b57",
+      "pct": 100
+    }
+  ],
   "security_notes": "dasHost.exe is a baseline process whose main relevance is impersonation (T1036.005). Its unusual name, and the fact that few people recognize it, make it a tempting cover for malware: a process named dasHost.exe outside `System32`, unsigned, under the wrong account, or without a `svchost.exe` parent is the deviation to investigate.\n\nAs a persistent service-context process it could also be injected into (T1055). dasHost spawning programs or reaching the network beyond device functions is outside its normal role.\n",
   "mitre_attack": [
     "T1036.005",

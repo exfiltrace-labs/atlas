@@ -10,43 +10,150 @@
   ],
   "description": "bcdedit.exe is the Boot Configuration Data editor, the tool that views and changes how Windows boots. Administrators use it for boot troubleshooting and multi-boot setups. Ransomware uses it to switch off the recovery options that would let a victim restore the system.\n",
   "about": "bcdedit.exe reads and modifies the Boot Configuration Data store, the database that tells the Windows boot loader what to start and how. It can add or change boot entries, set safe-boot and recovery options, and toggle features like driver-signature enforcement. It requires administrative rights and lives at `C:\\Windows\\System32\\bcdedit.exe`.\n\nLegitimately, bcdedit is run by administrators during boot repair, OS installs, or driver debugging, which is infrequent on most machines. The setting it changes is what gives an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "bcdedit.exe.mui",
+    "internal_name": "bcdedit.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "509.40 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 103,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\bcdedit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcdedit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\bcdedit.exe`",
@@ -69,8 +176,44 @@
       "severity": "high"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "bcdedit.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "057d4989580ffc4a0828a65e7747b8e8",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "cb0319e89e2781f7e62cab763261ed19",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "b618e3961573412643483a5831d5473bb427d78022455f037d6ce16100d866c8",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "be8f7ce70e016e105df172bd3adf601f",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "d5224d72bd39ee1602ac633497e119b1533c129f",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "a2cc9d097b0eede116afa94fb992d1b0ba55bea86dbfc8ef2721e28a2c91c26f",
+      "pct": 100
+    }
+  ],
   "security_notes": "bcdedit.exe is a fixture of ransomware (T1490). Before or during encryption, operators run `bcdedit /set {default} recoveryenabled no` and `bcdedit /set {default} bootstatuspolicy ignoreallfailures` to stop Windows from booting into the recovery environment that could repair or roll back the machine. These commands almost never appear in normal use, and seeing them, especially next to shadow-copy deletion with `vssadmin` or `wbadmin`, is close to a confirmed recovery-inhibition step.\n\nBecause bcdedit is a legitimate administrative tool, the specific setting and the parent are what matter. A boot-repair session by an administrator looks nothing like a `recoveryenabled no` issued by a script host in the middle of mass file changes.\n",
   "mitre_attack": [
     "T1490"

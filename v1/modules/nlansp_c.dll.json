@@ -1,0 +1,29 @@
+{
+  "name": "nlansp_c.dll",
+  "loaded_by": [
+    {
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 3.8,
+      "lolbin": false
+    },
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 6.6,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 6.7,
+      "lolbin": true
+    }
+  ]
+}

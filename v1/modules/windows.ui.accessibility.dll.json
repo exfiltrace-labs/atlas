@@ -1,0 +1,23 @@
+{
+  "name": "windows.ui.accessibility.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 3.1,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    }
+  ]
+}

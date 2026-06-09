@@ -1,0 +1,11 @@
+{
+  "name": "well_known_domains.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": true
+    }
+  ]
+}

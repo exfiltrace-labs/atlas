@@ -1,0 +1,11 @@
+{
+  "name": "system.windows.forms.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 4.9,
+      "lolbin": false
+    }
+  ]
+}

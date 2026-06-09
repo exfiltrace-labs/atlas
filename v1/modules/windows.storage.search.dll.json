@@ -2,9 +2,87 @@
   "name": "windows.storage.search.dll",
   "loaded_by": [
     {
-      "name": "widgets.exe",
+      "name": "control.exe",
       "weight": "ubiquitous",
       "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "crossdeviceresume.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "dllhost.exe",
+      "weight": "rare",
+      "pct": 6.7,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "microsoftedgeupdate.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 4.1,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 21.9,
+      "lolbin": false
+    },
+    {
+      "name": "setup.exe",
+      "weight": "rare",
+      "pct": 12.5,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.1,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 4.2,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "widgetservice.exe",
+      "weight": "common",
+      "pct": 66.7,
       "lolbin": false
     }
   ]

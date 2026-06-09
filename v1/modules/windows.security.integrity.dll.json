@@ -2,9 +2,15 @@
   "name": "windows.security.integrity.dll",
   "loaded_by": [
     {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 3.4,
+      "lolbin": false
+    },
+    {
       "name": "sihost.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "uncommon",
+      "pct": 25,
       "lolbin": false
     }
   ]

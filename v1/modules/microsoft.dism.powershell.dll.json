@@ -1,0 +1,11 @@
+{
+  "name": "microsoft.dism.powershell.dll",
+  "loaded_by": [
+    {
+      "name": "powershell.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

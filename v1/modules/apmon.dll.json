@@ -1,0 +1,11 @@
+{
+  "name": "apmon.dll",
+  "loaded_by": [
+    {
+      "name": "spoolsv.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "enrollmentapi.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 5.6,
+      "lolbin": false
+    }
+  ]
+}

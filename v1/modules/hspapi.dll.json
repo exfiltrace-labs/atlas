@@ -1,0 +1,11 @@
+{
+  "name": "hspapi.dll",
+  "loaded_by": [
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    }
+  ]
+}

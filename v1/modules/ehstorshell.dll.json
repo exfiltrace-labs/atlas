@@ -1,0 +1,11 @@
+{
+  "name": "ehstorshell.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "terminalconnection.dll",
+  "loaded_by": [
+    {
+      "name": "windowsterminal.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

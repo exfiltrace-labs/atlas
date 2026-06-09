@@ -1,0 +1,17 @@
+{
+  "name": "winsqlite3.dll",
+  "loaded_by": [
+    {
+      "name": "mousocoreworker.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.1,
+      "lolbin": false
+    }
+  ]
+}

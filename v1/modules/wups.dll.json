@@ -1,0 +1,35 @@
+{
+  "name": "wups.dll",
+  "loaded_by": [
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 16.7,
+      "lolbin": false
+    },
+    {
+      "name": "mousocoreworker.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.2,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 1.4,
+      "lolbin": false
+    }
+  ]
+}

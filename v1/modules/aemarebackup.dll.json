@@ -1,0 +1,11 @@
+{
+  "name": "aemarebackup.dll",
+  "loaded_by": [
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    }
+  ]
+}

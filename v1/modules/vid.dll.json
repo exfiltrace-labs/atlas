@@ -1,0 +1,11 @@
+{
+  "name": "vid.dll",
+  "loaded_by": [
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 7.7,
+      "lolbin": false
+    }
+  ]
+}

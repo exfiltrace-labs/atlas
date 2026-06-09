@@ -1,0 +1,17 @@
+{
+  "name": "locationframeworkinternalps.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.2,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 1.4,
+      "lolbin": false
+    }
+  ]
+}

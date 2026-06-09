@@ -1,0 +1,407 @@
+{
+  "name": "mobsync.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000460CF42A912315F6FB3000000000460",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "mobsync.exe",
+    "internal_name": "mobsync.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1150 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "128.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "d8fb0cc66a08061b42d46d03546f0d42cbc49b7c",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 81.5,
+  "host_prevalence": 100,
+  "execution_rank": 73,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 2,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\mobsync.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "actxprxy.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "synccenter.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cscui.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "mobsync.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "syncinfrastructure.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\System32\\mobsync.exe -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "1536:avVJWeifpHym9+VZvCX2GPoCGVjGWmt8CXZ+63x+w4JD+0NL+fK:HpSm9+nE2GPo9St8WHxSD+09+S",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "b67daba43d37829b39d5f5d39e13f53771466205",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "3c26dcf427b4fef1402290b1c3f6b17bdc2d5a8cb920647310c5058e399ea728",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "dc95d8c153ad3b004819bc9f18c3f5bb98b70cf8b243ea32736c895a9a370a69",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "dfed0731a851eae6fa7f532c1edd1da7",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "0303d470d1699a284c1dc4ccdf502016",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "880a05a6e73f3efa41ea08e760b8d9a9",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "techniques": [
+    {
+      "id": "T1055",
+      "name": "Process Injection",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0650",
+          "name": "QakBot"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ]
+}

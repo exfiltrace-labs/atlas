@@ -1,0 +1,11 @@
+{
+  "name": "win32_deviceguard.dll",
+  "loaded_by": [
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    }
+  ]
+}

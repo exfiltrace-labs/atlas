@@ -1,0 +1,11 @@
+{
+  "name": "system.numerics.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 5.5,
+      "lolbin": false
+    }
+  ]
+}

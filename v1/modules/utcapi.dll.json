@@ -1,0 +1,17 @@
+{
+  "name": "utcapi.dll",
+  "loaded_by": [
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 1.4,
+      "lolbin": false
+    },
+    {
+      "name": "winlogon.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

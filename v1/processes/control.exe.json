@@ -11,43 +11,310 @@
   ],
   "description": "control.exe is the program that opens Control Panel and Control Panel items. Windows and users invoke it to reach settings. Attackers abuse it to execute malicious Control Panel files (.cpl), which are just DLLs, so a signed Microsoft binary loads and runs their code.\n",
   "about": "control.exe launches Control Panel and, given a `.cpl` file, the specific Control Panel applet it represents. A `.cpl` is a DLL with a control-panel entry point, so opening one loads and executes that DLL. control.exe is the front door for this, and double-clicking a `.cpl` routes through it. The genuine binary lives at `C:\\Windows\\System32\\control.exe`.\n\nLegitimately, control.exe runs whenever someone opens a Control Panel item, so the process itself is ordinary. The `.cpl` it loads and where that file came from are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "CONTROL.EXE",
+    "internal_name": "Control",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.4202 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "120.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 111,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\control.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "explorerframe.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "icu.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.search.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mswb7.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "control.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "actxprxy.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "A `.cpl` loaded from a user-writable path (`Temp`, `AppData`, `Downloads`)",
@@ -66,8 +333,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "control.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "137cc089788e5114fd946ff8f77974572e200cfb8ff7f2db176c8a768abf2454",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:LvMB4mut+ooGEFX2pjCYeiOX7AFD1Wu/O/U5VDa4iFYLuI8QBiFf7W7:TXRt4FX4jCGm01v5VDa4WI8QBiNQ",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "6acb71ca7d4319de851f86aebca13f7f2cd29a2d883e707ba8995eb87618b94f",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "81dfbe076741123aae667284d9967a702adc9e10",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "f3227db8a268c954dc8d4845cd84d270",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "e3fec5425f028b42bb717bb86978b002",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "0ce77c9061b750df6d9b4b798e0b3075",
+      "pct": 100
+    }
+  ],
   "security_notes": "control.exe is a system-binary proxy through Control Panel files (T1218.002). Because a `.cpl` is a DLL, an attacker delivers one (often renamed to look like a document) and has control.exe load and run it under a trusted, signed Microsoft process, bypassing application-control rules that allow control.exe. Malicious `.cpl` files have been a recurring malware delivery format for exactly this reason.\n\nSince loading a legitimate applet is normal, the context is what matters: a `.cpl` from a temp or download folder, a parent like an Office application, or control.exe spawning a shell, mark it as abuse rather than someone opening a settings page.\n",
   "mitre_attack": [
     "T1218.002"

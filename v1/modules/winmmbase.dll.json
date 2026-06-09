@@ -1,0 +1,11 @@
+{
+  "name": "winmmbase.dll",
+  "loaded_by": [
+    {
+      "name": "devicecensus.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

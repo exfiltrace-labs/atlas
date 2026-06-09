@@ -1,0 +1,77 @@
+{
+  "name": "coml2.dll",
+  "loaded_by": [
+    {
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 20.8,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": true
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 9.4,
+      "lolbin": false
+    },
+    {
+      "name": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 6.7,
+      "lolbin": false
+    },
+    {
+      "name": "slui.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "smss.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 4.1,
+      "lolbin": false
+    },
+    {
+      "name": "updater.exe",
+      "weight": "rare",
+      "pct": 5,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    },
+    {
+      "name": "widgetservice.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

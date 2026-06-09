@@ -2,9 +2,45 @@
   "name": "capabilityaccessmanagerclient.dll",
   "loaded_by": [
     {
-      "name": "startmenuexperiencehost.exe",
-      "weight": "common",
-      "pct": 50,
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    },
+    {
+      "name": "devicecensus.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 13,
+      "lolbin": true
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 9.4,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.7,
+      "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
       "lolbin": false
     }
   ]

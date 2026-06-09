@@ -2,10 +2,40 @@
   "name": "windows.staterepositorybroker.dll",
   "loaded_by": [
     {
-      "name": "explorer.exe",
+      "name": "appactions.exe",
       "weight": "ubiquitous",
       "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
       "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 4.7,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    },
+    {
+      "name": "widgetservice.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "windowsterminal.exe",
+      "weight": "rare",
+      "pct": 16.7,
+      "lolbin": false
     }
   ]
 }

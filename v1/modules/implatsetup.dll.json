@@ -1,0 +1,11 @@
+{
+  "name": "implatsetup.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.3,
+      "lolbin": false
+    }
+  ]
+}

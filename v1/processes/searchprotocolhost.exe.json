@@ -1,0 +1,570 @@
+{
+  "name": "searchprotocolhost.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "SearchProtocolHost.exe",
+    "internal_name": "SearchProtocolHost.exe",
+    "product": "Windows® Search",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "7.0.26100.5074 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "684.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 96.6,
+  "host_prevalence": 100,
+  "execution_rank": 18,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 8,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\SearchProtocolHost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "searchindexer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "mssprxy.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "mssph.dll",
+      "weight": "uncommon",
+      "pct": 46.7
+    },
+    {
+      "value": "authz.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "cldapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.fileexplorer.common.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "mlang.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "msiso.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "ieframe.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "coml2.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "mssvp.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 6.7
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\srvsvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "Interactive user",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "Medium",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 77.4
+    },
+    {
+      "value": "Session 1",
+      "weight": "rare",
+      "pct": 22.6
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "common",
+      "pct": 71.4
+    },
+    {
+      "value": "2",
+      "weight": "uncommon",
+      "pct": 28.6
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\System32\\SearchProtocolHost.exe\" Global\\<redacted>_ Global\\<redacted> 1 -<n> \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)\" \"C:\\ProgramData\\Microsoft\\Search\\Data\\Temp\\usgthrsvc\" \"DownLevelDaemon\"",
+      "pct": 75
+    },
+    {
+      "command": "\"C:\\WINDOWS\\System32\\SearchProtocolHost.exe\" Global\\<redacted>_S-1-5-21-<n>-<n>-<n>-10003_ Global\\<redacted>_S-1-5-21-<n>-<n>-<n>-10003 1 -<n> \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)\" \"C:\\ProgramData\\Microsoft\\Search\\Data\\Temp\\usgthrsvc\" \"DownLevelDaemon\"  \"1\"",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\WINDOWS\\System32\\SearchProtocolHost.exe\" Global\\<redacted>_S-1-5-21-<n>-<n>-<n>-10004_ Global\\<redacted>_S-1-5-21-<n>-<n>-<n>-10004 1 -<n> \"Software\\Microsoft\\Windows Search\" \"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)\" \"C:\\ProgramData\\Microsoft\\Search\\Data\\Temp\\usgthrsvc\" \"DownLevelDaemon\"  \"1\"",
+      "pct": 12.5
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "6462a0961cfb9c63551847bf593ed979",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "36cc7f2fea9aa9ef70ce3dbb1a641b77",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "640a3f7dfe606754f0f53d5ea975b53b0a0dd85f",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "1613e1e40521dbc9cb3d4abcd92a7d3a",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "1a2d3dc480f7ee1fb32dc5cfcd534a79fd8d8c363ef759cb41f0e056501e8a2c",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "1a372a83938476a5e149432683cfdd90c98cfdbb8b76217206098f294390d92b",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "6144:RJW77sJ1E9XIpdzSk985QLmCni/P7dpHP2Q7mkU9r3xQ9cy1PrkR10efUK3ZW:avs3zSmmCi/P7dpv2QyFGcy1PQztf9",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "698d4431-514f-4c82-af4d-cf573872a9f5",
+      "title": "Potential Pikabot Discovery Activity",
+      "level": "high",
+      "techniques": [
+        "T1016",
+        "T1049",
+        "T1087"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Pikabot/proc_creation_win_malware_pikabot_discovery.yml",
+      "match": "parent"
+    },
+    {
+      "id": "d8937fe7-42d5-4b4d-8178-e089c908f63f",
+      "title": "Potential Pikabot Hollowing Activity",
+      "level": "high",
+      "techniques": [
+        "T1055.012"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-emerging-threats/2023/Malware/Pikabot/proc_creation_win_malware_pikabot_rundll32_hollowing.yml",
+      "match": "image"
+    },
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1574",
+      "name": "Hijack Execution Flow",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0354",
+          "name": "Denis"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        },
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    }
+  ]
+}

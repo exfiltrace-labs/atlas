@@ -1,0 +1,11 @@
+{
+  "name": "usoclientimpl.dll",
+  "loaded_by": [
+    {
+      "name": "usoclient.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

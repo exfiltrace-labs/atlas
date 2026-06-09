@@ -1,0 +1,23 @@
+{
+  "name": "systemeventsbrokerclient.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 1.7,
+      "lolbin": false
+    },
+    {
+      "name": "backgroundtransferhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    }
+  ]
+}

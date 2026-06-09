@@ -8,9 +8,21 @@
       "lolbin": false
     },
     {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
       "name": "searchhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "uncommon",
+      "pct": 36.4,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
       "lolbin": false
     }
   ]

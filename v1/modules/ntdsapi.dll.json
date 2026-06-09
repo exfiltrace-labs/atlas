@@ -1,0 +1,23 @@
+{
+  "name": "ntdsapi.dll",
+  "loaded_by": [
+    {
+      "name": "certutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "cipher.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.2,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,777 @@
+{
+  "name": "windowsterminal.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "33000003AE2D3551C8538F551D0000000003AE",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "WindowsTerminal.exe",
+    "internal_name": "WindowsTerminal",
+    "product": "Windows Terminal",
+    "copyright": "©Microsoft Corporation.  All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "1.18.2401.30001",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "702.90 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "f9a7cf9fbe13bac767f4781061332da6e8b4e0ee",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 46,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.18.10301.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.ui.xaml.winmd",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.ui.immersive.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rometadata.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "directmanipulation.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.terminal.remoting.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "globinputhost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.terminal.remoting.winmd",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "explorerframe.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "threadpoolwinrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "openconsoleproxy.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcp47mrm.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.ui.core.textinput.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.foundation.winmd",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcp47langs.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "pfclient.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "d2d1.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "textshaping.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "appextension.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "uiamanager.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "twinapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.ui.xaml.controls.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "resourcepolicyclient.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.terminal.settings.model.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dcomp.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dataexchange.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dwmapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.applicationmodel.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "d3d11.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.terminal.control.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "uiautomationcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "inputhost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dwrite.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "d3dcompiler_47.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.ui.xaml.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.globalization.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windowmanagementapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "terminalthemehelpers.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msftedit.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.ui.xaml.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "terminalapp.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windowsterminal.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "terminalconnection.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "d3d10warp.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.graphics.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ninput.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "appresolver.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "windows.staterepositorybroker.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "rare",
+      "pct": 16.7
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\srvsvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.18.10301.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe\" -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "cd789de3b335b47272e95cfd98fb958daf834679",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "b24678f13f5da0b384fabbed53e3c4a4",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "bcb2714c87f374338a0eba63797e97f7",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "6144:/cdg4EZ5GzPX0+5dudIFCphc4gF+uz5fCwbFEnLev8nlgxwnc2QWycWxst9HhBsT:/EmSX0+5L54Xuz5KTc2KnAw59",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "a8e626e18959729b6fd430ae080f8f1aa5ae3324421ac4d5e257496df8fdd293",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "c93512b004ad368992f76142e9718e8b58893d543b0906dc56d8c460aff20af1",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "29d453369425b97dfb7f673b56746a3e",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "f91ed517-a6ba-471d-9910-b3b4a398c0f3",
+      "title": "Potentially Suspicious Windows App Activity",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_appx_execution.yml",
+      "match": "parent"
+    },
+    {
+      "id": "8de89e52-f6e1-4b5b-afd1-41ecfa300d48",
+      "title": "Suspicious WindowsTerminal Child Processes",
+      "level": "medium",
+      "techniques": [],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_windows_terminal_susp_children.yml",
+      "match": "parent"
+    },
+    {
+      "id": "f4bbd493-b796-416e-bbf2-121235348529",
+      "title": "Non Interactive PowerShell Process Spawned",
+      "level": "low",
+      "techniques": [
+        "T1059.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_non_interactive_execution.yml",
+      "match": "parent"
+    }
+  ]
+}

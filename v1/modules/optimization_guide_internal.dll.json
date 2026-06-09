@@ -1,0 +1,11 @@
+{
+  "name": "optimization_guide_internal.dll",
+  "loaded_by": [
+    {
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    }
+  ]
+}

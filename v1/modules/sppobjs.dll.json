@@ -1,0 +1,11 @@
+{
+  "name": "sppobjs.dll",
+  "loaded_by": [
+    {
+      "name": "sppsvc.exe",
+      "weight": "uncommon",
+      "pct": 45.5,
+      "lolbin": false
+    }
+  ]
+}

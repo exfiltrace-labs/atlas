@@ -1,0 +1,23 @@
+{
+  "name": "slwga.dll",
+  "loaded_by": [
+    {
+      "name": "devicecensus.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 2.5,
+      "lolbin": true
+    },
+    {
+      "name": "slui.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

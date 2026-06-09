@@ -1,0 +1,11 @@
+{
+  "name": "shutdownux.dll",
+  "loaded_by": [
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 4.7,
+      "lolbin": false
+    }
+  ]
+}

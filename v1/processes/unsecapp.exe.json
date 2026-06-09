@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -23,14 +24,21 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "76.00 KB",
+      "value": "80.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -44,14 +52,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 88.7,
   "host_prevalence": 100,
-  "execution_rank": 38,
+  "execution_rank": 60,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 3,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
@@ -59,17 +67,147 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 66.7
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wbemsvc.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -86,6 +224,31 @@
   ],
   "token_privileges": [
     {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeSystemProfilePrivilege",
       "weight": "ubiquitous",
       "pct": 100
@@ -101,32 +264,22 @@
       "pct": 100
     },
     {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeIncreaseWorkingSetPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTcbPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeLockMemoryPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTimeZonePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -141,27 +294,12 @@
       "pct": 100
     },
     {
-      "value": "SeIncreaseBasePriorityPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeProfileSingleProcessPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDelegateSessionUserImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateSymbolicLinkPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -169,14 +307,50 @@
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\wbem\\unsecapp.exe -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "a25cf0f2ccf8b3590ee6d1e43a192725",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "7b7e2d561eeae140db26bdfebfa532d8eb4c52e90cdcbff4ed9a3bd2a24de17d",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "0ecc580de1d6d12427c4f22d330c81c73df9279c",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "25ff283412b3b46c0b658af8f7f09900",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "9656e21ed232ddc034de628b1e2968ad",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "41da2bcbb07c1673537e62d8e19ce9f4f763983e3fe3df037a52c2e06aa94add",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

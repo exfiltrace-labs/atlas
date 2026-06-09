@@ -2,9 +2,45 @@
   "name": "mswb7.dll",
   "loaded_by": [
     {
-      "name": "searchhost.exe",
+      "name": "control.exe",
       "weight": "ubiquitous",
       "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "ctfmon.exe",
+      "weight": "rare",
+      "pct": 15.4,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 6.3,
+      "lolbin": false
+    },
+    {
+      "name": "searchhost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
       "lolbin": false
     }
   ]

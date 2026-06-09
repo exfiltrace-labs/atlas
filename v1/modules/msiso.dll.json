@@ -1,0 +1,17 @@
+{
+  "name": "msiso.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": true
+    },
+    {
+      "name": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 13.3,
+      "lolbin": false
+    }
+  ]
+}

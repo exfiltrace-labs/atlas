@@ -1,0 +1,11 @@
+{
+  "name": "legacysystemsettings.dll",
+  "loaded_by": [
+    {
+      "name": "searchhost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    }
+  ]
+}

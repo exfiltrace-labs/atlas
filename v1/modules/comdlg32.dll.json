@@ -1,0 +1,23 @@
+{
+  "name": "comdlg32.dll",
+  "loaded_by": [
+    {
+      "name": "fsquirt.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "smss.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "sysmon64.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    }
+  ]
+}

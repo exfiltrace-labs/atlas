@@ -6,6 +6,12 @@
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
+    },
+    {
+      "name": "widgets.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
     }
   ]
 }

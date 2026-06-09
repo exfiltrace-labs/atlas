@@ -1,0 +1,316 @@
+{
+  "name": "drvinst.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "DrvInst.EXE",
+    "internal_name": "DrvInst.EXE",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "428.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 32,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\drvinst.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "devrtl.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "drvinst.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "drvstore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "DrvInst.exe \"2\" \"1\" \"PCI\\VEN_15AD&DEV_0740&SUBSYS_074015AD&REV_10\\3&61AAA01&0&3F\" \"C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\vmci.inf_amd64_faf39406c404b481\\vmci.inf\" \"oem1.inf:*:*:9.8.30.0:PCI\\VEN_15AD&DEV_0740&SUBSYS_074015AD,\" \"48558cc1b\" \"<hex>\" \"5b3b\"",
+      "pct": 25
+    },
+    {
+      "command": "DrvInst.exe \"2\" \"1\" \"SWD\\DRIVERENUM\\<guid>#VOCAEFFECTPACK&1&1339C6B5&0\" \"C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\voiceclarityep_audio_component.inf_amd64_f475a157038e13d5\\voiceclarityep_audio_component.inf\" \"oem2.inf:*:*:10.0.26100.6710:SWC\\VEN_MSFT&AUDIO_EFFECTPACK_VOICECLARITY,\" \"44b9817c7\" \"<n>\" \"5b3b\"",
+      "pct": 25
+    },
+    {
+      "command": "DrvInst.exe \"4\" \"40001\" \"C:\\WINDOWS\\SoftwareDistribution\\Download\\Install\\vmci.inf\" \"9\" \"48558cc1b\" \"<n>\" \"Service-0x0-3e7$\\Default\" \"<n>\" \"208\" \"C:\\WINDOWS\\SoftwareDistribution\\Download\\Install\"",
+      "pct": 25
+    },
+    {
+      "command": "DrvInst.exe \"4\" \"40001\" \"C:\\WINDOWS\\SoftwareDistribution\\Download\\Install\\voiceclarityep_audio_component.inf\" \"9\" \"44b9817c7\" \"<hex>\" \"Service-0x0-3e7$\\Default\" \"<hex>\" \"208\" \"C:\\WINDOWS\\SoftwareDistribution\\Download\\Install\"",
+      "pct": 25
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "96ac191ab505f573991dfa677eb99cf4dbcd46cc",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "c64ed8a7fea763cbbccb60e6aac74f1c9c3c9c3800c17f814bc06fef09bd1a79",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "53b064c14092d173780c99124c18f4aa",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "63e0b06d7d4bf69ad1005ac7f08d7f59",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "89549235d570b6999d4779522ec91b6e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "6a577092db240df3a0c3f4962a253497579d00d6fb25ec08661cd0c9d65a104e",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "90b63c33-2b97-4631-a011-ceb0f47b77c3",
+      "title": "Potential Suspicious Execution From GUID Like Folder Names",
+      "level": "low",
+      "techniques": [
+        "T1027"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_execution_from_guid_folder_names.yml",
+      "match": "image"
+    }
+  ]
+}

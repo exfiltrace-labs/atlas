@@ -3,8 +3,8 @@
   "loaded_by": [
     {
       "name": "svchost.exe",
-      "weight": "uncommon",
-      "pct": 28.6,
+      "weight": "rare",
+      "pct": 0.4,
       "lolbin": false
     }
   ]

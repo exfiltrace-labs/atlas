@@ -1,0 +1,11 @@
+{
+  "name": "msspellcheckingfacility.dll",
+  "loaded_by": [
+    {
+      "name": "ctfmon.exe",
+      "weight": "rare",
+      "pct": 15.4,
+      "lolbin": false
+    }
+  ]
+}

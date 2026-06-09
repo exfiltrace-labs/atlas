@@ -1,0 +1,29 @@
+{
+  "name": "wwapi.dll",
+  "loaded_by": [
+    {
+      "name": "provtool.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    },
+    {
+      "name": "sppsvc.exe",
+      "weight": "uncommon",
+      "pct": 40.9,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    }
+  ]
+}

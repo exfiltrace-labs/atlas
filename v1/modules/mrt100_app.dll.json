@@ -2,6 +2,12 @@
   "name": "mrt100_app.dll",
   "loaded_by": [
     {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 5.1,
+      "lolbin": false
+    },
+    {
       "name": "calculatorapp.exe",
       "weight": "ubiquitous",
       "pct": 100,

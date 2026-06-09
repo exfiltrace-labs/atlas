@@ -1,0 +1,17 @@
+{
+  "name": "msimg32.dll",
+  "loaded_by": [
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    }
+  ]
+}

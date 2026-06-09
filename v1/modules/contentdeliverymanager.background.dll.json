@@ -1,0 +1,11 @@
+{
+  "name": "contentdeliverymanager.background.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "uncommon",
+      "pct": 27.1,
+      "lolbin": false
+    }
+  ]
+}

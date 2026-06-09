@@ -1,0 +1,11 @@
+{
+  "name": "microsoft.sharepoint.websocketclient.dll",
+  "loaded_by": [
+    {
+      "name": "microsoft.sharepoint.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

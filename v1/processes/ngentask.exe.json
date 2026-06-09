@@ -1,0 +1,675 @@
+{
+  "name": "ngentask.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "33000004046C7406FF572B2772000000000404",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32 executable",
+    "magic": "PE32 executable (console)",
+    "original_name": "NGenTask.exe",
+    "internal_name": "NGenTask.exe",
+    "product": "Microsoft® .NET Framework",
+    "copyright": "© Microsoft Corporation.  All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "4.8.9221.0 built by: NET481REL1LAST_25H2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "78.10 KB",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "79.10 KB",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x86",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "x64",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "8f985be8fd256085c90a95d3c74580511a1db975",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 36,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngentask.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngentask.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "taskhostw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "ngen.exe",
+      "weight": "ubiquitous",
+      "pct": 95.8
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "rare",
+      "pct": 4.2
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "mscorsvw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "version.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase_clr0400.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "psapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "fusion.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mscoree.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "vcruntime140_clr0400.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mscorsvc.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clrjit.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clr.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mscoreei.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ngentask.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mpoav.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "wminet_utils.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "amsi.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "wmiutils.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "wbemsvc.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "wbemprox.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mscorlib.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wow64win.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wow64con.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "vcruntime140_1_clr0400.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mscorlib.ni.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wow64.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "system.management.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wow64cpu.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "system.ni.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "system.core.ni.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wow64base.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "system.dll",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "system.core.dll",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "ngen.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\NGenTask.exe\" /RuntimeWide /Critical /StopEvent:536",
+      "pct": 25
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\NGenTask.exe\" /RuntimeWide /Critical /StopEvent:1088",
+      "pct": 25
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\NGenTask.exe\" /RuntimeWide /Critical /StopEvent:1056",
+      "pct": 25
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\NGenTask.exe\" /RuntimeWide /Critical /StopEvent:1020",
+      "pct": 25
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "9b60237f826840d875088e4d056a69ed156ef0f3",
+      "pct": 50
+    },
+    {
+      "algo": "sha1",
+      "value": "4f1b67a5f856cf0b11f574714a799c0394cdf392",
+      "pct": 50
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:V9eGa2NzJNfbiUtgnqCztRz/foexgBpR8InFuVsYW/TzW:TY2NTbZORz/foe+B38IFIWba",
+      "pct": 50
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:RHby1Gu3xJsLVpCjh4RLERIFMKQ8fnFd4DhmPWzol:BSGuBeLmON/Mr8fFUhsWQ",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "045008d154dd7bbc250f4975c87559378c834388790f62b05d5457e224fbf85b",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "06a1db18d3dd843acd4c8481b225c39bc472bf4c25758fe767a7a944261dcb96",
+      "pct": 50
+    },
+    {
+      "algo": "imphash",
+      "value": "00000000000000000000000000000000",
+      "pct": 50
+    },
+    {
+      "algo": "imphash",
+      "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "5d36257614ac623ed5fd38454ff79ff7",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "07cc845a82295c2d0280ce9f0f087ebd",
+      "pct": 50
+    },
+    {
+      "algo": "authentihash",
+      "value": "0e907b2d60016e439e7bbd7798df6f1e2a0e072c13f12235bd9a32ef3cc873ea",
+      "pct": 50
+    },
+    {
+      "algo": "authentihash",
+      "value": "d3601a08fcc4e36e7e2f2b125bde32a3a5c6e95a3daa49bf74d08f369baa6e16",
+      "pct": 50
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "facd1549-e416-48e0-b8c4-41d7215eedc8",
+      "title": "Amsi.DLL Load By Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_amsi_uncommon_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "bafd07c6-3ea5-454a-b4be-058fbb073de7",
+      "title": "Potential Executable Run Itself As Sacrificial Process",
+      "level": "low",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_parent_execute_itself.yml",
+      "match": "image"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "syncinfrastructure.dll",
+  "loaded_by": [
+    {
+      "name": "mobsync.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

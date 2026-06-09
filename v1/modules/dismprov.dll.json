@@ -1,0 +1,35 @@
+{
+  "name": "dismprov.dll",
+  "loaded_by": [
+    {
+      "name": "directxdatabaseupdater.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "dismhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "oobefodsetup.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "powershell.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 1.4,
+      "lolbin": false
+    }
+  ]
+}

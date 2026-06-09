@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "330000045FF3C96C1A7FF7DA1D00000000045F",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -35,6 +36,13 @@
       "pct": 100
     }
   ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "cert_thumbprints": [
     {
       "value": "71f53a26bb1625e466727183409a30d03d7923df",
@@ -44,14 +52,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 46,
+  "execution_rank": 96,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\wlms\\wlms.exe",
@@ -59,17 +67,87 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sppc.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "common",
+      "pct": 66.7
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -86,17 +164,32 @@
   ],
   "token_privileges": [
     {
-      "value": "SeCreatePagefilePrivilege",
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
       "value": "SeTimeZonePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeIncreaseWorkingSetPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -116,12 +209,17 @@
       "pct": 100
     },
     {
-      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "value": "SeProfileSingleProcessPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeCreateSymbolicLinkPrivilege",
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -131,27 +229,7 @@
       "pct": 100
     },
     {
-      "value": "SeCreatePermanentPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeProfileSingleProcessPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeChangeNotifyPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeLockMemoryPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDebugPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -169,14 +247,50 @@
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\wlms\\wlms.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "c4858787b32be55bb0085c7b777727c2",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "40b92b3f1a84c3b1a24b7ebb54a22abc297a1aeb",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "d76cf54d348f5bd102ce29ec7376842da4b4715cbeafb6acf4f771c069444342",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "d80bcf639f00702a33cfbc7ef12d7ddf",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "bbfc8dcf521a927a8f63808b972946cdf4297d2c60b3d4601d60efe9cd98f74a",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "6b1b9a2ac5aa7a8342d1e87f3199f301",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

@@ -1,0 +1,11 @@
+{
+  "name": "loadperf.dll",
+  "loaded_by": [
+    {
+      "name": "wmiadap.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
   "version": "0.1.0",
   "contract_version": "v1",
-  "process_count": 115,
+  "process_count": 184,
   "provenance_breakdown": {
-    "measured": 47,
-    "curated": 68
+    "measured": 132,
+    "curated": 52
   },
-  "build_time": "2026-06-08T15:57:47.494Z"
+  "build_time": "2026-06-09T03:19:38.396Z"
 }

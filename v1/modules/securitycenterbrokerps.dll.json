@@ -1,0 +1,23 @@
+{
+  "name": "securitycenterbrokerps.dll",
+  "loaded_by": [
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 5.3,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    }
+  ]
+}

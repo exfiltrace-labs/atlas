@@ -1,0 +1,11 @@
+{
+  "name": "searchux.internalwebapi.dll",
+  "loaded_by": [
+    {
+      "name": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 27.3,
+      "lolbin": false
+    }
+  ]
+}

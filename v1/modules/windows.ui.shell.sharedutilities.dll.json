@@ -1,0 +1,11 @@
+{
+  "name": "windows.ui.shell.sharedutilities.dll",
+  "loaded_by": [
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    }
+  ]
+}

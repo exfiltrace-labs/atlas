@@ -1,0 +1,11 @@
+{
+  "name": "osclient.net.dll",
+  "loaded_by": [
+    {
+      "name": "appactions.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

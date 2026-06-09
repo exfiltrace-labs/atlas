@@ -1,0 +1,23 @@
+{
+  "name": "fontglyphanimator.dll",
+  "loaded_by": [
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.3,
+      "lolbin": true
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "uncommon",
+      "pct": 27.3,
+      "lolbin": false
+    }
+  ]
+}

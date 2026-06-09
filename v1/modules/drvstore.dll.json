@@ -1,0 +1,47 @@
+{
+  "name": "drvstore.dll",
+  "loaded_by": [
+    {
+      "name": "compattelrunner.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "drvinst.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "spoolsv.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.1,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 7.7,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 7.1,
+      "lolbin": false
+    },
+    {
+      "name": "wuaucltcore.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

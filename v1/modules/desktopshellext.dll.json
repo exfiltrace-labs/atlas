@@ -1,0 +1,11 @@
+{
+  "name": "desktopshellext.dll",
+  "loaded_by": [
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    }
+  ]
+}

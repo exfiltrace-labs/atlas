@@ -1,0 +1,11 @@
+{
+  "name": "miguicontrols.ni.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 0.6,
+      "lolbin": false
+    }
+  ]
+}

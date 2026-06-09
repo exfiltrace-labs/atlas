@@ -1,0 +1,11 @@
+{
+  "name": "windows.internal.ui.dialogs.dll",
+  "loaded_by": [
+    {
+      "name": "pickerhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

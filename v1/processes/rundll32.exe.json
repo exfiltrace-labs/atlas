@@ -11,43 +11,368 @@
   ],
   "description": "rundll32.exe is a Windows utility that runs functions exported by DLL files. Because a DLL cannot execute on its own, Windows uses rundll32.exe to call a specific function inside one, which is how many built-in features such as Control Panel applets are launched. That same ability to run arbitrary DLL code makes it one of the most abused binaries on Windows.\n",
   "about": "rundll32.exe loads a DLL and calls one of its exported functions. The command line names the DLL and the entry point, as in `rundll32.exe shell32.dll,Control_RunDLL`, optionally followed by arguments passed to that function. Windows leans on it constantly: Control Panel applets, printer and display dialogs, and many shell actions are really rundll32 calling an exported function. The genuine binary lives at `C:\\Windows\\System32\\rundll32.exe`, with a 32-bit copy under `SysWOW64`.\n\nThe function it calls has to be exported by the DLL, and can be named or referenced by ordinal number. Beyond plain DLLs it can reach a few special handlers: it runs Control Panel (`.cpl`) files, and through the legacy `mshtml.dll` it can execute inline JavaScript straight from the command line. Its parent is whatever invoked the feature, most often `explorer.exe`, Control Panel, or another Windows component.\n\nSeveral rundll32 instances at once are normal on a desktop, each tied to whatever Windows feature started it, short-lived for a dialog and longer-lived for anything that keeps a window open. What rundll32 is doing at any moment is defined entirely by the DLL and entry point on its command line.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "RUNDLL32.EXE.MUI",
+    "internal_name": "rundll",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "96.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 88.7,
+  "host_prevalence": 100,
+  "execution_rank": 54,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 3,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\rundll32.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "rundll32.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dbgcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "wer.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "tdh.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "wevtapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "appxdeploymentserver.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "staterepository.core.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "appxdeploymentextensions.onecore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 40
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
-  "instance_counts": [],
-  "token_privileges": [],
-  "process_handles": [],
-  "os_prevalence": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\rundll32.exe` or its `SysWOW64` copy",
@@ -78,8 +403,53 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\rundll32.exe C:\\WINDOWS\\system32\\<redacted>.OneCore.dll,ShellRefresh",
+      "pct": 66.7
+    },
+    {
+      "command": "C:\\WINDOWS\\System32\\rundll32.exe C:\\WINDOWS\\System32\\shell32.dll,<redacted> <guid> -Embedding",
+      "pct": 33.3
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "1536:Hs9DedJpHCRR9Cj83ux1vgp4wvq+PnOmQXR6L:H7pYR1ux1vgp4wvq+frWR",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "0e617765ebe2566e7e216e182c32ec5c",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "222f87a46169668544874a16deac80a2e460cdc29ecd06dae6e374f3fc7baeb5",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "6d204808f7af3056b8956911eca64b715c1feba4",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "2370d904f3c18a68638b3aaedf17b2c68306e98a784eb1f21985c4e880ff1d2d",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "c8b70d465c35d895c4171baf042bb63a",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "2fafaa93aa691553b5303616a6044a42",
+      "pct": 100
+    }
+  ],
   "security_notes": "rundll32.exe is a top proxy-execution tool (T1218.011). The signed binary will run code from any DLL it is pointed at, which lets an attacker execute a malicious DLL under a trusted, Microsoft-signed process and slip past application-control rules. Path and signature checks pass, so what to read instead is the DLL path, the entry point, and the parent. A DLL loaded from a user-writable directory, or called by a bare ordinal, deserves a close look.\n\nAn empty command line is its own tell. A rundll32.exe running with no DLL or entry point argument is a long-standing sign of process injection, a hollow host spawned only to receive injected code (T1055).\n\nrundll32 is also a fileless execution path. Through the legacy `mshtml.dll` handler it can run inline JavaScript from the command line (T1059.007), fetching and executing a payload without writing a script to disk. A `javascript:` string or a reference to `RunHTMLApplication` in a rundll32 command line is almost never legitimate.\n",
   "mitre_attack": [
     "T1218.011",

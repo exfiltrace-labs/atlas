@@ -1,0 +1,35 @@
+{
+  "name": "authz.dll",
+  "loaded_by": [
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "searchprotocolhost.exe",
+      "weight": "uncommon",
+      "pct": 40,
+      "lolbin": false
+    },
+    {
+      "name": "services.exe",
+      "weight": "rare",
+      "pct": 22.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.3,
+      "lolbin": false
+    },
+    {
+      "name": "winlogon.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

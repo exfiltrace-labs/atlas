@@ -13,6 +13,7 @@
   "about": "spoolsv.exe hosts the Print Spooler service (`Spooler`). It accepts print jobs from applications, queues them, and feeds them to printers, loading the printer drivers, print processors, and port monitors needed along the way. It is started by `services.exe` at boot, runs as `NT AUTHORITY\\SYSTEM`, and a single instance runs for the life of the system. The genuine binary lives at `C:\\Windows\\System32\\spoolsv.exe`.\n\nThe spooler's work involves loading code. Printer drivers, print processors, and port monitors are all DLLs that get loaded into the SYSTEM-level spoolsv.exe. The service is reachable locally through `winspool.drv` and, by design, remotely through the print system's RPC interfaces, which is what makes a code-loading SYSTEM service exposed to the network worth attention.\n\nOn its own spoolsv.exe does not start other programs. It runs quietly and is present even on printer-less machines, because the service is enabled by default.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -36,7 +37,14 @@
   ],
   "file_sizes": [
     {
-      "value": "960.00 KB",
+      "value": "964.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -50,14 +58,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 34,
+  "execution_rank": 86,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\spoolsv.exe",
@@ -65,9 +73,21 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [
@@ -78,10 +98,414 @@
     }
   ],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "loaded_modules": [
+    {
+      "value": "winhttp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "snmpapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "win32spl.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "inetpp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "localspl.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wsnmp32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winprint.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winspool.drv",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "printisolationproxy.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "spoolss.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "printconfig.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "virtualmon.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "usbmon.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "appmon.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "dsrole.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "tcpmon.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "drvstore.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "apmon.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "msxml6.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 28.6
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "print.printsupport.source.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "printercleanuptask.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "rare",
+      "pct": 14.3
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "rare",
+      "pct": 14.3
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\srvsvc",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "\\lsass",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "\\Winsock2\\CatalogChangeListener-ba4-0",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "\\Winsock2\\CatalogChangeListener-af4-0",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -98,17 +522,17 @@
   ],
   "token_privileges": [
     {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeImpersonatePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
       "value": "SeTcbPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -121,7 +545,7 @@
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -156,8 +580,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\System32\\spoolsv.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "b19b0010ca22a8f9337eb0f453be4dd8",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "28d12ceed165c39e80aa88e2138ea076da901862ecff9a0086d52c879516c789",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "6fe76b7aaa13c1c87da545262932b72ee577fb01",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "d5a80b23d2117fad70775963d2fbeec1",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "682cb9dbd9c596f1100e0be50023d17a37bf056e423f4a1d47d55369725aaabf",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "1a965379b4a16ae8e591f73343924163",
+      "pct": 100
+    }
+  ],
   "security_notes": "spoolsv.exe is best known as the target of the PrintNightmare family of vulnerabilities (T1068). The spooler can be coaxed into loading an attacker-supplied printer driver DLL, and because the process runs as SYSTEM, that DLL executes with full privileges, locally for elevation or over the network for remote code execution. The real spooler never loads a DLL from a user-writable path and never spawns a process, so either behaviour is a strong signal.\n\nIt is also a persistence surface through print processors (T1547.012). A print processor or port monitor is just a DLL named in the registry that the spooler loads as SYSTEM every time it starts. An attacker who registers their own gains a stealthy, SYSTEM-level autostart that lives under the spooler's keys rather than the usual Run locations and survives reboots.\n\nBecause the print RPC interfaces are reachable remotely and the service is on by default, disabling the spooler on machines that do not need to print is a common hardening step. Where it must run, the signals above, an unexpected loaded DLL, a child process, or a new print processor, are what separate abuse from normal printing.\n",
   "mitre_attack": [
     "T1068",

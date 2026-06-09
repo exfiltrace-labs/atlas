@@ -1,0 +1,23 @@
+{
+  "name": "webservices.dll",
+  "loaded_by": [
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "sppsvc.exe",
+      "weight": "uncommon",
+      "pct": 45.5,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    }
+  ]
+}

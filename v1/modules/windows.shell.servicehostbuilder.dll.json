@@ -2,15 +2,51 @@
   "name": "windows.shell.servicehostbuilder.dll",
   "loaded_by": [
     {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 5.1,
+      "lolbin": false
+    },
+    {
       "name": "calculatorapp.exe",
       "weight": "ubiquitous",
       "pct": 100,
       "lolbin": false
     },
     {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.3,
+      "lolbin": true
+    },
+    {
+      "name": "lockapp.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 3.1,
+      "lolbin": false
+    },
+    {
       "name": "searchhost.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "uncommon",
+      "pct": 45.5,
+      "lolbin": false
+    },
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "uncommon",
+      "pct": 36.4,
       "lolbin": false
     }
   ]

@@ -1,0 +1,11 @@
+{
+  "name": "wnsclientapi.dll",
+  "loaded_by": [
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    }
+  ]
+}

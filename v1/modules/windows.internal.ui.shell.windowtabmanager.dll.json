@@ -1,0 +1,17 @@
+{
+  "name": "windows.internal.ui.shell.windowtabmanager.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 4.1,
+      "lolbin": true
+    }
+  ]
+}

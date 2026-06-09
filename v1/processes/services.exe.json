@@ -14,11 +14,12 @@
   "about": "services.exe is started by `wininit.exe` early in boot and runs in session 0 as `NT AUTHORITY\\SYSTEM` from `C:\\Windows\\System32\\services.exe`. Exactly one instance runs at a time, and it stays up for the life of the machine.\n\nservices.exe maintains a database of installed services and their configurations, kept under `HKLM\\SYSTEM\\CurrentControlSet\\Services`, and loads them according to their startup settings (automatic, manual, delayed, or disabled). When the system boots, it starts the services marked to run automatically, and throughout the session it responds to requests to start or stop services on demand, whether they come from the Services console, `sc.exe`, or an API call.\n\nBeyond simply launching services, it monitors their state and can take recovery actions if a service fails, such as restarting it according to its configured recovery options. Underneath the SCM it implements the Unified Background Process Manager (UBPM), which drives both services and scheduled tasks. Because it starts every service, its children are the service processes themselves: the many `svchost.exe` instances, `spoolsv.exe`, and whatever third-party service binaries are installed. Every child should map back to an installed service.\n\nservices.exe is also what marks a boot as successful. Once a user logs on interactively, the SCM copies the current configuration into the Last Known Good control set (`HKLM\\SYSTEM\\Select\\LastKnownGood` points at the validated `CurrentControlSet`), the configuration Windows falls back to after a failed boot.\n\nThe genuine services.exe is a trusted, signed Microsoft system file that is essential to normal operation. It should never be removed or disabled, and terminating it will crash the system, since the entire services infrastructure depends on it.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "33000004DA1FD30971F713C67E0000000004DA",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
   "signers": [
-    "Microsoft Windows"
+    "Microsoft Windows Publisher"
   ],
   "file_details": {
     "file_type": "PE32+ executable",
@@ -30,35 +31,42 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8115 (WinBuild.160101.0800)",
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "877.20 KB",
+      "value": "885.20 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "066ac370edebcd12dac192f3b170fc6decf2d0d4",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 29,
+  "execution_rank": 82,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\services.exe",
@@ -66,29 +74,401 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [
     {
       "value": "svchost.exe",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 82.8
+    },
+    {
+      "value": "sppsvc.exe",
+      "weight": "rare",
+      "pct": 4.1
+    },
+    {
+      "value": "elevation_service.exe",
+      "weight": "rare",
+      "pct": 2
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "trustedinstaller.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "upfc.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "rare",
+      "pct": 0.8
+    },
+    {
+      "value": "vssvc.exe",
+      "weight": "rare",
+      "pct": 0.4
     }
   ],
-  "expected_grandparents": [],
-  "expected_grandchildren": [],
-  "network_ports": [],
-  "listening_ports": [
+  "expected_grandparents": [
     {
-      "value": "49670/tcp",
+      "value": "smss.exe",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
+  "expected_grandchildren": [
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 12.1
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 8.6
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 6.9
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "rare",
+      "pct": 6.9
+    },
+    {
+      "value": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 6.9
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 5.2
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 5.2
+    },
+    {
+      "value": "ctfmon.exe",
+      "weight": "rare",
+      "pct": 5.2
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "wevtutil.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "wermgr.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "drvinst.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "searchfilterhost.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "dxgiadaptercache.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "audiodg.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 3.4
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "mobsync.exe",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "rare",
+      "pct": 1.7
+    }
+  ],
+  "network_ports": [],
+  "listening_ports": [
+    {
+      "value": "49670/tcp",
+      "weight": "common",
+      "pct": 52.5
+    },
+    {
+      "value": "49672/tcp",
+      "weight": "uncommon",
+      "pct": 47.5
+    }
+  ],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "loaded_modules": [
+    {
+      "value": "dabapi.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "wmsgapi.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "authz.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "eventaggregation.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "wudfplatform.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "spinf.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "scesrv.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "services.exe",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 22.2
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "rare",
+      "pct": 22.2
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\ntsvcs",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "\\srvsvc",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "\\Winsock2\\CatalogChangeListener-2fc-0",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "\\Winsock2\\CatalogChangeListener-2f8-0",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -105,51 +485,6 @@
   ],
   "token_privileges": [
     {
-      "value": "SeCreateSymbolicLinkPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeAuditPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDelegateSessionUserImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateGlobalPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTcbPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTimeZonePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeLockMemoryPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDebugPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
@@ -160,12 +495,52 @@
       "pct": 100
     },
     {
-      "value": "SeProfileSingleProcessPrivilege",
+      "value": "SeSystemProfilePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeSystemProfilePrivilege",
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -175,12 +550,17 @@
       "pct": 100
     },
     {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeIncreaseBasePriorityPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeCreatePermanentPrivilege",
+      "value": "SeProfileSingleProcessPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -189,12 +569,142 @@
     {
       "value": "svchost.exe",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 98
+    },
+    {
+      "value": "sppsvc.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "trustedinstaller.exe",
+      "weight": "rare",
+      "pct": 12
+    },
+    {
+      "value": "elevation_service.exe",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "sc.exe",
+      "weight": "rare",
+      "pct": 8
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "rare",
+      "pct": 6
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 6
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 6
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "upfc.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "rare",
+      "pct": 4
+    },
+    {
+      "value": "drvinst.exe",
+      "weight": "rare",
+      "pct": 2
+    },
+    {
+      "value": "appidpolicyconverter.exe",
+      "weight": "rare",
+      "pct": 2
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 2
+    },
+    {
+      "value": "ucpdmgr.exe",
+      "weight": "rare",
+      "pct": 2
+    },
+    {
+      "value": "vssvc.exe",
+      "weight": "rare",
+      "pct": 2
+    },
+    {
+      "value": "setup.exe",
+      "weight": "rare",
+      "pct": 2
+    },
+    {
+      "value": "logonui.exe",
+      "weight": "rare",
+      "pct": 2
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -233,8 +743,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\services.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "04f8102d7075122e51f539ebd74bf9ce",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "1f4cc1fc2c8e8dd22eb2c6ee9e8734a2",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "ec0ee583c6fde400873e33c9e4f10e48b9048e8dc8e66f2cee8b5dcbe830d13f",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "922f2667bd3af89ccc7ef5557b143fdb5efabb5e326e47b0bd14c40b3fa63a38",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "901eef8659d52b095fd751f87e064d27c4c82ee6",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "c80e84b65a40061ca14018dc65b2259d",
+      "pct": 100
+    }
+  ],
   "security_notes": "Because of its trusted status and central role, services.exe is a frequent target for impersonation by malware hoping to hide among legitimate processes (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Treat copies found in other locations, slight misspellings such as `service.exe`, `servicess.exe`, or `sevices.exe`, and any second instance as anomalies, since exactly one ever runs.\n\nThe more common way to abuse services.exe is to give it something malicious to run. Installing or modifying a service is a long-standing persistence and privilege escalation technique (T1543.003): the service runs as SYSTEM, starts automatically, and appears in the process tree under a legitimate parent. Review new services whose binary lives outside `Program Files` or `System32`, or whose configuration invokes an interpreter such as `cmd.exe` or `powershell.exe`.\n\nRemote admin tools ride the same mechanism. PsExec and its clones install a temporary service to execute commands on a remote machine (T1569.002), which shows up as an unfamiliar child of services.exe, classically `psexesvc.exe`. The same pattern from a tool the admins didn't deploy points to lateral movement.\n",
   "mitre_attack": [
     "T1036.005",

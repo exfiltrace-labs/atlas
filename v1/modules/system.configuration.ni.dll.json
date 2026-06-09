@@ -1,0 +1,11 @@
+{
+  "name": "system.configuration.ni.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "uncommon",
+      "pct": 31.1,
+      "lolbin": false
+    }
+  ]
+}

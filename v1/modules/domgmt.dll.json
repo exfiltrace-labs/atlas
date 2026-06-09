@@ -1,0 +1,11 @@
+{
+  "name": "domgmt.dll",
+  "loaded_by": [
+    {
+      "name": "dllhost.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": false
+    }
+  ]
+}

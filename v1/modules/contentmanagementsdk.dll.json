@@ -1,0 +1,11 @@
+{
+  "name": "contentmanagementsdk.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 22,
+      "lolbin": false
+    }
+  ]
+}

@@ -15,6 +15,7 @@
   "about": "System is not a normal process. It is created directly by the kernel (`ntoskrnl.exe`) early in boot, before any user-mode process exists, and serves as the home for kernel-mode system threads. Its \"modules\" are the kernel executable itself plus loaded device drivers (`.sys` files) and a small number of kernel-mode DLLs. Tools disagree on how to display it: Task Manager reports the image path as `ntoskrnl.exe`, while Process Explorer shows no image path at all, because no executable file was ever mapped to start it.\n\nIts identity is fixed. The PID is always **4** on Windows XP and later, it starts at boot, runs as `NT AUTHORITY\\SYSTEM` (S-1-5-18), and has no parent (some tools display the Idle pseudo-process, PID 0, in the tree). Its only traditional user-mode child is `smss.exe`, the Session Manager, which the kernel-mode thread that finishes boot launches exactly once.\n\nModern Windows parents several **minimal processes** to System. `Memory Compression` (Windows 10 1607) holds the compressed standby pages of the memory manager and is hidden by Task Manager but visible in Process Explorer. `Registry` (Windows 10 1803) holds registry hive data on behalf of the kernel. `Secure System` appears when virtualization-based security is enabled and represents the secure kernel running in [VTL1](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/tlfs/vsm). Like System, none of these have an image file or command line.\n\nSome network activity is attributed to PID 4. Kernel-mode components such as the SMB server (`srv2.sys`) and the HTTP listener (`http.sys`) run as system threads, so their sockets belong to System: listening on `445/tcp` and `139/tcp`, plus outbound SMB during share access and network logons.\n",
   "publisher": null,
   "issuer": null,
+  "cert_serial": null,
   "signed": null,
   "signing_rate": null,
   "signing_algorithm": null,
@@ -22,22 +23,40 @@
   "file_details": null,
   "file_versions": [],
   "file_sizes": [],
+  "architectures": [],
   "cert_thumbprints": [],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 75,
   "host_prevalence": 100,
-  "execution_rank": 37,
+  "execution_rank": 132,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
   "execution_count": null,
   "expected_paths": [],
   "expected_parents": [],
-  "expected_children": [],
+  "expected_children": [
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandparents": [],
-  "expected_grandchildren": [],
+  "expected_grandchildren": [
+    {
+      "value": "smss.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "autochk.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
   "network_ports": [
     {
       "value": "137/udp",
@@ -78,32 +97,7 @@
   ],
   "token_privileges": [
     {
-      "value": "SeDebugPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreatePermanentPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeProfileSingleProcessPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateGlobalPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTcbPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTimeZonePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -113,17 +107,22 @@
       "pct": 100
     },
     {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeIncreaseBasePriorityPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "value": "SeSystemProfilePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeIncreaseWorkingSetPrivilege",
+      "value": "SeTcbPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -133,17 +132,12 @@
       "pct": 100
     },
     {
-      "value": "SeImpersonatePrivilege",
+      "value": "SeCreateGlobalPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeLockMemoryPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateSymbolicLinkPrivilege",
+      "value": "SeTimeZonePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -153,7 +147,32 @@
       "pct": 100
     },
     {
-      "value": "SeSystemProfilePrivilege",
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -161,7 +180,7 @@
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }

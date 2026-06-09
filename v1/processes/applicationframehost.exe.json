@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "33000004A882E6B8AC1C5D5FF00000000004A8",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -23,33 +24,40 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "value": "10.0.26100.3912 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "94.30 KB",
+      "value": "94.20 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "b2732a60f9d0e554f756d87e7446a20f216b4f73",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 75.6,
   "host_prevalence": 100,
-  "execution_rank": 3,
+  "execution_rank": 101,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
   "execution_count": 1,
   "expected_paths": [
@@ -74,127 +82,7 @@
   "network_destinations": [],
   "loaded_modules": [
     {
-      "value": "umpdc.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.staterepositoryclient.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "oleaut32.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "mrmcorer.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "appxdeploymentclient.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "vm3dum64_10.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "twinapi.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "msctf.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "combase.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "imm32.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "applicationframe.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "wintypes.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "advapi32.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.staterepositoryps.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "shell32.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "bcryptprimitives.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "profapi.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "dxgi.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "sechost.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "applicationframehost.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "msvcp_win.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "onecoreuapcommonproxystub.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.ui.winmd",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "powrprof.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "shlwapi.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -204,92 +92,12 @@
       "pct": 100
     },
     {
-      "value": "mdmregistration.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "gdi32full.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "cryptbase.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.foundation.winmd",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.graphics.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "kernel.appcore.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "uiautomationcore.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "kernelbase.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "uianimation.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "dxcore.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "vm3dum64_loader.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "winmm.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "ucrtbase.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "shcore.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "microsoft.internal.warppal.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "version.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "d2d1.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "textinputframework.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -304,52 +112,7 @@
       "pct": 100
     },
     {
-      "value": "starttiledata.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "dwmapi.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "d3d11.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.staterepositorycore.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "textshaping.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "rtmediaframe.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "photometadatahandler.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "imagehlp.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "propsys.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "win32u.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -369,47 +132,37 @@
       "pct": 100
     },
     {
-      "value": "coremessaging.dll",
+      "value": "directxdatabasehelper.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "windowscodecs.dll",
+      "value": "appxdeploymentclient.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "twinapi.appcore.dll",
+      "value": "combase.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "resourcepolicyclient.dll",
+      "value": "wintypes.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "bcp47mrm.dll",
+      "value": "shell32.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "ntdll.dll",
+      "value": "photometadatahandler.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "rometadata.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.storage.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "user32.dll",
+      "value": "propsys.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -419,7 +172,87 @@
       "pct": 100
     },
     {
-      "value": "uxtheme.dll",
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "d3d10warp.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "d2d1.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "d3d11.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "resourcepolicyclient.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -429,12 +262,167 @@
       "pct": 100
     },
     {
-      "value": "directxdatabasehelper.dll",
+      "value": "sechost.dll",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "clbcatq.dll",
+      "value": "cryptbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.foundation.winmd",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rometadata.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "twinapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.ui.winmd",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.graphics.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rtmediaframe.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uianimation.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "applicationframe.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "applicationframehost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "starttiledata.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dwmapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcp47mrm.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.storage.dll",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -489,7 +477,7 @@
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -503,18 +491,28 @@
   ],
   "known_hashes": [
     {
+      "algo": "md5",
+      "value": "697a42de43b5e355657494c345fee5e5",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "89e7313b9d6612730ae1696be08d0151c0d0085f63a808440b74d84490086bfc",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "b58e17b58126aa7783c98bef67cb6517",
+      "pct": 100
+    },
+    {
       "algo": "sha256",
-      "value": "e44b9dd65c04b67254d80295b928a5800ee6690046302899075710c352d7e81b",
+      "value": "83a5467e68d23292b55bf0d1e2cb22113776ae7b009c733f5010d7d1f7190ca7",
       "pct": 100
     },
     {
       "algo": "sha1",
-      "value": "1bfb8081e59a3a3d1207e1548bd2860457259cd2",
-      "pct": 100
-    },
-    {
-      "algo": "md5",
-      "value": "4a07e32a8922b97e86241fcd512102a2",
+      "value": "a38504e563935883ba10b1845324275576ec6ae3",
       "pct": 100
     },
     {

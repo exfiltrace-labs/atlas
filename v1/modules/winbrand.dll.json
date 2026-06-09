@@ -1,0 +1,41 @@
+{
+  "name": "winbrand.dll",
+  "loaded_by": [
+    {
+      "name": "cmd.exe",
+      "weight": "rare",
+      "pct": 22.2,
+      "lolbin": true
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    },
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 4.7,
+      "lolbin": false
+    },
+    {
+      "name": "slui.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 11.9,
+      "lolbin": false
+    }
+  ]
+}

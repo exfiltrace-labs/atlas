@@ -1,0 +1,17 @@
+{
+  "name": "directml.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 2.5,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": true
+    }
+  ]
+}

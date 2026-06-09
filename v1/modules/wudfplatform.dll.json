@@ -1,0 +1,11 @@
+{
+  "name": "wudfplatform.dll",
+  "loaded_by": [
+    {
+      "name": "services.exe",
+      "weight": "rare",
+      "pct": 22.2,
+      "lolbin": false
+    }
+  ]
+}

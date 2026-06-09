@@ -1,0 +1,23 @@
+{
+  "name": "openconsoleproxy.dll",
+  "loaded_by": [
+    {
+      "name": "conhost.exe",
+      "weight": "rare",
+      "pct": 2.4,
+      "lolbin": true
+    },
+    {
+      "name": "openconsole.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "windowsterminal.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "generaltel.dll",
+  "loaded_by": [
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 16.7,
+      "lolbin": false
+    }
+  ]
+}

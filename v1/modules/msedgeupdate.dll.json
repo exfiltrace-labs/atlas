@@ -1,0 +1,11 @@
+{
+  "name": "msedgeupdate.dll",
+  "loaded_by": [
+    {
+      "name": "microsoftedgeupdate.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,1305 @@
+{
+  "name": "tiworker.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "TiWorker.exe",
+    "internal_name": "TiWorker.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "353.40 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 43,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\WinSxS\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.26100.5074_none_a5532eb7772ad4c4\\TiWorker.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "wcp.dll",
+      "weight": "ubiquitous",
+      "pct": 76.9
+    },
+    {
+      "value": "wofutil.dll",
+      "weight": "ubiquitous",
+      "pct": 76.9
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 53.8
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 53.8
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 53.8
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 53.8
+    },
+    {
+      "value": "version.dll",
+      "weight": "uncommon",
+      "pct": 38.5
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 38.5
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 38.5
+    },
+    {
+      "value": "wer.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "reservemanager.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "srclient.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "cbsapi.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "wosc.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "wdscore.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "turbocontainer.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "tiworker.exe",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "spp.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "fltlib.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "vssapi.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "vsstrace.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "cbscore.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "updateagent.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "turbostack.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "drupdate.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "dpx.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "updatecompression.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 30.8
+    },
+    {
+      "value": "smipi.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "smiengine.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 15.4
+    },
+    {
+      "value": "api-ms-win-core-processthreads-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "drvstore.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "mofd.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-eventing-consumer-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-processenvironment-l1-2-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-sysinfo-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-datetime-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-threadpool-legacy-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-processtopology-obsolete-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wbemcomn.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-eventlog-legacy-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wbemprox.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-convert-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-stringloader-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-eventing-legacy-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-heap-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-file-l2-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-eventing-provider-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "fastprox.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wevtapi.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-version-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-debug-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-time-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "cmsofflineservicing.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-wow64-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "virtdisk.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-errorhandling-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "bindfltapi.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-threadpool-private-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-file-l2-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-localization-l1-2-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-xstate-l2-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-memory-l1-1-2.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-handle-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-file-l1-2-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-service-management-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-realtime-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-fibers-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-console-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-io-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-security-lsalookup-l2-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-environment-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-kernel32-legacy-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-security-sddl-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-service-private-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-comm-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-devices-config-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-devices-config-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-service-private-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-registry-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-timezone-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-kernel32-private-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wc_storage.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-service-management-l2-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-file-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-datetime-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-utility-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "rstrtmgr.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-io-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "slc.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-interlocked-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-file-l1-2-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-localization-obsolete-l1-2-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-kernel32-private-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-namedpipe-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-sysinfo-l1-2-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-processthreads-l1-1-2.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-shlwapi-legacy-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "vid.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-service-core-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-string-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "fveapi.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-localization-l1-2-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-base-util-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-processenvironment-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-memory-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-debug-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-eventing-controller-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-synch-l1-2-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-heap-obsolete-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-security-base-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-shcore-stream-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-privateprofile-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-string-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "esscli.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-security-cryptoapi-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-memory-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-errorhandling-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wbemcore.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-shutdown-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-threadpool-l1-2-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-xstate-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-string-l2-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-security-lsalookup-l2-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-locale-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "container.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-libraryloader-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-stringansi-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-privateprofile-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-multibyte-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-private-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-math-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wmiutils.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-service-core-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "ssshim.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-security-provider-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-fibers-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-process-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-processthreads-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-eventing-classicprovider-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-delayload-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-security-lsapolicy-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wcimage.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-shlwapi-obsolete-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "wimgapi.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-string-obsolete-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-synch-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-libraryloader-l1-1-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-registry-l2-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "repdrvfs.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-com-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-kernel32-legacy-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-service-winsvc-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-conio-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-util-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-crt-heap-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-profile-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-sysinfo-l1-2-1.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "mofinstall.dll",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "api-ms-win-core-url-l1-1-0.dll",
+      "weight": "rare",
+      "pct": 7.7
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeRestorePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSecurityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeBackupPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "trustedinstaller.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.26100.5074_none_a5532eb7772ad4c4\\TiWorker.exe -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "b0e2857ee9c2c9bf7238e4dfe3c97139",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "0e6ca75658495dc18fc0787bd7f3f40a2664e38dda85e9f8bdd38da782d34815",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "6144:i4oW2T4mrqMx3UlBNoUy+bFwQ1dJUnpQSO0GHxM8cbwWpS7m:i4oW2JrqMxMBNoUy+bFwQ1TUnO0GHxM3",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "83e44e2bf7da29a6a5237c521f031b8e6b0e40cabaafc433e7caa39f317b454e",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "ab6d8c2d5d9184e8351d1edf26150ed5",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "3a3c1e80af5ab810a6334fcc3c8e3fdf",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "e2ff3a8746e0274dc06310e7db53f91814ab12da",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "4fc0deee-0057-4998-ab31-d24e46e0aba4",
+      "title": "Potential System DLL Sideloading From Non System Locations",
+      "level": "high",
+      "techniques": [
+        "T1574.001"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_from_non_system_location.yml",
+      "match": "image"
+    },
+    {
+      "id": "333cdbe8-27bb-4246-bf82-b41a0dca4b70",
+      "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+      "level": "high",
+      "techniques": [
+        "T1490"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml",
+      "match": "image"
+    },
+    {
+      "id": "01d2e2a1-5f09-44f7-9fc1-24faa7479b6d",
+      "title": "Uncommon Svchost Parent Process",
+      "level": "medium",
+      "techniques": [
+        "T1036.005"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_uncommon_parent_process.yml",
+      "match": "parent"
+    }
+  ]
+}

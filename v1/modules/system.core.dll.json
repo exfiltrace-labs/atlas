@@ -1,0 +1,17 @@
+{
+  "name": "system.core.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 1.2,
+      "lolbin": false
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "rare",
+      "pct": 12.5,
+      "lolbin": false
+    }
+  ]
+}

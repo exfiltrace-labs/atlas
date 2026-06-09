@@ -1,0 +1,17 @@
+{
+  "name": "mfcore.dll",
+  "loaded_by": [
+    {
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    }
+  ]
+}

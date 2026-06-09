@@ -1,0 +1,11 @@
+{
+  "name": "dimsjob.dll",
+  "loaded_by": [
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 7,
+      "lolbin": false
+    }
+  ]
+}

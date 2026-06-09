@@ -1,0 +1,11 @@
+{
+  "name": "webview2_integration.dll",
+  "loaded_by": [
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": true
+    }
+  ]
+}

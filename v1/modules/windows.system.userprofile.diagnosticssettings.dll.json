@@ -2,10 +2,28 @@
   "name": "windows.system.userprofile.diagnosticssettings.dll",
   "loaded_by": [
     {
-      "name": "msedgewebview2.exe",
-      "weight": "common",
-      "pct": 50,
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.3,
       "lolbin": true
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 2.5,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 5,
+      "lolbin": true
+    },
+    {
+      "name": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
     }
   ]
 }

@@ -1,0 +1,53 @@
+{
+  "name": "wow64cpu.dll",
+  "loaded_by": [
+    {
+      "name": "chromesetup.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "dllhost.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": false
+    },
+    {
+      "name": "microsoftedgeupdate.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "mscorsvw.exe",
+      "weight": "uncommon",
+      "pct": 31.7,
+      "lolbin": false
+    },
+    {
+      "name": "ngen.exe",
+      "weight": "uncommon",
+      "pct": 43.6,
+      "lolbin": true
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "smss.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "netprovfw.dll",
+  "loaded_by": [
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    }
+  ]
+}

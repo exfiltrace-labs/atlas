@@ -11,43 +11,166 @@
   ],
   "description": "sc.exe is the Service Control utility, the command-line front end to the Windows Service Control Manager. Administrators use it to create, configure, start, stop, query, and delete services and drivers, locally or on remote machines. The same commands let attackers install services for persistence, run code as SYSTEM, load drivers, and stop defenses.\n",
   "about": "sc.exe talks to the Service Control Manager, the `services.exe` process, to manage services and device drivers. Common verbs are `sc create`, `sc config`, `sc start`, `sc stop`, `sc query`, `sc qc`, and `sc delete`. It can also target another machine by prefixing a UNC server name, as in `sc \\\\host create ...`, which manages services remotely. The genuine binary lives at `C:\\Windows\\System32\\sc.exe`. Its create syntax is distinctive: a space must follow each `=`, for example `binpath= C:\\path start= auto`.\n\nLegitimately, sc is run by administrators and software installers to set up and control services, usually in a clear maintenance or install context. The service it touches and how it configures that service, both on the command line, are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "sc.exe.mui",
+    "internal_name": "sc.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.4484 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "100.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 39,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
-  "expected_children": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\sc.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sc.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\sc.exe`",
@@ -78,8 +201,53 @@
       "severity": "high"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\sc.exe\" start pushtoinstall login",
+      "pct": 50
+    },
+    {
+      "command": "\"C:\\WINDOWS\\system32\\sc.exe\" start pushtoinstall registration",
+      "pct": 50
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "c8f632a326219f85927b3f33a13f7c7d",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "2b35fec4284efdc0b4c48c278b41a387269ac8e8ac0ed497531e689e87a6dd9a",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "2ee5a8eea3e1cc63b5e88d9f69bb53f3c380b765",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:YFLfe59kVh90InBg+5XfMg7m3H3c/RqfsL8am:YFL259klnBJ5XNSc/c0P",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "a452bfcb6000d03942ddfaddcda5a7eb121447ed99b1ba090446b4a989f1f7ae",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "42dadbd60bbc453dd1773fdc089e19b7",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "11d893c3ed13f6b27d756a840e2b9bdb",
+      "pct": 100
+    }
+  ],
   "security_notes": "sc.exe is a standard way to plant service persistence and escalate (T1543.003). `sc create <name> binpath= \"C:\\...\" start= auto` registers a service the SCM launches as SYSTEM, automatically at boot. The same verb loads drivers: `sc create type= kernel` is the route used to load malicious or vulnerable signed drivers (bring-your-own-vulnerable-driver). A service binary in a user-writable directory, or one that is `cmd.exe` or `powershell.exe`, points to abuse rather than a real install.\n\nPointed at a remote host, sc becomes lateral movement (T1569.002). `sc \\\\target create` followed by `sc \\\\target start` creates and runs a service on another machine using current or supplied credentials, the same mechanism PsExec automates. Remote service creation immediately followed by a start is a recognizable cross-network execution pattern.\n\nsc is also used to shut defenses down (T1489). `sc stop` and `sc config start= disabled` turn off or permanently disable security tools, and in ransomware, database and backup services before encryption. sc aimed at an AV, EDR, or backup service is high-signal. Because every one of these is a legitimate administrative action, the service name, the binpath, the target host, and the parent are what separate administration from abuse.\n",
   "mitre_attack": [
     "T1543.003",

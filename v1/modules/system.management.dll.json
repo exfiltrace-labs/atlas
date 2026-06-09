@@ -1,0 +1,11 @@
+{
+  "name": "system.management.dll",
+  "loaded_by": [
+    {
+      "name": "ngentask.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    }
+  ]
+}

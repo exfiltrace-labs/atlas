@@ -1,0 +1,11 @@
+{
+  "name": "windows.internal.graphics.display.displayenhancementmanagement.dll",
+  "loaded_by": [
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.3,
+      "lolbin": true
+    }
+  ]
+}

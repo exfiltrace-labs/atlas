@@ -1,0 +1,41 @@
+{
+  "name": "wofutil.dll",
+  "loaded_by": [
+    {
+      "name": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    },
+    {
+      "name": "mscorsvw.exe",
+      "weight": "uncommon",
+      "pct": 32.3,
+      "lolbin": false
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 10.5,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
+      "weight": "ubiquitous",
+      "pct": 75,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "ubiquitous",
+      "pct": 76.9,
+      "lolbin": false
+    }
+  ]
+}

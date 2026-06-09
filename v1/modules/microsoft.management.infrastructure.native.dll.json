@@ -3,8 +3,8 @@
   "loaded_by": [
     {
       "name": "powershell.exe",
-      "weight": "ubiquitous",
-      "pct": 100,
+      "weight": "uncommon",
+      "pct": 33.3,
       "lolbin": false
     }
   ]

@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000451990A2A60F6356760000000000451",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -23,53 +24,270 @@
   },
   "file_versions": [
     {
-      "value": "4.18.26040.7 (8d846dd50fd7adca65beb1b013a5fda76a9ec807)",
+      "value": "4.18.23110.3 (9ebb3643d539a6fc4659898b1df3124d5da4c0a9)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "4379.60 KB",
+      "value": "3100.40 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "bf1b0e852f06f6d0b6c6475e53ae7908aa7e2950",
+      "value": "09bd21d33cbe3cdd99f0bd85f1c0f16eab84bdaf",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 22,
+  "execution_rank": 75,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
-      "value": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26040.7-0\\NisSrv.exe",
+      "value": "C:\\Program Files\\Windows Defender\\NisSrv.exe",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mpclient.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "version.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "LOCAL SERVICE",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -86,11 +304,6 @@
   ],
   "token_privileges": [
     {
-      "value": "SeChangeNotifyPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeCreateGlobalPrivilege",
       "weight": "ubiquitous",
       "pct": 100
@@ -99,19 +312,71 @@
       "value": "SeImpersonatePrivilege",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
     }
   ],
-  "process_handles": [],
+  "process_handles": [
+    {
+      "value": "msmpeng.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files\\Windows Defender\\NisSrv.exe\"",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "5e7e101d83ee3e554df841454e28d0ea",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "2d23819f7085853faa8f57d40e2f5f471a70ed8da4db57f65528969c816cfc60",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "49152:RYeONpsyk1C7pu2fFg4vAwnsSrxFnJMKEyBrHgoSrU/PRGrGxK0+:AySzPG",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "105b303c24e1fe26997fcb32341aaaf0c0b9f565",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "de40e2de7260cdf366ae607652b4143c",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "1dcf599a4b93105648477a5469be0f71",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "38df0d62d1d80f56cd4ae684a7134002b31a6549128652f8ce1dfa55d9e8258a",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

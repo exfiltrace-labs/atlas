@@ -1,0 +1,11 @@
+{
+  "name": "chrome.dll",
+  "loaded_by": [
+    {
+      "name": "chrome.exe",
+      "weight": "ubiquitous",
+      "pct": 90.6,
+      "lolbin": false
+    }
+  ]
+}

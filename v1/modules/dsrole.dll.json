@@ -2,7 +2,49 @@
   "name": "dsrole.dll",
   "loaded_by": [
     {
+      "name": "certutil.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "cipher.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": true
+    },
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "spoolsv.exe",
+      "weight": "uncommon",
+      "pct": 28.6,
+      "lolbin": false
+    },
+    {
+      "name": "sppsvc.exe",
+      "weight": "uncommon",
+      "pct": 45.5,
+      "lolbin": false
+    },
+    {
       "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 5.6,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
       "weight": "rare",
       "pct": 14.3,
       "lolbin": false

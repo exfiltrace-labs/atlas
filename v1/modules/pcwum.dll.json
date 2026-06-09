@@ -1,0 +1,11 @@
+{
+  "name": "pcwum.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    }
+  ]
+}

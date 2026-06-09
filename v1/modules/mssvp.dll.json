@@ -1,0 +1,17 @@
+{
+  "name": "mssvp.dll",
+  "loaded_by": [
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
+    },
+    {
+      "name": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 6.7,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "bi.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.5,
+      "lolbin": false
+    }
+  ]
+}

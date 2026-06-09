@@ -1,0 +1,11 @@
+{
+  "name": "shutdownext.dll",
+  "loaded_by": [
+    {
+      "name": "shutdown.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "name": "directxdatabaseupdater.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "DirectXDatabaseUpdater.exe",
+    "internal_name": "DirectXDatabaseUpdater.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.3624 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "172.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 81.5,
+  "host_prevalence": 100,
+  "execution_rank": 69,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 2,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\directxdatabaseupdater.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "dismhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "taskschd.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bitsproxy.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "dismapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "directxdatabaseupdater.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wosc.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imagingprovider.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "folderprovider.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wdscore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wimprovider.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dismprov.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dismcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dismcoreps.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "logprovider.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "version.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "vhdprovider.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ffuprovider.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wimgapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "dismhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\WINDOWS\\system32\\directxdatabaseupdater.exe\"",
+      "pct": 50
+    },
+    {
+      "command": "C:\\WINDOWS\\system32\\directxdatabaseupdater.exe -DatabaseComplete <guid>",
+      "pct": 50
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "f81d8712e2672066fd2f1219434ec93ac4d2fda79fbbec336eed4ec4aa3d9050",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "74b611f908f64357720abbf5daf48bf3",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "efb36849c0f92df31e0beb9c97fd120b",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "64dc27e05ee8e9a336da4bd49ac5ab39b6b0608d",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "49a3186f3ec106e8d1281de9fc189ce3e606418371a8881d4876ad2a748ff6d5",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "d2aaaeb94ea9e68b39410d240334f242",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}

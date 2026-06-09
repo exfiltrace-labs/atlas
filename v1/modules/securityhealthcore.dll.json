@@ -1,0 +1,11 @@
+{
+  "name": "securityhealthcore.dll",
+  "loaded_by": [
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    }
+  ]
+}

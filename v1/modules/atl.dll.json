@@ -1,0 +1,17 @@
+{
+  "name": "atl.dll",
+  "loaded_by": [
+    {
+      "name": "powershell.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 9.5,
+      "lolbin": false
+    }
+  ]
+}

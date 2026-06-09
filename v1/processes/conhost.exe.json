@@ -14,6 +14,7 @@
   "about": "conhost.exe (Console Window Host) supplies the console window and text I/O for character-mode applications. Before Windows 7, this was handled directly by `csrss.exe`, which ran as SYSTEM. Moving console hosting into a separate per-console process let it run in the user's own context and made room for features like window theming and drag-and-drop.\n\nBecause a console belongs to whatever program is using it, conhost.exe appears in the process tree as a child of that program, for example under `cmd.exe`, `powershell.exe`, or any other tool that opens a console. It runs from `C:\\Windows\\System32\\conhost.exe` in the same user and integrity context as its parent, and a busy machine normally shows several instances at once, one per active console. Its command line typically looks cryptic but is benign, often ending in `0xffffffff -ForceV1`.\n\nThe genuine conhost.exe is a trusted, signed Microsoft system file. It isn't something a user launches directly. Windows creates an instance automatically whenever a program needs a console and removes it once the last program using that console exits.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -37,7 +38,14 @@
   ],
   "file_sizes": [
     {
-      "value": "988.00 KB",
+      "value": "984.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -51,14 +59,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 98.5,
   "host_prevalence": 100,
   "execution_rank": 9,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 43,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\conhost.exe",
@@ -66,58 +74,529 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "rare",
+      "pct": 16.3
+    },
+    {
+      "value": "ngentask.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "wevtutil.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "sc.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "sdbinst.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "dmclient.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "appidcertstorecheck.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "rgnupdt.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "ucpdmgr.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "appidpolicyconverter.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "defrag.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "oobefodsetup.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 2.3
+    },
+    {
+      "value": "shutdown.exe",
+      "weight": "rare",
+      "pct": 2.3
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "svchost.exe",
+      "weight": "common",
+      "pct": 67.4
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "runonce.exe",
+      "weight": "rare",
+      "pct": 2.3
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
   "loaded_modules": [
     {
-      "value": "wtdccm.dll",
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 99.4
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 97
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "rare",
+      "pct": 23.5
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "rare",
+      "pct": 23.5
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "rare",
+      "pct": 23.5
+    },
+    {
+      "value": "combase.dll",
+      "weight": "rare",
+      "pct": 23.5
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 23.5
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "rare",
+      "pct": 21.7
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "rare",
+      "pct": 21.1
+    },
+    {
+      "value": "dwmapi.dll",
+      "weight": "rare",
+      "pct": 21.1
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "rare",
+      "pct": 21.1
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "rare",
+      "pct": 19.3
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "rare",
+      "pct": 4.2
+    },
+    {
+      "value": "openconsoleproxy.dll",
+      "weight": "rare",
+      "pct": 2.4
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "textshaping.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "rare",
+      "pct": 1.8
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 1.2
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "rare",
+      "pct": 1.2
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "<Anonymous Pipe>",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "Interactive user",
+      "weight": "rare",
+      "pct": 16.3
+    },
+    {
+      "value": "LOCAL SERVICE",
+      "weight": "rare",
+      "pct": 7
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 83.7
+    },
+    {
+      "value": "Medium",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "High",
+      "weight": "rare",
+      "pct": 7
+    }
+  ],
   "sessions": [
     {
-      "value": "Session 1",
+      "value": "Session 0",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 75.4
+    },
+    {
+      "value": "Session 1",
+      "weight": "rare",
+      "pct": 24.6
     }
   ],
   "instance_counts": [
     {
       "value": "1",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "common",
+      "pct": 72.7
+    },
+    {
+      "value": "2",
+      "weight": "uncommon",
+      "pct": 27.3
     }
   ],
   "token_privileges": [
-    {
-      "value": "SeCreateGlobalPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
     {
       "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
+      "value": "SeTcbPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "common",
+      "pct": 50
+    },
+    {
       "value": "SeImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "common",
+      "pct": 50
     }
   ],
-  "process_handles": [],
+  "process_handles": [
+    {
+      "value": "ngen.exe",
+      "weight": "rare",
+      "pct": 16.3
+    },
+    {
+      "value": "wevtutil.exe",
+      "weight": "rare",
+      "pct": 11.6
+    },
+    {
+      "value": "sc.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "ngentask.exe",
+      "weight": "rare",
+      "pct": 9.3
+    },
+    {
+      "value": "findstr.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "sdbinst.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "appidcertstorecheck.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "rgnupdt.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "dmclient.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "cmd.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "tasklist.exe",
+      "weight": "rare",
+      "pct": 7
+    },
+    {
+      "value": "ucpdmgr.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "defrag.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "oobefodsetup.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "appidpolicyconverter.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "powershell.exe",
+      "weight": "rare",
+      "pct": 4.7
+    },
+    {
+      "value": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 2.3
+    },
+    {
+      "value": "shutdown.exe",
+      "weight": "rare",
+      "pct": 2.3
+    }
+  ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -148,8 +627,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "12160215fb43d793a8d094dee3aa0fbc3b493206467279f1cd977fec4e722771",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "01eec9de9175857c896c422bc2f89ce2",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "29e4840bf10bafb9fd5bcad70612a19b78a4a89b8f30220edc654bd49832d916",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "f8c013dd80605f088c2e3202e6c5969e",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "7673c5841b9f9f03b34251cf245ac3ab",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "72874f86b4b5ba7809748d93e09d435fb1ebc073",
+      "pct": 100
+    }
+  ],
   "security_notes": "Like other trusted system processes, conhost.exe is sometimes imitated by malware attempting to avoid detection (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Be suspicious of copies running from other locations and of near-miss spellings such as `conhast.exe` or `conhost32.exe`.\n\nThe real conhost.exe is more valuable as evidence than as a target. Because Windows spawns a conhost.exe for any process that runs a console command, the parent of a conhost instance is a reliable record of what just used the command line. A conhost child under something that has no reason to run commands, an opened Office document, a PDF reader, or a server process like `w3wp.exe`, exposes command execution behind a macro, an exploit, or a web shell that would otherwise blend in (T1059.003).\n",
   "mitre_attack": [
     "T1036.005"

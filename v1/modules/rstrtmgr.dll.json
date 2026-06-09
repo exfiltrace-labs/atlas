@@ -1,0 +1,29 @@
+{
+  "name": "rstrtmgr.dll",
+  "loaded_by": [
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.sync.service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "onedrivesetup.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 7.7,
+      "lolbin": false
+    }
+  ]
+}

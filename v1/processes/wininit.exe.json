@@ -13,11 +13,12 @@
   "about": "wininit.exe is a core background process that runs early in the Windows startup sequence. After `smss.exe` creates session 0, the session reserved for system services, it launches wininit.exe to continue the initialization of that session. The `smss.exe` copy that starts it exits as soon as its work is done, so a real wininit.exe shows no parent in the process tree.\n\nwininit.exe is responsible for starting several critical background processes that keep Windows running. Most notably, it launches `services.exe` (the Service Control Manager, which starts and manages Windows services), `lsass.exe` (the Local Security Authority process, which handles authentication and security policy), and historically `lsm.exe` (the Local Session Manager). Before Windows 10, `lsm.exe` was its own process started here. As of Windows 10 that role moved into a service DLL (`lsm.dll`) hosted by `svchost.exe`. It also sets up the temp folder and the rest of the session 0 environment. Once its startup duties are complete, it remains running quietly in the background until shutdown.\n\nThe genuine wininit.exe is a trusted, signed Microsoft system file that is essential to normal operation. Only one instance ever runs, as `NT AUTHORITY\\SYSTEM` in session 0 from `C:\\Windows\\System32\\wininit.exe`. It should never be removed or disabled, and terminating it will destabilize or crash the system, since the processes it manages are vital to Windows functioning.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "33000004DA1FD30971F713C67E0000000004DA",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
   "signers": [
-    "Microsoft Windows"
+    "Microsoft Windows Publisher"
   ],
   "file_details": {
     "file_type": "PE32+ executable",
@@ -29,35 +30,42 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8116 (WinBuild.160101.0800)",
+      "value": "10.0.26100.4652 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "816.60 KB",
+      "value": "772.10 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "066ac370edebcd12dac192f3b170fc6decf2d0d4",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 44,
+  "execution_rank": 94,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\wininit.exe",
@@ -65,10 +73,84 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
-  "expected_grandchildren": [],
+  "expected_parents": [
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 87.9
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "upfc.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "sppsvc.exe",
+      "weight": "rare",
+      "pct": 1.6
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "rare",
+      "pct": 0.8
+    }
+  ],
   "network_ports": [],
   "listening_ports": [
     {
@@ -78,10 +160,214 @@
     }
   ],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "loaded_modules": [
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "profext.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wininitext.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kbdus.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\Winsock2\\CatalogChangeListener-284-0",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "\\InitShutdown",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -98,6 +384,16 @@
   ],
   "token_privileges": [
     {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeCreateSymbolicLinkPrivilege",
       "weight": "ubiquitous",
       "pct": 100
@@ -108,22 +404,7 @@
       "pct": 100
     },
     {
-      "value": "SeImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeDebugPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateGlobalPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeAuditPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -133,12 +414,7 @@
       "pct": 100
     },
     {
-      "value": "SeIncreaseBasePriorityPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeChangeNotifyPrivilege",
+      "value": "SeCreateGlobalPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -146,12 +422,38 @@
       "value": "SeTcbPrivilege",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
     }
   ],
-  "process_handles": [],
+  "process_handles": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -190,8 +492,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "wininit.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "baa6d9d76486dafc4ed8c81aad54e800670671eaead41256d08a5372dcdf6599",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "f7d7a8139b5b0c7d330174e95bbd5552",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "aaf80dc73a0cecb3e599347ec264b437",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "65bf54f6d6ca97304be17040cb6ed174",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "f04825ef06dd1fbe05991df583963c6fe153bccdc540f1109d2a4eb10bd775bd",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "51d3d8838a448c215ddc3a2f82c7fc23103b0b7e",
+      "pct": 100
+    }
+  ],
   "security_notes": "Like other trusted system processes, wininit.exe is sometimes imitated by malware attempting to avoid detection (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft signature. Be suspicious of copies in other locations, slight misspellings such as `wininitt.exe` or `wininit32.exe`, and any instance that appears minutes or hours after boot, since the real one starts once, at startup.\n\nwininit.exe also has a fixed position in the process tree. A legitimate instance has no parent, and its only children are `services.exe` and `lsass.exe`. An instance that was started by another running process, or that spawns anything beyond that pair, deserves a closer look, and a child like a command shell points to injected code or a spoofed parent (T1134.004). The relationship is worth checking from the other direction too: a process claiming to be `lsass.exe` whose parent isn't wininit.exe is a classic credential-theft anomaly.\n",
   "mitre_attack": [
     "T1036.005",

@@ -1,0 +1,11 @@
+{
+  "name": "accounthealth.dll",
+  "loaded_by": [
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 1.4,
+      "lolbin": false
+    }
+  ]
+}

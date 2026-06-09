@@ -10,43 +10,150 @@
   ],
   "description": "attrib.exe displays and changes file attributes such as hidden, system, and read-only. Administrators and scripts use it for routine file housekeeping. Attackers use it to hide their files from users and casual inspection by setting the hidden and system attributes.\n",
   "about": "attrib.exe reads and sets the basic file system attributes on files and folders: hidden (`+h`), system (`+s`), read-only (`+r`), and archive. The hidden and system attributes together keep a file out of normal directory listings and out of Explorer by default. The genuine binary lives at `C:\\Windows\\System32\\attrib.exe`.\n\nLegitimately, attrib is used in scripts and by administrators to set or clear attributes during file management. The attributes it sets and on what target are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "ATTRIB.EXE.MUI",
+    "internal_name": "attrib",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "44.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 102,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\attrib.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "attrib.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "fsutilext.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ulib.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\attrib.exe`",
@@ -69,8 +176,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "attrib",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "2c94221be86cd3f24b77560b031cce6d",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "384:kM0mXEDdW53FQXn38fiL/sjnuEInpfA/WjtWB:jXEDdW53FQX3wiTsKpfAY",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "e8fc98c1bab014e5d8752fc03ede7bb2",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "a26657bdaae60bf23744d2ec3f029e1d17d80beb5a8686178d19681375bfe90b",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "2cb38fe7d8f223d9da50b7cba9b95a6d",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "165d0c1627e307694714f28f7dfa0f12de14782c",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "064181108cd8d7f110cc11b84dbf2d7f18fd5f52a2ee989985d88a969f093dbe",
+      "pct": 100
+    }
+  ],
   "security_notes": "attrib.exe is used to conceal files (T1564.001). Setting the hidden and system attributes (`attrib +h +s payload.exe`) keeps a dropped file out of default directory views, a simple but common way to keep tooling and staged data out of sight. The same trick on removable media hides the real files while a lure is shown, a long-standing worm behavior.\n\nBecause attrib is an ordinary file utility, the target and context are what matter. Hiding freshly written files in a user-writable directory, or doing so as part of a sequence with download and execution commands, is what separates concealment from routine housekeeping.\n",
   "mitre_attack": [
     "T1564.001"

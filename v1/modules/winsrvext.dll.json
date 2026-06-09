@@ -1,0 +1,11 @@
+{
+  "name": "winsrvext.dll",
+  "loaded_by": [
+    {
+      "name": "csrss.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

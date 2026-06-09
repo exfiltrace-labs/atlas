@@ -1,0 +1,11 @@
+{
+  "name": "ngckeyenum.dll",
+  "loaded_by": [
+    {
+      "name": "logonui.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    }
+  ]
+}

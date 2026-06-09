@@ -1,0 +1,17 @@
+{
+  "name": "ncobjapi.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.4,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "uncommon",
+      "pct": 40.5,
+      "lolbin": false
+    }
+  ]
+}

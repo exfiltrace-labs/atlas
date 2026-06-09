@@ -1,0 +1,11 @@
+{
+  "name": "microsoft.terminal.remoting.dll",
+  "loaded_by": [
+    {
+      "name": "windowsterminal.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    }
+  ]
+}

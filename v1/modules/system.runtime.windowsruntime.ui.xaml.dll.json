@@ -1,0 +1,11 @@
+{
+  "name": "system.runtime.windowsruntime.ui.xaml.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 1.2,
+      "lolbin": false
+    }
+  ]
+}

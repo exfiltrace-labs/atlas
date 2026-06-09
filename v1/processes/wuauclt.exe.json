@@ -13,6 +13,7 @@
   "about": "wuauclt.exe (Windows Update AutoUpdate Client) historically drove update detection and installation. On Windows 10 and 11 most of its job has moved to the Update Orchestrator and `usoclient.exe`, so it is rarely seen doing real work. The genuine binary lives at `C:\\Windows\\System32\\wuauclt.exe`. Its security relevance is a parameter that loads an external DLL through an update-deployment provider interface.\n\nLegitimately, wuauclt is invoked by the update infrastructure, infrequently on current systems. A command line that points it at a DLL is what gives a malicious instance away.\n",
   "publisher": null,
   "issuer": null,
+  "cert_serial": null,
   "signed": null,
   "signing_rate": null,
   "signing_algorithm": null,
@@ -20,6 +21,7 @@
   "file_details": null,
   "file_versions": [],
   "file_sizes": [],
+  "architectures": [],
   "cert_thumbprints": [],
   "provenance": "curated",
   "prevalence_band": "unknown",
@@ -227,6 +229,6 @@
       "signalHtml": "wuauclt spawning child processes or making outbound connections"
     }
   ],
-  "about_html": "<p>wuauclt.exe (Windows Update AutoUpdate Client) historically drove update detection and installation. On Windows 10 and 11 most of its job has moved to the Update Orchestrator and <code>usoclient.exe</code>, so it is rarely seen doing real work. The genuine binary lives at <code>C:\\Windows\\System32\\wuauclt.exe</code>. Its security relevance is a parameter that loads an external DLL through an update-deployment provider interface.</p>\n<p>Legitimately, wuauclt is invoked by the update infrastructure, infrequently on current systems. A command line that points it at a DLL is what gives a malicious instance away.</p>",
+  "about_html": "<p>wuauclt.exe (Windows Update AutoUpdate Client) historically drove update detection and installation. On Windows 10 and 11 most of its job has moved to the Update Orchestrator and <a class=\"proc-link\" href=\"/processes/usoclient.exe\"><code>usoclient.exe</code></a>, so it is rarely seen doing real work. The genuine binary lives at <code>C:\\Windows\\System32\\wuauclt.exe</code>. Its security relevance is a parameter that loads an external DLL through an update-deployment provider interface.</p>\n<p>Legitimately, wuauclt is invoked by the update infrastructure, infrequently on current systems. A command line that points it at a DLL is what gives a malicious instance away.</p>",
   "security_notes_html": "<p>wuauclt.exe is a system-binary proxy (<a href=\"https://attack.mitre.org/techniques/T1218/\" target=\"_blank\" rel=\"noreferrer noopener\">T1218</a>). With the <code>/UpdateDeploymentProvider &lt;dll&gt; /RunHandlerComServer</code> form, wuauclt loads the named DLL and calls into it, so an attacker has the signed Windows Update client execute their DLL, bypassing application-control rules that trust Microsoft binaries. A wuauclt command line naming a DLL, especially one in a user-writable directory, is close to a confirmed abuse, because legitimate update activity does not look like that.</p>\n<p>Since wuauclt does little on modern Windows, its appearance with an unusual command line or parent is itself worth attention.</p>"
 }

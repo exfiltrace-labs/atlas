@@ -11,43 +11,314 @@
   ],
   "description": "audiodg.exe is the Windows Audio Device Graph Isolation process, which runs audio processing, including third-party audio effects, in a separate process from the audio service. It is a normal part of playing sound, and occasional high CPU from it usually traces to an audio effect rather than to malware.\n",
   "about": "audiodg.exe hosts the audio engine and the digital signal processing for playback and capture, kept in its own process so that a faulty audio effect crashes the isolation host instead of the shared audio service. It is started by the audio service inside `svchost.exe`, runs under the `LOCAL SERVICE` account, and lives at `C:\\Windows\\System32\\audiodg.exe`.\n\nLegitimately, audiodg runs whenever audio is active, and CPU spikes during playback with enhancements enabled are normal. It processes audio rather than launching programs, so it does not start other processes or reach the network.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "audioadg.exe.mui",
+    "internal_name": "audioadg.exe",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "860.90 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 29,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\audiodg.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "propsys.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wmalfxgfxdsp.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "avrt.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "audioeng.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "rtworkq.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "windows.media.devices.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "audiokse.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "mmdevapi.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "audiodg.exe",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "audioses.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
-  "instance_counts": [],
-  "token_privileges": [],
-  "process_handles": [],
-  "os_prevalence": [],
+  "user_contexts": [
+    {
+      "value": "LOCAL SERVICE",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "logonui.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "consent.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\audiodg.exe`",
@@ -70,8 +341,48 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\AUDIODG.EXE 0x000000000000041C 0x000000000000040C",
+      "pct": 75
+    },
+    {
+      "command": "C:\\WINDOWS\\system32\\AUDIODG.EXE 0x0000000000000450 0x0000000000000454",
+      "pct": 25
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "bdb66447c3edca1b864595e974a6416300ada725",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "5a77140d8be3e759591b3f2a02f9df82",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "131769784a81a8d6216b8b1f4b0300e83987c5fe6d6de682cec97337c9dc29a5",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "8ca3794da6f33520b5ed1c2a300743a1d53d195308fed5d039f909268bedab17",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "153a25213e65990436b8927d7c45a915",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "b7cb8a684258bbc8dd1cfbe95e2e63ea",
+      "pct": 100
+    }
+  ],
   "security_notes": "audiodg.exe is a baseline process. Because it loads third-party audio effect DLLs, it has a plausible path for loading external code, which makes unusual loaded modules worth a glance, but in practice its main security relevance is impersonation (T1036.005): a process named audiodg.exe outside `System32`, under the wrong account, or with no audio service parent is the deviation to notice.\n\nAs a persistent service-context process it could also be injected into (T1055). audiodg making network connections or spawning programs is outside its normal behavior.\n",
   "mitre_attack": [
     "T1036.005",

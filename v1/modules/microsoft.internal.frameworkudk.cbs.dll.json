@@ -1,0 +1,17 @@
+{
+  "name": "microsoft.internal.frameworkudk.cbs.dll",
+  "loaded_by": [
+    {
+      "name": "crossdeviceresume.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "explorer.exe",
+      "weight": "rare",
+      "pct": 8.7,
+      "lolbin": true
+    }
+  ]
+}

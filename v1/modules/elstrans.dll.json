@@ -1,0 +1,17 @@
+{
+  "name": "elstrans.dll",
+  "loaded_by": [
+    {
+      "name": "searchindexer.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1,
+      "lolbin": false
+    }
+  ]
+}

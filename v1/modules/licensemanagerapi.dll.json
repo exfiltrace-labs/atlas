@@ -1,0 +1,17 @@
+{
+  "name": "licensemanagerapi.dll",
+  "loaded_by": [
+    {
+      "name": "sihost.exe",
+      "weight": "uncommon",
+      "pct": 25,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    }
+  ]
+}

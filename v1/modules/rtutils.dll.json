@@ -1,0 +1,17 @@
+{
+  "name": "rtutils.dll",
+  "loaded_by": [
+    {
+      "name": "cmstp.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": true
+    },
+    {
+      "name": "logonui.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    }
+  ]
+}

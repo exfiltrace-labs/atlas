@@ -1,0 +1,11 @@
+{
+  "name": "smartscreen.dll",
+  "loaded_by": [
+    {
+      "name": "smartscreen.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

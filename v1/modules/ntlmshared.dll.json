@@ -1,0 +1,17 @@
+{
+  "name": "ntlmshared.dll",
+  "loaded_by": [
+    {
+      "name": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2,
+      "lolbin": false
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.8,
+      "lolbin": false
+    }
+  ]
+}

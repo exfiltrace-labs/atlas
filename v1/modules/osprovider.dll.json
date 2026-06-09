@@ -1,0 +1,11 @@
+{
+  "name": "osprovider.dll",
+  "loaded_by": [
+    {
+      "name": "dismhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

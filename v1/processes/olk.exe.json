@@ -1,0 +1,192 @@
+{
+  "name": "olk.exe",
+  "aliases": [
+    "olk"
+  ],
+  "category": "Application",
+  "tags": [
+    "office",
+    "microsoft"
+  ],
+  "description": "olk.exe is the new Outlook for Windows, Microsoft's WebView2-based replacement for the classic outlook.exe mail client. It is a Microsoft Store app that runs Outlook on the web inside an embedded Chromium engine, so it behaves more like a sandboxed browser than the old desktop client.\n",
+  "about": "olk.exe is the new Outlook for Windows, Microsoft's rebuilt mail and calendar client. Under the hood it is essentially Outlook on the web wrapped as a desktop app: it renders with WebView2, the same Edge and Chromium engine browsers use, so it runs one or more `msedgewebview2.exe` children. It ships as a Microsoft Store app installed under `C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_...`, signed by Microsoft, and the versioned folder name changes with each update.\n\nBecause it is web-based, its mail is a cloud cache rather than a classic mailbox file: there is no OST or PST by default, and per-user state, including cached messages, attachments, and the signed-in account list, sits under `%LocalAppData%\\Microsoft\\Olk` as a Chromium-style profile. It also drops the old extensibility model. Where classic Outlook ran VBA macros, COM add-ins, custom forms, and an editable home page, the new client supports only sandboxed web add-ins.\n\nLegitimately, olk.exe runs on the desktop parented by `explorer.exe` and talks to Microsoft 365. A copy running from outside the WindowsApps package, or the client being upstream of a shell, is not.\n",
+  "publisher": null,
+  "issuer": null,
+  "cert_serial": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "architectures": [],
+  "cert_thumbprints": [],
+  "provenance": "curated",
+  "prevalence_band": "unknown",
+  "prevalence_score": null,
+  "host_prevalence": null,
+  "execution_rank": null,
+  "community_score": null,
+  "first_seen": null,
+  "last_seen": null,
+  "machine_count": null,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [],
+  "anomaly_signals": [
+    {
+      "signal": "Image path outside the `C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_*` package",
+      "severity": "high"
+    },
+    {
+      "signal": "olk.exe spawning `cmd.exe`, `powershell.exe`, `wscript.exe`, or `mshta.exe`, or an opened attachment doing so",
+      "severity": "high"
+    },
+    {
+      "signal": "Outbound connections from olk.exe to endpoints outside Microsoft 365",
+      "severity": "medium"
+    },
+    {
+      "signal": "New mailbox inbox rules that auto-forward or redirect mail",
+      "severity": "medium"
+    }
+  ],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": "As a mail client, olk.exe is a delivery point for phishing (T1566): a spearphishing link or attachment arrives by email, and execution begins when the user opens it (T1204). Because attachments open in their associated application and links open in a browser, the program that actually runs is usually a child of that handler or of the WebView2 process rather than of olk.exe itself, so the parent chain after a message is opened is what ties the activity back to mail.\n\nThe new client removes much of classic Outlook's on-host persistence surface: no VBA macros, no COM add-ins, no custom forms, and no editable home page, with web add-ins confined to the sandboxed web context. The persistence that remains is server-side, in the mailbox: inbox rules that auto-forward or redirect mail (T1137.005) sync to the account regardless of client and do not appear as local olk.exe artifacts. The cached messages and attachments that do sit on the host are in the Chromium profile and IndexedDB under `%LocalAppData%\\Microsoft\\Olk`.\n",
+  "mitre_attack": [
+    "T1566.001",
+    "T1566.002",
+    "T1204.001",
+    "T1204.002",
+    "T1137.005"
+  ],
+  "technique_matching": "strict",
+  "references": [
+    "https://attack.mitre.org/techniques/T1566/001/",
+    "https://attack.mitre.org/techniques/T1566/002/",
+    "https://attack.mitre.org/techniques/T1204/001/",
+    "https://attack.mitre.org/techniques/T1204/002/",
+    "https://attack.mitre.org/techniques/T1137/005/",
+    "https://learn.microsoft.com/en-us/microsoft-365-apps/outlook/overview-new-outlook-windows",
+    "https://learn.microsoft.com/en-us/microsoft-365-apps/outlook/administration/architecture-changes-new-outlook"
+  ],
+  "sigma": [
+    {
+      "id": "0b0cd537-fc77-4e6e-a973-e53495c1083d",
+      "title": "Renamed Office Binary Execution",
+      "level": "high",
+      "techniques": [
+        "T1036.003"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_office_processes.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1137.005",
+      "name": "Office Application Startup: Outlook Rules",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "T1204.001",
+      "name": "User Execution: Malicious Link",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1204.002",
+      "name": "User Execution: Malicious File",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Execution",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "T1566.001",
+      "name": "Phishing: Spearphishing Attachment",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Initial Access",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "T1566.002",
+      "name": "Phishing: Spearphishing Link",
+      "curated": true,
+      "lolbas": false,
+      "tactics": [
+        {
+          "name": "Initial Access",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "triage": [
+    {
+      "signal": "Image path outside the `C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_*` package",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "Image path outside the <code>C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_*</code> package"
+    },
+    {
+      "signal": "olk.exe spawning `cmd.exe`, `powershell.exe`, `wscript.exe`, or `mshta.exe`, or an opened attachment doing so",
+      "severity": "high",
+      "source": "curated",
+      "signalHtml": "olk.exe spawning <a class=\"proc-link\" href=\"/processes/cmd.exe\"><code>cmd.exe</code></a>, <a class=\"proc-link\" href=\"/processes/powershell.exe\"><code>powershell.exe</code></a>, <a class=\"proc-link\" href=\"/processes/wscript.exe\"><code>wscript.exe</code></a>, or <a class=\"proc-link\" href=\"/processes/mshta.exe\"><code>mshta.exe</code></a>, or an opened attachment doing so"
+    },
+    {
+      "signal": "Outbound connections from olk.exe to endpoints outside Microsoft 365",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "Outbound connections from olk.exe to endpoints outside Microsoft 365"
+    },
+    {
+      "signal": "New mailbox inbox rules that auto-forward or redirect mail",
+      "severity": "medium",
+      "source": "curated",
+      "signalHtml": "New mailbox inbox rules that auto-forward or redirect mail"
+    }
+  ],
+  "about_html": "<p>olk.exe is the new Outlook for Windows, Microsoft's rebuilt mail and calendar client. Under the hood it is essentially Outlook on the web wrapped as a desktop app: it renders with WebView2, the same Edge and Chromium engine browsers use, so it runs one or more <a class=\"proc-link\" href=\"/processes/msedgewebview2.exe\"><code>msedgewebview2.exe</code></a> children. It ships as a Microsoft Store app installed under <code>C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_...</code>, signed by Microsoft, and the versioned folder name changes with each update.</p>\n<p>Because it is web-based, its mail is a cloud cache rather than a classic mailbox file: there is no OST or PST by default, and per-user state, including cached messages, attachments, and the signed-in account list, sits under <code>%LocalAppData%\\Microsoft\\Olk</code> as a Chromium-style profile. It also drops the old extensibility model. Where classic Outlook ran VBA macros, COM add-ins, custom forms, and an editable home page, the new client supports only sandboxed web add-ins.</p>\n<p>Legitimately, olk.exe runs on the desktop parented by <a class=\"proc-link\" href=\"/processes/explorer.exe\"><code>explorer.exe</code></a> and talks to Microsoft 365. A copy running from outside the WindowsApps package, or the client being upstream of a shell, is not.</p>",
+  "security_notes_html": "<p>As a mail client, olk.exe is a delivery point for phishing (<a href=\"https://attack.mitre.org/techniques/T1566/\" target=\"_blank\" rel=\"noreferrer noopener\">T1566</a>): a spearphishing link or attachment arrives by email, and execution begins when the user opens it (<a href=\"https://attack.mitre.org/techniques/T1204/\" target=\"_blank\" rel=\"noreferrer noopener\">T1204</a>). Because attachments open in their associated application and links open in a browser, the program that actually runs is usually a child of that handler or of the WebView2 process rather than of olk.exe itself, so the parent chain after a message is opened is what ties the activity back to mail.</p>\n<p>The new client removes much of classic Outlook's on-host persistence surface: no VBA macros, no COM add-ins, no custom forms, and no editable home page, with web add-ins confined to the sandboxed web context. The persistence that remains is server-side, in the mailbox: inbox rules that auto-forward or redirect mail (<a href=\"https://attack.mitre.org/techniques/T1137/005/\" target=\"_blank\" rel=\"noreferrer noopener\">T1137.005</a>) sync to the account regardless of client and do not appear as local olk.exe artifacts. The cached messages and attachments that do sit on the host are in the Chromium profile and IndexedDB under <code>%LocalAppData%\\Microsoft\\Olk</code>.</p>"
+}

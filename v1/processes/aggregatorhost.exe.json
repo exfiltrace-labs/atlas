@@ -7,6 +7,7 @@
   "about": null,
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -23,7 +24,7 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8457 (WinBuild.160101.0800)",
+      "value": "10.0.26100.5074 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -35,23 +36,30 @@
       "pct": 100
     }
   ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 8,
+  "execution_rank": 61,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\AggregatorHost.exe",
@@ -59,17 +67,202 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "mpecm.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "mediafoundationaggregator.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wusys.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "uusbrain.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "diagnosticdatasettings.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "codeintegrityaggregator.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "diagnosticdataquery.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "missioncontrolaggregator.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "updateplatformaggregators.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.system.profile.platformdiagnosticsandusagedatasettings.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "uusfailover.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "updatereboot.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 66.7
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -86,7 +279,12 @@
   ],
   "token_privileges": [
     {
-      "value": "SeDebugPrivilege",
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -106,12 +304,7 @@
       "pct": 100
     },
     {
-      "value": "SeChangeNotifyPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeImpersonatePrivilege",
+      "value": "SeDebugPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -119,14 +312,50 @@
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "AggregatorHost.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "authentihash",
+      "value": "0b447ec3bb24f2e0e87ca5fcb89372aeb720913a6f114212a65b61c125acb8d9",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "ab34ae2b36a2c80a45268187ecacf835b0b21237",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "67c8a4d1a2216990449b63df5fd5c62d",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "5a8356b8eec6cc751f73ac1000b6eb17d7fbb2e51a4711c8764d57e62fefe5d0",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "81eefa2d569f1a509b88e884ad7e662f",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "ad82af6fe8395bbd9698613c6ee80cd8",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

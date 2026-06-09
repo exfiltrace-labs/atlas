@@ -1,0 +1,11 @@
+{
+  "name": "sppwmi.dll",
+  "loaded_by": [
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 7.1,
+      "lolbin": false
+    }
+  ]
+}

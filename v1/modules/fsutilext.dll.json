@@ -1,0 +1,11 @@
+{
+  "name": "fsutilext.dll",
+  "loaded_by": [
+    {
+      "name": "attrib.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

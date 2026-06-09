@@ -1,0 +1,17 @@
+{
+  "name": "taskschdps.dll",
+  "loaded_by": [
+    {
+      "name": "dllhost.exe",
+      "weight": "rare",
+      "pct": 3.3,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 4.2,
+      "lolbin": false
+    }
+  ]
+}

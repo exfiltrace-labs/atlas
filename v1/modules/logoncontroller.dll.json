@@ -1,0 +1,11 @@
+{
+  "name": "logoncontroller.dll",
+  "loaded_by": [
+    {
+      "name": "logonui.exe",
+      "weight": "uncommon",
+      "pct": 36.4,
+      "lolbin": false
+    }
+  ]
+}

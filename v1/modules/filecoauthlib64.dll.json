@@ -1,0 +1,17 @@
+{
+  "name": "filecoauthlib64.dll",
+  "loaded_by": [
+    {
+      "name": "filecoauth.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 42.9,
+      "lolbin": false
+    }
+  ]
+}

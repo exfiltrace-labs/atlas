@@ -1,0 +1,11 @@
+{
+  "name": "cmdext.dll",
+  "loaded_by": [
+    {
+      "name": "cmd.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": true
+    }
+  ]
+}

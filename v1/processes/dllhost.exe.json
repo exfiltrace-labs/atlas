@@ -13,6 +13,7 @@
   "about": "dllhost.exe exists so a COM object can run in its own process instead of inside the application that uses it. When a COM server is configured to run in a surrogate, for stability or isolation, Windows starts a dllhost.exe and loads the component's DLL into it. The classic example is thumbnail generation: Explorer hands the risky job of parsing an unknown file to a COM Surrogate, so a malformed file crashes dllhost.exe instead of the desktop. The genuine binary lives at `C:\\Windows\\System32\\dllhost.exe`, with a 32-bit copy under `SysWOW64`.\n\nA legitimate dllhost.exe almost always carries a `/Processid:{GUID}` argument naming the COM class it is hosting, and it is started by the COM infrastructure, so its parent is normally an `svchost.exe` running the DCOM Launch service. Many short-lived instances are normal as thumbnails render and shell actions run.\n\nInstances come and go with the COM work that spawns them. What a given dllhost.exe is hosting is identified by the CLSID on its command line, which maps to a registered COM server under the registry's `CLSID` key.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "330000045FF3C96C1A7FF7DA1D00000000045F",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -29,103 +30,560 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "value": "10.0.26100.1150 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 98.6
+    },
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "rare",
+      "pct": 1.4
     }
   ],
   "file_sizes": [
     {
-      "value": "81.50 KB",
+      "value": "49.30 KB",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 98.6
+    },
+    {
+      "value": "20.30 KB",
+      "weight": "rare",
+      "pct": 1.4
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 98.6
+    },
+    {
+      "value": "x86",
+      "weight": "rare",
+      "pct": 1.4
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "71f53a26bb1625e466727183409a30d03d7923df",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 98.1,
   "host_prevalence": 100,
-  "execution_rank": 13,
+  "execution_rank": 11,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 23,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\dllhost.exe",
       "weight": "ubiquitous",
+      "pct": 98.8
+    },
+    {
+      "value": "C:\\Windows\\SysWOW64\\dllhost.exe",
+      "weight": "rare",
+      "pct": 1.2
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "expected_parents": [],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "rare",
+      "pct": 17.4
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [
+  "loaded_modules": [
     {
-      "value": "Session 0",
-      "weight": "common",
-      "pct": 50
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
     },
     {
-      "value": "Session 1",
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 76.7
+    },
+    {
+      "value": "imm32.dll",
       "weight": "common",
-      "pct": 50
+      "pct": 70
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 70
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "thumbcache.dll",
+      "weight": "common",
+      "pct": 53.3
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 30
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "photometadatahandler.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "systemsettings.datamodel.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "twinui.pcshell.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "windows.storage.search.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "slc.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "icu.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "wincorlib.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "shellcommoncommonproxystub.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "windowsudk.shellcommon.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "uiautomationcore.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "esent.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wow64base.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "domgmt.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "devicemetadataretrievalclient.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "taskschdps.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wow64cpu.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wow64.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wow64win.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "devrtl.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "windows.ui.immersive.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "actxprxy.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "wow64con.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "rare",
+      "pct": 3.3
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 91.3
+    },
+    {
+      "value": "SYSTEM",
+      "weight": "rare",
+      "pct": 8.7
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 91.3
+    },
+    {
+      "value": "System",
+      "weight": "rare",
+      "pct": 8.7
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 97.8
+    },
+    {
+      "value": "Session 0",
+      "weight": "rare",
+      "pct": 2.2
     }
   ],
   "instance_counts": [
     {
-      "value": "2",
+      "value": "1",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 97
+    },
+    {
+      "value": "2",
+      "weight": "rare",
+      "pct": 3
     }
   ],
   "token_privileges": [
     {
       "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeImpersonatePrivilege",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "SeCreateGlobalPrivilege",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "SeAuditPrivilege",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "SeDebugPrivilege",
-      "weight": "common",
-      "pct": 50
+      "pct": 97.1
     }
   ],
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -160,8 +618,83 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\DllHost.exe /Processid:<guid>",
+      "pct": 95.7
+    },
+    {
+      "command": "C:\\WINDOWS\\SysWOW64\\DllHost.exe /Processid:<guid>",
+      "pct": 4.3
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "384:MdfHyZnMp82JclcCWg5WlOfdDBRJzh/6fR9zBAT:sOMO2Ackscd1PO9zST",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "fbdac0471446783ad621d3cab6033559",
+      "pct": 95.7
+    },
+    {
+      "algo": "sha1",
+      "value": "f401ae9310fab4781a3e9fa1eaff26f3d484c6e0",
+      "pct": 95.7
+    },
+    {
+      "algo": "md5",
+      "value": "7450570ba423a8e9864d498d3241ffd4",
+      "pct": 95.7
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "785ec0b4b8ec24066c59aebb830b3ef0",
+      "pct": 95.7
+    },
+    {
+      "algo": "authentihash",
+      "value": "8f57564dde9a24f3dd0dc146ba79634eb59d9dee7e7b77f181e15cc49e29e3ce",
+      "pct": 95.7
+    },
+    {
+      "algo": "sha256",
+      "value": "50c9c2edea6c51f1aad2dd80a59f4edb32637f51714f8472d216e5b9bdacdabf",
+      "pct": 95.7
+    },
+    {
+      "algo": "imphash",
+      "value": "b7f063f6e914db6acb4dcc8d69219a5f",
+      "pct": 4.3
+    },
+    {
+      "algo": "sha1",
+      "value": "a2cc62df923cc43131b18cac847e39ac87eb1786",
+      "pct": 4.3
+    },
+    {
+      "algo": "md5",
+      "value": "48cb27060c97ad5d2f35c67ac217ddb3",
+      "pct": 4.3
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "320f9861b12a74caf367a05ab4ba71ca",
+      "pct": 4.3
+    },
+    {
+      "algo": "authentihash",
+      "value": "3d20c7200e3bff7afe500574a4f4246d14d5ad037d79ec34057399c1599d0ec4",
+      "pct": 4.3
+    },
+    {
+      "algo": "sha256",
+      "value": "d5181106f8251741f86275839912ad6080006c408903f88e7f6d48615497d7a5",
+      "pct": 4.3
+    }
+  ],
   "security_notes": "Because dllhost.exe is always present and unremarkable, it is a common cover for malware. Some samples simply run under the name from the wrong directory (T1036.005), so a dllhost outside `System32` is an immediate flag. More often, attackers inject into a genuine dllhost to blend in as a COM surrogate (T1055). A dllhost.exe with no `/Processid` argument, one reaching the network, or one spawning a shell is behaving unlike the real host, which only ever loads and runs a registered COM class.\n\nIts defining abuse is COM hijacking (T1546.015). An attacker repoints a CLSID's registry entry, typically under `HKCU`, at their own DLL, so the next time that COM object is invoked, dllhost loads the malicious DLL under a trusted, signed process. This gives both execution and persistence, and it survives without any obvious autostart entry. A `/Processid` CLSID whose registered server is a DLL outside `System32`, especially one defined per-user, points to a hijack.\n",
   "mitre_attack": [
     "T1036.005",

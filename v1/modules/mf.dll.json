@@ -2,10 +2,28 @@
   "name": "mf.dll",
   "loaded_by": [
     {
-      "name": "msedgewebview2.exe",
-      "weight": "common",
-      "pct": 50,
+      "name": "chrome.exe",
+      "weight": "rare",
+      "pct": 1.9,
+      "lolbin": false
+    },
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 5.7,
       "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 11.7,
+      "lolbin": true
+    },
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.6,
+      "lolbin": false
     }
   ]
 }

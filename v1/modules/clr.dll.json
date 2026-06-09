@@ -1,0 +1,35 @@
+{
+  "name": "clr.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "ubiquitous",
+      "pct": 98.2,
+      "lolbin": false
+    },
+    {
+      "name": "ngen.exe",
+      "weight": "rare",
+      "pct": 3.2,
+      "lolbin": true
+    },
+    {
+      "name": "ngentask.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    },
+    {
+      "name": "powershell.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 2.8,
+      "lolbin": false
+    }
+  ]
+}

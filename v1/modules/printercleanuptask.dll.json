@@ -1,0 +1,11 @@
+{
+  "name": "printercleanuptask.dll",
+  "loaded_by": [
+    {
+      "name": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 14.3,
+      "lolbin": false
+    }
+  ]
+}

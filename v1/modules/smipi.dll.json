@@ -1,0 +1,11 @@
+{
+  "name": "smipi.dll",
+  "loaded_by": [
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 15.4,
+      "lolbin": false
+    }
+  ]
+}

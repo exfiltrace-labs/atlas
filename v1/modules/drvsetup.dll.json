@@ -1,0 +1,11 @@
+{
+  "name": "drvsetup.dll",
+  "loaded_by": [
+    {
+      "name": "wuaucltcore.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

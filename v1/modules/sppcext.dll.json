@@ -1,0 +1,17 @@
+{
+  "name": "sppcext.dll",
+  "loaded_by": [
+    {
+      "name": "slui.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 7.1,
+      "lolbin": false
+    }
+  ]
+}

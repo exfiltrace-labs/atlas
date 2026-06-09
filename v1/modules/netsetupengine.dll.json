@@ -1,0 +1,17 @@
+{
+  "name": "netsetupengine.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 2.3,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "uncommon",
+      "pct": 26.2,
+      "lolbin": false
+    }
+  ]
+}

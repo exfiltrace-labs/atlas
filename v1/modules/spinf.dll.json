@@ -1,0 +1,17 @@
+{
+  "name": "spinf.dll",
+  "loaded_by": [
+    {
+      "name": "services.exe",
+      "weight": "rare",
+      "pct": 22.2,
+      "lolbin": false
+    },
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 4.8,
+      "lolbin": false
+    }
+  ]
+}

@@ -12,43 +12,225 @@
   ],
   "description": "cscript.exe is the Windows Script Host in its console form, the program that runs VBScript and JScript files (.vbs, .js, .wsf) from the command line. It writes script output to a terminal instead of dialog boxes, which makes it the host of choice for administrative automation and batch-driven scripts, and a quiet way for attackers to run script non-interactively.\n",
   "about": "cscript.exe is one of the two front-ends to the Windows Script Host (WSH), the built-in engine that runs scripts written in VBScript and JScript. cscript.exe is the console host: it sends `WScript.Echo` output to standard out, takes input from the command line, and is the natural choice when a script runs inside a batch file, a scheduled task, or another program. Its windowed twin, `wscript.exe`, shows the same output in pop-up dialogs. The genuine binary lives at `C:\\Windows\\System32\\cscript.exe`, with a 32-bit copy under `SysWOW64`.\n\nThe scripting language is chosen by the file extension or the `/e:` switch, and the host hands scripts the same COM objects as `wscript.exe`, `WScript.Shell`, `WScript.Network`, `Scripting.FileSystemObject`, and others, which let them run programs, edit the registry, and reach the file system. The difference between the two hosts is only where output goes, not what a script can do.\n\nLegitimately, cscript.exe is started by the Task Scheduler, by logon or Group Policy scripts, by software installers, or by an administrator running a script by hand. It is more common than `wscript.exe` in server and automation contexts. Its parent and the script named on its command line are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "cscript.exe.mui",
+    "internal_name": "cscript.exe",
+    "product": "Microsoft ® Windows Script Host",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.4768",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "188.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75.6,
+  "host_prevalence": 100,
+  "execution_rank": 113,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 1,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\cscript.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "cmd.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
   "expected_grandparents": [],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "cscript.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "instance_counts": [],
   "token_privileges": [],
   "process_handles": [],
-  "os_prevalence": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\cscript.exe` or its `SysWOW64` copy",
@@ -75,8 +257,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "cscript.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "3072:ztByQDKM9/qUgf02ev8EotVMxUsPwDmM1cF+Q/rwJ41+4RiM8uUWWQ3AC5MhpnTS:zpKM9/qUgf0N8EotVMxUsPumM1cF+Q/P",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "621598720fc134f13898f4dc0bcb8e1c",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "f4bf457aaf2bc7f884113e0f0c82226eff7104b0",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "73d8c2cd7b9d026543d7ba4c19fb4a20",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "96dd582d44f21f6062e7f94df4ceb3160961abc617a155202b5601c2d118875c",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "74ddc6e4ca76c50d247ea615c841c3d74610134a20b0253a4518a445af2983ad",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "eee0b74c73407de5670f1bbe3b118ebc",
+      "pct": 100
+    }
+  ],
   "security_notes": "cscript.exe runs attacker script just as readily as it runs admin script (T1059.005, T1059.007). Because it is signed and built in, a malicious `.vbs` or `.js` executes with the user's privileges and passes path and signature checks, leaving the script it runs and its parent as what to examine. Attackers favor the console host when execution is meant to be silent and non-interactive, driven from a batch file or another process rather than a double-click.\n\nAs with `wscript.exe`, the script is often only a stager. COM objects like `MSXML2.XMLHTTP` and `WScript.Shell.Run` let a short script pull down and launch the next payload (T1105), so cscript reaching the network or spawning `powershell.exe` or `cmd.exe` is the behavior to run down.\n",
   "mitre_attack": [
     "T1059.005",

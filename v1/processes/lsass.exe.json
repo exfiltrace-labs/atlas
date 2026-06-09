@@ -13,11 +13,12 @@
   "about": "lsass.exe enforces the local security policy. When someone signs in, it authenticates them by calling the authentication package named in `HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa`, typically Kerberos for domain accounts or MSV1_0 for local accounts, and on success it creates the access token that represents that user for the rest of the session. Password changes, NTLM authentication, and the writing of security audit log entries all run through it.\n\nIt's started by `wininit.exe` early in boot and runs in session 0 as `NT AUTHORITY\\SYSTEM` from `C:\\Windows\\System32\\lsass.exe`. Exactly one instance runs on a normal system, and it stays up for the life of the machine. It's a critical process, so terminating it will crash the system with a stop error (blue screen).\n\nTo authenticate users without prompting for a password at every step, lsass.exe caches credential material in its memory: NTLM hashes, Kerberos tickets, and in some configurations more. On systems with Credential Guard enabled, those secrets move into the isolated `lsaiso.exe` process and lsass.exe no longer holds them directly.\n\nThe genuine lsass.exe is a trusted, signed Microsoft system file. On modern Windows it can be configured to run as a protected process (PPL), which stops other processes, even administrators, from reading its memory or loading code into it.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "33000004C8517D2E95BDD588BE0000000004C8",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
   "signers": [
-    "Microsoft Windows"
+    "Microsoft Windows Publisher"
   ],
   "file_details": {
     "file_type": "PE32+ executable",
@@ -29,35 +30,42 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8328 (WinBuild.160101.0800)",
+      "value": "10.0.26100.6584 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "82.20 KB",
+      "value": "82.10 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "value": "48b2486f389c9927957299bdfd24c2abef9d15db",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 17,
+  "execution_rank": 72,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\lsass.exe",
@@ -65,9 +73,21 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "wininit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [
@@ -78,10 +98,564 @@
     }
   ],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "loaded_modules": [
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "scecli.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "msv1_0.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "vaultsvc.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "tspkg.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ncryptsslp.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ntlmshared.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "lsaadt.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "kerberos.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "sspisrv.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "joinutil.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "wtdsensor.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ncryptprov.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ngcpopkeysrv.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "kdcpw.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "wldap32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "msprivs.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "pcpksp.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "negoexts.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "kerb3961.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "schannel.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "samsrv.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "samlib.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "combase.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "pku2u.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "microsoftaccountcloudap.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "gmsaclient.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "tbs.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "aadcloudap.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "logoncli.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "bcd.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "lsasrv.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "dsparse.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "dpapisrv.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "camext.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "authz.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "user32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "vbsapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "netprovfw.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "kerbclientshared.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "netlogon.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "cloudap.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "keyiso.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "credssp.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "sfapm.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "samcli.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "cryptdll.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "dsrole.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "wdigest.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "wevtapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "securetimeaggregator.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "dssenh.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "msvcp110_win.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "omadmapi.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "popkeycli.dll",
+      "weight": "rare",
+      "pct": 9.1
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\lsass",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "\\Winsock2\\CatalogChangeListener-318-0",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "\\Winsock2\\CatalogChangeListener-31c-0",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 0",
@@ -98,52 +672,12 @@
   ],
   "token_privileges": [
     {
-      "value": "SeCreatePagefilePrivilege",
+      "value": "SeChangeNotifyPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
       "value": "SeIncreaseBasePriorityPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeIncreaseWorkingSetPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateGlobalPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreatePermanentPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateTokenPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDebugPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeTimeZonePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeCreateSymbolicLinkPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeImpersonatePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -158,12 +692,27 @@
       "pct": 100
     },
     {
-      "value": "SeLockMemoryPrivilege",
+      "value": "SeIncreaseWorkingSetPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeChangeNotifyPrivilege",
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -173,12 +722,37 @@
       "pct": 100
     },
     {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeTcbPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
     {
-      "value": "SeAuditPrivilege",
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateTokenPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -187,42 +761,342 @@
     {
       "value": "svchost.exe",
       "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "wmiprvse.exe",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "explorer.exe",
-      "weight": "uncommon",
-      "pct": 33.3
+      "pct": 87.9
     },
     {
       "value": "services.exe",
       "weight": "uncommon",
-      "pct": 33.3
-    },
-    {
-      "value": "msedgewebview2.exe",
-      "weight": "uncommon",
-      "pct": 33.3
+      "pct": 44
     },
     {
       "value": "backgroundtaskhost.exe",
       "weight": "uncommon",
-      "pct": 33.3
+      "pct": 25.3
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 22
+    },
+    {
+      "value": "sppsvc.exe",
+      "weight": "rare",
+      "pct": 22
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 16.5
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 13.2
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 12.1
+    },
+    {
+      "value": "logonui.exe",
+      "weight": "rare",
+      "pct": 11
+    },
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 8.8
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "rare",
+      "pct": 6.6
+    },
+    {
+      "value": "mousocoreworker.exe",
+      "weight": "rare",
+      "pct": 5.5
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "rare",
+      "pct": 5.5
+    },
+    {
+      "value": "filecoauth.exe",
+      "weight": "rare",
+      "pct": 4.4
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 4.4
+    },
+    {
+      "value": "identity_helper.exe",
+      "weight": "rare",
+      "pct": 4.4
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "rare",
+      "pct": 4.4
+    },
+    {
+      "value": "tiworker.exe",
+      "weight": "rare",
+      "pct": 4.4
+    },
+    {
+      "value": "ngentask.exe",
+      "weight": "rare",
+      "pct": 4.4
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "rare",
+      "pct": 4.4
+    },
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "tasklist.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "chrome.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "setup.exe",
+      "weight": "rare",
+      "pct": 2.2
     },
     {
       "value": "powershell.exe",
-      "weight": "uncommon",
-      "pct": 33.3
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "system",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "directxdatabaseupdater.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "devicecensus.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "provtool.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "compattelrunner.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "rare",
+      "pct": 2.2
+    },
+    {
+      "value": "mdmagent.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "slui.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "elevation_service.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "backgroundtransferhost.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "onedrive.sync.service.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "appactions.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "cookie_exporter.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "vssvc.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "rgnupdt.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "consent.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "microsoft.sharepoint.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "apphostregistrationverifier.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "defrag.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "ucconfigtask.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "chrmstp.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "bdeuisrv.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "oobefodsetup.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "platform_experience_helper.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "onedrivelauncher.exe",
+      "weight": "rare",
+      "pct": 1.1
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "rare",
+      "pct": 1.1
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -265,8 +1139,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\lsass.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "38f5a6354f7922b4e84b46ec6dd789fa",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "2145dad3035eb95675d954b37d2d0892c158343308ed2bfe5626377015f0abbd",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "331048f31555cd1fdbf47f36160f004abd05e4d7",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "8e2ce2d88c1f92045630ee37f4676e54",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "0c3c6d4e17f4bde6fb425819bdad9aaf",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "f5601e746da3344da27164398b4c374cd12201d3e07fc776963eda90af972a86",
+      "pct": 100
+    }
+  ],
   "security_notes": "Because of its central role and its trusted name, lsass.exe is both a prime impersonation target and the single most common credential-theft target on Windows. A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Be suspicious of copies running from other locations and of near-miss spellings such as `lsas.exe`, `lsasss.exe`, or `lsass32.exe`, which use the trusted name to hide in a process list (T1036.005).\n\nThe bigger threat is theft from the real process. Because lsass.exe holds password hashes and Kerberos tickets in memory, attackers dump that memory to harvest credentials (T1003.001), most famously with Mimikatz, but also by saving a memory dump with built-in tools like `comsvcs.dll` or `procdump` and parsing it offline. The harvested secrets then feed pass-the-hash and pass-the-ticket attacks for lateral movement. Any unexpected process opening a handle to lsass.exe memory, or an `lsass.dmp`-style file appearing on disk, is worth running down.\n\nA genuine lsass.exe rarely spawns child processes. Encrypting File System operations are a known exception, but beyond those a command shell or any other process parented to lsass.exe is a strong sign of injected code (T1055). The defensive baseline is to enable LSA protection (PPL) and, where the hardware supports it, Credential Guard, which moves the secrets out of reach in `lsaiso.exe`.\n",
   "mitre_attack": [
     "T1036.005",

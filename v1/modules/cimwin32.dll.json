@@ -1,0 +1,11 @@
+{
+  "name": "cimwin32.dll",
+  "loaded_by": [
+    {
+      "name": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 23.8,
+      "lolbin": false
+    }
+  ]
+}

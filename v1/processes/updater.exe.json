@@ -1,0 +1,1204 @@
+{
+  "name": "updater.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Google LLC",
+  "issuer": "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+  "cert_serial": "0B50CF246B263EFD85A729315158F3FF",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Google LLC"
+  ],
+  "file_details": {
+    "file_type": "PE32 executable",
+    "magic": "PE32 executable (GUI)",
+    "original_name": "updater.exe",
+    "internal_name": "Google Updater (x86)",
+    "product": "Google Updater (x86)",
+    "copyright": "Copyright 2026 Google LLC. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "150.0.7863.0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "6510.10 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x86",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "607a3edaa64933e94422fc8f0c80388e0590986c",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 97.7,
+  "host_prevalence": 100,
+  "execution_rank": 13,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 16,
+  "expected_paths": [
+    {
+      "value": "C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe",
+      "weight": "ubiquitous",
+      "pct": 87.5
+    },
+    {
+      "value": "C:\\Windows\\SystemTemp\\Google7172_239369981\\bin\\updater.exe",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "updater.exe",
+      "weight": "common",
+      "pct": 62.5
+    },
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 6.3
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "rare",
+      "pct": 6.3
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 76.9
+    },
+    {
+      "value": "platform_experience_helper.exe",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "os_update_handler.exe",
+      "weight": "rare",
+      "pct": 7.7
+    },
+    {
+      "value": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "rare",
+      "pct": 7.7
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 31.3
+    },
+    {
+      "value": "updater.exe",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "rare",
+      "pct": 6.3
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "updater.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "setup.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "network_ports": [
+    {
+      "value": "80/tcp",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "443/tcp",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "listening_ports": [],
+  "network_destinations": [
+    {
+      "value": "1e100.net",
+      "weight": "ubiquitous",
+      "pct": 83.3
+    },
+    {
+      "value": "googleusercontent.com",
+      "weight": "rare",
+      "pct": 16.7
+    }
+  ],
+  "loaded_modules": [
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wow64base.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wow64win.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wow64.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wow64con.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wow64cpu.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msimg32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "uncommon",
+      "pct": 45
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 30
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "uncommon",
+      "pct": 30
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "schannel.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "ncryptsslp.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "webio.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "msvcp110_win.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "dsreg.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "wkscli.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "omadmapi.dll",
+      "weight": "rare",
+      "pct": 10
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "asycfilt.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "coml2.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "cryptnet.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "ondemandconnroutehelper.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "textshaping.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "rare",
+      "pct": 5
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\crashpad_10680_SBPFLADZTDNGWRYN",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\crashpad_3208_DAEBLQFOGYDIADTM",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\crashpad_7860_OPQWWDWHOSUPMUZV",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\crashpad_9824_TCERBYIVCWPCEJSZ",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\crashpad_2024_CKQMXSUBJXXYCLIS",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\wkssvc",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\crashpad_10748_SUHTLNQNLUZBLEVI",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\mojo.GoogleUpdaterSystemInternal150.0.7863.0",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\crashpad_4404_HFDVKHEUHGHKJPLJ",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\mojo.GoogleUpdaterSystem",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\crashpad_1064_EHCPUUVAQJULHIVC",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\LOCAL\\mojo.2024.2928.<n>",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "<Anonymous Pipe>",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "\\LOCAL\\mojo.2024.6356.<n>",
+      "weight": "rare",
+      "pct": 5.6
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 87.5
+    },
+    {
+      "value": "Interactive user",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 87.5
+    },
+    {
+      "value": "High",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 86.7
+    },
+    {
+      "value": "Session 1",
+      "weight": "rare",
+      "pct": 13.3
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "6",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "2",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 85.7
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "updater.exe",
+      "weight": "ubiquitous",
+      "pct": 94.4
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 44.4
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "uncommon",
+      "pct": 38.9
+    },
+    {
+      "value": "sihost.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "shellhost.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "dllhost.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "securityhealthservice.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "chromesetup.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "system",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "ctfmon.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "spoolsv.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "securityhealthsystray.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "smss.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "lockapp.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "crossdeviceresume.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "nissrv.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "audiodg.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "registry",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "lsass.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "memcompression",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "sysmon64.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "smartscreen.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "startmenuexperiencehost.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "searchprotocolhost.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "searchindexer.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "services.exe",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "platform_experience_helper.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "aggregatorhost.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "csrss.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "chrome.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "149.0.7827.103_chrome_installer_uncompressed.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "os_update_handler.exe",
+      "weight": "rare",
+      "pct": 5.6
+    },
+    {
+      "value": "unsecapp.exe",
+      "weight": "rare",
+      "pct": 5.6
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --crash-handler --system \"--database=C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\Crashpad\" --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=150.0.7863.0 \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0x2c0,0x2c4,0x2c8,0x2bc,0x2cc,0x9e02b8,0x9e02c4,0x9e02d0",
+      "pct": 25
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --system --windows-service --service=update-internal",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --system --windows-service --service=update",
+      "pct": 12.5
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --unzip-worker --system --mojo-platform-channel-handle=1820",
+      "pct": 6.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --crash-handler --system \"--database=C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\Crashpad\" --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=150.0.7863.0 \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0x2c4,0x2c8,0x2cc,0x288,0x2d0,0x9e02b8,0x9e02c4,0x9e02d0",
+      "pct": 6.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --unzip-worker --system --mojo-platform-channel-handle=1932",
+      "pct": 6.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --crash-handler --system \"--database=C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\Crashpad\" --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=150.0.7863.0 \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0xec,0xf0,0x2cc,0xfc,0x2d0,0x9e02b8,0x9e02c4,0x9e02d0",
+      "pct": 6.3
+    },
+    {
+      "command": "C:\\WINDOWS\\SystemTemp\\Google7172_239369981\\bin\\updater.exe --crash-handler --system \"--database=C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\Crashpad\" --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=150.0.7863.0 \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0x2ac,0x2b4,0x2d4,0x2b0,0x2d8,0xfd02b8,0xfd02c4,0xfd02d0",
+      "pct": 6.3
+    },
+    {
+      "command": "\"C:\\WINDOWS\\SystemTemp\\Google7172_239369981\\bin\\updater.exe\" --install=appguid=<guid>&iid=<guid>&lang=en&browser=4&usagestats=1&appname=Google%%20Chrome&needsadmin=prefers&ap=-arch_x64-statsdef_1&installdataindex=empty --enable-logging --vmodule=*/components/winhttp/*=1,*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2 --expect-elevated",
+      "pct": 6.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --wake --system",
+      "pct": 6.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\updater.exe\" --crash-handler --system \"--database=C:\\Program Files (x86)\\Google\\GoogleUpdater\\150.0.7863.0\\Crashpad\" --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=150.0.7863.0 \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater.log\" \"--attachment=C:\\Program Files (x86)\\Google\\GoogleUpdater\\updater_history.jsonl\" --initial-client-data=0x2d8,0x2dc,0x2e0,0x2d4,0x2e4,0x9e02b8,0x9e02c4,0x9e02d0",
+      "pct": 6.3
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "c18ceeb2f10928c4c894f3d16732e2e9",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "e2cc90392be28ed043423b64e8972080732a11def8bc04b75fa177d17e75c5d6",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "bc8bb3c31073ec8e5af0e90cd5d36c8fc815f9ac841f7bac48e3076acd0b06ad",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "3a23f1d37640aa15f9ce961718d94bf9206d2c29",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "196608:SqUOq3JnARmMW1UTvTShR9W6gLzFlpaeYe+CDFrhJBZ7gsk:SqUPARzW1UTvTi9W6gLzFlpaeYe+CD9a",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "38a9ed263553ab437f54700e9e85fe3d",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "techniques": [
+    {
+      "id": "T1057",
+      "name": "Process Discovery",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S0477",
+          "name": "Goopy"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Discovery",
+          "order": 9
+        }
+      ]
+    }
+  ]
+}

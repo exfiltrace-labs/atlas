@@ -8,7 +8,8 @@
   "description": null,
   "about": null,
   "publisher": "Microsoft Corporation",
-  "issuer": "Microsoft Code Signing PCA 2024",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "330000047F2F422A735308DEEA00000000047F",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -25,38 +26,45 @@
   },
   "file_versions": [
     {
-      "value": "148.0.3967.96",
+      "value": "140.0.3485.66",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "4518.90 KB",
+      "value": "3595.10 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "cert_thumbprints": [
     {
-      "value": "21ca9dd6da7c57c3a599880d17317d7bda31899c",
+      "value": "ea2f8cbc69a1a01142a1edd8b1256fecbc1d9f2d",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 98.7,
   "host_prevalence": 100,
-  "execution_rank": 6,
+  "execution_rank": 8,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": 1,
+  "execution_count": 44,
   "expected_paths": [
     {
-      "value": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\148.0.3967.96\\msedgewebview2.exe",
+      "value": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -65,7 +73,17 @@
     {
       "value": "msedgewebview2.exe",
       "weight": "ubiquitous",
-      "pct": 100
+      "pct": 88.6
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 6.8
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 4.5
     }
   ],
   "expected_children": [
@@ -75,23 +93,39 @@
       "pct": 100
     }
   ],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 34.1
+    },
+    {
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 22.7
+    },
+    {
+      "value": "svchost.exe",
+      "weight": "rare",
+      "pct": 6.8
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [
     {
       "value": "53/udp",
       "weight": "uncommon",
-      "pct": 41.2
+      "pct": 46.7
     },
     {
       "value": "443/tcp",
       "weight": "uncommon",
-      "pct": 29.4
+      "pct": 43.2
     },
     {
       "value": "443/udp",
-      "weight": "uncommon",
-      "pct": 29.4
+      "weight": "rare",
+      "pct": 10.1
     }
   ],
   "listening_ports": [],
@@ -99,371 +133,881 @@
     {
       "value": "akamaitechnologies.com",
       "weight": "uncommon",
-      "pct": 32.4
+      "pct": 28.4
     },
     {
       "value": "rogers.com",
       "weight": "rare",
-      "pct": 14.7
+      "pct": 8.9
     },
     {
-      "value": "cloudfront.net",
+      "value": "a-msedge.net",
       "weight": "rare",
-      "pct": 2.9
+      "pct": 1.2
     }
   ],
   "loaded_modules": [
     {
-      "value": "mfplat.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "rtworkq.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "hevcdecoder_store.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "combase.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "msedgewebview2.exe",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "bcrypt.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "netprofm.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "oneds.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "advapi32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "gdi32full.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "ole32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "resourcepolicyclient.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "d3d12core.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "umpdc.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "windows.system.diagnostics.telemetry.platformtelemetryclient.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "d3d12.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "ntdll.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "ntasn1.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "vm3dum64_10.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "shlwapi.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "devobj.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "netapi32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "directxdatabasehelper.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "winmm.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "tbs.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "msvcp_win.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "mf.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "usermgrproxy.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "pcpksp.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "windows.system.userprofile.diagnosticssettings.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "setupapi.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "gdi32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "onecorecommonproxystub.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
       "value": "rpcrt4.dll",
       "weight": "common",
-      "pct": 50
+      "pct": 73.3
     },
     {
       "value": "kernel32.dll",
       "weight": "common",
-      "pct": 50
+      "pct": 73.3
     },
     {
-      "value": "oleaut32.dll",
+      "value": "msvcp_win.dll",
       "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "windows.staterepositorycore.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "dxgi.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "powrprof.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "imm32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "version.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "ffmpeg.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "bcryptprimitives.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "shell32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "profapi.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "msedge.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "cfgmgr32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "vm3dum64_loader.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "npmproxy.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "windows.storage.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "wintrust.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "win32u.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "sechost.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "msvcrt.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "ucrtbase.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "user32.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "telclient.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "msedge_elf.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "ncryptprov.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "d3d11.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "kernel.appcore.dll",
-      "weight": "common",
-      "pct": 50
+      "pct": 73.3
     },
     {
       "value": "kernelbase.dll",
       "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "dxcore.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "tenantrestrictionsplugin.dll",
-      "weight": "common",
-      "pct": 50
-    },
-    {
-      "value": "usermgrcli.dll",
-      "weight": "common",
-      "pct": 50
+      "pct": 73.3
     },
     {
       "value": "shcore.dll",
       "weight": "common",
-      "pct": 50
+      "pct": 73.3
+    },
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "common",
+      "pct": 73.3
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 73.3
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 73.3
+    },
+    {
+      "value": "msedge_elf.dll",
+      "weight": "common",
+      "pct": 73.3
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 73.3
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 73.3
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 73.3
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 71.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 71.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 71.7
+    },
+    {
+      "value": "msedge.dll",
+      "weight": "common",
+      "pct": 63.3
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "common",
+      "pct": 63.3
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 36.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 36.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 36.7
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 36.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 36.7
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 36.7
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 28.3
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 28.3
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 23.3
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "rare",
+      "pct": 23.3
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 23.3
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "rare",
+      "pct": 21.7
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 18.3
+    },
+    {
+      "value": "rtworkq.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "dcomp.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "hevcdecoder_store.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "mfplat.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "dwmapi.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "dwrite.dll",
+      "weight": "rare",
+      "pct": 15
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "mf.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "ffmpeg.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "d3d11.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "resourcepolicyclient.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "vk_swiftshader.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "d3d10warp.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "rare",
+      "pct": 11.7
+    },
+    {
+      "value": "omadmapi.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "devobj.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "directmanipulation.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "atlthunk.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "profext.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "windows.security.authentication.web.core.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "mscms.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "inputhost.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "windows.system.profile.platformdiagnosticsandusagedatasettings.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "diagnosticdatasettings.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "msvcp110_win.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "dsreg.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "dataexchange.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "wkscli.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "d3dcompiler_47.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "oleacc.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "libegl.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "windows.system.diagnostics.telemetry.platformtelemetryclient.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "version.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "capauthz.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "vulkan-1.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "libglesv2.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "webview2_integration.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "telclient.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "vcruntime140.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "oneds.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "vcruntime140_1.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "rare",
+      "pct": 8.3
+    },
+    {
+      "value": "nlansp_c.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "wevtapi.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "vaultcli.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "joinutil.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "windows.system.userprofile.diagnosticssettings.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "rare",
+      "pct": 5
+    },
+    {
+      "value": "netjoin.dll",
+      "weight": "rare",
+      "pct": 5
     },
     {
       "value": "ncrypt.dll",
-      "weight": "common",
-      "pct": 50
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "directml.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "pcpksp.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "d3d12core.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "domain_actions.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "d3d12.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "tbs.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "dxilconv.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "ncryptprov.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "tenantrestrictionsplugin.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "d3dscache.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "kbdus.dll",
+      "weight": "rare",
+      "pct": 3.3
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "aadwamextension.dll",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "windows.security.authentication.onlineid.dll",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "bitsproxy.dll",
+      "weight": "rare",
+      "pct": 1.7
+    },
+    {
+      "value": "microsoftaccountwamextension.dll",
+      "weight": "rare",
+      "pct": 1.7
     }
   ],
   "named_pipes": [
     {
+      "value": "\\LOCAL\\crashpad_7228_EGKQHTODKUQZVFFQ",
+      "weight": "uncommon",
+      "pct": 34.6
+    },
+    {
+      "value": "\\LOCAL\\mojo.7228.5212.<n>",
+      "weight": "rare",
+      "pct": 23.1
+    },
+    {
+      "value": "\\LOCAL\\crashpad_6100_MGRPWYDFWODANDHO",
+      "weight": "rare",
+      "pct": 11.5
+    },
+    {
+      "value": "\\LOCAL\\crashpad_6092_QTXKSZFMXDBQPWGG",
+      "weight": "rare",
+      "pct": 9.6
+    },
+    {
+      "value": "\\crashpad_4960_QKENLCEQJFZIWTAI",
+      "weight": "rare",
+      "pct": 9.6
+    },
+    {
+      "value": "\\crashpad_3116_RYGIMSFBYKRTWVGK",
+      "weight": "rare",
+      "pct": 9.6
+    },
+    {
+      "value": "\\LOCAL\\mojo.6100.7104.<n>",
+      "weight": "rare",
+      "pct": 3.8
+    },
+    {
       "value": "\\wkssvc",
-      "weight": "common",
-      "pct": 50
+      "weight": "rare",
+      "pct": 3.8
     },
     {
-      "value": "\\crashpad_8804_DVJGPSTGNCLPAKWM",
-      "weight": "common",
-      "pct": 50
+      "value": "\\LOCAL\\mojo.3116.4268.<n>",
+      "weight": "rare",
+      "pct": 1.9
     },
     {
-      "value": "\\LOCAL\\mojo.8804.6096.4244808480320212612",
-      "weight": "common",
-      "pct": 50
+      "value": "\\LOCAL\\mojo.7228.7380.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.6100.6996.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.4960.4420.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.6092.6860.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.4960.4408.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.5664.6032.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.3116.9040.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.5320.4108.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.5496.6048.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.8108.7204.<n>",
+      "weight": "rare",
+      "pct": 1.9
+    },
+    {
+      "value": "\\LOCAL\\mojo.2064.4820.<n>",
+      "weight": "rare",
+      "pct": 1.9
     }
   ],
   "user_contexts": [
@@ -475,9 +1019,19 @@
   ],
   "integrity_levels": [
     {
+      "value": "AppContainer",
+      "weight": "common",
+      "pct": 72.7
+    },
+    {
+      "value": "Low",
+      "weight": "rare",
+      "pct": 13.6
+    },
+    {
       "value": "Medium",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "rare",
+      "pct": 13.6
     }
   ],
   "sessions": [
@@ -489,9 +1043,14 @@
   ],
   "instance_counts": [
     {
+      "value": "6",
+      "weight": "common",
+      "pct": 59.1
+    },
+    {
       "value": "12",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "uncommon",
+      "pct": 40.9
     }
   ],
   "token_privileges": [
@@ -508,19 +1067,19 @@
       "pct": 100
     },
     {
-      "value": "widgets.exe",
-      "weight": "common",
-      "pct": 50
+      "value": "searchhost.exe",
+      "weight": "rare",
+      "pct": 9.8
     },
     {
-      "value": "explorer.exe",
-      "weight": "common",
-      "pct": 50
+      "value": "widgets.exe",
+      "weight": "rare",
+      "pct": 4.9
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -528,29 +1087,211 @@
   "anomaly_signals": [],
   "command_lines": [
     {
-      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\148.0.3967.96\\msedgewebview2.exe\" --type=gpu-process --disable-gpu-sandbox --use-gl=disabled --gpu-vendor-id=5140 --gpu-device-id=140 --gpu-sub-system-id=0 --gpu-revision=0 --gpu-driver-version=10.0.26100.8328 --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=526.11701.10.0 --embedded-browser-webview=1 --gpu-preferences=<redacted> --ssd-no-pressure-read-main-dll --metrics-shmem-handle=4116,i,12050335254388914320,3925934751080020712,262144 --field-trial-handle=2060,i,18352015805492508143,5611258576816742792,262144 --variations-seed-version --pseudonymization-salt-handle=2076,i,17184062663426662119,4157124322766245217,4 --trace-process-track-uuid=3190708991934122588 --mojo-platform-channel-handle=4940 /prefetch:10 /pfhostedapp:<redacted>",
-      "pct": 100
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=gpu-process --disable-gpu-sandbox --use-gl=disabled --gpu-vendor-id=5140 --gpu-device-id=140 --gpu-sub-system-id=0 --gpu-revision=0 --gpu-driver-version=10.0.26100.5074 --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --gpu-preferences=<redacted> --ram-no-pressure-read-main-dll --metrics-shmem-handle=4468,i,<n>,<n>,262144 --field-trial-handle=1880,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=2524 /prefetch:10 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=4804,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4984 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=4732,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4260 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --embedded-browser-webview=1 --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --noerrdialogs --disable-features=msSmartScreenProtection --edge-webview-enable-mojo-ipcz --enable-features=<redacted> --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --lang=en-US --mojo-named-platform-channel-pipe=5496.6048.<n> /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=5092,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4732 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --startup-read-main-dll --metrics-shmem-handle=2228,i,<n>,<n>,524288 --field-trial-handle=1880,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3456 /prefetch:13 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=5052,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4340 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=renderer --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=5 --js-flags=\"--expose-gc --ms-user-locale=\" --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --ram-no-pressure-read-main-dll --metrics-shmem-handle=3340,i,<n>,<n>,2097152 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3472 /pfhostedapp:<redacted> /prefetch:1",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=4372,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4860 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --embedded-browser-webview=1 --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --noerrdialogs --disable-features=msSmartScreenProtection --edge-webview-enable-mojo-ipcz --enable-features=<redacted> --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --lang=en-US --mojo-named-platform-channel-pipe=5320.4108.<n> /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --startup-read-main-dll --metrics-shmem-handle=2260,i,<n>,<n>,524288 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3408 /prefetch:13 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --startup-read-main-dll --metrics-shmem-handle=2196,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=2064 /prefetch:11 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=gpu-process --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1580,i,<n>,<n>,262144 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=1848 /prefetch:2 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=renderer --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=5 --js-flags=\"--expose-gc --ms-user-locale=\" --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --ram-no-pressure-read-main-dll --metrics-shmem-handle=3496,i,<n>,<n>,2097152 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3576 /pfhostedapp:<redacted> /prefetch:1",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --startup-read-main-dll --metrics-shmem-handle=2384,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=2592 /prefetch:13 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=2208,i,<n>,<n>,524288 --field-trial-handle=1856,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=2148 /prefetch:13 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --startup-read-main-dll --metrics-shmem-handle=2044,i,<n>,<n>,524288 --field-trial-handle=1880,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=2188 /prefetch:11 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --embedded-browser-webview=1 --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --noerrdialogs --disk-cache-size=52428800 --edge-webview-is-background --enable-features=<redacted>,UseNativeThreadPool,<redacted> --lang=en-US --mojo-named-platform-channel-pipe=2064.4820.<n> /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=4548,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4964 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --startup-read-main-dll --metrics-shmem-handle=2032,i,<n>,<n>,524288 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=2036 /prefetch:11 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView /prefetch:4 /pfhostedapp:<redacted> --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\\Crashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --annotation=plat=Win64 \"--annotation=prod=Edge WebView2\" --annotation=ver=140.0.3485.66 --initial-client-data=0x170,0x174,0x178,0x14c,0x180,0x7ff98ec02200,0x7ff98ec0220c,0x7ff98ec02218",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=1936,i,<n>,<n>,524288 --field-trial-handle=1856,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=1956 /prefetch:11 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView /prefetch:4 /pfhostedapp:<redacted> --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\\Crashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --annotation=plat=Win64 \"--annotation=prod=Edge WebView2\" --annotation=ver=140.0.3485.66 --initial-client-data=0x184,0x188,0x18c,0x160,0x1bc,0x7ff98a792200,0x7ff98a79220c,0x7ff98a792218",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView /prefetch:4 /pfhostedapp:<redacted> --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\\Crashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --annotation=plat=Win64 \"--annotation=prod=Edge WebView2\" --annotation=ver=140.0.3485.66 --initial-client-data=0x174,0x178,0x17c,0x118,0x11c,0x7ff98a792200,0x7ff98a79220c,0x7ff98a792218",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView /prefetch:4 /pfhostedapp:<redacted> --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\\Crashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --annotation=plat=Win64 \"--annotation=prod=Edge WebView2\" --annotation=ver=140.0.3485.66 --initial-client-data=0x184,0x188,0x18c,0x160,0x194,0x7ffa62a52200,0x7ffa62a5220c,0x7ffa62a52218",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=4856,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4216 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --embedded-browser-webview=1 --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --noerrdialogs --disable-features=msSmartScreenProtection --edge-webview-enable-mojo-ipcz --enable-features=<redacted> --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --lang=en-US --mojo-named-platform-channel-pipe=8108.7204.<n> /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=gpu-process --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1528,i,<n>,<n>,262144 --field-trial-handle=1856,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=1848 /prefetch:2 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=service --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=2356,i,<n>,<n>,524288 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3516 /prefetch:13 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=gpu-process --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1724,i,<n>,<n>,262144 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=1872 /prefetch:2 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=crashpad-handler --user-data-dir=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView /prefetch:4 /pfhostedapp:<redacted> --monitor-self-annotation=ptype=crashpad-handler --database=C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\\Crashpad --annotation=IsOfficialBuild=1 --annotation=channel= --annotation=chromium-version=140.0.7339.133 \"--annotation=exe=C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --annotation=plat=Win64 \"--annotation=prod=Edge WebView2\" --annotation=ver=140.0.3485.66 --initial-client-data=0x17c,0x180,0x184,0x154,0x19c,0x7ffa62a52200,0x7ffa62a5220c,0x7ffa62a52218",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=gpu-process --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1676,i,<n>,<n>,262144 --field-trial-handle=1880,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=1876 /prefetch:2 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=renderer --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=5 --js-flags=\"--expose-gc --ms-user-locale=\" --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --ram-no-pressure-read-main-dll --metrics-shmem-handle=3080,i,<n>,<n>,2097152 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3444 /pfhostedapp:<redacted> /prefetch:1",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=gpu-process --disable-gpu-sandbox --use-gl=disabled --gpu-vendor-id=5140 --gpu-device-id=140 --gpu-sub-system-id=0 --gpu-revision=0 --gpu-driver-version=10.0.26100.5074 --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --gpu-preferences=<redacted> --skip-read-main-dll --metrics-shmem-handle=5036,i,<n>,<n>,262144 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4804 /prefetch:10 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=renderer --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=5 --js-flags=\"--expose-gc --ms-user-locale=\" --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=<n> --ram-no-pressure-read-main-dll --metrics-shmem-handle=3532,i,<n>,<n>,2097152 --field-trial-handle=1856,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3556 /pfhostedapp:<redacted> /prefetch:1",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --skip-read-main-dll --metrics-shmem-handle=4952,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3668 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=renderer --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1 --num-raster-threads=1 --renderer-client-id=5 --js-flags=\"--expose-gc --ms-user-locale=\" --time-ticks-at-unix-epoch=-<n> --launch-time-ticks=26937059 --ram-no-pressure-read-main-dll --metrics-shmem-handle=3140,i,<n>,<n>,2097152 --field-trial-handle=1880,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=3480 /pfhostedapp:<redacted> /prefetch:1",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --skip-read-main-dll --metrics-shmem-handle=3668,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4164 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=4264,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4168 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=gpu-process --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --no-pre-read-main-dll --gpu-preferences=<redacted> --startup-read-main-dll --metrics-shmem-handle=1676,i,<n>,<n>,262144 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=1848 /prefetch:2 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --embedded-browser-webview=1 --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --noerrdialogs --disk-cache-size=52428800 --edge-webview-is-background --enable-features=<redacted>,UseNativeThreadPool,<redacted> --lang=en-US --mojo-named-platform-channel-pipe=5664.6032.<n> /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --ram-no-pressure-read-main-dll --metrics-shmem-handle=2360,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=4272 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --noerrdialogs --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=Widgets.exe --webview-exe-version=424.1301.2770.0 --embedded-browser-webview=1 --no-pre-read-main-dll --startup-read-main-dll --metrics-shmem-handle=2112,i,<n>,<n>,524288 --field-trial-handle=1852,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,UseNativeThreadPool,<redacted>,msCustomDataPartition,<redacted>,<redacted>,msWindowsTaskManager --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=2120 /prefetch:11 /pfhostedapp:<redacted>",
+      "pct": 2.3
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe\" --type=utility --utility-sub-type=unzip.mojom.Unzipper --lang=en-US --service-sandbox-type=service --noerrdialogs --user-agent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.6584) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 140.0.3485.66)\" --user-data-dir=\"C:\\Users\\<user>\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\EBWebView\" --webview-exe-name=SearchHost.exe --webview-exe-version=2125.21002.10.0 --embedded-browser-webview=1 --skip-read-main-dll --metrics-shmem-handle=4964,i,<n>,<n>,524288 --field-trial-handle=1924,i,<n>,<n>,262144 --enable-features=<redacted>,<redacted>,msCustomDataPartition,<redacted>,<redacted>,<redacted> --disable-features=BackForwardCache,<redacted>,<redacted>,CollectAVProductsInfo,<redacted>,EnableHangWatcher,FilterAdsOnAbusiveSites,GetWifiProtocol,LoginDetection,<redacted>,PreconnectToSearch,SafetyHub,SegmentationPlatform,<redacted>,Ukm,WebPayments,<redacted>,<redacted>,msAffirmVirtualCard,msAllowChromeWebstore,<redacted>,msApplicationGuard,<redacted>,<redacted>,msAutofillEdgeCoupons,<redacted>,<redacted>,<redacted>,msAutomaticTabFreeze,<redacted>,<redacted>,msDataProtection,msDesktopMode,msDesktopRewards,<redacted>,msEEProactiveHistory,<redacted>,<redacted>,msEdgeAdPlatformUI,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msEdgeCohorts,<redacted>,<redacted>,msEdgeComposeNext,<redacted>,msEdgeEnclavePrefsBasic,<redacted>,msEdgeFaviconService,msEdgeHJTelemetry,msEdgeHubAppSkype,msEdgeImageEditorUI,msEdgeLinkDoctor,<redacted>,<redacted>,msEdgeNewDeviceFre,msEdgeOnRampFRE,msEdgeOnRampImport,msEdgePDFCMHighlightUX,msEdgePasswordIris,<redacted>,<redacted>,msEdgeReadingView,msEdgeRose,msEdgeScreenshotUI,msEdgeSendTabToSelf,msEdgeSettingsImport,msEdgeSettingsImportV2,<redacted>,msEdgeShoppingUI,msEdgeSmartFind,<redacted>,<redacted>,msEdgeTranslate,<redacted>,msEdgeWebCapture,<redacted>,<redacted>,msEdgeWorkSearchBanner,<redacted>,msEnableMIPForPDF,msEnablePdfUpsell,<redacted>,msEnableWebSignInCta,<redacted>,msEndpointDlp,msEntityExtraction,<redacted>,msExternalTaskManager,<redacted>,msForceBrowserSignIn,msForeignSessionsPage,<redacted>,<redacted>,msGeolocationSQMService,msGeolocationService,<redacted>,msGuidedSwitchAllowed,msHubPinPersist,msImplicitSignin,msIrm,msIrmv2,msKlarnaVirtualCard,msLlmConsumerDlpPurview,msLoadStatistics,<redacted>,<redacted>,msMdatpWebSiteDlp,<redacted>,msNumberOfSitesToPin,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,<redacted>,msPdfDataRecovery,<redacted>,msPdfFreeText,msPdfFreeTextForCJK,msPdfHighlightMode,msPdfInking,msPdfKeyphraseSupport,msPdfOOUI,<redacted>,msPdfShare,msPdfSharedLibrary,msPdfTextNote,msPdfTextNoteMoreMenu,msPdfThumbnailCache,msPdfUnderside,msPdfViewRestore,msPersonalizationUMA,msPriceComparison,msPrintInWebView2,<redacted>,msReactiveSearch,msReadAloud,msReadAloudPdf,msRedirectToShoreline,msRevokeExtensions,msSaasDlp,msShoppingTrigger,msShorelineSearch,<redacted>,<redacted>,<redacted>,<redacted>,msSitePinningWithoutUi,msSmartScreenProtection,<redacted>,msSyncEdgeCollections,msTabResourceStats,<redacted>,msTouchMode,<redacted>,msUserUnderstanding,<redacted>,msWalletBuyNow,msWalletCheckout,<redacted>,msWalletHubEntry,msWalletHubIntlP3,msWalletPartialCard,<redacted>,<redacted>,<redacted>,<redacted>,msWebAssist,<redacted>,msWebOOUI,msWindowsTaskManager,msWindowsUserActivities,msZipPayVirtualCard --variations-seed-version --mojo-platform-channel-handle=5052 /prefetch:14 /pfhostedapp:<redacted>",
+      "pct": 2.3
     }
   ],
   "known_hashes": [
     {
       "algo": "md5",
-      "value": "d4ccfd8b07e2ebd183e54b0e3f0c8571",
+      "value": "be9bde9e62c9312d4cbd457bcbcd7dbb",
       "pct": 100
     },
     {
       "algo": "sha256",
-      "value": "aac9b39ae654dd0e50f9f8716217949ba8a6b70ec6efffe3fa83a43957d6855b",
+      "value": "3e69d3bdeef96ef731f491a27ec5c79a17d038f626ab246801b89486e67a9c55",
       "pct": 100
     },
     {
       "algo": "sha1",
-      "value": "b4da8e8531eda6ea9f2771756ef1e7aa1d835ae7",
+      "value": "f51c971e467c7b6d653cb6c7217f0355a070f8c6",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "49152:qet3Nal/v0tB8WsKnoP55xZp7KKxlMtrc+83SBvmLbT4G7oTOCvIEfNZSEk:1WBmRmxlyOol",
       "pct": 100
     },
     {
       "algo": "imphash",
-      "value": "733b9e748114eb977aba1c874d8bfbc0",
+      "value": "9acebdfac77931c2b0dfbbea2d494ba9",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "287d1449ebfecf4d94a59293434b23cfeca5bed2a11b3fd03770097403a1d1df",
       "pct": 100
     }
   ],

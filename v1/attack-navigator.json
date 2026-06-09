@@ -111,8 +111,8 @@
     {
       "techniqueID": "T1036.005",
       "enabled": true,
-      "score": 31,
-      "comment": "Referenced by: audiodg.exe, conhost.exe, csrss.exe, ctfmon.exe, dashost.exe, dllhost.exe, dwm.exe, explorer.exe, fontdrvhost.exe, logonui.exe, lsaiso.exe, lsass.exe, msmpeng.exe, runtimebroker.exe, searchhost.exe, searchindexer.exe, services.exe, shellexperiencehost.exe, sihost.exe, smartscreen.exe, smss.exe, startmenuexperiencehost.exe, svchost.exe, system, taskhostw.exe, taskmgr.exe, textinputhost.exe, userinit.exe, werfault.exe, wininit.exe, winlogon.exe"
+      "score": 34,
+      "comment": "Referenced by: audiodg.exe, conhost.exe, csrss.exe, ctfmon.exe, dashost.exe, dllhost.exe, dwm.exe, explorer.exe, fontdrvhost.exe, logonui.exe, lsaiso.exe, lsass.exe, memory compression, msmpeng.exe, registry, runtimebroker.exe, searchhost.exe, searchindexer.exe, secure system, services.exe, shellexperiencehost.exe, sihost.exe, smartscreen.exe, smss.exe, startmenuexperiencehost.exe, svchost.exe, system, taskhostw.exe, taskmgr.exe, textinputhost.exe, userinit.exe, werfault.exe, wininit.exe, winlogon.exe"
     },
     {
       "techniqueID": "T1047",
@@ -285,7 +285,14 @@
       "techniqueID": "T1137",
       "enabled": true,
       "score": 3,
-      "comment": "Referenced by: excel.exe, outlook.exe, winword.exe"
+      "comment": "Referenced by: excel.exe, outlook.exe, winword.exe",
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1137.005",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: olk.exe"
     },
     {
       "techniqueID": "T1140",
@@ -317,10 +324,16 @@
       "showSubtechniques": true
     },
     {
+      "techniqueID": "T1204.001",
+      "enabled": true,
+      "score": 1,
+      "comment": "Referenced by: olk.exe"
+    },
+    {
       "techniqueID": "T1204.002",
       "enabled": true,
-      "score": 4,
-      "comment": "Referenced by: excel.exe, explorer.exe, outlook.exe, winword.exe"
+      "score": 5,
+      "comment": "Referenced by: excel.exe, explorer.exe, olk.exe, outlook.exe, winword.exe"
     },
     {
       "techniqueID": "T1218",
@@ -559,8 +572,14 @@
     {
       "techniqueID": "T1566.001",
       "enabled": true,
+      "score": 2,
+      "comment": "Referenced by: olk.exe, outlook.exe"
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
       "score": 1,
-      "comment": "Referenced by: outlook.exe"
+      "comment": "Referenced by: olk.exe"
     },
     {
       "techniqueID": "T1569",
@@ -605,7 +624,7 @@
       "#1a56b0"
     ],
     "minValue": 0,
-    "maxValue": 31
+    "maxValue": 34
   },
   "legendItems": [],
   "showTacticRowBackground": false,

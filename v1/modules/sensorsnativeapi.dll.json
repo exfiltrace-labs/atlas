@@ -1,0 +1,11 @@
+{
+  "name": "sensorsnativeapi.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 0.2,
+      "lolbin": false
+    }
+  ]
+}

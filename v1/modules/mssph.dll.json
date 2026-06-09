@@ -1,0 +1,11 @@
+{
+  "name": "mssph.dll",
+  "loaded_by": [
+    {
+      "name": "searchprotocolhost.exe",
+      "weight": "uncommon",
+      "pct": 46.7,
+      "lolbin": false
+    }
+  ]
+}

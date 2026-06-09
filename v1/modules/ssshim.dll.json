@@ -1,0 +1,17 @@
+{
+  "name": "ssshim.dll",
+  "loaded_by": [
+    {
+      "name": "dismhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 7.7,
+      "lolbin": false
+    }
+  ]
+}

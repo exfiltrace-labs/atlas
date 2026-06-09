@@ -1,0 +1,11 @@
+{
+  "name": "exif.dll",
+  "loaded_by": [
+    {
+      "name": "onedrive.sync.service.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

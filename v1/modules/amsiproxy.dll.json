@@ -1,0 +1,17 @@
+{
+  "name": "amsiproxy.dll",
+  "loaded_by": [
+    {
+      "name": "consent.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    },
+    {
+      "name": "msmpeng.exe",
+      "weight": "rare",
+      "pct": 5.3,
+      "lolbin": false
+    }
+  ]
+}

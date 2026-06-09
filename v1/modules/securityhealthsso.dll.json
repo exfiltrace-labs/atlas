@@ -1,0 +1,11 @@
+{
+  "name": "securityhealthsso.dll",
+  "loaded_by": [
+    {
+      "name": "securityhealthsystray.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

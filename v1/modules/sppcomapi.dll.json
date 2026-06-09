@@ -1,0 +1,11 @@
+{
+  "name": "sppcomapi.dll",
+  "loaded_by": [
+    {
+      "name": "slui.exe",
+      "weight": "uncommon",
+      "pct": 33.3,
+      "lolbin": false
+    }
+  ]
+}

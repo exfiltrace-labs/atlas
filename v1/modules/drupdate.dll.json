@@ -1,0 +1,11 @@
+{
+  "name": "drupdate.dll",
+  "loaded_by": [
+    {
+      "name": "tiworker.exe",
+      "weight": "uncommon",
+      "pct": 30.8,
+      "lolbin": false
+    }
+  ]
+}

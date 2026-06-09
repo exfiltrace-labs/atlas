@@ -1,0 +1,11 @@
+{
+  "name": "mmcfxcommon.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 3.7,
+      "lolbin": false
+    }
+  ]
+}

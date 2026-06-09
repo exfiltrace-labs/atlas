@@ -1,0 +1,17 @@
+{
+  "name": "securityhealthagent.dll",
+  "loaded_by": [
+    {
+      "name": "securityhealthhost.exe",
+      "weight": "ubiquitous",
+      "pct": 80,
+      "lolbin": false
+    },
+    {
+      "name": "securityhealthservice.exe",
+      "weight": "uncommon",
+      "pct": 37.5,
+      "lolbin": false
+    }
+  ]
+}

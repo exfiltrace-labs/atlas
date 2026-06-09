@@ -1,0 +1,11 @@
+{
+  "name": "windowsbase.ni.dll",
+  "loaded_by": [
+    {
+      "name": "mscorsvw.exe",
+      "weight": "rare",
+      "pct": 9.1,
+      "lolbin": false
+    }
+  ]
+}

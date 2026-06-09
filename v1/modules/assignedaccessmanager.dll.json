@@ -1,0 +1,11 @@
+{
+  "name": "assignedaccessmanager.dll",
+  "loaded_by": [
+    {
+      "name": "devicecensus.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

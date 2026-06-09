@@ -1,0 +1,11 @@
+{
+  "name": "wininitext.dll",
+  "loaded_by": [
+    {
+      "name": "wininit.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

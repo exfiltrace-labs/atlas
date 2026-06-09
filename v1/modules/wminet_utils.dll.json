@@ -1,0 +1,11 @@
+{
+  "name": "wminet_utils.dll",
+  "loaded_by": [
+    {
+      "name": "ngentask.exe",
+      "weight": "uncommon",
+      "pct": 37.5,
+      "lolbin": false
+    }
+  ]
+}

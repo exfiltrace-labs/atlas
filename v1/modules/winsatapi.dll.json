@@ -1,0 +1,11 @@
+{
+  "name": "winsatapi.dll",
+  "loaded_by": [
+    {
+      "name": "provtool.exe",
+      "weight": "ubiquitous",
+      "pct": 100,
+      "lolbin": false
+    }
+  ]
+}

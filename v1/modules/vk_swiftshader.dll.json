@@ -1,0 +1,17 @@
+{
+  "name": "vk_swiftshader.dll",
+  "loaded_by": [
+    {
+      "name": "msedge.exe",
+      "weight": "rare",
+      "pct": 5.7,
+      "lolbin": true
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "weight": "rare",
+      "pct": 11.7,
+      "lolbin": true
+    }
+  ]
+}

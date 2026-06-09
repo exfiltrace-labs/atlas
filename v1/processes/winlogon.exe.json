@@ -13,6 +13,7 @@
   "about": "Every interactive session gets its own winlogon.exe. It's started by the same short-lived `smss.exe` copy that creates the session, so like `wininit.exe` it normally shows no parent in the process tree. It runs as `NT AUTHORITY\\SYSTEM` from `C:\\Windows\\System32\\winlogon.exe` and is a critical process, so terminating it will crash the system with a stop error (blue screen).\n\nwinlogon.exe oversees the secure sign-in process, including the classic **Secure Attention Sequence**, the Ctrl+Alt+Del prompt that ensures the user is interacting with the genuine Windows logon screen rather than a spoofed one. It starts `LogonUI.exe` to display the sign-in screen and coordinates with `lsass.exe` to verify the entered credentials. After a successful sign-in, it loads the user's `NTUSER.DAT` registry hive into `HKCU` and launches the shell (`userinit.exe`, which in turn starts `explorer.exe`) to bring up the desktop.\n\nBeyond initial logon, it continues to manage the session throughout its lifetime. It handles locking and unlocking the workstation, loading and running the screen saver during idle periods, and coordinating logoff and shutdown at the end of the session. In modern Windows, some duties that historically belonged to winlogon have been distributed to other processes, but it remains the anchor of the interactive logon experience.\n\nIts children on a modern system are a short list: `LogonUI.exe` at the sign-in screen, `userinit.exe` briefly at logon, plus `dwm.exe` (the Desktop Window Manager) and `fontdrvhost.exe`, which it starts for each session. Multiple winlogon.exe instances are normal whenever multiple sessions exist: one for the console, plus one per remote desktop connection.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -29,14 +30,21 @@
   },
   "file_versions": [
     {
-      "value": "10.0.26100.8117 (WinBuild.160101.0800)",
+      "value": "10.0.26100.4768 (WinBuild.160101.0800)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "936.00 KB",
+      "value": "932.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -50,14 +58,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 45,
+  "execution_rank": 95,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\winlogon.exe",
@@ -65,17 +73,370 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
-  "expected_grandchildren": [],
+  "expected_parents": [
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "logonui.exe",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "wlrmdr.exe",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "userinit.exe",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "rare",
+      "pct": 18.2
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "loaded_modules": [
+    {
+      "value": "kbdus.dll",
+      "weight": "ubiquitous",
+      "pct": 83.3
+    },
+    {
+      "value": "authz.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "p9np.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "dwminit.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "drprov.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "wkscli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "utcapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "profext.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "davclnt.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ntlanman.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "mpr.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "dsreg.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "camext.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "winlogon.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "uxinit.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "winlogonext.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "rare",
+      "pct": 16.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 16.7
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\wkssvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 1",
@@ -91,6 +452,11 @@
     }
   ],
   "token_privileges": [
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
     {
       "value": "SeCreateGlobalPrivilege",
       "weight": "ubiquitous",
@@ -112,17 +478,7 @@
       "pct": 100
     },
     {
-      "value": "SeImpersonatePrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeProfileSingleProcessPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeDebugPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -132,15 +488,61 @@
       "pct": 100
     },
     {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
       "value": "SeTcbPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "process_handles": [],
+  "process_handles": [
+    {
+      "value": "logonui.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wlrmdr.exe",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "csrss.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "userinit.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "wininit.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "fontdrvhost.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "consent.exe",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -175,8 +577,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "winlogon.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "md5",
+      "value": "d0c2818dd012ed4208baf9071f4083e5",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "b10dfb64923bbc16a2fe2e7fed1a0df34f5b8aa9",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "c41d07aa4551194bfefb345941e1a68399f3448e11f1a6bcbd6ca8f6f7fc0d0b",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "e69da191c10719269c8283a2998db55a",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "b0752daabaabe2cc836af172fced09662bb8e3700111b32b3472822558841c15",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "b65071aebb81fb0549be10d4c3713940",
+      "pct": 100
+    }
+  ],
   "security_notes": "Because of its trusted status and its role in authentication, winlogon.exe is a frequent target for impersonation by malware seeking to blend in or intercept credentials (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Treat copies in other locations, or slight misspellings such as `winlogan.exe` or `winlogon32.exe`, as anomalies.\n\nThe Winlogon registry key is a long-standing persistence target (T1547.004). The `Userinit` and `Shell` values under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon` tell winlogon.exe what to run at logon, and malware appends its own entry to start with every sign-in. Anything in those values beyond `userinit.exe` and `explorer.exe` warrants a review.\n\nA command shell running under winlogon.exe is a well-known backdoor pattern. Replacing accessibility tools like `sethc.exe` (Sticky Keys) or `utilman.exe` with `cmd.exe` produces a SYSTEM shell at the logon screen, no credentials required, and that shell appears in the process tree as a child of winlogon.exe (T1546.008).\n",
   "mitre_attack": [
     "T1036.005",

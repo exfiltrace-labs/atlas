@@ -1,0 +1,17 @@
+{
+  "name": "diagnosticdataquery.dll",
+  "loaded_by": [
+    {
+      "name": "aggregatorhost.exe",
+      "weight": "common",
+      "pct": 66.7,
+      "lolbin": false
+    },
+    {
+      "name": "microsoftedgeupdate.exe",
+      "weight": "rare",
+      "pct": 8.3,
+      "lolbin": false
+    }
+  ]
+}

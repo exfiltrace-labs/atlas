@@ -1,0 +1,342 @@
+{
+  "name": "wlrmdr.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [
+    "lolbin"
+  ],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "WLRMNDR.EXE.MUI",
+    "internal_name": "WLRMNDR.EXE",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "150.70 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "3b77db29ac72aa6b5880ecb2ed5ec1ec6601d847",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 94.8,
+  "host_prevalence": 100,
+  "execution_rank": 28,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 5,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\wlrmdr.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "winlogon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wlrmdr.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 80
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "windows.ui.immersive.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "-c -s 0 -f 0 -t Empty -m Empty -a 0 -u Empty",
+      "pct": 60
+    },
+    {
+      "command": "-s -1 -f 2 -t You're about to be signed out -m <user> setup complete - restarting for a clean boot -a 3",
+      "pct": 20
+    },
+    {
+      "command": "-s -1 -f 2 -t You're about to be signed out -m Windows will shut down in less than a minute. -a 3",
+      "pct": 20
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "0ce1167f022650e5c6f6a3764cf80084",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "3cf0a02c0c62003a67395f02311dd23cd1ef59b99a56dea9ba4382942501130b",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "1b3180c11879da281ca8cb1aac88db34080fcd1d",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "9b1ced9ca13151635455404b7969f73e",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "bff686c352a95b3333999e441e3ed823",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "97932708ddf993e58357d050480c9519709cda3225c93ded4af32e162b931277",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Wlrmdr/",
+    "commands": [
+      {
+        "command": "wlrmdr.exe -s 3600 -f 0 -t _ -m _ -a 11 -u {PATH:.exe}",
+        "usecase": "Use wlrmdr as a proxy binary to evade defensive countermeasures",
+        "mitreID": "T1202",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "9cfc00b6-bfb7-49ce-9781-ef78503154bb",
+      "title": "Wlrmdr.EXE Uncommon Argument Or Child Process",
+      "level": "medium",
+      "techniques": [
+        "T1218"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wlrmdr_uncommon_child_process.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1202",
+      "name": "Indirect Command Execution",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    }
+  ]
+}

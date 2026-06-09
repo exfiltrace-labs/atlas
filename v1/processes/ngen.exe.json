@@ -11,43 +11,426 @@
   ],
   "description": "ngen.exe is the .NET Native Image Generator, which precompiles .NET assemblies to native code for faster startup. It runs as part of .NET servicing. Attackers abuse the scheduled tasks and execution paths around it to run code through a signed Microsoft binary.\n",
   "about": "ngen.exe compiles managed assemblies into native images and maintains those images, work normally driven by .NET setup and by the \".NET Framework NGEN\" scheduled tasks that run during idle time. It ships with the .NET Framework, so the genuine binary lives under `C:\\Windows\\Microsoft.NET\\Framework` and `Framework64`, not `System32`.\n\nLegitimately, ngen runs automatically after .NET updates and during maintenance windows, parented by the Task Scheduler. Interactive or oddly-parented invocations are what give an instance meaning.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "33000004046C7406FF572B2772000000000404",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (console)",
+    "original_name": "ngen.exe",
+    "internal_name": "ngen.exe",
+    "product": "Microsoft® .NET Framework",
+    "copyright": "© Microsoft Corporation.  All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "4.8.9221.0 built by: NET481REL1LAST_25H2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "171.10 KB",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "140.60 KB",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "x86",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "8f985be8fd256085c90a95d3c74580511a1db975",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 99.4,
+  "host_prevalence": 100,
+  "execution_rank": 4,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 92,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe",
+      "weight": "common",
+      "pct": 55.4
+    },
+    {
+      "value": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe",
+      "weight": "uncommon",
+      "pct": 44.6
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "ngentask.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "mscorsvw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "taskhostw.exe",
+      "weight": "rare",
+      "pct": 5.4
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
-  "instance_counts": [],
-  "token_privileges": [],
-  "process_handles": [],
-  "os_prevalence": [],
+  "loaded_modules": [
+    {
+      "value": "ucrtbase.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "mscoreei.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "mscorsvc.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "ngen.exe",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "combase.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "ucrtbase_clr0400.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "user32.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "vcruntime140_clr0400.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "version.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "fusion.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "mscoree.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "ubiquitous",
+      "pct": 97.9
+    },
+    {
+      "value": "vcruntime140_1_clr0400.dll",
+      "weight": "common",
+      "pct": 54.3
+    },
+    {
+      "value": "wow64win.dll",
+      "weight": "uncommon",
+      "pct": 43.6
+    },
+    {
+      "value": "wow64.dll",
+      "weight": "uncommon",
+      "pct": 43.6
+    },
+    {
+      "value": "wow64cpu.dll",
+      "weight": "uncommon",
+      "pct": 43.6
+    },
+    {
+      "value": "wow64base.dll",
+      "weight": "uncommon",
+      "pct": 43.6
+    },
+    {
+      "value": "wow64con.dll",
+      "weight": "uncommon",
+      "pct": 43.6
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "rare",
+      "pct": 5.3
+    },
+    {
+      "value": "clr.dll",
+      "weight": "rare",
+      "pct": 3.2
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "<Anonymous Pipe>",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "SYSTEM",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDelegateSessionUserImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeIncreaseWorkingSetPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeDebugPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeProfileSingleProcessPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeSystemProfilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTimeZonePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePermanentPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeLockMemoryPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeTcbPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateSymbolicLinkPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreatePagefilePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeAuditPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "mscorsvw.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path outside the `Microsoft.NET\\Framework` directories",
@@ -66,8 +449,436 @@
       "severity": "high"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" ExecuteQueuedItems 2 /LegacyServiceBehavior",
+      "pct": 2.2
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" ExecuteQueuedItems 2 /LegacyServiceBehavior",
+      "pct": 2.2
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" install \"System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=<hex>\" /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior",
+      "pct": 2.2
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Wcffedcb4#\\<redacted>\\Microsoft.WindowsSearch.Commands.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.S0f8e494c#\\<redacted>\\Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.We0722664#\\<redacted>\\Microsoft.WSMan.Management.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.W0bb5dac4#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.UpdateDiagRootcause.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W193497eb#\\<redacted>\\Microsoft.WSMan.Runtime.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.W708fc392#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.WriteDiagProgress.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P9de5a786#\\<redacted>\\Microsoft.PowerShell.Management.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\TaskScheduler\\<redacted>\\TaskScheduler.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\SrpUxSnapIn\\<redacted>\\SrpUxSnapIn.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.S88747207#\\<redacted>\\Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" install \"System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=<hex>\" /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.I0cd65b90#\\<redacted>\\Microsoft.Isam.Esent.Interop.Wsa.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.W193497eb#\\<redacted>\\Microsoft.WSMan.Runtime.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.S1bc92e04#\\<redacted>\\Microsoft.SecureBoot.Commands.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Mf5ac9168#\\<redacted>\\Microsoft.Management.Infrastructure.CimCmdlets.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\EventViewer\\<redacted>\\EventViewer.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.W79a81d80#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.WriteDiagTelemetry.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W69ef49d2#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.GetDiagInput.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\SecurityAudf6921413#\\<redacted>\\<redacted>.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.D0ff51f83#\\<redacted>\\Microsoft.Dtc.PowerShell.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P08ac43d5#\\<redacted>\\Microsoft.PowerShell.Utility.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P9de5a786#\\<redacted>\\Microsoft.PowerShell.Management.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.W3cdb5602#\\<redacted>\\Microsoft.Windows.Diagnosis.TroubleshootingPack.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.W69ef49d2#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.GetDiagInput.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W0bb5dac4#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.UpdateDiagRootcause.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.S356e1ba0#\\<redacted>\\Microsoft.Security.ApplicationId.PolicyManagement.PolicyEngineApi.Interop.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.I0cd65b90#\\<redacted>\\Microsoft.Isam.Esent.Interop.Wsa.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.C99be4d25#\\<redacted>\\Microsoft.ConfigCI.Commands.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Sa56e3556#\\<redacted>\\Microsoft.Security.ApplicationId.Wizards.<redacted>.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Pefb7a36b#\\<redacted>\\Microsoft.PowerShell.Workflow.ServiceCore.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.A26c32abb#\\<redacted>\\Microsoft.ApplicationId.RuleWizard.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P1706cafe#\\<redacted>\\Microsoft.PowerShell.Commands.Diagnostics.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P39041136#\\<redacted>\\Microsoft.PowerShell.ScheduledJob.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Pd3efef62#\\<redacted>\\Microsoft.PowerShell.ISECommon.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P34f388c1#\\<redacted>\\Microsoft.PowerShell.Diagnostics.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P10d01611#\\<redacted>\\Microsoft.PowerShell.Editor.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P0e11b656#\\<redacted>\\Microsoft.PowerShell.GPowerShell.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Pad0e0718#\\<redacted>\\Microsoft.PowerShell.Cmdletization.OData.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Wad78daf4#\\<redacted>\\Microsoft.Windows.Diagnosis.SDHost.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P655586bb#\\<redacted>\\Microsoft.PowerShell.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Pcd26229b#\\<redacted>\\Microsoft.PowerShell.GraphicalHost.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\EventViewer\\<redacted>\\EventViewer.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\AuditPolicy42d3d2cc#\\<redacted>\\<redacted>.Interop.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\napinit\\<redacted>\\napinit.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\SrpUxSnapIn\\<redacted>\\SrpUxSnapIn.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Wd75d181a#\\<redacted>\\Microsoft.Windows.Diagnosis.SDEngine.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W79a81d80#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.WriteDiagTelemetry.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.S356e1ba0#\\<redacted>\\Microsoft.Security.ApplicationId.PolicyManagement.PolicyEngineApi.Interop.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Wd518ee0d#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.UpdateDiagReport.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.We9f24001#\\<redacted>\\Microsoft.WSMan.Management.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Wcffedcb4#\\<redacted>\\Microsoft.WindowsSearch.Commands.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.D0ff51f83#\\<redacted>\\Microsoft.Dtc.PowerShell.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\napinit\\<redacted>\\napinit.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Ic1a2041b#\\<redacted>\\Microsoft.Isam.Esent.Interop.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.I7676db1a#\\<redacted>\\Microsoft.InternationalSettings.Commands.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P08ac43d5#\\<redacted>\\Microsoft.PowerShell.Utility.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W3cdb5602#\\<redacted>\\Microsoft.Windows.Diagnosis.TroubleshootingPack.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.S54faafb0#\\<redacted>\\Microsoft.Security.ApplicationId.PolicyManagement.PolicyManager.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P655586bb#\\<redacted>\\Microsoft.PowerShell.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Abf69f55a#\\<redacted>\\Microsoft.ApplicationId.Framework.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.T9d753d8c#\\<redacted>\\Microsoft.Tpm.Commands.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W708fc392#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.WriteDiagProgress.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.A26c32abb#\\<redacted>\\Microsoft.ApplicationId.RuleWizard.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Sb6a1f1bc#\\<redacted>\\Microsoft.Security.ApplicationId.PolicyManagement.XmlHelper.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P34f388c1#\\<redacted>\\Microsoft.PowerShell.Diagnostics.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Ic1a2041b#\\<redacted>\\Microsoft.Isam.Esent.Interop.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P047767ce#\\<redacted>\\Microsoft.PowerShell.Core.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Abf69f55a#\\<redacted>\\Microsoft.ApplicationId.Framework.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Wd518ee0d#\\<redacted>\\Microsoft.Windows.Diagnosis.Commands.UpdateDiagReport.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.We9f24001#\\<redacted>\\Microsoft.WSMan.Management.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W2ded559f#\\<redacted>\\Microsoft.<redacted>.Commands.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.P6f9a5e83#\\<redacted>\\Microsoft.PowerShell.Security.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\AuditPolicy42d3d2cc#\\<redacted>\\<redacted>.Interop.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Sa56e3556#\\<redacted>\\Microsoft.Security.ApplicationId.Wizards.<redacted>.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P047767ce#\\<redacted>\\Microsoft.PowerShell.Core.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.Wed3937f9#\\<redacted>\\Microsoft.Windows.Diagnosis.SDCommon.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Wad78daf4#\\<redacted>\\Microsoft.Windows.Diagnosis.SDHost.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.S88747207#\\<redacted>\\Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.C26a36d2b#\\<redacted>\\Microsoft.CertificateServices.PKIClient.Cmdlets.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\TaskScheduler\\<redacted>\\TaskScheduler.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f9a5e83#\\<redacted>\\Microsoft.PowerShell.Security.Activities.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pefb7a36b#\\<redacted>\\Microsoft.PowerShell.Workflow.ServiceCore.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_64\\Microsoft.W2d29a719#\\<redacted>\\Microsoft.Windows.DSC.CoreConfProviders.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P1706cafe#\\<redacted>\\Microsoft.PowerShell.Commands.Diagnostics.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Wed3937f9#\\<redacted>\\Microsoft.Windows.Diagnosis.SDCommon.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    },
+    {
+      "command": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.exe\" uninstall \"C:\\WINDOWS\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\<redacted>\\Microsoft.Management.Infrastructure.ni.dll\" /noroot /LegacyServiceBehavior",
+      "pct": 1.1
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "b90f862dd10203126c2203925d6a734f7d760124",
+      "pct": 55.4
+    },
+    {
+      "algo": "md5",
+      "value": "63d750942008cb39e0dfcb846f8fdd6b",
+      "pct": 55.4
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:guXq/Ugwz+NiNkDzyXXa2OH+m6QijSJM8q93e3HQOtjHesD8cwf:rXq/Iz+NqkKXqdWMqyesDlO",
+      "pct": 55.4
+    },
+    {
+      "algo": "authentihash",
+      "value": "c7eb99c593adc8a1dce670a90ef70f02b7fb6741a218b2e4d9b46f9950d8bb4f",
+      "pct": 55.4
+    },
+    {
+      "algo": "imphash",
+      "value": "3c429a2778a2bb17c4e9a05c076b8388",
+      "pct": 55.4
+    },
+    {
+      "algo": "sha256",
+      "value": "8afec5da1a2b6bc377e0eb2a4db2685b903073ddac4c5b3c401fea0cf41c2d5a",
+      "pct": 55.4
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "8465dec648ce930d4d6b813c8e818d48",
+      "pct": 55.4
+    },
+    {
+      "algo": "sha1",
+      "value": "0f1063ee8bf20b86f6e2fcdd90abe2c4b7de6816",
+      "pct": 44.6
+    },
+    {
+      "algo": "md5",
+      "value": "c5142fe1be3cae2f698bb6a0fd9e0023",
+      "pct": 44.6
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:PT1qCHWiL1V6oSpCoocZzglMtN4ucV+ZP+ZcKga2g/y1vpb9VF8jix6hXunnjUZi:PT152iLioUBskLZPbKIg/y1vpb9VF8je",
+      "pct": 44.6
+    },
+    {
+      "algo": "authentihash",
+      "value": "e162b9f4cc570dfc6ba74762d9af357573c1b5aa7fc3933651ed22c33496bd81",
+      "pct": 44.6
+    },
+    {
+      "algo": "imphash",
+      "value": "38781c8388ecf6f3b9210ef96aeadbaa",
+      "pct": 44.6
+    },
+    {
+      "algo": "sha256",
+      "value": "6eab4808d956f519a0440cc1a41c85664fc047da53c1eb8fa7932d83aa65e66e",
+      "pct": 44.6
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "69990868661b4ee500f0f37965ace766",
+      "pct": 44.6
+    }
+  ],
   "security_notes": "ngen.exe is a system-binary proxy and a persistence aid (T1218). Because it compiles and can trigger execution of .NET assemblies, it has been used to run attacker code under a trusted Microsoft binary, bypassing application-control rules that allow .NET tooling. The built-in NGEN scheduled tasks are also a persistence surface: pointing them at attacker code gives a SYSTEM-context execution that runs during normal maintenance.\n\nBecause ngen legitimately runs only as part of .NET servicing, an ngen invoked interactively, by an Office or script-host parent, or against an assembly in a user-writable path is what separates abuse from routine native-image generation.\n",
   "mitre_attack": [
     "T1218"

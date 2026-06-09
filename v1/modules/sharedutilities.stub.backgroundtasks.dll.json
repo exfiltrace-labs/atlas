@@ -1,0 +1,11 @@
+{
+  "name": "sharedutilities.stub.backgroundtasks.dll",
+  "loaded_by": [
+    {
+      "name": "backgroundtaskhost.exe",
+      "weight": "rare",
+      "pct": 6.8,
+      "lolbin": false
+    }
+  ]
+}

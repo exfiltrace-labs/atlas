@@ -1,0 +1,11 @@
+{
+  "name": "waasmedicsvc.dll",
+  "loaded_by": [
+    {
+      "name": "svchost.exe",
+      "weight": "rare",
+      "pct": 1.2,
+      "lolbin": false
+    }
+  ]
+}

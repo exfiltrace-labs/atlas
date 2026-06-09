@@ -1,0 +1,883 @@
+{
+  "name": "onedrivesetup.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2010",
+  "cert_serial": "33000005CF0AEA6CF5BE19CF920000000005CF",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "OneDriveSetup.exe",
+    "internal_name": "OneDriveSetup.exe",
+    "product": "Microsoft OneDrive",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "26.088.0510.0004",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "25.087.0506.0001",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "117017.90 KB",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "87667.80 KB",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "84b71332947747a3826d84017dfd36960e99b370",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "772b07b19c91cbf81994e4fcf0a664ecca65f36e",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 91.4,
+  "host_prevalence": 100,
+  "execution_rank": 37,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 4,
+  "expected_paths": [
+    {
+      "value": "C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "C:\\Windows\\System32\\OneDriveSetup.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "filesyncconfig.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "onedrive.sync.service.exe",
+      "weight": "rare",
+      "pct": 12.5
+    },
+    {
+      "value": "microsoft.sharepoint.exe",
+      "weight": "rare",
+      "pct": 12.5
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "onedrive.exe",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_ports": [
+    {
+      "value": "443/tcp",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "80/tcp",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "listening_ports": [],
+  "network_destinations": [
+    {
+      "value": "rogers.com",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "akamaitechnologies.com",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "loaded_modules": [
+    {
+      "value": "wofutil.dll",
+      "weight": "ubiquitous",
+      "pct": 75
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.networking.connectivity.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cldapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdiplus.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wscapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wer.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.system.diagnostics.telemetry.platformtelemetryclient.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bitsproxy.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rstrtmgr.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dnsapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "netprofm.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rasadhlp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "version.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dhcpcsvc.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "fltlib.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "fwpuclnt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "npmproxy.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "uncommon",
+      "pct": 37.5
+    },
+    {
+      "value": "wldp.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "smartscreenps.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "sfc_os.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "pcacli.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ondemandconnroutehelper.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "webio.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "ncryptsslp.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "virtdisk.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "servicingcommon.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "setupapi.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "shdocvw.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "mpr.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "dhcpcsvc6.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "uncommon",
+      "pct": 25
+    },
+    {
+      "value": "schannel.dll",
+      "weight": "uncommon",
+      "pct": 25
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\srvsvc",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "2",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "onedrive.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "onedrivesetup.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "filesyncconfig.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "microsoft.sharepoint.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "onedrive.sync.service.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "filecoauth.exe",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe\" /update /restart /updateSource:ODU",
+      "pct": 25
+    },
+    {
+      "command": "\"C:\\Windows\\System32\\OneDriveSetup.exe\" /thfirstsetup",
+      "pct": 25
+    },
+    {
+      "command": "C:\\Windows\\System32\\OneDriveSetup.exe /thfirstsetup  /peruser  /childprocess  <redacted>  /renameReplaceODSUExe  <redacted>  <redacted>  /installWebView2  <redacted> <redacted> <redacted> <redacted>",
+      "pct": 25
+    },
+    {
+      "command": "C:\\Users\\<user>\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe /update /restart /updateSource:ODU  /peruser  /childprocess  <redacted>  <redacted>  /renameReplaceODSUExe  <redacted>  <redacted>  /installWebView2  <redacted> <redacted> <redacted> <redacted> <redacted> <redacted> <redacted> <redacted> <redacted>:1 <redacted>",
+      "pct": 25
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "3145728:MVyblR/c1N5DjI512SYEGVjPDuzoRz2aI/BeaaRij5gNOtCbZ:AyBxc1NZ0z/DGVmkRz2a4cRxi0Z",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "669f40d7d3578db2426c6e28738ab972",
+      "pct": 50
+    },
+    {
+      "algo": "imphash",
+      "value": "62a2f6c6fbc2671061ab95b73760d19b",
+      "pct": 50
+    },
+    {
+      "algo": "sha1",
+      "value": "10749f83cda8863ffb83593a7a986fe7be156580",
+      "pct": 50
+    },
+    {
+      "algo": "sha1",
+      "value": "054ff47240288181f2f472c9dc4a04c9c194d083",
+      "pct": 50
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "c7b063e73eb40ffb85b37dbac29d6424",
+      "pct": 50
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "cfbb1de83728cf3b6d624cbc28fed699",
+      "pct": 50
+    },
+    {
+      "algo": "authentihash",
+      "value": "c87503cd83f7372d0ab1cbe0dfe0985bc262019e32f1ac7ff4800b946b80308e",
+      "pct": 50
+    },
+    {
+      "algo": "authentihash",
+      "value": "6865fd05a7560317b99b8876d8d06e76b3f47d774fbee1b7aa8231bc9a226dda",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "d1c1b9ccb7c30c0bce81d15b33618535",
+      "pct": 50
+    },
+    {
+      "algo": "md5",
+      "value": "817e8ca6de7bd64a0396278fae52b281",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "0e175c6e4484196f3dc388e764b5674bbb08aef6fbefef9484c885fde36306b1",
+      "pct": 50
+    },
+    {
+      "algo": "sha256",
+      "value": "18980a6b7fbfdada0f00789b229ed6331779611286102abcfa0917edb0bee82c",
+      "pct": 50
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "e700ff14-1bff-4d1d-9438-738dff5f0466",
+      "title": "BITS Client BitsProxy DLL Loaded By Uncommon Process",
+      "level": "low",
+      "techniques": [
+        "T1197"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/image_load/image_load_dll_bitsproxy_load_by_uncommon_process.yml",
+      "match": "image"
+    },
+    {
+      "id": "bafd07c6-3ea5-454a-b4be-058fbb073de7",
+      "title": "Potential Executable Run Itself As Sacrificial Process",
+      "level": "low",
+      "techniques": [
+        "T1055"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules-threat-hunting/windows/process_creation/proc_creation_win_susp_parent_execute_itself.yml",
+      "match": "image"
+    }
+  ]
+}

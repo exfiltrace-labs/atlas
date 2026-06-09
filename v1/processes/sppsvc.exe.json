@@ -1,0 +1,451 @@
+{
+  "name": "sppsvc.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "sppsvc.exe.mui",
+    "internal_name": "sppsvc",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.4484 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "4710.50 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 97.3,
+  "host_prevalence": 100,
+  "execution_rank": 15,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 10,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\sppsvc.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "services.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "wininit.exe",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "sppwinob.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "dsrole.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "sppobjs.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "netapi32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "webservices.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "clipc.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "taskschd.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "sppsvc.exe",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "pkeyhelper.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "cryptxml.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 45.5
+    },
+    {
+      "value": "mobilenetworking.dll",
+      "weight": "uncommon",
+      "pct": 40.9
+    },
+    {
+      "value": "wwapi.dll",
+      "weight": "uncommon",
+      "pct": 40.9
+    },
+    {
+      "value": "sxs.dll",
+      "weight": "rare",
+      "pct": 4.5
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "rare",
+      "pct": 4.5
+    }
+  ],
+  "named_pipes": [],
+  "user_contexts": [
+    {
+      "value": "NETWORK SERVICE",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 0",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeCreateGlobalPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeImpersonatePrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 86.7
+    },
+    {
+      "value": "runtimebroker.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "taskhostw.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    },
+    {
+      "value": "wmiprvse.exe",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "wlms.exe",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "rare",
+      "pct": 13.3
+    },
+    {
+      "value": "devicecensus.exe",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "sppextcomobj.exe",
+      "weight": "rare",
+      "pct": 6.7
+    },
+    {
+      "value": "slui.exe",
+      "weight": "rare",
+      "pct": 6.7
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\sppsvc.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "1f409aed2119323d6ff7035bcf08968a",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "da7e8cd03daa1d83979c51903b7328316caae085",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "8940986c6abca966d645c0b1146932cc6f6caf6eec5a2e2bc3f4ab82d372502e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "989e0a60ceb4806d2c8b544f6bca94d83fcb6f7c2175afea3b305023128301c8",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "9153d600b2291d98055fbc6dbaf60b79",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "0ddd99c4b9343cc6e270eeac14476c6e",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "sigma": [
+    {
+      "id": "4b991083-3d0e-44ce-8fc4-b254025d8d4b",
+      "title": "Unusual Parent Process For Cmd.EXE",
+      "level": "medium",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_unusual_parent.yml",
+      "match": "parent"
+    }
+  ]
+}

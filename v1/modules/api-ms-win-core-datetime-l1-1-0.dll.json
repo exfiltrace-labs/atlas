@@ -1,0 +1,11 @@
+{
+  "name": "api-ms-win-core-datetime-l1-1-0.dll",
+  "loaded_by": [
+    {
+      "name": "tiworker.exe",
+      "weight": "rare",
+      "pct": 7.7,
+      "lolbin": false
+    }
+  ]
+}

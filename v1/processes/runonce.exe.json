@@ -1,0 +1,235 @@
+{
+  "name": "runonce.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [
+    "lolbin"
+  ],
+  "description": null,
+  "about": null,
+  "publisher": null,
+  "issuer": null,
+  "cert_serial": null,
+  "signed": null,
+  "signing_rate": null,
+  "signing_algorithm": null,
+  "signers": [],
+  "file_details": null,
+  "file_versions": [],
+  "file_sizes": [],
+  "architectures": [],
+  "cert_thumbprints": [],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 75,
+  "host_prevalence": 100,
+  "execution_rank": 131,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": null,
+  "expected_paths": [],
+  "expected_parents": [],
+  "expected_children": [
+    {
+      "value": "shutdown.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [],
+  "expected_grandchildren": [
+    {
+      "value": "conhost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [],
+  "named_pipes": [],
+  "user_contexts": [],
+  "integrity_levels": [],
+  "sessions": [],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [
+    {
+      "value": "shutdown.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [],
+  "known_hashes": [],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": [],
+  "lolbas": {
+    "url": "https://lolbas-project.github.io/lolbas/Binaries/Runonce/",
+    "commands": [
+      {
+        "command": "Runonce.exe /AlternateShellStartup",
+        "usecase": "Persistence, bypassing defensive counter measures",
+        "mitreID": "T1218",
+        "category": "Execute"
+      }
+    ]
+  },
+  "sigma": [
+    {
+      "id": "f35c5d71-b489-4e22-a115-f003df287317",
+      "title": "Potential CobaltStrike Process Patterns",
+      "level": "high",
+      "techniques": [
+        "T1059"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_cobaltstrike_process_patterns.yml",
+      "match": "parent"
+    },
+    {
+      "id": "2d32dd6f-3196-4093-b9eb-1ad8ab088ca5",
+      "title": "Suspicious Response File Execution Via Odbcconf.EXE",
+      "level": "high",
+      "techniques": [
+        "T1218.008"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_odbcconf_response_file_susp.yml",
+      "match": "parent"
+    },
+    {
+      "id": "e4a6b256-3e47-40fc-89d2-7a477edd6915",
+      "title": "System File Execution Location Anomaly",
+      "level": "high",
+      "techniques": [
+        "T1036"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml",
+      "match": "image"
+    },
+    {
+      "id": "285b85b1-a555-4095-8652-a8a4106af63f",
+      "title": "Suspicious Rundll32 Setupapi.dll Activity",
+      "level": "medium",
+      "techniques": [
+        "T1218.011"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_setupapi_installhinfsection.yml",
+      "match": "image"
+    },
+    {
+      "id": "198effb6-6c98-4d0c-9ea3-451fa143c45c",
+      "title": "Run Once Task Execution as Configured in Registry",
+      "level": "low",
+      "techniques": [
+        "T1112"
+      ],
+      "url": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_runonce_execution.yml",
+      "match": "image"
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1070.009",
+      "name": "Indicator Removal: Clear Persistence",
+      "curated": false,
+      "lolbas": false,
+      "software": [
+        {
+          "id": "S1130",
+          "name": "Raspberry Robin"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1218",
+      "name": "System Binary Proxy Execution",
+      "curated": false,
+      "lolbas": true,
+      "tactics": [
+        {
+          "name": "Stealth",
+          "order": 6
+        }
+      ]
+    },
+    {
+      "id": "T1547.001",
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "curated": false,
+      "lolbas": false,
+      "groups": [
+        {
+          "id": "G0046",
+          "name": "FIN7"
+        },
+        {
+          "id": "G0094",
+          "name": "Kimsuky"
+        }
+      ],
+      "software": [
+        {
+          "id": "S0622",
+          "name": "AppleSeed"
+        },
+        {
+          "id": "S1053",
+          "name": "AvosLocker"
+        },
+        {
+          "id": "S0561",
+          "name": "GuLoader"
+        },
+        {
+          "id": "S0336",
+          "name": "NanoCore"
+        },
+        {
+          "id": "S0254",
+          "name": "PLAINTEE"
+        },
+        {
+          "id": "S1242",
+          "name": "Qilin"
+        },
+        {
+          "id": "S1130",
+          "name": "Raspberry Robin"
+        },
+        {
+          "id": "S9037",
+          "name": "RustyWater"
+        }
+      ],
+      "tactics": [
+        {
+          "name": "Persistence",
+          "order": 4
+        },
+        {
+          "name": "Privilege Escalation",
+          "order": 5
+        }
+      ]
+    }
+  ]
+}

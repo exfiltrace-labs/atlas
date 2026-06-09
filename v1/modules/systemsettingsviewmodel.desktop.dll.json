@@ -1,0 +1,11 @@
+{
+  "name": "systemsettingsviewmodel.desktop.dll",
+  "loaded_by": [
+    {
+      "name": "runtimebroker.exe",
+      "weight": "rare",
+      "pct": 3.1,
+      "lolbin": false
+    }
+  ]
+}

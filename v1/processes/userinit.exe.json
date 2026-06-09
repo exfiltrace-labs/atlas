@@ -11,43 +11,266 @@
   ],
   "description": "userinit.exe is the Userinit Logon Application, the process that prepares a user's environment at sign-in and then hands off to the desktop. After winlogon.exe authenticates the user, it runs userinit.exe to do the work that makes the session usable: applying group policy, running logon scripts, and reconnecting mapped network drives. With the environment in place, it launches the desktop shell and exits.\n",
   "about": "userinit.exe is launched by `winlogon.exe` as soon as a user authenticates, and it runs as that user from `C:\\Windows\\System32\\userinit.exe`. Its job is the per-user setup that turns a bare session into a working desktop: applying Group Policy, running any logon scripts, and restoring mapped network drives.\n\nOnce that setup is done, userinit.exe starts the user's shell and exits right away. Because its parent is gone almost immediately, `explorer.exe` and the rest of the session appear as orphans in the process tree, with no living parent. The shell it launches is whatever the `Shell` value names under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon`, normally `explorer.exe`.\n\nThe genuine userinit.exe is a trusted, signed Microsoft system file. It runs for only a second or two at each logon and then exits, so it rarely shows up in a point-in-time process listing.\n",
-  "publisher": null,
-  "issuer": null,
-  "signed": null,
-  "signing_rate": null,
-  "signing_algorithm": null,
-  "signers": [],
-  "file_details": null,
-  "file_versions": [],
-  "file_sizes": [],
-  "cert_thumbprints": [],
-  "provenance": "curated",
-  "prevalence_band": "unknown",
-  "prevalence_score": null,
-  "host_prevalence": null,
-  "execution_rank": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000518418419ADCBAD294F000000000518",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Windows"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "USERINIT.EXE.MUI",
+    "internal_name": "userinit",
+    "product": "Microsoft® Windows® Operating System",
+    "copyright": "© Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "10.0.26100.1 (WinBuild.160101.0800)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "140.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "facde3d80e99afcc15e08ac5a69bd22785287f79",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 81.5,
+  "host_prevalence": 100,
+  "execution_rank": 90,
   "community_score": null,
-  "first_seen": null,
-  "last_seen": null,
-  "machine_count": null,
-  "execution_count": null,
-  "expected_paths": [],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
-  "expected_grandchildren": [],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 2,
+  "expected_paths": [
+    {
+      "value": "C:\\Windows\\System32\\userinit.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "winlogon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "smss.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "fsquirt.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 60
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "userinitext.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "userinit.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
-  "sessions": [],
-  "instance_counts": [],
-  "token_privileges": [],
-  "process_handles": [],
-  "os_prevalence": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [
+    {
+      "value": "1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "token_privileges": [
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "process_handles": [
+    {
+      "value": "explorer.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "anomaly_signals": [
     {
       "signal": "Image path other than `C:\\Windows\\System32\\userinit.exe`",
@@ -78,8 +301,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "C:\\WINDOWS\\system32\\userinit.exe",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "rich_pe_header",
+      "value": "fead8123596e09748f06ac6495d863c3",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "831f09a183825fcd04b27df4080a7582",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "854e144c28736dd9f888deded85810e4",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "1536:uoJ3Fp2WMKwB/TjKQOKRpHxj2jJ4gUq1yvzvyO7tH:uuFpyFtjKUpRSjWgUqQvzvP7t",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "257cb75fa8b9fd740584d0580ee40597d20b6c190bbc2e80f903a1d19183dc7e",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "30c643a1c081fdeebbecf152d64ca7a6bd7d198433bd6ce47455683ef433bb86",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "9f427cf4dc4401103b9bd139721ef2715a2ade22",
+      "pct": 100
+    }
+  ],
   "security_notes": "Like other trusted system processes, userinit.exe is sometimes imitated by malware attempting to avoid detection (T1036.005). A legitimate copy always resides in `C:\\Windows\\System32` and carries a valid Microsoft digital signature. Be suspicious of copies running from other locations and of near-miss spellings of the name.\n\nIts name in the registry is a long-standing persistence target (T1547.004). `winlogon.exe` reads the `Userinit` value under `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon` to decide what to run at logon, and the value accepts a comma-separated list. Malware appends its own executable so it launches alongside the real userinit.exe at every sign-in. Anything in that value beyond `C:\\Windows\\system32\\userinit.exe` warrants a review.\n\nBecause the real userinit.exe does nothing but set up the session and start the shell, its children are short-lived and predictable. A command shell or script host launched by userinit.exe, rather than the expected `explorer.exe`, points to a logon script or registry entry running attacker code (T1059.003).\n",
   "mitre_attack": [
     "T1036.005",

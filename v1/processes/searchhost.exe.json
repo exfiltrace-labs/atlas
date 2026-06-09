@@ -13,6 +13,7 @@
   "about": "SearchHost.exe is a packaged (UWP) system app that presents the taskbar search experience and its results, distinct from `SearchIndexer.exe`, which builds the file index it can draw on. It runs as the logged-on user, launched as part of the session, from a Windows `SystemApps` package folder rather than `System32`, and is signed by Microsoft.\n\nLegitimately, SearchHost is present on Windows 11 desktops and suspended when idle. Because the search UI integrates web results, some network activity to Microsoft's search endpoints is normal, which sets it apart from the other shell hosts.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -29,14 +30,21 @@
   },
   "file_versions": [
     {
-      "value": "2126.8901.20.0",
+      "value": "2125.21002.10.0",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "file_sizes": [
     {
-      "value": "41.50 KB",
+      "value": "50.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -50,14 +58,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 88.7,
   "host_prevalence": 100,
-  "execution_rank": 25,
+  "execution_rank": 56,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 3,
   "expected_paths": [
     {
       "value": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
@@ -65,63 +73,977 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
-  "expected_children": [],
-  "expected_grandparents": [],
-  "expected_grandchildren": [],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "uncommon",
+      "pct": 33.3
+    }
+  ],
+  "expected_grandchildren": [
+    {
+      "value": "msedgewebview2.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
   "loaded_modules": [
     {
-      "value": "windows.applicationmodel.datatransfer.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "execmodelproxy.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "activationclient.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.security.authentication.web.core.dll",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "windows.security.authentication.onlineid.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "value": "windows.shell.servicehostbuilder.dll",
+      "weight": "uncommon",
+      "pct": 45.5
     },
     {
       "value": "vaultcli.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "uncommon",
+      "pct": 36.4
+    },
+    {
+      "value": "windows.security.authentication.web.core.dll",
+      "weight": "uncommon",
+      "pct": 36.4
+    },
+    {
+      "value": "windows.applicationmodel.datatransfer.dll",
+      "weight": "uncommon",
+      "pct": 36.4
     },
     {
       "value": "rtmediaframe.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "uncommon",
+      "pct": 36.4
     },
     {
-      "value": "pcshellcommonproxystub.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "value": "windows.globalization.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "slc.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "msvcp110_win.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "wuceffects.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "fcon.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "starttiledata.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.ui.xaml.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "staterepository.core.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.applicationmodel.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "microsoft.web.webview2.core.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "tquery.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "msftedit.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.globalization.fontgroups.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windowsudk.shellcommon.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "globinputhost.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "webview2standalone.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "systemsettings.datamodel.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "flightsettings.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dwmapi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "vccorlib140_app.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "searchux.internalwebapi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "embeddedbrowserwebview.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windowmanagementapi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.ui.winmd",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.ui.core.textinput.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "appresolver.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "execmodelproxy.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "biwinrt.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "searchux.ui.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "profext.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "bcp47mrm.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.ui.immersive.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "pfclient.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "vcruntime140_app.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dataexchange.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "icu.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "resourcepolicyclient.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "uiautomationcore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dcomp.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "twinapi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "shellcommoncommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.graphics.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.cloudstore.schema.shell.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "d3d10warp.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.security.authentication.onlineid.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.web.http.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "directmanipulation.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "microsoft.ui.xaml.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "wv2winrt.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "searchux.core.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "msvcp140_app.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "textinputframework.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "capauthz.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dwrite.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "cryptowinrt.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "fontgroupsoverride.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "uiamanager.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "rmclient.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.ui.input.inking.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "searchindexercore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "tiledatarepository.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "threadpoolwinrt.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.storage.applicationdata.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "omadmapi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "searchux.model.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "rometadata.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "cortana.settings.winmd",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "searchhost.exe",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "inputhost.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.staterepository.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.foundation.winmd",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "wosc.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "textshaping.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.cloudstore.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "version.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "bcp47langs.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.management.workplace.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.ui.xaml.controls.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "d3d11.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "d2d1.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "vcruntime140_1_app.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "uncommon",
+      "pct": 27.3
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "rare",
+      "pct": 18.2
     },
     {
       "value": "mswb7.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "weight": "rare",
+      "pct": 18.2
     },
     {
-      "value": "windows.shell.servicehostbuilder.dll",
-      "weight": "ubiquitous",
-      "pct": 100
+      "value": "pcshellcommonproxystub.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "ntoskrnl.exe",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "legacysystemsettings.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "windows.system.profile.platformdiagnosticsandusagedatasettings.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "appcontracts.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "startmenu.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "coreprivacysettingsstore.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "diagnosticdatasettings.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "photometadatahandler.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "mrmdeploy.dll",
+      "weight": "rare",
+      "pct": 18.2
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "windows.applicationmodel.background.timebroker.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "mlang.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "mswsock.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "winhttp.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "nsi.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "fwbase.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "windows.applicationmodel.background.systemeventsbroker.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "ondemandconnroutehelper.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "firewallapi.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "ws2_32.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "wininet.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "activationclient.dll",
+      "weight": "rare",
+      "pct": 9.1
+    },
+    {
+      "value": "winnsi.dll",
+      "weight": "rare",
+      "pct": 9.1
     }
   ],
   "named_pipes": [
@@ -129,10 +1051,37 @@
       "value": "\\MsFteWds",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "\\LOCAL\\mojo.8108.7204.<n>",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\LOCAL\\mojo.5496.6048.<n>",
+      "weight": "rare",
+      "pct": 11.1
+    },
+    {
+      "value": "\\LOCAL\\mojo.5320.4108.<n>",
+      "weight": "rare",
+      "pct": 11.1
     }
   ],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "AppContainer",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 1",
@@ -163,7 +1112,7 @@
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -190,8 +1139,49 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\" -ServerName:CortanaUI.<redacted>.mca",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "73d1f0aed721733e09de89444b9c8aeb",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "a2a07090f4b1506c35d088d8a4ca51d6",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "768:l2egJRr6v7D1orpfRMApCzQ6watV0FtKO74NbyW4BULP8s5NBr8:AegDrCDOrpvpCzQ5U9JbyCPvNBr8",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "444542106ece82cb0df00afac975fbb4",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "5fb9197736880a48e26feea8344f073e7ec32c9fcabf7d4f7f3a0a264a7e26bf",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "c93345eafbae5f1778b233502d9a2826e10fce17",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "09f276a08c8b643f64195bc5e73ad20bf0e16e5ab23a28ba026e506dd5d58314",
+      "pct": 100
+    }
+  ],
   "security_notes": "SearchHost.exe is a baseline process. Its identity is fixed, the logged-on user's account, a packaged Microsoft signature, and no child processes, so deviations stand out. Unlike the purely local shell hosts it does talk to Microsoft's search service, so the meaningful network signal is connections to unrelated hosts, not network activity as such. The realistic abuse is impersonation (T1036.005), where malware uses the name from a path outside the genuine packaged location.\n\nAs a persistent per-user process it could also be injected into (T1055). A SearchHost that spawns programs or reaches hosts outside the search service is acting outside its role.\n",
   "mitre_attack": [
     "T1036.005",

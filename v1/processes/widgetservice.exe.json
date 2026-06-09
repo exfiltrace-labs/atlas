@@ -6,70 +6,498 @@
   "description": null,
   "about": null,
   "publisher": "Microsoft Corporation",
-  "issuer": null,
+  "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "330000041F1CA0357F3F17771800000000041F",
   "signed": true,
   "signing_rate": 100,
-  "signing_algorithm": "AppX (Store)",
+  "signing_algorithm": "sha256RSA",
   "signers": [
-    "Microsoft Corporation"
+    "Microsoft Windows"
   ],
   "file_details": {
     "file_type": "PE32+ executable",
     "magic": "PE32+ executable (GUI)",
-    "original_name": "WidgetService.exe",
-    "internal_name": "WidgetService.exe",
-    "product": "Widgets Platform Runtime",
-    "copyright": "Copyright (c) Microsoft Corporation. All rights reserved."
+    "original_name": null,
+    "internal_name": null,
+    "product": null,
+    "copyright": null
   },
-  "file_versions": [
-    {
-      "value": "0.5.0.0",
-      "weight": "ubiquitous",
-      "pct": 100
-    }
-  ],
+  "file_versions": [],
   "file_sizes": [
     {
-      "value": "212.50 KB",
+      "value": "202.30 KB",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "cert_thumbprints": [],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "44e6ef23ce18d8ef2b75e4381e7efc27c67c7eb6",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 42,
+  "execution_rank": 92,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
-      "value": "C:\\Program Files\\WindowsApps\\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\\WidgetService\\WidgetService.exe",
+      "value": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_424.1301.270.9_x64__cw5n1h2txyewy\\Dashboard\\WidgetService.exe",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "svchost.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "services.exe",
+      "weight": "common",
+      "pct": 50
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
   "loaded_modules": [
     {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "appextension.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.storage.search.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "mskeyprotect.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "urlmon.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.storage.winmd",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.windows.widgets.winmd",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ncrypt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.ui.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.windows.widgets.internal.winmd",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "microsoft.windows.widgets.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcp47langs.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.applicationmodel.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "coml2.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "mrmcorer.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntasn1.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "srvcli.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
       "value": "onecoreuapcommonproxystub.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "edputil.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.web.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.fileexplorer.common.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cryptowinrt.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "widgetservice.exe",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntshrui.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "structuredquery.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.storage.applicationdata.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcp47mrm.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cscapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "linkinfo.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "iertutil.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "icu.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositorybroker.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "profapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "netutils.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.globalization.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.system.launcher.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "windows.foundation.winmd",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "mssprxy.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "dpapi.dll",
+      "weight": "common",
+      "pct": 66.7
+    },
+    {
+      "value": "rometadata.dll",
+      "weight": "common",
+      "pct": 66.7
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\srvsvc",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
-  "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 1",
@@ -96,18 +524,64 @@
       "value": "widgets.exe",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "explorer.exe",
+      "weight": "common",
+      "pct": 66.7
     }
   ],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
   ],
   "anomaly_signals": [],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_424.1301.270.9_x64__cw5n1h2txyewy\\Dashboard\\widgetservice.exe\" -<redacted> -Embedding",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "imphash",
+      "value": "c27a98c97454bcd392e63eb47276eb35",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "5819031bdf3860ed574112a32984f1a3",
+      "pct": 100
+    },
+    {
+      "algo": "ssdeep",
+      "value": "3072:XqQpY21Xiz0RNh+XS2SglPxkhd2HgJKwPagLX00Tv+Ly9rBrmlNMbfe+nQYv2+LV:XqcY2xJfQXS2/khzPagTl6KQs29g",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "925453b2bac4a4ebc78e3fde3749426f",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "a6bf141a01bf4ddc06c51ecf2e0e2e77d4d1871dbbd4a63ae215a67b8a62974f",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "828d5705e2e70e15042fc9ee46278217b0e9e600",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "34af6f739e64b837334a07fe8bb17e79b7c704f8a3f9419349e89f8504ba0f8b",
+      "pct": 100
+    }
+  ],
   "security_notes": null,
   "mitre_attack": [],
   "technique_matching": "loose",

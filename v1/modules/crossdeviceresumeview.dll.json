@@ -1,0 +1,11 @@
+{
+  "name": "crossdeviceresumeview.dll",
+  "loaded_by": [
+    {
+      "name": "crossdeviceresume.exe",
+      "weight": "common",
+      "pct": 50,
+      "lolbin": false
+    }
+  ]
+}

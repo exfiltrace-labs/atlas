@@ -13,6 +13,7 @@
   "about": "dwm.exe runs the Desktop Window Manager, the compositor that has drawn the Windows desktop since Windows Vista. Instead of letting each application paint directly to the screen, the DWM has every window render to its own off-screen buffer and then composes them together with the graphics card. One dwm.exe runs for each interactive session, started by that session's `winlogon.exe`. The genuine binary lives at `C:\\Windows\\System32\\dwm.exe`.\n\nEach instance runs under a dedicated per-session virtual account named `Window Manager\\DWM-1`, `DWM-2`, and so on, rather than the logged-on user or SYSTEM. So on a machine with the console plus a couple of remote desktop sessions, several dwm.exe processes under different DWM-n accounts are normal.\n\nThe Desktop Window Manager keeps to itself. It composites the screen and does not start other programs or, in normal operation, reach the network. It is present on every graphical Windows system and runs for the life of each session.\n",
   "publisher": "Microsoft Corporation",
   "issuer": "Microsoft Windows Production PCA 2011",
+  "cert_serial": "3300000519DADDAA8BDC44B292000000000519",
   "signed": true,
   "signing_rate": 100,
   "signing_algorithm": "sha256RSA",
@@ -36,7 +37,14 @@
   ],
   "file_sizes": [
     {
-      "value": "124.00 KB",
+      "value": "128.00 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -50,14 +58,14 @@
   ],
   "provenance": "measured",
   "prevalence_band": "ubiquitous",
-  "prevalence_score": 100,
+  "prevalence_score": 81.5,
   "host_prevalence": 100,
-  "execution_rank": 14,
+  "execution_rank": 70,
   "community_score": null,
-  "first_seen": "2026-06-08",
-  "last_seen": "2026-06-08",
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
   "machine_count": 1,
-  "execution_count": null,
+  "execution_count": 2,
   "expected_paths": [
     {
       "value": "C:\\Windows\\System32\\dwm.exe",
@@ -65,17 +73,417 @@
       "pct": 100
     }
   ],
-  "expected_parents": [],
+  "expected_parents": [
+    {
+      "value": "winlogon.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_children": [],
-  "expected_grandparents": [],
+  "expected_grandparents": [
+    {
+      "value": "smss.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "expected_grandchildren": [],
   "network_ports": [],
   "listening_ports": [],
   "network_destinations": [],
-  "loaded_modules": [],
+  "loaded_modules": [
+    {
+      "value": "apphelp.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "crypt32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dxcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "mscms.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "winsta.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "wtsapi32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "gpapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "user32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "powrprof.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "coremessaging.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "uianimation.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windowscodecs.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "d2d1.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cryptbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "microsoft.internal.warppal.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dispbroker.desktop.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "textshaping.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "imagehlp.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dispbroker.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "resourcepolicyclient.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "rsaenh.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.graphics.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "udwm.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.gaming.input.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "coreuicomponents.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "msasn1.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dwmredir.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "wuceffects.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dxgi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dwmghost.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "d3d10warp.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "directxdatabasehelper.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "d3d11.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "umpdc.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windowmanagementapi.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "d3dcompiler_47.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dwrite.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dwmcore.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cabinet.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "combase.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "gameinput.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "xmllite.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ism.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "wintrust.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "avrt.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dcomp.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "dwm.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cryptsp.dll",
+      "weight": "uncommon",
+      "pct": 40
+    }
+  ],
   "named_pipes": [],
-  "user_contexts": [],
-  "integrity_levels": [],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "System",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
   "sessions": [
     {
       "value": "Session 1",
@@ -92,17 +500,12 @@
   ],
   "token_privileges": [
     {
-      "value": "SeCreateGlobalPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
-      "value": "SeChangeNotifyPrivilege",
-      "weight": "ubiquitous",
-      "pct": 100
-    },
-    {
       "value": "SeIncreaseBasePriorityPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "SeCreateGlobalPrivilege",
       "weight": "ubiquitous",
       "pct": 100
     },
@@ -110,12 +513,17 @@
       "value": "SeIncreaseWorkingSetPrivilege",
       "weight": "ubiquitous",
       "pct": 100
+    },
+    {
+      "value": "SeChangeNotifyPrivilege",
+      "weight": "ubiquitous",
+      "pct": 100
     }
   ],
   "process_handles": [],
   "os_prevalence": [
     {
-      "value": "Microsoft Windows 11 Enterprise Evaluation",
+      "value": "Windows 11 (26200)",
       "weight": "ubiquitous",
       "pct": 100
     }
@@ -146,8 +554,44 @@
       "severity": "medium"
     }
   ],
-  "command_lines": [],
-  "known_hashes": [],
+  "command_lines": [
+    {
+      "command": "\"dwm.exe\"",
+      "pct": 100
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "sha1",
+      "value": "a05b6116a35da2d9ae250d4f5a3ceafd6a1a2965",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "1f7dd1ce8234473852ac6bc0061f9e554b56d5e6f096bae33a2893114b9799b1",
+      "pct": 100
+    },
+    {
+      "algo": "rich_pe_header",
+      "value": "52cf7aeae8946e91fbb1c0861aa7d523",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "d72871d9a3f2f20778dceaae6d7c89ef",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "a8c31cecede4347f35120ae1514045ed",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "15bf0116e74cdb3a688a4219842ab5bd61b5b4a90e94c1280464d1057fd379b0",
+      "pct": 100
+    }
+  ],
   "security_notes": "dwm.exe is rarely abused directly. Its main value to an analyst is as a baseline: a fixed identity, a known parent, a dedicated account, and no network or child processes, so deviations stand out. The simplest abuse is impersonation (T1036.005), where malware borrows the trusted name from the wrong path or runs under the wrong account.\n\nIt has been an elevation-of-privilege target. The Desktop Window Manager and its core library (`dwmcore.dll`) have carried several EoP vulnerabilities, where local code abuses the graphics pipeline to gain higher privileges (T1068). During that kind of exploitation the dwm.exe process itself usually looks normal, so patching, not process inspection, is the defense.\n\nAs a persistent per-session process, dwm can also be injected into to host code that blends with the desktop (T1055). A dwm.exe that loads unusual modules, opens network connections, or spawns anything is behaving outside its normal role.\n",
   "mitre_attack": [
     "T1036.005",

@@ -40,6 +40,7 @@
   <url><loc>https://atlas.exfiltrace.com/processes/lsass.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/makecab.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/mavinject.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/memory compression</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/mmc.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/mpcmdrun.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/msbuild.exe</loc></url>
@@ -54,11 +55,13 @@
   <url><loc>https://atlas.exfiltrace.com/processes/nltest.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/ntdsutil.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/odbcconf.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/olk.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/outlook.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/powershell.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/quser.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/reg.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/regasm.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/registry</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/regsvcs.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/regsvr32.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/rundll32.exe</loc></url>
@@ -67,6 +70,7 @@
   <url><loc>https://atlas.exfiltrace.com/processes/schtasks.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/searchhost.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/searchindexer.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/secure system</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/services.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/shellexperiencehost.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/sihost.exe</loc></url>
@@ -99,211 +103,1391 @@
   <url><loc>https://atlas.exfiltrace.com/processes/wscript.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/wsmprovhost.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/wuauclt.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/149.0.7827.103_chrome_installer_uncompressed.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/aggregatorhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/appactions.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/apphostregistrationverifier.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/appidcertstorecheck.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/appidpolicyconverter.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/applicationframehost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/autochk.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/backgroundtaskhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/backgroundtransferhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/bdeuisrv.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/calculatorapp.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/chrmstp.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/chrome.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/chromesetup.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/compattelrunner.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/consent.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/cookie_exporter.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/crossdeviceresume.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/defrag.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/devicecensus.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/directxdatabaseupdater.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/dismhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/dmclient.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/drvinst.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/dxgiadaptercache.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/elevation_service.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/filecoauth.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/filesyncconfig.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/fsquirt.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/genvalobj.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/identity_helper.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/lockapp.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/mdmagent.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/microsoftedgeupdate.exe</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/processes/mpdefendercoreservice.exe</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/processes/msdtc.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/microsoft.sharepoint.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/mobsync.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/monotificationux.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/mousocoreworker.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/mscorsvw.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/msedge.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/msedgewebview2.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/ngentask.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/nissrv.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/onedrive.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/onedrivelauncher.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/onedrivesetup.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/onedrive.sync.service.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/oobefodsetup.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/openconsole.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/os_update_handler.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/pickerhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/platform_experience_helper.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/provtool.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/rgnupdt.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/runonce.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/sdbinst.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/searchfilterhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/searchprotocolhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/securityhealthhost.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/securityhealthservice.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/securityhealthsystray.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/setup.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/shellhost.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/shutdown.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/slui.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/sppextcomobj.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/sppsvc.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/sysmon64.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/tiworker.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/trustedinstaller.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/ucconfigtask.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/ucpdmgr.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/unsecapp.exe</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/processes/vgauthservice.exe</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/processes/vm3dservice.exe</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/processes/vmtoolsd.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/updater.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/upfc.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/usoclient.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/verclsid.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/vssvc.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/wermgr.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/widgetservice.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/widgets.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/windowsterminal.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/processes/wlms.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/wlrmdr.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/wmiadap.exe</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/processes/wuaucltcore.exe</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/aad.core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/aadcloudap.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/aadwamextension.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/abovelockapphost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/accessibility.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/accessibility.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/accountaccessor.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/accounthealth.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/acmigration.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/acpbackgroundmanagerpolicy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/actioncenter.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/actionfxproxystubs.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/activationclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/activationmanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/activeds.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/actxprxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/adal.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/adaptivecards.objectmodel.uwp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/adaptivecards.rendering.uwp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/adhapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/adhsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/adsldpc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/advapi32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/aeinv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/aemarebackup.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/aepic.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/amsi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/amsiproxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/aphostclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/aphostservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-base-util-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-com-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-comm-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-console-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-datetime-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-datetime-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-debug-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-debug-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-delayload-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-errorhandling-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-errorhandling-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-fibers-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-fibers-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-file-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-file-l1-2-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-file-l1-2-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-file-l2-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-file-l2-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-handle-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-heap-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-heap-obsolete-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-interlocked-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-io-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-io-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-kernel32-legacy-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-kernel32-legacy-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-kernel32-private-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-kernel32-private-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-libraryloader-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-libraryloader-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-localization-l1-2-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-localization-l1-2-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-localization-obsolete-l1-2-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-memory-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-memory-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-memory-l1-1-2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-namedpipe-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-privateprofile-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-privateprofile-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-processenvironment-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-processenvironment-l1-2-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-processthreads-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-processthreads-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-processthreads-l1-1-2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-processtopology-obsolete-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-profile-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-realtime-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-registry-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-registry-l2-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-rtlsupport-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-shlwapi-legacy-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-shlwapi-obsolete-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-shutdown-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-string-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-string-l2-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-string-obsolete-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-stringansi-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-stringloader-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-synch-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-synch-l1-2-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-sysinfo-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-sysinfo-l1-2-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-sysinfo-l1-2-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-threadpool-l1-2-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-threadpool-legacy-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-threadpool-private-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-timezone-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-url-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-util-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-version-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-wow64-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-xstate-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-core-xstate-l2-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-conio-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-convert-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-environment-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-filesystem-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-heap-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-locale-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-math-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-multibyte-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-private-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-process-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-runtime-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-stdio-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-string-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-time-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-crt-utility-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-devices-config-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-devices-config-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-eventing-classicprovider-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-eventing-consumer-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-eventing-controller-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-eventing-legacy-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-eventing-provider-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-eventlog-legacy-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-security-base-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-security-cryptoapi-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-security-lsalookup-l2-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-security-lsalookup-l2-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-security-lsapolicy-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-security-provider-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-security-sddl-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-service-core-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-service-core-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-service-management-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-service-management-l2-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-service-private-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-service-private-l1-1-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-service-winsvc-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/api-ms-win-shcore-stream-l1-1-0.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/apisethost.appexecutionalias.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/apmon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appcontracts.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appextension.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appfootprint.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/apphelp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appidapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appidsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appinfo.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appinfoext.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/applicationframe.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appmon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appointmentactivation.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appraiser.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appreadiness.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appresolver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appsruprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxalluserstore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxapplicabilityblob.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxapplicabilityengine.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/appxdeploymentclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxdeploymentextensions.desktop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxdeploymentextensions.onecore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxdeploymentserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxpackaging.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxsip.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/appxstreamingdatasourceps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/assignedaccessmanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/assignedaccessruntime.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/asycfilt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/atl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/atlthunk.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/audioendpointbuilder.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/audioeng.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/audiokse.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/audioresourceregistrar.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/audioses.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/audiosrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/audiosrvpolicymanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/authui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/authz.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/autopilot.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/avrt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/backgroundmediapolicy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/basecsp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/basesrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/batmeter.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bcd.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/bcp47langs.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/bcp47mrm.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/bcrypt.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/bcryptprimitives.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bdesvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bfe.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bindfltapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/biocredprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bisrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bitsigd.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bitsperf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bitsproxy.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/biwinrt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bluetoothapis.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bootsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/brokerlib.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/bthradiomedia.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cabinet.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/calculatorapp.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/calcviewmodel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/camext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/capabilityaccesshandlers.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/capabilityaccessmanager.desktop.storage.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/capabilityaccessmanager.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/capabilityaccessmanagerclient.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/capauthz.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/catsrvut.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cbdhsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cbsapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cbscore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cbsprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cdp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cdpsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cdpusersvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cellulardatacapabilityhandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/certca.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/certcli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/certenroll.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cfgbkend.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/cfgmgr32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cflapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/checkboxwindows.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/chrome_elf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/chrome.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cimwin32.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/clbcatq.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cldapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clipboard.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clipboardserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clipc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clipsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cloudap.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cloudexperiencehostcommon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cloudexperiencehostredirection.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cloudrestorelauncher.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clrcompression.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clrjit.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/clusapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cmdext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cmintegrator.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cmsofflineservicing.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cmutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/codeintegrityaggregator.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/combase.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/comctl32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/comdlg32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/coml2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/comppkgsup.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/computenetwork.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/concrt140_app.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/configmanager2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/connectionattributionapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/container.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/contentdeliverymanager.background.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/contentdeliverymanager.utilities.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/contentmanagementsdk.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/controlcenter.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/coreaudiopolicymanagerext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/coreglobconfig.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/coremessaging.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/coremessagingxp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/coreprivacysettingsstore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/coreshellextframework.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/coreuicomponents.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credprov2fahelper.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credprovcommoncore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credprovdatamodel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credprovhelper.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credprovhost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credprovs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credprovslegacy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credssp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/credui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/crossdeviceresumeview.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/crypt32.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/cryptbase.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cryptcatsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cryptdll.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cryptnet.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cryptngc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/cryptowinrt.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/cryptsp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cryptsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/crypttpmeksvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cryptui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cryptxml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cscapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cscobj.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cscui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/csrsrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/csystemeventsbrokerclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/custommarshalers.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/custommarshalers.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/cxcredprov.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/d2d1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/d3d10warp.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/d3d11.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/d3d12.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/d3d12core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/d3dcompiler_47.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/d3dscache.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dab.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dabapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/damediamanager.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dataexchange.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/datetimepicker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/davclnt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/daxexec.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dbgcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dbghelp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dcntel.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dcomp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dcompi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dcsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ddccomimplementationsdesktop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ddores.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/defragproxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/defragsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/desktopshellext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devdispitemprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/deviceaccess.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devicecenter.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devicecredential.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devicedirectoryclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devicedriverretrievalclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devicemetadataretrievalclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devicesetupmanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devicesoftwareinstallationclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devinv.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/devobj.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devpropmgr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/devrtl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dhcpcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dhcpcore6.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dhcpcsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dhcpcsvc6.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/diagnosticdataquery.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/diagnosticdatasettings.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/diagnosticlogcsp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/diagperf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/diagtrack.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/difxapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dimsjob.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/directmanipulation.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/directml.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/directxdatabasehelper.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dismapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dismcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dismcoreps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dismprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dispbroker.desktop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dispbroker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmcfgutils.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dmcmnutils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmcommandlineutils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmenrollengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmenterprisediagnostics.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmiso8601utils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmoleaututils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmprocessxmlfiltered.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dmxmlhelputils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dnsapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dnsrslvr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/doclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/domain_actions.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/domgmt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dosvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dot3api.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dpapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dpapisrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dpx.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/drprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/drupdate.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/drvsetup.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/drvstore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dskquota.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dsparse.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dsreg.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dsrole.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dssenh.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dui70.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/duser.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dusmapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dusmsvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dwmapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dwmcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dwmcorei.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dwmghost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dwminit.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dwmredir.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dwrite.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dxcompiler.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dxcore.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/dxgi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dxil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dxilconv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dxp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/dxva2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/eamprogresshandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/edputil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/eeprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/efsutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/efswrt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ehstorshell.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/elscore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/elslad.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/elstrans.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/embeddedbrowserwebview.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/embeddedmodesvcapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/energy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/energyprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/enrollmentapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/enterprisecsps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/enterpriseresourcemanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/es.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/esent.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/esscli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ethernetmediamanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/eventaggregation.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/execmodelclient.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/execmodelproxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/exif.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/experienceextensions.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/explorerframe.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/facecredentialprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/familysafetyext.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/fastprox.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/fcon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/feclient.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ffmpeg.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ffuprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filecoauthlib64.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fileexplorerextensions.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesync.localizedresources.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesync.resources.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesynccxp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesynccxpimpl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncevents.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncfalwb.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncfs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncfscache.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncfsdbfswb.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncfsntfs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncfsntfswb.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesynchost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncrnwin32lib.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncsessions.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncshell64.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncsqlite3.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesynctelemetryextensions.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/filesyncviews.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/firewallapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/flightsettings.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fltlib.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fmifs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fntcache.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/folderprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fontglyphanimator.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/fontgroupsoverride.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fontprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/framedynos.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/frameserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/frameservermonitor.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fsutilext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fusion.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fveapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fvecerts.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fwbase.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fwpolicyiomgr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/fwpuclnt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/gameinput.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/gamemode.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/gamestreamingext.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/gdi32.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/gdi32full.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/gdiplus.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/generaltel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/geolocation.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/globinputhost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/gmsaclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/gpapi.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/gpsvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/graphcontrol.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/hcproviders.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/hermes.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/hevcdecoder_store.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/hid.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/hrtfapo.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/hspapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/httpprxc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/httpprxm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/hwreqchk.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/iconcodecservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/icu.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/icuin.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/icuuc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/idstore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ieframe.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ieproxy.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/iertutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ifsutil.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/imagehlp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/imagingprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/imapi2.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/imm32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/implatsetup.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/inetpp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/inproclogger.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/inputhost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/inputlocalemanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/inputservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/inputswitch.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/installservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/invagent.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/inventorysvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/iphlpapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/iphlpsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/irisservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ism.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/iuilp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/joinutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/jscript.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/jscript9legacy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/kbdus.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/kdcpw.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/keepaliveprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/kerb3961.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/kerbclientshared.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/kerberos.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/kernel.appcore.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/kernel32.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/kernelbase.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/keyiso.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ktmw32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/languagecomponentsinstaller.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/languageoverlayutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/legacysystemsettings.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lfsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/libcrypto-3-x64.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/libegl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/libglesv2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/libssl-3-x64.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/licensemanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/licensemanagerapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/licensemanagersvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/linkinfo.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lmhsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/loadperf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/localspl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/locationframework.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/locationframeworkinternalps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/locationframeworkps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/locationwinpalmisc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lockappbroker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lockcontroller.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lockscreendata.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/loggingplatform.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/logoncli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/logoncontroller.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/logprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/loguploader.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lsaadt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lsasrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/lsm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mapsbtsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/marshal.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mbaeapipublic.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mbmediamanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mccsengineshared.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mccspal.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mdmcommon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mdmdiagnostics.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mdmmigrator.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mdmregistration.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mediafoundationaggregator.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/memorydiagnostic.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mfc42u.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mfcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mfcsubs.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mfplat.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mfsensorgroup.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft_shell_integration.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.appv.appvclientcomconsumer.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.appv.appvclientpowershell.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.directmanipulation.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.dism.powershell.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.graphics.canvas.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.graphics.display.displayenhancementservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.grouppolicy.admtmpleditor.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.grouppolicy.admtmpleditor.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.grouppolicy.interop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.grouppolicy.interop.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.grouppolicy.reporting.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ink.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ink.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.inputstatemanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.internal.frameworkudk.cbs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.internal.frameworkudk.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.internal.frameworkudk.system.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/microsoft.internal.warppal.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/microsoft.management.infrastructure.native.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/microsoft.management.infrastructure.native.unmanaged.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.managementconsole.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.managementconsole.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.media.playready.appraiser.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.reactnative.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.sharepoint.calc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.sharepoint.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.sharepoint.websocketclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.terminal.control.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.terminal.remoting.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.terminal.settings.model.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.composition.ossupport.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.input.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.windowing.core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.windowing.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.xaml.controls.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.xaml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.ui.xaml.phone.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.visualbasic.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.visualc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.web.webview2.core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.windows.applicationmodel.resources.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoft.windows.widgets.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoftaccountcloudap.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoftaccounttokenprovider.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/microsoftaccountwamextension.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/microsoftgraphrecentitemsmanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/miguicontrols.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mispace.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/missioncontrolaggregator.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mitigationclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mitigationconfiguration.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/miutils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mlang.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mmcex.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mmcex.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mmcfxcommon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mmcfxcommon.ni.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mmdevapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mobilenetworking.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/modernexecserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mofd.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mofinstall.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/moshost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mosstorage.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpcommu.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpecm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpoav.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mprtp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpssvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mpsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mrm.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mrmcorer.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mrmdeploy.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mrt100_app.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mrt100.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msasn1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msauserext.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mscms.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mscoree.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mscoreei.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mscorlib.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mscorlib.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mscorsvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msctf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msctfmonitor.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msedge_elf.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msedge.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msedgeupdate.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msftedit.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msimg32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msisip.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msiso.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mskeyprotect.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msls31.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msprivs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msspellcheckingfacility.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mssph.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mssprxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mssrch.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mssvp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msutb.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msv1_0.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msvcp_win.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msvcp110_win.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msvcp140_1.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msvcp140_app.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msvcp140_atomic_wait.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/msvcp140.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msvcrt.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/mswb7.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mswsock.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/msxml6.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mtcmodel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mtf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/mtfserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/musdialoghandlers.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/musnotifyiconhandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/musuxtoasthandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/myoffice.backgroundtasks.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/napcrypt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/napcrypt.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/napinsp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ncaapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ncbservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ncobjapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ncprov.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ncrypt.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ncryptprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ncryptsslp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ncsi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ncuprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/nduprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/negoexts.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netadaptercim.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/netapi32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netjoin.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netlogon.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/netprofm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netprofmsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netprovfw.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netsetupapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netsetupengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/netsetupsvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/netutils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/networkexplorer.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/networkhelper.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/networkicon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/networkuxbroker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/newdev.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/nfcradiomedia.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngccredprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngcctnr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngcctnrgidshandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngcctnrsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngckeyenum.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngcksp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngcpopkeysrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngcsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ngctasks.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ninput.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/nlansp_c.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/normaliz.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/notificationcontroller.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/notificationcontrollerps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/notificationplatformcomponent.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/npmproxy.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/npsm.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/npsmdesktopprovider.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/nsi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/nsisvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ntasn1.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ntdll.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ntdsapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ntlanman.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ntlmshared.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ntmarta.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ntshrui.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ole32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/oleacc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/oleaut32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/omadmapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ondemandbrokerclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ondemandconnroutehelper.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/onecorecommonproxystub.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/onecoreuapcommonproxystub.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/onedrive.sync.service.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/onedrive.sync.service.httpsvr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/onedrive.sync.service.websocketclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/onedrivetelemetrystable.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/oneds.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/onesettingsclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/onnxruntime.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/onramp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/opcservices.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/openconsoleproxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/optimization_guide_internal.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/osclient.net.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/osprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/p9np.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/packagestatechangehandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pautoenr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/payments.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pcacli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pcadm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pcasvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/pcpksp.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/pcshellcommonproxystub.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pcwum.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pdh.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/perfos.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pfclient.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/photometadatahandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pimstore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pkeyhelper.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pku2u.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/playsndsrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pnpts.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pnpui.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/policymanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/popkeycli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/portabledeviceapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/portabledeviceconnectapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/portabledevicetypes.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/powergridforecasttask.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/powrprof.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/presentationcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/presentationcore.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/presentationframework.aero2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/presentationframework.aero2.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/presentationframework.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/presentationframework.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/presentationui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/print.printsupport.source.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/printconfig.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/printdeviceconfigurationservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/printercleanuptask.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/printisolationproxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/prnfldr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/productenumerator.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/profapi.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/profext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/profprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/profsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/profsvcext.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/propsys.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/provdatastore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/provengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/provhandlers.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/provops.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/provpackageapidll.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/provplatformdesktop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/proximitycommon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/proximitycommonpal.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/proximityrtapipal.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/proximityservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/proximityservicepal.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/psapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/psmserviceexthost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/psmsrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/pushtoinstall.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qmgr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5gui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5network.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5qml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5qmlmodels.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5quick.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5widgets.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qt5winextras.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/query.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/quiethours.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/qwindows.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/radardt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rasadhlp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rasplap.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rdpcredentialprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/reachframework.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/reactnativepicker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/reactnativevideocpp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/reactnativexaml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/reagent.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/regapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/repdrvfs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/reservemanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/resetengine.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/resourcepolicyclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/resourcepolicyserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/resutils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/riched20.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/riched32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rmapi.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/rmclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rnsvg.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/rometadata.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rpcepmap.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/rpcrt4.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rpcrtremote.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rpcss.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/rsaenh.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rstrtmgr.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/rtmediaframe.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/rtutils.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/rtworkq.dll</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/modules/rulesengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/samcli.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/samlib.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/samsrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sapi_onecore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sbservicetrigger.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/scecli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/scesrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/schannel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/schedcli.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/schedprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/schedsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/scksp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/searchfolder.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/searchindexercore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/searchux.core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/searchux.internalwebapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/searchux.model.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/searchux.ui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sebbackgroundmanagerpolicy.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/sechost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/secur32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securetimeaggregator.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/security.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securitycenterbroker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securitycenterbrokerps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securityhealthagent.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securityhealthcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securityhealthproxystub.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securityhealthsso.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securityhealthssoudk.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/securityhealthudk.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sens.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sensorsnativeapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sensorsutilsv2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/servicingcommon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/servicinguapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/settingsconfigtask.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/settingsenvironment.desktop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/settingshandlers_desktoptaskbar.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/setupapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sfapm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sfc_os.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sfc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shacct.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shacctprofile.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/sharedlibrary.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sharedutilities.stub.backgroundtasks.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sharehost.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/shcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shdocvw.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/shell32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shellcommoncommonproxystub.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shellconfigtask.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/shlwapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shsvcs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shutdownext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/shutdownux.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/signdrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/slc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/slwga.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smartcardbackgroundpolicy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smartcardcredentialprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smartscreen.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smartscreenps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smdiagnostics.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smiengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smipi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/smphost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sndvolsso.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/snmpapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/spinf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/spoolss.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/spp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sppc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sppcext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sppcomapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sppobjs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sppwinob.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sppwmi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sqmapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/srchadmin.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/srclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/srpapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/srumapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/srumsvc.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/srvcli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/srvsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sscore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sscoreext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ssdpapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ssdpsrv.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/sspicli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sspisrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ssshim.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/startdocked.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/startmenu.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/starttiledata.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/staterepository.core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sti.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/stobject.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/storageusage.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/storagewmi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/storewuauth.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/storewuauthcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/storsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/structuredquery.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sustainabilityservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/switcherdatamodel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/swprv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sxs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sxshared.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sxssrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/synccenter.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/synccontroller.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/syncengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/syncinfrastructure.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/syncreg.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/syncutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/sysmain.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/sysntfy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.configuration.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.configuration.install.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.configuration.install.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.configuration.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.core.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.data.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.data.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.data.sqlxml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.deployment.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.directoryservices.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.drawing.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.drawing.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.enterpriseservices.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.enterpriseservices.wrapper.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.management.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.management.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.net.http.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.net.http.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.numerics.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.printing.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.runtime.remoting.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.runtime.serialization.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.runtime.serialization.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.runtime.windowsruntime.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.runtime.windowsruntime.ui.xaml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.runtime.windowsruntime.ui.xaml.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.security.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.servicemodel.internals.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.servicemodel.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.serviceprocess.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.transactions.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.transactions.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.web.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.web.services.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.windows.forms.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.windows.forms.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.windows.input.manipulations.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.xaml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.xaml.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.xml.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.xml.linq.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.xml.linq.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/system.xml.ni.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/systemeventsbrokerclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/systemeventsbrokerserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/systemsettings.datamodel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/systemsettingsviewmodel.desktop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tabsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/taskbar.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/taskbar.view.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/taskcomp.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/taskschd.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/taskschdps.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/tbs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tcpmon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tdh.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/telclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/telemetry.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/tenantrestrictionsplugin.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/terminalapp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/terminalconnection.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/terminalthemehelpers.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/textinputframework.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/textinputmethodformatter.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/textshaping.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/themeservice.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/threadpoolwinrt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/threatintelligence.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/threatresponseengine.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/thumbcache.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tilecontrol.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/tiledatarepository.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/timebrokerclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/timebrokerserver.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/timesynctask.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tiptsf.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tokenbinding.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tokenbroker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tpmcoreprovisioning.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tpmtasks.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tquery.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/tracelogging.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/trkwks.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tscfgwmi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tspkg.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/turbocontainer.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/turbostack.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/twinapi.appcore.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/twinapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/twinsxs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/twinui.appcore.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/twinui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/twinui.pcshell.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/tzautoupdate.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ubpm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ucrtbase_clr0400.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ucrtbase.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/udwm.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/uiamanager.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/uianimation.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/uiautomationcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/uiautomationprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/uiautomationtypes.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ulib.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/umpdc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/umpnpmgr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/umpo-overrides.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/umpo.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/umpodev.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/umpoext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/umpowmi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/unistore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updateagent.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updatecompression.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updatedeploy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updateplatformaggregators.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updatepolicy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updatepolicycore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updatereboot.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/updateringsettings.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/upnp.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/urlmon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usbmon.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/user32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/userdatalanguageutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/userdataplatformhelperutil.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/userdeviceregistration.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/userenv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/userinitext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usermgr.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/usermgrcli.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/usermgrproxy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usersetup.eligibility.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usoapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usoclientimpl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usocoreps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usodocked.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usosvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usosvcimpl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/usp10.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/utcapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/utcutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/uusbrain.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/uusfailover.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ux-phui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/uxinit.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/uxtheme.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/vaultcli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vaultsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vbsapi.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/vccorlib140_app.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/vcruntime140_1_app.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vcruntime140_1_clr0400.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vcruntime140_1.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/vcruntime140_app.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vcruntime140_clr0400.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vcruntime140.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vdswmi.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/version.dll</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/modules/vm3dum64_10.dll</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/modules/vm3dum64_loader.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vfuprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vhdprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vid.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/virtdisk.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/virtualmon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vk_swiftshader.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vss_ps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vssapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vsstrace.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/vulkan-1.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/waasassessment.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/waasmedicps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/waasmedicsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/waasmedicsvcimpl.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wbemcomn.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wbemcore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wbemess.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wbemprox.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wbemsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wc_storage.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wcimage.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wcmapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wcmcsp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wcmsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wcp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wdi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wdigest.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wdscore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webauthn.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webio.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webservices.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webthreatdefsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webthreatdefusersvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webview2_integration.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webview2loader.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/webview2standalone.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/well_known_domains.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wer.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/werconcpl.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wevtapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wevtsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wfapigp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/whesvc_assets.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/whesvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wificloudstore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wifidatacapabilityhandler.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wimgapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wimprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/win32_deviceguard.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/win32_tpm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/win32spl.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/win32u.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winbio.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winbioext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winbrand.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wincorlib.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wincredui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windiag.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowmanagement.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windowmanagementapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.applicationmodel.background.systemeventsbroker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.applicationmodel.background.timebroker.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.applicationmodel.datatransfer.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.applicationmodel.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.applicationmodel.lockscreen.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.applicationmodel.store.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.cloudstore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.cloudstore.schema.desktopshell.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.cloudstore.schema.shell.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.data.activities.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.devices.bluetooth.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.devices.enumeration.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.devices.radios.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.devices.sensors.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.devices.smartcards.phone.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.devices.wifidirect.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.energy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.fileexplorer.common.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.gaming.input.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.globalization.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.globalization.fontgroups.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.graphics.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.immersiveshell.serviceprovider.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.graphics.display.displaycolormanagement.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.graphics.display.displayenhancementmanagement.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.management.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.shell.broker.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.shellcommon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.system.userprofile.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.ui.dialogs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.ui.logon.proxystub.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.ui.shell.windowtabmanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.internal.waasmedicdocked.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.management.workplace.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.media.devices.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.media.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.media.speech.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.backgroundtransfer.backgroundmanagerpolicy.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.backgroundtransfer.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.connectivity.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.hostname.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.proximity.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.sockets.pushenabledapplication.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.networking.vpn.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.perception.stub.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.security.authentication.onlineid.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.security.authentication.web.core.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.security.integrity.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.services.targetedcontent.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.shell.bluelightreduction.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.shell.servicehostbuilder.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.staterepository.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.staterepositorybroker.dll</loc></url>
@@ -315,26 +1499,147 @@
   <url><loc>https://atlas.exfiltrace.com/modules/windows.storage.search.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.system.diagnostics.telemetry.platformtelemetryclient.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.system.launcher.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.system.profile.platformdiagnosticsandusagedatasettings.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.system.profile.retailinfo.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.system.userprofile.diagnosticssettings.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.accessibility.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.biofeedback.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.core.textinput.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.cred.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.creddialogcontroller.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.fileexplorer.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.immersive.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.input.inking.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.logon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.shell.internal.adaptivecards.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.shell.sharedutilities.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.xaml.controls.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.xaml.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.xaml.phone.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.ui.xamlhost.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windows.web.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windows.web.http.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsappruntime.deploymentextensions.onecore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsappsdk.appxdeploymentextensions.desktop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsbase.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsbase.ni.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windowscodecs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowscodecsext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsinternal.composableshell.desktophosting.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsinternal.composableshell.experiences.switcher.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsinternal.shellui.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/windowsperformancerecordercontrol.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsudk.shellcommon.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/windowsudkservices.shellcommon.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/winhttp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wininet.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wininitext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winlangdb.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winlogonext.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/winmm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winmmbase.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winnsi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winprint.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winrnr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winrtcomponents.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/winrttracing.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winrtturbomodule.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winsatapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winscard.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winsqlite3.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winsrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winsrvext.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/winsta.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winstore.app.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wintrust.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wintypes.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winuicohabitation.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/winuiedit.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wkscli.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wkssvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wlanapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wlanradiomanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wldap32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wldp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wlidcredprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wlidprov.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wlidsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmalfxgfxdsp.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmiclnt.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wmidcom.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmidcprv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wminet_utils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmipcima.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmiprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmiprvsd.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmisvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmitomi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmiutils.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wmsgapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wnsclientapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wofutil.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wordbreakers.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/workfoldersshell.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wosc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wow64.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wow64base.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wow64con.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wow64cpu.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wow64win.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpdbusenum.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpdshserviceobj.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpnapps.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpnclient.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpncore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpnprv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpnservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpnsruprov.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpnuserservice.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wpprecorderum.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wptaskscheduler.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/ws2_32.dll</loc></url>
-  <url><loc>https://atlas.exfiltrace.com/modules/wtdccm.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsaifabrichost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wscapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wscinterop.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wscisvif.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wscproxystub.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wscsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wshbth.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wshext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wshhyperv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsmauto.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsmsvc.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsnmp32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsock32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsp_fs.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsp_health.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsp_sr.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wsxpackmanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wtdhost.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wtdsensor.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wtsapi32.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuapicore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuaueng.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuauengcore.dll</loc></url>
   <url><loc>https://atlas.exfiltrace.com/modules/wuceffects.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuceffectsi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wudfplatform.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wups.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wups2.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wups2core.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wupscore.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wusys.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuuhdrv.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuuhext.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wuuhosdeployment.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wv2winrt.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wwanradiomanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/wwapi.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/xboxgipradiomanager.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/xmllite.dll</loc></url>
+  <url><loc>https://atlas.exfiltrace.com/modules/ztrace_maps.dll</loc></url>
 </urlset>

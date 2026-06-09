@@ -1,0 +1,578 @@
+{
+  "name": "identity_helper.exe",
+  "aliases": [],
+  "category": null,
+  "tags": [],
+  "description": null,
+  "about": null,
+  "publisher": "Microsoft Corporation",
+  "issuer": "Microsoft Code Signing PCA 2011",
+  "cert_serial": "330000047F2F422A735308DEEA00000000047F",
+  "signed": true,
+  "signing_rate": 100,
+  "signing_algorithm": "sha256RSA",
+  "signers": [
+    "Microsoft Corporation"
+  ],
+  "file_details": {
+    "file_type": "PE32+ executable",
+    "magic": "PE32+ executable (GUI)",
+    "original_name": "identity_helper.exe",
+    "internal_name": "PWA Identity Proxy Host",
+    "product": "Microsoft Edge",
+    "copyright": "Copyright Microsoft Corporation. All rights reserved."
+  },
+  "file_versions": [
+    {
+      "value": "140.0.3485.66",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "file_sizes": [
+    {
+      "value": "1494.60 KB",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "architectures": [
+    {
+      "value": "x64",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "cert_thumbprints": [
+    {
+      "value": "ea2f8cbc69a1a01142a1edd8b1256fecbc1d9f2d",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "provenance": "measured",
+  "prevalence_band": "ubiquitous",
+  "prevalence_score": 97.3,
+  "host_prevalence": 100,
+  "execution_rank": 14,
+  "community_score": null,
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "machine_count": 1,
+  "execution_count": 10,
+  "expected_paths": [
+    {
+      "value": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\identity_helper.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_parents": [
+    {
+      "value": "msedge.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "expected_children": [],
+  "expected_grandparents": [
+    {
+      "value": "explorer.exe",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "msedge.exe",
+      "weight": "uncommon",
+      "pct": 40
+    }
+  ],
+  "expected_grandchildren": [],
+  "network_ports": [],
+  "listening_ports": [],
+  "network_destinations": [],
+  "loaded_modules": [
+    {
+      "value": "identity_helper.exe",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "ntdll.dll",
+      "weight": "ubiquitous",
+      "pct": 100
+    },
+    {
+      "value": "msvcp140_app.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcryptprimitives.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "clbcatq.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "oleaut32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "staterepository.core.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "bcrypt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "startmenu.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.staterepositorycore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.applicationmodel.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "secur32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "user32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.staterepositoryclient.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msedge_elf.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shlwapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "appxdeploymentclient.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sspicli.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "twinapi.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.internal.shell.broker.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "comctl32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "mdmregistration.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernelbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32full.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "tiledatarepository.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "slc.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "apphelp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "imm32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "uxtheme.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "onecorecommonproxystub.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msedge.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "rpcrt4.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "usermgrproxy.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wpnapps.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "vcruntime140_app.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "dbghelp.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "iphlpapi.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.staterepository.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "wintypes.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ole32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windowsudk.shellcommon.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "vcruntime140_1_app.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "gdi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "winmm.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "pcshellcommonproxystub.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "cryptowinrt.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "shell32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "advapi32.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "sechost.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "usermgrcli.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "userenv.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msctf.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "msvcp_win.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "starttiledata.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "win32u.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "combase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "windows.staterepositoryps.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "kernel.appcore.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "ucrtbase.dll",
+      "weight": "common",
+      "pct": 50
+    },
+    {
+      "value": "capauthz.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "mssprxy.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.storage.applicationdata.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "policymanager.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "execmodelclient.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "biwinrt.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "onecoreuapcommonproxystub.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "execmodelproxy.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "windows.storage.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "propsys.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "ntmarta.dll",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "cfgmgr32.dll",
+      "weight": "uncommon",
+      "pct": 40
+    }
+  ],
+  "named_pipes": [
+    {
+      "value": "\\crashpad_5752_MCGHETTWCUGBYLNE",
+      "weight": "uncommon",
+      "pct": 40
+    },
+    {
+      "value": "\\crashpad_11208_HMEYFKFYLLIFXXFP",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "\\crashpad_8360_CZXHHQLDSOJBKMZV",
+      "weight": "rare",
+      "pct": 20
+    },
+    {
+      "value": "\\crashpad_5484_OVEFKKAXJPIQUBHB",
+      "weight": "rare",
+      "pct": 20
+    }
+  ],
+  "user_contexts": [
+    {
+      "value": "Interactive user",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "integrity_levels": [
+    {
+      "value": "Medium",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "sessions": [
+    {
+      "value": "Session 1",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "instance_counts": [],
+  "token_privileges": [],
+  "process_handles": [],
+  "os_prevalence": [
+    {
+      "value": "Windows 11 (26200)",
+      "weight": "ubiquitous",
+      "pct": 100
+    }
+  ],
+  "anomaly_signals": [],
+  "command_lines": [
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\identity_helper.exe\" --type=utility --utility-sub-type=winrt_app_id.mojom.WinrtAppIdService --lang=en-US --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=4760,i,<n>,<n>,524288 --field-trial-handle=2148,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4780 /prefetch:14",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\identity_helper.exe\" --type=utility --utility-sub-type=winrt_app_id.mojom.WinrtAppIdService --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=6644,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=6552 /prefetch:14",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\identity_helper.exe\" --type=utility --utility-sub-type=winrt_app_id.mojom.WinrtAppIdService --lang=en-US --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=4768,i,<n>,<n>,524288 --field-trial-handle=2156,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4896 /prefetch:14",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\identity_helper.exe\" --type=utility --utility-sub-type=winrt_app_id.mojom.WinrtAppIdService --lang=en-US --service-sandbox-type=none --no-pre-read-main-dll --skip-read-main-dll --metrics-shmem-handle=3712,i,<n>,<n>,524288 --field-trial-handle=2504,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=5048 /prefetch:14",
+      "pct": 20
+    },
+    {
+      "command": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.66\\identity_helper.exe\" --type=utility --utility-sub-type=winrt_app_id.mojom.WinrtAppIdService --lang=en-US --service-sandbox-type=none --video-capture-use-gpu-memory-buffer --no-pre-read-main-dll --ram-no-pressure-read-main-dll --metrics-shmem-handle=3996,i,<n>,<n>,524288 --field-trial-handle=2448,i,<n>,<n>,262144 --variations-seed-version --mojo-platform-channel-handle=4624 /prefetch:14",
+      "pct": 20
+    }
+  ],
+  "known_hashes": [
+    {
+      "algo": "ssdeep",
+      "value": "24576:4R83ca6V2rESZV/9QvFjt2P1mFX3Lk7+ZK8F/kSuOHr5:XMaE25Av7msFHO+ZK83r5",
+      "pct": 100
+    },
+    {
+      "algo": "authentihash",
+      "value": "aa98e895d23d49e876152669d7beb0b83dafa2130e3ecab30ec7e9aa4747dcf8",
+      "pct": 100
+    },
+    {
+      "algo": "imphash",
+      "value": "5cfe96a30fb948a2480a91f1ee68b283",
+      "pct": 100
+    },
+    {
+      "algo": "sha256",
+      "value": "c2fd821a5c7aaf5cc463fd891d2376541a1daa0826753b4e370ec41368db219d",
+      "pct": 100
+    },
+    {
+      "algo": "sha1",
+      "value": "42800260f35ccfc19e203432fb8d62707f699479",
+      "pct": 100
+    },
+    {
+      "algo": "md5",
+      "value": "073bfcf6675c652eec44c847621c2cc2",
+      "pct": 100
+    }
+  ],
+  "security_notes": null,
+  "mitre_attack": [],
+  "technique_matching": "loose",
+  "references": []
+}
